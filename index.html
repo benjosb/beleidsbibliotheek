@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleidsbibliotheek Wassenaar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Beleidsbibliotheek Wassenaar</h1>
+            <p class="subtitle">Overzicht van vastgesteld beleid</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="disclaimer">
+            <strong>Belangrijk:</strong> Deze data is door AI in samenhang gebracht. De gebruiker is altijd zelf verantwoordelijk voor het toetsen van de juiste informatie in het oorspronkelijke document. Raadpleeg altijd de officiële bronnen voor definitieve besluitvorming.
+        </div>
+
+        <div class="search-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Zoek op trefwoord, thema of onderwerp..." autofocus>
+                <button id="searchBtn" aria-label="Zoeken">🔍</button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="yearFilter">Jaar:</label>
+                    <select id="yearFilter">
+                        <option value="">Alle jaren</option>
+                        <option value="2025" selected>2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="typeFilter">Type besluit:</label>
+                    <select id="typeFilter">
+                        <option value="">Alle typen</option>
+                        <option value="raad">Raadsbesluit</option>
+                        <option value="college">Collegebesluit (B&W)</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="dateFrom">Van:</label>
+                    <input type="date" id="dateFrom">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="dateTo">Tot:</label>
+                    <input type="date" id="dateTo">
+                </div>
+                
+                <button id="clearFilters" class="btn-secondary">Filters wissen</button>
+            </div>
+        </div>
+
+        <div class="layout">
+            <aside class="sidebar">
+                <h2>Thema's</h2>
+                <div id="themaTree" class="thema-tree"></div>
+            </aside>
+
+            <section class="results">
+                <div class="results-header">
+                    <span id="resultsCount">0 besluiten gevonden</span>
+                    <div class="sort-options">
+                        <label for="sortBy">Sorteren op:</label>
+                        <select id="sortBy">
+                            <option value="datum-desc">Datum (nieuwste eerst)</option>
+                            <option value="datum-asc">Datum (oudste eerst)</option>
+                            <option value="naam-asc">Naam (A-Z)</option>
+                            <option value="naam-desc">Naam (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="resultsList" class="results-list"></div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p>Geen besluiten gevonden. Probeer andere zoektermen of pas de filters aan.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Beleidsbibliotheek Wassenaar — Data 2025 · Versie <span id="appVersion">1.0.0</span></p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
