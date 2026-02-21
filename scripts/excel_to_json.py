@@ -25,14 +25,26 @@ def clean(val):
     s = str(val).strip()
     return s if s else None
 
+def get_hyperlink_url(cell):
+    """Haalt de echte hyperlink-URL uit een cel (niet alleen de display-tekst)."""
+    if cell.hyperlink and cell.hyperlink.target:
+        return cell.hyperlink.target
+    return None
+
 def read_enriched_sheet(wb):
     """Leest het 'Totaal geschoond' tabblad met verrijkte metadata."""
     ws = wb['Totaal geschoond']
     records = []
-    for row in ws.iter_rows(min_row=2, values_only=True):
-        datum, naam, besluit, domein, type_doc, onderwerp, link, juridisch = row[:8]
+    for row in ws.iter_rows(min_row=2):
+        vals = [cell.value for cell in row[:8]]
+        datum, naam, besluit, domein, type_doc, onderwerp, link_text, juridisch = vals
         if not naam:
             continue
+
+        link_cell = row[6]
+        link_url = get_hyperlink_url(link_cell)
+        link_value = link_url or clean(link_text)
+
         records.append({
             'datum': date_to_str(datum),
             'naam': clean(naam),
@@ -40,7 +52,7 @@ def read_enriched_sheet(wb):
             'domein': clean(domein),
             'type_document': clean(type_doc),
             'onderwerp_begroting': clean(onderwerp),
-            'link': clean(link),
+            'link': link_value,
             'juridische_classificatie': clean(juridisch),
             'bron': 'raad',
             'type_besluit': 'Raadsbesluit'
@@ -58,12 +70,16 @@ def read_year_sheet(wb, year):
 
     has_onderwerp = 'Onderwerp begroting' in (headers or [])
 
-    for row in ws.iter_rows(min_row=2, values_only=True):
-        if has_onderwerp and len(row) >= 5:
-            datum, naam, besluit, onderwerp, link = row[0], row[1], row[2], row[3], row[4]
+    link_col_idx = 4
+    for row in ws.iter_rows(min_row=2):
+        vals = [cell.value for cell in row]
+        if has_onderwerp and len(vals) >= 5:
+            datum, naam, besluit, onderwerp = vals[0], vals[1], vals[2], vals[3]
+            link_text = vals[4]
             status = None
-        elif len(row) >= 5:
-            datum, naam, besluit, status, link = row[0], row[1], row[2], row[3], row[4]
+        elif len(vals) >= 5:
+            datum, naam, besluit, status = vals[0], vals[1], vals[2], vals[3]
+            link_text = vals[4]
             onderwerp = None
         else:
             continue
@@ -71,11 +87,14 @@ def read_year_sheet(wb, year):
         if not naam:
             continue
 
+        link_url = get_hyperlink_url(row[link_col_idx])
+        link_value = link_url or clean(link_text)
+
         record = {
             'datum': date_to_str(datum),
             'naam': clean(naam),
             'besluit': clean(besluit),
-            'link': clean(link),
+            'link': link_value,
             'bron': 'raad',
             'type_besluit': 'Raadsbesluit',
             'jaar': year

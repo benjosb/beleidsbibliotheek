@@ -1,391 +1,407 @@
-// Beleidsbibliotheek Wassenaar - JavaScript
+// BeleidsWijzer Wassenaar v4 — dossier-first
 
 let allDecisions = [];
 let filteredDecisions = [];
-let activeThema = null;
+let activeDossier = null; // { domein: string }
+let viewMode = 'overzicht'; // 'overzicht' | 'dossier' | 'zoekresultaten'
+let briefingCache = {};
+let previewCache = {};
 
-// Load data
+const THEMA_ICONEN = {
+    'Bestuur & Veiligheid': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    'Financiën, Economie & Sport': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
+    'Ruimte, Duurzaamheid & Mobiliteit': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+    'Sociaal Domein, Wonen & Onderwijs': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    'Cultuur & Welzijn': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
+    'Bedrijfsvoering': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>'
+};
+
+const BRIEFING_BESTANDEN = {
+    'Bestuur & Veiligheid': 'briefings/briefing_bestuur_veiligheid.html',
+    'Financiën, Economie & Sport': 'briefings/briefing_financien_economie_sport.html',
+    'Ruimte, Duurzaamheid & Mobiliteit': 'briefings/briefing_ruimte_duurzaamheid_mobiliteit.html',
+    'Sociaal Domein, Wonen & Onderwijs': 'briefings/briefing_sociaal_domein_wonen_onderwijs.html',
+    'Cultuur & Welzijn': 'briefings/briefing_cultuur_welzijn.html',
+    'Bedrijfsvoering': 'briefings/briefing_bedrijfsvoering.html'
+};
+
+// ─── Initialisation ───
+
 function loadData() {
     try {
-        // Data wordt geladen vanuit data.js (statische variabelen)
-        // Controleer of data.js geladen is
         if (typeof ALL_DECISIONS_DATA === 'undefined' || typeof THEMA_BOOM_DATA === 'undefined') {
-            throw new Error('data.js niet geladen. Zorg dat data.js vóór app.js wordt geladen.');
+            throw new Error('data.js niet geladen.');
         }
-        
-        // Gebruik de data uit data.js
         allDecisions = ALL_DECISIONS_DATA;
-        
-        // Debug: log counts
-        const raadCount = allDecisions.filter(d => d.bron === 'raad').length;
-        const collegeCount = allDecisions.filter(d => d.bron === 'college').length;
-        console.log(`Data geladen: ${allDecisions.length} totaal (${raadCount} raad, ${collegeCount} college)`);
-        
-        // Initial display
-        filteredDecisions = allDecisions;
-        
-        // Render thema tree (will update counts after initial render)
-        renderThemaTree(THEMA_BOOM_DATA);
-        
-        displayResults();
+        console.log(`Data geladen: ${allDecisions.length} besluiten`);
+
+        buildPreviewCache();
+        renderDossierKaarten(THEMA_BOOM_DATA);
     } catch (error) {
         console.error('Fout bij laden data:', error);
-        document.getElementById('resultsList').innerHTML = 
-            '<p style="color: red;">Fout bij laden van de data: ' + error.message + '</p>';
     }
 }
 
-// Render thema tree
-function renderThemaTree(tree) {
-    const container = document.getElementById('themaTree');
-    container.innerHTML = '';
-    
-    // Store tree structure for later updates
-    window.themaTreeStructure = tree;
-    
-    // Actually render the tree structure
-    tree.forEach(domein => {
-        const domeinItem = document.createElement('div');
-        domeinItem.className = 'thema-item';
-        
-        const label = document.createElement('div');
-        label.className = 'thema-label';
-        label.innerHTML = `
-            <span class="thema-toggle">▶</span>
-            <span>${domein.naam}</span>
-            <span class="thema-count">(0)</span>
-        `;
-        label.onclick = () => toggleThema(domeinItem);
-        
-        const children = document.createElement('div');
-        children.className = 'thema-children';
-        
-        domein.kinderen.forEach(onderwerp => {
-            const child = document.createElement('div');
-            child.className = 'thema-child';
-            child.innerHTML = `
-                <span>${onderwerp.naam}</span>
-                <span class="thema-count">0</span>
-            `;
-            child.onclick = (e) => {
-                e.stopPropagation();
-                selectThema(onderwerp.naam, domein.naam);
-            };
-            children.appendChild(child);
-        });
-        
-        domeinItem.appendChild(label);
-        domeinItem.appendChild(children);
-        container.appendChild(domeinItem);
+function buildPreviewCache() {
+    if (typeof BRIEFING_HTML_DATA === 'undefined') return;
+    Object.keys(BRIEFING_HTML_DATA).forEach(thema => {
+        const html = BRIEFING_HTML_DATA[thema];
+        previewCache[thema] = extractPreview(html);
     });
-    
-    // Now update counts based on current filtered decisions
-    updateThemaTreeCounts();
 }
 
-function updateThemaTreeCounts() {
-    try {
-        if (!window.themaTreeStructure) return;
-        
-        const container = document.getElementById('themaTree');
-        if (!container) return;
-        
-        // Calculate counts based on current filtered decisions
-        const counts = calculateThemaCounts(filteredDecisions);
-        
-        // Update the tree with new counts
-        window.themaTreeStructure.forEach((domein, domeinIdx) => {
-            const domeinItem = container.children[domeinIdx];
-            if (!domeinItem) return;
-            
-            const label = domeinItem.querySelector('.thema-label');
-            if (!label) return;
-            
-            const countEl = label.querySelector('.thema-count');
-            if (countEl) {
-                const domeinCount = counts[domein.naam] || 0;
-                countEl.textContent = `(${domeinCount})`;
-            }
-            
-            const children = domeinItem.querySelector('.thema-children');
-            if (children && domein.kinderen) {
-                domein.kinderen.forEach((onderwerp, onderwerpIdx) => {
-                    const child = children.children[onderwerpIdx];
-                    if (!child) return;
-                    
-                    const childCountEl = child.querySelector('.thema-count');
-                    if (childCountEl) {
-                        const onderwerpCount = counts[`${domein.naam}::${onderwerp.naam}`] || 0;
-                        childCountEl.textContent = onderwerpCount;
-                        
-                        // Dim if count is 0
-                        if (onderwerpCount === 0) {
-                            child.style.opacity = '0.4';
-                        } else {
-                            child.style.opacity = '1';
-                        }
-                    }
-                });
-            }
-            
-            // Dim domein if total count is 0
-            const domeinCount = counts[domein.naam] || 0;
-            if (domeinCount === 0) {
-                domeinItem.style.opacity = '0.4';
-            } else {
-                domeinItem.style.opacity = '1';
-            }
-        });
-    } catch (error) {
-        console.error('Fout bij updaten thema counts:', error);
-        // Don't break the app if counting fails
+function extractPreview(html) {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    const paragraphs = tmp.querySelectorAll('p');
+    for (let i = 0; i < paragraphs.length; i++) {
+        const text = paragraphs[i].textContent.trim();
+        if (text.length > 60 && !text.startsWith('Versie') && !text.startsWith('Datum')) {
+            const sentences = text.split(/(?<=[.!?])\s+/);
+            return sentences.slice(0, 3).join(' ');
+        }
     }
+    return '';
+}
+
+const BEGROTING_DATA = {
+    'Bestuur & Veiligheid':              { programma: 'P1 Veiligheid en Handhaving', bedrag: 4641000 },
+    'Financiën, Economie & Sport':       { programma: 'P3 Bestuur en Middelen', bedrag: 24433000, gedeeld: true },
+    'Ruimte, Duurzaamheid & Mobiliteit': { programma: 'P4 + P5 Fysiek en Natuur', bedrag: 24910000 },
+    'Sociaal Domein, Wonen & Onderwijs': { programma: 'P2 Mens en Maatschappij', bedrag: 41536000, gedeeld: true },
+    'Cultuur & Welzijn':                 { programma: 'P2 Mens en Maatschappij', bedrag: 41536000, gedeeld: true },
+    'Bedrijfsvoering':                   { programma: 'P3 Bestuur en Middelen', bedrag: 24433000, gedeeld: true }
+};
+
+function formatBedrag(n) {
+    if (n >= 1000000) return '€' + (n / 1000000).toFixed(1).replace('.', ',') + 'M';
+    if (n >= 1000) return '€' + Math.round(n / 1000) + 'K';
+    return '€' + n;
+}
+
+// ─── Dossier-kaarten (startpagina) ───
+
+function renderDossierKaarten(tree) {
+    window.themaTree = tree;
+    const container = document.getElementById('dossierKaarten');
+    if (!container) return;
+    container.innerHTML = '';
+
+    const counts = calculateThemaCounts(allDecisions);
+
+    tree.forEach(domein => {
+        const naam = domein.naam;
+        const count = counts[naam] || 0;
+        const preview = previewCache[naam] || '';
+        const icoon = THEMA_ICONEN[naam] || '';
+
+        const kaart = document.createElement('button');
+        kaart.type = 'button';
+        kaart.className = 'dossier-kaart';
+        kaart.setAttribute('data-thema', naam);
+        const begr = BEGROTING_DATA[naam];
+        const begrHtml = begr ? `
+            <div class="dossier-kaart-begroting">
+                <span class="begroting-bedrag">${formatBedrag(begr.bedrag)}</span>
+                <span class="begroting-label">${escapeHtml(begr.programma)}${begr.gedeeld ? ' *' : ''}</span>
+            </div>
+        ` : '';
+
+        kaart.innerHTML = `
+            <div class="dossier-kaart-header">
+                <span class="dossier-kaart-icoon">${icoon}</span>
+                <span class="dossier-kaart-naam">${escapeHtml(naam)}</span>
+                <span class="dossier-kaart-count">${count}</span>
+            </div>
+            ${preview ? `<p class="dossier-kaart-preview">${escapeHtml(preview)}</p>` : ''}
+            ${begrHtml}
+            <span class="dossier-kaart-cta">Lees dossier →</span>
+        `;
+        kaart.onclick = () => openDossier(naam);
+        container.appendChild(kaart);
+    });
 }
 
 function calculateThemaCounts(decisions) {
     const counts = {};
-    
-    if (!window.themaTreeStructure) return counts;
-    
-    // Count ALL decisions, not just those in tree (to include collegebesluiten)
-    decisions.forEach(decision => {
-        const domein = decision.domein || 'Niet geclassificeerd';
-        const onderwerp = decision.onderwerp_begroting || decision.portefeuille || 'Overig';
-        const key = `${domein}::${onderwerp}`;
-        
-        // Count per domein (always count, even if not in tree)
-        counts[domein] = (counts[domein] || 0) + 1;
-        
-        // Count per onderwerp within domein
-        counts[key] = (counts[key] || 0) + 1;
+    decisions.forEach(d => {
+        const dom = d.domein || 'Niet geclassificeerd';
+        counts[dom] = (counts[dom] || 0) + 1;
     });
-    
     return counts;
 }
 
-function toggleThema(item) {
-    item.classList.toggle('expanded');
-    const toggle = item.querySelector('.thema-toggle');
-    toggle.textContent = item.classList.contains('expanded') ? '▼' : '▶';
+// ─── View switching ───
+
+function showView(mode) {
+    viewMode = mode;
+    document.getElementById('dossierOverzicht').style.display = mode === 'overzicht' ? '' : 'none';
+    document.getElementById('dossierDetail').style.display = mode === 'dossier' ? '' : 'none';
+    document.getElementById('zoekResultaten').style.display = mode === 'zoekresultaten' ? '' : 'none';
 }
 
-function selectThema(onderwerp, domein) {
-    try {
-        // Remove active from all
-        document.querySelectorAll('.thema-child').forEach(c => c.classList.remove('active'));
-        
-        // Add active to clicked
-        const clicked = event.target.closest('.thema-child');
-        if (clicked) {
-            clicked.classList.add('active');
-        }
-        
-        activeThema = { onderwerp, domein };
-        applyFilters();
-    } catch (error) {
-        console.error('Fout bij selecteren thema:', error);
-    }
+// ─── Open / sluit dossier ───
+
+function openDossier(thema) {
+    activeDossier = { domein: thema };
+    showView('dossier');
+
+    document.getElementById('dossierTitel').textContent = thema;
+    loadSyntheseContent(thema);
+    loadDossierBesluiten(thema);
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Search and filter
-function applyFilters() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const year = document.getElementById('yearFilter').value;
-    const type = document.getElementById('typeFilter').value;
-    const dateFrom = document.getElementById('dateFrom').value;
-    const dateTo = document.getElementById('dateTo').value;
-    
-    filteredDecisions = allDecisions.filter(decision => {
-        // Search term
-        if (searchTerm) {
-            const searchable = [
-                decision.naam || '',
-                decision.besluit || '',
-                decision.domein || '',
-                decision.onderwerp_begroting || '',
-                decision.portefeuille || ''
-            ].join(' ').toLowerCase();
-            
-            if (!searchable.includes(searchTerm)) {
-                return false;
-            }
-        }
-        
-        // Year filter
-        if (year) {
-            const decisionYear = decision.datum ? decision.datum.substring(0, 4) : '';
-            // Also check jaar field as fallback
-            const jaarField = decision.jaar ? String(decision.jaar) : '';
-            if (decisionYear !== year && jaarField !== year) {
-                return false;
-            }
-        }
-        
-        // Type filter
-        if (type) {
-            if (decision.bron !== type) {
-                return false;
-            }
-        }
-        
-        // Date range
-        if (dateFrom && decision.datum < dateFrom) {
-            return false;
-        }
-        if (dateTo && decision.datum > dateTo) {
-            return false;
-        }
-        
-        // Thema filter
-        if (activeThema) {
-            const matchesDomein = decision.domein === activeThema.domein;
-            const matchesOnderwerp = 
-                decision.onderwerp_begroting === activeThema.onderwerp ||
-                decision.portefeuille === activeThema.onderwerp;
-            
-            // Only filter out if we have a domein/onderwerp and it doesn't match
-            // Don't filter out decisions without domein/onderwerp (like some collegebesluiten)
-            if (decision.domein || decision.onderwerp_begroting || decision.portefeuille) {
-                if (!matchesDomein && !matchesOnderwerp) {
-                    return false;
-                }
-            }
-        }
-        
-        return true;
-    });
-    
-    // Debug: log filtered counts
-    const filteredRaad = filteredDecisions.filter(d => d.bron === 'raad').length;
-    const filteredCollege = filteredDecisions.filter(d => d.bron === 'college').length;
-    console.log(`Gefilterd: ${filteredDecisions.length} totaal (${filteredRaad} raad, ${filteredCollege} college)`);
-    
-    // Sort
-    const sortBy = document.getElementById('sortBy').value;
-    sortResults(sortBy);
-    
-    // Update thema tree counts based on filtered results (after a small delay to ensure DOM is ready)
-    setTimeout(() => {
-        updateThemaTreeCounts();
-    }, 100);
-    
-    displayResults();
+function sluitDossier() {
+    activeDossier = null;
+    resetFilters();
+    showView('overzicht');
 }
 
-function sortResults(sortBy) {
-    filteredDecisions.sort((a, b) => {
-        switch(sortBy) {
-            case 'datum-desc':
-                return (b.datum || '').localeCompare(a.datum || '');
-            case 'datum-asc':
-                return (a.datum || '').localeCompare(b.datum || '');
-            case 'naam-asc':
-                return (a.naam || '').localeCompare(b.naam || '');
-            case 'naam-desc':
-                return (b.naam || '').localeCompare(a.naam || '');
-            default:
-                return 0;
-        }
-    });
-}
+function loadSyntheseContent(thema) {
+    const container = document.getElementById('dossierSynthese');
+    if (!container) return;
 
-function displayResults() {
-    const container = document.getElementById('resultsList');
-    const noResults = document.getElementById('noResults');
-    const count = document.getElementById('resultsCount');
-    
-    if (!filteredDecisions || filteredDecisions.length === 0) {
-        container.style.display = 'none';
-        noResults.style.display = 'block';
-        count.textContent = '0 besluiten gevonden';
-        
-        // Debug info
-        console.warn('Geen besluiten om te tonen!');
-        console.log('allDecisions:', allDecisions ? allDecisions.length : 'undefined');
-        console.log('filteredDecisions:', filteredDecisions ? filteredDecisions.length : 'undefined');
+    if (briefingCache[thema]) {
+        container.innerHTML = briefingCache[thema];
         return;
     }
-    
-    count.textContent = `${filteredDecisions.length} besluit${filteredDecisions.length !== 1 ? 'ten' : ''} gevonden`;
-    
+
+    if (typeof BRIEFING_HTML_DATA !== 'undefined' && BRIEFING_HTML_DATA[thema]) {
+        const body = extractBodyContent(BRIEFING_HTML_DATA[thema]);
+        briefingCache[thema] = body;
+        container.innerHTML = body;
+    } else {
+        container.innerHTML = '<p style="color: #999; text-align: center; padding: 2rem;">Geen beleidsdossier beschikbaar voor dit thema.</p>';
+    }
+}
+
+function extractBodyContent(html) {
+    const match = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+    if (match) return match[1];
+    return html;
+}
+
+function loadDossierBesluiten(thema) {
+    filteredDecisions = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === thema);
+
+    const countEl = document.getElementById('besluitenCount');
+    if (countEl) countEl.textContent = `(${filteredDecisions.length})`;
+
+    const sortBy = document.getElementById('sortBy').value;
+    sortDecisions(sortBy);
+    displayDecisions('resultsList', 'resultsCount', 'noResults');
+}
+
+// ─── Zoekfunctie (zelfstandig) ───
+
+let zoekBaseResults = [];
+
+function handleSearch() {
+    const term = document.getElementById('searchInput').value.trim();
+    if (!term) {
+        if (viewMode === 'zoekresultaten') showView('overzicht');
+        return;
+    }
+
+    const lowerTerm = term.toLowerCase();
+    zoekBaseResults = allDecisions.filter(d => {
+        const searchable = [d.naam || '', d.besluit || '', d.domein || '', d.onderwerp_begroting || '', d.portefeuille || ''].join(' ').toLowerCase();
+        return searchable.includes(lowerTerm);
+    });
+
+    showView('zoekresultaten');
+    activeDossier = null;
+
+    document.getElementById('zoekYearFilter').value = '';
+    document.getElementById('zoekTypeFilter').value = '';
+    document.getElementById('zoekSortBy').value = 'datum-desc';
+
+    applyZoekFilters();
+}
+
+function applyZoekFilters() {
+    const year = document.getElementById('zoekYearFilter').value;
+    const type = document.getElementById('zoekTypeFilter').value;
+    const sort = document.getElementById('zoekSortBy').value;
+
+    let filtered = zoekBaseResults.slice();
+
+    if (year) filtered = filtered.filter(d => (d.datum || '').startsWith(year));
+    if (type) {
+        if (type === 'raad') filtered = filtered.filter(d => d.type === 'Raadsbesluit');
+        else if (type === 'college') filtered = filtered.filter(d => d.type === 'Collegebesluit (B&W)');
+    }
+
+    if (sort === 'datum-desc') filtered.sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
+    else if (sort === 'datum-asc') filtered.sort((a, b) => (a.datum || '').localeCompare(b.datum || ''));
+    else if (sort === 'naam-asc') filtered.sort((a, b) => (a.naam || '').localeCompare(b.naam || ''));
+    else if (sort === 'naam-desc') filtered.sort((a, b) => (b.naam || '').localeCompare(a.naam || ''));
+
+    const countEl = document.getElementById('zoekResultsCount');
+    const listEl = document.getElementById('zoekResultsList');
+    const noEl = document.getElementById('zoekNoResults');
+
+    if (filtered.length === 0) {
+        listEl.style.display = 'none';
+        noEl.style.display = 'block';
+        countEl.textContent = '0 besluiten';
+        return;
+    }
+
+    listEl.style.display = 'block';
+    noEl.style.display = 'none';
+    countEl.textContent = `${filtered.length} besluit${filtered.length !== 1 ? 'en' : ''}`;
+    listEl.innerHTML = filtered.map(d => renderDecisionItem(d)).join('');
+}
+
+function sluitZoekresultaten() {
+    document.getElementById('searchInput').value = '';
+    zoekBaseResults = [];
+    showView('overzicht');
+}
+
+// ─── Filtering (binnen dossier) ───
+
+function applyDossierFilters() {
+    if (!activeDossier) return;
+    const year = document.getElementById('yearFilter').value;
+    const type = document.getElementById('typeFilter').value;
+
+    let results = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === activeDossier.domein);
+
+    if (year) {
+        results = results.filter(d => {
+            const dy = d.datum ? d.datum.substring(0, 4) : '';
+            const jy = d.jaar ? String(d.jaar) : '';
+            return dy === year || jy === year;
+        });
+    }
+    if (type) {
+        results = results.filter(d => d.bron === type);
+    }
+
+    filteredDecisions = results;
+
+    const countEl = document.getElementById('besluitenCount');
+    if (countEl) countEl.textContent = `(${filteredDecisions.length})`;
+
+    const sortBy = document.getElementById('sortBy').value;
+    sortDecisions(sortBy);
+    displayDecisions('resultsList', 'resultsCount', 'noResults');
+}
+
+function resetFilters() {
+    const yf = document.getElementById('yearFilter');
+    const tf = document.getElementById('typeFilter');
+    if (yf) yf.value = '';
+    if (tf) tf.value = '';
+}
+
+function sortDecisions(sortBy) {
+    filteredDecisions.sort((a, b) => {
+        switch (sortBy) {
+            case 'datum-desc': return (b.datum || '').localeCompare(a.datum || '');
+            case 'datum-asc':  return (a.datum || '').localeCompare(b.datum || '');
+            case 'naam-asc':   return (a.naam || '').localeCompare(b.naam || '');
+            case 'naam-desc':  return (b.naam || '').localeCompare(a.naam || '');
+            default: return 0;
+        }
+    });
+}
+
+// ─── Render decisions ───
+
+function displayDecisions(listId, countId, noResultsId) {
+    const container = document.getElementById(listId);
+    const noResults = document.getElementById(noResultsId);
+    const countEl = document.getElementById(countId);
+
+    if (!filteredDecisions.length) {
+        container.style.display = 'none';
+        noResults.style.display = 'block';
+        if (countEl) countEl.textContent = '0 besluiten';
+        return;
+    }
+
+    const n = filteredDecisions.length;
+    if (countEl) countEl.textContent = `${n} besluit${n !== 1 ? 'en' : ''}`;
+
     container.style.display = 'block';
     noResults.style.display = 'none';
-    
-    container.innerHTML = filteredDecisions.map(decision => {
-        const datum = decision.datum ? formatDate(decision.datum) : 'Onbekend';
-        const badgeClass = decision.bron === 'raad' ? 'raad' : 'college';
-        const badgeText = decision.type_besluit || (decision.bron === 'raad' ? 'Raadsbesluit' : 'Collegebesluit');
-        
-        const besluitText = (decision.besluit || '').trim();
-        const isCollege = decision.bron === 'college';
-        
-        // Collegebesluiten: volledige tekst op de voorpagina, met uitklappen bij lange teksten
-        const COLLEGE_PREVIEW_CHARS = 500;  // eerste 500 tekens zichtbaar, rest uitklapbaar
-        const RAAD_PREVIEW_CHARS = 300;
-        const maxPreview = isCollege ? COLLEGE_PREVIEW_CHARS : RAAD_PREVIEW_CHARS;
-        const isLong = besluitText.length > maxPreview;
-        const previewPart = isLong ? besluitText.substring(0, maxPreview) + '…' : besluitText;
-        const fullPart = isLong ? besluitText.substring(maxPreview) : '';
-        const idSuffix = Math.random().toString(36).slice(2, 9);
-        
-        // Determine link and link text
-        let link = null;
-        let linkText = '';
-        
-        if (decision.pdf_url) {
-            link = decision.pdf_url;
-            linkText = 'Bekijk originele PDF →';
-        } else if (decision.link && decision.link.includes('iBabs')) {
-            link = 'https://wassenaar.ibabs.eu/Public/';
-            linkText = 'Zoek in iBabs Publieksportaal →';
-        } else if (decision.link && decision.link.startsWith('http')) {
-            link = decision.link;
-            linkText = 'Bekijk document →';
-        }
-        
-        return `
-            <div class="result-item" data-bron="${decision.bron || ''}">
-                <div class="result-header">
-                    <div>
-                        <div class="result-title">${escapeHtml(decision.naam || 'Naamloos besluit')}</div>
-                        <div class="result-meta">
-                            <span>📅 ${datum}</span>
-                            <span class="result-badge ${badgeClass}">${badgeText}</span>
-                            ${decision.domein ? `<span>📁 ${escapeHtml(decision.domein)}</span>` : ''}
-                            ${decision.portefeuille ? `<span>👤 ${escapeHtml(decision.portefeuille)}</span>` : ''}
-                        </div>
+    container.innerHTML = filteredDecisions.map(d => renderDecisionItem(d)).join('');
+}
+
+function renderDecisionItem(decision) {
+    const datum = decision.datum ? formatDate(decision.datum) : 'Onbekend';
+    const badgeClass = decision.bron === 'raad' ? 'raad' : 'college';
+    const badgeText = decision.type_besluit || (decision.bron === 'raad' ? 'Raadsbesluit' : 'Collegebesluit');
+
+    const besluitText = (decision.besluit || '').trim();
+    const isCollege = decision.bron === 'college';
+    const maxPreview = isCollege ? 500 : 300;
+    const isLong = besluitText.length > maxPreview;
+    const previewPart = isLong ? besluitText.substring(0, maxPreview) + '…' : besluitText;
+    const fullPart = isLong ? besluitText.substring(maxPreview) : '';
+    const idSuffix = Math.random().toString(36).slice(2, 9);
+    const links = buildDecisionLinks(decision);
+
+    const searchNaam = (decision.naam || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    return `
+        <div class="result-item" data-bron="${decision.bron || ''}" data-besluit-naam="${searchNaam}" data-besluit-datum="${decision.datum || ''}">
+            <div class="result-header">
+                <div>
+                    <div class="result-title">${escapeHtml(decision.naam || 'Naamloos besluit')}</div>
+                    <div class="result-meta">
+                        <span>📅 ${datum}</span>
+                        <span class="result-badge ${badgeClass}">${badgeText}</span>
+                        ${decision.domein ? `<span>📁 ${escapeHtml(decision.domein)}</span>` : ''}
+                        ${decision.portefeuille ? `<span>👤 ${escapeHtml(decision.portefeuille)}</span>` : ''}
                     </div>
                 </div>
-                ${besluitText ? `
-                    <div class="result-besluit ${isCollege ? 'result-besluit-college' : ''}">
-                        <strong class="result-besluit-label">Besluit:</strong>
-                        <div class="result-besluit-tekst">
-                            <span class="result-text-inhoud">${escapeHtml(previewPart)}</span>
-                            ${fullPart ? `<span class="result-text-meer" id="meer-${idSuffix}" hidden>${escapeHtml(fullPart)}</span>` : ''}
-                        </div>
-                        ${isLong ? `
-                            <button type="button" class="btn-uitklappen" data-id="meer-${idSuffix}" aria-expanded="false">
-                                Toon volledige tekst
-                            </button>
-                        ` : ''}
-                    </div>
-                ` : ''}
-                ${link ? `
-                    <a href="${link}" target="_blank" rel="noopener noreferrer" class="result-link">${linkText}</a>
-                    ${decision.link && decision.link.includes('iBabs') ? `
-                        <p class="result-hint"><small>💡 Tip: Zoek in iBabs op: "${escapeHtml(decision.naam)}"</small></p>
-                    ` : ''}
-                ` : ''}
             </div>
-        `;
-    }).join('');
+            ${besluitText ? `
+                <div class="result-besluit ${isCollege ? 'result-besluit-college' : ''}">
+                    <strong class="result-besluit-label">Besluit:</strong>
+                    <div class="result-besluit-tekst">
+                        <span class="result-text-inhoud">${escapeHtml(previewPart)}</span>
+                        ${fullPart ? `<span class="result-text-meer" id="meer-${idSuffix}" hidden>${escapeHtml(fullPart)}</span>` : ''}
+                    </div>
+                    ${isLong ? `<button type="button" class="btn-uitklappen" data-id="meer-${idSuffix}" aria-expanded="false">Toon volledige tekst</button>` : ''}
+                </div>
+            ` : ''}
+            ${links}
+        </div>
+    `;
 }
+
+function buildDecisionLinks(decision) {
+    const parts = [];
+    if (decision.pdf_url) {
+        parts.push(`<a href="${decision.pdf_url}" target="_blank" rel="noopener noreferrer" class="result-link">Bekijk besluitenlijst (PDF) →</a>`);
+    }
+    if (decision.link && decision.link.startsWith('http')) {
+        parts.push(`<a href="${decision.link}" target="_blank" rel="noopener noreferrer" class="result-link">Bekijk document →</a>`);
+    } else if (decision.link && decision.link.includes('iBabs')) {
+        const q = encodeURIComponent(`"${decision.naam || ''}" site:wassenaar.bestuurlijkeinformatie.nl`);
+        parts.push(`<a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener noreferrer" class="result-link">Zoek in iBabs →</a>`);
+        parts.push(`<a href="https://wassenaar.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener noreferrer" class="result-link result-link-secondary">iBabs Portaal →</a>`);
+    }
+    if (!parts.length && decision.bron === 'raad') {
+        const q = encodeURIComponent(`"${decision.naam || ''}" wassenaar raadsbesluit`);
+        parts.push(`<a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener noreferrer" class="result-link">Zoek document →</a>`);
+    }
+    return parts.length ? `<div class="result-links">${parts.join('')}</div>` : '';
+}
+
+// ─── Helpers ───
 
 function formatDate(dateStr) {
     if (!dateStr) return 'Onbekend';
     const date = new Date(dateStr);
-    const months = ['januari', 'februari', 'maart', 'april', 'mei', 'juni',
-                    'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+    const months = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
     return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
 }
 
@@ -395,52 +411,131 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
-function clearFilters() {
-    document.getElementById('searchInput').value = '';
-    document.getElementById('yearFilter').value = '';
-    document.getElementById('typeFilter').value = '';
-    document.getElementById('dateFrom').value = '';
-    document.getElementById('dateTo').value = '';
-    
-    // Clear thema selection
-    document.querySelectorAll('.thema-child').forEach(c => c.classList.remove('active'));
-    activeThema = null;
-    
-    applyFilters();
+// ─── Bronverwijzing navigatie ───
+
+function navigateToDecision(refText) {
+    const details = document.getElementById('dossierBesluiten');
+    if (!details) return;
+
+    if (!details.open) details.open = true;
+
+    const cleaned = refText.replace(/[\[\]]/g, '').trim();
+    const parts = cleaned.split(';').map(s => s.trim());
+    const firstRef = parts[0];
+
+    const namePart = firstRef
+        .replace(/^(Raadsbesluit|Collegebesluit|Coalitieakkoord)\s*:\s*/i, '')
+        .replace(/,\s*\d{2}-\d{2}-\d{4}.*$/, '')
+        .replace(/,\s*\d{4}.*$/, '')
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, '');
+
+    if (!namePart || namePart.length < 4) {
+        details.querySelector('.dossier-besluiten-kop').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+    }
+
+    const items = document.querySelectorAll('#resultsList .result-item');
+    let bestMatch = null;
+    let bestScore = 0;
+
+    items.forEach(item => {
+        const itemNaam = item.getAttribute('data-besluit-naam') || '';
+        if (!itemNaam) return;
+
+        let score = 0;
+        const words = namePart.match(/.{3,}/g) || [namePart];
+        words.forEach(w => { if (itemNaam.includes(w)) score += w.length; });
+
+        if (namePart.length > 6 && itemNaam.includes(namePart)) {
+            score += namePart.length * 2;
+        }
+
+        if (score > bestScore) {
+            bestScore = score;
+            bestMatch = item;
+        }
+    });
+
+    if (bestMatch && bestScore >= 6) {
+        document.querySelectorAll('.result-item.highlight').forEach(el => el.classList.remove('highlight'));
+        bestMatch.classList.add('highlight');
+        setTimeout(() => {
+            bestMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+        setTimeout(() => bestMatch.classList.remove('highlight'), 4000);
+    } else {
+        details.querySelector('.dossier-besluiten-kop').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
-// Event listeners
+// ─── Event listeners ───
+
 document.addEventListener('DOMContentLoaded', () => {
     loadData();
-    
-    // Uitklappen/inklappen besluittekst (delegatie op results container)
-    document.getElementById('resultsList').addEventListener('click', (e) => {
+
+    // Uitklap-knoppen (via event delegation op beide lijsten)
+    document.addEventListener('click', (e) => {
         const btn = e.target.closest('.btn-uitklappen');
         if (!btn) return;
         e.preventDefault();
         const id = btn.getAttribute('data-id');
-        const meerEl = document.getElementById(id);
-        if (!meerEl) return;
-        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-        meerEl.hidden = isExpanded;
-        btn.setAttribute('aria-expanded', !isExpanded);
-        btn.textContent = isExpanded ? 'Toon volledige tekst' : 'Verberg tekst';
+        const el = document.getElementById(id);
+        if (!el) return;
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        el.hidden = expanded;
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.textContent = expanded ? 'Toon volledige tekst' : 'Verberg tekst';
     });
-    
-    document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+    // Bronverwijzingen in briefing → klikbaar naar besluit
+    document.addEventListener('click', (e) => {
+        const ref = e.target.closest('.ref');
+        if (!ref) return;
+        navigateToDecision(ref.textContent);
+    });
+
+    // Terug naar overzicht
+    document.getElementById('dossierTerug').addEventListener('click', sluitDossier);
+
+    // Zoeken
     document.getElementById('searchInput').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            applyFilters();
-        }
+        if (e.key === 'Enter') handleSearch();
     });
-    document.getElementById('searchBtn').addEventListener('click', applyFilters);
-    document.getElementById('yearFilter').addEventListener('change', applyFilters);
-    document.getElementById('typeFilter').addEventListener('change', applyFilters);
-    document.getElementById('dateFrom').addEventListener('change', applyFilters);
-    document.getElementById('dateTo').addEventListener('change', applyFilters);
+    document.getElementById('searchBtn').addEventListener('click', handleSearch);
+    document.getElementById('zoekSluiten').addEventListener('click', sluitZoekresultaten);
+
+    // Filters binnen dossier
+    document.getElementById('yearFilter').addEventListener('change', applyDossierFilters);
+    document.getElementById('typeFilter').addEventListener('change', applyDossierFilters);
     document.getElementById('sortBy').addEventListener('change', (e) => {
-        sortResults(e.target.value);
-        displayResults();
+        sortDecisions(e.target.value);
+        displayDecisions('resultsList', 'resultsCount', 'noResults');
     });
-    document.getElementById('clearFilters').addEventListener('click', clearFilters);
+    document.getElementById('clearFilters').addEventListener('click', () => {
+        resetFilters();
+        if (activeDossier) applyDossierFilters();
+    });
+
+    // Filters binnen zoekresultaten
+    document.getElementById('zoekYearFilter').addEventListener('change', applyZoekFilters);
+    document.getElementById('zoekTypeFilter').addEventListener('change', applyZoekFilters);
+    document.getElementById('zoekSortBy').addEventListener('change', applyZoekFilters);
+    document.getElementById('zoekClearFilters').addEventListener('click', () => {
+        document.getElementById('zoekYearFilter').value = '';
+        document.getElementById('zoekTypeFilter').value = '';
+        document.getElementById('zoekSortBy').value = 'datum-desc';
+        applyZoekFilters();
+    });
+
+    // Verborgen begroting-toggle (dubbel-klik op versienummer)
+    const versieBadge = document.getElementById('appVersion');
+    if (versieBadge) {
+        versieBadge.addEventListener('dblclick', () => {
+            document.body.classList.toggle('toon-begroting');
+            const voetnoot = document.querySelector('.begroting-voetnoot');
+            if (voetnoot) voetnoot.hidden = !document.body.classList.contains('toon-begroting');
+        });
+    }
 });

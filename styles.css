@@ -1,16 +1,25 @@
-/* Wassenaar Beleidsbibliotheek - Functionele styling */
+/* BeleidsWijzer Wassenaar — v4 dossier-first */
 
 :root {
-    --wassenaar-blue: #003366;
+    --wassenaar-blue: #0060ac;
+    --wassenaar-geel: #ffda00;
+    --wassenaar-rood: #e40521;
+    --wassenaar-donker: #1d1d1b;
     --wassenaar-light-blue: #0066cc;
-    --wassenaar-green: #4a7c59;
-    --wassenaar-light-green: #6b9c7a;
     --gray-dark: #333;
     --gray-medium: #666;
     --gray-light: #e0e0e0;
     --gray-lighter: #f5f5f5;
     --white: #ffffff;
-    --warning: #ff9800;
+    --thema-veiligheid:     #c8e6c9;
+    --thema-maatschappij:    #80cbc4;
+    --thema-bestuur:        #ffb74d;
+    --thema-fysiek:         #90caf9;
+    --thema-natuur:         #81c784;
+    --thema-financien:      #ce93d8;
+    --thema-dienst:         #b3e5fc;
+    --thema-openbare-ruimte:#a5d6a7;
+    --thema-overig:         #e0e0e0;
 }
 
 * {
@@ -28,91 +37,388 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header */
-header {
-    background-color: var(--wassenaar-blue);
-    color: var(--white);
-    padding: 2rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* ─── Header ─── */
+.site-header {
+    background-color: var(--white);
+    color: var(--wassenaar-donker);
+    padding: 1.2rem 0;
+    border-bottom: 2px solid var(--gray-lighter);
 }
 
-header h1 {
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-link {
+    display: block;
+    flex-shrink: 0;
+    order: 2;
+    margin-left: auto;
+}
+
+.site-logo {
+    height: 44px;
+    width: auto;
+    display: block;
+}
+
+.header-text {
+    order: 1;
+    flex: 1;
+}
+
+.header-text h1 {
     font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-weight: 700;
+    margin: 0 0 0.1rem 0;
+    letter-spacing: -0.02em;
+    color: var(--wassenaar-donker);
 }
 
 .subtitle {
-    font-size: 1rem;
-    opacity: 0.9;
+    font-size: 0.88rem;
+    color: var(--gray-medium);
+    margin: 0;
 }
 
-/* Disclaimer */
-.disclaimer {
-    background-color: #fff3cd;
-    border-left: 4px solid var(--warning);
-    padding: 1rem;
-    margin: 1.5rem 0;
-    border-radius: 4px;
-    font-size: 0.9rem;
-}
-
-/* Search Section */
-.search-section {
-    background-color: var(--white);
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.search-bar {
+/* ─── Zoekbalk (nu onder dossier-titel) ─── */
+.overzicht-kop {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
-#searchInput {
+.overzicht-zoek {
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1.5px solid var(--gray-light);
+    background: var(--white);
+    max-width: 340px;
     flex: 1;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 2px solid var(--gray-light);
-    border-radius: 4px;
-    transition: border-color 0.2s;
+    min-width: 180px;
 }
 
-#searchInput:focus {
+.overzicht-zoek input {
+    flex: 1;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    border: none;
+    min-width: 0;
+    color: var(--gray-dark);
+}
+
+.overzicht-zoek input::placeholder {
+    color: var(--gray-medium);
+}
+
+.overzicht-zoek input:focus {
     outline: none;
-    border-color: var(--wassenaar-light-blue);
 }
 
-#searchBtn {
-    padding: 0.75rem 1.5rem;
-    background-color: var(--wassenaar-blue);
+.overzicht-zoek button {
+    padding: 0.5rem 1rem;
+    background: var(--wassenaar-blue);
     color: var(--white);
     border: none;
-    border-radius: 4px;
-    font-size: 1.2rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
     cursor: pointer;
+    white-space: nowrap;
     transition: background-color 0.2s;
 }
 
-#searchBtn:hover {
-    background-color: var(--wassenaar-light-blue);
+.overzicht-zoek button:hover {
+    background: var(--wassenaar-light-blue);
 }
 
-.filters {
+/* ─── Dossier-overzicht (startpagina) ─── */
+.dossier-overzicht {
+    margin: 1.5rem 0 1rem;
+}
+
+.dossier-sectie-titel {
+    font-size: 1.15rem;
+    color: var(--wassenaar-donker);
+    margin-bottom: 0.75rem;
+}
+
+.dossier-kaarten {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.dossier-kaart {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    position: relative;
+    min-height: 0;
+    border-left: 6px solid var(--gray-light);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.dossier-kaart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.dossier-kaart-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.dossier-kaart-icoon {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.dossier-icoon {
+    width: 30px;
+    height: 30px;
+    color: var(--wassenaar-donker);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dossier-kaart-naam {
+    font-weight: 700;
+    font-size: 0.92rem;
+    line-height: 1.25;
+    color: var(--wassenaar-donker);
+    flex: 1;
+}
+
+.dossier-kaart-count {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--gray-medium);
+    background: var(--gray-lighter);
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.dossier-kaart-preview {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--gray-medium);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.dossier-kaart-begroting {
+    display: none;
+    align-items: baseline;
+    gap: 0.4rem;
+    padding: 0.35rem 0.55rem;
+    background: var(--gray-lighter);
+    border-radius: 6px;
+    margin-top: 0.15rem;
+}
+
+body.toon-begroting .dossier-kaart-begroting {
+    display: flex;
+}
+
+.begroting-bedrag {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--wassenaar-donker);
+    white-space: nowrap;
+}
+
+.begroting-label {
+    font-size: 0.7rem;
+    color: var(--gray-medium);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dossier-kaart-cta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--wassenaar-blue);
+    margin-top: auto;
+}
+
+/* Thema-kleuren */
+.dossier-kaart[data-thema="Bestuur & Veiligheid"] {
+    border-left-color: #43a047;
+    background: linear-gradient(135deg, #c8e6c9 0%, #e8f5e9 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Bestuur & Veiligheid"] .dossier-icoon { color: #2e7d32; }
+.dossier-kaart[data-thema="Bestuur & Veiligheid"] .dossier-kaart-count { background: #a5d6a7; color: #1b5e20; }
+
+.dossier-kaart[data-thema="Financiën, Economie & Sport"] {
+    border-left-color: #ab47bc;
+    background: linear-gradient(135deg, #e1bee7 0%, #f3e5f5 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Financiën, Economie & Sport"] .dossier-icoon { color: #7b1fa2; }
+.dossier-kaart[data-thema="Financiën, Economie & Sport"] .dossier-kaart-count { background: #ce93d8; color: #4a148c; }
+
+.dossier-kaart[data-thema="Ruimte, Duurzaamheid & Mobiliteit"] {
+    border-left-color: #1e88e5;
+    background: linear-gradient(135deg, #bbdefb 0%, #e3f2fd 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Ruimte, Duurzaamheid & Mobiliteit"] .dossier-icoon { color: #1565c0; }
+.dossier-kaart[data-thema="Ruimte, Duurzaamheid & Mobiliteit"] .dossier-kaart-count { background: #90caf9; color: #0d47a1; }
+
+.dossier-kaart[data-thema="Sociaal Domein, Wonen & Onderwijs"] {
+    border-left-color: #26a69a;
+    background: linear-gradient(135deg, #b2dfdb 0%, #e0f2f1 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Sociaal Domein, Wonen & Onderwijs"] .dossier-icoon { color: #00796b; }
+.dossier-kaart[data-thema="Sociaal Domein, Wonen & Onderwijs"] .dossier-kaart-count { background: #80cbc4; color: #004d40; }
+
+.dossier-kaart[data-thema="Cultuur & Welzijn"] {
+    border-left-color: #ff9800;
+    background: linear-gradient(135deg, #ffe0b2 0%, #fff3e0 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Cultuur & Welzijn"] .dossier-icoon { color: #e65100; }
+.dossier-kaart[data-thema="Cultuur & Welzijn"] .dossier-kaart-count { background: #ffcc80; color: #bf360c; }
+
+.dossier-kaart[data-thema="Bedrijfsvoering"] {
+    border-left-color: #29b6f6;
+    background: linear-gradient(135deg, #b3e5fc 0%, #e1f5fe 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Bedrijfsvoering"] .dossier-icoon { color: #0277bd; }
+.dossier-kaart[data-thema="Bedrijfsvoering"] .dossier-kaart-count { background: #81d4fa; color: #01579b; }
+
+.begroting-voetnoot {
+    font-size: 0.72rem;
+    color: var(--gray-medium);
+    margin-top: 0.5rem;
+    text-align: right;
+    font-style: italic;
+}
+
+/* ─── Dossier-detail ─── */
+.dossier-detail {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin: 1.5rem 0;
+    padding: 2rem;
+}
+
+.dossier-kop {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gray-light);
+}
+
+.dossier-terug {
+    background: none;
+    border: 1px solid var(--gray-light);
+    border-radius: 6px;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--wassenaar-blue);
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s;
+}
+
+.dossier-terug:hover {
+    background: var(--wassenaar-blue);
+    color: var(--white);
+}
+
+.dossier-kop-titel {
+    font-size: 1.4rem;
+    color: var(--wassenaar-donker);
+    font-weight: 700;
+}
+
+/* ─── Inklapbare besluitensectie ─── */
+.dossier-besluiten {
+    margin-top: 2.5rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dossier-besluiten-kop {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--wassenaar-donker);
+    cursor: pointer;
+    background: var(--gray-lighter);
+    list-style: none;
+    user-select: none;
+    transition: background 0.15s;
+}
+
+.dossier-besluiten-kop::-webkit-details-marker {
+    display: none;
+}
+
+.dossier-besluiten-kop::before {
+    content: '▶';
+    font-size: 0.7rem;
+    color: var(--gray-medium);
+    transition: transform 0.2s;
+}
+
+.dossier-besluiten[open] > .dossier-besluiten-kop::before {
+    transform: rotate(90deg);
+}
+
+.dossier-besluiten-kop:hover {
+    background: #eaeaea;
+}
+
+.dossier-besluiten-count {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--wassenaar-blue);
+}
+
+.dossier-besluiten-filters {
+    padding: 0.75rem 1.25rem;
+    background: var(--gray-lighter);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.filters-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem;
     align-items: center;
-    padding-top: 1rem;
-    border-top: 1px solid var(--gray-light);
 }
 
 .filter-group {
@@ -123,26 +429,26 @@ header h1 {
 
 .filter-group label {
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--gray-medium);
 }
 
 .filter-group select,
 .filter-group input[type="date"] {
-    padding: 0.5rem;
+    padding: 0.45rem;
     border: 1px solid var(--gray-light);
     border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .btn-secondary {
-    padding: 0.5rem 1rem;
+    padding: 0.45rem 0.85rem;
     background-color: var(--gray-light);
     color: var(--gray-dark);
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: background-color 0.2s;
 }
 
@@ -151,188 +457,184 @@ header h1 {
     color: var(--white);
 }
 
-/* Layout */
-.layout {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 1.5rem;
-    margin: 1.5rem 0;
+/* ─── Briefing inline content ─── */
+.briefing-inhoud {
+    line-height: 1.7;
+    color: var(--gray-dark);
 }
 
-/* Sidebar */
-.sidebar {
-    background-color: var(--white);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    max-height: calc(100vh - 300px);
-    overflow-y: auto;
-}
-
-.sidebar h2 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+.briefing-inhoud h2 {
+    font-size: 1.2rem;
     color: var(--wassenaar-blue);
+    margin: 1.75rem 0 0.6rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid #90caf9;
 }
 
-.thema-tree {
-    font-size: 0.9rem;
+.briefing-inhoud h2:first-child {
+    margin-top: 0;
 }
 
-.thema-item {
-    margin-bottom: 0.5rem;
+.briefing-inhoud h3 {
+    font-size: 1.05rem;
+    color: var(--wassenaar-donker);
+    margin: 1.25rem 0 0.4rem;
 }
 
-.thema-item > .thema-label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    font-weight: 500;
+.briefing-inhoud p {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
 }
 
-.thema-item > .thema-label:hover {
-    background-color: var(--gray-lighter);
-}
-
-.thema-item.expanded > .thema-label {
+.briefing-inhoud .ref {
     color: var(--wassenaar-blue);
-}
-
-.thema-toggle {
     font-size: 0.8rem;
-    width: 1.2rem;
-    text-align: center;
-}
-
-.thema-children {
-    margin-left: 1.5rem;
-    margin-top: 0.25rem;
-    display: none;
-}
-
-.thema-item.expanded > .thema-children {
-    display: block;
-}
-
-.thema-child {
-    padding: 0.4rem 0.5rem;
+    font-weight: 500;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-bottom: 1px dashed var(--wassenaar-blue);
+    transition: background 0.15s;
+    border-radius: 2px;
+    padding: 0 0.15rem;
 }
 
-.thema-child:hover {
-    background-color: var(--gray-lighter);
+.briefing-inhoud .ref:hover {
+    background: #e3f2fd;
 }
 
-.thema-child.active {
-    background-color: var(--wassenaar-light-blue);
-    color: var(--white);
+.result-item.highlight {
+    animation: refHighlight 2s ease-out;
+    box-shadow: inset 4px 0 0 var(--wassenaar-blue);
 }
 
-.thema-count {
+@keyframes refHighlight {
+    0%   { background-color: #bbdefb; }
+    100% { background-color: transparent; }
+}
+
+.briefing-inhoud .waarschuwing {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 0.6rem 0.85rem;
+    margin: 0.75rem 0;
+    font-size: 0.88rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.briefing-inhoud ul {
+    margin: 0.5rem 0 0.75rem 1.5rem;
+    font-size: 0.93rem;
+}
+
+.briefing-inhoud li {
+    margin-bottom: 0.35rem;
+}
+
+.briefing-inhoud table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75rem 0;
     font-size: 0.85rem;
+}
+
+.briefing-inhoud th,
+.briefing-inhoud td {
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.briefing-inhoud th {
+    background: var(--gray-lighter);
+    font-weight: 600;
+}
+
+.briefing-inhoud .briefing-header {
+    border-bottom: 3px solid var(--wassenaar-blue);
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.briefing-inhoud .briefing-header h1 {
+    font-size: 1.35rem;
+    color: var(--wassenaar-donker);
+    margin-bottom: 0.2rem;
+}
+
+.briefing-inhoud .briefing-subtitle {
+    font-size: 1rem;
+    color: var(--wassenaar-blue);
+    font-weight: 600;
+}
+
+.briefing-inhoud .briefing-meta {
+    font-size: 0.8rem;
     color: var(--gray-medium);
-    margin-left: 0.5rem;
+    margin-top: 0.4rem;
 }
 
-.thema-child.active .thema-count {
-    color: rgba(255,255,255,0.9);
+.briefing-inhoud footer {
+    margin-top: 2rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gray-light);
+    font-size: 0.78rem;
+    color: #999;
 }
 
-/* Results */
-.results {
-    background-color: var(--white);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
+/* ─── Results (shared between dossier-besluiten and zoek-resultaten) ─── */
 .results-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--gray-light);
-}
-
-#resultsCount {
+    padding: 0.75rem 1.25rem;
     font-weight: 600;
-    color: var(--gray-medium);
-}
-
-.sort-options {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.sort-options label {
-    font-size: 0.9rem;
-    color: var(--gray-medium);
-}
-
-.sort-options select {
-    padding: 0.5rem;
-    border: 1px solid var(--gray-light);
-    border-radius: 4px;
+    color: var(--gray-dark);
     font-size: 0.9rem;
 }
 
 .results-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0;
 }
 
 .result-item {
-    padding: 1.5rem;
-    border: 1px solid var(--gray-light);
-    border-radius: 8px;
-    transition: box-shadow 0.2s, transform 0.2s;
+    padding: 1.25rem 1.25rem;
+    border-top: 1px solid var(--gray-light);
+    transition: background-color 0.15s;
 }
 
 .result-item:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transform: translateY(-2px);
+    background-color: #fafafa;
 }
 
 .result-header {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .result-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--wassenaar-blue);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
 }
 
 .result-meta {
     display: flex;
-    gap: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--gray-medium);
 }
 
 .result-badge {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
+    padding: 0.15rem 0.55rem;
     background-color: var(--gray-lighter);
-    border-radius: 12px;
-    font-size: 0.8rem;
+    border-radius: 10px;
+    font-size: 0.78rem;
 }
 
 .result-badge.raad {
@@ -342,37 +644,28 @@ header h1 {
 
 .result-badge.college {
     background-color: #e8f5e9;
-    color: var(--wassenaar-green);
+    color: #2e7d32;
 }
 
 .result-text {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
     color: var(--gray-dark);
     line-height: 1.7;
 }
 
-.result-text-preview {
-    max-height: 150px;
-    overflow: hidden;
-    position: relative;
-}
-
-.result-text-preview::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background: linear-gradient(to bottom, transparent, var(--white));
+.result-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    align-items: center;
 }
 
 .result-link {
     display: inline-block;
-    margin-top: 0.75rem;
     color: var(--wassenaar-light-blue);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
 }
 
@@ -380,33 +673,31 @@ header h1 {
     text-decoration: underline;
 }
 
-.result-hint {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
+.result-link-secondary {
     color: var(--gray-medium);
-    font-style: italic;
+    font-weight: 400;
+    font-size: 0.82rem;
 }
 
-/* Besluittekst (vooral college) op de voorpagina */
 .result-besluit {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 .result-besluit-college {
     background-color: #f0f7f0;
-    border-left: 3px solid var(--wassenaar-green);
-    padding: 0.75rem 1rem;
+    border-left: 3px solid #2e7d32;
+    padding: 0.6rem 0.85rem;
     border-radius: 4px;
 }
 
 .result-besluit-label {
     display: block;
-    font-size: 0.85rem;
-    margin-bottom: 0.35rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.25rem;
 }
 
 .result-besluit-college .result-besluit-label {
-    color: var(--wassenaar-green);
+    color: #2e7d32;
 }
 
 .result-besluit:not(.result-besluit-college) .result-besluit-label {
@@ -416,7 +707,7 @@ header h1 {
 .result-besluit-tekst {
     color: var(--gray-dark);
     line-height: 1.7;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .result-besluit-tekst .result-text-meer[hidden] {
@@ -425,9 +716,9 @@ header h1 {
 
 .btn-uitklappen {
     display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.35rem 0.75rem;
-    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.82rem;
     color: var(--wassenaar-light-blue);
     background: none;
     border: 1px solid var(--wassenaar-light-blue);
@@ -443,49 +734,229 @@ header h1 {
 
 .no-results {
     text-align: center;
-    padding: 3rem;
+    padding: 2rem;
     color: var(--gray-medium);
 }
 
-/* Footer */
-footer {
-    background-color: var(--gray-dark);
+/* ─── Zoekresultaten (zelfstandig) ─── */
+.zoek-resultaten {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.zoek-resultaten-kop {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 2px solid var(--gray-light);
+}
+
+.zoek-resultaten-titel {
+    font-size: 1.15rem;
+    color: var(--wassenaar-donker);
+}
+
+.zoek-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.6rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--gray-lighter);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.zoek-filters .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.zoek-filters label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gray-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.zoek-filters select {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.82rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    background: var(--white);
+    color: var(--gray-dark);
+}
+
+/* ─── Footer ─── */
+.site-footer {
+    background-color: var(--wassenaar-donker);
     color: var(--white);
-    padding: 1.5rem 0;
-    margin-top: 3rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
     text-align: center;
     font-size: 0.9rem;
 }
 
-/* Responsive */
+.site-footer a {
+    color: var(--wassenaar-geel);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ─── Responsive ─── */
+
 @media (max-width: 1024px) {
-    .layout {
-        grid-template-columns: 1fr;
-    }
-    
-    .sidebar {
-        max-height: none;
+    .container {
+        padding: 0 16px;
     }
 }
 
 @media (max-width: 768px) {
-    header h1 {
+    .header-inner {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+    .header-text h1 {
         font-size: 1.5rem;
     }
-    
-    .filters {
+    .subtitle {
+        font-size: 0.8rem;
+    }
+    .overzicht-kop {
         flex-direction: column;
         align-items: stretch;
     }
-    
+    .overzicht-zoek {
+        max-width: none;
+    }
+    .dossier-kaarten {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    .dossier-kaart {
+        padding: 0.85rem 1rem;
+    }
+    .dossier-kaart-preview {
+        -webkit-line-clamp: 2;
+    }
+    .dossier-detail {
+        padding: 1.25rem;
+    }
+    .dossier-kop-titel {
+        font-size: 1.15rem;
+    }
+    .filters-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
     .filter-group {
         flex-direction: column;
         align-items: stretch;
     }
-    
-    .results-header {
+    .result-item {
+        padding: 1rem;
+    }
+    .result-title {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 0.75rem 0;
+    }
+    .site-logo {
+        height: 36px;
+    }
+    .header-text h1 {
+        font-size: 1.3rem;
+    }
+    .dossier-sectie-titel {
+        font-size: 1.05rem;
+    }
+    .dossier-kaarten {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+    .dossier-kaart {
+        padding: 0.85rem;
+    }
+    .dossier-detail {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    .dossier-kop {
         flex-direction: column;
-        gap: 1rem;
-        align-items: stretch;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .dossier-kop-titel {
+        font-size: 1.1rem;
+    }
+    .result-meta {
+        gap: 0.4rem;
+        font-size: 0.78rem;
+    }
+    .result-links {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    .site-footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 0 10px;
+    }
+    .header-inner {
+        gap: 0.5rem;
+    }
+    .site-logo {
+        height: 30px;
+    }
+    .header-text h1 {
+        font-size: 1.15rem;
+    }
+    .dossier-kaart-naam {
+        font-size: 0.82rem;
+    }
+    .dossier-icoon {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (pointer: coarse) {
+    .dossier-kaart {
+        min-height: 48px;
+    }
+    .overzicht-zoek input {
+        padding: 0.65rem 0.85rem;
+        font-size: 1rem;
+    }
+    .overzicht-zoek button {
+        padding: 0.65rem 1.2rem;
+    }
+    .filter-group select,
+    .filter-group input[type="date"] {
+        padding: 0.55rem;
+        font-size: 1rem;
+    }
+    .btn-secondary {
+        padding: 0.55rem 0.85rem;
+    }
+    .btn-uitklappen {
+        padding: 0.45rem 0.85rem;
     }
 }
