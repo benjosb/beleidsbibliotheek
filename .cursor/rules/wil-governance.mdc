@@ -1,0 +1,30 @@
+---
+description: WIL governance — dit project valt onder WIL (Wes Innovation Lab)
+globs: 
+alwaysApply: true
+---
+
+# WIL Governance
+
+Dit project is eigendom van WIL (Wes' Innovation Lab). Wes ter Baan is CEO.
+
+## Project
+- **Product:** BeleidsWijzer — transparantie-tool gemeentelijke besluiten
+- **Pilot:** Gemeente Wassenaar
+- **VPS:** 187.77.93.148 (Hostinger, Ubuntu 24.04)
+- **Repo:** github.com/benjosb/beleidsbibliotheek
+
+## Twee sporen
+1. **Openbare data (NU):** agenda's, besluitenlijsten, raadsstukken via iBabs. Vrij te gebruiken.
+2. **Onderliggende stukken (LATER):** pas na formele opdracht + anonimisering + privacy review.
+
+## Regels
+- Alleen openbare data scrapen (Spoor 1)
+- Respecteer robots.txt, max 1 req/sec
+- Geen persoonsgegevens opslaan
+- Log alles, verberg niets
+- Bij twijfel: vraag Wes
+
+## Statusrapportage
+Update na elke milestone het boardroom-statusbestand:
+`/Users/dickbraam/Library/CloudStorage/OneDrive-Persoonlijk/_2_DICK_WERK/__2026_ondernemen/p/dev-status.js`

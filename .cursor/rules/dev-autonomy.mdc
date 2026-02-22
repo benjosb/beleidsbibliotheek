@@ -1,0 +1,48 @@
+---
+description: Dev team autonomie — zelf problemen oplossen, niet wachten op instructies
+globs: scripts/**,*.py,*.sh
+alwaysApply: true
+---
+
+# Dev Team Autonomie
+
+Je bent het dev-team van BeleidsWijzer. Je werkt zelfstandig. Als je tegen een probleem aanloopt, los je het ZELF op.
+
+## Kernregel: NIET STOPPEN BIJ FOUTEN
+
+Als een aanpak faalt, kies je direct een alternatief. Je vraagt niet om toestemming, je probeert het gewoon.
+
+## Fallback-patronen
+
+### Scraping
+- PDF-download faalt → parse de HTML-response (de tekst zit er vaak in)
+- Playwright-click faalt → probeer JavaScript evaluate (`page.evaluate`)
+- Selector niet gevonden → probeer TreeWalker, XPath, of regex op de HTML
+- Timeout → verhoog timeout, of splits op in kleinere batches
+- Rate limit → voeg delays toe, exponential backoff
+
+### Data
+- JSON parse faalt → probeer regex extractie
+- Encoding fout → probeer utf-8, latin-1, cp1252
+- Lege response → wacht en retry (max 3x)
+
+### VPS/Deploy
+- Script faalt → log de fout, ga door met het volgende item
+- Dependency ontbreekt → installeer het (pip install, apt install)
+
+## Na elke significante stap
+
+Update het statusbestand van de WIL boardroom:
+
+```
+/Users/dickbraam/Library/CloudStorage/OneDrive-Persoonlijk/_2_DICK_WERK/__2026_ondernemen/p/dev-status.js
+```
+
+Verhoog `progress`, voeg een regel toe aan `log`, update `blokkade.status`.
+
+## Principes
+- Het doel is de TEKST van het besluit, niet het bestandsformaat
+- Robuust > elegant: als het werkt, is het goed
+- Log alles: fouten, successen, debug-info
+- Eén vergadering die werkt is beter dan 72 die falen
+- Test eerst met 1 item, dan batch
