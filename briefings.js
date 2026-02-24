@@ -203,23 +203,23 @@ const BRIEFING_HTML_DATA = {
 </thead>
 <tbody>
     <tr><td>28-06-2022</td><td>Coalitieakkoord "Samen voor Wassenaar" 2022–2026</td><td>Coalitieakkoord</td></tr>
-    <tr><td>10-05-2022</td><td>Mandaatbesluit Omgevingsdienst Haaglanden 2012 wijziging</td><td>College</td></tr>
-    <tr><td>10-05-2022</td><td>Managementletter 2021</td><td>College</td></tr>
-    <tr><td>10-05-2022</td><td>Aanwijzing contactpersoon Wet Open Overheid</td><td>College</td></tr>
-    <tr><td>17-05-2022</td><td>Toelichting APV Wassenaar</td><td>College</td></tr>
-    <tr><td>17-05-2022</td><td>Schriftelijke vragen Felyx deelscooters</td><td>College</td></tr>
-    <tr><td>17-05-2022</td><td>Schriftelijke vragen geluidsoverlast laag vliegende vliegtuigen</td><td>College</td></tr>
+    <tr><td>10-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Mandaatbesluit Omgevingsdienst Haaglanden 2012 wijziging</a></td><td>College</td></tr>
+    <tr><td>10-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Managementletter 2021</a></td><td>College</td></tr>
+    <tr><td>10-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Aanwijzing contactpersoon Wet Open Overheid</a></td><td>College</td></tr>
+    <tr><td>17-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Toelichting APV Wassenaar</a></td><td>College</td></tr>
+    <tr><td>17-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Schriftelijke vragen Felyx deelscooters</a></td><td>College</td></tr>
+    <tr><td>17-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Schriftelijke vragen geluidsoverlast laag vliegende vliegtuigen</a></td><td>College</td></tr>
     <tr><td>31-05-2022</td><td>Opvang Oekraïne: noodverordening</td><td>College</td></tr>
-    <tr><td>31-05-2022</td><td>Kostendelersnorm niet toepassen bij ontheemden Oekraïne</td><td>College</td></tr>
-    <tr><td>31-05-2022</td><td>Huize Ivicke ontruiming</td><td>College</td></tr>
-    <tr><td>31-05-2022</td><td>Raadsinformatiebrief Inrichtingsplan Centrum WS</td><td>College</td></tr>
-    <tr><td>28-06-2022</td><td>Huize Ivicke ontruiming (vervolg)</td><td>College</td></tr>
-    <tr><td>04-03-2025</td><td>Toestemming vaststelling GR Veiligheidsregio Haaglanden</td><td>Raad</td></tr>
-    <tr><td>01-04-2025</td><td>Vaststellen toetsingscriteria aanwijzingsprocedure lokale publieke omroep</td><td>Raad</td></tr>
+    <tr><td>31-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf" target="_blank" rel="noopener noreferrer">Kostendelersnorm niet toepassen bij ontheemden Oekraïne</a></td><td>College</td></tr>
+    <tr><td>31-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Huize Ivicke ontruiming</a></td><td>College</td></tr>
+    <tr><td>31-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief Inrichtingsplan Centrum WS</a></td><td>College</td></tr>
+    <tr><td>28-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Huize Ivicke ontruiming (vervolg)</a></td><td>College</td></tr>
+    <tr><td>04-03-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Toestemming vaststelling GR Veiligheidsregio Haaglanden</a></td><td>Raad</td></tr>
+    <tr><td>01-04-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5234ff00-1696-4278-b305-dd1d0379886f?agendaItemId=d4308415-8215-47d1-b910-a31ba0fe9f1d" target="_blank" rel="noopener noreferrer">Vaststellen toetsingscriteria aanwijzingsprocedure lokale publieke omroep</a></td><td>Raad</td></tr>
     <tr><td>03-06-2025</td><td>Bekrachtiging Noodverordening NAVO-top 2025 gemeente Wassenaar</td><td>Raad</td></tr>
-    <tr><td>08-07-2025</td><td>Zienswijze ontwerpbegroting 2026 GR Rekenkamer WVOLV</td><td>Raad</td></tr>
-    <tr><td>08-07-2025</td><td>Zienswijze ontwerpbegroting 2026-2029 Veiligheidsregio Haaglanden</td><td>Raad</td></tr>
-    <tr><td>22-09-2025</td><td>Verlengen contract accountant Verstegen voor verslagjaren 2026</td><td>Raad</td></tr>
+    <tr><td>08-07-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze ontwerpbegroting 2026 GR Rekenkamer WVOLV</a></td><td>Raad</td></tr>
+    <tr><td>08-07-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze ontwerpbegroting 2026-2029 Veiligheidsregio Haaglanden</a></td><td>Raad</td></tr>
+    <tr><td>22-09-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5bded780-06ba-4256-872c-5a23dbcd8be1?agendaItemId=31fb53d1-0cad-418f-aa26-5aa73e835800" target="_blank" rel="noopener noreferrer">Verlengen contract accountant Verstegen voor verslagjaren 2026</a></td><td>Raad</td></tr>
 </tbody>
 </table>
 
@@ -489,45 +489,45 @@ const BRIEFING_HTML_DATA = {
 </thead>
 <tbody>
     <tr><td>28-06-2022</td><td>Coalitieakkoord "Samen voor Wassenaar" 2022–2026</td><td>Coalitieakkoord</td></tr>
-    <tr><td>28-06-2022</td><td>Voortgang bouw sportaccommodatie</td><td>College</td></tr>
-    <tr><td>27-09-2022</td><td>Begroting 2023-2026</td><td>College</td></tr>
-    <tr><td>18-10-2022</td><td>Bevestiging inkooprelatie Stichting Wassenaar-Voorschoten (toerisme)</td><td>College</td></tr>
-    <tr><td>18-10-2022</td><td>Kaderbrief begroting 2024 GR's</td><td>College</td></tr>
-    <tr><td>06-12-2022</td><td>Kredietbesluit Programmabegroting 2023-2026: €1.896.500</td><td>College</td></tr>
-    <tr><td>24-01-2023</td><td>Stand van zaken bouw sporthal / brieven Kieviten</td><td>College</td></tr>
-    <tr><td>07-03-2023</td><td>Stand van zaken bouw sporthal</td><td>College</td></tr>
-    <tr><td>18-04-2023</td><td>Procesafspraken ontwikkeling Renbaan Duindigt</td><td>College</td></tr>
-    <tr><td>25-04-2023</td><td>Raadsinformatiebrief motie afval gerelateerde zaken</td><td>College</td></tr>
-    <tr><td>09-05-2023</td><td>Stand van zaken P&amp;C-cyclus</td><td>College</td></tr>
-    <tr><td>27-06-2023</td><td>Lokaal Sportakkoord II "Sport versterkt"</td><td>College</td></tr>
-    <tr><td>03-06-2025</td><td>Inzetten subsidie-opbrengsten optimalisering/verduurzaming De Paauw</td><td>Raad</td></tr>
+    <tr><td>28-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf" target="_blank" rel="noopener noreferrer">Voortgang bouw sportaccommodatie</a></td><td>College</td></tr>
+    <tr><td>27-09-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_september_2022.pdf" target="_blank" rel="noopener noreferrer">Begroting 2023-2026</a></td><td>College</td></tr>
+    <tr><td>18-10-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_oktober_2022.pdf" target="_blank" rel="noopener noreferrer">Bevestiging inkooprelatie Stichting Wassenaar-Voorschoten (toerisme)</a></td><td>College</td></tr>
+    <tr><td>18-10-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_november_2024.pdf" target="_blank" rel="noopener noreferrer">Kaderbrief begroting 2024 GR's</a></td><td>College</td></tr>
+    <tr><td>06-12-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_december_2022.pdf" target="_blank" rel="noopener noreferrer">Kredietbesluit Programmabegroting 2023-2026: €1.896.500</a></td><td>College</td></tr>
+    <tr><td>24-01-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Stand van zaken bouw sporthal / brieven Kieviten</a></td><td>College</td></tr>
+    <tr><td>07-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf" target="_blank" rel="noopener noreferrer">Stand van zaken bouw sporthal</a></td><td>College</td></tr>
+    <tr><td>18-04-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_april_2023.pdf" target="_blank" rel="noopener noreferrer">Procesafspraken ontwikkeling Renbaan Duindigt</a></td><td>College</td></tr>
+    <tr><td>25-04-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief motie afval gerelateerde zaken</a></td><td>College</td></tr>
+    <tr><td>09-05-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf" target="_blank" rel="noopener noreferrer">Stand van zaken P&amp;C-cyclus</a></td><td>College</td></tr>
+    <tr><td>27-06-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf" target="_blank" rel="noopener noreferrer">Lokaal Sportakkoord II "Sport versterkt"</a></td><td>College</td></tr>
+    <tr><td>03-06-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/75ab9609-ac3d-48d4-867d-9e014ab41a85?agendaItemId=7caa0d89-4bc0-450c-b2fa-a760b63d2bc6" target="_blank" rel="noopener noreferrer">Inzetten subsidie-opbrengsten optimalisering/verduurzaming De Paauw</a></td><td>Raad</td></tr>
     <tr><td>01-07-2025</td><td>Kadernota 2026 geamendeerd vastgesteld</td><td>Raad</td></tr>
-    <tr><td>08-07-2025</td><td>Zienswijze begroting 2026 GR GGD/VT Haaglanden</td><td>Raad</td></tr>
-    <tr><td>08-07-2025</td><td>Zienswijze begroting 2026 BSGR</td><td>Raad</td></tr>
-    <tr><td>08-07-2025</td><td>Zienswijze begroting 2026 Avalex</td><td>Raad</td></tr>
+    <tr><td>08-07-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze begroting 2026 GR GGD/VT Haaglanden</a></td><td>Raad</td></tr>
+    <tr><td>08-07-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze begroting 2026 BSGR</a></td><td>Raad</td></tr>
+    <tr><td>08-07-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze begroting 2026 Avalex</a></td><td>Raad</td></tr>
     <tr><td>08-07-2025</td><td>Jaarstukken 2024 vastgesteld</td><td>Raad</td></tr>
     <tr><td>08-07-2025</td><td>Voorjaarsnota 2025 vastgesteld</td><td>Raad</td></tr>
-    <tr><td>22-09-2025</td><td>Economische Visie Wassenaar 2025 – zes ambities</td><td>Raad</td></tr>
-    <tr><td>23-09-2025</td><td>Ontwerpkeuzes renovatie/restauratie De Paauw – zonder extra krediet</td><td>Raad</td></tr>
-    <tr><td>23-09-2025</td><td>Sportvisie Wassenaar 2025 – vier pijlers</td><td>Raad</td></tr>
-    <tr><td>14-10-2025</td><td>Verordening BIZ Maaldrift 2026-2030</td><td>Raad</td></tr>
-    <tr><td>14-10-2025</td><td>Controleprotocol incl. normen-/toetsingskader 2025</td><td>Raad</td></tr>
-    <tr><td>14-10-2025</td><td>Actualisatie financiële verordening 2025</td><td>Raad</td></tr>
-    <tr><td>14-10-2025</td><td>Zienswijze Visie Economisch Vestigingsklimaat MRDH 2025</td><td>Raad</td></tr>
-    <tr><td>04-11-2025</td><td>Begroting 2026 vastgesteld</td><td>Raad</td></tr>
-    <tr><td>04-11-2025</td><td>Verordening kwijtschelding belastingen 2026</td><td>Raad</td></tr>
-    <tr><td>04-11-2025</td><td>Verordening marktgeld 2026</td><td>Raad</td></tr>
-    <tr><td>04-11-2025</td><td>Verordening liggeld 2026</td><td>Raad</td></tr>
-    <tr><td>04-11-2025</td><td>Verordening afvalstoffenheffing 2026</td><td>Raad</td></tr>
-    <tr><td>04-11-2025</td><td>Verordening precariobelasting 2026</td><td>Raad</td></tr>
+    <tr><td>22-09-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Economische Visie Wassenaar 2025 – zes ambities</a></td><td>Raad</td></tr>
+    <tr><td>23-09-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/7ce67756-9dea-4c1b-9390-68df6d169b35?agendaItemId=48351a64-8b4e-4c43-9c3f-9d6a024abb8a" target="_blank" rel="noopener noreferrer">Ontwerpkeuzes renovatie/restauratie De Paauw – zonder extra krediet</a></td><td>Raad</td></tr>
+    <tr><td>23-09-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Sportvisie Wassenaar 2025 – vier pijlers</a></td><td>Raad</td></tr>
+    <tr><td>14-10-2025</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf" target="_blank" rel="noopener noreferrer">Verordening BIZ Maaldrift 2026-2030</a></td><td>Raad</td></tr>
+    <tr><td>14-10-2025</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_augustus_2024.pdf" target="_blank" rel="noopener noreferrer">Controleprotocol incl. normen-/toetsingskader 2025</a></td><td>Raad</td></tr>
+    <tr><td>14-10-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f771bed8-2066-4bd2-95c3-06287cc72379?agendaItemId=ee1e7028-db90-4250-bc31-f94f8a4459d5" target="_blank" rel="noopener noreferrer">Actualisatie financiële verordening 2025</a></td><td>Raad</td></tr>
+    <tr><td>14-10-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze Visie Economisch Vestigingsklimaat MRDH 2025</a></td><td>Raad</td></tr>
+    <tr><td>04-11-2025</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf" target="_blank" rel="noopener noreferrer">Begroting 2026 vastgesteld</a></td><td>Raad</td></tr>
+    <tr><td>04-11-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/57b7fa4c-ddc4-45ad-b7f0-60c828f01f9b?agendaItemId=0ed97f25-b533-4c6a-a26f-7b3a4ad97914" target="_blank" rel="noopener noreferrer">Verordening kwijtschelding belastingen 2026</a></td><td>Raad</td></tr>
+    <tr><td>04-11-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/2897d6c8-0346-4e89-9391-67edc22cd48a?agendaItemId=ed895ca6-84eb-4502-a75c-686bba2d0ae0" target="_blank" rel="noopener noreferrer">Verordening marktgeld 2026</a></td><td>Raad</td></tr>
+    <tr><td>04-11-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b7d8ee51-1039-46de-85e0-9931986efab7?agendaItemId=8cae7ed0-45d4-4714-8181-c565279f31cd" target="_blank" rel="noopener noreferrer">Verordening liggeld 2026</a></td><td>Raad</td></tr>
+    <tr><td>04-11-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/a233dcc0-2664-4dd5-b0e9-5aabc9471711?agendaItemId=2d90c1dc-3074-4fba-8064-89a425d01681" target="_blank" rel="noopener noreferrer">Verordening afvalstoffenheffing 2026</a></td><td>Raad</td></tr>
+    <tr><td>04-11-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/944e92a0-f637-4e1b-9da8-f70fae59827d?agendaItemId=b1705ab6-aaaf-43ca-99c1-26cf09496419" target="_blank" rel="noopener noreferrer">Verordening precariobelasting 2026</a></td><td>Raad</td></tr>
     <tr><td>04-11-2025</td><td>Retributieverordening 2026</td><td>Raad</td></tr>
-    <tr><td>04-11-2025</td><td>Verordening toeristenbelasting 2026</td><td>Raad</td></tr>
-    <tr><td>04-11-2025</td><td>Verordening hondenbelasting 2026</td><td>Raad</td></tr>
+    <tr><td>04-11-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/edf83261-ee25-4c2a-986f-215fc93d97c4?agendaItemId=deb74464-ab96-4959-bd59-873e5ef54f03" target="_blank" rel="noopener noreferrer">Verordening toeristenbelasting 2026</a></td><td>Raad</td></tr>
+    <tr><td>04-11-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6a7b41f7-da3b-4000-8247-437a8af61761?agendaItemId=63f90655-66e9-4f60-833b-b2b7194c4b3c" target="_blank" rel="noopener noreferrer">Verordening hondenbelasting 2026</a></td><td>Raad</td></tr>
     <tr><td>16-12-2025</td><td>Verordening OZB 2026</td><td>Raad</td></tr>
-    <tr><td>16-12-2025</td><td>Verordening ondernemersheffing 2026</td><td>Raad</td></tr>
+    <tr><td>16-12-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/a739458c-5d07-4788-8143-ed31b477e111?agendaItemId=1e19fb46-e8cc-4dc1-9d92-88f7529d285e" target="_blank" rel="noopener noreferrer">Verordening ondernemersheffing 2026</a></td><td>Raad</td></tr>
     <tr><td>16-12-2025</td><td>Legesverordening 2026</td><td>Raad</td></tr>
-    <tr><td>16-12-2025</td><td>Verordening begraafplaatsrechten 2026</td><td>Raad</td></tr>
-    <tr><td>17-12-2025</td><td>Najaarsnota 2025 – positief saldo €5.243</td><td>Raad</td></tr>
+    <tr><td>16-12-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/96ba8376-93a2-4c09-a0ec-1e9318045644?agendaItemId=bc4e73df-a33a-4f19-a803-365af2618cd8" target="_blank" rel="noopener noreferrer">Verordening begraafplaatsrechten 2026</a></td><td>Raad</td></tr>
+    <tr><td>17-12-2025</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_november_2025.pdf" target="_blank" rel="noopener noreferrer">Najaarsnota 2025 – positief saldo €5.243</a></td><td>Raad</td></tr>
 </tbody>
 </table>
 
@@ -763,37 +763,37 @@ const BRIEFING_HTML_DATA = {
 </thead>
 <tbody>
     <tr><td>28-06-2022</td><td>Coalitieakkoord "Samen voor Wassenaar" 2022–2026</td><td>Coalitieakkoord</td></tr>
-    <tr><td>10-05-2022</td><td>Informatiebrief Financiën Invoering Omgevingswet</td><td>College</td></tr>
-    <tr><td>14-06-2022</td><td>Subsidieplafond Milieu 2022</td><td>College</td></tr>
-    <tr><td>28-06-2022</td><td>Ontwerpbestemmingsplan Laan van Pluymestein 11 / Het Kerkehout</td><td>College</td></tr>
-    <tr><td>30-08-2022</td><td>Eerste wijziging Beleidsregels Eenmalige Energietoeslag</td><td>College</td></tr>
-    <tr><td>06-12-2022</td><td>Vaststelling beheersverordening diverse locaties</td><td>College</td></tr>
-    <tr><td>17-01-2023</td><td>Raadsinformatiebrief ontwikkelingen RES</td><td>College</td></tr>
-    <tr><td>24-01-2023</td><td>Lokale Energiestrategie 2023–2026</td><td>College</td></tr>
-    <tr><td>21-02-2023</td><td>Krediet verkeersdoseerinstallatie Kokshornlaan</td><td>College</td></tr>
-    <tr><td>21-02-2023</td><td>Krediet Duurzaam Veilig Storm/Schouwweg</td><td>College</td></tr>
-    <tr><td>07-03-2023</td><td>Tweede nabetaling € 500 energietoeslag 2022</td><td>College</td></tr>
-    <tr><td>21-03-2023</td><td>Herziene Realisatieplan Verkeer</td><td>College</td></tr>
-    <tr><td>04-03-2025</td><td>Definitieve weigering omgevingsvergunning Rijksstraatweg 785</td><td>Raad</td></tr>
-    <tr><td>04-03-2025</td><td>Visie De Wassenaarse Slag</td><td>Raad</td></tr>
-    <tr><td>04-03-2025</td><td>Rekenkamer effectiviteit woonbeleid</td><td>Raad</td></tr>
-    <tr><td>04-03-2025</td><td>Verzwaard adviesrecht herontwikkeling Den Deylschool</td><td>Raad</td></tr>
-    <tr><td>01-04-2025</td><td>Zienswijze Actieplan Evaluatie GR MRDH</td><td>Raad</td></tr>
-    <tr><td>03-06-2025</td><td>Wensen en bedenkingen Concept-Programma Noordrand</td><td>Raad</td></tr>
-    <tr><td>03-06-2025</td><td>Adviesrapport Burgerberaad Verkeer</td><td>Raad</td></tr>
-    <tr><td>23-06-2025</td><td>Herstelbesluit bestemmingsplan "Woongebied Valkenhorst"</td><td>Raad</td></tr>
-    <tr><td>08-07-2025</td><td>Zienswijze ontwerpbegroting 2026 ODH</td><td>Raad</td></tr>
-    <tr><td>08-07-2025</td><td>Zienswijze ontwerpbegroting 2026 MRDH</td><td>Raad</td></tr>
-    <tr><td>22-09-2025</td><td>Vestiging vervroegd voorkeursrecht Duindigt</td><td>Raad</td></tr>
-    <tr><td>14-10-2025</td><td>Nota Woonbeleid gemeente Wassenaar 2025</td><td>Raad</td></tr>
-    <tr><td>14-10-2025</td><td>Zienswijze concept-ontwerp Mobiliteitsvisie MRDH</td><td>Raad</td></tr>
-    <tr><td>14-10-2025</td><td>Verklaring van geen bedenkingen Ruigelaan 1a</td><td>Raad</td></tr>
-    <tr><td>16-12-2025</td><td>Vijfde Wijziging GR Omgevingsdienst Haaglanden</td><td>Raad</td></tr>
-    <tr><td>16-12-2025</td><td>Verordening riool- en waterzorgheffing 2026</td><td>Raad</td></tr>
-    <tr><td>16-12-2025</td><td>Beslissing op bezwaar voorkeursrecht Duindigt</td><td>Raad</td></tr>
-    <tr><td>16-12-2025</td><td>Tweede wijziging Huisvestingsverordening 2023</td><td>Raad</td></tr>
-    <tr><td>17-12-2025</td><td>Wegencategoriseringsplan Wassenaar</td><td>Raad</td></tr>
-    <tr><td>17-12-2025</td><td>Startnotitie Participatie Omgevingsvisie</td><td>Raad</td></tr>
+    <tr><td>10-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Informatiebrief Financiën Invoering Omgevingswet</a></td><td>College</td></tr>
+    <tr><td>14-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf" target="_blank" rel="noopener noreferrer">Subsidieplafond Milieu 2022</a></td><td>College</td></tr>
+    <tr><td>28-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_juni_2022.pdf" target="_blank" rel="noopener noreferrer">Ontwerpbestemmingsplan Laan van Pluymestein 11 / Het Kerkehout</a></td><td>College</td></tr>
+    <tr><td>30-08-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_december_2022.pdf" target="_blank" rel="noopener noreferrer">Eerste wijziging Beleidsregels Eenmalige Energietoeslag</a></td><td>College</td></tr>
+    <tr><td>06-12-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_december_2022.pdf" target="_blank" rel="noopener noreferrer">Vaststelling beheersverordening diverse locaties</a></td><td>College</td></tr>
+    <tr><td>17-01-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief ontwikkelingen RES</a></td><td>College</td></tr>
+    <tr><td>24-01-2023</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/65613a66-fbcf-49a9-ad33-e6ce2170bbec?agendaItemId=138edc9f-cf9d-4a71-a0d6-0732dd30b830" target="_blank" rel="noopener noreferrer">Lokale Energiestrategie 2023–2026</a></td><td>College</td></tr>
+    <tr><td>21-02-2023</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/82ff801b-1a66-425c-8ec9-7437812e2feb?agendaItemId=b27bf186-df6f-42bf-a28b-82e371e91d1d" target="_blank" rel="noopener noreferrer">Krediet verkeersdoseerinstallatie Kokshornlaan</a></td><td>College</td></tr>
+    <tr><td>21-02-2023</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4c4011dc-185f-4755-81be-9ab364a2160a?agendaItemId=b74ce6d9-bc91-4fc9-8bab-5227c9c67183" target="_blank" rel="noopener noreferrer">Krediet Duurzaam Veilig Storm/Schouwweg</a></td><td>College</td></tr>
+    <tr><td>07-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Tweede nabetaling € 500 energietoeslag 2022</a></td><td>College</td></tr>
+    <tr><td>21-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Herziene Realisatieplan Verkeer</a></td><td>College</td></tr>
+    <tr><td>04-03-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9f2b6db5-7489-404b-97b7-38fedf3412de?agendaItemId=8dff8faf-6aba-44eb-8388-e12765d3d875" target="_blank" rel="noopener noreferrer">Definitieve weigering omgevingsvergunning Rijksstraatweg 785</a></td><td>Raad</td></tr>
+    <tr><td>04-03-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Visie De Wassenaarse Slag</a></td><td>Raad</td></tr>
+    <tr><td>04-03-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d674b892-42ee-4daa-85db-23fb769822a3?agendaItemId=c8a1ad52-ac18-4100-abbe-5d9e9361c0f0" target="_blank" rel="noopener noreferrer">Rekenkamer effectiviteit woonbeleid</a></td><td>Raad</td></tr>
+    <tr><td>04-03-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/80839160-18ed-478e-9776-23cd58fcd000?agendaItemId=284d5597-6661-42a4-a3cb-5ebfbf623049" target="_blank" rel="noopener noreferrer">Verzwaard adviesrecht herontwikkeling Den Deylschool</a></td><td>Raad</td></tr>
+    <tr><td>01-04-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze Actieplan Evaluatie GR MRDH</a></td><td>Raad</td></tr>
+    <tr><td>03-06-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/2455d6c8-1c90-4564-be5b-62ee8bc8eb71?agendaItemId=fcf97e62-007f-4e8f-8d93-c6e6582496c1" target="_blank" rel="noopener noreferrer">Wensen en bedenkingen Concept-Programma Noordrand</a></td><td>Raad</td></tr>
+    <tr><td>03-06-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/145d1e63-6437-4003-98d5-33ac91264ac1?agendaItemId=3e394706-6cbd-462c-9e19-9e40465dc3b7" target="_blank" rel="noopener noreferrer">Adviesrapport Burgerberaad Verkeer</a></td><td>Raad</td></tr>
+    <tr><td>23-06-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/43135686-4970-4f3f-b7a4-b7600ccbe012?agendaItemId=4fb461f3-7cb3-4d3c-a4f2-071f91839464" target="_blank" rel="noopener noreferrer">Herstelbesluit bestemmingsplan "Woongebied Valkenhorst"</a></td><td>Raad</td></tr>
+    <tr><td>08-07-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze ontwerpbegroting 2026 ODH</a></td><td>Raad</td></tr>
+    <tr><td>08-07-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze ontwerpbegroting 2026 MRDH</a></td><td>Raad</td></tr>
+    <tr><td>22-09-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/ba1e5c4f-b0f7-402c-a81d-78a4a69793df?agendaItemId=2e4a9fcb-8262-450a-8001-e63cb2cefeae" target="_blank" rel="noopener noreferrer">Vestiging vervroegd voorkeursrecht Duindigt</a></td><td>Raad</td></tr>
+    <tr><td>14-10-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Nota Woonbeleid gemeente Wassenaar 2025</a></td><td>Raad</td></tr>
+    <tr><td>14-10-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze concept-ontwerp Mobiliteitsvisie MRDH</a></td><td>Raad</td></tr>
+    <tr><td>14-10-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/98fdd2ea-cc15-421f-8893-4abe82ea6e36?agendaItemId=963fa536-5cf7-40da-9f65-d4e105504607" target="_blank" rel="noopener noreferrer">Verklaring van geen bedenkingen Ruigelaan 1a</a></td><td>Raad</td></tr>
+    <tr><td>16-12-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Vijfde Wijziging GR Omgevingsdienst Haaglanden</a></td><td>Raad</td></tr>
+    <tr><td>16-12-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4f818bf5-d1b2-44de-918c-3266f8c0ab40?agendaItemId=e2a7771f-89c3-4148-a12c-16bd168a1924" target="_blank" rel="noopener noreferrer">Verordening riool- en waterzorgheffing 2026</a></td><td>Raad</td></tr>
+    <tr><td>16-12-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6b8980be-44dc-43d1-a4ed-20fab5cc7912?agendaItemId=311976b9-124a-49d0-8e0c-75a42ac65bc9" target="_blank" rel="noopener noreferrer">Beslissing op bezwaar voorkeursrecht Duindigt</a></td><td>Raad</td></tr>
+    <tr><td>16-12-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f4dfcc53-672e-4d58-aa9e-edaa034c860b?agendaItemId=a46c480a-6a05-4612-87a9-9bef1fc58382" target="_blank" rel="noopener noreferrer">Tweede wijziging Huisvestingsverordening 2023</a></td><td>Raad</td></tr>
+    <tr><td>17-12-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3a10e3a7-42a0-4d1d-b2d5-4665bcb18442?agendaItemId=fecb037d-9434-46c1-8d7c-d88b5082b02a" target="_blank" rel="noopener noreferrer">Wegencategoriseringsplan Wassenaar</a></td><td>Raad</td></tr>
+    <tr><td>17-12-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/fdfc6f6c-abfb-43f6-be46-0633fba4efeb?agendaItemId=ceb200d6-e05c-4b44-97fc-aa1e3f2a547b" target="_blank" rel="noopener noreferrer">Startnotitie Participatie Omgevingsvisie</a></td><td>Raad</td></tr>
 </tbody>
 </table>
 
@@ -1037,40 +1037,40 @@ const BRIEFING_HTML_DATA = {
 </thead>
 <tbody>
     <tr><td>28-06-2022</td><td>Coalitieakkoord "Samen voor Wassenaar" 2022–2026</td><td>Coalitieakkoord</td></tr>
-    <tr><td>24-05-2022</td><td>Vaststellen definitieve scope herontwikkeling Den Deylschool</td><td>College</td></tr>
-    <tr><td>24-05-2022</td><td>Intentieovereenkomst American School of The Hague voor Deijlerhoeve</td><td>College</td></tr>
-    <tr><td>24-05-2022</td><td>Huurovereenkomst SchoolAdviesDienst</td><td>College</td></tr>
-    <tr><td>24-05-2022</td><td>Dashboard Jeugdhulp Wassenaar mei 2022</td><td>College</td></tr>
-    <tr><td>31-05-2022</td><td>Kostendelersnorm niet toepassen bij ontheemden</td><td>College</td></tr>
-    <tr><td>07-06-2022</td><td>Evaluatie re-integratie en participatiebeleid</td><td>College</td></tr>
-    <tr><td>28-06-2022</td><td>7e wijziging Verordening maatschappelijke ondersteuning</td><td>College</td></tr>
-    <tr><td>30-08-2022</td><td>Beantwoording vragen wonen voor ouderen/starters</td><td>College</td></tr>
-    <tr><td>27-09-2022</td><td>Onderwijs aan ontheemden in Wassenaar — Den Deijlschool</td><td>College</td></tr>
-    <tr><td>11-10-2022</td><td>Verordening inburgering Wassenaar 2022</td><td>College</td></tr>
-    <tr><td>06-12-2022</td><td>Convenant beschermd wonen</td><td>College</td></tr>
-    <tr><td>13-12-2022</td><td>Diverse onderwerpen jeugdhulpregio Haaglanden</td><td>College</td></tr>
-    <tr><td>13-12-2022</td><td>Deelname Stichting MO Wassenaar</td><td>College</td></tr>
-    <tr><td>20-12-2022</td><td>Cliëntervaringsonderzoek Wmo 2021/2022</td><td>College</td></tr>
-    <tr><td>10-01-2023</td><td>Toekennen hardheidsclausule huurders actiegebied</td><td>College</td></tr>
-    <tr><td>24-01-2023</td><td>Vaststellen winnend plan ontwikkelcompetitie Den Deylschool</td><td>College</td></tr>
-    <tr><td>21-02-2023</td><td>Koers nieuw re-integratie en participatiebeleid</td><td>College</td></tr>
-    <tr><td>07-03-2023</td><td>Vaststellen winnend plan ontwikkelcompetitie Den Deylschool (vervolg)</td><td>College</td></tr>
-    <tr><td>21-03-2023</td><td>Indexatie Wmo-tarieven H6 per 1-4-2023</td><td>College</td></tr>
-    <tr><td>21-03-2023</td><td>Proces actualisatie Uitvoeringsplan Jeugdhulp Haaglanden</td><td>College</td></tr>
-    <tr><td>28-01-2025</td><td>Beleidsnota Ouderenbeleid 2025</td><td>Raad</td></tr>
-    <tr><td>01-04-2025</td><td>Beleidsnota schuldhulpverlening 2025–2028</td><td>Raad</td></tr>
-    <tr><td>01-04-2025</td><td>Herijking IHP onderwijs 2024–2039</td><td>Raad</td></tr>
-    <tr><td>03-06-2025</td><td>Verordening Adviesraad Sociaal Domein 2025</td><td>Raad</td></tr>
-    <tr><td>03-06-2025</td><td>Voorbereidingskrediet €950.500 nieuwbouw Sint Baptistschool en Sint Jozefschool</td><td>Raad</td></tr>
-    <tr><td>03-06-2025</td><td>Nieuw inkoopkader jeugdhulp GR SbJH</td><td>Raad</td></tr>
-    <tr><td>08-07-2025</td><td>Zienswijze begroting 2026 GR SbJH</td><td>Raad</td></tr>
-    <tr><td>08-07-2025</td><td>Intrekken subsidieregeling kindgebonden financiering peuteropvang per 1-8-2025</td><td>Raad</td></tr>
-    <tr><td>08-07-2025</td><td>Aanvullend voorbereidingskrediet €69.090 renovatie/vernieuwbouw Kievietschool</td><td>Raad</td></tr>
-    <tr><td>22-09-2025</td><td>Verordening leerlingenvervoer 2025</td><td>Raad</td></tr>
-    <tr><td>22-09-2025</td><td>Startnotitie Lokale Woonzorgvisie</td><td>Raad</td></tr>
-    <tr><td>14-10-2025</td><td>Jaarrekening 2024 Stichting OPO Wassenaar</td><td>Raad</td></tr>
-    <tr><td>25-11-2025</td><td>Lokaal Jeugdbeleid Wassenaar 2026</td><td>Raad</td></tr>
-    <tr><td>25-11-2025</td><td>Verordening Jeugdhulp gemeente Wassenaar 2025</td><td>Raad</td></tr>
+    <tr><td>24-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Vaststellen definitieve scope herontwikkeling Den Deylschool</a></td><td>College</td></tr>
+    <tr><td>24-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf" target="_blank" rel="noopener noreferrer">Intentieovereenkomst American School of The Hague voor Deijlerhoeve</a></td><td>College</td></tr>
+    <tr><td>24-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Huurovereenkomst SchoolAdviesDienst</a></td><td>College</td></tr>
+    <tr><td>24-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Dashboard Jeugdhulp Wassenaar mei 2022</a></td><td>College</td></tr>
+    <tr><td>31-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Kostendelersnorm niet toepassen bij ontheemden</a></td><td>College</td></tr>
+    <tr><td>07-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_juni_2022.pdf" target="_blank" rel="noopener noreferrer">Evaluatie re-integratie en participatiebeleid</a></td><td>College</td></tr>
+    <tr><td>28-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_februari_2024.pdf" target="_blank" rel="noopener noreferrer">7e wijziging Verordening maatschappelijke ondersteuning</a></td><td>College</td></tr>
+    <tr><td>30-08-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_augustus_2022.pdf" target="_blank" rel="noopener noreferrer">Beantwoording vragen wonen voor ouderen/starters</a></td><td>College</td></tr>
+    <tr><td>27-09-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_september_2022.pdf" target="_blank" rel="noopener noreferrer">Onderwijs aan ontheemden in Wassenaar — Den Deijlschool</a></td><td>College</td></tr>
+    <tr><td>11-10-2022</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/c9694e2e-5b6b-48d3-bc59-10e04fa7da65?agendaItemId=426ad8f5-59f7-456b-a375-744bf77c9685" target="_blank" rel="noopener noreferrer">Verordening inburgering Wassenaar 2022</a></td><td>College</td></tr>
+    <tr><td>06-12-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf" target="_blank" rel="noopener noreferrer">Convenant beschermd wonen</a></td><td>College</td></tr>
+    <tr><td>13-12-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_december_2022.pdf" target="_blank" rel="noopener noreferrer">Diverse onderwerpen jeugdhulpregio Haaglanden</a></td><td>College</td></tr>
+    <tr><td>13-12-2022</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/37d1e382-e29f-472b-8eb8-91c820b8bf62?agendaItemId=49ad5877-c9d2-4e62-b43a-8c29bd88fc7d" target="_blank" rel="noopener noreferrer">Deelname Stichting MO Wassenaar</a></td><td>College</td></tr>
+    <tr><td>20-12-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024.pdf" target="_blank" rel="noopener noreferrer">Cliëntervaringsonderzoek Wmo 2021/2022</a></td><td>College</td></tr>
+    <tr><td>10-01-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_januari_2023.pdf" target="_blank" rel="noopener noreferrer">Toekennen hardheidsclausule huurders actiegebied</a></td><td>College</td></tr>
+    <tr><td>24-01-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Vaststellen winnend plan ontwikkelcompetitie Den Deylschool</a></td><td>College</td></tr>
+    <tr><td>21-02-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf" target="_blank" rel="noopener noreferrer">Koers nieuw re-integratie en participatiebeleid</a></td><td>College</td></tr>
+    <tr><td>07-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Vaststellen winnend plan ontwikkelcompetitie Den Deylschool (vervolg)</a></td><td>College</td></tr>
+    <tr><td>21-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Indexatie Wmo-tarieven H6 per 1-4-2023</a></td><td>College</td></tr>
+    <tr><td>21-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Proces actualisatie Uitvoeringsplan Jeugdhulp Haaglanden</a></td><td>College</td></tr>
+    <tr><td>28-01-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Beleidsnota Ouderenbeleid 2025</a></td><td>Raad</td></tr>
+    <tr><td>01-04-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Beleidsnota schuldhulpverlening 2025–2028</a></td><td>Raad</td></tr>
+    <tr><td>01-04-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Herijking IHP onderwijs 2024–2039</a></td><td>Raad</td></tr>
+    <tr><td>03-06-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9543cef6-fcdf-4e83-b61d-4c23d4b82945?agendaItemId=36195d79-8757-4165-9b23-bcb9944b5d19" target="_blank" rel="noopener noreferrer">Verordening Adviesraad Sociaal Domein 2025</a></td><td>Raad</td></tr>
+    <tr><td>03-06-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3326511b-03cb-4342-949f-426100adad59?agendaItemId=b0691e3c-a134-45d9-baf7-22ca2827b7fa" target="_blank" rel="noopener noreferrer">Voorbereidingskrediet €950.500 nieuwbouw Sint Baptistschool en Sint Jozefschool</a></td><td>Raad</td></tr>
+    <tr><td>03-06-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Nieuw inkoopkader jeugdhulp GR SbJH</a></td><td>Raad</td></tr>
+    <tr><td>08-07-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze begroting 2026 GR SbJH</a></td><td>Raad</td></tr>
+    <tr><td>08-07-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b1032afc-26fb-4be0-afa1-7f2c57cb15f9?agendaItemId=3bea53dd-8888-4a64-9e48-bd22833d6d74" target="_blank" rel="noopener noreferrer">Intrekken subsidieregeling kindgebonden financiering peuteropvang per 1-8-2025</a></td><td>Raad</td></tr>
+    <tr><td>08-07-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/1f352307-65db-4f04-bddb-b5649ab135ff?agendaItemId=9c2500f1-8906-4dd7-8fd1-865d7ca86061" target="_blank" rel="noopener noreferrer">Aanvullend voorbereidingskrediet €69.090 renovatie/vernieuwbouw Kievietschool</a></td><td>Raad</td></tr>
+    <tr><td>22-09-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/eec09f18-31bb-4477-9559-7a73cad358ee?agendaItemId=8d2e9fc6-907b-4a74-abd4-76997db3eb28" target="_blank" rel="noopener noreferrer">Verordening leerlingenvervoer 2025</a></td><td>Raad</td></tr>
+    <tr><td>22-09-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Startnotitie Lokale Woonzorgvisie</a></td><td>Raad</td></tr>
+    <tr><td>14-10-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Jaarrekening 2024 Stichting OPO Wassenaar</a></td><td>Raad</td></tr>
+    <tr><td>25-11-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Lokaal Jeugdbeleid Wassenaar 2026</a></td><td>Raad</td></tr>
+    <tr><td>25-11-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/041d458f-7873-4b2a-9db1-88a41773cf24?agendaItemId=fa3bbe2f-569c-4bf4-b213-a5893d4c89d8" target="_blank" rel="noopener noreferrer">Verordening Jeugdhulp gemeente Wassenaar 2025</a></td><td>Raad</td></tr>
 </tbody>
 </table>
 
@@ -1252,9 +1252,9 @@ const BRIEFING_HTML_DATA = {
 </thead>
 <tbody>
     <tr><td>2023</td><td>Subsidieplafonds 2023 vastgesteld</td><td>14-06-2022</td></tr>
-    <tr><td>2023</td><td>Aangepaste subsidieplafonds 2023</td><td>14-11-2023</td></tr>
+    <tr><td>2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf" target="_blank" rel="noopener noreferrer">Aangepaste subsidieplafonds 2023</a></td><td>14-11-2023</td></tr>
     <tr><td>2024</td><td>Subsidieplafonds 2024 vastgesteld</td><td>27-06-2023</td></tr>
-    <tr><td>2024</td><td>Aangepaste subsidieplafonds 2024</td><td>12-12-2023</td></tr>
+    <tr><td>2024</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf" target="_blank" rel="noopener noreferrer">Aangepaste subsidieplafonds 2024</a></td><td>12-12-2023</td></tr>
     <tr><td>2025</td><td>Subsidieplafonds 2025 vastgesteld (Eco. €35.960 / SAD €478.969 / Volksgez. €34.228)</td><td>18-06-2024</td></tr>
 </tbody>
 </table>
@@ -1324,39 +1324,39 @@ const BRIEFING_HTML_DATA = {
 </thead>
 <tbody>
     <tr><td>28-06-2022</td><td>Coalitieakkoord "Samen voor Wassenaar" 2022–2026</td><td>Coalitieakkoord</td></tr>
-    <tr><td>14-06-2022</td><td>Hardheidsclausule ASV voor subsidieaanvraag Fonds</td><td>College</td></tr>
-    <tr><td>14-06-2022</td><td>Vaststellen subsidieplafonds 2023</td><td>College</td></tr>
-    <tr><td>21-06-2022</td><td>Voortgang Warenar — voortgangsrapportage</td><td>College</td></tr>
-    <tr><td>11-10-2022</td><td>Subsidieaanvraag update NGE-risicokaart 2022 (€13.950)</td><td>College</td></tr>
-    <tr><td>06-12-2022</td><td>Vaststellen subsidies preventief veld</td><td>College</td></tr>
-    <tr><td>24-01-2023</td><td>Investeringskrediet ecologische verbindingszone verhoogd (subsidie provincie ZH €569.020)</td><td>College</td></tr>
-    <tr><td>21-02-2023</td><td>Subsidieaanvraag NGE-onderzoeken 2022</td><td>College</td></tr>
-    <tr><td>21-02-2023</td><td>Benoeming leden commissie Welstand en Cultureel Erfgoed (WCE)</td><td>College</td></tr>
-    <tr><td>07-03-2023</td><td>Benoeming leden commissie WCE (vervolg)</td><td>College</td></tr>
-    <tr><td>28-03-2023</td><td>Benoeming leden commissie WCE (vervolg)</td><td>College</td></tr>
-    <tr><td>21-02-2023</td><td>Raadsinformatiebrief Warenar — calamiteitenonderhoud</td><td>College</td></tr>
-    <tr><td>04-04-2023</td><td>Bezwaar subsidiebeschikking Groot Deijleroord (€3.040/jaar)</td><td>College</td></tr>
-    <tr><td>09-05-2023</td><td>Raadsinformatiebrief subsidiebudget inventarisatie</td><td>College</td></tr>
-    <tr><td>27-06-2023</td><td>Vaststellen subsidieplafonds 2024</td><td>College</td></tr>
-    <tr><td>12-09-2023</td><td>Voornemen museum Voorlinden kunstwerk plaatsen</td><td>College</td></tr>
-    <tr><td>10-10-2023</td><td>Eerste technische aanpassing Erfgoedverordening 2016</td><td>College</td></tr>
-    <tr><td>21-11-2023</td><td>Eerste technische aanpassing Erfgoedverordening 2016 (vervolg)</td><td>College</td></tr>
-    <tr><td>14-11-2023</td><td>Vaststellen aangepaste subsidieplafonds 2023</td><td>College</td></tr>
-    <tr><td>12-12-2023</td><td>Vaststellen aangepaste subsidieplafonds 2024</td><td>College</td></tr>
-    <tr><td>12-12-2023</td><td>Zienswijze aanpassingen GR GGD</td><td>College</td></tr>
-    <tr><td>19-12-2023</td><td>Ondermandaatbesluit subsidieregeling IPS-trajecten</td><td>College</td></tr>
-    <tr><td>19-12-2023</td><td>Subsidieregeling SPUK GALA</td><td>College</td></tr>
-    <tr><td>12-03-2024</td><td>Raadsinformatiebrief haalbaarheidsonderzoek Warenar</td><td>College</td></tr>
-    <tr><td>19-03-2024</td><td>Beantwoording vragen Klankbordgroep Erfgoed</td><td>College</td></tr>
-    <tr><td>02-04-2024</td><td>Rapport GGD luchtverontreiniging Haaglanden</td><td>College</td></tr>
-    <tr><td>16-04-2024</td><td>Wijziging GR GGD en Veilig Thuis</td><td>College</td></tr>
-    <tr><td>23-04-2024</td><td>Subsidieregeling structurele activiteiten</td><td>College</td></tr>
-    <tr><td>30-04-2024</td><td>Overeenkomst Gro-Up Buurtwerk</td><td>College</td></tr>
+    <tr><td>14-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf" target="_blank" rel="noopener noreferrer">Hardheidsclausule ASV voor subsidieaanvraag Fonds</a></td><td>College</td></tr>
+    <tr><td>14-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf" target="_blank" rel="noopener noreferrer">Vaststellen subsidieplafonds 2023</a></td><td>College</td></tr>
+    <tr><td>21-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf" target="_blank" rel="noopener noreferrer">Voortgang Warenar — voortgangsrapportage</a></td><td>College</td></tr>
+    <tr><td>11-10-2022</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6417fd6e-85f2-480e-83ea-d31c6aecd0be?agendaItemId=bf664c98-c48d-4c26-b39a-c9feea0af0a7" target="_blank" rel="noopener noreferrer">Subsidieaanvraag update NGE-risicokaart 2022 (€13.950)</a></td><td>College</td></tr>
+    <tr><td>06-12-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_december_2022.pdf" target="_blank" rel="noopener noreferrer">Vaststellen subsidies preventief veld</a></td><td>College</td></tr>
+    <tr><td>24-01-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf" target="_blank" rel="noopener noreferrer">Investeringskrediet ecologische verbindingszone verhoogd (subsidie provincie ZH €569.020)</a></td><td>College</td></tr>
+    <tr><td>21-02-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf" target="_blank" rel="noopener noreferrer">Subsidieaanvraag NGE-onderzoeken 2022</a></td><td>College</td></tr>
+    <tr><td>21-02-2023</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6c506ca9-a5f5-414e-ac33-9b3714dd6cc8?agendaItemId=500750fd-c7dd-419e-a330-06a20c2ddb5e" target="_blank" rel="noopener noreferrer">Benoeming leden commissie Welstand en Cultureel Erfgoed (WCE)</a></td><td>College</td></tr>
+    <tr><td>07-03-2023</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6c506ca9-a5f5-414e-ac33-9b3714dd6cc8?agendaItemId=500750fd-c7dd-419e-a330-06a20c2ddb5e" target="_blank" rel="noopener noreferrer">Benoeming leden commissie WCE (vervolg)</a></td><td>College</td></tr>
+    <tr><td>28-03-2023</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6c506ca9-a5f5-414e-ac33-9b3714dd6cc8?agendaItemId=500750fd-c7dd-419e-a330-06a20c2ddb5e" target="_blank" rel="noopener noreferrer">Benoeming leden commissie WCE (vervolg)</a></td><td>College</td></tr>
+    <tr><td>21-02-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief Warenar — calamiteitenonderhoud</a></td><td>College</td></tr>
+    <tr><td>04-04-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf" target="_blank" rel="noopener noreferrer">Bezwaar subsidiebeschikking Groot Deijleroord (€3.040/jaar)</a></td><td>College</td></tr>
+    <tr><td>09-05-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_mei_2023.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief subsidiebudget inventarisatie</a></td><td>College</td></tr>
+    <tr><td>27-06-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf" target="_blank" rel="noopener noreferrer">Vaststellen subsidieplafonds 2024</a></td><td>College</td></tr>
+    <tr><td>12-09-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf" target="_blank" rel="noopener noreferrer">Voornemen museum Voorlinden kunstwerk plaatsen</a></td><td>College</td></tr>
+    <tr><td>10-10-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf" target="_blank" rel="noopener noreferrer">Eerste technische aanpassing Erfgoedverordening 2016</a></td><td>College</td></tr>
+    <tr><td>21-11-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf" target="_blank" rel="noopener noreferrer">Eerste technische aanpassing Erfgoedverordening 2016 (vervolg)</a></td><td>College</td></tr>
+    <tr><td>14-11-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf" target="_blank" rel="noopener noreferrer">Vaststellen aangepaste subsidieplafonds 2023</a></td><td>College</td></tr>
+    <tr><td>12-12-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf" target="_blank" rel="noopener noreferrer">Vaststellen aangepaste subsidieplafonds 2024</a></td><td>College</td></tr>
+    <tr><td>12-12-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf" target="_blank" rel="noopener noreferrer">Zienswijze aanpassingen GR GGD</a></td><td>College</td></tr>
+    <tr><td>19-12-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf" target="_blank" rel="noopener noreferrer">Ondermandaatbesluit subsidieregeling IPS-trajecten</a></td><td>College</td></tr>
+    <tr><td>19-12-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf" target="_blank" rel="noopener noreferrer">Subsidieregeling SPUK GALA</a></td><td>College</td></tr>
+    <tr><td>12-03-2024</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4be4fe40-6256-40a5-856f-2b01bd390144?agendaItemId=2f3a6985-9cfd-4175-aa07-03a3456f139c" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief haalbaarheidsonderzoek Warenar</a></td><td>College</td></tr>
+    <tr><td>19-03-2024</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_september_2025.pdf" target="_blank" rel="noopener noreferrer">Beantwoording vragen Klankbordgroep Erfgoed</a></td><td>College</td></tr>
+    <tr><td>02-04-2024</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_april_2024.pdf" target="_blank" rel="noopener noreferrer">Rapport GGD luchtverontreiniging Haaglanden</a></td><td>College</td></tr>
+    <tr><td>16-04-2024</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Wijziging GR GGD en Veilig Thuis</a></td><td>College</td></tr>
+    <tr><td>23-04-2024</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf" target="_blank" rel="noopener noreferrer">Subsidieregeling structurele activiteiten</a></td><td>College</td></tr>
+    <tr><td>30-04-2024</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf" target="_blank" rel="noopener noreferrer">Overeenkomst Gro-Up Buurtwerk</a></td><td>College</td></tr>
     <tr><td>18-06-2024</td><td>Subsidieplafonds 2025 (Eco. €35.960 / SAD €478.969 / Volksgez. €34.228)</td><td>College</td></tr>
-    <tr><td>01-04-2025</td><td>Zienswijze uitstel evaluatie GR GGD en Veilig Thuis Haaglanden</td><td>Raad</td></tr>
-    <tr><td>22-09-2025</td><td>Haalbaarheidsonderzoek herbestemming de Warenar — voorkeursvariant 2</td><td>Raad</td></tr>
-    <tr><td>25-11-2025</td><td>Zienswijze definitieve begroting 2026 en begrotingswijziging 2025 GR GGD</td><td>Raad</td></tr>
-    <tr><td>16-12-2025</td><td>Regiovisie Aanpak Huiselijk Geweld Haaglanden 2026+</td><td>Raad</td></tr>
+    <tr><td>01-04-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze uitstel evaluatie GR GGD en Veilig Thuis Haaglanden</a></td><td>Raad</td></tr>
+    <tr><td>22-09-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4be4fe40-6256-40a5-856f-2b01bd390144?agendaItemId=2f3a6985-9cfd-4175-aa07-03a3456f139c" target="_blank" rel="noopener noreferrer">Haalbaarheidsonderzoek herbestemming de Warenar — voorkeursvariant 2</a></td><td>Raad</td></tr>
+    <tr><td>25-11-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Zienswijze definitieve begroting 2026 en begrotingswijziging 2025 GR GGD</a></td><td>Raad</td></tr>
+    <tr><td>16-12-2025</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42" target="_blank" rel="noopener noreferrer">Regiovisie Aanpak Huiselijk Geweld Haaglanden 2026+</a></td><td>Raad</td></tr>
 </tbody>
 </table>
 
@@ -1598,36 +1598,36 @@ const BRIEFING_HTML_DATA = {
 </thead>
 <tbody>
     <tr><td>28-06-2022</td><td>Coalitieakkoord "Samen voor Wassenaar" 2022–2026</td><td>Coalitieakkoord</td></tr>
-    <tr><td>31-05-2022</td><td>Raadsinformatiebrief Inrichtingsplan Centrum WS</td><td>College</td></tr>
-    <tr><td>31-05-2022</td><td>Dienstverleningsovereenkomst Secretariaat Behandeling Bezwaarschriften per 1-6-2022</td><td>College</td></tr>
-    <tr><td>31-05-2022</td><td>Raadsinformatiebrief ontruiming Huize Ivicke</td><td>College</td></tr>
-    <tr><td>07-06-2022</td><td>Openbaarmaking Woo-verzoek weigeren</td><td>College</td></tr>
-    <tr><td>14-06-2022</td><td>Aanwijzing gemeentearchivaris per 01-02-2022</td><td>College</td></tr>
-    <tr><td>21-06-2022</td><td>Nota Inrichting Sociaal Kernteam Wassenaar</td><td>College</td></tr>
-    <tr><td>28-06-2022</td><td>Concept Raadsinformatiebrief Aanbesteding Inrichtingsplan Centrum</td><td>College</td></tr>
-    <tr><td>28-06-2022</td><td>Toezegging appreciatie Van Polanenpark brief</td><td>College</td></tr>
-    <tr><td>28-06-2022</td><td>Plan van Aanpak RES 2.0</td><td>College</td></tr>
-    <tr><td>16-08-2022</td><td>Onderzoek 30 km/uur voor Wassenaar</td><td>College</td></tr>
-    <tr><td>30-08-2022</td><td>Raadsinformatiebrief opvang Oekraïne</td><td>College</td></tr>
-    <tr><td>30-08-2022</td><td>Ledenraadpleging Cao Gemeenten en Cao SGO</td><td>College</td></tr>
-    <tr><td>18-10-2022</td><td>Eerste bespreking College Uitvoeringsprogramma (CUP) met coach</td><td>College</td></tr>
-    <tr><td>01-12-2022</td><td>Andere relevante zaken — communicatie, ICT</td><td>College</td></tr>
-    <tr><td>10-01-2023</td><td>Raadsinformatiebrief reactie brief ex-wethouder Klaver-Bouman</td><td>College</td></tr>
-    <tr><td>24-01-2023</td><td>Routekaart Buurtgerichte Uitvoeringsplannen</td><td>College</td></tr>
+    <tr><td>31-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief Inrichtingsplan Centrum WS</a></td><td>College</td></tr>
+    <tr><td>31-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Dienstverleningsovereenkomst Secretariaat Behandeling Bezwaarschriften per 1-6-2022</a></td><td>College</td></tr>
+    <tr><td>31-05-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_mei_2022.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief ontruiming Huize Ivicke</a></td><td>College</td></tr>
+    <tr><td>07-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf" target="_blank" rel="noopener noreferrer">Openbaarmaking Woo-verzoek weigeren</a></td><td>College</td></tr>
+    <tr><td>14-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_juni_2022.pdf" target="_blank" rel="noopener noreferrer">Aanwijzing gemeentearchivaris per 01-02-2022</a></td><td>College</td></tr>
+    <tr><td>21-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_juni_2022.pdf" target="_blank" rel="noopener noreferrer">Nota Inrichting Sociaal Kernteam Wassenaar</a></td><td>College</td></tr>
+    <tr><td>28-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_juni_2022.pdf" target="_blank" rel="noopener noreferrer">Concept Raadsinformatiebrief Aanbesteding Inrichtingsplan Centrum</a></td><td>College</td></tr>
+    <tr><td>28-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_juni_2022.pdf" target="_blank" rel="noopener noreferrer">Toezegging appreciatie Van Polanenpark brief</a></td><td>College</td></tr>
+    <tr><td>28-06-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_juni_2022.pdf" target="_blank" rel="noopener noreferrer">Plan van Aanpak RES 2.0</a></td><td>College</td></tr>
+    <tr><td>16-08-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_augustus_2022.pdf" target="_blank" rel="noopener noreferrer">Onderzoek 30 km/uur voor Wassenaar</a></td><td>College</td></tr>
+    <tr><td>30-08-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief opvang Oekraïne</a></td><td>College</td></tr>
+    <tr><td>30-08-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Ledenraadpleging Cao Gemeenten en Cao SGO</a></td><td>College</td></tr>
+    <tr><td>18-10-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_oktober_2022.pdf" target="_blank" rel="noopener noreferrer">Eerste bespreking College Uitvoeringsprogramma (CUP) met coach</a></td><td>College</td></tr>
+    <tr><td>01-12-2022</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_december_2022.pdf" target="_blank" rel="noopener noreferrer">Andere relevante zaken — communicatie, ICT</a></td><td>College</td></tr>
+    <tr><td>10-01-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_januari_2023.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief reactie brief ex-wethouder Klaver-Bouman</a></td><td>College</td></tr>
+    <tr><td>24-01-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf" target="_blank" rel="noopener noreferrer">Routekaart Buurtgerichte Uitvoeringsplannen</a></td><td>College</td></tr>
     <tr><td>24-01-2023</td><td>Jaarplan 2023 DVO M&amp;S Wassenaar-Voorschoten</td><td>College</td></tr>
-    <tr><td>24-01-2023</td><td>Uitbreiding formatie juridische ondersteuning per 1-1-2023</td><td>College</td></tr>
+    <tr><td>24-01-2023</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/250e783e-2f3c-4aad-a880-4964398abf69?agendaItemId=c8d639f4-8eb0-4d7f-a602-44ce0651db18" target="_blank" rel="noopener noreferrer">Uitbreiding formatie juridische ondersteuning per 1-1-2023</a></td><td>College</td></tr>
     <tr><td>07-03-2023</td><td>Raadsinformatiebrief RRP en RBP 2023-2026 VRH</td><td>College</td></tr>
-    <tr><td>21-03-2023</td><td>Stand van zaken bijeenkomsten jongeren Wassenaar</td><td>College</td></tr>
-    <tr><td>21-03-2023</td><td>Raadsinformatiebrief portefeuilleverdeling en locoschap</td><td>College</td></tr>
-    <tr><td>21-03-2023</td><td>Ledenraadpleging principeakkoord Cao Gemeenten</td><td>College</td></tr>
-    <tr><td>28-03-2023</td><td>Herinrichting Storm van 's-Gravesandeweg zuid en Schouwweg noord</td><td>College</td></tr>
-    <tr><td>04-04-2023</td><td>Herinrichting Storm van 's-Gravesandeweg zuid en Schouwweg noord (vervolg)</td><td>College</td></tr>
-    <tr><td>28-03-2023</td><td>Voorgenomen eenzijdig opzeggen DVO MO</td><td>College</td></tr>
-    <tr><td>28-03-2023</td><td>Raadsinformatiebrief anterieure grondovereenkomst herontwikkeling</td><td>College</td></tr>
-    <tr><td>11-04-2023</td><td>Bijgevoegde raadsinformatiebrief vaststellen</td><td>College</td></tr>
-    <tr><td>11-04-2023</td><td>Uitvoeringsplan werkgeversdienstverlening ZHC 2023</td><td>College</td></tr>
-    <tr><td>25-04-2023</td><td>Raadsinformatiebrief Beleidsregels leefgeld Oekraïense Ontheemden</td><td>College</td></tr>
-    <tr><td>25-04-2023</td><td>Raadsinformatiebrief herstructurering wijk</td><td>College</td></tr>
+    <tr><td>21-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Stand van zaken bijeenkomsten jongeren Wassenaar</a></td><td>College</td></tr>
+    <tr><td>21-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief portefeuilleverdeling en locoschap</a></td><td>College</td></tr>
+    <tr><td>21-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Ledenraadpleging principeakkoord Cao Gemeenten</a></td><td>College</td></tr>
+    <tr><td>28-03-2023</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4c4011dc-185f-4755-81be-9ab364a2160a?agendaItemId=b74ce6d9-bc91-4fc9-8bab-5227c9c67183" target="_blank" rel="noopener noreferrer">Herinrichting Storm van 's-Gravesandeweg zuid en Schouwweg noord</a></td><td>College</td></tr>
+    <tr><td>04-04-2023</td><td><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4c4011dc-185f-4755-81be-9ab364a2160a?agendaItemId=b74ce6d9-bc91-4fc9-8bab-5227c9c67183" target="_blank" rel="noopener noreferrer">Herinrichting Storm van 's-Gravesandeweg zuid en Schouwweg noord (vervolg)</a></td><td>College</td></tr>
+    <tr><td>28-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Voorgenomen eenzijdig opzeggen DVO MO</a></td><td>College</td></tr>
+    <tr><td>28-03-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief anterieure grondovereenkomst herontwikkeling</a></td><td>College</td></tr>
+    <tr><td>11-04-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_november_2024.pdf" target="_blank" rel="noopener noreferrer">Bijgevoegde raadsinformatiebrief vaststellen</a></td><td>College</td></tr>
+    <tr><td>11-04-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_april_2023.pdf" target="_blank" rel="noopener noreferrer">Uitvoeringsplan werkgeversdienstverlening ZHC 2023</a></td><td>College</td></tr>
+    <tr><td>25-04-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief Beleidsregels leefgeld Oekraïense Ontheemden</a></td><td>College</td></tr>
+    <tr><td>25-04-2023</td><td><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf" target="_blank" rel="noopener noreferrer">Raadsinformatiebrief herstructurering wijk</a></td><td>College</td></tr>
 </tbody>
 </table>
 

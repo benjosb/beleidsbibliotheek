@@ -1,4 +1,4 @@
-// BeleidsWijzer Wassenaar v4 — dossier-first
+// BeleidsWijzer Wassenaar v5 — verificatie
 
 // ─── Versiebeheer ───
 
@@ -84,6 +84,120 @@ let viewMode = 'overzicht'; // 'overzicht' | 'dossier' | 'zoekresultaten'
 let briefingCache = {};
 let previewCache = {};
 
+// ─── Verificatie-systeem ───
+
+let reviewMode = false;
+let verificatieData = {};
+const VERIFICATIE_KEY = 'beleidswijzer_verificatie';
+
+function getDecisionKey(d) {
+    return (d.datum || '') + '_' + (d.naam || '').replace(/\s+/g, '_').substring(0, 60);
+}
+
+function loadVerificatieData() {
+    try {
+        const raw = localStorage.getItem(VERIFICATIE_KEY);
+        verificatieData = raw ? JSON.parse(raw) : {};
+    } catch { verificatieData = {}; }
+}
+
+function saveVerificatieData() {
+    localStorage.setItem(VERIFICATIE_KEY, JSON.stringify(verificatieData));
+}
+
+function getVerificatieStatus(d) {
+    return verificatieData[getDecisionKey(d)] || 'niet_geverifieerd';
+}
+
+function setVerificatieStatus(d, status, opmerking) {
+    const key = getDecisionKey(d);
+    verificatieData[key] = status;
+    if (opmerking) {
+        if (!verificatieData._opmerkingen) verificatieData._opmerkingen = {};
+        verificatieData._opmerkingen[key] = opmerking;
+    }
+    saveVerificatieData();
+}
+
+function toggleReviewMode() {
+    reviewMode = !reviewMode;
+    document.body.classList.toggle('review-mode', reviewMode);
+    const btn = document.getElementById('reviewModeBtn');
+    if (btn) btn.textContent = reviewMode ? 'Review-modus uit' : 'Review-modus';
+    if (activeDossier) {
+        loadDossierBesluiten(activeDossier.domein);
+    } else if (viewMode === 'zoekresultaten') {
+        applyZoekFilters();
+    }
+}
+
+function handleVerificatieAction(key, action) {
+    const decision = allDecisions.find(d => getDecisionKey(d) === key);
+    if (!decision) return;
+
+    if (action === 'akkoord') {
+        setVerificatieStatus(decision, 'geverifieerd');
+    } else if (action === 'correctie') {
+        const opmerking = prompt('Wat moet gecorrigeerd worden?');
+        if (opmerking !== null) {
+            setVerificatieStatus(decision, 'correctie_nodig', opmerking);
+        } else {
+            return;
+        }
+    }
+
+    updateVerificatieBalk();
+    if (activeDossier) {
+        loadDossierBesluiten(activeDossier.domein);
+    } else if (viewMode === 'zoekresultaten') {
+        applyZoekFilters();
+    }
+}
+
+function exportVerificatieData() {
+    const blob = new Blob([JSON.stringify(verificatieData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `verificatie_beleidswijzer_${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+function importVerificatieData() {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.onchange = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (ev) => {
+            try {
+                const imported = JSON.parse(ev.target.result);
+                Object.assign(verificatieData, imported);
+                saveVerificatieData();
+                if (activeDossier) loadDossierBesluiten(activeDossier.domein);
+                else if (viewMode === 'zoekresultaten') applyZoekFilters();
+                alert(`Verificatiedata geïmporteerd (${Object.keys(imported).length} items).`);
+            } catch { alert('Ongeldig bestand.'); }
+        };
+        reader.readAsText(file);
+    };
+    input.click();
+}
+
+function getVerificatieStats() {
+    let totaal = allDecisions.length;
+    let geverifieerd = 0, correctie = 0;
+    allDecisions.forEach(d => {
+        const s = getVerificatieStatus(d);
+        if (s === 'geverifieerd') geverifieerd++;
+        else if (s === 'correctie_nodig') correctie++;
+    });
+    return { totaal, geverifieerd, correctie, open: totaal - geverifieerd - correctie };
+}
+
 const THEMA_ICONEN = {
     'Bestuur & Veiligheid': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
     'Financiën, Economie & Sport': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
@@ -110,13 +224,27 @@ function loadData() {
             throw new Error('data.js niet geladen.');
         }
         allDecisions = ALL_DECISIONS_DATA;
+        loadVerificatieData();
         console.log(`Data geladen: ${allDecisions.length} raads- en collegebesluiten`);
 
         buildPreviewCache();
         renderDossierKaarten(THEMA_BOOM_DATA);
+        updateVerificatieBalk();
     } catch (error) {
         console.error('Fout bij laden data:', error);
     }
+}
+
+function updateVerificatieBalk() {
+    const balk = document.getElementById('verificatieBalk');
+    if (!balk) return;
+    const s = getVerificatieStats();
+    const pct = s.totaal ? Math.round((s.geverifieerd / s.totaal) * 100) : 0;
+    balk.innerHTML = `
+        <span class="verif-stats-tekst">${s.geverifieerd} van ${s.totaal} geverifieerd (${pct}%)</span>
+        <span class="verif-stats-detail">${s.correctie ? ` · ${s.correctie} correctie nodig` : ''}</span>
+        <div class="verif-bar"><div class="verif-bar-fill" style="width:${pct}%"></div></div>
+    `;
 }
 
 function buildPreviewCache() {
@@ -225,6 +353,7 @@ function openDossier(thema) {
 
     document.getElementById('dossierTitel').textContent = thema;
     loadSyntheseContent(thema);
+    loadCoalitieAkkoord(thema);
     loadDossierBesluiten(thema);
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -257,6 +386,92 @@ function loadSyntheseContent(thema) {
 function extractBodyContent(html) {
     const match = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
     if (match) return match[1];
+    return html;
+}
+
+function loadCoalitieAkkoord(thema) {
+    const container = document.getElementById('coalitieAkkoordInhoud');
+    const blok = document.getElementById('coalitieAkkoordBlok');
+    if (!container || !blok) return;
+
+    if (typeof COALITIEAKKOORD_DATA === 'undefined') {
+        blok.style.display = 'none';
+        return;
+    }
+
+    const secties = COALITIEAKKOORD_DATA.secties.filter(s => s.thema === thema);
+
+    if (!secties.length) {
+        blok.style.display = 'none';
+        return;
+    }
+
+    blok.style.display = '';
+
+    const grouped = {};
+    secties.forEach(s => {
+        if (!grouped[s.hoofdstuk]) grouped[s.hoofdstuk] = [];
+        grouped[s.hoofdstuk].push(s);
+    });
+
+    let html = `<p class="coalitie-intro">Onderstaande passages komen uit het coalitieakkoord <em>"${escapeHtml(COALITIEAKKOORD_DATA.titel)}"</em> (${escapeHtml(COALITIEAKKOORD_DATA.datum)}) en zijn relevant voor dit beleidsdossier.</p>`;
+
+    for (const [hoofdstuk, items] of Object.entries(grouped)) {
+        html += `<div class="coalitie-hoofdstuk"><h4 class="coalitie-hoofdstuk-titel">${escapeHtml(hoofdstuk)}</h4>`;
+        items.forEach(s => {
+            const paragraphs = s.tekst.split('\n\n').map(p =>
+                `<p>${escapeHtml(p.trim())}</p>`
+            ).join('');
+            html += `
+                <div class="coalitie-sectie" id="ca-${s.id}">
+                    <h5 class="coalitie-sectie-titel">
+                        <a href="#ca-${s.id}" class="coalitie-anchor">${escapeHtml(s.titel)}</a>
+                    </h5>
+                    <div class="coalitie-sectie-tekst">${paragraphs}</div>
+                </div>`;
+        });
+        html += `</div>`;
+    }
+
+    html += buildPortefeuilleBlock(thema);
+    html += `<p class="coalitie-bron"><a href="${COALITIEAKKOORD_DATA.bron_url}" target="_blank" rel="noopener noreferrer">Bekijk volledig coalitieakkoord (PDF) →</a></p>`;
+
+    container.innerHTML = html;
+}
+
+function buildPortefeuilleBlock(thema) {
+    if (typeof COALITIEAKKOORD_DATA === 'undefined' || !COALITIEAKKOORD_DATA.portefeuilleverdeling) return '';
+
+    const THEMA_PORTEFEUILLE = {
+        'Bestuur & Veiligheid': ['Burgemeester'],
+        'Financiën, Economie & Sport': ['Wethouder Financiën, Economie en Sport'],
+        'Ruimte, Duurzaamheid & Mobiliteit': ['Wethouder Ruimte, Duurzaamheid en Mobiliteit'],
+        'Sociaal Domein, Wonen & Onderwijs': ['Wethouder Sociaal, Wonen en Onderwijs'],
+        'Cultuur & Welzijn': ['Wethouder Cultuur en Welzijn'],
+        'Bedrijfsvoering': []
+    };
+
+    const pv = COALITIEAKKOORD_DATA.portefeuilleverdeling;
+    const keys = THEMA_PORTEFEUILLE[thema];
+    const relevant = [];
+
+    if (keys && keys.length) {
+        keys.forEach(k => { if (pv[k]) relevant.push({ functie: k, taken: pv[k] }); });
+    } else {
+        Object.entries(pv).forEach(([functie, taken]) => relevant.push({ functie, taken }));
+    }
+
+    if (!relevant.length) return '';
+
+    let html = `<div class="coalitie-sectie coalitie-portefeuille" id="ca-portefeuilleverdeling">
+        <h5 class="coalitie-sectie-titel"><a href="#ca-portefeuilleverdeling" class="coalitie-anchor">Portefeuilleverdeling</a></h5>
+        <div class="coalitie-sectie-tekst">`;
+
+    relevant.forEach(({ functie, taken }) => {
+        html += `<p><strong>${escapeHtml(functie)}:</strong> ${taken.map(t => escapeHtml(t)).join(', ')}</p>`;
+    });
+
+    html += `</div></div>`;
     return html;
 }
 
@@ -302,6 +517,7 @@ function applyZoekFilters() {
     const year = document.getElementById('zoekYearFilter').value;
     const type = document.getElementById('zoekTypeFilter').value;
     const sort = document.getElementById('zoekSortBy').value;
+    const verif = document.getElementById('zoekVerifFilter')?.value || '';
 
     let filtered = zoekBaseResults.slice();
 
@@ -309,6 +525,9 @@ function applyZoekFilters() {
     if (type) {
         if (type === 'raad') filtered = filtered.filter(d => d.type === 'Raadsbesluit');
         else if (type === 'college') filtered = filtered.filter(d => d.type === 'Collegebesluit (B&W)');
+    }
+    if (verif) {
+        filtered = filtered.filter(d => getVerificatieStatus(d) === verif);
     }
 
     if (sort === 'datum-desc') filtered.sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
@@ -345,6 +564,7 @@ function applyDossierFilters() {
     if (!activeDossier) return;
     const year = document.getElementById('yearFilter').value;
     const type = document.getElementById('typeFilter').value;
+    const verif = document.getElementById('verifFilter')?.value || '';
 
     let results = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === activeDossier.domein);
 
@@ -357,6 +577,9 @@ function applyDossierFilters() {
     }
     if (type) {
         results = results.filter(d => d.bron === type);
+    }
+    if (verif) {
+        results = results.filter(d => getVerificatieStatus(d) === verif);
     }
 
     filteredDecisions = results;
@@ -372,8 +595,10 @@ function applyDossierFilters() {
 function resetFilters() {
     const yf = document.getElementById('yearFilter');
     const tf = document.getElementById('typeFilter');
+    const vf = document.getElementById('verifFilter');
     if (yf) yf.value = '';
     if (tf) tf.value = '';
+    if (vf) vf.value = '';
 }
 
 function sortDecisions(sortBy) {
@@ -425,12 +650,16 @@ function renderDecisionItem(decision) {
     const links = buildDecisionLinks(decision);
 
     const searchNaam = (decision.naam || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const verifStatus = getVerificatieStatus(decision);
+    const decKey = getDecisionKey(decision);
+    const verifBadge = renderVerificatieBadge(verifStatus);
+    const reviewButtons = reviewMode ? renderReviewButtons(decKey, verifStatus) : '';
 
     return `
-        <div class="result-item" data-bron="${decision.bron || ''}" data-besluit-naam="${searchNaam}" data-besluit-datum="${decision.datum || ''}">
+        <div class="result-item verif-${verifStatus}" data-bron="${decision.bron || ''}" data-besluit-naam="${searchNaam}" data-besluit-datum="${decision.datum || ''}">
             <div class="result-header">
                 <div>
-                    <div class="result-title">${escapeHtml(decision.naam || (isCollege ? 'Naamloos collegebesluit' : 'Naamloos raadsbesluit'))}</div>
+                    <div class="result-title">${escapeHtml(decision.naam || (isCollege ? 'Naamloos collegebesluit' : 'Naamloos raadsbesluit'))} ${verifBadge}</div>
                     <div class="result-meta">
                         <span>📅 ${datum}</span>
                         <span class="result-badge ${badgeClass}">${badgeText}</span>
@@ -450,6 +679,30 @@ function renderDecisionItem(decision) {
                 </div>
             ` : ''}
             ${links}
+            ${reviewButtons}
+        </div>
+    `;
+}
+
+function renderVerificatieBadge(status) {
+    const labels = {
+        'geverifieerd': '<span class="verif-badge verif-ok" title="Geverifieerd door bestuursadviseur">✓</span>',
+        'correctie_nodig': '<span class="verif-badge verif-correctie" title="Correctie nodig">⚠</span>',
+        'niet_geverifieerd': '<span class="verif-badge verif-open" title="Nog niet geverifieerd">○</span>'
+    };
+    return labels[status] || labels['niet_geverifieerd'];
+}
+
+function renderReviewButtons(decKey, status) {
+    const safeKey = decKey.replace(/"/g, '&quot;');
+    const akkoordDisabled = status === 'geverifieerd' ? ' disabled' : '';
+    return `
+        <div class="review-actions">
+            <button type="button" class="review-btn review-btn-ok${status === 'geverifieerd' ? ' review-btn-active' : ''}" data-verif-key="${safeKey}" data-verif-action="akkoord"${akkoordDisabled}>✓ Akkoord</button>
+            <button type="button" class="review-btn review-btn-flag${status === 'correctie_nodig' ? ' review-btn-active' : ''}" data-verif-key="${safeKey}" data-verif-action="correctie">⚠ Correctie nodig</button>
+            ${status === 'correctie_nodig' && verificatieData._opmerkingen && verificatieData._opmerkingen[decKey]
+                ? `<span class="review-opmerking" title="${escapeHtml(verificatieData._opmerkingen[decKey])}">💬 ${escapeHtml(verificatieData._opmerkingen[decKey])}</span>`
+                : ''}
         </div>
     `;
 }
@@ -491,17 +744,24 @@ function escapeHtml(text) {
 // ─── Bronverwijzing navigatie ───
 
 function navigateToDecision(refText) {
-    const details = document.getElementById('dossierBesluiten');
-    if (!details) return;
-
-    if (!details.open) details.open = true;
-
     const cleaned = refText.replace(/[\[\]]/g, '').trim();
     const parts = cleaned.split(';').map(s => s.trim());
     const firstRef = parts[0];
 
+    if (/coalitieakkoord/i.test(firstRef)) {
+        navigateToCoalitieSection(firstRef);
+        return;
+    }
+
+    const details = document.getElementById('dossierBesluiten');
+    if (!details) return;
+
+    const datumMatch = firstRef.match(/(\d{2}-\d{2}-\d{4})/);
+    const refDatum = datumMatch ? datumMatch[1] : null;
+    const refDatumISO = refDatum ? refDatum.split('-').reverse().join('-') : null;
+
     const namePart = firstRef
-        .replace(/^(Raadsbesluit|Collegebesluit|Coalitieakkoord)\s*:\s*/i, '')
+        .replace(/^(Raadsbesluit|Collegebesluit)\s*:\s*/i, '')
         .replace(/,\s*\d{2}-\d{2}-\d{4}.*$/, '')
         .replace(/,\s*\d{4}.*$/, '')
         .trim()
@@ -509,6 +769,7 @@ function navigateToDecision(refText) {
         .replace(/[^a-z0-9]/g, '');
 
     if (!namePart || namePart.length < 4) {
+        if (!details.open) details.open = true;
         details.querySelector('.dossier-besluiten-kop').scrollIntoView({ behavior: 'smooth', block: 'start' });
         return;
     }
@@ -519,14 +780,20 @@ function navigateToDecision(refText) {
 
     items.forEach(item => {
         const itemNaam = item.getAttribute('data-besluit-naam') || '';
+        const itemDatum = item.getAttribute('data-besluit-datum') || '';
         if (!itemNaam) return;
 
         let score = 0;
-        const words = namePart.match(/.{3,}/g) || [namePart];
-        words.forEach(w => { if (itemNaam.includes(w)) score += w.length; });
 
         if (namePart.length > 6 && itemNaam.includes(namePart)) {
-            score += namePart.length * 2;
+            score += namePart.length * 3;
+        } else {
+            const words = namePart.match(/.{4,}/g) || [namePart];
+            words.forEach(w => { if (itemNaam.includes(w)) score += w.length; });
+        }
+
+        if (refDatumISO && itemDatum === refDatumISO) {
+            score += 20;
         }
 
         if (score > bestScore) {
@@ -535,7 +802,9 @@ function navigateToDecision(refText) {
         }
     });
 
-    if (bestMatch && bestScore >= 6) {
+    const minScore = refDatumISO ? 24 : 8;
+    if (bestMatch && bestScore >= minScore) {
+        if (!details.open) details.open = true;
         document.querySelectorAll('.result-item.highlight').forEach(el => el.classList.remove('highlight'));
         bestMatch.classList.add('highlight');
         setTimeout(() => {
@@ -543,8 +812,67 @@ function navigateToDecision(refText) {
         }, 100);
         setTimeout(() => bestMatch.classList.remove('highlight'), 4000);
     } else {
-        details.querySelector('.dossier-besluiten-kop').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showRefToast(firstRef, refDatum);
     }
+}
+
+function showRefToast(refText, datum) {
+    let toast = document.getElementById('refToast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'refToast';
+        toast.className = 'ref-toast';
+        document.body.appendChild(toast);
+    }
+    const name = refText
+        .replace(/^(Raadsbesluit|Collegebesluit)\s*:\s*/i, '')
+        .replace(/,\s*\d{2}-\d{2}-\d{4}.*$/, '')
+        .trim();
+    const year = datum ? datum.split('-')[2] : '?';
+    toast.innerHTML = `<strong>${escapeHtml(name)}</strong><br><span style="font-size:0.85em">Dit raads- of collegebesluit (${year}) is nog niet opgenomen.<br>De data voor 2022–2024 wordt binnenkort toegevoegd.</span>`;
+    toast.classList.add('visible');
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => toast.classList.remove('visible'), 5000);
+}
+
+function navigateToCoalitieSection(refText) {
+    const blok = document.getElementById('coalitieAkkoordBlok');
+    if (!blok) return;
+    if (!blok.open) blok.open = true;
+
+    const sectionHint = refText
+        .replace(/coalitieakkoord\s*\d*/i, '')
+        .replace(/^[\s,]+|[\s,]+$/g, '')
+        .trim()
+        .toLowerCase();
+
+    if (!sectionHint || sectionHint.length < 3) {
+        blok.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+    }
+
+    const secties = blok.querySelectorAll('.coalitie-sectie');
+    let bestMatch = null;
+    let bestScore = 0;
+
+    secties.forEach(el => {
+        const titel = (el.querySelector('.coalitie-sectie-titel')?.textContent || '').toLowerCase();
+        const hint = sectionHint.replace(/[^a-z]/g, '');
+        const titelClean = titel.replace(/[^a-z]/g, '');
+
+        let score = 0;
+        if (titelClean.includes(hint)) score = hint.length * 3;
+        else {
+            const words = hint.match(/.{3,}/g) || [hint];
+            words.forEach(w => { if (titelClean.includes(w)) score += w.length; });
+        }
+        if (score > bestScore) { bestScore = score; bestMatch = el; }
+    });
+
+    const target = (bestMatch && bestScore >= 4) ? bestMatch : blok;
+    target.classList.add('highlight');
+    setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+    setTimeout(() => target.classList.remove('highlight'), 4000);
 }
 
 // ─── Event listeners ───
@@ -571,6 +899,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const ref = e.target.closest('.ref');
         if (!ref) return;
         navigateToDecision(ref.textContent);
+    });
+
+    // Bronnenlijst-rijen → klikbaar naar besluit of coalitieakkoord
+    document.addEventListener('click', (e) => {
+        const row = e.target.closest('.bronnenlijst tbody tr');
+        if (!row) return;
+        const cells = row.querySelectorAll('td');
+        if (cells.length < 3) return;
+        const datum = cells[0].textContent.trim();
+        const naam = cells[1].textContent.trim();
+        const type = cells[2].textContent.trim();
+        if (/coalitieakkoord/i.test(type)) {
+            navigateToDecision('[Coalitieakkoord 2022]');
+        } else {
+            const prefix = /raad/i.test(type) ? 'Raadsbesluit' : 'Collegebesluit';
+            navigateToDecision(`[${prefix}: ${naam}, ${datum}]`);
+        }
     });
 
     // Terug naar overzicht
@@ -618,4 +963,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Verborgen versiemenu (long-press op versienummer)
     initVersieMenu();
+
+    // Review-actie knoppen (via event delegation)
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-verif-action]');
+        if (!btn) return;
+        const key = btn.getAttribute('data-verif-key');
+        const action = btn.getAttribute('data-verif-action');
+        if (key && action) handleVerificatieAction(key, action);
+    });
+
+    // Review-modus
+    const reviewBtn = document.getElementById('reviewModeBtn');
+    if (reviewBtn) reviewBtn.addEventListener('click', toggleReviewMode);
+
+    const exportBtn = document.getElementById('exportVerifBtn');
+    if (exportBtn) exportBtn.addEventListener('click', exportVerificatieData);
+
+    const importBtn = document.getElementById('importVerifBtn');
+    if (importBtn) importBtn.addEventListener('click', importVerificatieData);
+
+    // Verificatiefilter binnen dossier
+    const verifFilter = document.getElementById('verifFilter');
+    if (verifFilter) verifFilter.addEventListener('change', applyDossierFilters);
+
+    const zoekVerifFilter = document.getElementById('zoekVerifFilter');
+    if (zoekVerifFilter) zoekVerifFilter.addEventListener('change', applyZoekFilters);
 });

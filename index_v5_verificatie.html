@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeleidsWijzer · Gemeente Wassenaar</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_v5.css">
 </head>
 <body>
     <header class="site-header">
@@ -312,6 +312,13 @@
                     <input type="text" id="searchInput" placeholder="Zoek op onderwerp of trefwoord…">
                     <button id="searchBtn" type="button">ZOEK</button>
                 </div>
+                <button type="button" id="reviewModeBtn" class="review-mode-toggle">Review-modus</button>
+            </div>
+            <div class="review-toolbar">
+                <span class="review-toolbar-titel">Review-modus actief</span>
+                <div id="verificatieBalk" class="verif-balk"></div>
+                <button type="button" id="exportVerifBtn">Exporteer status</button>
+                <button type="button" id="importVerifBtn">Importeer status</button>
             </div>
             <div id="dossierKaarten" class="dossier-kaarten"></div>
             <p class="begroting-voetnoot" hidden>Begrotingsbedragen: Programmabegroting 2026. * = programma gedeeld met ander dossier.</p>
@@ -358,6 +365,15 @@
                                 <option value="">Alle typen</option>
                                 <option value="raad">Raadsbesluit</option>
                                 <option value="college">Collegebesluit (B&W)</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="verifFilter">Status</label>
+                            <select id="verifFilter">
+                                <option value="">Alle</option>
+                                <option value="niet_geverifieerd">Nog niet geverifieerd</option>
+                                <option value="geverifieerd">Geverifieerd</option>
+                                <option value="correctie_nodig">Correctie nodig</option>
                             </select>
                         </div>
                         <div class="filter-group">
@@ -410,6 +426,15 @@
                     </select>
                 </div>
                 <div class="filter-group">
+                    <label for="zoekVerifFilter">Status</label>
+                    <select id="zoekVerifFilter">
+                        <option value="">Alle</option>
+                        <option value="niet_geverifieerd">Nog niet geverifieerd</option>
+                        <option value="geverifieerd">Geverifieerd</option>
+                        <option value="correctie_nodig">Correctie nodig</option>
+                    </select>
+                </div>
+                <div class="filter-group">
                     <label for="zoekSortBy">Sorteren</label>
                     <select id="zoekSortBy">
                         <option value="datum-desc">Datum (nieuwste eerst)</option>
@@ -433,13 +458,13 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>BeleidsWijzer Wassenaar · Versie <span id="appVersion">5.1.0</span> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a></p>
+            <p>BeleidsWijzer Wassenaar · Versie <span id="appVersion">5.2.0</span> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a></p>
         </div>
     </footer>
 
     <script src="data.js"></script>
     <script src="briefings.js"></script>
     <script src="coalitieakkoord.js"></script>
-    <script src="app.js"></script>
+    <script src="app_v5.js"></script>
 </body>
 </html>
