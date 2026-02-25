@@ -1,14 +1,44 @@
-// BeleidsWijzer Wassenaar v4 — dossier-first
+// BeleidsWijzer Wassenaar v6 — publish-after-approval
 
 // ─── Versiebeheer ───
 
 const VERSIE_MENU = [
-    { versie: '5.2.0', naam: 'Verificatie', beschrijving: 'Review-modus voor bestuursadviseurs met goedkeuringssysteem', url: 'index_v5_verificatie.html' },
+    { versie: '6.0.0', naam: 'Publish-after-approval', beschrijving: 'Briefings pas zichtbaar na goedkeuring beleidsadviseur', url: 'index_v6_verificatie.html' },
     { versie: '5.1.0', naam: 'Dossier-first', beschrijving: 'Modulaire opzet met beleidsdossiers, briefings en coalitieakkoord', url: 'index_v4_modulair.html' },
     { versie: '3.0',   naam: 'Alles-in-één', beschrijving: 'Complete dataset in één HTML-bestand (457 KB)', url: 'index_v3_alles_in_een.html' },
     { versie: '2.0',   naam: 'Verbeterd', beschrijving: 'Verbeterde layout en zoekfunctie', url: 'index_v2.html' },
     { versie: '1.0',   naam: 'Prototype', beschrijving: 'Eerste werkende prototype', url: 'index_v1.html' },
 ];
+
+// ─── Verificatie configuratie ───
+
+const REVIEW_TOKEN = 'wassenaar2026review';
+const API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+    ? 'http://187.77.93.148/api'
+    : '/api';
+
+const DOSSIER_SLUGS = {
+    'Bestuur & Veiligheid':              'bestuur-veiligheid',
+    'Financiën, Economie & Sport':       'financien-economie',
+    'Ruimte, Duurzaamheid & Mobiliteit': 'ruimte-duurzaamheid',
+    'Sociaal Domein, Wonen & Onderwijs': 'sociaal-wonen',
+    'Cultuur & Welzijn':                 'cultuur-welzijn',
+    'Bedrijfsvoering':                   'bedrijfsvoering'
+};
+
+const DOSSIER_ADVISEURS = {
+    'Bestuur & Veiligheid':              { email: 'adviseur@wassenaar.nl', naam: 'Beleidsadviseur Bestuur & Veiligheid' },
+    'Financiën, Economie & Sport':       { email: 'adviseur@wassenaar.nl', naam: 'Beleidsadviseur Financiën' },
+    'Ruimte, Duurzaamheid & Mobiliteit': { email: 'adviseur@wassenaar.nl', naam: 'Beleidsadviseur Ruimte & Duurzaamheid' },
+    'Sociaal Domein, Wonen & Onderwijs': { email: 'adviseur@wassenaar.nl', naam: 'Beleidsadviseur Sociaal Domein' },
+    'Cultuur & Welzijn':                 { email: 'adviseur@wassenaar.nl', naam: 'Beleidsadviseur Cultuur & Welzijn' },
+    'Bedrijfsvoering':                   { email: 'adviseur@wassenaar.nl', naam: 'Beleidsadviseur Bedrijfsvoering' }
+};
+
+const SECTIE_NAMEN = ['Samenvatting', 'Beleidsclusters', 'Beleidswijzigingen & opvolging', 'Lacunes & kanttekeningen', 'Bronnenlijst'];
+
+let verificatieData = {};
+let isReviewMode = false;
 
 function initVersieMenu() {
     const badge = document.getElementById('appVersion');
@@ -240,17 +270,137 @@ function loadSyntheseContent(thema) {
     const container = document.getElementById('dossierSynthese');
     if (!container) return;
 
-    if (briefingCache[thema]) {
-        container.innerHTML = briefingCache[thema];
+    if (typeof BRIEFING_HTML_DATA === 'undefined' || !BRIEFING_HTML_DATA[thema]) {
+        container.innerHTML = '<p style="color: #999; text-align: center; padding: 2rem;">Geen beleidsdossier beschikbaar voor dit thema.</p>';
         return;
     }
 
-    if (typeof BRIEFING_HTML_DATA !== 'undefined' && BRIEFING_HTML_DATA[thema]) {
-        const body = extractBodyContent(BRIEFING_HTML_DATA[thema]);
-        briefingCache[thema] = body;
-        container.innerHTML = body;
-    } else {
-        container.innerHTML = '<p style="color: #999; text-align: center; padding: 2rem;">Geen beleidsdossier beschikbaar voor dit thema.</p>';
+    const body = extractBodyContent(BRIEFING_HTML_DATA[thema]);
+    const sections = splitBySections(body);
+    const slug = DOSSIER_SLUGS[thema] || 'onbekend';
+    const adviseur = DOSSIER_ADVISEURS[thema] || { email: '', naam: 'Beleidsadviseur' };
+
+    let html = '';
+    let verifIdx = 0;
+    sections.forEach((section) => {
+        const headingLower = section.heading.toLowerCase();
+        const isAlwaysVisible = headingLower.includes('bronnenlijst') || headingLower.includes('opmerkingen') || !section.heading;
+
+        if (isAlwaysVisible) {
+            html += section.html;
+            return;
+        }
+
+        verifIdx++;
+        const key = slug + '_' + verifIdx;
+        const verif = verificatieData[key];
+        const isApproved = verif && verif.status === 'akkoord';
+        const needsCorrection = verif && verif.status === 'correctie_nodig';
+
+        html += `<div class="briefing-sectie" id="sectie-${key}" data-sectie-key="${key}">`;
+
+        if (isApproved || isReviewMode) {
+            if (isApproved) {
+                html += `<div class="verif-badge verif-akkoord">Geverifieerd ${formatVerifDatum(verif.datum)}</div>`;
+            } else if (needsCorrection) {
+                html += `<div class="verif-badge verif-correctie">Correctie nodig</div>`;
+                if (verif.opmerking) html += `<div class="verif-opmerking">${escapeHtml(verif.opmerking)}</div>`;
+            } else {
+                html += `<div class="verif-badge verif-concept">Concept — niet gepubliceerd</div>`;
+            }
+            html += section.html;
+            if (isReviewMode) {
+                html += renderReviewButtons(key, verif);
+            }
+        } else {
+            html += section.heading;
+            html += renderPlaceholder(thema, verifIdx, adviseur);
+        }
+
+        html += '</div>';
+    });
+
+    container.innerHTML = html;
+}
+
+function splitBySections(html) {
+    const parts = html.split(/(?=<h2>)/i);
+    return parts.filter(p => p.trim()).map(p => {
+        const headingMatch = p.match(/<h2>(.*?)<\/h2>/i);
+        return {
+            heading: headingMatch ? `<h2>${headingMatch[1]}</h2>` : '',
+            html: p
+        };
+    });
+}
+
+function renderPlaceholder(thema, sectionNr, adviseur) {
+    const slug = DOSSIER_SLUGS[thema] || 'onbekend';
+    const sectieNaam = SECTIE_NAMEN[sectionNr - 1] || `Sectie ${sectionNr}`;
+    const subject = encodeURIComponent(`BeleidsWijzer: verzoek goedkeuring "${sectieNaam}" — ${thema}`);
+    const reviewUrl = `${window.location.origin}${window.location.pathname}?review=${REVIEW_TOKEN}#sectie-${slug}_${sectionNr}`;
+    const body = encodeURIComponent(
+        `Beste ${adviseur.naam},\n\n` +
+        `Via de BeleidsWijzer is een verzoek ingediend om de sectie "${sectieNaam}" ` +
+        `van het dossier "${thema}" goed te keuren.\n\n` +
+        `U kunt de sectie reviewen via deze link:\n${reviewUrl}\n\n` +
+        `Met vriendelijke groet,\nBeleidsWijzer Wassenaar`
+    );
+    const mailto = `mailto:${adviseur.email}?subject=${subject}&body=${body}`;
+
+    return `
+        <div class="sectie-placeholder">
+            <p class="sectie-placeholder-tekst">Deze sectie wordt momenteel geverifieerd door de beleidsadviseur van dit dossier.</p>
+            <a href="${mailto}" class="btn-verzoek-goedkeuring">Verzoek goedkeuring</a>
+        </div>`;
+}
+
+function renderReviewButtons(key, verif) {
+    const currentStatus = verif ? verif.status : '';
+    return `
+        <div class="review-buttons" data-key="${key}">
+            <button type="button" class="btn-review btn-akkoord ${currentStatus === 'akkoord' ? 'active' : ''}" data-action="akkoord">Akkoord — publiceren</button>
+            <button type="button" class="btn-review btn-correctie ${currentStatus === 'correctie_nodig' ? 'active' : ''}" data-action="correctie">Correctie nodig</button>
+            ${currentStatus ? `<button type="button" class="btn-review btn-reset" data-action="reset">Intrekken</button>` : ''}
+        </div>`;
+}
+
+function formatVerifDatum(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    const months = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+    return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+async function loadVerificatieStatus() {
+    try {
+        const resp = await fetch(API_BASE + '/verificatie.json');
+        if (resp.ok) verificatieData = await resp.json();
+    } catch (e) {
+        console.warn('Verificatie-status niet beschikbaar:', e.message);
+    }
+}
+
+async function sendVerificatie(key, status, opmerking) {
+    try {
+        const resp = await fetch(API_BASE + '/verificatie', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token: REVIEW_TOKEN, key, status, opmerking: opmerking || '' })
+        });
+        const result = await resp.json();
+        if (result.ok) {
+            if (status === 'reset') {
+                delete verificatieData[key];
+            } else {
+                verificatieData[key] = { status, datum: new Date().toISOString(), opmerking: opmerking || '' };
+            }
+            if (activeDossier) loadSyntheseContent(activeDossier);
+        } else {
+            alert('Fout: ' + (result.error || 'Onbekende fout'));
+        }
+    } catch (e) {
+        alert('Kon verificatie niet opslaan: ' + e.message);
     }
 }
 
@@ -549,7 +699,28 @@ function navigateToDecision(refText) {
 
 // ─── Event listeners ───
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    const params = new URLSearchParams(window.location.search);
+    isReviewMode = params.get('review') === REVIEW_TOKEN;
+
+    await loadVerificatieStatus();
+
+    if (isReviewMode) {
+        document.body.classList.add('review-mode');
+        const banner = document.createElement('div');
+        banner.className = 'review-banner';
+        banner.innerHTML = 'Reviewmodus actief — niet-gepubliceerde secties zijn zichtbaar';
+        document.body.prepend(banner);
+    }
+
+    // Scroll to section if hash present
+    if (window.location.hash && window.location.hash.startsWith('#sectie-')) {
+        setTimeout(() => {
+            const el = document.querySelector(window.location.hash);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 500);
+    }
+
     loadData();
 
     // Uitklap-knoppen (via event delegation op beide lijsten)
@@ -615,6 +786,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (voetnoot) voetnoot.hidden = !document.body.classList.contains('toon-begroting');
         });
     }
+
+    // Review-knoppen (event delegation)
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.btn-review');
+        if (!btn || !isReviewMode) return;
+        const container = btn.closest('.review-buttons');
+        const key = container.getAttribute('data-key');
+        const action = btn.getAttribute('data-action');
+
+        if (action === 'akkoord') {
+            sendVerificatie(key, 'akkoord');
+        } else if (action === 'correctie') {
+            const opmerking = prompt('Wat moet er gecorrigeerd worden?');
+            if (opmerking !== null) sendVerificatie(key, 'correctie_nodig', opmerking);
+        } else if (action === 'reset') {
+            if (confirm('Weet je zeker dat je de goedkeuring wilt intrekken?')) {
+                sendVerificatie(key, 'reset');
+            }
+        }
+    });
 
     // Verborgen versiemenu (long-press op versienummer)
     initVersieMenu();

@@ -1458,3 +1458,153 @@ body.review-mode .review-mode-toggle {
         padding: 0.45rem 0.85rem;
     }
 }
+
+/* ─── Verificatie: placeholders ─── */
+
+.briefing-sectie {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.sectie-placeholder {
+    background: #f0f4f8;
+    border: 1px dashed #b0c4d8;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin: 0.75rem 0;
+}
+
+.sectie-placeholder-tekst {
+    color: #5a6a7a;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.btn-verzoek-goedkeuring {
+    display: inline-block;
+    background: var(--wassenaar-blue);
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s;
+}
+
+.btn-verzoek-goedkeuring:hover {
+    background: #004d8a;
+    color: #fff;
+}
+
+/* ─── Verificatie: badges ─── */
+
+.verif-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.7rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.verif-akkoord {
+    background: #d4edda;
+    color: #155724;
+}
+
+.verif-correctie {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.verif-concept {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+.verif-opmerking {
+    background: #fff8e1;
+    border-left: 3px solid #ffc107;
+    padding: 0.6rem 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+    color: #664d03;
+    border-radius: 0 6px 6px 0;
+}
+
+/* ─── Verificatie: review-knoppen ─── */
+
+.review-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.btn-review {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #fff;
+    transition: all 0.15s;
+}
+
+.btn-akkoord:hover, .btn-akkoord.active {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.btn-correctie:hover, .btn-correctie.active {
+    background: #fff3cd;
+    border-color: #ffc107;
+    color: #856404;
+}
+
+.btn-reset {
+    margin-left: auto;
+    color: #999;
+    border-color: #ddd;
+}
+
+.btn-reset:hover {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+/* ─── Review-banner ─── */
+
+.review-banner {
+    background: #155724;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ─── Versienummer als knop ─── */
+
+#appVersion {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    cursor: default;
+    transition: background 0.2s;
+}
+
+#appVersion:hover {
+    background: rgba(255, 255, 255, 0.25);
+}

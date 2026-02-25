@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeleidsWijzer · Gemeente Geldrop-Mierlo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link" aria-label="Gemeente Geldrop-Mierlo">
+                <span class="site-logo-text">Gemeente Geldrop-Mierlo</span>
+            </a>
+            <div class="header-text">
+                <h1>BeleidsWijzer</h1>
+                <p class="subtitle">Gemeente Geldrop-Mierlo · Inzicht in beleid en besluitvorming</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="dossier-overzicht" id="dossierOverzicht">
+            <div class="overzicht-kop">
+                <h2 class="dossier-sectie-titel">Beleidsdossiers</h2>
+                <div class="overzicht-zoek">
+                    <input type="text" id="searchInput" placeholder="Zoek op onderwerp of trefwoord…">
+                    <button id="searchBtn" type="button">ZOEK</button>
+                </div>
+            </div>
+            <div id="dossierKaarten" class="dossier-kaarten"></div>
+            <p class="begroting-voetnoot" hidden>Begrotingsbedragen: Programmabegroting 2026. * = programma gedeeld met ander dossier.</p>
+        </section>
+
+        <section class="dossier-detail" id="dossierDetail" style="display: none;">
+            <div class="dossier-kop">
+                <button type="button" class="dossier-terug" id="dossierTerug">← Overzicht</button>
+                <h2 class="dossier-kop-titel" id="dossierTitel"></h2>
+            </div>
+            <div id="subTegels" class="sub-tegels"></div>
+            <div id="dossierSynthese" class="briefing-inhoud"></div>
+
+            <details class="coalitie-akkoord-blok" id="coalitieAkkoordBlok" open>
+                <summary class="coalitie-akkoord-kop">
+                    <span>Doelstellingenakkoord 2022–2026</span>
+                    <span class="coalitie-akkoord-badge">DGG · CDA · DPM</span>
+                </summary>
+                <div id="coalitieAkkoordInhoud" class="coalitie-akkoord-inhoud"></div>
+            </details>
+
+            <details class="dossier-besluiten" id="dossierBesluiten">
+                <summary class="dossier-besluiten-kop">
+                    <span>Raads- en collegebesluiten</span>
+                    <span class="dossier-besluiten-count" id="besluitenCount">(0)</span>
+                </summary>
+                <div class="dossier-besluiten-filters">
+                    <div class="filters-row">
+                        <div class="filter-group">
+                            <label for="yearFilter">Jaar</label>
+                            <select id="yearFilter">
+                                <option value="">Alle jaren</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="typeFilter">Type</label>
+                            <select id="typeFilter">
+                                <option value="">Alle typen</option>
+                                <option value="raad">Raadsbesluit</option>
+                                <option value="college">Collegebesluit (B&W)</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="sortBy">Sorteren</label>
+                            <select id="sortBy">
+                                <option value="datum-desc">Datum (nieuwste eerst)</option>
+                                <option value="datum-asc">Datum (oudste eerst)</option>
+                                <option value="naam-asc">Naam (A–Z)</option>
+                                <option value="naam-desc">Naam (Z–A)</option>
+                            </select>
+                        </div>
+                        <button id="clearFilters" type="button" class="btn-secondary">Wissen</button>
+                    </div>
+                </div>
+                <div class="results-header">
+                    <span id="resultsCount">0 raads- en collegebesluiten</span>
+                </div>
+                <div id="resultsList" class="results-list"></div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p id="noResultsText">Geen raads- of collegebesluiten gevonden.</p>
+                </div>
+            </details>
+        </section>
+
+        <section class="zoek-resultaten" id="zoekResultaten" style="display: none;">
+            <div class="zoek-resultaten-kop">
+                <h2 class="zoek-resultaten-titel">Zoekresultaten</h2>
+                <button type="button" class="dossier-terug" id="zoekSluiten">← Terug</button>
+            </div>
+            <div class="zoek-filters">
+                <div class="filter-group">
+                    <label for="zoekYearFilter">Jaar</label>
+                    <select id="zoekYearFilter">
+                        <option value="">Alle jaren</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="zoekTypeFilter">Type</label>
+                    <select id="zoekTypeFilter">
+                        <option value="">Alle typen</option>
+                        <option value="raad">Raadsbesluit</option>
+                        <option value="college">Collegebesluit (B&W)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="zoekSortBy">Sorteren</label>
+                    <select id="zoekSortBy">
+                        <option value="datum-desc">Datum (nieuwste eerst)</option>
+                        <option value="datum-asc">Datum (oudste eerst)</option>
+                        <option value="naam-asc">Naam (A–Z)</option>
+                        <option value="naam-desc">Naam (Z–A)</option>
+                    </select>
+                </div>
+                <button id="zoekClearFilters" type="button" class="btn-secondary">Wissen</button>
+            </div>
+            <div class="results-header">
+                <span id="zoekResultsCount">0 raads- en collegebesluiten</span>
+            </div>
+            <div id="zoekResultsList" class="results-list"></div>
+            <div id="zoekNoResults" class="no-results" style="display: none;">
+                <p>Geen raads- of collegebesluiten gevonden voor deze zoekterm.</p>
+            </div>
+        </section>
+
+        <section class="bronnen-sectie" id="bronnenSectie">
+            <h2 class="bronnen-titel">Bronnen</h2>
+            <p class="bronnen-intro">BeleidsWijzer Geldrop-Mierlo gebruikt uitsluitend openbare overheidsbronnen:</p>
+            <div class="bronnen-lijst">
+                <div class="bron-item">
+                    <span class="bron-icoon">📋</span>
+                    <div>
+                        <a href="https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area%3D%3D%22officielepublicaties%22)%20AND%20(dt.creator%3D%3D%22Geldrop-Mierlo%22)%20AND%20w.publicatienaam%3D%3D%22Gemeenteblad%22&zession=cleared" target="_blank" rel="noopener" class="bron-link">Officiële Bekendmakingen — Gemeenteblad Geldrop-Mierlo</a>
+                        <p class="bron-detail">3.521 publicaties uit 2022–2025 · Verordeningen, vergunningen, verkeersbesluiten, beleidsregels en meer<br>
+                        API: <code>repository.overheid.nl/sru</code> · Laatst opgehaald: februari 2026</p>
+                    </div>
+                </div>
+                <div class="bron-item">
+                    <span class="bron-icoon">📝</span>
+                    <div>
+                        <a href="https://www.geldrop-mierlo.nl/_flysystem/media/doelstellingenakkoord-2022-2026.pdf" target="_blank" rel="noopener" class="bron-link">Doelstellingenakkoord 2022–2026</a>
+                        <p class="bron-detail">Coalitieakkoord DGG, CDA en DPM · &ldquo;Bouwen aan en in een duurzaam toekomstbestendig Geldrop-Mierlo!&rdquo;</p>
+                    </div>
+                </div>
+                <div class="bron-item">
+                    <span class="bron-icoon">🏛️</span>
+                    <div>
+                        <a href="https://www.geldrop-mierlo.nl/college-van-burgemeester-en-wethouders" target="_blank" rel="noopener" class="bron-link">Portefeuilleverdeling College van B&amp;W</a>
+                        <p class="bron-detail">Burgemeester Jos van Bree, wethouders Stravers, Van Gestel, Van de Laar, Looijmans en Sanders-de Jonge</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>BeleidsWijzer Geldrop-Mierlo · Versie <span id="appVersion">1.2.0</span> · <a href="https://www.geldrop-mierlo.nl" target="_blank" rel="noopener">geldrop-mierlo.nl</a></p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="briefings.js"></script>
+    <script src="coalitieakkoord.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
