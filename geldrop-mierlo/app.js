@@ -88,6 +88,46 @@ const THEMA_KLEUREN = {
     'Onderwijs, Sport & Cultuur':        { accent: '#e67e22', light: '#fce4cc', lighter: '#fdf2e6', text: '#b35f0f' },
 };
 
+const BELEIDSNIVEAU = {
+    STRATEGISCH: { label: 'Strategisch', rang: 1, kleur: '#8e24aa', icon: '▲' },
+    TACTISCH:    { label: 'Tactisch',    rang: 2, kleur: '#1565c0', icon: '◆' },
+    OPERATIONEEL:{ label: 'Operationeel',rang: 3, kleur: '#6d7681', icon: '●' },
+};
+
+const NIVEAU_PER_TYPE = {
+    'Omgevingsvergunning':  'OPERATIONEEL',
+    'Vergunning':           'OPERATIONEEL',
+    'Evenementenvergunning':'OPERATIONEEL',
+    'Exploitatievergunning':'OPERATIONEEL',
+    'Melding':              'OPERATIONEEL',
+    'Omgevingsmelding':     'OPERATIONEEL',
+    'Beschikking':          'OPERATIONEEL',
+    'Voorlichting':         'OPERATIONEEL',
+    'Overheidsinformatie':  'OPERATIONEEL',
+    'inspraak':             'OPERATIONEEL',
+    'Verordening':          'TACTISCH',
+    'Beleidsregel':         'TACTISCH',
+    'Mandaatbesluit':       'TACTISCH',
+    'Verkeersbesluit':      'TACTISCH',
+    'Besluit':              'TACTISCH',
+    'Participatie':         'TACTISCH',
+    'Verkiezingen':         'TACTISCH',
+    'Gemeenschappelijke regeling': 'STRATEGISCH',
+    'Ruimtelijk plan':      'STRATEGISCH',
+};
+
+const STRATEGISCH_KEYWORDS = ['visie','kader','structuurvisie','omgevingsvisie','woonvisie',
+    'programma','strategie','agenda','akkoord','actieplan','beleidsnota','toekomst'];
+
+function classifyNiveau(decision) {
+    const type = decision.type_besluit || '';
+    const titel = (decision.naam || '').toLowerCase();
+
+    if (STRATEGISCH_KEYWORDS.some(kw => titel.includes(kw))) return 'STRATEGISCH';
+
+    return NIVEAU_PER_TYPE[type] || 'TACTISCH';
+}
+
 const THEMA_ICONEN = {
     'Bestuur & Veiligheid': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
     'Financiën & Economie': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
@@ -608,8 +648,14 @@ function applyDossierFilters() {
     if (!activeDossier) return;
     const year = document.getElementById('yearFilter').value;
     const type = document.getElementById('typeFilter').value;
+    const niveau = document.getElementById('niveauFilter') ? document.getElementById('niveauFilter').value : '';
 
     let results = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === activeDossier.domein);
+
+    if (activeDossier.subFilter) {
+        const keywords = SUBTHEMA_KEYWORDS[activeDossier.subFilter] || [activeDossier.subFilter.toLowerCase()];
+        results = results.filter(d => matchSubthema(d, keywords));
+    }
 
     if (year) {
         results = results.filter(d => {
@@ -620,6 +666,9 @@ function applyDossierFilters() {
     }
     if (type) {
         results = results.filter(d => d.bron === type);
+    }
+    if (niveau) {
+        results = results.filter(d => classifyNiveau(d) === niveau);
     }
 
     filteredDecisions = results;
@@ -635,8 +684,15 @@ function applyDossierFilters() {
 function resetFilters() {
     const yf = document.getElementById('yearFilter');
     const tf = document.getElementById('typeFilter');
+    const nf = document.getElementById('niveauFilter');
     if (yf) yf.value = '';
     if (tf) tf.value = '';
+    if (nf) nf.value = '';
+}
+
+function getNiveauRang(decision) {
+    const niv = classifyNiveau(decision);
+    return BELEIDSNIVEAU[niv] ? BELEIDSNIVEAU[niv].rang : 9;
 }
 
 function sortDecisions(sortBy) {
@@ -646,6 +702,11 @@ function sortDecisions(sortBy) {
             case 'datum-asc':  return (a.datum || '').localeCompare(b.datum || '');
             case 'naam-asc':   return (a.naam || '').localeCompare(b.naam || '');
             case 'naam-desc':  return (b.naam || '').localeCompare(a.naam || '');
+            case 'niveau-desc': {
+                const ra = getNiveauRang(a), rb = getNiveauRang(b);
+                if (ra !== rb) return ra - rb;
+                return (b.datum || '').localeCompare(a.datum || '');
+            }
             default: return 0;
         }
     });
@@ -678,6 +739,9 @@ function renderDecisionItem(decision) {
     const badgeClass = decision.bron === 'raad' ? 'raad' : 'college';
     const badgeText = decision.type_besluit || (decision.bron === 'raad' ? 'Raadsbesluit' : 'Collegebesluit');
 
+    const niveauKey = classifyNiveau(decision);
+    const niveau = BELEIDSNIVEAU[niveauKey];
+
     const besluitText = (decision.besluit || '').trim();
     const isCollege = decision.bron === 'college';
     const maxPreview = isCollege ? 500 : 300;
@@ -690,15 +754,15 @@ function renderDecisionItem(decision) {
     const searchNaam = (decision.naam || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 
     return `
-        <div class="result-item" data-bron="${decision.bron || ''}" data-besluit-naam="${searchNaam}" data-besluit-datum="${decision.datum || ''}">
+        <div class="result-item" data-bron="${decision.bron || ''}" data-besluit-naam="${searchNaam}" data-besluit-datum="${decision.datum || ''}" data-niveau="${niveauKey}">
             <div class="result-header">
                 <div>
                     <div class="result-title">${escapeHtml(decision.naam || (isCollege ? 'Naamloos collegebesluit' : 'Naamloos raadsbesluit'))}</div>
                     <div class="result-meta">
                         <span>📅 ${datum}</span>
+                        <span class="result-badge niveau-badge niveau-${niveauKey.toLowerCase()}">${niveau.icon} ${niveau.label}</span>
                         <span class="result-badge ${badgeClass}">${badgeText}</span>
                         ${decision.domein ? `<span>📁 ${escapeHtml(decision.domein)}</span>` : ''}
-                        ${decision.portefeuille ? `<span>👤 ${escapeHtml(decision.portefeuille)}</span>` : ''}
                     </div>
                 </div>
             </div>
@@ -840,6 +904,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('yearFilter').addEventListener('change', applyDossierFilters);
     document.getElementById('typeFilter').addEventListener('change', applyDossierFilters);
+    if (document.getElementById('niveauFilter')) {
+        document.getElementById('niveauFilter').addEventListener('change', applyDossierFilters);
+    }
     document.getElementById('sortBy').addEventListener('change', (e) => {
         sortDecisions(e.target.value);
         displayDecisions('resultsList', 'resultsCount', 'noResults');

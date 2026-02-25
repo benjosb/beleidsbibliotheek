@@ -823,6 +823,39 @@ body.toon-begroting .dossier-kaart-begroting {
     font-size: 0.82rem;
 }
 
+/* ─── Beleidsniveau badges ─── */
+
+.niveau-badge {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.niveau-strategisch {
+    background-color: #f3e5f5;
+    color: #6a1b9a;
+    border: 1px solid #ce93d8;
+}
+
+.niveau-tactisch {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #90caf9;
+}
+
+.niveau-operationeel {
+    background-color: var(--gray-lighter);
+    color: var(--gray-medium);
+    border: 1px solid var(--gray-light);
+}
+
+.result-item[data-niveau="STRATEGISCH"] {
+    border-left: 3px solid #8e24aa;
+}
+
+.result-item[data-niveau="TACTISCH"] {
+    border-left: 3px solid #1565c0;
+}
+
 .result-besluit {
     margin-top: 0.5rem;
 }
