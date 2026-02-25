@@ -79,10 +79,83 @@ function versieMenuEsc(e) { if (e.key === 'Escape') sluitVersieMenu(); }
 
 let allDecisions = [];
 let filteredDecisions = [];
-let activeDossier = null; // { domein: string }
+let activeDossier = null; // { domein: string, subFilter: string|null }
 let viewMode = 'overzicht'; // 'overzicht' | 'dossier' | 'zoekresultaten'
 let briefingCache = {};
 let previewCache = {};
+
+const THEMA_KLEUREN = {
+    'Bestuur & Veiligheid':              { accent: '#002244', light: '#d6e4f0', lighter: '#eaf1f8', text: '#001833' },
+    'Financiën, Economie & Sport':       { accent: '#57589D', light: '#ddddf0', lighter: '#ededf7', text: '#3a3b6e' },
+    'Ruimte, Duurzaamheid & Mobiliteit': { accent: '#1565c0', light: '#bbdefb', lighter: '#e3f2fd', text: '#0d47a1' },
+    'Sociaal Domein, Wonen & Onderwijs': { accent: '#c0392b', light: '#f5d0cc', lighter: '#fae8e6', text: '#922b20' },
+    'Cultuur & Welzijn':                 { accent: '#e67e22', light: '#fce4cc', lighter: '#fdf2e6', text: '#b35f0f' },
+    'Bedrijfsvoering':                   { accent: '#438527', light: '#d4edcc', lighter: '#eaf5e6', text: '#2d5c1a' },
+};
+
+const BELEIDSNIVEAU = {
+    STRATEGISCH: { label: 'Strategisch', rang: 1, kleur: '#8e24aa', icon: '▲' },
+    TACTISCH:    { label: 'Tactisch',    rang: 2, kleur: '#1565c0', icon: '◆' },
+    OPERATIONEEL:{ label: 'Operationeel',rang: 3, kleur: '#6d7681', icon: '●' },
+};
+
+const STRATEGISCH_KEYWORDS = ['visie','kader','structuurvisie','omgevingsvisie','woonvisie',
+    'programma','strategie','agenda','akkoord','actieplan','beleidsnota','toekomst'];
+
+function classifyNiveau(decision) {
+    const td = decision.type_document || '';
+    if (td.startsWith('1.')) return 'STRATEGISCH';
+
+    const jc = decision.juridische_classificatie || '';
+    if (jc.includes('Algemeen Verbindend Voorschrift')) return 'TACTISCH';
+    if (jc.includes('Besluit van Algemene Strekking')) return 'TACTISCH';
+
+    const titel = (decision.naam || '').toLowerCase();
+    if (STRATEGISCH_KEYWORDS.some(kw => titel.includes(kw))) return 'STRATEGISCH';
+
+    if (td.startsWith('2.')) return 'TACTISCH';
+    if (td.includes('Gemeenschappelijke Regeling')) return 'STRATEGISCH';
+    if (td.startsWith('4.') || td.startsWith('3.')) return 'OPERATIONEEL';
+
+    if (decision.bron === 'raad') return 'TACTISCH';
+    return 'OPERATIONEEL';
+}
+
+const SUBTHEMA_KEYWORDS = {
+    'Bestuur': ['bestuur','gemeenteraad','raad','burgemeester','wethouder','college','griffie'],
+    'Veiligheid': ['veiligheid','politie','brandweer','noodverordening','cameratoezicht','boa','handhaving'],
+    'Lokale media': ['media','omroep','pers','communicatie'],
+    'Belastingen': ['belasting','ozb','rioolheffing','leges','tarief','heffing'],
+    'Economie': ['economie','bedrijv','ondernem','winkel','markt'],
+    'Financiën': ['financ','begroting','jaarrekening','reserves','voorzieningen'],
+    'P&C-cyclus': ['begroting','jaarrekening','burap','bestuursrapportage','kadernota'],
+    'Sport': ['sport','bewegen','voetbal','tennis','zwem','hockey','sporthal'],
+    'Gemeentelijke huisvesting': ['huisvesting','gemeentehuis','kantoor'],
+    'Afval': ['afval','inzameling','container','recycl'],
+    'Bestemmingsplannen': ['bestemmingsplan','omgevingsplan','wijzigingsplan','uitwerkingsplan'],
+    'Duurzaamheid': ['duurzaam','energie','zonnepanel','warmte','isolatie','klimaat','co2'],
+    'Groene Zone': ['groen','natuur','park','boom','kap'],
+    'Herontwikkeling Duindigt': ['duindigt'],
+    'MRDH': ['mrdh','metropoolregio'],
+    'ODH': ['odh','omgevingsdienst'],
+    'Omgevingswet': ['omgevingswet','omgevingsvergunning','omgevingsvisie'],
+    'Riolering': ['riool','riolering','rioolheffing'],
+    'Strandvisie': ['strand','kust','strandvisie'],
+    'Verkeer': ['verkeer','parkeer','fiets','weg','straat','rotonde','snelheid'],
+    'Wonen': ['woning','wonen','huur','woningbouw','huisvesting'],
+    'Onderwijs': ['school','onderwijs','leerling','leerplicht','kinderopvang'],
+    'WMO': ['wmo','voorziening','hulpmiddel','zorg','welzijn'],
+    'Jeugdzorg': ['jeugd','kind','jongere','jeugdhulp','jeugdzorg'],
+    'Volksgezondheid': ['gezondheid','volksgezondheid','ggd','preventie'],
+    'Warenar': ['warenar','theater','cultuur'],
+    'Overig': [],
+};
+
+function matchSubthema(decision, keywords) {
+    if (!keywords.length) return false;
+    const text = [decision.naam || '', decision.besluit || ''].join(' ').toLowerCase();
+    return keywords.some(kw => text.includes(kw.toLowerCase()));
+}
 
 const THEMA_ICONEN = {
     'Bestuur & Veiligheid': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
@@ -219,12 +292,14 @@ function showView(mode) {
 
 // ─── Open / sluit dossier ───
 
-function openDossier(thema) {
-    activeDossier = { domein: thema };
+function openDossier(thema, subFilter) {
+    activeDossier = { domein: thema, subFilter: subFilter || null };
     showView('dossier');
 
     document.getElementById('dossierTitel').textContent = thema;
+    renderSubTegels(thema, subFilter);
     loadSyntheseContent(thema);
+    loadCoalitieAkkoord(thema);
     loadDossierBesluiten(thema);
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -236,21 +311,174 @@ function sluitDossier() {
     showView('overzicht');
 }
 
+function getRecentDate(decisions, keywords) {
+    let latest = '';
+    for (const d of decisions) {
+        if (matchSubthema(d, keywords) && d.datum && d.datum > latest) latest = d.datum;
+    }
+    return latest;
+}
+
+function formatDatumKort(datum) {
+    if (!datum) return '';
+    const parts = datum.split('-');
+    if (parts.length < 2) return datum;
+    const maanden = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+    const m = parseInt(parts[1], 10);
+    return maanden[m - 1] + ' ' + parts[0];
+}
+
+function getHoverPreview(decisions, keywords) {
+    const matches = decisions.filter(d => matchSubthema(d, keywords));
+    matches.sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
+    return matches.slice(0, 3).map(d => (d.naam || '').substring(0, 80)).filter(Boolean);
+}
+
+function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r},${g},${b},${alpha})`;
+}
+
+function renderSubTegels(thema, activeSubFilter) {
+    const container = document.getElementById('subTegels');
+    if (!container) return;
+    container.innerHTML = '';
+
+    const domein = (window.themaTree || THEMA_BOOM_DATA).find(d => d.naam === thema);
+    if (!domein || !domein.kinderen || !domein.kinderen.length) return;
+
+    const kleuren = THEMA_KLEUREN[thema] || { accent: '#002244', light: '#d6e4f0', lighter: '#eaf1f8', text: '#001833' };
+    const dossierBesluiten = allDecisions.filter(d => (d.domein || '') === thema);
+
+    const subData = domein.kinderen.map(kind => {
+        const keywords = SUBTHEMA_KEYWORDS[kind.naam] || [kind.naam.toLowerCase()];
+        const count = keywords.length ? dossierBesluiten.filter(d => matchSubthema(d, keywords)).length : kind.aantal || 0;
+        const recentDate = keywords.length ? getRecentDate(dossierBesluiten, keywords) : '';
+        const preview = keywords.length ? getHoverPreview(dossierBesluiten, keywords) : [];
+        return { naam: kind.naam, count, keywords, recentDate, preview };
+    });
+
+    const maxCount = Math.max(...subData.map(s => s.count), 1);
+
+    const grid = document.createElement('div');
+    grid.className = 'sub-tegels-grid';
+
+    subData.filter(s => s.count > 0 || !activeSubFilter).forEach(sub => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        const isActive = activeSubFilter === sub.naam;
+        card.className = 'sub-kaart' + (isActive ? ' sub-kaart-actief' : '') + (sub.count === 0 ? ' sub-kaart-leeg' : '');
+
+        const intensity = Math.max(0.06, (sub.count / maxCount) * 0.25);
+
+        if (isActive) {
+            card.style.background = kleuren.accent;
+            card.style.color = '#fff';
+            card.style.borderColor = kleuren.accent;
+        } else {
+            card.style.borderLeftColor = kleuren.accent;
+            if (sub.count > 0) {
+                card.style.background = hexToRgba(kleuren.accent, intensity);
+            }
+        }
+
+        const datumHtml = sub.recentDate
+            ? `<span class="sub-kaart-datum">${formatDatumKort(sub.recentDate)}</span>`
+            : '';
+
+        card.innerHTML = `
+            <div class="sub-kaart-top">
+                <span class="sub-kaart-naam">${escapeHtml(sub.naam)}</span>
+                <span class="sub-kaart-count">${sub.count}</span>
+            </div>
+            ${datumHtml}
+        `;
+
+        if (sub.preview.length && !isActive) {
+            card.title = sub.preview.join('\n');
+        }
+
+        if (sub.count > 0 && sub.keywords.length) {
+            card.onclick = () => {
+                activeDossier.subFilter = sub.naam;
+                renderSubTegels(thema, sub.naam);
+                updateBreadcrumb(thema, sub.naam, sub.count, kleuren);
+                filterBySubthema(thema, sub.keywords);
+            };
+        }
+        grid.appendChild(card);
+    });
+
+    container.appendChild(grid);
+
+    if (!activeSubFilter) {
+        updateBreadcrumb(thema, null, 0, kleuren);
+    }
+}
+
+function updateBreadcrumb(thema, subFilter, count, kleuren) {
+    const el = document.getElementById('subBreadcrumb');
+    if (!el) return;
+    if (!subFilter) {
+        el.style.display = 'none';
+        el.innerHTML = '';
+        return;
+    }
+    el.style.display = '';
+    el.innerHTML = `
+        <span class="breadcrumb-thema">${escapeHtml(thema)}</span>
+        <span class="breadcrumb-sep">→</span>
+        <span class="breadcrumb-sub" style="color:${kleuren.accent}">${escapeHtml(subFilter)}</span>
+        <span class="breadcrumb-count">(${count})</span>
+        <button class="breadcrumb-reset" onclick="activeDossier.subFilter=null;openDossier('${thema.replace(/'/g,"\\'")}')">✕ Wis filter</button>
+    `;
+}
+
+function scrollToBesluiten() {
+    const details = document.getElementById('dossierBesluiten');
+    if (!details) return;
+    if (!details.open) details.open = true;
+    setTimeout(() => {
+        details.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+}
+
+function filterBySubthema(thema, keywords) {
+    const dossierBesluiten = allDecisions.filter(d => (d.domein || '') === thema);
+    filteredDecisions = dossierBesluiten.filter(d => matchSubthema(d, keywords));
+
+    const countEl = document.getElementById('besluitenCount');
+    if (countEl) countEl.textContent = `(${filteredDecisions.length})`;
+
+    const sortBy = document.getElementById('sortBy').value;
+    sortDecisions(sortBy);
+    displayDecisions('resultsList', 'resultsCount', 'noResults');
+    scrollToBesluiten();
+}
+
 function loadSyntheseContent(thema) {
     const container = document.getElementById('dossierSynthese');
+    const blok = document.getElementById('briefingBlok');
     if (!container) return;
+
+    let hasContent = false;
 
     if (briefingCache[thema]) {
         container.innerHTML = briefingCache[thema];
-        return;
-    }
-
-    if (typeof BRIEFING_HTML_DATA !== 'undefined' && BRIEFING_HTML_DATA[thema]) {
+        hasContent = true;
+    } else if (typeof BRIEFING_HTML_DATA !== 'undefined' && BRIEFING_HTML_DATA[thema]) {
         const body = extractBodyContent(BRIEFING_HTML_DATA[thema]);
         briefingCache[thema] = body;
         container.innerHTML = body;
+        hasContent = true;
     } else {
         container.innerHTML = '<p style="color: #999; text-align: center; padding: 2rem;">Geen beleidsdossier beschikbaar voor dit thema.</p>';
+    }
+
+    if (blok) {
+        blok.style.display = hasContent ? '' : 'none';
     }
 }
 
@@ -260,8 +488,101 @@ function extractBodyContent(html) {
     return html;
 }
 
+function loadCoalitieAkkoord(thema) {
+    const container = document.getElementById('coalitieAkkoordInhoud');
+    const blok = document.getElementById('coalitieAkkoordBlok');
+    if (!container || !blok) return;
+
+    if (typeof COALITIEAKKOORD_DATA === 'undefined') {
+        blok.style.display = 'none';
+        return;
+    }
+
+    const secties = COALITIEAKKOORD_DATA.secties.filter(s => s.thema === thema);
+
+    if (!secties.length) {
+        blok.style.display = 'none';
+        return;
+    }
+
+    blok.style.display = '';
+
+    const grouped = {};
+    secties.forEach(s => {
+        if (!grouped[s.hoofdstuk]) grouped[s.hoofdstuk] = [];
+        grouped[s.hoofdstuk].push(s);
+    });
+
+    let html = `<p class="coalitie-intro">Onderstaande passages komen uit het coalitieakkoord <em>"${escapeHtml(COALITIEAKKOORD_DATA.titel)}"</em> (${escapeHtml(COALITIEAKKOORD_DATA.datum)}) en zijn relevant voor dit beleidsdossier.</p>`;
+
+    for (const [hoofdstuk, items] of Object.entries(grouped)) {
+        html += `<div class="coalitie-hoofdstuk"><h4 class="coalitie-hoofdstuk-titel">${escapeHtml(hoofdstuk)}</h4>`;
+        items.forEach(s => {
+            const paragraphs = s.tekst.split('\n\n').map(p =>
+                `<p>${escapeHtml(p.trim())}</p>`
+            ).join('');
+            html += `
+                <div class="coalitie-sectie" id="ca-${s.id}">
+                    <h5 class="coalitie-sectie-titel">
+                        <a href="#ca-${s.id}" class="coalitie-anchor">${escapeHtml(s.titel)}</a>
+                    </h5>
+                    <div class="coalitie-sectie-tekst">${paragraphs}</div>
+                </div>`;
+        });
+        html += `</div>`;
+    }
+
+    html += buildPortefeuilleBlock(thema);
+    html += `<p class="coalitie-bron"><a href="${COALITIEAKKOORD_DATA.bron_url}" target="_blank" rel="noopener noreferrer">Bekijk volledig coalitieakkoord (PDF) →</a></p>`;
+
+    container.innerHTML = html;
+}
+
+function buildPortefeuilleBlock(thema) {
+    if (typeof COALITIEAKKOORD_DATA === 'undefined' || !COALITIEAKKOORD_DATA.portefeuilleverdeling) return '';
+
+    const THEMA_PORTEFEUILLE = {
+        'Bestuur & Veiligheid': ['Burgemeester'],
+        'Financiën, Economie & Sport': ['Wethouder Financiën, Economie en Sport'],
+        'Ruimte, Duurzaamheid & Mobiliteit': ['Wethouder Ruimte, Duurzaamheid en Mobiliteit'],
+        'Sociaal Domein, Wonen & Onderwijs': ['Wethouder Sociaal, Wonen en Onderwijs'],
+        'Cultuur & Welzijn': ['Wethouder Cultuur en Welzijn'],
+        'Bedrijfsvoering': []
+    };
+
+    const pv = COALITIEAKKOORD_DATA.portefeuilleverdeling;
+    const keys = THEMA_PORTEFEUILLE[thema];
+    const relevant = [];
+
+    if (keys && keys.length) {
+        keys.forEach(k => { if (pv[k]) relevant.push({ functie: k, taken: pv[k] }); });
+    } else {
+        Object.entries(pv).forEach(([functie, taken]) => relevant.push({ functie, taken }));
+    }
+
+    if (!relevant.length) return '';
+
+    let html = `<div class="coalitie-sectie coalitie-portefeuille" id="ca-portefeuilleverdeling">
+        <h5 class="coalitie-sectie-titel"><a href="#ca-portefeuilleverdeling" class="coalitie-anchor">Portefeuilleverdeling</a></h5>
+        <div class="coalitie-sectie-tekst">`;
+
+    relevant.forEach(({ functie, taken }) => {
+        html += `<p><strong>${escapeHtml(functie)}:</strong> ${taken.map(t => escapeHtml(t)).join(', ')}</p>`;
+    });
+
+    html += `</div></div>`;
+    return html;
+}
+
 function loadDossierBesluiten(thema) {
-    filteredDecisions = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === thema);
+    let besluiten = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === thema);
+
+    if (activeDossier && activeDossier.subFilter) {
+        const keywords = SUBTHEMA_KEYWORDS[activeDossier.subFilter] || [activeDossier.subFilter.toLowerCase()];
+        besluiten = besluiten.filter(d => matchSubthema(d, keywords));
+    }
+
+    filteredDecisions = besluiten;
 
     const countEl = document.getElementById('besluitenCount');
     if (countEl) countEl.textContent = `(${filteredDecisions.length})`;
@@ -345,8 +666,14 @@ function applyDossierFilters() {
     if (!activeDossier) return;
     const year = document.getElementById('yearFilter').value;
     const type = document.getElementById('typeFilter').value;
+    const niveau = document.getElementById('niveauFilter') ? document.getElementById('niveauFilter').value : '';
 
     let results = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === activeDossier.domein);
+
+    if (activeDossier.subFilter) {
+        const keywords = SUBTHEMA_KEYWORDS[activeDossier.subFilter] || [activeDossier.subFilter.toLowerCase()];
+        results = results.filter(d => matchSubthema(d, keywords));
+    }
 
     if (year) {
         results = results.filter(d => {
@@ -357,6 +684,9 @@ function applyDossierFilters() {
     }
     if (type) {
         results = results.filter(d => d.bron === type);
+    }
+    if (niveau) {
+        results = results.filter(d => classifyNiveau(d) === niveau);
     }
 
     filteredDecisions = results;
@@ -372,8 +702,15 @@ function applyDossierFilters() {
 function resetFilters() {
     const yf = document.getElementById('yearFilter');
     const tf = document.getElementById('typeFilter');
+    const nf = document.getElementById('niveauFilter');
     if (yf) yf.value = '';
     if (tf) tf.value = '';
+    if (nf) nf.value = '';
+}
+
+function getNiveauRang(decision) {
+    const niv = classifyNiveau(decision);
+    return BELEIDSNIVEAU[niv] ? BELEIDSNIVEAU[niv].rang : 9;
 }
 
 function sortDecisions(sortBy) {
@@ -383,6 +720,11 @@ function sortDecisions(sortBy) {
             case 'datum-asc':  return (a.datum || '').localeCompare(b.datum || '');
             case 'naam-asc':   return (a.naam || '').localeCompare(b.naam || '');
             case 'naam-desc':  return (b.naam || '').localeCompare(a.naam || '');
+            case 'niveau-desc': {
+                const ra = getNiveauRang(a), rb = getNiveauRang(b);
+                if (ra !== rb) return ra - rb;
+                return (b.datum || '').localeCompare(a.datum || '');
+            }
             default: return 0;
         }
     });
@@ -414,6 +756,8 @@ function renderDecisionItem(decision) {
     const datum = decision.datum ? formatDate(decision.datum) : 'Onbekend';
     const badgeClass = decision.bron === 'raad' ? 'raad' : 'college';
     const badgeText = decision.type_besluit || (decision.bron === 'raad' ? 'Raadsbesluit' : 'Collegebesluit');
+    const niveauKey = classifyNiveau(decision);
+    const niveau = BELEIDSNIVEAU[niveauKey];
 
     const besluitText = (decision.besluit || '').trim();
     const isCollege = decision.bron === 'college';
@@ -427,12 +771,13 @@ function renderDecisionItem(decision) {
     const searchNaam = (decision.naam || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 
     return `
-        <div class="result-item" data-bron="${decision.bron || ''}" data-besluit-naam="${searchNaam}" data-besluit-datum="${decision.datum || ''}">
+        <div class="result-item" data-bron="${decision.bron || ''}" data-besluit-naam="${searchNaam}" data-besluit-datum="${decision.datum || ''}" data-niveau="${niveauKey}">
             <div class="result-header">
                 <div>
                     <div class="result-title">${escapeHtml(decision.naam || (isCollege ? 'Naamloos collegebesluit' : 'Naamloos raadsbesluit'))}</div>
                     <div class="result-meta">
                         <span>📅 ${datum}</span>
+                        <span class="result-badge niveau-badge niveau-${niveauKey.toLowerCase()}">${niveau.icon} ${niveau.label}</span>
                         <span class="result-badge ${badgeClass}">${badgeText}</span>
                         ${decision.domein ? `<span>📁 ${escapeHtml(decision.domein)}</span>` : ''}
                         ${decision.portefeuille ? `<span>👤 ${escapeHtml(decision.portefeuille)}</span>` : ''}
@@ -586,6 +931,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filters binnen dossier
     document.getElementById('yearFilter').addEventListener('change', applyDossierFilters);
     document.getElementById('typeFilter').addEventListener('change', applyDossierFilters);
+    if (document.getElementById('niveauFilter')) {
+        document.getElementById('niveauFilter').addEventListener('change', applyDossierFilters);
+    }
     document.getElementById('sortBy').addEventListener('change', (e) => {
         sortDecisions(e.target.value);
         displayDecisions('resultsList', 'resultsCount', 'noResults');

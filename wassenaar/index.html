@@ -322,7 +322,14 @@
                 <button type="button" class="dossier-terug" id="dossierTerug">← Overzicht</button>
                 <h2 class="dossier-kop-titel" id="dossierTitel"></h2>
             </div>
-            <div id="dossierSynthese" class="briefing-inhoud"></div>
+            <div id="subTegels" class="sub-tegels"></div>
+            <div id="subBreadcrumb" class="sub-breadcrumb" style="display:none;"></div>
+            <details class="briefing-blok" id="briefingBlok">
+                <summary class="briefing-kop">
+                    <span>Beleidssamenvatting</span>
+                </summary>
+                <div id="dossierSynthese" class="briefing-inhoud"></div>
+            </details>
 
             <details class="coalitie-akkoord-blok" id="coalitieAkkoordBlok" open>
                 <summary class="coalitie-akkoord-kop">
@@ -361,10 +368,20 @@
                             </select>
                         </div>
                         <div class="filter-group">
+                            <label for="niveauFilter">Niveau</label>
+                            <select id="niveauFilter">
+                                <option value="">Alle niveaus</option>
+                                <option value="STRATEGISCH">▲ Strategisch</option>
+                                <option value="TACTISCH">◆ Tactisch</option>
+                                <option value="OPERATIONEEL">● Operationeel</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
                             <label for="sortBy">Sorteren</label>
                             <select id="sortBy">
                                 <option value="datum-desc">Datum (nieuwste eerst)</option>
                                 <option value="datum-asc">Datum (oudste eerst)</option>
+                                <option value="niveau-desc">Beleidsniveau</option>
                                 <option value="naam-asc">Naam (A–Z)</option>
                                 <option value="naam-desc">Naam (Z–A)</option>
                             </select>
