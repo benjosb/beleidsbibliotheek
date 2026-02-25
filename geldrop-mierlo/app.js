@@ -282,6 +282,36 @@ function matchSubthema(decision, keywords) {
     return keywords.some(kw => text.includes(kw.toLowerCase()));
 }
 
+function getRecentDate(decisions, keywords) {
+    let latest = '';
+    for (const d of decisions) {
+        if (matchSubthema(d, keywords) && d.datum && d.datum > latest) latest = d.datum;
+    }
+    return latest;
+}
+
+function formatDatumKort(datum) {
+    if (!datum) return '';
+    const parts = datum.split('-');
+    if (parts.length < 2) return datum;
+    const maanden = ['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+    const m = parseInt(parts[1], 10);
+    return maanden[m - 1] + ' ' + parts[0];
+}
+
+function getHoverPreview(decisions, keywords) {
+    const matches = decisions.filter(d => matchSubthema(d, keywords));
+    matches.sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
+    return matches.slice(0, 3).map(d => (d.naam || '').substring(0, 80)).filter(Boolean);
+}
+
+function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r},${g},${b},${alpha})`;
+}
+
 function renderSubTegels(thema, activeSubFilter) {
     const container = document.getElementById('subTegels');
     if (!container) return;
@@ -296,64 +326,85 @@ function renderSubTegels(thema, activeSubFilter) {
     const subData = domein.kinderen.map(kind => {
         const keywords = SUBTHEMA_KEYWORDS[kind.naam] || [kind.naam.toLowerCase()];
         const matches = dossierBesluiten.filter(d => matchSubthema(d, keywords));
-        return { naam: kind.naam, count: matches.length, keywords };
-    }).filter(s => s.count > 0 || !activeSubFilter);
+        const recentDate = getRecentDate(dossierBesluiten, keywords);
+        const preview = getHoverPreview(dossierBesluiten, keywords);
+        return { naam: kind.naam, count: matches.length, keywords, recentDate, preview };
+    });
 
-    if (!subData.length) return;
+    const maxCount = Math.max(...subData.map(s => s.count), 1);
 
     const grid = document.createElement('div');
     grid.className = 'sub-tegels-grid';
 
-    const alleBtn = document.createElement('button');
-    alleBtn.type = 'button';
-    alleBtn.className = 'sub-tegel' + (!activeSubFilter ? ' sub-tegel-actief' : '');
-    if (!activeSubFilter) {
-        alleBtn.style.background = kleuren.accent;
-        alleBtn.style.color = '#fff';
-        alleBtn.style.borderColor = kleuren.accent;
-    } else {
-        alleBtn.style.borderLeftColor = kleuren.accent;
-    }
-    alleBtn.innerHTML = `
-        <span class="sub-tegel-naam">Alles</span>
-        <span class="sub-tegel-count">${dossierBesluiten.length}</span>
-    `;
-    alleBtn.onclick = () => {
-        activeDossier.subFilter = null;
-        renderSubTegels(thema, null);
-        loadDossierBesluiten(thema);
-    };
-    grid.appendChild(alleBtn);
-
-    subData.forEach(sub => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
+    subData.filter(s => s.count > 0 || !activeSubFilter).forEach(sub => {
+        const card = document.createElement('button');
+        card.type = 'button';
         const isActive = activeSubFilter === sub.naam;
-        btn.className = 'sub-tegel' + (isActive ? ' sub-tegel-actief' : '') + (sub.count === 0 ? ' sub-tegel-leeg' : '');
+        card.className = 'sub-kaart' + (isActive ? ' sub-kaart-actief' : '') + (sub.count === 0 ? ' sub-kaart-leeg' : '');
+
+        const intensity = Math.max(0.06, (sub.count / maxCount) * 0.25);
 
         if (isActive) {
-            btn.style.background = kleuren.accent;
-            btn.style.color = '#fff';
-            btn.style.borderColor = kleuren.accent;
+            card.style.background = kleuren.accent;
+            card.style.color = '#fff';
+            card.style.borderColor = kleuren.accent;
         } else {
-            btn.style.borderLeftColor = kleuren.accent;
+            card.style.borderLeftColor = kleuren.accent;
+            if (sub.count > 0) {
+                card.style.background = hexToRgba(kleuren.accent, intensity);
+            }
         }
 
-        btn.innerHTML = `
-            <span class="sub-tegel-naam">${escapeHtml(sub.naam)}</span>
-            <span class="sub-tegel-count">${sub.count}</span>
+        const datumHtml = sub.recentDate
+            ? `<span class="sub-kaart-datum">${formatDatumKort(sub.recentDate)}</span>`
+            : '';
+
+        card.innerHTML = `
+            <div class="sub-kaart-top">
+                <span class="sub-kaart-naam">${escapeHtml(sub.naam)}</span>
+                <span class="sub-kaart-count">${sub.count}</span>
+            </div>
+            ${datumHtml}
         `;
+
+        if (sub.preview.length && !isActive) {
+            card.title = sub.preview.join('\n');
+        }
+
         if (sub.count > 0) {
-            btn.onclick = () => {
+            card.onclick = () => {
                 activeDossier.subFilter = sub.naam;
                 renderSubTegels(thema, sub.naam);
+                updateBreadcrumb(thema, sub.naam, sub.count, kleuren);
                 filterBySubthema(thema, sub.keywords);
             };
         }
-        grid.appendChild(btn);
+        grid.appendChild(card);
     });
 
     container.appendChild(grid);
+
+    if (!activeSubFilter) {
+        updateBreadcrumb(thema, null, 0, kleuren);
+    }
+}
+
+function updateBreadcrumb(thema, subFilter, count, kleuren) {
+    const el = document.getElementById('subBreadcrumb');
+    if (!el) return;
+    if (!subFilter) {
+        el.style.display = 'none';
+        el.innerHTML = '';
+        return;
+    }
+    el.style.display = '';
+    el.innerHTML = `
+        <span class="breadcrumb-thema">${escapeHtml(thema)}</span>
+        <span class="breadcrumb-sep">→</span>
+        <span class="breadcrumb-sub" style="color:${kleuren.accent}">${escapeHtml(subFilter)}</span>
+        <span class="breadcrumb-count">(${count})</span>
+        <button class="breadcrumb-reset" onclick="activeDossier.subFilter=null;openDossier('${thema.replace(/'/g,"\\'")}')">✕ Wis filter</button>
+    `;
 }
 
 function scrollToBesluiten() {
@@ -380,19 +431,29 @@ function filterBySubthema(thema, keywords) {
 
 function loadSyntheseContent(thema) {
     const container = document.getElementById('dossierSynthese');
+    const blok = document.getElementById('briefingBlok');
     if (!container) return;
+
+    let hasContent = false;
 
     if (briefingCache[thema]) {
         container.innerHTML = briefingCache[thema];
-        return;
-    }
-
-    if (typeof BRIEFING_HTML_DATA !== 'undefined' && BRIEFING_HTML_DATA[thema]) {
+        hasContent = true;
+    } else if (typeof BRIEFING_HTML_DATA !== 'undefined' && BRIEFING_HTML_DATA[thema]) {
         const body = extractBodyContent(BRIEFING_HTML_DATA[thema]);
         briefingCache[thema] = body;
         container.innerHTML = body;
+        hasContent = true;
     } else {
         container.innerHTML = '<p style="color: #999; text-align: center; padding: 2rem;">Geen beleidsdossier beschikbaar voor dit thema.</p>';
+    }
+
+    if (blok) {
+        if (hasContent) {
+            blok.style.display = '';
+        } else {
+            blok.style.display = 'none';
+        }
     }
 }
 
