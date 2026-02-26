@@ -1,4 +1,4 @@
-// BeleidsWijzer Wassenaar v4 — dossier-first
+// Besluit-Wijzer Wassenaar v4 — dossier-first
 
 // ─── Versiebeheer ───
 
@@ -52,7 +52,7 @@ function toonVersieMenu(huidigeVersie) {
     overlay.innerHTML = `
         <div class="versie-panel">
             <div class="versie-panel-kop">
-                <span class="versie-panel-titel">BeleidsWijzer — versies</span>
+                <span class="versie-panel-titel">Besluit-Wijzer — versies</span>
                 <button type="button" class="versie-sluit" aria-label="Sluiten">&times;</button>
             </div>
             <div class="versie-lijst">${items}</div>
@@ -801,15 +801,20 @@ function renderDecisionItem(decision) {
 
 function buildDecisionLinks(decision) {
     const parts = [];
-    if (decision.pdf_url) {
-        parts.push(`<a href="${decision.pdf_url}" target="_blank" rel="noopener noreferrer" class="result-link">Bekijk besluitenlijst (PDF) →</a>`);
+    const isOB = decision.bron_systeem === 'Officiële Bekendmakingen';
+
+    if (isOB && decision.link) {
+        parts.push(`<a href="${decision.link}" target="_blank" rel="noopener noreferrer" class="result-link">Bekijk op Officiële Bekendmakingen →</a>`);
     }
-    if (decision.link && decision.link.startsWith('http')) {
+    if (decision.pdf_url) {
+        const label = isOB ? 'Download PDF →' : 'Bekijk besluitenlijst (PDF) →';
+        parts.push(`<a href="${decision.pdf_url}" target="_blank" rel="noopener noreferrer" class="result-link">${label}</a>`);
+    }
+    if (!isOB && decision.link && decision.link.startsWith('http')) {
         parts.push(`<a href="${decision.link}" target="_blank" rel="noopener noreferrer" class="result-link">Bekijk document →</a>`);
-    } else if (decision.link && decision.link.includes('iBabs')) {
+    } else if (!isOB && decision.link && decision.link.includes('iBabs')) {
         const q = encodeURIComponent(`"${decision.naam || ''}" site:wassenaar.bestuurlijkeinformatie.nl`);
         parts.push(`<a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener noreferrer" class="result-link">Zoek in iBabs →</a>`);
-        parts.push(`<a href="https://wassenaar.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener noreferrer" class="result-link result-link-secondary">iBabs Portaal →</a>`);
     }
     if (!parts.length && decision.bron === 'raad') {
         const q = encodeURIComponent(`"${decision.naam || ''}" wassenaar raadsbesluit`);

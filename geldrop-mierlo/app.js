@@ -1,4 +1,4 @@
-// BeleidsWijzer Geldrop-Mierlo v1.0.0-light — dossier-first
+// Besluit-Wijzer Geldrop-Mierlo v1.0.0-light — dossier-first
 
 // ─── Versiebeheer ───
 
@@ -48,7 +48,7 @@ function toonVersieMenu(huidigeVersie) {
     overlay.innerHTML = `
         <div class="versie-panel">
             <div class="versie-panel-kop">
-                <span class="versie-panel-titel">BeleidsWijzer Geldrop-Mierlo — versies</span>
+                <span class="versie-panel-titel">Besluit-Wijzer Geldrop-Mierlo — versies</span>
                 <button type="button" class="versie-sluit" aria-label="Sluiten">&times;</button>
             </div>
             <div class="versie-lijst">${items}</div>
