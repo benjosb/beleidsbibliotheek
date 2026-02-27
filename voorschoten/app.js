@@ -1,13 +1,9 @@
-// Besluit-Wijzer Wassenaar v4 — dossier-first
+// Besluit-Wijzer Voorschoten v1.0.0 — dossier-first
 
 // ─── Versiebeheer ───
 
 const VERSIE_MENU = [
-    { versie: '6.0.0', naam: 'Publish-after-approval', beschrijving: 'Briefings pas zichtbaar na goedkeuring beleidsadviseur', url: 'index_v6_verificatie.html' },
-    { versie: '5.1.0', naam: 'Dossier-first', beschrijving: 'Modulaire opzet met beleidsdossiers, briefings en coalitieakkoord', url: 'index_v4_modulair.html' },
-    { versie: '3.0',   naam: 'Alles-in-één', beschrijving: 'Complete dataset in één HTML-bestand (457 KB)', url: 'index_v3_alles_in_een.html' },
-    { versie: '2.0',   naam: 'Verbeterd', beschrijving: 'Verbeterde layout en zoekfunctie', url: 'index_v2.html' },
-    { versie: '1.0',   naam: 'Prototype', beschrijving: 'Eerste werkende prototype', url: 'index_v1.html' },
+    { versie: '1.2.0', naam: 'Collegeperiode compleet', beschrijving: '3.521 publicaties uit Gemeenteblad 2022–2025 + Doelstellingenakkoord', url: 'index.html' },
 ];
 
 function initVersieMenu() {
@@ -17,12 +13,12 @@ function initVersieMenu() {
     let pressTimer = null;
 
     badge.style.cursor = 'default';
-    badge.addEventListener('mousedown', (e) => {
+    badge.addEventListener('mousedown', () => {
         pressTimer = setTimeout(() => { pressTimer = null; toonVersieMenu(huidigeVersie); }, 800);
     });
     badge.addEventListener('mouseup', () => { if (pressTimer) clearTimeout(pressTimer); });
     badge.addEventListener('mouseleave', () => { if (pressTimer) clearTimeout(pressTimer); });
-    badge.addEventListener('touchstart', (e) => {
+    badge.addEventListener('touchstart', () => {
         pressTimer = setTimeout(() => { pressTimer = null; toonVersieMenu(huidigeVersie); }, 800);
     }, { passive: true });
     badge.addEventListener('touchend', () => { if (pressTimer) clearTimeout(pressTimer); });
@@ -52,11 +48,10 @@ function toonVersieMenu(huidigeVersie) {
     overlay.innerHTML = `
         <div class="versie-panel">
             <div class="versie-panel-kop">
-                <span class="versie-panel-titel">Besluit-Wijzer — versies</span>
+                <span class="versie-panel-titel">Besluit-Wijzer Voorschoten — versies</span>
                 <button type="button" class="versie-sluit" aria-label="Sluiten">&times;</button>
             </div>
             <div class="versie-lijst">${items}</div>
-            <p class="versie-hint">Tip: dubbelklik op het versienummer voor begrotingsweergave</p>
         </div>`;
 
     document.body.appendChild(overlay);
@@ -79,18 +74,19 @@ function versieMenuEsc(e) { if (e.key === 'Escape') sluitVersieMenu(); }
 
 let allDecisions = [];
 let filteredDecisions = [];
-let activeDossier = null; // { domein: string, subFilter: string|null }
-let viewMode = 'overzicht'; // 'overzicht' | 'dossier' | 'zoekresultaten'
+let activeDossier = null;
+let viewMode = 'overzicht';
 let briefingCache = {};
 let previewCache = {};
 
 const THEMA_KLEUREN = {
-    'Bestuur & Veiligheid':              { accent: '#002244', light: '#d6e4f0', lighter: '#eaf1f8', text: '#001833' },
-    'Financiën, Economie & Sport':       { accent: '#57589D', light: '#ddddf0', lighter: '#ededf7', text: '#3a3b6e' },
-    'Ruimte, Duurzaamheid & Mobiliteit': { accent: '#1565c0', light: '#bbdefb', lighter: '#e3f2fd', text: '#0d47a1' },
-    'Sociaal Domein, Wonen & Onderwijs': { accent: '#c0392b', light: '#f5d0cc', lighter: '#fae8e6', text: '#922b20' },
-    'Cultuur & Welzijn':                 { accent: '#e67e22', light: '#fce4cc', lighter: '#fdf2e6', text: '#b35f0f' },
-    'Bedrijfsvoering':                   { accent: '#438527', light: '#d4edcc', lighter: '#eaf5e6', text: '#2d5c1a' },
+    'Bestuur & Veiligheid':              { accent: '#004D2C', light: '#d0e8db', lighter: '#e8f5ed', text: '#003820' },
+    'Economie & Dienstverlening':        { accent: '#1565c0', light: '#bbdefb', lighter: '#e3f2fd', text: '#0d47a1' },
+    'Wonen & Ruimtelijke Ordening':      { accent: '#e65100', light: '#ffe0b2', lighter: '#fff3e0', text: '#bf360c' },
+    'Duurzaamheid, Groen & Klimaat':     { accent: '#2E7D32', light: '#c8e6c9', lighter: '#e8f5e9', text: '#1b5e20' },
+    'Verkeer & Bereikbaarheid':          { accent: '#5d4037', light: '#d7ccc8', lighter: '#efebe9', text: '#3e2723' },
+    'Zorg, Welzijn & Samenleving':       { accent: '#c0392b', light: '#f5d0cc', lighter: '#fae8e6', text: '#922b20' },
+    'Financiën & Organisatie':           { accent: '#57589D', light: '#ddddf0', lighter: '#ededf7', text: '#3a3b6e' },
 };
 
 const BELEIDSNIVEAU = {
@@ -99,81 +95,67 @@ const BELEIDSNIVEAU = {
     OPERATIONEEL:{ label: 'Operationeel',rang: 3, kleur: '#6d7681', icon: '●' },
 };
 
+const NIVEAU_PER_TYPE = {
+    'Omgevingsvergunning':  'OPERATIONEEL',
+    'Vergunning':           'OPERATIONEEL',
+    'Evenementenvergunning':'OPERATIONEEL',
+    'Exploitatievergunning':'OPERATIONEEL',
+    'Melding':              'OPERATIONEEL',
+    'Omgevingsmelding':     'OPERATIONEEL',
+    'Beschikking':          'OPERATIONEEL',
+    'Voorlichting':         'OPERATIONEEL',
+    'Overheidsinformatie':  'OPERATIONEEL',
+    'inspraak':             'OPERATIONEEL',
+    'Verordening':          'TACTISCH',
+    'Beleidsregel':         'TACTISCH',
+    'Mandaatbesluit':       'TACTISCH',
+    'Verkeersbesluit':      'TACTISCH',
+    'Besluit':              'TACTISCH',
+    'Participatie':         'TACTISCH',
+    'Verkiezingen':         'TACTISCH',
+    'Gemeenschappelijke regeling': 'STRATEGISCH',
+    'Ruimtelijk plan':      'STRATEGISCH',
+};
+
 const STRATEGISCH_KEYWORDS = ['visie','kader','structuurvisie','omgevingsvisie','woonvisie',
     'programma','strategie','agenda','akkoord','actieplan','beleidsnota','toekomst'];
 
 function classifyNiveau(decision) {
-    const td = decision.type_document || '';
-    if (td.startsWith('1.')) return 'STRATEGISCH';
-
-    const jc = decision.juridische_classificatie || '';
-    if (jc.includes('Algemeen Verbindend Voorschrift')) return 'TACTISCH';
-    if (jc.includes('Besluit van Algemene Strekking')) return 'TACTISCH';
-
+    const type = decision.type_besluit || '';
     const titel = (decision.naam || '').toLowerCase();
+
     if (STRATEGISCH_KEYWORDS.some(kw => titel.includes(kw))) return 'STRATEGISCH';
 
-    if (td.startsWith('2.')) return 'TACTISCH';
-    if (td.includes('Gemeenschappelijke Regeling')) return 'STRATEGISCH';
-    if (td.startsWith('4.') || td.startsWith('3.')) return 'OPERATIONEEL';
-
-    if (decision.bron === 'raad') return 'TACTISCH';
-    return 'OPERATIONEEL';
-}
-
-const SUBTHEMA_KEYWORDS = {
-    'Bestuur': ['bestuur','gemeenteraad','raad','burgemeester','wethouder','college','griffie'],
-    'Veiligheid': ['veiligheid','politie','brandweer','noodverordening','cameratoezicht','boa','handhaving'],
-    'Lokale media': ['media','omroep','pers','communicatie'],
-    'Belastingen': ['belasting','ozb','rioolheffing','leges','tarief','heffing'],
-    'Economie': ['economie','bedrijv','ondernem','winkel','markt'],
-    'Financiën': ['financ','begroting','jaarrekening','reserves','voorzieningen'],
-    'P&C-cyclus': ['begroting','jaarrekening','burap','bestuursrapportage','kadernota'],
-    'Sport': ['sport','bewegen','voetbal','tennis','zwem','hockey','sporthal'],
-    'Gemeentelijke huisvesting': ['huisvesting','gemeentehuis','kantoor'],
-    'Afval': ['afval','inzameling','container','recycl'],
-    'Bestemmingsplannen': ['bestemmingsplan','omgevingsplan','wijzigingsplan','uitwerkingsplan'],
-    'Duurzaamheid': ['duurzaam','energie','zonnepanel','warmte','isolatie','klimaat','co2'],
-    'Groene Zone': ['groen','natuur','park','boom','kap'],
-    'Herontwikkeling Duindigt': ['duindigt'],
-    'MRDH': ['mrdh','metropoolregio'],
-    'ODH': ['odh','omgevingsdienst'],
-    'Omgevingswet': ['omgevingswet','omgevingsvergunning','omgevingsvisie'],
-    'Riolering': ['riool','riolering','rioolheffing'],
-    'Strandvisie': ['strand','kust','strandvisie'],
-    'Verkeer': ['verkeer','parkeer','fiets','weg','straat','rotonde','snelheid'],
-    'Wonen': ['woning','wonen','huur','woningbouw','huisvesting'],
-    'Onderwijs': ['school','onderwijs','leerling','leerplicht','kinderopvang'],
-    'WMO': ['wmo','voorziening','hulpmiddel','zorg','welzijn'],
-    'Jeugdzorg': ['jeugd','kind','jongere','jeugdhulp','jeugdzorg'],
-    'Volksgezondheid': ['gezondheid','volksgezondheid','ggd','preventie'],
-    'Warenar': ['warenar','theater','cultuur'],
-    'Overig': [],
-};
-
-function matchSubthema(decision, keywords) {
-    if (!keywords.length) return false;
-    const text = [decision.naam || '', decision.besluit || ''].join(' ').toLowerCase();
-    return keywords.some(kw => text.includes(kw.toLowerCase()));
+    return NIVEAU_PER_TYPE[type] || 'TACTISCH';
 }
 
 const THEMA_ICONEN = {
     'Bestuur & Veiligheid': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
-    'Financiën, Economie & Sport': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
-    'Ruimte, Duurzaamheid & Mobiliteit': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
-    'Sociaal Domein, Wonen & Onderwijs': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
-    'Cultuur & Welzijn': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
-    'Bedrijfsvoering': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>'
+    'Economie & Dienstverlening': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
+    'Wonen & Ruimtelijke Ordening': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+    'Duurzaamheid, Groen & Klimaat': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>',
+    'Verkeer & Bereikbaarheid': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="18.5" r="3.5"/><circle cx="18.5" cy="18.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg>',
+    'Zorg, Welzijn & Samenleving': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    'Financiën & Organisatie': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
 };
 
 const BRIEFING_BESTANDEN = {
-    'Bestuur & Veiligheid': 'briefings/briefing_bestuur_veiligheid.html',
-    'Financiën, Economie & Sport': 'briefings/briefing_financien_economie_sport.html',
-    'Ruimte, Duurzaamheid & Mobiliteit': 'briefings/briefing_ruimte_duurzaamheid_mobiliteit.html',
-    'Sociaal Domein, Wonen & Onderwijs': 'briefings/briefing_sociaal_domein_wonen_onderwijs.html',
-    'Cultuur & Welzijn': 'briefings/briefing_cultuur_welzijn.html',
-    'Bedrijfsvoering': 'briefings/briefing_bedrijfsvoering.html'
+    'Bestuur & Veiligheid': '',
+    'Economie & Dienstverlening': '',
+    'Wonen & Ruimtelijke Ordening': '',
+    'Duurzaamheid, Groen & Klimaat': '',
+    'Verkeer & Bereikbaarheid': '',
+    'Zorg, Welzijn & Samenleving': '',
+    'Financiën & Organisatie': ''
 };
+
+const BEGROTING_DATA = {};
+
+function formatBedrag(n) {
+    if (n >= 1000000) return '€' + (n / 1000000).toFixed(1).replace('.', ',') + 'M';
+    if (n >= 1000) return '€' + Math.round(n / 1000) + 'K';
+    return '€' + n;
+}
 
 // ─── Initialisation ───
 
@@ -212,21 +194,6 @@ function extractPreview(html) {
         }
     }
     return '';
-}
-
-const BEGROTING_DATA = {
-    'Bestuur & Veiligheid':              { programma: 'P1 Veiligheid en Handhaving', bedrag: 4641000 },
-    'Financiën, Economie & Sport':       { programma: 'P3 Bestuur en Middelen', bedrag: 24433000, gedeeld: true },
-    'Ruimte, Duurzaamheid & Mobiliteit': { programma: 'P4 + P5 Fysiek en Natuur', bedrag: 24910000 },
-    'Sociaal Domein, Wonen & Onderwijs': { programma: 'P2 Mens en Maatschappij', bedrag: 41536000, gedeeld: true },
-    'Cultuur & Welzijn':                 { programma: 'P2 Mens en Maatschappij', bedrag: 41536000, gedeeld: true },
-    'Bedrijfsvoering':                   { programma: 'P3 Bestuur en Middelen', bedrag: 24433000, gedeeld: true }
-};
-
-function formatBedrag(n) {
-    if (n >= 1000000) return '€' + (n / 1000000).toFixed(1).replace('.', ',') + 'M';
-    if (n >= 1000) return '€' + Math.round(n / 1000) + 'K';
-    return '€' + n;
 }
 
 // ─── Dossier-kaarten (startpagina) ───
@@ -311,6 +278,52 @@ function sluitDossier() {
     showView('overzicht');
 }
 
+const SUBTHEMA_KEYWORDS = {
+    'Openbare Orde en Veiligheid': ['veiligheid','politie','noodverordening','cameratoezicht','boa'],
+    'Handhaving': ['handhaving','handhaven','toezicht','bestuursdwang','dwangsom','last onder'],
+    'Bestuurlijke samenwerking': ['samenwerking','gemeenschappelijke regeling','samenwerkingsverband','regio'],
+    'Dienstverlening': ['dienstverlening','service','balie','burgerzaken'],
+    'Juridische Zaken': ['bezwaar','beroep','juridisch','klacht','bezwaarschrift','mandaat'],
+    'Communicatie en representatie': ['communicatie','representatie','voorlichting'],
+    'Informatieveiligheid': ['informatieveiligheid','privacy','avg','cyber','datalek'],
+    'Financiën': ['belasting','heffing','tariev','begroting','jaarrekening','leges','ozb','rioolheffing','financ'],
+    'Inkoop en aanbesteding': ['aanbesteding','inkoop','gunning','offerte'],
+    'Economie': ['economie','bedrijv','ondernem','winkel','centrumgebied','markt'],
+    'Recreatie en Toerisme': ['recreatie','toerisme','toerist','camping','verblijf'],
+    'Ruimtelijke ordening': ['bestemmingsplan','omgevingsplan','ruimtelijk','wijzigingsplan','uitwerkingsplan','plangebied'],
+    'Wonen': ['woning','wonen','huur','woningbouw','huisvesting','bewoner'],
+    'Omgevingswet': ['omgevingsvergunning','omgevingsmelding','bouwen','slopen','milieu','activiteit','omgevingswet'],
+    'Gemeentelijk vastgoed': ['vastgoed','pand','gebouw','huur','verhuur','accommodatie'],
+    'Gemeentelijk grondbedrijf': ['grond','perceel','kavel','exploitatie','grondbeleid'],
+    'Mobiliteit': ['verkeer','parkeer','fiets','weg','straat','rotonde','snelheid','30 km','rijbaan','voetpad','oversteek'],
+    'Openbare ruimte': ['groen','boom','kap','riolering','verlichting','speeltuin','bankje','openbare ruimte','onderhoud'],
+    'Duurzaamheid': ['duurzaam','energie','zonnepanel','warmte','isolatie','klimaat','co2'],
+    'Natuur en milieu': ['natuur','milieu','ecologie','biodiversiteit','flora','fauna','watergang'],
+    'Afval': ['afval','inzameling','container','recycl','cure'],
+    'Leefbaarheid': ['leefbaar','overlast','geluid','geur','stank','trillingen'],
+    'Bosbeleid': ['bos','bosbeheer','houtopstand'],
+    'Gebiedsgericht werken': ['wijk','buurt','gebiedsgericht','dorpsraad','participatie'],
+    'Zorg': ['zorg','verpleging','thuiszorg','huisarts','gezondheid'],
+    'Welzijn': ['welzijn','sociaal','maatschappelijk','vrijwillig','mantelzorg'],
+    'WMO': ['wmo','voorziening','hulpmiddel','scootmobiel','aanpassing'],
+    'Jeugdbeleid': ['jeugd','kind','jongere','kinderopvang','peuterspeelzaal'],
+    'Inclusie': ['inclusie','inclusief','toegankelijk','gehandicapt','handicap'],
+    'Inburgering': ['inburgering','statushouder','asiel','vluchtel','integratie'],
+    'Armoedebeleid': ['armoede','bijstand','schuld','minimaregeling','kwijtschelding'],
+    'Werk en Inkomen': ['uitkering','werkloosheid','re-integratie','participatiewet'],
+    'Onderwijs': ['school','onderwijs','leerling','leerplicht','onderwijshuisvesting'],
+    'Accommodatiebeleid': ['accommodatie','sporthal','zwembad','gemeenschapshuis','dorpshuis'],
+    'Sport en bewegen': ['sport','bewegen','voetbal','tennis','atletiek','zwem','hockey'],
+    'Cultuur': ['cultuur','museum','bibliotheek','theater','kunst','evenement','festival','carnaval','optocht','kermis'],
+    'Monumenten en Oudheidkunde': ['monument','erfgoed','oudheidkund','beschermd','rijksmonument','cultuurhistor'],
+    'Digitalisering': ['digitaal','digitalisering','ict','website','app','online'],
+};
+
+function matchSubthema(decision, keywords) {
+    const text = [decision.naam || '', decision.besluit || ''].join(' ').toLowerCase();
+    return keywords.some(kw => text.includes(kw.toLowerCase()));
+}
+
 function getRecentDate(decisions, keywords) {
     let latest = '';
     for (const d of decisions) {
@@ -354,10 +367,10 @@ function renderSubTegels(thema, activeSubFilter) {
 
     const subData = domein.kinderen.map(kind => {
         const keywords = SUBTHEMA_KEYWORDS[kind.naam] || [kind.naam.toLowerCase()];
-        const count = keywords.length ? dossierBesluiten.filter(d => matchSubthema(d, keywords)).length : kind.aantal || 0;
-        const recentDate = keywords.length ? getRecentDate(dossierBesluiten, keywords) : '';
-        const preview = keywords.length ? getHoverPreview(dossierBesluiten, keywords) : [];
-        return { naam: kind.naam, count, keywords, recentDate, preview };
+        const matches = dossierBesluiten.filter(d => matchSubthema(d, keywords));
+        const recentDate = getRecentDate(dossierBesluiten, keywords);
+        const preview = getHoverPreview(dossierBesluiten, keywords);
+        return { naam: kind.naam, count: matches.length, keywords, recentDate, preview };
     });
 
     const maxCount = Math.max(...subData.map(s => s.count), 1);
@@ -400,7 +413,7 @@ function renderSubTegels(thema, activeSubFilter) {
             card.title = sub.preview.join('\n');
         }
 
-        if (sub.count > 0 && sub.keywords.length) {
+        if (sub.count > 0) {
             card.onclick = () => {
                 activeDossier.subFilter = sub.naam;
                 renderSubTegels(thema, sub.naam);
@@ -478,7 +491,11 @@ function loadSyntheseContent(thema) {
     }
 
     if (blok) {
-        blok.style.display = hasContent ? '' : 'none';
+        if (hasContent) {
+            blok.style.display = '';
+        } else {
+            blok.style.display = 'none';
+        }
     }
 }
 
@@ -488,90 +505,57 @@ function extractBodyContent(html) {
     return html;
 }
 
+// ─── Coalitieakkoord rendering ───
+
 function loadCoalitieAkkoord(thema) {
     const container = document.getElementById('coalitieAkkoordInhoud');
-    const blok = document.getElementById('coalitieAkkoordBlok');
-    if (!container || !blok) return;
+    if (!container) return;
 
     if (typeof COALITIEAKKOORD_DATA === 'undefined') {
-        blok.style.display = 'none';
+        container.innerHTML = '<p style="color:#999;text-align:center;padding:1rem;">Geen doelstellingenakkoord beschikbaar.</p>';
         return;
     }
 
-    const secties = COALITIEAKKOORD_DATA.secties.filter(s => s.thema === thema);
+    const data = COALITIEAKKOORD_DATA;
+    const secties = (data.secties || []).filter(s => s.thema === thema);
 
     if (!secties.length) {
-        blok.style.display = 'none';
+        container.innerHTML = '<p style="color:#999;text-align:center;padding:1rem;">Geen passages uit het doelstellingenakkoord voor dit dossier.</p>';
         return;
     }
 
-    blok.style.display = '';
-
-    const grouped = {};
+    const hoofdstukken = {};
     secties.forEach(s => {
-        if (!grouped[s.hoofdstuk]) grouped[s.hoofdstuk] = [];
-        grouped[s.hoofdstuk].push(s);
+        const h = s.hoofdstuk || 'Overig';
+        if (!hoofdstukken[h]) hoofdstukken[h] = [];
+        hoofdstukken[h].push(s);
     });
 
-    let html = `<p class="coalitie-intro">Onderstaande passages komen uit het coalitieakkoord <em>"${escapeHtml(COALITIEAKKOORD_DATA.titel)}"</em> (${escapeHtml(COALITIEAKKOORD_DATA.datum)}) en zijn relevant voor dit beleidsdossier.</p>`;
+    let html = '';
 
-    for (const [hoofdstuk, items] of Object.entries(grouped)) {
-        html += `<div class="coalitie-hoofdstuk"><h4 class="coalitie-hoofdstuk-titel">${escapeHtml(hoofdstuk)}</h4>`;
-        items.forEach(s => {
-            const paragraphs = s.tekst.split('\n\n').map(p =>
-                `<p>${escapeHtml(p.trim())}</p>`
-            ).join('');
+    if (data.woord_vooraf) {
+        const korteIntro = data.woord_vooraf.split('\n')[0];
+        html += `<p class="coalitie-intro"><em>${escapeHtml(korteIntro)}</em></p>`;
+    }
+
+    Object.keys(hoofdstukken).forEach(h => {
+        html += `<div class="coalitie-hoofdstuk">`;
+        html += `<h3 class="coalitie-hoofdstuk-titel">${escapeHtml(h)}</h3>`;
+        hoofdstukken[h].forEach(s => {
+            const paragraphs = s.tekst.split('\n\n').filter(p => p.trim());
+            const tekst = paragraphs.map(p => `<p>${escapeHtml(p.trim())}</p>`).join('');
             html += `
-                <div class="coalitie-sectie" id="ca-${s.id}">
-                    <h5 class="coalitie-sectie-titel">
-                        <a href="#ca-${s.id}" class="coalitie-anchor">${escapeHtml(s.titel)}</a>
-                    </h5>
-                    <div class="coalitie-sectie-tekst">${paragraphs}</div>
+                <div class="coalitie-sectie" id="coalitie-${s.id || ''}">
+                    <h4 class="coalitie-sectie-titel">${escapeHtml(s.titel)}</h4>
+                    <div class="coalitie-sectie-tekst">${tekst}</div>
                 </div>`;
         });
         html += `</div>`;
-    }
-
-    html += buildPortefeuilleBlock(thema);
-    html += `<p class="coalitie-bron"><a href="${COALITIEAKKOORD_DATA.bron_url}" target="_blank" rel="noopener noreferrer">Bekijk volledig coalitieakkoord (PDF) →</a></p>`;
-
-    container.innerHTML = html;
-}
-
-function buildPortefeuilleBlock(thema) {
-    if (typeof COALITIEAKKOORD_DATA === 'undefined' || !COALITIEAKKOORD_DATA.portefeuilleverdeling) return '';
-
-    const THEMA_PORTEFEUILLE = {
-        'Bestuur & Veiligheid': ['Burgemeester Leendert de Lange'],
-        'Financiën, Economie & Sport': ['Wethouder Laurens van Doeveren (VVD) — Financiën, Economie & Sport'],
-        'Ruimte, Duurzaamheid & Mobiliteit': ['Wethouder Wim Koetsier (CDA) — Ruimte, Duurzaamheid & Mobiliteit'],
-        'Sociaal Domein, Wonen & Onderwijs': ['Wethouder Ritske Bloemendaal (D66/PvdA) — Sociaal Domein, Wonen & Onderwijs'],
-        'Cultuur & Welzijn': ['Wethouder Ronald Zoutendijk (DLW) — Cultuur & Welzijn'],
-        'Bedrijfsvoering': []
-    };
-
-    const pv = COALITIEAKKOORD_DATA.portefeuilleverdeling;
-    const keys = THEMA_PORTEFEUILLE[thema];
-    const relevant = [];
-
-    if (keys && keys.length) {
-        keys.forEach(k => { if (pv[k]) relevant.push({ functie: k, taken: pv[k] }); });
-    } else {
-        Object.entries(pv).forEach(([functie, taken]) => relevant.push({ functie, taken }));
-    }
-
-    if (!relevant.length) return '';
-
-    let html = `<div class="coalitie-sectie coalitie-portefeuille" id="ca-portefeuilleverdeling">
-        <h5 class="coalitie-sectie-titel"><a href="#ca-portefeuilleverdeling" class="coalitie-anchor">Portefeuilleverdeling</a></h5>
-        <div class="coalitie-sectie-tekst">`;
-
-    relevant.forEach(({ functie, taken }) => {
-        html += `<p><strong>${escapeHtml(functie)}:</strong> ${taken.map(t => escapeHtml(t)).join(', ')}</p>`;
     });
 
-    html += `</div></div>`;
-    return html;
+    html += `<p class="coalitie-bron">Bron: <a href="${data.bron_url}" target="_blank" rel="noopener">Coalitieakkoord 2022–2026 (PDF)</a></p>`;
+
+    container.innerHTML = html;
 }
 
 function loadDossierBesluiten(thema) {
@@ -756,6 +740,7 @@ function renderDecisionItem(decision) {
     const datum = decision.datum ? formatDate(decision.datum) : 'Onbekend';
     const badgeClass = decision.bron === 'raad' ? 'raad' : 'college';
     const badgeText = decision.type_besluit || (decision.bron === 'raad' ? 'Raadsbesluit' : 'Collegebesluit');
+
     const niveauKey = classifyNiveau(decision);
     const niveau = BELEIDSNIVEAU[niveauKey];
 
@@ -780,7 +765,6 @@ function renderDecisionItem(decision) {
                         <span class="result-badge niveau-badge niveau-${niveauKey.toLowerCase()}">${niveau.icon} ${niveau.label}</span>
                         <span class="result-badge ${badgeClass}">${badgeText}</span>
                         ${decision.domein ? `<span>📁 ${escapeHtml(decision.domein)}</span>` : ''}
-                        ${decision.portefeuille ? `<span>👤 ${escapeHtml(decision.portefeuille)}</span>` : ''}
                     </div>
                 </div>
             </div>
@@ -801,24 +785,15 @@ function renderDecisionItem(decision) {
 
 function buildDecisionLinks(decision) {
     const parts = [];
-    const isOB = decision.bron_systeem === 'Officiële Bekendmakingen';
-
-    if (isOB && decision.link) {
+    if (decision.link && decision.link.startsWith('http')) {
         parts.push(`<a href="${decision.link}" target="_blank" rel="noopener noreferrer" class="result-link">Bekijk op Officiële Bekendmakingen →</a>`);
     }
-    if (decision.pdf_url) {
-        const label = isOB ? 'Download PDF →' : 'Bekijk besluitenlijst (PDF) →';
-        parts.push(`<a href="${decision.pdf_url}" target="_blank" rel="noopener noreferrer" class="result-link">${label}</a>`);
+    if (decision.pdf_url && decision.pdf_url.startsWith('http')) {
+        parts.push(`<a href="${decision.pdf_url}" target="_blank" rel="noopener noreferrer" class="result-link result-link-secondary">PDF →</a>`);
     }
-    if (!isOB && decision.link && decision.link.startsWith('http')) {
-        parts.push(`<a href="${decision.link}" target="_blank" rel="noopener noreferrer" class="result-link">Bekijk document →</a>`);
-    } else if (!isOB && decision.link && decision.link.includes('iBabs')) {
-        const q = encodeURIComponent(`"${decision.naam || ''}" site:wassenaar.bestuurlijkeinformatie.nl`);
-        parts.push(`<a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener noreferrer" class="result-link">Zoek in iBabs →</a>`);
-    }
-    if (!parts.length && decision.bron === 'raad') {
-        const q = encodeURIComponent(`"${decision.naam || ''}" wassenaar raadsbesluit`);
-        parts.push(`<a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener noreferrer" class="result-link">Zoek document →</a>`);
+    if (!parts.length) {
+        const q = encodeURIComponent(`"${decision.naam || ''}" site:zoek.officielebekendmakingen.nl`);
+        parts.push(`<a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener noreferrer" class="result-link">Zoek publicatie →</a>`);
     }
     return parts.length ? `<div class="result-links">${parts.join('')}</div>` : '';
 }
@@ -902,7 +877,6 @@ function navigateToDecision(refText) {
 document.addEventListener('DOMContentLoaded', () => {
     loadData();
 
-    // Uitklap-knoppen (via event delegation op beide lijsten)
     document.addEventListener('click', (e) => {
         const btn = e.target.closest('.btn-uitklappen');
         if (!btn) return;
@@ -916,24 +890,20 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.textContent = expanded ? 'Toon volledige tekst' : 'Verberg tekst';
     });
 
-    // Bronverwijzingen in briefing → klikbaar naar besluit
     document.addEventListener('click', (e) => {
         const ref = e.target.closest('.ref');
         if (!ref) return;
         navigateToDecision(ref.textContent);
     });
 
-    // Terug naar overzicht
     document.getElementById('dossierTerug').addEventListener('click', sluitDossier);
 
-    // Zoeken
     document.getElementById('searchInput').addEventListener('keypress', (e) => {
         if (e.key === 'Enter') handleSearch();
     });
     document.getElementById('searchBtn').addEventListener('click', handleSearch);
     document.getElementById('zoekSluiten').addEventListener('click', sluitZoekresultaten);
 
-    // Filters binnen dossier
     document.getElementById('yearFilter').addEventListener('change', applyDossierFilters);
     document.getElementById('typeFilter').addEventListener('change', applyDossierFilters);
     if (document.getElementById('niveauFilter')) {
@@ -948,7 +918,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (activeDossier) applyDossierFilters();
     });
 
-    // Filters binnen zoekresultaten
     document.getElementById('zoekYearFilter').addEventListener('change', applyZoekFilters);
     document.getElementById('zoekTypeFilter').addEventListener('change', applyZoekFilters);
     document.getElementById('zoekSortBy').addEventListener('change', applyZoekFilters);
@@ -959,7 +928,6 @@ document.addEventListener('DOMContentLoaded', () => {
         applyZoekFilters();
     });
 
-    // Verborgen begroting-toggle (dubbel-klik op versienummer)
     const versieBadge = document.getElementById('appVersion');
     if (versieBadge) {
         versieBadge.addEventListener('dblclick', () => {
@@ -969,6 +937,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Verborgen versiemenu (long-press op versienummer)
     initVersieMenu();
 });
