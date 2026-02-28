@@ -870,10 +870,138 @@ function navigateToDecision(refText) {
     }
 }
 
+// ─── Kwaliteitsdashboard ───
+
+function renderKwaliteit() {
+    const container = document.getElementById('kwaliteitInhoud');
+    if (!container || !allDecisions.length) return;
+
+    const total = allDecisions.length;
+    const dates = allDecisions.map(d => d.datum).filter(Boolean).sort();
+    const newest = dates[dates.length - 1];
+    const oldest = dates[0];
+
+    const perYear = {};
+    const perType = {};
+    const perDomein = {};
+    let withLink = 0;
+    let classified = 0;
+
+    allDecisions.forEach(d => {
+        const year = (d.datum || '').substring(0, 4);
+        if (year) perYear[year] = (perYear[year] || 0) + 1;
+
+        const type = d.type_besluit || 'Onbekend';
+        perType[type] = (perType[type] || 0) + 1;
+
+        const dom = d.domein || 'Niet geclassificeerd';
+        perDomein[dom] = (perDomein[dom] || 0) + 1;
+
+        if (d.link) withLink++;
+        if (d.domein) classified++;
+    });
+
+    const classifiedPct = Math.round((classified / total) * 100);
+    const linkedPct = Math.round((withLink / total) * 100);
+
+    const years = Object.keys(perYear).sort();
+    const yearRows = years.map(y =>
+        `<tr><td>${y}</td><td class="kw-num">${perYear[y].toLocaleString('nl-NL')}</td></tr>`
+    ).join('');
+
+    const typeEntries = Object.entries(perType).sort((a, b) => b[1] - a[1]);
+    const topTypes = typeEntries.slice(0, 8);
+    const typeRows = topTypes.map(([t, c]) =>
+        `<tr><td>${escapeHtml(t)}</td><td class="kw-num">${c.toLocaleString('nl-NL')}</td></tr>`
+    ).join('');
+
+    const domeinEntries = Object.entries(perDomein).sort((a, b) => b[1] - a[1]);
+    const domeinRows = domeinEntries.map(([d, c]) => {
+        const pct = Math.round((c / total) * 100);
+        return `<tr><td>${escapeHtml(d)}</td><td class="kw-num">${c.toLocaleString('nl-NL')}</td><td class="kw-num kw-pct">${pct}%</td></tr>`;
+    }).join('');
+
+    const coalitieSecties = typeof COALITIEAKKOORD_DATA !== 'undefined'
+        ? COALITIEAKKOORD_DATA.secties.length : 0;
+    let coalitieMetBesluiten = 0;
+    if (typeof COALITIEAKKOORD_DATA !== 'undefined') {
+        COALITIEAKKOORD_DATA.secties.forEach(s => {
+            const thema = s.thema;
+            const count = allDecisions.filter(d => d.domein === thema).length;
+            if (count > 0) coalitieMetBesluiten++;
+        });
+    }
+
+    container.innerHTML = `
+        <div class="kw-grid">
+            <div class="kw-card kw-card-highlight">
+                <div class="kw-card-value">${total.toLocaleString('nl-NL')}</div>
+                <div class="kw-card-label">Publicaties verwerkt</div>
+            </div>
+            <div class="kw-card">
+                <div class="kw-card-value">${classifiedPct}%</div>
+                <div class="kw-card-label">Geclassificeerd naar domein</div>
+            </div>
+            <div class="kw-card">
+                <div class="kw-card-value">${linkedPct}%</div>
+                <div class="kw-card-label">Met bronlink naar OB</div>
+            </div>
+            <div class="kw-card">
+                <div class="kw-card-value">${formatDatumKort(newest)}</div>
+                <div class="kw-card-label">Nieuwste publicatie</div>
+            </div>
+        </div>
+
+        <div class="kw-tables">
+            <div class="kw-table-wrap">
+                <h4>Per jaar</h4>
+                <table class="kw-table">
+                    <thead><tr><th>Jaar</th><th>Aantal</th></tr></thead>
+                    <tbody>${yearRows}</tbody>
+                    <tfoot><tr><td><strong>Totaal</strong></td><td class="kw-num"><strong>${total.toLocaleString('nl-NL')}</strong></td></tr></tfoot>
+                </table>
+            </div>
+            <div class="kw-table-wrap">
+                <h4>Per domein</h4>
+                <table class="kw-table">
+                    <thead><tr><th>Domein</th><th>Aantal</th><th>%</th></tr></thead>
+                    <tbody>${domeinRows}</tbody>
+                </table>
+            </div>
+            <div class="kw-table-wrap">
+                <h4>Top publicatietypen</h4>
+                <table class="kw-table">
+                    <thead><tr><th>Type</th><th>Aantal</th></tr></thead>
+                    <tbody>${typeRows}</tbody>
+                </table>
+            </div>
+        </div>
+
+        ${coalitieSecties > 0 ? `
+        <div class="kw-coalitie-dekking">
+            <h4>Coalitieakkoord-dekking</h4>
+            <p>Van de <strong>${coalitieSecties}</strong> beleidsthema's in het coalitieakkoord hebben
+            <strong>${coalitieMetBesluiten}</strong> ten minste één publicatie in Besluit-Wijzer.</p>
+        </div>` : ''}
+
+        <div class="kw-methode">
+            <h4>Methodologie</h4>
+            <p>Besluit-Wijzer verzamelt publicaties uit het <strong>Gemeenteblad</strong> via de SRU-API van
+            <a href="https://repository.overheid.nl" target="_blank" rel="noopener">repository.overheid.nl</a>.
+            Elke publicatie wordt automatisch geclassificeerd naar beleidsdomein op basis van type en trefwoorden in de titel.
+            Alle data is openbaar en vrij beschikbaar. Elke publicatie bevat een directe link naar het origineel op
+            <a href="https://zoek.officielebekendmakingen.nl" target="_blank" rel="noopener">zoek.officielebekendmakingen.nl</a>.</p>
+            <p>Periode: <strong>${oldest}</strong> t/m <strong>${newest}</strong>
+            · Laatst bijgewerkt: <strong>februari 2026</strong></p>
+        </div>
+    `;
+}
+
 // ─── Event listeners ───
 
 document.addEventListener('DOMContentLoaded', () => {
     loadData();
+    renderKwaliteit();
 
     document.addEventListener('click', (e) => {
         const btn = e.target.closest('.btn-uitklappen');
