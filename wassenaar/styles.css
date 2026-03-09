@@ -63,6 +63,21 @@ body {
     margin-left: auto;
 }
 
+.header-nav {
+    order: 3;
+    margin-left: auto;
+    font-size: 0.78rem;
+    color: var(--gray-medium);
+}
+.header-nav-link {
+    color: var(--gray-medium);
+    text-decoration: none;
+}
+.header-nav-link:hover {
+    color: var(--wassenaar-blue);
+    text-decoration: underline;
+}
+
 .site-logo {
     height: 44px;
     width: auto;
@@ -96,6 +111,38 @@ body {
     gap: 1rem;
     margin-bottom: 1rem;
     flex-wrap: wrap;
+}
+
+.overzicht-tabs {
+    display: inline-flex;
+    gap: 0;
+    font-size: 0.85rem;
+    font-weight: 400;
+    background: #e8e8e8;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    padding: 0.15rem 0.15rem 0 0.15rem;
+}
+
+.overzicht-tab {
+    padding: 0.45rem 1rem;
+    border-radius: 6px 6px 0 0;
+    color: var(--gray-medium);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.overzicht-tab:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--wassenaar-blue);
+}
+
+.overzicht-tab-actief {
+    background: var(--white);
+    color: var(--wassenaar-donker);
+    font-weight: 500;
+    cursor: default;
 }
 
 .overzicht-zoek {
@@ -1103,6 +1150,63 @@ body.toon-begroting .dossier-kaart-begroting {
 }
 
 /* ─── Briefing opvouwbaar ─── */
+
+.samenvatting-geselecteerd-blok {
+    background: #fff;
+    border: 1px solid var(--gray-light);
+    border-left: 4px solid var(--wassenaar-blue);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.samenvatting-geselecteerd-titel {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--wassenaar-donker);
+    margin: 0 0 0.5rem;
+}
+.samenvatting-geselecteerd-tekst {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--gray-medium);
+    margin: 0;
+}
+
+.samenvatting-per-thema-blok {
+    margin-bottom: 1.5rem;
+}
+.samenvatting-per-thema-kop {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--wassenaar-donker);
+    margin: 0 0 0.75rem;
+}
+.samenvatting-per-thema-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.75rem;
+}
+@media (max-width: 520px) {
+    .samenvatting-per-thema-grid { grid-template-columns: 1fr; }
+}
+.samenvatting-kaart {
+    background: #fff;
+    border: 1px solid var(--gray-light);
+    border-left: 4px solid var(--wassenaar-blue);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+.samenvatting-kaart .kaart-thema {
+    font-weight: 600;
+    color: var(--wassenaar-donker);
+    margin-bottom: 0.35rem;
+}
+.samenvatting-kaart .kaart-tekst {
+    color: var(--gray-medium);
+}
 
 .briefing-blok {
     margin-bottom: 1.5rem;

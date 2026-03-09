@@ -56,6 +56,26 @@ def normalize(text):
     return re.sub(r'[^a-z0-9]', '', text.lower()) if text else ''
 
 
+PORTEFEUILLE_HEADERS = [
+    'Financiën, Economie en Sport', 'Financiën, Economie & Sport',
+    'Sociaal Domein, Wonen en Onderwijs', 'Sociaal Domein, Wonen & Onderwijs',
+    'Ruimte, Duurzaamheid en Mobiliteit', 'Ruimte, Duurzaamheid & Mobiliteit',
+    'Cultuur en Welzijn', 'Cultuur & Welzijn',
+    'Bedrijfsvoering', 'Portefeuille Burgemeester',
+]
+
+
+def is_portefeuille_header(decision):
+    """Filter: portefeuille-kopjes (5.a, 5.b etc.) zijn geen echte besluiten."""
+    if decision.get('bron') != 'college':
+        return False
+    besluit = (decision.get('besluit') or '').strip()
+    if len(besluit) > 50:
+        return False
+    naam = (decision.get('naam') or '').strip()
+    return any(naam == h or naam.endswith(h) for h in PORTEFEUILLE_HEADERS)
+
+
 def is_duplicate(ob_record, ibabs_set):
     """Check if an OB record likely duplicates an iBabs record."""
     key = normalize(ob_record['naam'])[:60] + (ob_record['datum'] or '')[:10]
@@ -97,7 +117,12 @@ def update_tree(tree, all_decisions):
 def main():
     print("Loading iBabs data...")
     ibabs_data, tree = load_ibabs_data()
-    print(f"  iBabs: {len(ibabs_data)} records")
+    n_headers = sum(1 for d in ibabs_data if is_portefeuille_header(d))
+    ibabs_data = [d for d in ibabs_data if not is_portefeuille_header(d)]
+    if n_headers:
+        print(f"  iBabs: {len(ibabs_data)} records ({n_headers} portefeuille-kopjes uitgefilterd)")
+    else:
+        print(f"  iBabs: {len(ibabs_data)} records")
 
     print("Loading Officiële Bekendmakingen data...")
     ob_data = load_ob_data()
@@ -117,6 +142,10 @@ def main():
     print(f"  Nieuwe records: {len(new_records)}")
 
     all_decisions = ibabs_data + new_records
+    n_ob_headers = sum(1 for d in new_records if is_portefeuille_header(d))
+    all_decisions = [d for d in all_decisions if not is_portefeuille_header(d)]
+    if n_ob_headers:
+        print(f"  OB: {n_ob_headers} portefeuille-kopjes uitgefilterd")
     all_decisions.sort(key=lambda d: d.get('datum', ''), reverse=True)
     print(f"  Totaal: {len(all_decisions)}")
 
@@ -137,7 +166,7 @@ def main():
     tree_json = json.dumps(tree, ensure_ascii=False, indent=2)
 
     js = f"""// Besluit-Wijzer Wassenaar — data.js
-// Versie 5.2.0 — iBabs + Officiële Bekendmakingen 2022–2025
+// Versie 5.3.0 (7 mrt 2026) — iBabs + Officiële Bekendmakingen 2022–2025
 // iBabs: {len(ibabs_data)} records, OB: {len(new_records)} records, Totaal: {len(all_decisions)}
 // Gegenereerd door merge_data.py
 

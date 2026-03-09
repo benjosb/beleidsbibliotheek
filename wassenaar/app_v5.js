@@ -218,14 +218,30 @@ const BRIEFING_BESTANDEN = {
 
 // ─── Initialisation ───
 
+const PORTEFEUILLE_HEADERS = [
+    'Financiën, Economie en Sport', 'Financiën, Economie & Sport',
+    'Sociaal Domein, Wonen en Onderwijs', 'Sociaal Domein, Wonen & Onderwijs',
+    'Ruimte, Duurzaamheid en Mobiliteit', 'Ruimte, Duurzaamheid & Mobiliteit',
+    'Cultuur en Welzijn', 'Cultuur & Welzijn',
+    'Bedrijfsvoering', 'Portefeuille Burgemeester'
+];
+
+function isPortefeuilleHeader(decision) {
+    if (decision.bron !== 'college') return false;
+    const besluit = (decision.besluit || '').trim();
+    if (besluit.length > 50) return false;
+    const naam = (decision.naam || '').trim();
+    return PORTEFEUILLE_HEADERS.some(h => naam === h || naam.endsWith(h));
+}
+
 function loadData() {
     try {
         if (typeof ALL_DECISIONS_DATA === 'undefined' || typeof THEMA_BOOM_DATA === 'undefined') {
             throw new Error('data.js niet geladen.');
         }
-        allDecisions = ALL_DECISIONS_DATA;
+        allDecisions = ALL_DECISIONS_DATA.filter(d => !isPortefeuilleHeader(d));
         loadVerificatieData();
-        console.log(`Data geladen: ${allDecisions.length} raads- en collegebesluiten`);
+        console.log(`Data geladen: ${allDecisions.length} raads- en collegebesluiten (portefeuille-kopjes uitgefilterd)`);
 
         buildPreviewCache();
         renderDossierKaarten(THEMA_BOOM_DATA);

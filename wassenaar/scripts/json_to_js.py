@@ -15,6 +15,27 @@ def load_json(filename):
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+
+PORTEFEUILLE_HEADERS = [
+    'Financiën, Economie en Sport', 'Financiën, Economie & Sport',
+    'Sociaal Domein, Wonen en Onderwijs', 'Sociaal Domein, Wonen & Onderwijs',
+    'Ruimte, Duurzaamheid en Mobiliteit', 'Ruimte, Duurzaamheid & Mobiliteit',
+    'Cultuur en Welzijn', 'Cultuur & Welzijn',
+    'Bedrijfsvoering', 'Portefeuille Burgemeester',
+]
+
+
+def is_portefeuille_header(decision):
+    """Filter: portefeuille-kopjes (5.a, 5.b etc.) zijn geen echte besluiten."""
+    if decision.get('bron') != 'college':
+        return False
+    besluit = (decision.get('besluit') or decision.get('besluit_kort') or '').strip()
+    if len(besluit) > 50:
+        return False
+    naam = (decision.get('naam') or '').strip()
+    return any(naam == h or naam.endswith(h) for h in PORTEFEUILLE_HEADERS)
+
+
 def json_to_js_var(data, var_name):
     """Converteert JSON data naar een JavaScript variabele string."""
     json_str = json.dumps(data, ensure_ascii=False, indent=2)
@@ -27,7 +48,13 @@ def main():
     raad2025 = load_json('raadsbesluiten_2025.json')
     college2025 = load_json('collegebesluiten_2025.json')
     thema_boom = load_json('thema_boom.json')
-    
+
+    # Filter portefeuille-kopjes uit collegebesluiten
+    n_headers = sum(1 for d in college2025 if is_portefeuille_header(d))
+    college2025 = [d for d in college2025 if not is_portefeuille_header(d)]
+    if n_headers:
+        print(f"   {n_headers} portefeuille-kopjes uitgefilterd uit collegebesluiten")
+
     # Combine decisions
     all_decisions = raad2025 + college2025
     

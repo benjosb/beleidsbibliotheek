@@ -34,6 +34,14 @@ HEADERS = {
 
 CDN_BASE = "https://cuatro.sim-cdn.nl/wassenaar/uploads"
 
+PORTEFEUILLE_HEADERS = [
+    'Financiën, Economie en Sport', 'Financiën, Economie & Sport',
+    'Sociaal Domein, Wonen en Onderwijs', 'Sociaal Domein, Wonen & Onderwijs',
+    'Ruimte, Duurzaamheid en Mobiliteit', 'Ruimte, Duurzaamheid & Mobiliteit',
+    'Cultuur en Welzijn', 'Cultuur & Welzijn',
+    'Bedrijfsvoering', 'Portefeuille Burgemeester',
+]
+
 MAANDEN_NL = {
     1: "januari", 2: "februari", 3: "maart", 4: "april",
     5: "mei", 6: "juni", 7: "juli", 8: "augustus",
@@ -198,6 +206,13 @@ def extract_decisions_from_pdf(full_text, pdf_url, vergadering_datum, year):
         if not besluit_tekst and len(lines) > 1:
             besluit_tekst = "\n".join(lines[1:]).strip()
 
+        # Skip portefeuille-kopjes (5.a, 5.b, 5.c etc.) — die zijn geen besluiten
+        if not besluit_tekst or len(besluit_tekst) < 20:
+            if re.match(r"^\d+\.[a-z]$", str(nr).strip()):
+                continue  # 5.a, 5.b, 5.c = alleen header, geen besluit
+        if naam.strip() in PORTEFEUILLE_HEADERS and (not besluit_tekst or len(besluit_tekst) < 50):
+            continue  # portefeuillenaam als kopje, geen echte besluittekst
+
         # Probeer portefeuille te herkennen
         portefeuille = None
         for line in lines:
@@ -221,6 +236,20 @@ def extract_decisions_from_pdf(full_text, pdf_url, vergadering_datum, year):
 
 
 # ─── SQLite-database ──────────────────────────────────────────────────────────
+
+def cleanup_portefeuille_headers(conn):
+    """Verwijder bestaande portefeuille-kopjes uit de database."""
+    c = conn.cursor()
+    placeholders = ",".join("?" * len(PORTEFEUILLE_HEADERS))
+    c.execute(
+        f"""DELETE FROM besluiten WHERE naam IN ({placeholders})
+           AND (besluit_kort IS NULL OR LENGTH(TRIM(COALESCE(besluit_kort,''))) < 50)""",
+        PORTEFEUILLE_HEADERS,
+    )
+    deleted = c.rowcount
+    conn.commit()
+    return deleted
+
 
 def create_database():
     """Maak de SQLite-database met het juiste schema."""
@@ -462,6 +491,11 @@ def main():
     # Database aanmaken
     conn = create_database()
     print(f"\n🗄️  Database: {DB_PATH.name}")
+
+    # Verwijder bestaande portefeuille-kopjes
+    n_cleaned = cleanup_portefeuille_headers(conn)
+    if n_cleaned:
+        print(f"   🧹 {n_cleaned} portefeuille-kopjes uit DB verwijderd")
 
     # Verwerk elk jaar
     all_stats = {}

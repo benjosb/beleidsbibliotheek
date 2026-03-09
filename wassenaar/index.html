@@ -307,7 +307,11 @@
 
         <section class="dossier-overzicht" id="dossierOverzicht">
             <div class="overzicht-kop">
-                <h2 class="dossier-sectie-titel">Beleidsdossiers</h2>
+                <nav class="overzicht-tabs" aria-label="Pagina's">
+                    <span class="overzicht-tab overzicht-tab-actief">Beleidsdossiers</span>
+                    <a href="roadmap.html" class="overzicht-tab">Roadmap</a>
+                    <a href="verbeterpunten-beheer.html" class="overzicht-tab">Verbeterpunten</a>
+                </nav>
                 <div class="overzicht-zoek">
                     <input type="text" id="searchInput" placeholder="Zoek op onderwerp of trefwoord…">
                     <button id="searchBtn" type="button">ZOEK</button>
@@ -324,6 +328,14 @@
             </div>
             <div id="subTegels" class="sub-tegels"></div>
             <div id="subBreadcrumb" class="sub-breadcrumb" style="display:none;"></div>
+            <div id="samenvattingGeselecteerdBlok" class="samenvatting-geselecteerd-blok" style="display:none;">
+                <h3 id="samenvattingGeselecteerdTitel" class="samenvatting-geselecteerd-titel"></h3>
+                <p id="samenvattingGeselecteerdTekst" class="samenvatting-geselecteerd-tekst"></p>
+            </div>
+            <div id="samenvattingPerThemaBlok" class="samenvatting-per-thema-blok" style="display:none;">
+                <h3 class="samenvatting-per-thema-kop">Samenvatting per thema</h3>
+                <div id="samenvattingPerThemaInhoud" class="samenvatting-per-thema-grid"></div>
+            </div>
             <details class="briefing-blok" id="briefingBlok">
                 <summary class="briefing-kop">
                     <span>Beleidssamenvatting</span>
@@ -447,7 +459,7 @@
         </section>
 
         <section class="kwaliteit-sectie" id="kwaliteitSectie">
-            <details open>
+            <details id="kwaliteitDetails">
                 <summary class="kwaliteit-kop">
                     <span>Kwaliteit & Verantwoording</span>
                 </summary>
@@ -488,7 +500,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>Besluit-Wijzer Wassenaar · Versie <span id="appVersion">5.2.0</span> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a></p>
+            <p>Besluit-Wijzer Wassenaar · Versie <span id="appVersion">5.3.0 (7 mrt 2026)</span> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a></p>
         </div>
     </footer>
 

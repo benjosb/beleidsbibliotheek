@@ -1269,9 +1269,21 @@ function renderKwaliteit() {
 
 // ─── Event listeners ───
 
+const KWALITEIT_OPEN_KEY = 'beleidswijzer_kwaliteit_open';
+
 document.addEventListener('DOMContentLoaded', () => {
     loadData();
     renderKwaliteit();
+
+    // Kwaliteit & Verantwoording: standaard ingeklapt, voorkeur onthouden
+    const kwaliteitDetails = document.getElementById('kwaliteitDetails');
+    if (kwaliteitDetails) {
+        const opgeslagen = localStorage.getItem(KWALITEIT_OPEN_KEY);
+        kwaliteitDetails.open = opgeslagen === 'true';
+        kwaliteitDetails.addEventListener('toggle', () => {
+            localStorage.setItem(KWALITEIT_OPEN_KEY, kwaliteitDetails.open);
+        });
+    }
 
     // Uitklap-knoppen (via event delegation op beide lijsten)
     document.addEventListener('click', (e) => {

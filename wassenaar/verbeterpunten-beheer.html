@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Verbeterpunten Beheer · BeleidsWijzer</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     :root {
       --bg: #f8f9fa;
@@ -19,7 +20,7 @@
       --shadow: 0 1px 3px rgba(0,0,0,.08);
     }
     * { box-sizing: border-box; }
-    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 1.5rem; background: var(--bg); color: var(--text); line-height: 1.5; }
+    .verbeterpunten-inhoud { font-family: system-ui, -apple-system, sans-serif; padding: 1.5rem 0; background: var(--bg); color: var(--text); line-height: 1.5; }
     h1 { font-size: 1.5rem; margin: 0 0 0.5rem; }
     .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
     .toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
@@ -73,10 +74,9 @@
     #importFile { display: none; }
     .back-link { font-size: 0.9rem; color: var(--muted); text-decoration: none; }
     .back-link:hover { color: var(--primary); text-decoration: underline; }
-
     /* Mobiel */
     @media (max-width: 640px) {
-      body { padding: 0.75rem; }
+      .verbeterpunten-inhoud { padding: 0.75rem 0; }
       h1 { font-size: 1.25rem; }
       .subtitle { font-size: 0.8rem; }
       .toolbar { flex-direction: column; align-items: stretch; }
@@ -96,7 +96,28 @@
   </style>
 </head>
 <body>
-  <p style="margin: 0 0 0.5rem;"><a href="index.html" class="back-link">← Besluit-Wijzer</a> · <a href="roadmap.html" class="back-link">Roadmap</a></p>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link" aria-label="Gemeente Wassenaar">
+                <img src="wassenaar_logo_fc%20kopie.svg" alt="Gemeente Wassenaar" class="site-logo">
+            </a>
+            <div class="header-text">
+                <h1>Besluit-Wijzer</h1>
+                <p class="subtitle">Gemeente Wassenaar · Inzicht in beleid en besluitvorming</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dossier-overzicht">
+            <div class="overzicht-kop">
+                <nav class="overzicht-tabs" aria-label="Pagina's">
+                    <a href="index.html" class="overzicht-tab">Beleidsdossiers</a>
+                    <a href="roadmap.html" class="overzicht-tab">Roadmap</a>
+                    <span class="overzicht-tab overzicht-tab-actief">Verbeterpunten</span>
+                </nav>
+            </div>
+            <div class="verbeterpunten-inhoud">
   <h1>Verbeterpunten Beheer</h1>
   <p class="subtitle">Beleidsbibliotheek · Uit check beleidsbibliotheek_6maar2026.xlsx · Status bijhouden, documenteren en uitrollen</p>
 
@@ -138,6 +159,15 @@
     </table>
     </div>
   </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Besluit-Wijzer Wassenaar · <a href="index.html">Beleidsdossiers</a> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a></p>
+        </div>
+    </footer>
 
   <!-- Modal: Status wijzigen + documentatie -->
   <div class="modal" id="modalStatus" role="dialog" aria-labelledby="modalStatusTitle" aria-modal="true">

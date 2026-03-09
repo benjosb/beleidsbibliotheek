@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .roadmap-page { max-width: 680px; margin: 0 auto; padding: 1rem 0; }
-    .roadmap-page h1 { font-size: 1.4rem; margin: 0 0 0.15rem; }
     .roadmap-page .subtitle { color: var(--gray-medium); font-size: 0.82rem; margin-bottom: 1.25rem; }
     .roadmap-sporen { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     @media (max-width: 520px) { .roadmap-sporen { grid-template-columns: 1fr; } }
@@ -26,17 +25,31 @@
     .roadmap-item .content { flex: 1; min-width: 0; }
     .roadmap-item .title { font-weight: 500; color: var(--wassenaar-donker); }
     .roadmap-item .meta { font-size: 0.7rem; color: var(--gray-medium); margin-top: 0.15rem; }
-    .roadmap-footer { display: flex; gap: 1rem; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--gray-light); font-size: 0.8rem; }
-    .roadmap-footer a { color: var(--wassenaar-blue); text-decoration: none; }
-    .roadmap-footer a:hover { text-decoration: underline; }
-    .back-link { font-size: 0.85rem; color: var(--gray-medium); text-decoration: none; margin-bottom: 0.5rem; display: inline-block; }
-    .back-link:hover { color: var(--wassenaar-blue); }
   </style>
 </head>
 <body>
-  <div class="container roadmap-page">
-    <p><a href="index.html" class="back-link">← Besluit-Wijzer</a></p>
-    <h1>Roadmap</h1>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link" aria-label="Gemeente Wassenaar">
+                <img src="wassenaar_logo_fc%20kopie.svg" alt="Gemeente Wassenaar" class="site-logo">
+            </a>
+            <div class="header-text">
+                <h1>Besluit-Wijzer</h1>
+                <p class="subtitle">Gemeente Wassenaar · Inzicht in beleid en besluitvorming</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dossier-overzicht">
+            <div class="overzicht-kop">
+                <nav class="overzicht-tabs" aria-label="Pagina's">
+                    <a href="index.html" class="overzicht-tab">Beleidsdossiers</a>
+                    <span class="overzicht-tab overzicht-tab-actief">Roadmap</span>
+                    <a href="verbeterpunten-beheer.html" class="overzicht-tab">Verbeterpunten</a>
+                </nav>
+            </div>
+            <div class="roadmap-page">
     <p class="subtitle">Leidend · Verbeterpunten dragen bij aan roadmap-items</p>
 
     <div class="roadmap-sporen">
@@ -87,11 +100,14 @@
         </div>
       </section>
     </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="roadmap-footer">
-      <a href="verbeterpunten-beheer.html">Verbeterpunten</a>
-      <a href="index.html">Besluit-Wijzer</a>
-    </div>
-  </div>
+    <footer class="site-footer">
+        <div class="container">
+            <p>Besluit-Wijzer Wassenaar · <a href="index.html">Beleidsdossiers</a> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a></p>
+        </div>
+    </footer>
 </body>
 </html>
