@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schrijf-Wijzer · Concept collegevoorstel</title>
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="schrijf-wijzer-formulier.css">
 </head>
 <body>
-    <header class="swf-header">
-        <div class="swf-header-inner">
-            <a href="../index.html" class="swf-back">← Besluit-Wijzer</a>
-            <h1>Schrijf-Wijzer</h1>
-            <p class="swf-subtitle">Concept collegevoorstel · Beleid in het document · <a href="schrijf-wijzer.html">Eenvoudige versie</a></p>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo-link" aria-label="Gemeente Wassenaar">
+                <img src="../wassenaar_logo_fc%20kopie.svg" alt="Gemeente Wassenaar" class="site-logo">
+            </a>
+            <div class="header-text">
+                <h1><a href="../index.html" class="header-title-link">Besluit-Wijzer</a></h1>
+                <p class="subtitle">Gemeente Wassenaar · Schrijfwijzer (beta) · Concept collegevoorstel</p>
+            </div>
         </div>
     </header>
 
-    <main class="swf-main">
+    <main class="container">
+        <div class="overzicht-kop">
+            <nav class="overzicht-tabs" aria-label="Pagina's">
+                <a href="../index.html" class="overzicht-tab">Beleidsdossiers</a>
+                <a href="../roadmap.html" class="overzicht-tab">Roadmap</a>
+                <a href="../verbeterpunten-beheer.html" class="overzicht-tab">Verbeterpunten</a>
+                <span class="overzicht-tab overzicht-tab-actief">Schrijfwijzer (beta)</span>
+            </nav>
+        </div>
+        <p class="swf-subtitle" style="margin:0 0 1rem;font-size:.9rem"><a href="schrijf-wijzer.html">Eenvoudige versie</a></p>
+
+    <div class="swf-main">
         <!-- Trap 1: Portefeuille -->
         <section class="swf-trap1" id="swfTrap1">
             <h2>Stap 1: Kies je portefeuille</h2>
@@ -87,7 +103,14 @@
                 <button type="button" id="swfExportJson" class="swf-btn">Exporteer JSON (voor agent)</button>
             </div>
         </form>
+    </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Besluit-Wijzer Wassenaar · <a href="../index.html">Beleidsdossiers</a> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a></p>
+        </div>
+    </footer>
 
     <script src="schrijf-wijzer-data.js"></script>
     <script src="schrijf-wijzer-formulier.js"></script>
