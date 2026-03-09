@@ -97,6 +97,14 @@ body {
     color: var(--wassenaar-donker);
 }
 
+.header-text h1 .header-title-link {
+    color: inherit;
+    text-decoration: none;
+}
+.header-text h1 .header-title-link:hover {
+    text-decoration: underline;
+}
+
 .subtitle {
     font-size: 0.88rem;
     color: var(--gray-medium);
