@@ -166,7 +166,7 @@ def main():
     tree_json = json.dumps(tree, ensure_ascii=False, indent=2)
 
     js = f"""// Besluit-Wijzer Wassenaar — data.js
-// Versie 5.3.0 (25 feb 2026) — iBabs + Officiële Bekendmakingen 2022–2025
+// Versie 5.3.0 (10 mrt 2026) — iBabs + Officiële Bekendmakingen 2022–2025
 // iBabs: {len(ibabs_data)} records, OB: {len(new_records)} records, Totaal: {len(all_decisions)}
 // Gegenereerd door merge_data.py
 
