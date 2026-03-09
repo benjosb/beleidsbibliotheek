@@ -109,27 +109,33 @@ ONDERWERP_MAP = {
     "Huwelijken": "Bedrijfsvoering",
     "Bestuur": "Bestuur & Veiligheid",
     "P&C-cyclus": "Financiën, Economie & Sport",
+    "Riolering": "Ruimte, Duurzaamheid & Mobiliteit",
     "Gemeentelijke huisvesting": "Financiën, Economie & Sport",
     "Belastingen": "Financiën, Economie & Sport",
     "Accommodaties": "Financiën, Economie & Sport",
 }
 
-# Trefwoorden als laatste vangnet (in naam of besluittekst)
+# Trefwoorden als laatste vangnet (in naam of besluittekst). Volgorde telt: eerste match wint.
+# bestuurscultuur vóór cultuur, anders matcht "cultuur" in bestuurscultuur → verkeerd thema
+# (verbeterpunt #1: Beantwoording 101 schriftelijke vragen ex art. 37 RvO inzake bestuurscultuuronderzoek)
 KEYWORD_MAP = [
+    (r"bestuurscultuur|bestuurscultuuronderzoek", "Bestuur & Veiligheid"),
     (r"veiligheid|politie|handhaving|apv|ondermijning|criminalit", "Bestuur & Veiligheid"),
     (r"burgemeester|verkiezing|raadsvergadering|raadsvoorstel|griffi", "Bestuur & Veiligheid"),
     (r"belasting|ozb|financie|begroting|jaarrekening|p&c|treasury", "Financiën, Economie & Sport"),
+    # Duindigt/ruimte vóór sport, zodat renbaan Duindigt bij Ruimte komt
+    (r"duindigt|groen|natuur|duin|valkenhorst|groene zone|maaldrift|stedenbouwkundig kader", "Ruimte, Duurzaamheid & Mobiliteit"),
     (r"sport|zwembad|sporthal|voetbal|tennis|scouting", "Financiën, Economie & Sport"),
     (r"economis|winkel|horeca|strand|recreati|toerism|afval", "Financiën, Economie & Sport"),
     (r"bestemmingsplan|omgevingsw|omgevingsv|bouwplan|structuurvisie", "Ruimte, Duurzaamheid & Mobiliteit"),
     (r"duurzaam|klimaat|energie|milieu|stikstof|riole", "Ruimte, Duurzaamheid & Mobiliteit"),
     (r"verkeer|mobiliteit|parkeer|fiets|n44|openbaar vervoer", "Ruimte, Duurzaamheid & Mobiliteit"),
-    (r"groen|natuur|duin|valkenhorst|groene zone|duindigt|maaldrift", "Ruimte, Duurzaamheid & Mobiliteit"),
     (r"wonen|woningbouw|huurders|corporat|volkshuisvest", "Sociaal Domein, Wonen & Onderwijs"),
     (r"openbare ruimte|beheer|gladheid|begraafplaats|kabels", "Ruimte, Duurzaamheid & Mobiliteit"),
     (r"jeugd|wmo|maatschappelijke ondersteuning|schuldhulp|armoed", "Sociaal Domein, Wonen & Onderwijs"),
     (r"onderwijs|school|kinderopvang|leerling|educati|inburger", "Sociaal Domein, Wonen & Onderwijs"),
-    (r"participatiewet|uitkering|bijstand|re-integrat|begeleid werk", "Sociaal Domein, Wonen & Onderwijs"),
+    (r"participatiewet|uitkering|bijstand|re-integrat|begeleid werk|werk en inkomen", "Sociaal Domein, Wonen & Onderwijs"),
+    (r"schooladvies|leerlingenvervoer|vve|voorschools|vroegschools|oab|rmc|leerplicht", "Sociaal Domein, Wonen & Onderwijs"),
     (r"ouderen|dement|zorg|woonzorg|voedselbank", "Sociaal Domein, Wonen & Onderwijs"),
     (r"cultuur|museum|bibliotheek|erfgoed|archeolog|warenar|kunst", "Cultuur & Welzijn"),
     (r"welzijn|vrijwillig|mantelzorg|eenzaamheid", "Cultuur & Welzijn"),
@@ -151,14 +157,14 @@ def classify_decision(decision):
     besluit = (decision.get("besluit") or decision.get("besluit_kort") or "").lower()
     zoektekst = f"{naam} {besluit}"
 
-    # 1. Portefeuille-match
+    # 1. Onderwerp-specifieke override (o.a. Riolering → Ruimte, ondanks portefeuille Sociaal)
+    if onderwerp in ONDERWERP_MAP:
+        return ONDERWERP_MAP[onderwerp], "onderwerp"
+
+    # 2. Portefeuille-match
     for pattern, thema in PORTEFEUILLE_MAP:
         if pattern.lower() in portefeuille.lower():
             return thema, "portefeuille"
-
-    # 2. Onderwerp-specifieke override
-    if onderwerp in ONDERWERP_MAP:
-        return ONDERWERP_MAP[onderwerp], "onderwerp"
 
     # 3. Domein-match
     if domein in DOMEIN_MAP:
@@ -188,6 +194,30 @@ def update_datajs():
         raise ValueError("Kan ALL_DECISIONS_DATA niet vinden")
     decisions = json.loads(match.group(1))
 
+    # Filter portefeuille-kopjes (5.a, 5.b etc.) — geen echte besluiten
+    PORTEFEUILLE_HEADERS = [
+        'Financiën, Economie en Sport', 'Financiën, Economie & Sport',
+        'Sociaal Domein, Wonen en Onderwijs', 'Sociaal Domein, Wonen & Onderwijs',
+        'Ruimte, Duurzaamheid en Mobiliteit', 'Ruimte, Duurzaamheid & Mobiliteit',
+        'Cultuur en Welzijn', 'Cultuur & Welzijn',
+        'Bedrijfsvoering', 'Portefeuille Burgemeester',
+    ]
+
+    def is_portefeuille_header(d):
+        if d.get('bron') != 'college':
+            return False
+        besluit = (d.get('besluit') or d.get('besluit_kort') or '').strip()
+        if len(besluit) > 50:
+            return False
+        naam = (d.get('naam') or '').strip()
+        return any(naam == h or naam.endswith(h) for h in PORTEFEUILLE_HEADERS)
+
+    n_before = len(decisions)
+    decisions = [d for d in decisions if not is_portefeuille_header(d)]
+    n_filtered = n_before - len(decisions)
+    if n_filtered:
+        print(f"   {n_filtered} portefeuille-kopjes uitgefilterd")
+
     # Classificeer
     stats = {}
     for d in decisions:
@@ -214,6 +244,18 @@ def update_datajs():
             tree[thema][onderwerp] = {"raad": 0, "college": 0}
         tree[thema][onderwerp][bron] = tree[thema][onderwerp].get(bron, 0) + 1
 
+    # Zorg dat vaste subtegels altijd in de boom staan (voor frontend SUBTHEMA_KEYWORDS)
+    STANDARD_KINDEREN = {
+        "Sociaal Domein, Wonen & Onderwijs": ["Werk en Inkomen", "Inburgering"],
+        "Financiën, Economie & Sport": ["Sportaccommodaties"],
+    }
+    for thema, kind_namen in STANDARD_KINDEREN.items():
+        if thema not in tree:
+            tree[thema] = {}
+        for naam in kind_namen:
+            if naam not in tree[thema]:
+                tree[thema][naam] = {"raad": 0, "college": 0}
+
     boom = []
     for thema in sorted(tree.keys()):
         kinderen = []
@@ -235,7 +277,9 @@ def update_datajs():
     decisions_json = json.dumps(decisions, ensure_ascii=False, indent=2)
     boom_json = json.dumps(boom, ensure_ascii=False, indent=2)
 
-    new_content = f"""const ALL_DECISIONS_DATA = {decisions_json};
+    new_content = f"""// Besluit-Wijzer Wassenaar — data.js · 5.3.0 (7 mrt 2026) · domeinclustering
+
+const ALL_DECISIONS_DATA = {decisions_json};
 
 const THEMA_BOOM_DATA = {boom_json};
 
@@ -259,6 +303,25 @@ def update_database():
 
     conn = sqlite3.connect(str(DB_PATH))
     c = conn.cursor()
+
+    # Verwijder portefeuille-kopjes uit DB
+    PORTEFEUILLE_HEADERS_DB = [
+        'Financiën, Economie en Sport', 'Financiën, Economie & Sport',
+        'Sociaal Domein, Wonen en Onderwijs', 'Sociaal Domein, Wonen & Onderwijs',
+        'Ruimte, Duurzaamheid en Mobiliteit', 'Ruimte, Duurzaamheid & Mobiliteit',
+        'Cultuur en Welzijn', 'Cultuur & Welzijn',
+        'Bedrijfsvoering', 'Portefeuille Burgemeester',
+    ]
+    placeholders = ",".join("?" * len(PORTEFEUILLE_HEADERS_DB))
+    c.execute(
+        f"""DELETE FROM besluiten WHERE naam IN ({placeholders})
+           AND (besluit_kort IS NULL OR LENGTH(TRIM(COALESCE(besluit_kort,''))) < 50)""",
+        PORTEFEUILLE_HEADERS_DB,
+    )
+    n_cleaned = c.rowcount
+    conn.commit()
+    if n_cleaned:
+        print(f"   🧹 {n_cleaned} portefeuille-kopjes uit DB verwijderd")
 
     # Kolom toevoegen als die er nog niet is
     try:

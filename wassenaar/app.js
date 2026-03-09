@@ -128,8 +128,9 @@ const SUBTHEMA_KEYWORDS = {
     'Belastingen': ['belasting','ozb','rioolheffing','leges','tarief','heffing'],
     'Economie': ['economie','bedrijv','ondernem','winkel','markt'],
     'Financiën': ['financ','begroting','jaarrekening','reserves','voorzieningen'],
-    'P&C-cyclus': ['begroting','jaarrekening','burap','bestuursrapportage','kadernota'],
-    'Sport': ['sport','bewegen','voetbal','tennis','zwem','hockey','sporthal'],
+    'P&C-cyclus': ['voorjaarsnota','najaarsnota','kadernota','begroting','jaarrekening','burap','bestuursrapportage'],
+    'Sport': ['sport','bewegen','voetbal','tennis','zwem','hockey'],
+    'Sportaccommodaties': ['sporthal','zwembad','sportaccommodatie','accommodatie sport'],
     'Gemeentelijke huisvesting': ['huisvesting','gemeentehuis','kantoor'],
     'Afval': ['afval','inzameling','container','recycl'],
     'Bestemmingsplannen': ['bestemmingsplan','omgevingsplan','wijzigingsplan','uitwerkingsplan'],
@@ -143,9 +144,11 @@ const SUBTHEMA_KEYWORDS = {
     'Strandvisie': ['strand','kust','strandvisie'],
     'Verkeer': ['verkeer','parkeer','fiets','weg','straat','rotonde','snelheid'],
     'Wonen': ['woning','wonen','huur','woningbouw','huisvesting'],
-    'Onderwijs': ['school','onderwijs','leerling','leerplicht','kinderopvang'],
+    'Onderwijs': ['school','onderwijs','leerling','leerplicht','kinderopvang','leerlingenvervoer','vve','voorschools','vroegschools','oab','rmc','schooladvies'],
     'WMO': ['wmo','voorziening','hulpmiddel','zorg','welzijn'],
-    'Jeugdzorg': ['jeugd','kind','jongere','jeugdhulp','jeugdzorg'],
+    'Jeugdzorg': ['jeugd','kind','jongere','jeugdhulp','jeugdzorg','antidiscriminatie'],
+    'Werk en Inkomen': ['werk en inkomen','participatie','bijstand','re-integrat','uitkering','werkbedrijf'],
+    'Inburgering': ['inburgering','inburgeren'],
     'Volksgezondheid': ['gezondheid','volksgezondheid','ggd','preventie'],
     'Warenar': ['warenar','theater','cultuur'],
     'Overig': [],
@@ -166,6 +169,100 @@ const THEMA_ICONEN = {
     'Bedrijfsvoering': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>'
 };
 
+// Beleidssamenvatting per thema (binnen portefeuille) — Cultuur & Welzijn, Bestuur & Veiligheid, etc.
+const SAMENVATTING_PER_THEMA = {
+    'Cultuur & Welzijn': [
+        { thema: 'De Warenar', samenvatting: 'Cultuurhuis blijft eigendom gemeente. Raad koos sept 2025 voor voorkeursvariant 2: herbestemming, renovatie en verduurzaming (€5 mln). Investering pas na geregelde erfpacht. Ambitie: cultuurhuis + buurtfunctie + museum.' },
+        { thema: 'Subsidiebeleid', samenvatting: 'Jaarlijkse vaststelling subsidieplafonds. 2025: Economie €35.960, SAD €478.969, Volksgezondheid €34.228. Subsidieregeling structurele activiteiten (2024). Coalitie onderzoekt subsidies, fondsen en cofinanciering.' },
+        { thema: 'Erfgoed & Welstand', samenvatting: 'Eerste technische aanpassing Erfgoedverordening 2016 (2023). Commissie Welstand en Cultureel Erfgoed (WCE). Klankbordgroep Erfgoed. Coalitie: erfgoed behouden, verduurzaming faciliteren.' },
+        { thema: 'GGD & Volksgezondheid', samenvatting: 'GR GGD en Veilig Thuis Haaglanden. Zienswijzen op begrotingen en wijzigingen. Evaluatie GR uitgesteld (zienswijze raad apr 2025). Regiovisie Aanpak Huiselijk Geweld 2026+ vastgesteld dec 2025.' },
+        { thema: 'Welzijn & Buurtwerk', samenvatting: 'Overeenkomst Gro-Up Buurtwerk (apr 2024) voor welzijnsactiviteiten in wijken. Subsidies preventief veld. IPS-trajecten. Gezond en Actief Leven Akkoord (GALA).' },
+    ],
+    'Bestuur & Veiligheid': [
+        { thema: 'Openbare Orde & Veiligheid', samenvatting: 'Integraal veiligheidsbeleid. Burgemeester als eenhoofdig bestuursorgaan. Noodverordening NAVO-top 2025 bekrachtigd (juni 2025). APV-toelichting geactualiseerd (mei 2022).' },
+        { thema: 'Gemeenschappelijke Regelingen & Regionale Samenwerking', samenvatting: 'GR Veiligheidsregio Haaglanden gewijzigd (maart 2025). Zienswijzen op begrotingen VRH en GR Rekenkamer WVOLV. Mandaatbesluit ODH geactualiseerd.' },
+        { thema: 'Publieke Omroep & Communicatie', samenvatting: 'Toetsingscriteria aanwijzingsprocedure lokale publieke omroep gewijzigd vastgesteld (april 2025). Kader voor lokale informatievoorziening. Wet open overheid geïmplementeerd.' },
+        { thema: 'Opvang Ontheemden', samenvatting: 'Opvang Oekraïense ontheemden (2022): noodverordening, kostendelersnorm niet toegepast. Dossier via openbare orde en crisisbeheersing.' },
+        { thema: 'Handhaving & APV', samenvatting: 'Ontruiming Huize Ivicke (mei/juni 2022). APV-toelichting geactualiseerd. Schriftelijke vragen o.a. Felyx-deelscooters, geluidsoverlast vliegtuigen.' },
+    ],
+    'Financiën, Economie & Sport': [
+        { thema: 'Financieel Beleid & P&C-cyclus', samenvatting: 'Sluitende meerjarenbegroting. P&C-cyclus: Kadernota, Begroting, Voorjaarsnota, Najaarsnota, Jaarstukken. Financiële Verordening en Controleprotocol 2025 geactualiseerd. Najaarsnota 2025: positief saldo €5.243.' },
+        { thema: 'Belastingen & Heffingen', samenvatting: 'Belastingverordeningen 2026 vastgesteld: OZB, afvalstoffenheffing, toeristenbelasting, hondenbelasting, leges, retributie, marktgeld, liggeld, precariobelasting, ondernemersheffing, kwijtschelding, begraafplaatsrechten.' },
+        { thema: 'Economie', samenvatting: 'Economische Visie Wassenaar 2025 vastgesteld (sept 2025) met zes ambities. BIZ Maaldrift 2026-2030. Zienswijze Visie Economisch Vestigingsklimaat MRDH. Stichting Wassenaar-Voorschoten (toerisme).' },
+        { thema: 'Sport', samenvatting: 'Sportvisie Wassenaar 2025 vastgesteld (sept 2025) met vier pijlers. Lokaal Sportakkoord II "Sport versterkt" (2023). Bouw gemeentelijke sporthal in uitvoering.' },
+        { thema: 'Vastgoed, Afval & GR\'s', samenvatting: 'De Paauw: renovatie/restauratie zonder extra krediet, subsidie-opbrengsten voor verduurzaming. Avalex (afval): zienswijze begroting 2026. Zienswijzen BSGR, GR GGD/VT Haaglanden. Procesafspraken Duindigt.' },
+    ],
+    'Ruimte, Duurzaamheid & Mobiliteit': [
+        { thema: 'Omgevingswet & Ruimtelijke ordening', samenvatting: 'Implementatie Omgevingswet. Startnotitie Participatie Omgevingsvisie (dec 2025). Beleidsregels milieuzonering, hogere waarden verkeerslawaai. Bestemmingsplannen, beheersverordeningen. ODH: vijfde wijziging GR, zienswijze begroting 2026.' },
+        { thema: 'Woningbouw & Woonbeleid', samenvatting: 'Nota Woonbeleid 2025 vastgesteld. Huisvestingsverordening 2023 (tweede wijziging dec 2025). Valkenhorst: herstelbesluit bestemmingsplan (juni 2025). Duindigt: vervroegd voorkeursrecht, bezwaarprocedure. Den Deylschool herontwikkeling.' },
+        { thema: 'Kust, Duin & Groene Zone', samenvatting: 'Visie De Wassenaarse Slag vastgesteld (maart 2025). Concept-Programma Noordrand: wensen en bedenkingen (juni 2025). Nationaal Park Hollandse Duinen, Duin Horst en Weide.' },
+        { thema: 'Duurzaamheid & Energietransitie', samenvatting: 'Lokale Energiestrategie 2023-2026. Voortgangsrapportages RES. Subsidieplafond Milieubeheer. Energietoeslag en compensatie energiekosten (crisis 2022-2023).' },
+        { thema: 'Verkeer & Mobiliteit', samenvatting: 'Burgerberaad Verkeer (juni 2025). Wegencategoriseringsplan vastgesteld (dec 2025). Herziene Realisatieplan Verkeer. Verkeersdoseerinstallatie Kokshornlaan, Duurzaam Veilig Storm/Schouwweg. Zienswijze Mobiliteitsvisie MRDH.' },
+        { thema: 'Openbare Ruimte & Riolering', samenvatting: 'Uitvoeringsprogramma Openbare Ruimte 2024-2028. Verordening riool- en waterzorgheffing 2026 vastgesteld (dec 2025). Beheer openbare ruimte, onderhoudsniveau B.' },
+    ],
+    'Sociaal Domein, Wonen & Onderwijs': [
+        { thema: 'Jeugdhulp & Jeugdbeleid', samenvatting: 'Lokaal Jeugdbeleid Wassenaar 2026 en Verordening Jeugdhulp 2025 vastgesteld (nov 2025). Nieuw inkoopkader jeugdhulp via GR SbJH (juni 2025). Dashboard Jeugdhulp, Uitvoeringsplan Jeugdhulp Haaglanden.' },
+        { thema: 'Wmo & Maatschappelijke Ondersteuning', samenvatting: '7e wijziging Verordening maatschappelijke ondersteuning (juni 2022). Wmo-tarieven H6 geïndexeerd. Verordening Adviesraad Sociaal Domein 2025 (juni 2025). Stichting MO Wassenaar. Cliëntervaringsonderzoek Wmo.' },
+        { thema: 'Participatie & Schuldhulp', samenvatting: 'Beleidsnota schuldhulpverlening 2025-2028 vastgesteld (apr 2025). Evaluatie en koers re-integratie- en participatiebeleid (2022-2023). Verordening inburgering 2022. Hardheidsclausule, kostendelersnorm.' },
+        { thema: 'Onderwijs & Huisvesting', samenvatting: 'Herijking IHP onderwijs 2024-2039 (apr 2025). Voorbereidingskredieten Sint Baptistschool/Sint Jozefschool (€950.500) en Kievietschool (€69.090). Verordening leerlingenvervoer 2025. Den Deylschool herontwikkeling. SchoolAdviesDienst, American School, peuteropvang.' },
+        { thema: 'Wonen, Woonzorg & Ouderen', samenvatting: 'Startnotitie Lokale Woonzorgvisie (sept 2025). Beleidsnota Ouderenbeleid 2025 (jan 2025). Convenant beschermd wonen. Vragen wonen voor ouderen en starters.' },
+    ],
+    'Bedrijfsvoering': [
+        { thema: 'Ambtelijke Organisatie & Personeel', samenvatting: 'College Uitvoeringsprogramma (CUP). Ledenraadpleging Cao Gemeenten en Cao SGO (2022-2023). Uitbreiding formatie juridische ondersteuning per 1-1-2023. Uitvoeringsplan werkgeversdienstverlening ZHC 2023. Portefeuilleverdeling en locoschap.' },
+        { thema: 'Dienstverlening & Samenwerking', samenvatting: 'Werkorganisatie Duivenvoorde (samenwerking Voorschoten). DVO Maatschappij & Samenleving, DVO MO. Dienstverleningsovereenkomst Secretariaat Behandeling Bezwaarschriften. Voorgenomen opzegging DVO MO (maart 2023).' },
+        { thema: 'Informatievoorziening & ICT', samenvatting: 'Wet open overheid (Woo). Aanwijzing gemeentearchivaris (feb 2022). Raadsinformatiebrieven. Communicatie en ICT als aandachtspunten (dec 2022).' },
+        { thema: 'Centrum & Inrichting', samenvatting: 'Inrichtingsplan Centrum Wassenaar. Aanbesteding Inrichtingsplan Centrum. Herinrichting Storm/Schouwweg. Plan van Aanpak RES 2.0. Onderzoek 30 km/uur.' },
+        { thema: 'Buurtgericht Werken & Sociaal Kernteam', samenvatting: 'Nota Inrichting Sociaal Kernteam Wassenaar (juni 2022). Routekaart Buurtgerichte Uitvoeringsplannen (jan 2023). Bijeenkomsten jongeren. Opvang Oekraïne, beleidsregels leefgeld.' },
+    ],
+};
+
+// Tegels per portefeuille — keywords voor filter/count (zelfde structuur als Cultuur & Welzijn)
+const PORTEFEUILLE_TEGELS = {
+    'Cultuur & Welzijn': [
+        { naam: 'De Warenar', keywords: ['warenar', 'theater', 'cultuurhuis', 'kerkstraat 75', 'sbw', 'stichting beheer warenar'] },
+        { naam: 'Subsidiebeleid', keywords: ['subsidie', 'plafond', 'subsidieplafond', 'subsidieregeling', 'subsidieaanvraag'] },
+        { naam: 'Erfgoed & Welstand', keywords: ['erfgoed', 'welstand', 'monument', 'cultureel erfgoed', 'wce', 'klankbordgroep erfgoed'] },
+        { naam: 'GGD & Volksgezondheid', keywords: ['gezondheid', 'volksgezondheid', 'ggd', 'preventie', 'veilig thuis', 'haaglanden'] },
+        { naam: 'Welzijn & Buurtwerk', keywords: ['welzijn', 'buurtwerk', 'buurt', 'gro-up', 'preventief veld', 'ips-traject'] },
+    ],
+    'Bestuur & Veiligheid': [
+        { naam: 'Openbare Orde & Veiligheid', keywords: ['veiligheid', 'politie', 'brandweer', 'noodverordening', 'navo', 'openbare orde', 'cameratoezicht'] },
+        { naam: 'Gemeenschappelijke Regelingen & Regionale Samenwerking', keywords: ['gemeenschappelijke regeling', 'veiligheidsregio', 'vrh', 'haaglanden', 'rekenkamer', 'wvolv', 'odh', 'omgevingsdienst'] },
+        { naam: 'Publieke Omroep & Communicatie', keywords: ['lokale omroep', 'publieke omroep', 'communicatie', 'aanwijzingsprocedure', 'media'] },
+        { naam: 'Opvang Ontheemden', keywords: ['oekraïne', 'ontheemden', 'opvang', 'asielzoekers', 'statushouders'] },
+        { naam: 'Handhaving & APV', keywords: ['handhaving', 'apv', 'algemene plaatselijke verordening', 'huize ivicke', 'boa'] },
+    ],
+    'Financiën, Economie & Sport': [
+        { naam: 'Financieel Beleid & P&C-cyclus', keywords: ['voorjaarsnota', 'najaarsnota', 'kadernota', 'begroting', 'jaarrekening', 'jaarstukken', 'financiële verordening', 'controleprotocol', 'burap', 'bestuursrapportage'] },
+        { naam: 'Belastingen & Heffingen', keywords: ['belasting', 'ozb', 'rioolheffing', 'leges', 'tarief', 'heffing', 'afvalstoffenheffing', 'toeristenbelasting', 'hondenbelasting', 'kwijtschelding', 'ondernemersheffing'] },
+        { naam: 'Economie', keywords: ['economie', 'economische visie', 'biz', 'maaldrift', 'mrdh', 'vestigingsklimaat', 'bedrijventerrein'] },
+        { naam: 'Sport', keywords: ['sport', 'sportvisie', 'sportakkoord', 'sporthal', 'sportaccommodatie', 'zwembad'] },
+        { naam: 'Vastgoed, Afval & GR\'s', keywords: ['paauw', 'vastgoed', 'afval', 'avalex', 'bsgr', 'ggd', 'veilig thuis', 'gemeenschappelijke regeling'] },
+    ],
+    'Ruimte, Duurzaamheid & Mobiliteit': [
+        { naam: 'Omgevingswet & Ruimtelijke ordening', keywords: ['omgevingswet', 'omgevingsvisie', 'omgevingsvergunning', 'bestemmingsplan', 'beheersverordening', 'odh', 'omgevingsdienst'] },
+        { naam: 'Woningbouw & Woonbeleid', keywords: ['woning', 'wonen', 'woonbeleid', 'huisvestingsverordening', 'valkenhorst', 'duindigt', 'den deylschool'] },
+        { naam: 'Kust, Duin & Groene Zone', keywords: ['wassenaarse slag', 'noordrand', 'nationaal park', 'hollandse duinen', 'duin', 'groen', 'strand'] },
+        { naam: 'Duurzaamheid & Energietransitie', keywords: ['duurzaam', 'energie', 'energiestrategie', 'res', 'zonnepanel', 'klimaat', 'milieu', 'energietoeslag'] },
+        { naam: 'Verkeer & Mobiliteit', keywords: ['verkeer', 'parkeer', 'fiets', 'wegencategoriseringsplan', 'burgerberaad verkeer', 'mobiliteitsvisie', 'n44'] },
+        { naam: 'Openbare Ruimte & Riolering', keywords: ['riool', 'riolering', 'rioolheffing', 'waterzorgheffing', 'openbare ruimte', 'uitvoeringsprogramma openbare ruimte', 'waterketen'] },
+    ],
+    'Sociaal Domein, Wonen & Onderwijs': [
+        { naam: 'Jeugdhulp & Jeugdbeleid', keywords: ['jeugd', 'jeugdhulp', 'jeugdzorg', 'antidiscriminatie', 'sbjh', 'haaglanden'] },
+        { naam: 'Wmo & Maatschappelijke Ondersteuning', keywords: ['wmo', 'maatschappelijke ondersteuning', 'voorziening', 'hulpmiddel', 'zorg', 'welzijn', 'adviesraad sociaal domein'] },
+        { naam: 'Participatie & Schuldhulp', keywords: ['participatie', 'bijstand', 're-integrat', 'uitkering', 'werkbedrijf', 'schuldhulp', 'inburgering', 'inburgeren'] },
+        { naam: 'Onderwijs & Huisvesting', keywords: ['onderwijs', 'school', 'leerling', 'leerplicht', 'kinderopvang', 'leerlingenvervoer', 'vve', 'oab', 'rmc', 'schooladvies', 'ihp', 'den deylschool', 'kievietschool'] },
+        { naam: 'Wonen, Woonzorg & Ouderen', keywords: ['wonen', 'woonzorg', 'ouderen', 'beschermd wonen', 'woonzorgvisie', 'starters'] },
+    ],
+    'Bedrijfsvoering': [
+        { naam: 'Ambtelijke Organisatie & Personeel', keywords: ['personeel', 'organisatie', 'cao', 'formatie', 'cup', 'werkgeversdienstverlening', 'zhc', 'portefeuilleverdeling', 'locoschap'] },
+        { naam: 'Dienstverlening & Samenwerking', keywords: ['dvo', 'duivenvoorde', 'voorschoten', 'dienstverleningsovereenkomst', 'bezwaarschriften', 'maatschappij', 'samenleving'] },
+        { naam: 'Informatievoorziening & ICT', keywords: ['woo', 'archief', 'archivaris', 'ict', 'informatie', 'communicatie', 'raadsinformatiebrief', 'privacy'] },
+        { naam: 'Centrum & Inrichting', keywords: ['inrichtingsplan', 'centrum wassenaar', 'aanbesteding centrum', 'storm', 'schouwweg', 'res 2.0', '30 km'] },
+        { naam: 'Buurtgericht Werken & Sociaal Kernteam', keywords: ['sociaal kernteam', 'buurtgericht', 'routekaart', 'uitvoeringsplannen', 'jongeren', 'oekraïne', 'leefgeld', 'herstructurering wijk'] },
+    ],
+};
+
 const BRIEFING_BESTANDEN = {
     'Bestuur & Veiligheid': 'briefings/briefing_bestuur_veiligheid.html',
     'Financiën, Economie & Sport': 'briefings/briefing_financien_economie_sport.html',
@@ -177,13 +274,30 @@ const BRIEFING_BESTANDEN = {
 
 // ─── Initialisation ───
 
+const PORTEFEUILLE_HEADERS = [
+    'Financiën, Economie en Sport', 'Financiën, Economie & Sport',
+    'Sociaal Domein, Wonen en Onderwijs', 'Sociaal Domein, Wonen & Onderwijs',
+    'Ruimte, Duurzaamheid en Mobiliteit', 'Ruimte, Duurzaamheid & Mobiliteit',
+    'Cultuur en Welzijn', 'Cultuur & Welzijn',
+    'Bedrijfsvoering', 'Portefeuille Burgemeester'
+];
+
+function isPortefeuilleHeader(decision) {
+    if (decision.bron !== 'college') return false;
+    const besluit = (decision.besluit || '').trim();
+    if (besluit.length > 50) return false;
+    const naam = (decision.naam || '').trim();
+    // Exact match of met prefix (bijv. "5.b Sociaal Domein, Wonen en Onderwijs")
+    return PORTEFEUILLE_HEADERS.some(h => naam === h || naam.endsWith(h));
+}
+
 function loadData() {
     try {
         if (typeof ALL_DECISIONS_DATA === 'undefined' || typeof THEMA_BOOM_DATA === 'undefined') {
             throw new Error('data.js niet geladen.');
         }
-        allDecisions = ALL_DECISIONS_DATA;
-        console.log(`Data geladen: ${allDecisions.length} raads- en collegebesluiten`);
+        allDecisions = ALL_DECISIONS_DATA.filter(d => !isPortefeuilleHeader(d));
+        console.log(`Data geladen: ${allDecisions.length} raads- en collegebesluiten (portefeuille-kopjes uitgefilterd)`);
 
         buildPreviewCache();
         renderDossierKaarten(THEMA_BOOM_DATA);
@@ -298,6 +412,7 @@ function openDossier(thema, subFilter) {
 
     document.getElementById('dossierTitel').textContent = thema;
     renderSubTegels(thema, subFilter);
+    loadSamenvattingPerThema(thema);
     loadSyntheseContent(thema);
     loadCoalitieAkkoord(thema);
     loadDossierBesluiten(thema);
@@ -314,7 +429,7 @@ function sluitDossier() {
 function getRecentDate(decisions, keywords) {
     let latest = '';
     for (const d of decisions) {
-        if (matchSubthema(d, keywords) && d.datum && d.datum > latest) latest = d.datum;
+        if ((!keywords.length || matchSubthema(d, keywords)) && d.datum && d.datum > latest) latest = d.datum;
     }
     return latest;
 }
@@ -329,7 +444,9 @@ function formatDatumKort(datum) {
 }
 
 function getHoverPreview(decisions, keywords) {
-    const matches = decisions.filter(d => matchSubthema(d, keywords));
+    const matches = (keywords && keywords.length)
+        ? decisions.filter(d => matchSubthema(d, keywords))
+        : decisions.slice();
     matches.sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
     return matches.slice(0, 3).map(d => (d.naam || '').substring(0, 80)).filter(Boolean);
 }
@@ -346,26 +463,54 @@ function renderSubTegels(thema, activeSubFilter) {
     if (!container) return;
     container.innerHTML = '';
 
-    const domein = (window.themaTree || THEMA_BOOM_DATA).find(d => d.naam === thema);
-    if (!domein || !domein.kinderen || !domein.kinderen.length) return;
-
     const kleuren = THEMA_KLEUREN[thema] || { accent: '#002244', light: '#d6e4f0', lighter: '#eaf1f8', text: '#001833' };
     const dossierBesluiten = allDecisions.filter(d => (d.domein || '') === thema);
 
-    const subData = domein.kinderen.map(kind => {
-        const keywords = SUBTHEMA_KEYWORDS[kind.naam] || [kind.naam.toLowerCase()];
-        const count = keywords.length ? dossierBesluiten.filter(d => matchSubthema(d, keywords)).length : kind.aantal || 0;
-        const recentDate = keywords.length ? getRecentDate(dossierBesluiten, keywords) : '';
-        const preview = keywords.length ? getHoverPreview(dossierBesluiten, keywords) : [];
-        return { naam: kind.naam, count, keywords, recentDate, preview };
-    });
+    let subData;
+    const tegels = PORTEFEUILLE_TEGELS[thema];
+    if (tegels) {
+        subData = tegels.map(t => {
+            const keywords = t.keywords;
+            const count = dossierBesluiten.filter(d => matchSubthema(d, keywords)).length;
+            const recentDate = getRecentDate(dossierBesluiten, keywords);
+            const preview = getHoverPreview(dossierBesluiten, keywords);
+            return { naam: t.naam, count, keywords, recentDate, preview };
+        });
+    } else {
+        const domein = (window.themaTree || THEMA_BOOM_DATA).find(d => d.naam === thema);
+        if (!domein || !domein.kinderen || !domein.kinderen.length) return;
+
+        const alleNietOverigKeywords = Object.entries(SUBTHEMA_KEYWORDS)
+            .filter(([naam]) => naam !== 'Overig')
+            .flatMap(([, kws]) => kws);
+
+        subData = domein.kinderen.map(kind => {
+            if (kind.naam === 'Overig') {
+                const overig = alleNietOverigKeywords.length
+                    ? dossierBesluiten.filter(d => !matchSubthema(d, alleNietOverigKeywords))
+                    : dossierBesluiten.slice();
+                const count = overig.length;
+                const recentDate = getRecentDate(overig, []);
+                const preview = getHoverPreview(overig, []);
+                return { naam: kind.naam, count, keywords: [], recentDate, preview };
+            }
+            const keywords = SUBTHEMA_KEYWORDS[kind.naam] || [kind.naam.toLowerCase()];
+            const count = dossierBesluiten.filter(d => matchSubthema(d, keywords)).length;
+            const recentDate = getRecentDate(dossierBesluiten, keywords);
+            const preview = getHoverPreview(dossierBesluiten, keywords);
+            return { naam: kind.naam, count, keywords, recentDate, preview };
+        });
+    }
 
     const maxCount = Math.max(...subData.map(s => s.count), 1);
 
     const grid = document.createElement('div');
     grid.className = 'sub-tegels-grid';
 
-    subData.filter(s => s.count > 0 || !activeSubFilter).forEach(sub => {
+    const toShow = tegels
+        ? subData
+        : subData.filter(s => s.count > 0 || !activeSubFilter);
+    toShow.forEach(sub => {
         const card = document.createElement('button');
         card.type = 'button';
         const isActive = activeSubFilter === sub.naam;
@@ -400,12 +545,19 @@ function renderSubTegels(thema, activeSubFilter) {
             card.title = sub.preview.join('\n');
         }
 
-        if (sub.count > 0 && sub.keywords.length) {
+        if (sub.count > 0 || tegels) {
             card.onclick = () => {
                 activeDossier.subFilter = sub.naam;
                 renderSubTegels(thema, sub.naam);
                 updateBreadcrumb(thema, sub.naam, sub.count, kleuren);
-                filterBySubthema(thema, sub.keywords);
+                if (tegels && SAMENVATTING_PER_THEMA[thema]) {
+                    showSamenvattingGeselecteerd(thema, sub.naam);
+                    filterBySubthema(thema, sub.keywords || []);
+                } else if (sub.naam === 'Overig') {
+                    filterByOverig(thema);
+                } else {
+                    filterBySubthema(thema, sub.keywords);
+                }
             };
         }
         grid.appendChild(card);
@@ -445,6 +597,23 @@ function scrollToBesluiten() {
     }, 50);
 }
 
+function filterByOverig(thema) {
+    const dossierBesluiten = allDecisions.filter(d => (d.domein || '') === thema);
+    const alleNietOverigKeywords = Object.entries(SUBTHEMA_KEYWORDS)
+        .filter(([naam]) => naam !== 'Overig')
+        .flatMap(([, kws]) => kws);
+    filteredDecisions = alleNietOverigKeywords.length
+        ? dossierBesluiten.filter(d => !matchSubthema(d, alleNietOverigKeywords))
+        : dossierBesluiten.slice();
+
+    const countEl = document.getElementById('besluitenCount');
+    if (countEl) countEl.textContent = `(${filteredDecisions.length})`;
+    const sortBy = document.getElementById('sortBy').value;
+    sortDecisions(sortBy);
+    displayDecisions('resultsList', 'resultsCount', 'noResults');
+    if (!PORTEFEUILLE_TEGELS[thema]) scrollToBesluiten();
+}
+
 function filterBySubthema(thema, keywords) {
     const dossierBesluiten = allDecisions.filter(d => (d.domein || '') === thema);
     filteredDecisions = dossierBesluiten.filter(d => matchSubthema(d, keywords));
@@ -455,7 +624,61 @@ function filterBySubthema(thema, keywords) {
     const sortBy = document.getElementById('sortBy').value;
     sortDecisions(sortBy);
     displayDecisions('resultsList', 'resultsCount', 'noResults');
-    scrollToBesluiten();
+    if (!PORTEFEUILLE_TEGELS[thema]) scrollToBesluiten();
+}
+
+function loadSamenvattingPerThema(thema) {
+    const blok = document.getElementById('samenvattingPerThemaBlok');
+    const inhoud = document.getElementById('samenvattingPerThemaInhoud');
+    const geselecteerdBlok = document.getElementById('samenvattingGeselecteerdBlok');
+    if (!blok || !inhoud) return;
+
+    const items = SAMENVATTING_PER_THEMA[thema];
+    if (!items || !items.length) {
+        blok.style.display = 'none';
+        if (geselecteerdBlok) geselecteerdBlok.style.display = 'none';
+        return;
+    }
+
+    const subFilter = activeDossier?.subFilter;
+    if (PORTEFEUILLE_TEGELS[thema] && SAMENVATTING_PER_THEMA[thema] && subFilter && geselecteerdBlok) {
+        showSamenvattingGeselecteerd(thema, subFilter);
+        blok.style.display = 'none';
+        return;
+    }
+
+    if (geselecteerdBlok) geselecteerdBlok.style.display = 'none';
+    const kleuren = THEMA_KLEUREN[thema] || { accent: '#0060ac' };
+    inhoud.innerHTML = items.map(item => `
+        <div class="samenvatting-kaart" style="border-left-color:${kleuren.accent}">
+            <div class="kaart-thema">${escapeHtml(item.thema)}</div>
+            <div class="kaart-tekst">${escapeHtml(item.samenvatting)}</div>
+        </div>
+    `).join('');
+    blok.style.display = '';
+}
+
+function showSamenvattingGeselecteerd(thema, subFilter) {
+    const blok = document.getElementById('samenvattingGeselecteerdBlok');
+    const titelEl = document.getElementById('samenvattingGeselecteerdTitel');
+    const tekstEl = document.getElementById('samenvattingGeselecteerdTekst');
+    const perThemaBlok = document.getElementById('samenvattingPerThemaBlok');
+    if (!blok || !titelEl || !tekstEl) return;
+
+    const items = SAMENVATTING_PER_THEMA[thema];
+    const item = items?.find(i => i.thema === subFilter);
+    if (!item) {
+        blok.style.display = 'none';
+        if (perThemaBlok) perThemaBlok.style.display = '';
+        return;
+    }
+
+    titelEl.textContent = item.thema;
+    tekstEl.textContent = item.samenvatting;
+    const kleuren = THEMA_KLEUREN[thema] || { accent: '#0060ac' };
+    blok.style.borderLeftColor = kleuren.accent;
+    blok.style.display = '';
+    if (perThemaBlok) perThemaBlok.style.display = 'none';
 }
 
 function loadSyntheseContent(thema) {
@@ -574,12 +797,27 @@ function buildPortefeuilleBlock(thema) {
     return html;
 }
 
+function getSubFilterKeywords(thema, subFilter) {
+    const tegels = PORTEFEUILLE_TEGELS[thema];
+    if (tegels) {
+        const t = tegels.find(x => x.naam === subFilter);
+        return t ? t.keywords : [];
+    }
+    if (subFilter === 'Overig') return null;
+    return SUBTHEMA_KEYWORDS[subFilter] || [subFilter.toLowerCase()];
+}
+
 function loadDossierBesluiten(thema) {
     let besluiten = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === thema);
 
     if (activeDossier && activeDossier.subFilter) {
-        const keywords = SUBTHEMA_KEYWORDS[activeDossier.subFilter] || [activeDossier.subFilter.toLowerCase()];
-        besluiten = besluiten.filter(d => matchSubthema(d, keywords));
+        const keywords = getSubFilterKeywords(thema, activeDossier.subFilter);
+        if (keywords === null) {
+            const alleNietOverig = Object.entries(SUBTHEMA_KEYWORDS).filter(([n]) => n !== 'Overig').flatMap(([, k]) => k);
+            besluiten = alleNietOverig.length ? besluiten.filter(d => !matchSubthema(d, alleNietOverig)) : besluiten;
+        } else if (keywords.length) {
+            besluiten = besluiten.filter(d => matchSubthema(d, keywords));
+        }
     }
 
     filteredDecisions = besluiten;
@@ -671,8 +909,13 @@ function applyDossierFilters() {
     let results = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === activeDossier.domein);
 
     if (activeDossier.subFilter) {
-        const keywords = SUBTHEMA_KEYWORDS[activeDossier.subFilter] || [activeDossier.subFilter.toLowerCase()];
-        results = results.filter(d => matchSubthema(d, keywords));
+        const keywords = getSubFilterKeywords(activeDossier.domein, activeDossier.subFilter);
+        if (keywords === null) {
+            const alleNietOverig = Object.entries(SUBTHEMA_KEYWORDS).filter(([n]) => n !== 'Overig').flatMap(([, k]) => k);
+            results = alleNietOverig.length ? results.filter(d => !matchSubthema(d, alleNietOverig)) : results;
+        } else if (keywords.length) {
+            results = results.filter(d => matchSubthema(d, keywords));
+        }
     }
 
     if (year) {
