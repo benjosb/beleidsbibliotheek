@@ -17,7 +17,7 @@ cd "$WASSENAAR_DIR"
 echo "Deploy Wassenaar naar ${REMOTE}:${REMOTE_PATH}"
 echo "Bestanden: index.html, data.js, app.js, roadmap.html, verbeterpunten-beheer.html, viewer.html, scripts/domeinclustering.py, schrijf-wijzer/"
 
-scp index.html data.js app.js app_v5.js app_v6.js roadmap.html verbeterpunten-beheer.html viewer.html styles.css "wassenaar_logo_fc kopie.svg" "${REMOTE}:${REMOTE_PATH}/"
+scp index.html data.js app.js app_v5.js app_v6.js disclaimer.js roadmap.html verbeterpunten-beheer.html viewer.html styles.css "wassenaar_logo_fc kopie.svg" "${REMOTE}:${REMOTE_PATH}/"
 ssh "${REMOTE}" "mkdir -p ${REMOTE_PATH}/scripts ${REMOTE_PATH}/schrijf-wijzer"
 scp scripts/domeinclustering.py "${REMOTE}:${REMOTE_PATH}/scripts/"
 scp -r schrijf-wijzer/* "${REMOTE}:${REMOTE_PATH}/schrijf-wijzer/"

@@ -154,9 +154,16 @@ const SUBTHEMA_KEYWORDS = {
     'Overig': [],
 };
 
-function matchSubthema(decision, keywords) {
+// Uitsluitingen: besluiten die deze termen bevatten tellen niet mee voor dit subthema
+const SUBTHEMA_EXCLUSIONS = {
+    'WMO': ['rioolheffing', 'waterzorgheffing'],  // "zorg" in waterzorgheffing → geen WMO
+};
+
+function matchSubthema(decision, keywords, subthemaNaam) {
     if (!keywords.length) return false;
     const text = [decision.naam || '', decision.besluit || ''].join(' ').toLowerCase();
+    const exclusions = subthemaNaam && SUBTHEMA_EXCLUSIONS[subthemaNaam];
+    if (exclusions && exclusions.some(ex => text.includes(ex))) return false;
     return keywords.some(kw => text.includes(kw.toLowerCase()));
 }
 
@@ -426,10 +433,10 @@ function sluitDossier() {
     showView('overzicht');
 }
 
-function getRecentDate(decisions, keywords) {
+function getRecentDate(decisions, keywords, subthemaNaam) {
     let latest = '';
     for (const d of decisions) {
-        if ((!keywords.length || matchSubthema(d, keywords)) && d.datum && d.datum > latest) latest = d.datum;
+        if ((!keywords.length || matchSubthema(d, keywords, subthemaNaam)) && d.datum && d.datum > latest) latest = d.datum;
     }
     return latest;
 }
@@ -443,9 +450,9 @@ function formatDatumKort(datum) {
     return maanden[m - 1] + ' ' + parts[0];
 }
 
-function getHoverPreview(decisions, keywords) {
+function getHoverPreview(decisions, keywords, subthemaNaam) {
     const matches = (keywords && keywords.length)
-        ? decisions.filter(d => matchSubthema(d, keywords))
+        ? decisions.filter(d => matchSubthema(d, keywords, subthemaNaam))
         : decisions.slice();
     matches.sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
     return matches.slice(0, 3).map(d => (d.naam || '').substring(0, 80)).filter(Boolean);
@@ -471,9 +478,9 @@ function renderSubTegels(thema, activeSubFilter) {
     if (tegels) {
         subData = tegels.map(t => {
             const keywords = t.keywords;
-            const count = dossierBesluiten.filter(d => matchSubthema(d, keywords)).length;
-            const recentDate = getRecentDate(dossierBesluiten, keywords);
-            const preview = getHoverPreview(dossierBesluiten, keywords);
+            const count = dossierBesluiten.filter(d => matchSubthema(d, keywords, t.naam)).length;
+            const recentDate = getRecentDate(dossierBesluiten, keywords, t.naam);
+            const preview = getHoverPreview(dossierBesluiten, keywords, t.naam);
             return { naam: t.naam, count, keywords, recentDate, preview };
         });
     } else {
@@ -495,9 +502,9 @@ function renderSubTegels(thema, activeSubFilter) {
                 return { naam: kind.naam, count, keywords: [], recentDate, preview };
             }
             const keywords = SUBTHEMA_KEYWORDS[kind.naam] || [kind.naam.toLowerCase()];
-            const count = dossierBesluiten.filter(d => matchSubthema(d, keywords)).length;
-            const recentDate = getRecentDate(dossierBesluiten, keywords);
-            const preview = getHoverPreview(dossierBesluiten, keywords);
+            const count = dossierBesluiten.filter(d => matchSubthema(d, keywords, kind.naam)).length;
+            const recentDate = getRecentDate(dossierBesluiten, keywords, kind.naam);
+            const preview = getHoverPreview(dossierBesluiten, keywords, kind.naam);
             return { naam: kind.naam, count, keywords, recentDate, preview };
         });
     }
@@ -552,11 +559,11 @@ function renderSubTegels(thema, activeSubFilter) {
                 updateBreadcrumb(thema, sub.naam, sub.count, kleuren);
                 if (tegels && SAMENVATTING_PER_THEMA[thema]) {
                     showSamenvattingGeselecteerd(thema, sub.naam);
-                    filterBySubthema(thema, sub.keywords || []);
+                    filterBySubthema(thema, sub.keywords || [], sub.naam);
                 } else if (sub.naam === 'Overig') {
                     filterByOverig(thema);
                 } else {
-                    filterBySubthema(thema, sub.keywords);
+                    filterBySubthema(thema, sub.keywords, sub.naam);
                 }
             };
         }
@@ -614,9 +621,9 @@ function filterByOverig(thema) {
     if (!PORTEFEUILLE_TEGELS[thema]) scrollToBesluiten();
 }
 
-function filterBySubthema(thema, keywords) {
+function filterBySubthema(thema, keywords, subFilter) {
     const dossierBesluiten = allDecisions.filter(d => (d.domein || '') === thema);
-    filteredDecisions = dossierBesluiten.filter(d => matchSubthema(d, keywords));
+    filteredDecisions = dossierBesluiten.filter(d => matchSubthema(d, keywords, subFilter));
 
     const countEl = document.getElementById('besluitenCount');
     if (countEl) countEl.textContent = `(${filteredDecisions.length})`;
@@ -816,7 +823,7 @@ function loadDossierBesluiten(thema) {
             const alleNietOverig = Object.entries(SUBTHEMA_KEYWORDS).filter(([n]) => n !== 'Overig').flatMap(([, k]) => k);
             besluiten = alleNietOverig.length ? besluiten.filter(d => !matchSubthema(d, alleNietOverig)) : besluiten;
         } else if (keywords.length) {
-            besluiten = besluiten.filter(d => matchSubthema(d, keywords));
+            besluiten = besluiten.filter(d => matchSubthema(d, keywords, activeDossier.subFilter));
         }
     }
 
@@ -914,7 +921,7 @@ function applyDossierFilters() {
             const alleNietOverig = Object.entries(SUBTHEMA_KEYWORDS).filter(([n]) => n !== 'Overig').flatMap(([, k]) => k);
             results = alleNietOverig.length ? results.filter(d => !matchSubthema(d, alleNietOverig)) : results;
         } else if (keywords.length) {
-            results = results.filter(d => matchSubthema(d, keywords));
+            results = results.filter(d => matchSubthema(d, keywords, activeDossier.subFilter));
         }
     }
 

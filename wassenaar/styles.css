@@ -22,6 +22,9 @@
     --thema-overig:         #e0e0e0;
 }
 
+.footer-link-btn { background: none; border: none; padding: 0; font-size: inherit; color: var(--gray-medium); cursor: pointer; text-decoration: underline; }
+.footer-link-btn:hover { color: var(--wassenaar-blue); }
+
 * {
     box-sizing: border-box;
     margin: 0;

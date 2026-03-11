@@ -157,6 +157,11 @@ def classify_decision(decision):
     besluit = (decision.get("besluit") or decision.get("besluit_kort") or "").lower()
     zoektekst = f"{naam} {besluit}"
 
+    # 0. Inhoudelijke override: besluiten over omgevingsvergunningen → Ruimte
+    # Alleen op naam/onderwerp, niet op besluittekst (niet voor budget-reserves)
+    if "omgevingsvergunning" in naam and "egalisatie" not in naam:
+        return "Ruimte, Duurzaamheid & Mobiliteit", "omgevingsvergunning"
+
     # 1. Onderwerp-specifieke override (o.a. Riolering → Ruimte, ondanks portefeuille Sociaal)
     if onderwerp in ONDERWERP_MAP:
         return ONDERWERP_MAP[onderwerp], "onderwerp"
