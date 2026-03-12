@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "bron": "Iv3-informatievoorschrift Gemeenten 2025, CBS iv3_definities_Gemeente_2024",
+    "versie": "2025",
+    "omschrijving": "48 taakvelden in 9 hoofdstukken (Iv3 Informatie voor Derden)"
+  },
+  "hoofdstukken": [
+    {
+      "code": "0",
+      "naam": "Bestuur en ondersteuning",
+      "taakvelden": [
+        { "code": "0.1", "naam": "Bestuur" },
+        { "code": "0.2", "naam": "Burgerzaken" },
+        { "code": "0.3", "naam": "Beheer overige gebouwen en gronden" },
+        { "code": "0.4", "naam": "Overhead" },
+        { "code": "0.5", "naam": "Treasury" },
+        { "code": "0.61", "naam": "OZB woningen" },
+        { "code": "0.62", "naam": "OZB niet-woningen" },
+        { "code": "0.63", "naam": "Parkeerbelasting" },
+        { "code": "0.64", "naam": "Belastingen overig" },
+        { "code": "0.7", "naam": "Algemene uitkeringen en overige uitkeringen gemeentefonds" },
+        { "code": "0.8", "naam": "Overige baten en lasten" },
+        { "code": "0.9", "naam": "Vennootschapsbelasting (VpB)" },
+        { "code": "0.10", "naam": "Mutaties reserves" },
+        { "code": "0.11", "naam": "Resultaat van de rekening van baten en lasten" }
+      ]
+    },
+    {
+      "code": "1",
+      "naam": "Veiligheid",
+      "taakvelden": [
+        { "code": "1.1", "naam": "Crisisbeheersing en brandweer" },
+        { "code": "1.2", "naam": "Openbare orde en veiligheid" }
+      ]
+    },
+    {
+      "code": "2",
+      "naam": "Verkeer, vervoer en waterstaat",
+      "taakvelden": [
+        { "code": "2.1", "naam": "Verkeer en vervoer" },
+        { "code": "2.2", "naam": "Parkeren" },
+        { "code": "2.3", "naam": "Recreatieve havens" },
+        { "code": "2.4", "naam": "Economische havens en waterwegen" },
+        { "code": "2.5", "naam": "Openbaar vervoer" }
+      ]
+    },
+    {
+      "code": "3",
+      "naam": "Economie",
+      "taakvelden": [
+        { "code": "3.1", "naam": "Economische ontwikkeling" },
+        { "code": "3.2", "naam": "Fysieke bedrijfsinfrastructuur" },
+        { "code": "3.3", "naam": "Bedrijvenloket en bedrijfsregelingen" },
+        { "code": "3.4", "naam": "Economische promotie" }
+      ]
+    },
+    {
+      "code": "4",
+      "naam": "Onderwijs",
+      "taakvelden": [
+        { "code": "4.1", "naam": "Openbaar basisonderwijs" },
+        { "code": "4.2", "naam": "Onderwijshuisvesting" },
+        { "code": "4.3", "naam": "Onderwijsbeleid en leerlingzaken" }
+      ]
+    },
+    {
+      "code": "5",
+      "naam": "Sport, cultuur en recreatie",
+      "taakvelden": [
+        { "code": "5.1", "naam": "Sportbeleid en activering" },
+        { "code": "5.2", "naam": "Sportaccommodaties" },
+        { "code": "5.3", "naam": "Cultuurpresentatie, cultuurproductie en cultuurparticipatie" },
+        { "code": "5.4", "naam": "Musea" },
+        { "code": "5.5", "naam": "Cultureel erfgoed" },
+        { "code": "5.6", "naam": "Media" },
+        { "code": "5.7", "naam": "Openbaar groen en (openlucht) recreatie" }
+      ]
+    },
+    {
+      "code": "6",
+      "naam": "Sociaal domein",
+      "taakvelden": [
+        { "code": "6.1", "naam": "Samenkracht en burgerparticipatie" },
+        { "code": "6.2", "naam": "Toegang en eerstelijnsvoorzieningen" },
+        { "code": "6.3", "naam": "Inkomensregelingen" },
+        { "code": "6.4", "naam": "WSW en beschut werk" },
+        { "code": "6.5", "naam": "Arbeidsparticipatie" },
+        { "code": "6.6", "naam": "Maatwerkvoorzieningen (WMO)" },
+        { "code": "6.71", "naam": "Maatwerkdienstverlening 18+" },
+        { "code": "6.72", "naam": "Maatwerkdienstverlening 18-" }
+      ]
+    },
+    {
+      "code": "7",
+      "naam": "Volksgezondheid en milieu",
+      "taakvelden": [
+        { "code": "7.1", "naam": "Volksgezondheid" },
+        { "code": "7.2", "naam": "Riolering" },
+        { "code": "7.3", "naam": "Afval" },
+        { "code": "7.4", "naam": "Milieubeheer" },
+        { "code": "7.5", "naam": "Begraafplaatsen en crematoria" }
+      ]
+    },
+    {
+      "code": "8",
+      "naam": "Volkshuisvesting, leefomgeving en stedelijke vernieuwing",
+      "taakvelden": [
+        { "code": "8.1", "naam": "Ruimte en leefomgeving" },
+        { "code": "8.2", "naam": "Grondexploitatie (niet-bedrijventerreinen)" },
+        { "code": "8.3", "naam": "Wonen en bouwen" }
+      ]
+    }
+  ]
+}

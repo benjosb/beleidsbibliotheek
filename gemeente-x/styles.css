@@ -1,0 +1,321 @@
+/* Besluit-wijzer Gemeente X — v0.1 · Iv3-structuur (9 BBV-hoofdstukken) */
+
+:root {
+    --gray-dark: #333;
+    --gray-medium: #666;
+    --gray-light: #e0e0e0;
+    --gray-lighter: #f5f5f5;
+    --white: #ffffff;
+    /* Iv3 BBV-hoofdstuk kleuren (0–8) */
+    --iv3-0: #5c6bc0;  /* Bestuur en ondersteuning */
+    --iv3-1: #e53935;  /* Veiligheid */
+    --iv3-2: #43a047;  /* Verkeer, vervoer en waterstaat */
+    --iv3-3: #fb8c00;  /* Economie */
+    --iv3-4: #8e24aa;  /* Onderwijs */
+    --iv3-5: #00acc1;  /* Sport, cultuur en recreatie */
+    --iv3-6: #7cb342;  /* Sociaal domein */
+    --iv3-7: #26a69a;  /* Volksgezondheid en milieu */
+    --iv3-8: #1565c0;  /* Volkshuisvesting, leefomgeving */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--gray-dark);
+    background-color: var(--gray-lighter);
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.site-header {
+    background-color: var(--white);
+    padding: 1.2rem 0;
+    border-bottom: 2px solid var(--gray-lighter);
+}
+
+.header-inner { display: flex; align-items: center; }
+
+.header-text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.1rem 0;
+    letter-spacing: -0.02em;
+}
+
+.header-title-link { color: inherit; text-decoration: none; }
+.header-title-link:hover { text-decoration: underline; }
+
+.subtitle { font-size: 0.88rem; color: var(--gray-medium); margin: 0; }
+
+/* Zoekbalk */
+.overzicht-kop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.toelichting-link {
+    font-size: 0.95rem;
+    color: var(--iv3-0);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.toelichting-link:hover {
+    text-decoration: underline;
+}
+
+.overzicht-zoek { display: flex; gap: 0.5rem; }
+
+.overzicht-zoek input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    min-width: 220px;
+}
+
+.overzicht-zoek button {
+    padding: 0.5rem 1rem;
+    background: var(--iv3-0);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.overzicht-zoek button:hover { opacity: 0.9; }
+
+/* Dossier-kaarten (9 hoofdstukken) */
+.dossier-kaarten {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.dossier-kaart {
+    display: block;
+    width: 100%;
+    padding: 1.25rem;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    border-left: 4px solid var(--iv3-0);
+    text-align: left;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.1s;
+}
+
+.dossier-kaart:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.dossier-kaart-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dossier-kaart-naam { font-weight: 600; font-size: 1rem; flex: 1; }
+.dossier-kaart-count {
+    background: var(--gray-light);
+    color: var(--gray-dark);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.dossier-kaart-toelichting {
+    font-size: 0.88rem;
+    color: var(--gray-medium);
+    line-height: 1.4;
+    margin: 0.5rem 0;
+}
+
+.dossier-kaart-cta {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+}
+
+/* Dossier detail */
+.dossier-kop { margin-bottom: 1rem; }
+
+.dossier-terug {
+    background: none;
+    border: none;
+    padding: 0.5rem 0;
+    color: var(--gray-medium);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.dossier-terug:hover { color: var(--gray-dark); text-decoration: underline; }
+
+.dossier-kop-titel { font-size: 1.5rem; margin-top: 0.5rem; }
+
+/* Toelichting blok (Iv3) */
+.toelichting-blok {
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    background: var(--gray-lighter);
+    border-radius: 8px;
+    border-left: 4px solid var(--iv3-0);
+}
+
+.toelichting-tekst {
+    font-size: 0.95rem;
+    color: var(--gray-dark);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Sub-tegels (taakvelden) */
+.sub-tegels { margin-bottom: 1.5rem; }
+
+.sub-tegels-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.sub-kaart {
+    padding: 0.6rem 0.85rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 6px;
+    background: var(--white);
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: left;
+    min-width: 200px;
+    max-width: 320px;
+}
+
+.sub-kaart:hover { background: var(--gray-lighter); }
+
+.sub-kaart-actief {
+    color: white !important;
+    border-color: inherit !important;
+}
+
+.sub-kaart-leeg { opacity: 0.6; }
+
+.sub-kaart-top { display: flex; justify-content: space-between; gap: 0.5rem; }
+.sub-kaart-naam { font-weight: 500; }
+.sub-kaart-count { font-size: 0.8rem; color: var(--gray-medium); flex-shrink: 0; }
+.sub-kaart-toelichting {
+    font-size: 0.8rem;
+    color: var(--gray-medium);
+    line-height: 1.35;
+    margin: 0.4rem 0 0 0;
+}
+.sub-kaart-actief .sub-kaart-toelichting { color: rgba(255,255,255,0.9); }
+
+/* Breadcrumb */
+.sub-breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-thema { font-weight: 500; }
+.breadcrumb-sep { margin: 0 0.25rem; color: var(--gray-medium); }
+.breadcrumb-count { color: var(--gray-medium); margin-left: 0.25rem; }
+
+.breadcrumb-reset {
+    margin-left: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--gray-medium);
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-decoration: underline;
+}
+
+/* Besluiten */
+.dossier-besluiten summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.dossier-besluiten-count { font-weight: 400; color: var(--gray-medium); margin-left: 0.25rem; }
+
+.dossier-besluiten-filters { margin: 1rem 0; }
+
+.filters-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.filter-group label { display: block; font-size: 0.8rem; color: var(--gray-medium); margin-bottom: 0.25rem; }
+
+.filter-group select {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.btn-secondary {
+    padding: 0.4rem 0.75rem;
+    background: var(--gray-lighter);
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-secondary:hover { background: var(--gray-light); }
+
+.results-header { margin: 0.75rem 0; font-size: 0.9rem; color: var(--gray-medium); }
+
+.results-list { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.result-item {
+    padding: 0.75rem 1rem;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 6px;
+}
+
+.result-item a { color: var(--iv3-0); text-decoration: none; }
+.result-item a:hover { text-decoration: underline; }
+
+.result-item-meta { font-size: 0.8rem; color: var(--gray-medium); margin-top: 0.25rem; }
+
+.no-results { padding: 2rem; text-align: center; color: var(--gray-medium); }
+
+/* Zoekresultaten */
+.zoek-resultaten-kop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.zoek-filters { margin-bottom: 1rem; }
+
+/* Footer */
+.site-footer {
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--gray-light);
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+}
+
+.footer-link { color: var(--iv3-0); text-decoration: none; }
+.footer-link:hover { text-decoration: underline; }

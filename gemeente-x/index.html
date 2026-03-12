@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besluit-wijzer · Iv3-taakvelden</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="header-text">
+                <h1><a href="index.html" class="header-title-link">Besluit-wijzer</a></h1>
+                <p class="subtitle">Iv3-structuur · 9 BBV-hoofdstukken, 48 taakvelden</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dossier-overzicht" id="dossierOverzicht">
+            <div class="overzicht-kop">
+                <a href="toelichting-hoofdstukken-taakvelden.html" class="toelichting-link">Toelichting hoofdstukken en taakvelden</a>
+                <div class="overzicht-zoek">
+                    <input type="text" id="searchInput" placeholder="Zoek op onderwerp of trefwoord…">
+                    <button id="searchBtn" type="button">ZOEK</button>
+                </div>
+            </div>
+            <div id="dossierKaarten" class="dossier-kaarten"></div>
+        </section>
+
+        <section class="dossier-detail" id="dossierDetail" style="display: none;">
+            <div class="dossier-kop">
+                <button type="button" class="dossier-terug" id="dossierTerug">← Overzicht</button>
+                <h2 class="dossier-kop-titel" id="dossierTitel"></h2>
+            </div>
+            <div id="toelichtingBlok" class="toelichting-blok" style="display:none;"></div>
+            <div id="subTegels" class="sub-tegels"></div>
+            <div id="subBreadcrumb" class="sub-breadcrumb" style="display:none;"></div>
+
+            <details class="dossier-besluiten" id="dossierBesluiten">
+                <summary class="dossier-besluiten-kop">
+                    <span>Raads- en collegebesluiten</span>
+                    <span class="dossier-besluiten-count" id="besluitenCount">(0)</span>
+                </summary>
+                <div class="dossier-besluiten-filters">
+                    <div class="filters-row">
+                        <div class="filter-group">
+                            <label for="yearFilter">Jaar</label>
+                            <select id="yearFilter">
+                                <option value="">Alle jaren</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="typeFilter">Type</label>
+                            <select id="typeFilter">
+                                <option value="">Alle typen</option>
+                                <option value="raad">Raadsbesluit</option>
+                                <option value="college">Collegebesluit (B&W)</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="sortBy">Sorteren</label>
+                            <select id="sortBy">
+                                <option value="datum-desc">Datum (nieuwste eerst)</option>
+                                <option value="datum-asc">Datum (oudste eerst)</option>
+                                <option value="naam-asc">Naam (A–Z)</option>
+                                <option value="naam-desc">Naam (Z–A)</option>
+                            </select>
+                        </div>
+                        <button id="clearFilters" type="button" class="btn-secondary">Wissen</button>
+                    </div>
+                </div>
+                <div class="results-header">
+                    <span id="resultsCount">0 raads- en collegebesluiten</span>
+                </div>
+                <div id="resultsList" class="results-list"></div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p id="noResultsText">Geen raads- of collegebesluiten gevonden.</p>
+                </div>
+            </details>
+        </section>
+
+        <section class="zoek-resultaten" id="zoekResultaten" style="display: none;">
+            <div class="zoek-resultaten-kop">
+                <h2 class="zoek-resultaten-titel">Zoekresultaten</h2>
+                <button type="button" class="dossier-terug" id="zoekSluiten">← Terug</button>
+            </div>
+            <div class="zoek-filters">
+                <div class="filter-group">
+                    <label for="zoekYearFilter">Jaar</label>
+                    <select id="zoekYearFilter">
+                        <option value="">Alle jaren</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="zoekTypeFilter">Type</label>
+                    <select id="zoekTypeFilter">
+                        <option value="">Alle typen</option>
+                        <option value="raad">Raadsbesluit</option>
+                        <option value="college">Collegebesluit (B&W)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="zoekSortBy">Sorteren</label>
+                    <select id="zoekSortBy">
+                        <option value="datum-desc">Datum (nieuwste eerst)</option>
+                        <option value="datum-asc">Datum (oudste eerst)</option>
+                        <option value="naam-asc">Naam (A–Z)</option>
+                        <option value="naam-desc">Naam (Z–A)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="results-header">
+                <span id="zoekResultsCount">0 raads- en collegebesluiten</span>
+            </div>
+            <div id="zoekResultsList" class="results-list"></div>
+            <div id="zoekNoResults" class="no-results" style="display: none;">
+                <p>Geen raads- of collegebesluiten gevonden.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-text">Besluit-wijzer v0.1 · Iv3-structuur · <a href="https://besluit-wijzer.nl" target="_blank" rel="noopener">besluit-wijzer.nl</a></p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
