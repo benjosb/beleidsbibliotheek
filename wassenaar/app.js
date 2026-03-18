@@ -81,7 +81,7 @@ let allDecisions = [];
 let filteredDecisions = [];
 let activeDossier = null; // { domein: string, subFilter: string|null } of { bbvMode: true, bbvIndex: number }
 let viewMode = 'overzicht'; // 'overzicht' | 'dossier' | 'zoekresultaten'
-let dossierViewMode = 'portefeuille'; // 'portefeuille' | 'bbv'
+let dossierViewMode = 'bbv';
 let briefingCache = {};
 let previewCache = {};
 
@@ -576,10 +576,26 @@ function calculateThemaCounts(decisions) {
 function showView(mode) {
     viewMode = mode;
     const hub = document.getElementById('hubOverzicht');
-    if (hub) hub.style.display = 'none'; // Hub alleen op hoogste niveau; tabjes volstaan op overzicht en detail
-    document.getElementById('dossierOverzicht').style.display = mode === 'overzicht' ? '' : 'none';
+    if (hub) hub.style.display = 'none';
+    const isOverzicht = mode === 'overzicht' || mode === 'dossier' || mode === 'zoekresultaten';
+    document.getElementById('dossierOverzicht').style.display = isOverzicht ? '' : 'none';
     document.getElementById('dossierDetail').style.display = mode === 'dossier' ? '' : 'none';
     document.getElementById('zoekResultaten').style.display = mode === 'zoekresultaten' ? '' : 'none';
+    const compliance = document.getElementById('compliance');
+    if (compliance) compliance.style.display = mode === 'compliance' ? '' : 'none';
+    const odSectie = document.getElementById('overdrachtsdossier');
+    if (odSectie) odSectie.style.display = mode === 'overdrachtsdossier' ? '' : 'none';
+    if (mode === 'overdrachtsdossier') loadOverdrachtsdossierPagina();
+    updateNavActief(mode);
+}
+
+function updateNavActief(mode) {
+    const navOD = document.getElementById('navOverdrachtsdossier');
+    const navBB = document.getElementById('navBeleidsBibliotheek');
+    const navC = document.getElementById('navCompliance');
+    if (navOD) navOD.classList.toggle('site-nav-actief', mode === 'overdrachtsdossier');
+    if (navBB) navBB.classList.toggle('site-nav-actief', mode === 'overzicht' || mode === 'dossier' || mode === 'zoekresultaten');
+    if (navC) navC.classList.toggle('site-nav-actief', mode === 'compliance');
 }
 
 // ─── Open / sluit dossier ───
@@ -1015,6 +1031,120 @@ function extractBodyContent(html) {
     const match = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
     if (match) return match[1];
     return html;
+}
+
+let overdrachtsdossierPaginaCache = null;
+
+function parseOverdrachtsdossierMd(md) {
+    const stripPageNum = (s) => s.replace(/\t\d+\s*$/, '').trim();
+    const escapeHtml = (s) => String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    const inlineMd = (s) => escapeHtml(s)
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*([^*]+)\*/g, '<em>$1</em>');
+
+    const lines = md.split(/\r?\n/);
+    const chapters = [];
+    let currentChapter = null;
+    let currentContent = [];
+    let tableRows = [];
+
+    const flushTable = () => {
+        if (tableRows.length === 0) return;
+        let html = '<table class="overdracht-tabel"><tbody>';
+        tableRows.forEach((row, i) => {
+            const tag = i === 0 ? 'th' : 'td';
+            html += '<tr>' + row.map(c => `<${tag}>${inlineMd(c.trim())}</${tag}>`).join('') + '</tr>';
+        });
+        html += '</tbody></table>';
+        currentContent.push(html);
+        tableRows = [];
+    };
+
+    const flushParagraph = (text) => {
+        const t = text.trim();
+        if (!t) return;
+        if (t === '---') return;
+        currentContent.push('<p>' + inlineMd(t) + '</p>');
+    };
+
+    const pushChapter = (title, content) => {
+        if (!title) return;
+        const body = content.join('\n');
+        if (body) chapters.push({ title: stripPageNum(title), body });
+    };
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const h1 = line.match(/^#\s+(.+)$/);
+        const h2 = line.match(/^##\s+(.+)$/);
+        const h3 = line.match(/^###\s+(.+)$/);
+        const isTable = line.trim().startsWith('|');
+
+        if (h1) {
+            flushTable();
+            if (currentChapter) {
+                pushChapter(currentChapter.title, currentContent);
+            }
+            currentChapter = { title: h1[1] };
+            currentContent = [];
+        } else if (h2) {
+            flushTable();
+            currentContent.push('<h2>' + escapeHtml(stripPageNum(h2[1])) + '</h2>');
+        } else if (h3) {
+            flushTable();
+            currentContent.push('<h3>' + escapeHtml(stripPageNum(h3[1])) + '</h3>');
+        } else if (isTable) {
+            const cells = line.split('|').slice(1, -1).map(c => c.trim());
+            const isSeparator = cells.every(c => !c || /^-+$/.test(c));
+            if (cells.some(c => c) && !isSeparator) tableRows.push(cells);
+        } else {
+            if (tableRows.length > 0) {
+                flushTable();
+            }
+            flushParagraph(line);
+        }
+    }
+    flushTable();
+    if (currentChapter) pushChapter(currentChapter.title, currentContent);
+
+    return chapters;
+}
+
+function loadOverdrachtsdossierPagina() {
+    const container = document.getElementById('overdrachtsdossierInhoudPagina');
+    if (!container) return;
+    if (overdrachtsdossierPaginaCache) {
+        container.innerHTML = overdrachtsdossierPaginaCache;
+        return;
+    }
+    container.innerHTML = '<p class="overdrachtsdossier-placeholder" role="status">Laden…</p>';
+    const mdUrl = new URL('overdracht_raadsverkiezingen_2026.md', window.location.href).href;
+    fetch(mdUrl)
+        .then(r => r.ok ? r.text() : Promise.reject(new Error('Bestand niet gevonden')))
+        .then(md => {
+            const chapters = parseOverdrachtsdossierMd(md);
+            const skipToc = ['Inhoud', 'Overdrachtsdossier raadsverkiezingen 2026 — Gemeente Wassenaar'];
+            const filtered = chapters.filter(c => !skipToc.includes(c.title) && c.title.length > 2);
+            let html = '';
+            filtered.forEach((ch, i) => {
+                const id = 'od-ch-' + i;
+                const open = i < 2;
+                html += `<details class="overdrachtsdossier-details" id="${id}"${open ? ' open' : ''}>`;
+                html += `<summary class="overdrachtsdossier-summary">${escapeHtml(ch.title)}</summary>`;
+                html += `<div class="overdrachtsdossier-details-inhoud">${ch.body}</div>`;
+                html += '</details>';
+            });
+            overdrachtsdossierPaginaCache = html;
+            container.innerHTML = html;
+        })
+        .catch((err) => {
+            console.warn('Overdrachtsdossier laden mislukt:', err);
+            container.innerHTML = '<p class="overdrachtsdossier-placeholder">Het overdrachtsdossier kon niet worden geladen. Zorg dat het bestand <code>overdracht_raadsverkiezingen_2026.md</code> in dezelfde map staat en dat de pagina via HTTP wordt geopend (niet file://). Start bijvoorbeeld: <code>python3 -m http.server 8765</code> in de map wassenaar.</p>';
+        });
 }
 
 function loadOverdrachtsdossierContent() {
@@ -1595,7 +1725,7 @@ function renderKwaliteit() {
             Alle data is openbaar en vrij beschikbaar. Elke publicatie bevat een directe link naar het origineel op
             <a href="https://zoek.officielebekendmakingen.nl" target="_blank" rel="noopener">zoek.officielebekendmakingen.nl</a>.</p>
             <p>Periode: <strong>${oldest}</strong> t/m <strong>${newest}</strong>
-            · Laatst bijgewerkt: <strong>februari 2026</strong></p>
+            · Laatst bijgewerkt: <strong>maart 2026</strong></p>
         </div>
     `;
 }
@@ -1675,28 +1805,35 @@ document.addEventListener('DOMContentLoaded', () => {
         applyZoekFilters();
     });
 
-    // Toggle Portefeuille / BBV-taakveld
-    const togglePortefeuille = document.getElementById('togglePortefeuille');
-    const toggleBBV = document.getElementById('toggleBBV');
-    if (togglePortefeuille && toggleBBV) {
-        togglePortefeuille.addEventListener('click', () => {
-            if (dossierViewMode === 'bbv') {
-                dossierViewMode = 'portefeuille';
-                togglePortefeuille.classList.add('weergave-toggle-actief');
-                toggleBBV.classList.remove('weergave-toggle-actief');
-                renderDossierKaarten(THEMA_BOOM_DATA);
-            }
-        });
-        toggleBBV.addEventListener('click', () => {
-            if (dossierViewMode === 'portefeuille') {
-                dossierViewMode = 'bbv';
-                toggleBBV.classList.add('weergave-toggle-actief');
-                togglePortefeuille.classList.remove('weergave-toggle-actief');
-                renderDossierKaarten(THEMA_BOOM_DATA);
-            }
+    // Nav-links in groene balk — hash + click voor betrouwbare navigatie
+    function navFromHash() {
+        const hash = (location.hash || '').replace(/^#/, '');
+        if (hash === 'overdrachtsdossier') showView('overdrachtsdossier');
+        else if (hash === 'compliance') showView('compliance');
+        else showView('overzicht');
+        const target = document.getElementById(hash || 'dossierOverzicht');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    window.addEventListener('hashchange', navFromHash);
+
+    const siteNav = document.querySelector('.site-nav-inner');
+    if (siteNav) {
+        siteNav.addEventListener('click', (e) => {
+            const link = e.target.closest('a[href^="#"]');
+            if (!link) return;
+            e.preventDefault();
+            const hash = (link.getAttribute('href') || '').replace(/^#/, '');
+            location.hash = hash || 'dossierOverzicht';
         });
     }
 
+    // Init: sync view met hash bij laden (redirect #overdrachtsdossier naar aparte pagina)
+    if (location.hash === '#overdrachtsdossier') {
+        location.replace('overdrachtsdossier.html');
+    } else {
+        navFromHash();
+    }
     // Verborgen begroting-toggle (dubbel-klik op versienummer)
     const versieBadge = document.getElementById('appVersion');
     if (versieBadge) {

@@ -1,6 +1,13 @@
 /* BeleidsWijzer Wassenaar — v4 dossier-first */
+/* Design tokens van wassenaar.nl (openbare-documenten) */
 
 :root {
+    --primary: #55601c;
+    --bodyColor: #6f6f6f;
+    --contentColor: #555;
+    --iconsColor: #394A58;
+    --paragraphEvenColor: #f4f4f4;
+    --fontFamily: Roboto, 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --wassenaar-blue: #0060ac;
     --wassenaar-geel: #ffda00;
     --wassenaar-rood: #e40521;
@@ -22,8 +29,8 @@
     --thema-overig:         #e0e0e0;
 }
 
-.footer-link-btn { background: none; border: none; padding: 0; font-size: inherit; color: var(--gray-medium); cursor: pointer; text-decoration: underline; }
-.footer-link-btn:hover { color: var(--wassenaar-blue); }
+.footer-link-btn { background: none; border: none; padding: 0; font-size: inherit; color: rgba(255,255,255,0.9); cursor: pointer; text-decoration: underline; }
+.footer-link-btn:hover { color: var(--wassenaar-geel); }
 
 * {
     box-sizing: border-box;
@@ -31,11 +38,26 @@
     padding: 0;
 }
 
+.skip-link {
+    position: absolute;
+    top: -2.5em;
+    left: 0;
+    background: var(--primary);
+    color: #fff;
+    padding: 0.5em 1em;
+    z-index: 100;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.skip-link:focus {
+    top: 0;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--fontFamily);
     font-size: 16px;
     line-height: 1.6;
-    color: var(--gray-dark);
+    color: var(--bodyColor);
     background-color: var(--gray-lighter);
 }
 
@@ -45,40 +67,29 @@ body {
     padding: 0 20px;
 }
 
-/* ─── Header ─── */
+/* ─── Header (huisstijl wassenaar.nl) ─── */
 .site-header {
     background-color: var(--white);
     color: var(--wassenaar-donker);
-    padding: 1.2rem 0;
-    border-bottom: 2px solid var(--gray-lighter);
+    border-bottom: 2px solid var(--paragraphEvenColor);
 }
 
-.header-inner {
+.header-top {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.header-text {
+    margin-left: auto;
+    text-align: right;
 }
 
 .logo-link {
     display: block;
     flex-shrink: 0;
-    order: 2;
-    margin-left: auto;
-}
-
-.header-nav {
-    order: 3;
-    margin-left: auto;
-    font-size: 0.78rem;
-    color: var(--gray-medium);
-}
-.header-nav-link {
-    color: var(--gray-medium);
-    text-decoration: none;
-}
-.header-nav-link:hover {
-    color: var(--wassenaar-blue);
-    text-decoration: underline;
 }
 
 .site-logo {
@@ -87,17 +98,13 @@ body {
     display: block;
 }
 
-.header-text {
-    order: 1;
-    flex: 1;
-}
 
 .header-text h1 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 500;
     margin: 0 0 0.1rem 0;
     letter-spacing: -0.02em;
-    color: var(--wassenaar-donker);
+    color: var(--primary);
 }
 
 .header-text h1 .header-title-link {
@@ -110,8 +117,166 @@ body {
 
 .subtitle {
     font-size: 0.88rem;
-    color: var(--gray-medium);
+    color: var(--contentColor);
     margin: 0;
+}
+
+/* Zoekbalk boven nav (zoals wassenaar.bestuurlijkeinformatie.nl) */
+.header-zoek {
+    background: var(--paragraphEvenColor);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.header-zoek-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    max-width: 400px;
+    margin-left: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--gray-light);
+}
+
+.header-zoek-inner input {
+    flex: 1;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    border: none;
+    min-width: 0;
+    color: var(--gray-dark);
+}
+
+.header-zoek-inner input::placeholder {
+    color: var(--gray-medium);
+}
+
+.header-zoek-inner input:focus {
+    outline: none;
+}
+
+.header-zoek-inner button {
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.header-zoek-inner button:hover {
+    background: #6b7a24;
+}
+
+.header-zoek-inner button.header-zoek-wis {
+    background: var(--gray-light);
+    color: var(--contentColor);
+}
+
+.header-zoek-inner button.header-zoek-wis:hover {
+    background: var(--gray-medium);
+}
+
+/* Overdrachtsdossier inhoudsopgave */
+.overdrachtsdossier-toc {
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--gray-lighter);
+    border-radius: 8px;
+    border: 1px solid var(--gray-light);
+}
+
+.overdrachtsdossier-toc-titel {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.overdrachtsdossier-toc-lijst {
+    margin: 0;
+    padding-left: 1.25rem;
+    columns: 1;
+}
+
+@media (min-width: 600px) {
+    .overdrachtsdossier-toc-lijst {
+        columns: 2;
+    }
+}
+
+.overdrachtsdossier-toc-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.overdrachtsdossier-toc-link:hover {
+    text-decoration: underline;
+}
+
+/* Topmenu (huisstijl) */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.header-nav-link {
+    color: var(--contentColor);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+}
+.header-nav-link:hover {
+    color: var(--primary);
+    background: rgba(85, 96, 28, 0.08);
+}
+
+/* Navigatiebalk onder header */
+.site-nav-bar {
+    background-color: var(--primary);
+    padding: 0 0 0 0;
+}
+
+.site-nav-bar .container {
+    display: flex;
+    align-items: stretch;
+    padding: 0 20px;
+    gap: 0.5rem;
+}
+
+.site-nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.site-nav-link {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: rgba(255,255,255,0.95);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.15s, color 0.15s;
+}
+
+.site-nav-link:hover {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+.site-nav-link.site-nav-actief {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
 }
 
 /* ─── Hub-overzicht (twee sporen) ─── */
@@ -158,11 +323,11 @@ body {
 }
 
 .hub-kaart-verkiezingen {
-    border-left: 4px solid var(--wassenaar-blue);
+    border-left: 4px solid var(--primary);
 }
 
 .hub-kaart-besluiten {
-    border-left: 4px solid #059669;
+    border-left: 4px solid var(--primary);
 }
 
 .hub-kaart-icoon {
@@ -193,59 +358,242 @@ body {
 }
 
 .hub-kaart-verkiezingen .hub-kaart-cta {
-    color: var(--wassenaar-blue);
+    color: var(--primary);
 }
 
 .hub-kaart-besluiten .hub-kaart-cta {
-    color: #059669;
-}
-
-/* ─── Weergave-toggle (Portefeuille / BBV) ─── */
-.overzicht-weergave-toggle {
-    display: flex;
-    gap: 0;
-    background: var(--gray-lighter);
-    border-radius: 8px;
-    padding: 2px;
-}
-
-.weergave-toggle-btn {
-    padding: 0.4rem 0.75rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border: none;
-    background: transparent;
-    color: var(--gray-medium);
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.15s, color 0.15s;
-}
-
-.weergave-toggle-btn:hover {
-    color: var(--wassenaar-donker);
-}
-
-.weergave-toggle-btn.weergave-toggle-actief {
-    background: var(--white);
-    color: var(--wassenaar-blue);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    color: var(--primary);
 }
 
 /* ─── Zoekbalk (nu onder dossier-titel) ─── */
 .overzicht-kop {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
     margin-bottom: 1rem;
-    flex-wrap: wrap;
 }
 
-.overzicht-kop-links {
+/* Overdrachtsdossier sectie (placeholder voor md-inhoud) */
+.overdrachtsdossier-sectie {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--gray-lighter);
+}
+
+.overdrachtsdossier-titel {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin: 0 0 1rem;
+    font-weight: 500;
+}
+
+.overdrachtsdossier-pagina-titel {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+}
+
+.overdrachtsdossier-pagina-intro {
+    color: var(--contentColor);
+    margin: 0 0 1.5rem;
+    font-size: 0.95rem;
+}
+
+.overdrachtsdossier-inhoud-pagina {
+    color: var(--contentColor);
+    line-height: 1.6;
+}
+
+.overdrachtsdossier-details {
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+.overdrachtsdossier-details-deel .overdrachtsdossier-summary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.overdrachtsdossier-details-deel .overdrachtsdossier-summary:hover {
+    background: #4a5518;
+    color: var(--white);
+}
+
+.overdrachtsdossier-details-deel .overdrachtsdossier-summary::before {
+    color: var(--white);
+}
+
+.overdrachtsdossier-details-deel .overdrachtsdossier-details-inhoud {
+    background: rgba(85, 96, 28, 0.08);
+    border-top-color: rgba(85, 96, 28, 0.2);
+}
+
+.overdrachtsdossier-summary {
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: var(--gray-lighter);
+    list-style: none;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+}
+
+.overdrachtsdossier-summary::-webkit-details-marker { display: none; }
+
+.overdrachtsdossier-summary::before {
+    content: '▶';
+    font-size: 0.7rem;
+    transition: transform 0.2s;
+}
+
+.overdrachtsdossier-details[open] .overdrachtsdossier-summary::before {
+    transform: rotate(90deg);
+}
+
+.overdrachtsdossier-summary:hover {
+    background: var(--gray-light);
+}
+
+.overdrachtsdossier-details-inhoud {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--gray-light);
+}
+
+.overdrachtsdossier-details-inhoud h2 {
+    font-size: 1.1rem;
+    margin: 1.25rem 0 0.5rem;
+}
+
+.overdrachtsdossier-details-inhoud h2:first-child { margin-top: 0; }
+
+.overdrachtsdossier-details-inhoud h3 {
+    font-size: 1rem;
+    margin: 1rem 0 0.4rem;
+}
+
+.overdrachtsdossier-details-inhoud p {
+    margin: 0 0 0.75rem;
+}
+
+.overdrachtsdossier-details-inhoud h3 + p,
+.overdrachtsdossier-details-inhoud h2 + p { margin-top: 0; }
+
+.overdrachtsdossier-details-inhoud ul {
+    margin: 0.5rem 0 1rem 1.5rem;
+    padding-left: 1rem;
+    list-style-type: disc;
+}
+
+.overdrachtsdossier-details-inhoud li {
+    margin-bottom: 0.4rem;
+}
+
+/* Markering van zoektreffers in overdrachtsdossier */
+.od-zoek-treffer {
+    background: #fef08a;
+    padding: 0.1em 0.15em;
+    border-radius: 2px;
+}
+
+.overdracht-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.overdracht-tabel th,
+.overdracht-tabel td {
+    border: 1px solid var(--gray-light);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+
+.overdracht-tabel th {
+    background: var(--gray-lighter);
+    font-weight: 500;
+}
+
+.overdrachtsdossier-placeholder {
+    font-style: italic;
+    color: var(--gray-medium);
+}
+
+#odNoResults {
+    background: #fef08a;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--contentColor);
+}
+
+.skip-link-inline {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+}
+
+.skip-link-inline:focus {
+    left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Compliance sectie */
+.compliance-sectie {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--gray-lighter);
+}
+
+.compliance-titel {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin: 0 0 0.5rem;
+    font-weight: 500;
+}
+
+.compliance-intro {
+    color: var(--contentColor);
+    margin: 0 0 1.25rem;
+    font-size: 0.95rem;
+}
+
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1rem;
-    flex-wrap: wrap;
+}
+
+.compliance-kaart {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+}
+
+.compliance-kaart h3 {
+    font-size: 1rem;
+    color: var(--primary);
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+}
+
+.compliance-kaart p {
+    font-size: 0.9rem;
+    color: var(--contentColor);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.compliance-kaart code {
+    font-size: 0.85em;
+    background: var(--gray-lighter);
+    padding: 0.15em 0.35em;
+    border-radius: 4px;
 }
 
 .overzicht-tabs {
@@ -270,7 +618,7 @@ body {
 
 .overzicht-tab:hover {
     background: rgba(255, 255, 255, 0.6);
-    color: var(--wassenaar-blue);
+    color: var(--primary);
 }
 
 .overzicht-tab-actief {
@@ -310,7 +658,7 @@ body {
 
 .overzicht-zoek button {
     padding: 0.5rem 1rem;
-    background: var(--wassenaar-blue);
+    background: var(--primary);
     color: var(--white);
     border: none;
     font-size: 0.78rem;
@@ -322,7 +670,7 @@ body {
 }
 
 .overzicht-zoek button:hover {
-    background: var(--wassenaar-light-blue);
+    background: #6b7a24;
 }
 
 /* ─── Dossier-overzicht (startpagina) ─── */
@@ -1587,7 +1935,7 @@ body.toon-begroting .dossier-kaart-begroting {
     }
 }
 
-/* ─── Footer ─── */
+/* ─── Footer (BBW huisstijl) ─── */
 .site-footer {
     background-color: var(--wassenaar-donker);
     color: var(--white);
@@ -1604,6 +1952,12 @@ body.toon-begroting .dossier-kaart-begroting {
 
 .site-footer a:hover {
     text-decoration: underline;
+}
+
+.footer-contact {
+    font-size: 0.85rem;
+    margin: 0.4rem 0 0;
+    opacity: 0.9;
 }
 
 /* ─── Verificatie-systeem ─── */
@@ -1951,10 +2305,6 @@ body.review-mode .review-mode-toggle {
 }
 
 @media (max-width: 768px) {
-    .header-inner {
-        flex-wrap: wrap;
-        gap: 0.75rem;
-    }
     .header-text h1 {
         font-size: 1.5rem;
     }
@@ -2001,8 +2351,28 @@ body.review-mode .review-mode-toggle {
 }
 
 @media (max-width: 600px) {
-    .site-header {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
         padding: 0.75rem 0;
+    }
+    .header-text {
+        margin-left: 0;
+        text-align: left;
+    }
+    .header-nav {
+        width: 100%;
+    }
+    .site-nav-bar .container {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .header-zoek-inner {
+        max-width: none;
+    }
+    .site-nav-link {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.88rem;
     }
     .site-logo {
         height: 36px;
@@ -2048,9 +2418,6 @@ body.review-mode .review-mode-toggle {
 @media (max-width: 380px) {
     .container {
         padding: 0 10px;
-    }
-    .header-inner {
-        gap: 0.5rem;
     }
     .site-logo {
         height: 30px;
