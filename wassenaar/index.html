@@ -306,13 +306,38 @@
 
     <main class="container">
 
+        <section class="hub-overzicht" id="hubOverzicht" style="display:none">
+            <h2 class="hub-titel">Kies een onderdeel</h2>
+            <p class="hub-intro">Inzicht in beleid en besluitvorming Wassenaar — analyse van verkiezingsprogramma's en raads- en collegebesluiten.</p>
+            <div class="hub-kaarten">
+                <a href="verkiezingen/" class="hub-kaart hub-kaart-verkiezingen">
+                    <span class="hub-kaart-icoon">📊</span>
+                    <span class="hub-kaart-naam">Verkiezingsprogramma's 2026</span>
+                    <span class="hub-kaart-omschrijving">9 partijen · 21 zetels · Analyse per BBV-taakveld, samenvatting, raakvlakken, interactief netwerk</span>
+                    <span class="hub-kaart-cta">Bekijk analyse →</span>
+                </a>
+                <a href="#dossierOverzicht" class="hub-kaart hub-kaart-besluiten">
+                    <span class="hub-kaart-icoon">📋</span>
+                    <span class="hub-kaart-naam">Besluit-Wijzer</span>
+                    <span class="hub-kaart-omschrijving">Raads- en collegebesluiten · Per portefeuille én per BBV-taakveld · Coalitieakkoord · Beleidssamenvattingen</span>
+                    <span class="hub-kaart-cta">Bekijk besluiten →</span>
+                </a>
+            </div>
+        </section>
+
         <section class="dossier-overzicht" id="dossierOverzicht">
             <div class="overzicht-kop">
-                <nav class="overzicht-tabs" aria-label="Pagina's">
-                    <span class="overzicht-tab overzicht-tab-actief">Beleidsdossiers</span>
-                    <!-- Roadmap en Verbeterpunten tijdelijk verborgen (pas op de plaats, zie OVERDRACHTSDOSSIER.md) -->
-                    <a href="schrijf-wijzer/schrijf-wijzer-formulier.html" class="overzicht-tab">Schrijfwijzer (beta)</a>
-                </nav>
+                <div class="overzicht-kop-links">
+                    <nav class="overzicht-tabs" aria-label="Pagina's">
+                        <span class="overzicht-tab overzicht-tab-actief">Beleidsdossiers</span>
+                        <a href="verkiezingen/" class="overzicht-tab">Verkiezingsprogramma's 2026</a>
+                        <a href="schrijf-wijzer/schrijf-wijzer-formulier.html" class="overzicht-tab">Schrijfwijzer (beta)</a>
+                    </nav>
+                    <div class="overzicht-weergave-toggle" aria-label="Weergave Besluit-Wijzer">
+                        <button type="button" id="togglePortefeuille" class="weergave-toggle-btn weergave-toggle-actief">Portefeuille</button>
+                        <button type="button" id="toggleBBV" class="weergave-toggle-btn">BBV-taakveld</button>
+                    </div>
+                </div>
                 <div class="overzicht-zoek">
                     <input type="text" id="searchInput" placeholder="Zoek op onderwerp of trefwoord…">
                     <button id="searchBtn" type="button">ZOEK</button>
@@ -328,6 +353,11 @@
                 <h2 class="dossier-kop-titel" id="dossierTitel"></h2>
             </div>
             <div id="subTegels" class="sub-tegels"></div>
+            <div id="overdrachtsdossierBlok" class="overdrachtsdossier-blok" style="display:none;">
+                <h3 class="overdrachtsdossier-kop">DIT STAAT ER IN HET OVERDRACHTSDOSSIER</h3>
+                <p class="overdrachtsdossier-bron">Bron: Overdrachtsdossier raadsverkiezingen 2026, hoofdstuk 7 — Sociaal Domein en asielopvang (papier aan raadsleden). Mapping: OD hoofdstuk 7 = BBV 6 (Sociaal domein).</p>
+                <div id="overdrachtsdossierInhoud" class="overdrachtsdossier-inhoud"></div>
+            </div>
             <div id="subBreadcrumb" class="sub-breadcrumb" style="display:none;"></div>
             <div id="samenvattingGeselecteerdBlok" class="samenvatting-geselecteerd-blok" style="display:none;">
                 <h3 id="samenvattingGeselecteerdTitel" class="samenvatting-geselecteerd-titel"></h3>
@@ -336,6 +366,11 @@
             <div id="samenvattingPerThemaBlok" class="samenvatting-per-thema-blok" style="display:none;">
                 <h3 class="samenvatting-per-thema-kop">Samenvatting per thema</h3>
                 <div id="samenvattingPerThemaInhoud" class="samenvatting-per-thema-grid"></div>
+            </div>
+            <div id="beleidsnotaBlok" class="beleidsnota-blok" style="display:none;">
+                <h3 class="beleidsnota-kop">Beleidsnota's en losse stukken</h3>
+                <p class="beleidsnota-intro">Essentiële beleidsdocumenten bij dit onderwerp:</p>
+                <ul id="beleidsnotaLijst" class="beleidsnota-lijst"></ul>
             </div>
             <details class="briefing-blok" id="briefingBlok">
                 <summary class="briefing-kop">
@@ -465,36 +500,35 @@
                     <span>Kwaliteit & Verantwoording</span>
                 </summary>
                 <div id="kwaliteitInhoud" class="kwaliteit-inhoud"></div>
+                <div class="bronnen-sectie" id="bronnenSectie">
+                    <h4 class="bronnen-titel">Bronnen</h4>
+                    <p class="bronnen-intro">Besluit-Wijzer Wassenaar gebruikt uitsluitend openbare overheidsbronnen:</p>
+                    <div class="bronnen-lijst">
+                        <div class="bron-item">
+                            <span class="bron-icoon">📋</span>
+                            <div>
+                                <a href="https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area%3D%3D%22officielepublicaties%22)%20AND%20(dt.creator%3D%3D%22Wassenaar%22)%20AND%20w.publicatienaam%3D%3D%22Gemeenteblad%22&zession=cleared" target="_blank" rel="noopener" class="bron-link">Officiële Bekendmakingen — Gemeenteblad Wassenaar</a>
+                                <p class="bron-detail">4.994 publicaties uit 2022–2025 · Verordeningen, vergunningen, verkeersbesluiten, beleidsregels en meer<br>
+                                API: <code>repository.overheid.nl/sru</code> · Laatst opgehaald: februari 2026</p>
+                            </div>
+                        </div>
+                        <div class="bron-item">
+                            <span class="bron-icoon">🏛️</span>
+                            <div>
+                                <a href="https://wassenaar.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="bron-link">iBabs — Raadsinformatiesysteem Wassenaar</a>
+                                <p class="bron-detail">3.137 raads- en collegebesluiten uit 2019–2025 · Inclusief volledige besluittekst en agenda-informatie</p>
+                            </div>
+                        </div>
+                        <div class="bron-item">
+                            <span class="bron-icoon">📝</span>
+                            <div>
+                                <a href="https://www.wassenaar.nl/coalitieakkoord" target="_blank" rel="noopener" class="bron-link">Coalitieakkoord 2022–2026 &ldquo;Samen voor Wassenaar&rdquo;</a>
+                                <p class="bron-detail">VVD, D66, CDA en Hart voor Wassenaar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </details>
-        </section>
-
-        <section class="bronnen-sectie" id="bronnenSectie">
-            <h2 class="bronnen-titel">Bronnen</h2>
-            <p class="bronnen-intro">Besluit-Wijzer Wassenaar gebruikt uitsluitend openbare overheidsbronnen:</p>
-            <div class="bronnen-lijst">
-                <div class="bron-item">
-                    <span class="bron-icoon">📋</span>
-                    <div>
-                        <a href="https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area%3D%3D%22officielepublicaties%22)%20AND%20(dt.creator%3D%3D%22Wassenaar%22)%20AND%20w.publicatienaam%3D%3D%22Gemeenteblad%22&zession=cleared" target="_blank" rel="noopener" class="bron-link">Officiële Bekendmakingen — Gemeenteblad Wassenaar</a>
-                        <p class="bron-detail">4.994 publicaties uit 2022–2025 · Verordeningen, vergunningen, verkeersbesluiten, beleidsregels en meer<br>
-                        API: <code>repository.overheid.nl/sru</code> · Laatst opgehaald: februari 2026</p>
-                    </div>
-                </div>
-                <div class="bron-item">
-                    <span class="bron-icoon">🏛️</span>
-                    <div>
-                        <a href="https://wassenaar.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="bron-link">iBabs — Raadsinformatiesysteem Wassenaar</a>
-                        <p class="bron-detail">3.137 raads- en collegebesluiten uit 2019–2025 · Inclusief volledige besluittekst en agenda-informatie</p>
-                    </div>
-                </div>
-                <div class="bron-item">
-                    <span class="bron-icoon">📝</span>
-                    <div>
-                        <a href="https://www.wassenaar.nl/coalitieakkoord" target="_blank" rel="noopener" class="bron-link">Coalitieakkoord 2022–2026 &ldquo;Samen voor Wassenaar&rdquo;</a>
-                        <p class="bron-detail">VVD, D66, CDA en Hart voor Wassenaar</p>
-                    </div>
-                </div>
-            </div>
         </section>
 
     </main>
@@ -506,7 +540,7 @@
     </footer>
 
     <script src="data.js"></script>
-    <script src="briefings.js"></script>
+    <script src="briefings.js?v=20260318b"></script>
     <script src="coalitieakkoord.js"></script>
     <script src="app.js"></script>
 </body>

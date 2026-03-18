@@ -114,6 +114,123 @@ body {
     margin: 0;
 }
 
+/* ─── Hub-overzicht (twee sporen) ─── */
+.hub-overzicht {
+    padding: 2rem 0 2.5rem;
+    border-bottom: 2px solid var(--gray-lighter);
+    margin-bottom: 2rem;
+}
+
+.hub-titel {
+    font-size: 1.35rem;
+    margin: 0 0 0.5rem;
+    color: var(--wassenaar-donker);
+}
+
+.hub-intro {
+    color: var(--gray-medium);
+    font-size: 0.95rem;
+    margin: 0 0 1.5rem;
+    line-height: 1.5;
+}
+
+.hub-kaarten {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+}
+
+.hub-kaart {
+    display: block;
+    padding: 1.5rem 1.75rem;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+}
+
+.hub-kaart:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.hub-kaart-verkiezingen {
+    border-left: 4px solid var(--wassenaar-blue);
+}
+
+.hub-kaart-besluiten {
+    border-left: 4px solid #059669;
+}
+
+.hub-kaart-icoon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.hub-kaart-naam {
+    display: block;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+    color: var(--wassenaar-donker);
+}
+
+.hub-kaart-omschrijving {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+    line-height: 1.45;
+    margin-bottom: 0.75rem;
+}
+
+.hub-kaart-cta {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.hub-kaart-verkiezingen .hub-kaart-cta {
+    color: var(--wassenaar-blue);
+}
+
+.hub-kaart-besluiten .hub-kaart-cta {
+    color: #059669;
+}
+
+/* ─── Weergave-toggle (Portefeuille / BBV) ─── */
+.overzicht-weergave-toggle {
+    display: flex;
+    gap: 0;
+    background: var(--gray-lighter);
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.weergave-toggle-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    color: var(--gray-medium);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.weergave-toggle-btn:hover {
+    color: var(--wassenaar-donker);
+}
+
+.weergave-toggle-btn.weergave-toggle-actief {
+    background: var(--white);
+    color: var(--wassenaar-blue);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
 /* ─── Zoekbalk (nu onder dossier-titel) ─── */
 .overzicht-kop {
     display: flex;
@@ -121,6 +238,13 @@ body {
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.overzicht-kop-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
@@ -1019,6 +1143,88 @@ body.toon-begroting .dossier-kaart-begroting {
     margin-bottom: 1.5rem;
 }
 
+/* ─── Overdrachtsdossier-blok (BBV 6. Sociaal domein) ─── */
+.overdrachtsdossier-blok {
+    margin: 1.75rem 0 2rem;
+    padding: 1.75rem 2rem;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-left: 4px solid var(--wassenaar-blue);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+.overdrachtsdossier-kop {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--wassenaar-donker);
+    line-height: 1.4;
+}
+.overdrachtsdossier-bron {
+    font-size: 0.8rem;
+    color: var(--gray-medium);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+.overdrachtsdossier-inhoud {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--gray-dark);
+    max-width: 42em;
+}
+.overdrachtsdossier-inhoud p {
+    margin: 0 0 1rem;
+}
+.overdrachtsdossier-inhoud h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.6rem;
+    color: var(--wassenaar-donker);
+}
+.overdrachtsdossier-inhoud h4:first-of-type {
+    margin-top: 0;
+}
+.overdrachtsdossier-inhoud ul {
+    margin: 0.4rem 0 1rem 1.2rem;
+    padding-left: 0.5rem;
+}
+.overdrachtsdossier-inhoud li {
+    margin-bottom: 0.5rem;
+}
+.overdrachtsdossier-inhoud .overdracht-doclist a {
+    color: var(--wassenaar-blue);
+    text-decoration: none;
+}
+.overdrachtsdossier-inhoud .overdracht-doclist a:hover {
+    text-decoration: underline;
+}
+.overdrachtsdossier-inhoud .overdracht-details {
+    margin-top: 0.75rem;
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 0.75rem;
+}
+.overdrachtsdossier-inhoud .overdracht-details:last-of-type {
+    border-bottom: none;
+}
+.overdrachtsdossier-inhoud .overdracht-details summary {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--wassenaar-donker);
+    cursor: pointer;
+    list-style: none;
+    padding: 0.4rem 0;
+}
+.overdrachtsdossier-inhoud .overdracht-details summary::-webkit-details-marker { display: none; }
+.overdrachtsdossier-inhoud .overdracht-details summary::before {
+    content: '▸ ';
+    color: var(--wassenaar-blue);
+    margin-right: 0.25rem;
+}
+.overdrachtsdossier-inhoud .overdracht-details[open] summary::before {
+    content: '▾ ';
+}
+
 .sub-tegels-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1075,6 +1281,19 @@ body.toon-begroting .dossier-kaart-begroting {
     gap: 0.4rem;
 }
 
+.sub-kaart-code {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray-medium);
+    margin-right: 0.4rem;
+    flex-shrink: 0;
+}
+.sub-kaart-taakveld .sub-kaart-code {
+    font-family: ui-monospace, monospace;
+}
+.sub-kaart-actief .sub-kaart-code {
+    color: rgba(255,255,255,0.85);
+}
 .sub-kaart-naam {
     font-weight: 600;
     font-size: 0.85rem;
@@ -1182,6 +1401,63 @@ body.toon-begroting .dossier-kaart-begroting {
     line-height: 1.55;
     color: var(--gray-medium);
     margin: 0;
+}
+
+.beleidsnota-blok {
+    background: #fff;
+    border: 1px solid var(--gray-light);
+    border-left: 4px solid var(--wassenaar-blue);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.beleidsnota-kop {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--wassenaar-donker);
+    margin: 0 0 0.5rem;
+}
+.beleidsnota-intro {
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+    margin: 0 0 0.75rem;
+}
+.beleidsnota-lijst {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.beleidsnota-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-light);
+    font-size: 0.95rem;
+}
+.beleidsnota-item:last-child { border-bottom: none; }
+.beleidsnota-link {
+    color: var(--wassenaar-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+.beleidsnota-link:hover { text-decoration: underline; }
+.beleidsnota-meta {
+    color: var(--gray-medium);
+    font-size: 0.9em;
+    font-weight: 400;
+}
+.beleidsnota-type {
+    font-size: 0.85em;
+    background: rgba(0,96,172,.1);
+    color: var(--wassenaar-blue);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+}
+.beleidsnota-toelichting {
+    margin: 0.4rem 0 0;
+    font-size: 0.9em;
+    color: var(--gray-medium);
+    font-style: italic;
+    line-height: 1.4;
 }
 
 .samenvatting-per-thema-blok {
@@ -1863,6 +2139,51 @@ body.review-mode .review-mode-toggle {
 }
 .kwaliteit-inhoud {
     padding: 1.5rem 2rem 2rem;
+}
+.kwaliteit-sectie .bronnen-sectie {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-light);
+    padding: 1.5rem 2rem 2rem;
+}
+.kwaliteit-sectie .bronnen-titel {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--wassenaar-donker);
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.kwaliteit-sectie .bronnen-intro {
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+    margin: 0 0 1rem;
+}
+.kwaliteit-sectie .bron-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--gray-lighter);
+}
+.kwaliteit-sectie .bron-item:last-child {
+    border-bottom: none;
+}
+.kwaliteit-sectie .bron-icoon {
+    font-size: 1.25rem;
+}
+.kwaliteit-sectie .bron-link {
+    color: var(--wassenaar-blue);
+    font-weight: 500;
+    text-decoration: none;
+}
+.kwaliteit-sectie .bron-link:hover {
+    text-decoration: underline;
+}
+.kwaliteit-sectie .bron-detail {
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+    margin: 0.25rem 0 0;
+    line-height: 1.5;
 }
 
 .kw-grid {
