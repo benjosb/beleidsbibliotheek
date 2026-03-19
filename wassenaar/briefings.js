@@ -117,7 +117,7 @@ const BRIEFING_HTML_DATA = {
     <div class="subtitle">Portefeuille Burgemeester</div>
     <div class="meta">
         Gemeente Wassenaar · Collegeperiode 2022–2026 · CONCEPT — verificatie door beleidsadviseurs vereist<br>
-        Gegenereerd: februari 2026 · Bronnen: 6 raadsbesluiten + ~1994 collegebesluiten + coalitieakkoord 2022
+        Gegenereerd: maart 2026 · Bronnen: 6 raadsbesluiten + ~1994 collegebesluiten + coalitieakkoord 2022
     </div>
 </header>
 
@@ -356,7 +356,7 @@ const BRIEFING_HTML_DATA = {
     <div class="subtitle">Portefeuille Wethouder Financiën, Economie en Sport</div>
     <div class="meta">
         Gemeente Wassenaar · Collegeperiode 2022–2026 · CONCEPT — verificatie door beleidsadviseurs vereist<br>
-        Gegenereerd: februari 2026 · Bronnen: 28 raadsbesluiten + 233 collegebesluiten + coalitieakkoord 2022
+        Gegenereerd: maart 2026 · Bronnen: 28 raadsbesluiten + 233 collegebesluiten + coalitieakkoord 2022
     </div>
 </header>
 
@@ -664,7 +664,7 @@ const BRIEFING_HTML_DATA = {
     <div class="subtitle">Portefeuille Wethouder Koetsier (CDA)</div>
     <div class="meta">
         Gemeente Wassenaar · Collegeperiode 2022–2026 · CONCEPT — verificatie door beleidsadviseurs vereist<br>
-        Gegenereerd: februari 2026 · Bronnen: 22 raadsbesluiten + 334 collegebesluiten + coalitieakkoord 2022
+        Gegenereerd: maart 2026 · Bronnen: 22 raadsbesluiten + 334 collegebesluiten + coalitieakkoord 2022
     </div>
 </header>
 
@@ -916,6 +916,39 @@ const BRIEFING_HTML_DATA = {
             font-size: 0.8rem;
             color: #999;
         }
+        .overdracht-container {
+            margin: 2.5rem 0;
+            padding: 1.5rem 1.75rem;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
+            border: 2px solid var(--wassenaar-blue);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,96,172,.12);
+        }
+        .overdracht-container h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--wassenaar-blue);
+            border: none;
+            padding: 0;
+        }
+        .overdracht-container .bron-ref {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .overdracht-container h3 {
+            font-size: 1rem;
+            margin: 1.25rem 0 0.5rem;
+        }
+        .overdracht-container ul {
+            margin: 0.5rem 0 1rem 1.25rem;
+            font-size: 0.95rem;
+        }
+        .overdracht-container li {
+            margin-bottom: 0.35rem;
+        }
         @media print {
             body { max-width: 100%; padding: 1cm; font-size: 11pt; }
             .ref { color: #333; }
@@ -930,9 +963,53 @@ const BRIEFING_HTML_DATA = {
     <div class="subtitle">Portefeuille Wethouder Sociaal, Wonen en Onderwijs</div>
     <div class="meta">
         Gemeente Wassenaar · Collegeperiode 2022–2026 · CONCEPT — verificatie door beleidsadviseurs vereist<br>
-        Gegenereerd: februari 2026 · Bronnen: 14 raadsbesluiten + 352 collegebesluiten + coalitieakkoord 2022
+        Gegenereerd: maart 2026 · Bronnen: 14 raadsbesluiten + 352 collegebesluiten + coalitieakkoord 2022
     </div>
 </header>
+
+<div class="overdracht-container">
+    <h2>DIT STAAT ER IN HET OVERDRACHTSDOSSIER</h2>
+    <p class="bron-ref">Bron: Overdrachtsdossier raadsverkiezingen 2026, hoofdstuk 7 — Sociaal Domein en asielopvang (papier aan raadsleden). Mapping: OD hoofdstuk 7 = BBV programma 8 (Mens en Maatschappij).</p>
+
+    <h3>Kernboodschap</h3>
+    <p>Het sociaal domein staat onder druk: dubbele vergrijzing, complexere hulpvragen, kosten die voor de baten uitgaan. De gemeente moet investeren in de voorkant (preventie, vroegsignalering, sociale basis) om later dure specialistische zorg te voorkomen. Het Sociaal Team Wassenaar (STW) is het centrale punt waar zorg, participatie en jeugdhulp samenkomen. Daarnaast spelen asielopvang (azc Duinrell tot 2028) en huisvesting statushouders (trede 4 Interventieladder) een grote rol.</p>
+
+    <h3>7.1 Waar staan we?</h3>
+    <ul>
+        <li><strong>Sociaal Team Wassenaar (STW):</strong> Actief sinds sept 2023. Netwerkorganisatie met 8 partners (o.a. Gro-up, JGZ, Kanslokaal, Kwadraad, MEE, SMOW). Toegangspoort voor Wmo en Jeugdwet. 500 adviesgesprekken, 149 jeugdwet-dossiers (2025).</li>
+        <li><strong>Sociale basis:</strong> Welzijn, preventie, verbinding met verenigingen en vrijwilligers. Gezondheidsbeleid via GGD Haaglanden.</li>
+        <li><strong>Adviesraad Sociaal Domein:</strong> Onafhankelijke raad adviseert over nieuw beleid.</li>
+        <li><strong>Jeugdwet:</strong> Toegang via STW, POH Jeugd bij huisartsen. SbJH voor specialistische zorg. Verordening Jeugdhulp 2025 vastgesteld. Hervormingsagenda Jeugd: meer preventie, minder specialistiek.</li>
+        <li><strong>Wmo:</strong> Vergrijzing drijft vraag. Nieuwe Wmo-verordening maart 2026. Huishoudelijke hulp zelf ingekocht; begeleiding/dagbesteding via H6-regio. Beschermd wonen: Leger des Heils 28–31 plekken in Wassenaar.</li>
+        <li><strong>Participatiewet:</strong> Uitvoering door Leidschendam-Voorburg. Dynamisch Minimabeleid, herzien re-integratie- en schuldhulpbeleid. Beschut werken via Provalu (GR KDB).</li>
+        <li><strong>Asielopvang:</strong> Azc Duinrell, 930 plekken, overeenkomst tot maart 2028. 44 AMV's op locatie.</li>
+        <li><strong>Statushouders:</strong> Taakstelling ~44/jaar. Begin 2026 nog 21 uit 2025 op wachtlijst. Wassenaar op trede 4 Interventieladder.</li>
+        <li><strong>Oekraïners:</strong> 99 plekken (50 administratief ANWB-gebouw Den Haag, rest Villa Sijthoff, Deijlerhoeve).</li>
+    </ul>
+
+    <h3>7.2 Opgaven voor de komende jaren</h3>
+    <ul>
+        <li><strong>STW:</strong> Versterken — meer vroegsignalering, lichte ondersteuning zelf oppakken, betere afstemming met huisartsen/scholen.</li>
+        <li><strong>Sociale basis:</strong> Nauwere samenwerking met welzijn, verenigingen, onderwijs, bibliotheek. Kwetsbaarheid: veel vrijwilligers zijn ouderen.</li>
+        <li><strong>Jeugdwet:</strong> Hervormingsagenda, Reikwijdte Jeugdwet, nieuwe inkoopstructuur per 1 jan 2028. Kosten stijgen, wachttijden oplopen.</li>
+        <li><strong>Wmo:</strong> Dubbele vergrijzing, respijtzorg, eigen bijdrage 2027, meer autonomie wijkverpleging. Wonen met zorg: integrale aanpak nodig.</li>
+        <li><strong>Participatiewet:</strong> Participatiewet in Balans, Beleidsnota Inburgering Q4 2026, preventieve schuldhulp versterken.</li>
+        <li><strong>Asielopvang:</strong> Vervolg na maart 2028 bepalen. Spreidingswet: 150 plekken. Uitruil met andere gemeenten mogelijk.</li>
+        <li><strong>Statushouders:</strong> Trede 4 — urgent. Huisvestingsplan, Doelgroep Flexibele Regeling (2026). Risico: provincie neemt over in 2027.</li>
+        <li><strong>Oekraïners:</strong> Tijdelijke bescherming afloop maart 2027 → transitiedocument, recht op reguliere huisvesting.</li>
+    </ul>
+
+    <h3>7.3 Aandachtspunten</h3>
+    <ul>
+        <li><strong>Investeren in voorkant:</strong> Kosten gaan voor baten uit. Alleen door vroeg meer hulp te bieden kan later dure zorg worden voorkomen.</li>
+        <li><strong>Keuzes maken:</strong> Zonder keuzes lopen kosten op, komt toegankelijkheid onder druk.</li>
+        <li><strong>STW en sociale basis:</strong> Centrale rol versterken, samenwerking met huisartsen/onderwijs/welzijn essentieel.</li>
+        <li><strong>Woonzorg:</strong> Passende woonvormen voor ouderen, psychische problemen, jeugdhulp-uitstromers. Anders: knelpunten veiligheid en leefbaarheid.</li>
+        <li><strong>Preventieve schuldhulp:</strong> Financiële problemen vroeg aanpakken.</li>
+        <li><strong>Azc 2028:</strong> Tijdige besluitvorming over vervolg opvang. Scenario voorbereiden als locatie sluit.</li>
+        <li><strong>Trede 4 + Oekraïners:</strong> Regie behouden over opvang en huisvesting. Oekraïners vanaf 2027 recht op reguliere woning.</li>
+    </ul>
+</div>
 
 <h2>1. Samenvatting</h2>
 
@@ -1207,7 +1284,7 @@ const BRIEFING_HTML_DATA = {
     <div class="subtitle">Portefeuille Cultuur &amp; Welzijn</div>
     <div class="meta">
         Gemeente Wassenaar · Collegeperiode 2022–2026 · CONCEPT — verificatie door beleidsadviseurs vereist<br>
-        Gegenereerd: februari 2026 · Bronnen: 4 raadsbesluiten + 197 collegebesluiten + coalitieakkoord 2022
+        Gegenereerd: maart 2026 · Bronnen: 4 raadsbesluiten + 197 collegebesluiten + coalitieakkoord 2022
     </div>
 </header>
 
@@ -1493,7 +1570,7 @@ const BRIEFING_HTML_DATA = {
     <div class="subtitle">College-breed</div>
     <div class="meta">
         Gemeente Wassenaar · Collegeperiode 2022–2026 · CONCEPT — verificatie door beleidsadviseurs vereist<br>
-        Gegenereerd: februari 2026 · Bronnen: 0 raadsbesluiten + 260 collegebesluiten + coalitieakkoord 2022
+        Gegenereerd: maart 2026 · Bronnen: 0 raadsbesluiten + 260 collegebesluiten + coalitieakkoord 2022
     </div>
 </header>
 

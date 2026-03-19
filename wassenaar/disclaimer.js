@@ -9,12 +9,12 @@
     const DISCLAIMER_HTML = `
         <div id="disclaimerOverlay" class="disclaimer-overlay" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitel">
             <div class="disclaimer-modal">
-                <h2 id="disclaimerTitel" class="disclaimer-titel">Let op</h2>
+                <h2 id="disclaimerTitel" class="disclaimer-titel">Over deze Besluit-Wijzer</h2>
                 <div class="disclaimer-tekst">
-                    <p>De Besluit-Wijzer is een <strong>experimenteel instrument</strong> in ontwikkeling. De informatie is samengesteld uit openbare bronnen en kan onvolledig of verouderd zijn.</p>
-                    <p>Gebruik deze tool niet als enige bron voor beleidsbeslissingen. Raadpleeg bij twijfel altijd de officiële documenten via <a href="https://wassenaar.bestuurlijkeinformatie.nl" target="_blank" rel="noopener">wassenaar.bestuurlijkeinformatie.nl</a> of de gemeente.</p>
+                    <p>De Besluit-Wijzer is tot stand gekomen door zorgvuldige toepassing van AI op openbare bronnen: raads- en collegebesluiten via iBabs, Officiële Bekendmakingen en het coalitieakkoord. Er is zo veel mogelijk zorgvuldigheid toegepast.</p>
+                    <p>Door het grote aantal bronbestanden is volledige handmatige controle echter niet mogelijk. Daarom zijn bij elk besluit verwijzingen naar de bron opgenomen. Raadpleeg bij twijfel altijd de officiële documenten via <a href="https://wassenaar.bestuurlijkeinformatie.nl" target="_blank" rel="noopener">wassenaar.bestuurlijkeinformatie.nl</a> of de gemeente.</p>
                 </div>
-                <button type="button" id="disclaimerAkkoord" class="disclaimer-btn">Ik heb gelezen en ga akkoord</button>
+                <button type="button" id="disclaimerAkkoord" class="disclaimer-btn">Ik begrijp het en ga verder</button>
             </div>
         </div>
     `;

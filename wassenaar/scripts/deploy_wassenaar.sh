@@ -25,7 +25,7 @@ echo "=== Deploy wassenaar.besluit-wijzer.nl ==="
 echo ""
 
 echo "1. Besluiten, Schrijf-Wijzer, Overdrachtsdossier, Roadmap..."
-scp $SSH_OPTS index.html data.js app.js app_v5.js app_v6.js disclaimer.js overdrachtsdossier.html overdrachtsdossier.js roadmap.html verbeterpunten-beheer.html viewer.html styles.css "wassenaar_logo_fc kopie.svg" "${REMOTE}:${REMOTE_PATH}/"
+scp $SSH_OPTS index.html data.js app.js app_v5.js app_v6.js disclaimer.js overdrachtsdossier.html overdrachtsdossier.js beleidsnotas.html beleidsnotas.js roadmap.html verbeterpunten-beheer.html viewer.html styles.css "wassenaar_logo_fc kopie.svg" "${REMOTE}:${REMOTE_PATH}/"
 ssh $SSH_OPTS "${REMOTE}" "mkdir -p ${REMOTE_PATH}/scripts ${REMOTE_PATH}/schrijf-wijzer"
 scp $SSH_OPTS scripts/domeinclustering.py "${REMOTE}:${REMOTE_PATH}/scripts/"
 scp $SSH_OPTS -r schrijf-wijzer/* "${REMOTE}:${REMOTE_PATH}/schrijf-wijzer/"

@@ -1676,32 +1676,27 @@ Een nieuwe bestuursperiode biedt Wassenaar een goede gelegenheid om het gehele b
 
 Raadsbevoegdheid:
 
-Visiedocumenten: is kaderstellend en geeft richting.
-
+I. Visiedocumenten: is kaderstellend en geeft richting.
 Voorbeelden zijn: Omgevingsvisie, Integraal Veiligheidsbeleid 2024–2027, Beleidsplan Sociaal Domein Wassenaar 2024
 
-Beleidsdocumenten: een uitwerking van de visie. Kan wettelijke bepaald zijn.
-
+II. Beleidsdocumenten: een uitwerking van de visie. Kan wettelijke bepaald zijn.
 Voorbeelden zijn: De gemeentelijke aanpak bestrijding ondernemende criminaliteit Wassenaar 2025–2028, Beleidsnota Schuldhulpverlening Wassenaar 2025–2028
 
-Juridische verankering: het formeel vastleggen van beleid in een gemeentelijke verordening of ander wettelijk kader, zodat het duidelijk, bindend en uitvoerbaar is voor zowel college als organisatie.
-
+III. Juridische verankering: het formeel vastleggen van beleid in een gemeentelijke verordening of ander wettelijk kader, zodat het duidelijk, bindend en uitvoerbaar is voor zowel college als organisatie.
 Voorbeelden zijn: Omgevingsplan, Algemene plaatselijke verordening (APV) Wassenaar 2024, Verordening Jeugdhulp gemeente Wassenaar 2025
 
-Vaststellen van financiële kaders: verplichte planning- en controlproducten
-
+IV. Vaststellen van financiële kaders: verplichte planning- en controlproducten
 Voorbeelden zijn: de begroting, de kadernota, de voorjaarsnota (zie ook hoofdstuk 3)
 
-Zienswijzen op Gemeenschappelijke Regelingen:
-
+V. Zienswijzen op Gemeenschappelijke Regelingen:
 De gemeenteraad heeft het wettelijke recht een zienswijze in te dienen op het ontwerp van een gemeenschappelijke regeling, evenals op de begroting van de GR.
 
 Collegebevoegdheid:
 
-Programma’s; thematische bundels van activiteiten en doelen die samen bijdragen aan het realiseren van maatschappelijke opgaven binnen de gemeente. 
+I. Programma’s: thematische bundels van activiteiten en doelen die samen bijdragen aan het realiseren van maatschappelijke opgaven binnen de gemeente.
 Voorbeelden zijn: Gebiedsprogramma’s, Uitvoeringsprogramma Ondermijning, Uitvoeringsprogramma Welzijn en Zorg
 
-Beleidsregels en nadere regels: nadere uitwerkingen van hoe een verordening wordt toegepast, waarin criteria en werkwijzen worden vastgelegd om in vergelijkbare situaties hetzelfde te handelen. 
+II. Beleidsregels en nadere regels: nadere uitwerkingen van hoe een verordening wordt toegepast, waarin criteria en werkwijzen worden vastgelegd om in vergelijkbare situaties hetzelfde te handelen.
 Voorbeelden zijn: Beleidsregels en nadere regels voor de Wmo en Jeugdhulp
 
 
@@ -1732,8 +1727,7 @@ De eerste inventarisatie voor de LTA – zoals deze hieronder is opgenomen - bev
 | Zienswijze ontwerpbegroting GGD Veilig Thuis | Jaarlijks wordt de gemeenteraad in de gelegenheid gesteld een zienswijze kenbaar te maken ten aanzien van de begroting van Gemeenschappelijke Regelingen. | 7-jul-26 |
 | Zienswijze ontwerpbegroting Servicebureau Jeugdhulp Haaglanden (SbjH) | Jaarlijks wordt de gemeenteraad in de gelegenheid gesteld een zienswijze kenbaar te maken ten aanzien van de begroting van Gemeenschappelijke Regelingen. | 7-jul-26 |
 | Strategische agenda MRDH | Overeenkomstig de Wet op de gemeenschappelijke regelingen worden de gemeenteraden in staat gesteld een zienswijze te geven op koersbepalende documenten van de Gemeenschappelijke Regelingen. De strategische agenda van de MRDH wordt daarom voorgelegd. | 7-jul-26 |
-| Startnotitie Lokaal Gezondheidsbeleid gemeente Wassenaar 2026 -2029 | Krachtens de Wet publieke gezondheid (Wpg) stelt de gemeenteraad een nota lokaal gezondheidsbeleid vast binnen twee jaar nadat de landelijke Nota Gezondheidsbeleid is vastgesteld (december 2025).
-De prioriteiten worden eerst bepaald via een startnotitie - met participatie door diverse maatschappelijke partijen – en vervolgens uitgewerkt in de Beleidsnota Lokaal Gezondheidsbeleid Wassenaar. | 7-jul-26 |
+| Startnotitie Lokaal Gezondheidsbeleid gemeente Wassenaar 2026-2029 | Krachtens de Wet publieke gezondheid (Wpg) stelt de gemeenteraad een nota lokaal gezondheidsbeleid vast binnen twee jaar nadat de landelijke Nota Gezondheidsbeleid is vastgesteld (december 2025). De prioriteiten worden eerst bepaald via een startnotitie - met participatie door diverse maatschappelijke partijen – en vervolgens uitgewerkt in de Beleidsnota Lokaal Gezondheidsbeleid Wassenaar. | 7-jul-26 |
 | Intrekkingsbesluit Verordeningen | Verouderde verordeningen worden ingetrokken. | 7-jul-26 |
 | Jaarstukken gemeente Wassenaar 2025 | De gemeente moet jaarlijks de jaarstukken vaststellen en deze voor 15 juli aanbieden aan de provincie. | 7-jul-26 |
 | Voorjaarsnota gemeente Wassenaar 2026 | Het college informeert de raad via een tussentijdse rapportage over het lopende boekjaar. | 7-jul-26 |
@@ -1747,8 +1741,7 @@ De prioriteiten worden eerst bepaald via een startnotitie - met participatie doo
 | Startnotitie Kunst- en cultuurbeleid gemeente Wassenaar 2026 | Naar aanleiding van de evaluatie van het huidige cultuurbeleid wordt dit geactualiseerd. | 22-sep-26 |
 | Verzwaard adviesrecht horeca De Paauw | In mei 2020 heeft de gemeenteraad uitgesproken te willen onderzoeken of het mogelijk is een openbare horecavoorziening te realiseren in Raadhuis De Paauw. Voor het planologisch toestaan van horeca binnen De Paauw is een buitenplanse omgevingsplanactiviteit (BOPA) nodig, omdat zowel de functiewijziging als de beoogde ruimtelijke ingrepen niet passen binnen het geldende omgevingsplan. Op grond van de Omgevingswet is voor deze afwijking besluitvorming door de gemeenteraad vereist. | 22-sep-26 |
 | Investeren in Kerkehout: woningbouw en Multifunctioneel Centrum (MFC) | Het stedenbouwkundig en financieel kader dient door de gemeenteraad te worden vastgesteld. | 27-okt-26 |
-| Ontwerp Omgevingsvisie | Op basis van het participatiedocument en keuzes gemaakt door de raad in technische sessie wordt een eerste
-ontwerp van de Omgevingsvisie aan de raad opgeleverd. Het ontwerp bevat de ambities op lange termijn en vormt de basis voor de verdere uitwerking van de Omgevingsvisie. | 27-okt-26 |
+| Ontwerp Omgevingsvisie | Op basis van het participatiedocument en keuzes gemaakt door de raad in technische sessie wordt een eerste ontwerp van de Omgevingsvisie aan de raad opgeleverd. Het ontwerp bevat de ambities op lange termijn en vormt de basis voor de verdere uitwerking van de Omgevingsvisie. | 27-okt-26 |
 |  |  |  |
 | Programmabegroting gemeente Wassenaar 2027 | De wettelijke termijn voor het vaststellen van de programmabegroting in de raad is vóór 15 november. | 3-nov-26 |
 | Straatnaamgeving evenementenplein | Op 25 november 2025 is een motie aangenomen om een naam voor het evenementenplein te bedenken. Bij straatnaamgeving wordt de raad om een zienswijze gevraagd. | 3-nov-26 |
@@ -1776,12 +1769,56 @@ ontwerp van de Omgevingsvisie aan de raad opgeleverd. Het ontwerp bevat de ambit
 | Verordening Onderwijshuisvesting | O.b.v. IHP en de geplande wetswijziging va 1 aug 2025, wordt de verordening geactualiseerd. | n.t.b. 2027 |
 | Kredietaanvraag Kievietschool | De kredietaanvraag voor de Kievietschool is opgenomen de Herijking IHP 2024-2028. | n.t.b. 2027 |
 | Verduurzamingskrediet Adelbert College | Het verduurzamingskrediet voor het Adelbert College is opgenomen de Herijking IHP 2024-2028. | n.t.b. 2027 |
-| Verordening cliëntenraad | De verordening moet worden geactualiseerd omdat:
-De rechtsgrond is verouderd (WWB is vervangen door Participatiewet).
-De participatie‑structuur is verbreed naar het volledige sociaal domein (o.a. via de Adviesraad Sociaal Domein 2025).
-Er loopt een bredere actualisatie en evaluatie, waarbij ook de cliëntenparticipatie opnieuw wordt ingericht. | n.t.b. 2027 |
+| Verordening cliëntenraad | De verordening moet worden geactualiseerd omdat: de rechtsgrond is verouderd (WWB is vervangen door Participatiewet), de participatiestructuur is verbreed naar het volledige sociaal domein (o.a. via de Adviesraad Sociaal Domein 2025), en er loopt een bredere actualisatie en evaluatie waarbij ook de cliëntenparticipatie opnieuw wordt ingericht. | n.t.b. 2027 |
 | Beleidsnota Kunst- en cultuurbeleid gemeente Wassenaar | Deze beleidsnota is de uitwerking van de Startnotitie Kunst- en Cultuurbeleid gemeente Wassenaar 2026-2029. | n.t.b. 2027 |
 | Evenementenbeleid | De Startnotitie Evenementenbeleid is door de raad vastgesteld in 2021. De uitwerking vindt plaats in de Omgevingsvisie. |  |
+
+
+# Bijlage 1: Verwijzingen
+In dit overdrachtsdossier worden veel beleidsdocumenten, verordeningen en plannen genoemd. Bijlage 1 geeft een overzicht van de belangrijkste documenten met verwijzing naar de bron. De links worden stap voor stap toegevoegd.
+
+### Tabel: Overzicht beleidsdocumenten
+
+| Document | Toelichting | Link |
+| Verordening Wmo | Vernieuwde verordening maatschappelijke ondersteuning |  |
+| Integraal Veiligheidsbeleid 2024–2027 | Kader veiligheid en leefbaarheid | http://lokaleregelgeving.overheid.nl/CVDR734580 |
+| Beleidsplan Sociaal Domein Wassenaar 2024 | Uitwerking sociaal domein | https://www.wassenaar.nl/beleidsplan-sociaal-domein |
+| Omgevingsvisie | Langetermijnvisie fysieke leefomgeving (in voorbereiding) |  |
+| Omgevingsplan | Vervangt bestemmingsplannen (uiterlijk 2032) |  |
+| Nota Woonbeleid gemeente Wassenaar 2025 | Kader wonen en huisvesting |  |
+| Economische Visie Wassenaar 2025 | Visie lokale economie |  |
+| Beheervisie Openbare Ruimte 2024–2028 | Kader beheer en onderhoud |  |
+| Sportvisie 2025 | Kader sport en bewegen |  |
+| Herijking IHP 2024–2039 | Integraal Huisvestingsplan onderwijs |  |
+| Verordening Jeugdhulp gemeente Wassenaar 2025 | Kader jeugdhulp | https://lokaleregelgeving.overheid.nl/CVDR749873/1 |
+| Beleidsnota Schuldhulpverlening 2025–2028 | Kader schuldhulpverlening |  |
+| Beleidsnota Ouderenbeleid 2025 | Kader ouderenbeleid |  |
+| Lokale Woonzorgvisie Wassenaar 2026 | Wonen met zorg |  |
+| Algemene plaatselijke verordening (APV) Wassenaar 2024 | Lokale regelgeving |  |
+| Huisvestingsverordening Wassenaar 2023 | Woonwagenstandplaatsen e.d. | https://lokaleregelgeving.overheid.nl/CVDR697251 |
+| Visie voor De Wassenaarse Slag | Strand en recreatie |  |
+| Programma Noordrand | Uitvoeringsprogramma Noordrand |  |
+| Coalitieakkoord 2022–2026 | Coalitieakkoord VVD, CDA, D66, DLW, PvdA | https://www.wassenaar.nl/coalitieakkoord |
+| Begroting 2026 | Begroting gemeente Wassenaar 2026 | https://www.wassenaar.nl/begroting-2026 |
+| Gemeentelijke aanpak bestrijding ondernemende criminaliteit Wassenaar 2025-2028 | Kader bestrijding ondermijning | http://lokaleregelgeving.overheid.nl/CVDR735878 |
+| Woonvisie Wassenaar 2021-2025 | Grip op wonen (voorloper Nota Woonbeleid) | https://www.wassenaar.nl/_flysystem/media/woonvisie-wassenaar-2021-2025-grip-op-wonen.pdf |
+| CBS Statline | Open data CBS | https://opendata.cbs.nl/#/CBS/nl/dataset/85146NED/table?ts=1768903835931 |
+| Gemeenschappelijke regelingen | Overzicht GR's op Overheid.nl | https://organisaties.overheid.nl/40204/Gemeente_Wassenaar#gemeenschappelijke-regelingen |
+| Raad voor Openbaar Bestuur – Beleidsvrijheid geduid | Adviesrapport 2019 | https://www.raadopenbaarbestuur.nl/documenten/2019/03/14/advies-beleidsvrijheid-geduid |
+| Eindrapportage Tijd voor stevige keuzes | Rijksoverheid rapport 2025 | https://www.rijksoverheid.nl/documenten/rapporten/2025/10/31/eindrapportage-tijd-voor-stevige-keuzes |
+| Waar staat je gemeente – monitor sociaal domein | Dashboard gemeentelijke monitor | https://www.waarstaatjegemeente.nl/mosaic/dashboard/gemeentelijke-monitor-sociaal-domein |
+| Internetconsultatie Reikwijdte Jeugdwet | Consultatie wetswijziging | https://www.internetconsultatie.nl/reikwijdtejeugdwet/b1 |
+| Raadsvergadering 25 november 2025 | iBabs document | https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/3e13ce7b-2972-4a14-9e63-5f8a03b8dde6?documentId=a7aca3e0-ab0b-4061-80d7-63301fa5a2d3&agendaItemId=b6056161-8751-4a89-852c-5b92234b07ad |
+| Motie reductie restafval en kostenbesparing afvalstoffenheffing | Motie GL PvdA D66 VVD CDA | https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/3e13ce7b-2972-4a14-9e63-5f8a03b8dde6?documentId=76cff862-0962-4859-85f7-a911708e963f&agendaItemId=a6645f92-6dff-4ca2-80b5-b396b0864d70 |
+| Document bestuurlijke informatie 2024 | iBabs document | https://wassenaar.bestuurlijkeinformatie.nl/Document/View/0f2230a2-4f06-4add-a5e0-0e25ffa97af8 |
+| Wassenaar in cijfers – bevolking | Dashboard bevolking | https://wassenaar.incijfers.nl/dashboard/bevolking |
+| Wassenaar in cijfers – bevolking prognoses | Dashboard prognoses | https://wassenaar.incijfers.nl/dashboard/bevolking/prognoses |
+| Wassenaar in cijfers – bevolking huishoudens | Dashboard huishoudens | https://wassenaar.incijfers.nl/dashboard/bevolking/huishoudens |
+| Wassenaar in cijfers – openbare orde en veiligheid | Dashboard veiligheid | https://wassenaar.incijfers.nl/dashboard/openbare-orde-en-veiligheid |
+| Wassenaar in cijfers – beleidsindicatoren BBV veiligheid | Dashboard BBV veiligheid | https://wassenaar.incijfers.nl/dashboard/beleidsindicatoren-bbv/veiligheid |
+| Wassenaar in cijfers – economie, inkomen en vermogen | Dashboard inkomen | https://wassenaar.incijfers.nl/dashboard/economie--werk-en-inkomen/inkomen-en-vermogen |
+| Wassenaar in cijfers – ruimte en leefomgeving | Dashboard monitor brede welvaart | https://wassenaar.incijfers.nl/dashboard/ruimte-en-leefomgeving/monitor-brede-welvaart |
+| Wassenaar in cijfers – wonen | Dashboards leegstand, voorraad, woningmarkt | https://wassenaar.incijfers.nl/dashboard/wonen/leegstand |
 
 
 # Bijlage 2: Evaluatie College-uitvoeringsprogramma 2023-2026

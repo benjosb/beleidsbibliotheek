@@ -491,6 +491,24 @@ body {
     margin-bottom: 0.4rem;
 }
 
+/* Romeinse cijfer-opsomming bevoegdheden (par 11.1) */
+.overdrachtsdossier-details-inhoud .lta-sectie-kop {
+    margin: 1.25rem 0 0.5rem;
+    font-weight: 600;
+}
+.overdrachtsdossier-details-inhoud .lta-sectie-kop:first-child {
+    margin-top: 0;
+}
+.overdrachtsdossier-details-inhoud .lta-bevoegdheden {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.5rem;
+    list-style-type: upper-roman;
+}
+.overdrachtsdossier-details-inhoud .lta-bevoegdheden > li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
 /* Markering van zoektreffers in overdrachtsdossier */
 .od-zoek-treffer {
     background: #fef08a;
@@ -515,6 +533,39 @@ body {
 .overdracht-tabel th {
     background: var(--gray-lighter);
     font-weight: 500;
+}
+
+.overdracht-tabel tbody tr:nth-child(even) {
+    background: var(--paragraphEvenColor);
+}
+.overdracht-tabel tbody tr:nth-child(odd) {
+    background: var(--white);
+}
+
+/* CUP-statusiconen (Bijlage 2 Evaluatie Collegeprogramma) */
+.cup-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.4em;
+    height: 1.4em;
+    padding: 0 0.25em;
+    border-radius: 50%;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1;
+}
+.cup-status--gerealiseerd {
+    background: #22c55e;
+    color: white;
+}
+.cup-status--knelpunt {
+    background: #f59e0b;
+    color: white;
+}
+.cup-status--gepland {
+    background: #3b82f6;
+    color: white;
 }
 
 .overdrachtsdossier-placeholder {
@@ -594,6 +645,19 @@ body {
     background: var(--gray-lighter);
     padding: 0.15em 0.35em;
     border-radius: 4px;
+}
+
+.compliance-kaart #methodologieInhoud p + p {
+    margin-top: 0.75rem;
+}
+
+.compliance-kaart #methodologieInhoud a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.compliance-kaart #methodologieInhoud a:hover {
+    text-decoration: none;
 }
 
 .overzicht-tabs {
@@ -676,6 +740,11 @@ body {
 /* ─── Dossier-overzicht (startpagina) ─── */
 .dossier-overzicht {
     margin: 1.5rem 0 1rem;
+}
+
+/* Verberg hoofdstuktegels wanneer kindtegels zichtbaar zijn */
+body.dossier-detail-open .dossier-overzicht {
+    display: none !important;
 }
 
 .dossier-sectie-titel {
@@ -867,21 +936,21 @@ body.toon-begroting .dossier-kaart-begroting {
 
 .dossier-terug {
     background: none;
-    border: 1px solid var(--gray-light);
-    border-radius: 6px;
-    padding: 0.4rem 0.85rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--wassenaar-blue);
+    border: none;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--gray-medium);
     cursor: pointer;
     white-space: nowrap;
     flex-shrink: 0;
-    transition: background 0.15s, color 0.15s;
+    text-decoration: none;
+    transition: color 0.15s;
 }
 
 .dossier-terug:hover {
-    background: var(--wassenaar-blue);
-    color: var(--white);
+    color: var(--wassenaar-blue);
+    text-decoration: underline;
 }
 
 .dossier-kop-titel {
@@ -1501,6 +1570,13 @@ body.toon-begroting .dossier-kaart-begroting {
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0,0,0,.06);
 }
+.overdrachtsdossier-kop .overdrachtsdossier-deeplink {
+    color: var(--wassenaar-blue);
+    text-decoration: none;
+}
+.overdrachtsdossier-kop .overdrachtsdossier-deeplink:hover {
+    text-decoration: underline;
+}
 .overdrachtsdossier-kop {
     margin: 0 0 0.35rem;
     font-size: 1.05rem;
@@ -1546,6 +1622,18 @@ body.toon-begroting .dossier-kaart-begroting {
 }
 .overdrachtsdossier-inhoud .overdracht-doclist a:hover {
     text-decoration: underline;
+}
+.overdrachtsdossier-inhoud .overdracht-figuur {
+    margin: 1.25rem 0;
+    max-width: 100%;
+    text-align: right;
+}
+.overdrachtsdossier-inhoud .overdracht-infographic {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-left: auto;
 }
 .overdrachtsdossier-inhoud .overdracht-details {
     margin-top: 0.75rem;

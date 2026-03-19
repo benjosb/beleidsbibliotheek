@@ -21,10 +21,21 @@ def escape_html(s: str) -> str:
     return html.escape(str(s))
 
 
+def linkify_urls(s: str) -> str:
+    """Vervang bare URLs door klikbare links. Sluit leestekens aan het eind uit."""
+    # Eindpunten tellen alleen als ze gevolgd worden door spatie/einde (niet door letters zoals in .nl)
+    return re.sub(
+        r"(https?://[^\s<>\"']+?)(?=[.,;:!?)](?:\s|$)|(?:\s|$))",
+        r'<a href="\1" target="_blank" rel="noopener noreferrer">\1</a>',
+        s,
+    )
+
+
 def inline_md(s: str) -> str:
     s = escape_html(s)
     s = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", s)
+    s = linkify_urls(s)  # URLs na escape, zodat < en > al geëscaped zijn
     return s
 
 
@@ -35,15 +46,33 @@ def parse_md(md: str) -> list[dict]:
     current_content = []
     table_rows = []
 
+    def cup_status_icon(val: str) -> str:
+        """CUP-status → icoon (Bijlage 2)."""
+        v = val.strip()
+        if v == "ü":
+            return '<span class="cup-status cup-status--gerealiseerd" title="Gerealiseerd" aria-label="Gerealiseerd">✓</span>'
+        if v == "!":
+            return '<span class="cup-status cup-status--knelpunt" title="Aandachtspunt of knelpunt" aria-label="Aandachtspunt of knelpunt">!</span>'
+        if v == "":
+            return '<span class="cup-status cup-status--gepland" title="Gepland of in behandeling" aria-label="Gepland of in behandeling">🏃</span>'
+        return inline_md(val)
+
     def flush_table():
         nonlocal table_rows
         if not table_rows:
             return
+        is_cup = current_chapter and "Bijlage 2" in current_chapter.get("title", "")
         out = ['<table class="overdracht-tabel"><tbody>']
         for i, row in enumerate(table_rows):
             tag = "th" if i == 0 else "td"
-            cells = "".join(f"<{tag}>{inline_md(c.strip())}</{tag}>" for c in row)
-            out.append(f"<tr>{cells}</tr>")
+            cells = []
+            for j, c in enumerate(row):
+                cell_val = c.strip()
+                if is_cup and i > 0 and j == 1 and cell_val in ("ü", "!", ""):
+                    cells.append(f"<{tag}>{cup_status_icon(cell_val)}</{tag}>")
+                else:
+                    cells.append(f"<{tag}>{inline_md(cell_val)}</{tag}>")
+            out.append(f"<tr>{''.join(cells)}</tr>")
         out.append("</tbody></table>")
         current_content.append("\n".join(out))
         table_rows = []
@@ -52,7 +81,19 @@ def parse_md(md: str) -> list[dict]:
         t = text.strip()
         if not t or t == "---":
             return
-        current_content.append(f"<p>{inline_md(t)}</p>")
+        is_cup = current_chapter and "Bijlage 2" in current_chapter.get("title", "")
+        if is_cup:
+            if "gerealiseerd" in t and "ü" in t:
+                html = escape_html(t.replace("(ü)", "").strip()) + " " + cup_status_icon("ü")
+            elif ("gepland" in t or "behandeling" in t) and "()" in t:
+                html = escape_html(t.replace("()", "").strip()) + " " + cup_status_icon("")
+            elif "knelpunt" in t and "!" in t:
+                html = escape_html(t.replace("(!)", "").strip()) + " " + cup_status_icon("!")
+            else:
+                html = inline_md(t)
+        else:
+            html = inline_md(t)
+        current_content.append(f"<p>{html}</p>")
 
     def flush_list(items: list):
         if not items:
@@ -62,7 +103,21 @@ def parse_md(md: str) -> list[dict]:
             current_content.append(f"<li>{inline_md(item)}</li>")
         current_content.append("</ul>")
 
+    def flush_ol_list(ol_items: list):
+        """Romeinse cijfer-opsomming (definitie + Voorbeelden op nieuwe regel, lopende tekst)."""
+        if not ol_items:
+            return
+        out = ['<ol type="I" class="lta-bevoegdheden">']
+        for content in ol_items:
+            # Split op <br>, escape elk deel, join met echte <br>
+            parts = content.split("<br>")
+            safe = "<br>".join(inline_md(p) for p in parts)
+            out.append(f"<li>{safe}</li>")
+        out.append("</ol>")
+        current_content.append("\n".join(out))
+
     list_items = []
+    ol_items = []  # [content string, ...] per sectie
 
     def push_chapter(title: str, content: list):
         if not title:
@@ -71,7 +126,9 @@ def parse_md(md: str) -> list[dict]:
         if body:
             chapters.append({"title": strip_page_num(title), "body": body})
 
-    for line in lines:
+    i = 0
+    while i < len(lines):
+        line = lines[i]
         h1 = re.match(r"^#\s+(.+)$", line)
         h2 = re.match(r"^##\s+(.+)$", line)
         h3 = re.match(r"^###\s+(.+)$", line)
@@ -80,7 +137,9 @@ def parse_md(md: str) -> list[dict]:
         if h1:
             flush_table()
             flush_list(list_items)
+            flush_ol_list(ol_items)
             list_items = []
+            ol_items = []
             if current_chapter:
                 push_chapter(current_chapter["title"], current_content)
             current_chapter = {"title": h1.group(1)}
@@ -88,36 +147,64 @@ def parse_md(md: str) -> list[dict]:
         elif h2:
             flush_table()
             flush_list(list_items)
+            flush_ol_list(ol_items)
             list_items = []
+            ol_items = []
             current_content.append(f"<h2>{escape_html(strip_page_num(h2.group(1)))}</h2>")
         elif h3:
             flush_table()
             flush_list(list_items)
+            flush_ol_list(ol_items)
             list_items = []
+            ol_items = []
             current_content.append(f"<h3>{escape_html(strip_page_num(h3.group(1)))}</h3>")
         elif is_table:
             flush_list(list_items)
+            flush_ol_list(ol_items)
             list_items = []
+            ol_items = []
             cells = [c.strip() for c in line.split("|")[1:-1]]
             is_sep = all(not c or re.match(r"^-+$", c) for c in cells)
             if cells and not is_sep:
                 table_rows.append(cells)
+        elif line.strip() in ("Raadsbevoegdheid:", "Collegebevoegdheid:"):
+            flush_list(list_items)
+            flush_ol_list(ol_items)
+            ol_items = []
+            current_content.append(f'<p class="lta-sectie-kop"><strong>{escape_html(line.strip())}</strong></p>')
+        elif re.match(r"^(I{1,3}|IV|V|VI{0,3}|IX|X)\.\s+", line.strip()):
+            if table_rows:
+                flush_table()
+            flush_list(list_items)
+            # Strip Romeins nummer uit tekst (ol type="I" voegt die automatisch toe)
+            content = re.sub(r"^(I{1,3}|IV|V|VI{0,3}|IX|X)\.\s+", "", line.strip())
+            if i + 1 < len(lines):
+                next_line = lines[i + 1].strip()
+                if next_line.startswith("Voorbeelden zijn") or next_line.startswith("De gemeenteraad"):
+                    content += "<br>" + next_line
+                    i += 1
+            ol_items.append(content)
         else:
             ul_match = re.match(r"^(\s*)[-*]\s+(.+)$", line)
             if ul_match:
                 if table_rows:
                     flush_table()
+                flush_ol_list(ol_items)
+                ol_items = []
                 list_items.append(ul_match.group(2).strip())
-            else:
-                if list_items:
-                    flush_list(list_items)
-                    list_items = []
+            elif line.strip():
+                flush_list(list_items)
+                flush_ol_list(ol_items)
+                list_items = []
+                ol_items = []
                 if table_rows:
                     flush_table()
                 flush_paragraph(line)
+        i += 1
 
     flush_table()
     flush_list(list_items)
+    flush_ol_list(ol_items)
     if current_chapter:
         push_chapter(current_chapter["title"], current_content)
 

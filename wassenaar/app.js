@@ -168,6 +168,91 @@ function matchSubthema(decision, keywords, subthemaNaam) {
     return keywords.some(kw => text.includes(kw.toLowerCase()));
 }
 
+// OD-samenvattingen per BBV-hoofdstuk (Overdrachtsdossier raadsverkiezingen 2026)
+const OD_SAMENVATTING_PER_BBV = {
+    0: {
+        bron: 'Bron: OD hoofdstukken 2, 3, 4 — De staat van de gemeentelijke organisatie; De financiële positie; Regionale samenwerkingen.',
+        html: `<p>De gemeentelijke organisatie telt circa 300 medewerkers en kent een open, collegiale cultuur. Circa 80% van het werk bestaat uit wettelijke taken; de ruimte voor extra politieke ambities is beperkt. Het Klant Contact Centrum (KCC) is het eerste aanspreekpunt; bij sociale vragen wordt direct doorverbonden naar het Sociaal Team Wassenaar.</p>
+<p>De financiële positie is stabiel voor 2026, maar vanaf 2028 zijn keuzes nodig om de begroting structureel sluitend te houden. Wassenaar gaat vanaf 2026 lenen voor investeringen (o.a. De Paauw, onderwijshuisvesting). De inkomsten uit het gemeentefonds zijn onzeker door het regeerakkoord en het verschoven ravijnjaar.</p>
+<p><strong>Subsidiebeleid:</strong> Jaarlijkse vaststelling subsidieplafonds (2025: Economie €35.960, SAD €478.969, Volksgezondheid €34.228). Subsidieregeling structurele activiteiten (2024). Nieuw en herzien subsidiebeleid gerealiseerd; coalitie onderzoekt subsidies, fondsen en cofinanciering.</p>
+<p>Regionale samenwerking is essentieel: Veiligheidsregio Haaglanden, GGD, Avalex, MRDH, Servicebureau Jeugdhulp. De Rekenkamer WVOLV onderzoekt de effectiviteit van de samenwerkingsverbanden; het rapport volgt in 2026.</p>
+<h4>Relevante visies en beleidsdocumenten</h4>
+<ul class="overdracht-doclist">
+<li><a href="https://www.wassenaar.nl/coalitieakkoord" target="_blank" rel="noopener noreferrer">Coalitieakkoord 2022–2026</a> (VVD, CDA, D66, DLW, PvdA)</li>
+<li><a href="https://www.wassenaar.nl/begroting-2026" target="_blank" rel="noopener noreferrer">Begroting 2026</a></li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f771bed8-2066-4bd2-95c3-06287cc72379?agendaItemId=ee1e7028-db90-4250-bc31-f94f8a4459d5" target="_blank" rel="noopener noreferrer">Financiële Verordening en Controleprotocol 2025</a> (raadsbesluit 14-10-2025)</li>
+<li><a href="https://www.wassenaar.nl/subsidieregelingen" target="_blank" rel="noopener noreferrer">Subsidiebeleid / Subsidieregelingen</a></li>
+<li><a href="https://organisaties.overheid.nl/40204/Gemeente_Wassenaar#gemeenschappelijke-regelingen" target="_blank" rel="noopener noreferrer">Gemeenschappelijke regelingen</a> (Overheid.nl)</li>
+<li><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf" target="_blank" rel="noopener noreferrer">Dienstverleningsmodel gemeente Wassenaar</a> (dec 2024, 0.2 Burgerzaken)</li>
+</ul>`
+    },
+    1: {
+        bron: 'Bron: OD hoofdstuk 5 — Veiligheid en leefbaarheid.',
+        html: `<p>Wassenaar is een relatief veilige gemeente. Het Integraal Veiligheidsbeleid 2024–2027 beschrijft de aanpak. Vermogensdelicten vormen het grootste deel van de criminaliteit. De Lokale Kamer Zorg en Veiligheid verbindt politie, woningcorporaties, GGD en Sociaal Team bij complexe casussen.</p>
+<p>Toezicht en handhaving onder de Omgevingswet vragen om scherpe prioriteiten bij beperkte capaciteit. De openbare ruimte (3,2 km²) wordt beheerd op niveau B. Afvalverwerking loopt via Avalex; Wassenaar werkt aan reductie van restafval (servicedifferentiatie per 2027, verkennen diftar 2028).</p>
+<p>Opgaven: maatschappelijke weerbaarheid, ondermijning, digitale dreigingen, femicide en geweld achter de voordeur. Wijkgericht werken en de BuitenBeter-app ondersteunen signalering en onderhoud.</p>`
+    },
+    2: {
+        bron: 'Bron: OD hoofdstukken 5, 6 — Veiligheid en leefbaarheid; Wonen en fysieke leefomgeving (mobiliteit).',
+        html: `<p>Het Wegencategoriseringsplan (dec 2025) vormt het uitgangspunt voor een veilige en bereikbare inrichting van het wegennet. Na het Burgerberaad Verkeer is het plan aangescherpt. Het aantal (fiets-)verkeersongevallen is relatief hoog door drukke regionale wegen.</p>
+<p>Wassenaar maakt deel uit van de MRDH voor openbaar vervoer. Vier buslijnen, uitgevoerd door EBS en Qbuzz; halteknooppunt Van Oldenbarneveltweg. Bij de MRDH is aandacht gevraagd voor station Voorschoten en verbindingen.</p>
+<p>Opgaven: N44, Rozenplein, verkeersdruk door Valkenhorst en Maaldrift. Actualisatie parkeerbeleid nodig. Netcongestie kan ontwikkeling vertragen.</p>`
+    },
+    3: {
+        bron: 'Bron: OD hoofdstuk 8 — Economie, recreatie en toerisme.',
+        html: `<p>Wassenaar heeft een gevarieerde lokale economie: recreatie, toerisme, detailhandel, horeca. De Economische Visie en strandvisie De Wassenaarse Slag zijn vastgesteld. De dorpskern is heringericht (dec 2025). Duinrell en De Wassenaarse Slag zijn belangrijke pijlers.</p>
+<p>De BIZ Maaldrift en centrum-BIZ ondersteunen ondernemers. Werkloosheid is laag (1,3%); het aandeel zelfstandigen is groot. Netcongestie beperkt bedrijven in groei en verduurzaming.</p>
+<p>Opgaven: vergrijzing verandert vraag naar voorzieningen; woningkrapte beperkt instroom jonge werkenden; Maaldrift: balans Defensie–mkb, verkeersdruk. Recreatie: spreiding bezoekers, bescherming natuur, duurzame kustinrichting.</p>`
+    },
+    4: {
+        bron: 'Bron: OD hoofdstuk 9 — Sport, cultuur en onderwijs.',
+        html: `<p>Wassenaar heeft acht basisscholen, twee middelbare scholen en twee internationale scholen. Het herijkte IHP 2024–2039 en de Lokale Educatieve Agenda (LEA) 2026–2037 bepalen de koers. Scholen spelen een grotere rol in vroegsignalering; samenwerking met STW en jeugdhulp is essentieel.</p>
+<p>Een groeiende groep anderstalige kinderen stroomt in (expats, Oekraïners, statushouders). Taalondersteuning en ITK/ISK in Leiden zijn nodig. Leerplicht en Doorstroompunt worden uitgevoerd door Leidschendam-Voorburg.</p>
+<p>Opgaven: groeiend aantal leerlingen, late instroom, capaciteitsplanning. Renovaties Kievietschool, Adelbert College, SKOW-fusieschool gepland. Relatief verzuim stijgt; preventie via De Overstap.</p>
+<h4>Documenten (aanvulling)</h4>
+<ul class="overdracht-doclist">
+<li><a href="https://centraalplus.nl/2026/01/17/lokale-educatieve-agenda-van-wassenaar-ondertekend-een-horizon-waarmee-we-aan-de-slag-kunnen/" target="_blank" rel="noopener noreferrer">Lokale Educatieve Agenda (LEA) 2026–2037 — nieuws over ondertekening (jan 2026)</a> <em>(regionale omroep; geen kantoorstuk)</em></li>
+<li><em>Zoek het formele stuk in</em> <a href="https://wassenaar.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener noreferrer">iBabs Wassenaar</a> <em>of op wassenaar.nl — bron niet geverifieerd in deze bibliotheek.</em></li>
+</ul>`
+    },
+    5: {
+        bron: 'Bron: OD hoofdstukken 8, 9 — Economie, recreatie en toerisme; Sport, cultuur en onderwijs.',
+        html: `<p>De Sportvisie 2025 is vastgesteld met vier pijlers: sportaanbieders, deelname, beweegvriendelijke omgeving, toekomstbestendige accommodaties. Fit in Wassenaar en buurtsportcoaches dragen bij aan het GALA. Scouting De Paauw en Van Woesikgroep ontvangen jeugdledensubsidie.</p>
+<p>Cultuur: De Warenar wordt gerenoveerd en verduurzaamd (start 2026). Museum Voorlinden, kunstcollectie en theater vormen het culturele profiel. Cultuur met Kwaliteit (CmK4) verankert cultuureducatie. De bibliotheekzorgplicht is van kracht.</p>
+<p>Opgaven: dalende ledenaantallen, vergrijzing vrijwilligers, energielasten; renovatie sport- en scoutingaccommodaties. Cultuur: actualisatie beleid, toegankelijkheid, Warenar als cultureel centrum. GALA-middelen vervallen 2027; AZWA volgt.</p>`
+    },
+    7: {
+        bron: 'Bron: OD hoofdstukken 5, 6 — Veiligheid (afval); Wonen (energietransitie, milieu).',
+        html: `<p>Afvalverwerking loopt via GR Avalex en HVC. Wassenaar hanteert een hoog serviceniveau; restafval is hoger dan gemiddeld. Servicedifferentiatie per 2027, verkennen diftar 2028. CO₂-maatregelen maken verbranding duurder; betere scheiding dempt de afvalstoffenheffing.</p>
+<p>De energietransitie: Warmteprogramma in 2026, participatie start. Netcongestie speelt een grote rol. Klimaatadaptatie: stresstest 2024, DPRA-werkregio. Waterkwaliteit voldoet nog niet aan KRW 2027; samenwerking met Hoogheemraadschap en Dunea.</p>
+<p>Natura 2000 en stikstof: verkenning Schoon en Emissieloos Bouwen. Milieuzonering, geur en trilling krijgen een plek in het Omgevingsplan. ODH ondersteunt met advies.</p>`
+    },
+    8: {
+        bron: 'Bron: OD hoofdstukken 6, 10 — Wonen en fysieke leefomgeving; Projecten.',
+        html: `<p>De woningmarkt is uit evenwicht. Nota Woonbeleid 2025: twee derde betaalbaar bij nieuwbouw. Woningbouwopgave RRA: 991 woningen tot 2030. Lokale Woonzorgvisie 2026 vastgesteld. Woonwagenstandplaatsen: uitbreiding Lagerweide en Ruigelaan, Huisvestingsverordening aangepast (dec 2025).</p>
+<p>Omgevingsvisie: participatie 2026, vaststelling 2027. Omgevingsplan uiterlijk 2032. Projecten: ANWB-locatie, Kerkehout, gemeentewerf, Duindigt, De Paauw, SKOW-fusieschool, De Warenar, Programma Noordrand.</p>
+<p>Opgaven: periode zonder actueel beleidskader (jan–apr 2027); doorstroming woningmarkt; Warmteprogramma; netcongestie; klimaatadaptatie. Integrale keuzes nodig voor wonen, energie, natuur en leefomgeving.</p>`
+    },
+    6: {
+        bron: 'Bron: OD hoofdstuk 7 — Sociaal Domein en asielopvang (papier aan raadsleden). Mapping: OD hoofdstuk 7 = BBV 6 (Sociaal domein).',
+        html: (ibabs) => `<p>Het sociaal domein draait om drie wetten: de <strong>Wmo</strong>, de <strong>Jeugdwet</strong> en de <strong>Participatiewet</strong>. Voor Wmo en Jeugdwet is het Sociaal Team Wassenaar (STW) de toegangspoort. De gemeente richt zich op preventie: versterken van de sociale basis, toegankelijke informatie en passende ondersteuning. Verordeningen zijn vernieuwd.</p>
+<p>De uitdagingen zijn groot: meer regie en samenwerking binnen een complexer zorglandschap. De kosten gaan vaak voor de baten uit. Samenwerking met huisartsen, scholen, zorgaanbieders en vrijwilligers is onmisbaar.</p>
+<p>Investeren in de voorkant is noodzakelijk — vroeg hulp voorkomt later dure specialistische zorg. Dit vraagt om duidelijke keuzes. Zonder keuzes lopen de kosten verder op.</p>
+<figure class="overdracht-figuur">
+<img src="assets/beleidsmatig-overzicht-sociaal-domein.png" alt="Beleidsmatig overzicht Sociaal Domein: Beleidsplan, beleidsnota's en uitvoeringsprogramma's met aangrenzende beleidsterreinen" class="overdracht-infographic">
+</figure>
+<h4>Relevante visies en beleidsdocumenten</h4>
+<ul class="overdracht-doclist">
+<li><a href="https://www.wassenaar.nl/beleidsplan-sociaal-domein" target="_blank" rel="noopener noreferrer">Beleidsplan Sociaal Domein Wassenaar</a> (juni 2024)</li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/3e13ce7b-2972-4a14-9e63-5f8a03b8dde6?documentId=a7aca3e0-ab0b-4061-80d7-63301fa5a2d3&agendaItemId=b6056161-8751-4a89-852c-5b92234b07ad" target="_blank" rel="noopener noreferrer">Lokaal Jeugdbeleid Wassenaar 2026</a></li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/85393b37-a676-4ffb-a9f2-33b6f0d9b58b?documentId=79a101d9-552b-49cc-9d34-31f6923cc1a9&agendaItemId=6ac84012-a995-46de-b19f-d58cb5aa952a" target="_blank" rel="noopener noreferrer">Beleidsnota Ouderenbeleid 2025</a></li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=cc8bf828-300a-4098-9198-dc67d2e0a15c&agendaItemId=a71419b7-25db-4a02-800f-99707a0dd53b" target="_blank" rel="noopener noreferrer">Startnotitie Lokale Woonzorgvisie</a> (sept 2025)</li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/View/4700041f-c274-49ea-9dff-5ca26f4d5e28" target="_blank" rel="noopener noreferrer">Beleidsnota Schuldhulpverlening 2025–2028</a></li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/37e4fd08-333d-4616-9304-e15b9444f657?documentId=e3b07e13-685f-4f44-9388-c2303d93a1e8&agendaItemId=36195d79-8757-4165-9b23-bcb9944b5d19" target="_blank" rel="noopener noreferrer">Verordening Adviesraad Sociaal Domein 2025</a></li>
+</ul>`
+    }
+};
+
 // BBV-taakvelden (Findo.nl / Iv3) — hoofdstukken en sub-taakvelden
 const BBV_HOOFDTAAKVELDEN = {
     0: "0. Bestuur en ondersteuning",
@@ -185,6 +270,7 @@ const BBV_HOOFDTAAKVELDEN = {
 const BBV_TAAKVELDEN_PER_HOOFDSTUK = {
     0: [
         { code: '0.1', naam: 'Bestuur' },
+        { code: 'Subsidiebeleid', naam: 'Subsidiebeleid' },
         { code: '0.2', naam: 'Burgerzaken' },
         { code: '0.3', naam: 'Beheer overige gebouwen en gronden' },
         { code: '0.4', naam: 'Overhead' },
@@ -273,12 +359,12 @@ const BBV_ICON = '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" str
 const SAMENVATTING_PER_THEMA = {
     'Cultuur & Welzijn': [
         { thema: 'De Warenar', samenvatting: 'Cultuurhuis blijft eigendom gemeente. Raad koos sept 2025 voor voorkeursvariant 2: herbestemming, renovatie en verduurzaming (€5 mln). Investering pas na geregelde erfpacht. Ambitie: cultuurhuis + buurtfunctie + museum.' },
-        { thema: 'Subsidiebeleid', samenvatting: 'Jaarlijkse vaststelling subsidieplafonds. 2025: Economie €35.960, SAD €478.969, Volksgezondheid €34.228. Subsidieregeling structurele activiteiten (2024). Coalitie onderzoekt subsidies, fondsen en cofinanciering.' },
         { thema: 'Erfgoed & Welstand', samenvatting: 'Eerste technische aanpassing Erfgoedverordening 2016 (2023). Commissie Welstand en Cultureel Erfgoed (WCE). Klankbordgroep Erfgoed. Coalitie: erfgoed behouden, verduurzaming faciliteren.' },
         { thema: 'GGD & Volksgezondheid', samenvatting: 'GR GGD en Veilig Thuis Haaglanden. Zienswijzen op begrotingen en wijzigingen. Evaluatie GR uitgesteld (zienswijze raad apr 2025). Regiovisie Aanpak Huiselijk Geweld 2026+ vastgesteld dec 2025.' },
         { thema: 'Welzijn & Buurtwerk', samenvatting: 'Overeenkomst Gro-Up Buurtwerk (apr 2024) voor welzijnsactiviteiten in wijken. Subsidies preventief veld. IPS-trajecten. Gezond en Actief Leven Akkoord (GALA).' },
     ],
     'Bestuur & Veiligheid': [
+        { thema: 'Subsidiebeleid', samenvatting: 'Jaarlijkse vaststelling subsidieplafonds. 2025: Economie €35.960, SAD €478.969, Volksgezondheid €34.228. Subsidieregeling structurele activiteiten (2024). Coalitie onderzoekt subsidies, fondsen en cofinanciering.' },
         { thema: 'Openbare Orde & Veiligheid', samenvatting: 'Integraal veiligheidsbeleid. Burgemeester als eenhoofdig bestuursorgaan. Noodverordening NAVO-top 2025 bekrachtigd (juni 2025). APV-toelichting geactualiseerd (mei 2022).' },
         { thema: 'Gemeenschappelijke Regelingen & Regionale Samenwerking', samenvatting: 'GR Veiligheidsregio Haaglanden gewijzigd (maart 2025). Zienswijzen op begrotingen VRH en GR Rekenkamer WVOLV. Mandaatbesluit ODH geactualiseerd.' },
         { thema: 'Publieke Omroep & Communicatie', samenvatting: 'Toetsingscriteria aanwijzingsprocedure lokale publieke omroep gewijzigd vastgesteld (april 2025). Kader voor lokale informatievoorziening. Wet open overheid geïmplementeerd.' },
@@ -320,12 +406,12 @@ const SAMENVATTING_PER_THEMA = {
 const PORTEFEUILLE_TEGELS = {
     'Cultuur & Welzijn': [
         { naam: 'De Warenar', keywords: ['warenar', 'theater', 'cultuurhuis', 'kerkstraat 75', 'sbw', 'stichting beheer warenar'] },
-        { naam: 'Subsidiebeleid', keywords: ['subsidie', 'plafond', 'subsidieplafond', 'subsidieregeling', 'subsidieaanvraag'] },
         { naam: 'Erfgoed & Welstand', keywords: ['erfgoed', 'welstand', 'monument', 'cultureel erfgoed', 'wce', 'klankbordgroep erfgoed'] },
         { naam: 'GGD & Volksgezondheid', keywords: ['gezondheid', 'volksgezondheid', 'ggd', 'preventie', 'veilig thuis', 'haaglanden'] },
         { naam: 'Welzijn & Buurtwerk', keywords: ['welzijn', 'buurtwerk', 'buurt', 'gro-up', 'preventief veld', 'ips-traject'] },
     ],
     'Bestuur & Veiligheid': [
+        { naam: 'Subsidiebeleid', keywords: ['subsidie', 'plafond', 'subsidieplafond', 'subsidieregeling', 'subsidieaanvraag'] },
         { naam: 'Openbare Orde & Veiligheid', keywords: ['veiligheid', 'politie', 'brandweer', 'noodverordening', 'navo', 'openbare orde', 'cameratoezicht'] },
         { naam: 'Gemeenschappelijke Regelingen & Regionale Samenwerking', keywords: ['gemeenschappelijke regeling', 'veiligheidsregio', 'vrh', 'haaglanden', 'rekenkamer', 'wvolv', 'odh', 'omgevingsdienst'] },
         { naam: 'Publieke Omroep & Communicatie', keywords: ['lokale omroep', 'publieke omroep', 'communicatie', 'aanwijzingsprocedure', 'media'] },
@@ -399,6 +485,7 @@ const BELEIDSNOTA_PER_TAAKVELD = {
     '8.3': [ // Wonen en bouwen
         { naam: 'Nota Woonbeleid gemeente Wassenaar 2025', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/8f51ef1d-1b7a-4f0c-8343-4bf2f203930d?documentId=bdfb8868-7df2-422f-bfbe-dcd9528fbaa6&agendaItemId=88378d7f-f964-4391-90d3-01e88eb7752d', type: 'Beleidsnota' }
     ],
+    // BBV 3 (Economie): algemene beleidsnota's staan op hoofdstukniveau — zie BELEIDSNOTA_PER_HOOFDSTUK_BBV[3]
     '6.811': [ // Beschermd wonen (Wmo)
         { naam: 'Startnotitie Lokale Woonzorgvisie', datum: '2025-09-22', link: null, type: 'Startnotitie' },
         { naam: 'Beleidsnota Ouderenbeleid 2025', datum: '2025-01-28', link: null, type: 'Beleidsnota' }
@@ -416,6 +503,51 @@ const BELEIDSNOTA_PER_TAAKVELD = {
     ],
     '6.3 - 6.5': [ // Clustering: 6.3, 6.4, 6.5
         { naam: 'Werk en inkomen', type: 'Clustering', toelichting: 'Deze tegel is een clustering van de BBV-taakvelden 6.3 (Inkomensregelingen), 6.4 (WSW en beschut werk) en 6.5 (Arbeidsparticipatie). Besluiten van het Sociaal Domein worden hier op hoofdniveau weergegeven.' }
+    ]
+};
+
+// Algemene beleidsnota's per BBV-hoofdstuk: zichtbaar zodra je het hoofdstuk opent (geen subtegel nodig), zelfde patroon als OD op de tegel.
+const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
+    1: [
+        {
+            naam: 'Integraal Veiligheidsbeleid 2024–2027 gemeente Wassenaar',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/df32a5b8-1b14-4a96-b325-bd3af644cc9f?documentId=d55bb8d1-54e5-473f-8302-33434af5914c&agendaItemId=77e257f7-68bb-42a3-92ae-8a2628d2a666',
+            type: 'Beleidsnota',
+            toelichting: 'Integraal veiligheidsbeleid — iBabs-document (controleer vergadering/stemming in iBabs).'
+        }
+    ],
+    3: [
+        {
+            naam: 'Economische Visie Wassenaar 2025',
+            datum: '2025-09-22',
+            link: 'https://www.wassenaar.nl/economische-visie-wassenaar',
+            type: 'Beleidsnota',
+            toelichting: 'Visie lokale economie — officiële gemeentepagina met PDF en bijlagen.'
+        },
+        {
+            naam: 'Visie voor De Wassenaarse Slag',
+            datum: '2025-03-04',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42',
+            type: 'Beleidsnota',
+            toelichting: 'Strand en recreatie (economische promotie)'
+        }
+    ],
+    4: [
+        {
+            naam: 'Lokale Educatieve Agenda (LEA) 2026–2037',
+            datum: '2026-01-16',
+            link: 'https://centraalplus.nl/2026/01/17/lokale-educatieve-agenda-van-wassenaar-ondertekend-een-horizon-waarmee-we-aan-de-slag-kunnen/',
+            type: 'Samenwerkingsdocument',
+            toelichting: 'Ondertekend 16 jan 2026 (18 partijen; o.a. gemeente, scholen, welzijn). Deze link is een nieuwsbericht van Centraal+, géén formeel bestuursdocument. Het openbare PDF-/iBabs-pad stond nog niet in onze data — zoek desgewenst in iBabs of op wassenaar.nl op “Lokale Educatieve Agenda”.'
+        }
+    ],
+    6: [
+        { naam: 'Startnotitie Lokale Woonzorgvisie', datum: '2025-09-22', link: null, type: 'Startnotitie' },
+        { naam: 'Beleidsnota Ouderenbeleid 2025', datum: '2025-01-28', link: null, type: 'Beleidsnota' }
+    ],
+    8: [
+        { naam: 'Startnotitie Participatie Omgevingsvisie', datum: '2025-12-17', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=416f5b70-c39b-47d4-b662-be73d3e71c63&agendaItemId=5abb6d11-0c07-463f-a4c0-10b66f8e58a8', type: 'Startnotitie', toelichting: 'De raad heeft deze startnotitie vastgesteld (17 dec 2025). De Eerste proeve Omgevingsvisie 2040 is niet als vastgestelde visie aangenomen; de raad koos voor een nieuw participatietraject. Streefdatum vaststelling Omgevingsvisie: 1 april 2027.' },
+        { naam: 'Nota Woonbeleid gemeente Wassenaar 2025', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/8f51ef1d-1b7a-4f0c-8343-4bf2f203930d?documentId=bdfb8868-7df2-422f-bfbe-dcd9528fbaa6&agendaItemId=88378d7f-f964-4391-90d3-01e88eb7752d', type: 'Beleidsnota' }
     ]
 };
 
@@ -551,7 +683,6 @@ function renderDossierKaarten(tree) {
             <div class="dossier-kaart-header">
                 <span class="dossier-kaart-icoon">${icoon}</span>
                 <span class="dossier-kaart-naam">${escapeHtml(naam)}</span>
-                <span class="dossier-kaart-count">${count}</span>
             </div>
             ${preview ? `<p class="dossier-kaart-preview">${escapeHtml(preview)}</p>` : ''}
             ${begrHtml}
@@ -577,9 +708,15 @@ function showView(mode) {
     viewMode = mode;
     const hub = document.getElementById('hubOverzicht');
     if (hub) hub.style.display = 'none';
-    const isOverzicht = mode === 'overzicht' || mode === 'dossier' || mode === 'zoekresultaten';
-    document.getElementById('dossierOverzicht').style.display = isOverzicht ? '' : 'none';
-    document.getElementById('dossierDetail').style.display = mode === 'dossier' ? '' : 'none';
+    const toonHoofdstukken = mode === 'overzicht' || mode === 'zoekresultaten';
+    const ovEl = document.getElementById('dossierOverzicht');
+    const detEl = document.getElementById('dossierDetail');
+    if (ovEl) {
+        ovEl.style.display = toonHoofdstukken ? '' : 'none';
+        ovEl.setAttribute('aria-hidden', toonHoofdstukken ? 'false' : 'true');
+    }
+    if (detEl) detEl.style.display = mode === 'dossier' ? '' : 'none';
+    document.body.classList.toggle('dossier-detail-open', mode === 'dossier');
     document.getElementById('zoekResultaten').style.display = mode === 'zoekresultaten' ? '' : 'none';
     const compliance = document.getElementById('compliance');
     if (compliance) compliance.style.display = mode === 'compliance' ? '' : 'none';
@@ -612,20 +749,17 @@ function openDossier(thema, subFilter) {
         renderSubTegelsBBV(bbvIndex);
         document.getElementById('samenvattingGeselecteerdBlok').style.display = 'none';
         document.getElementById('samenvattingPerThemaBlok').style.display = 'none';
-        document.getElementById('beleidsnotaBlok').style.display = 'none';
         document.getElementById('briefingBlok').style.display = 'none';
         document.getElementById('coalitieAkkoordBlok').style.display = 'none';
-        // BBV 6 = Sociaal domein: toon overdrachtsdossier-blok op niveau van kindtegels
+        // OD-blok: toon overdrachtsdossier-samenvatting voor elk BBV-hoofdstuk
         const odBlok = document.getElementById('overdrachtsdossierBlok');
         if (odBlok) {
-            if (bbvIndex === 6) {
-                odBlok.style.display = '';
-                loadOverdrachtsdossierContent();
-            } else {
-                odBlok.style.display = 'none';
-            }
+            const heeftOD = bbvIndex in OD_SAMENVATTING_PER_BBV;
+            odBlok.style.display = heeftOD ? '' : 'none';
+            if (heeftOD) loadOverdrachtsdossierContent(bbvIndex);
         }
         loadDossierBesluitenBBV(bbvIndex);
+        showBeleidsnotaBlokBBV(bbvIndex, activeDossier.subFilter);
     } else {
         const odBlok = document.getElementById('overdrachtsdossierBlok');
         if (odBlok) odBlok.style.display = 'none';
@@ -665,7 +799,7 @@ function renderSubTegelsBBV(bbvIndex) {
         card.style.borderLeftColor = isActief ? accent : 'rgba(0,0,0,0.15)';
         if (isActief) card.style.background = accent;
         if (isActief) card.style.color = '#fff';
-        card.innerHTML = `<div class="sub-kaart-top"><span class="sub-kaart-code">${escapeHtml(tv.code)}</span><span class="sub-kaart-naam">${escapeHtml(tv.naam)}</span><span class="sub-kaart-count">${count}</span></div>`;
+        card.innerHTML = `<div class="sub-kaart-top"><span class="sub-kaart-code">${escapeHtml(tv.code)}</span><span class="sub-kaart-naam">${escapeHtml(tv.naam)}</span></div>`;
         card.onclick = () => {
             activeDossier.subFilter = activeDossier.subFilter === tv.code ? null : tv.code;
             renderSubTegelsBBV(bbvIndex);
@@ -679,7 +813,7 @@ function renderSubTegelsBBV(bbvIndex) {
 
 function loadDossierBesluitenBBV(bbvIndex) {
     const details = document.getElementById('dossierBesluiten');
-    if (details) details.open = true;
+    if (details) details.open = false; // standaard ingeklapt
     applyDossierFilters();
 }
 
@@ -799,7 +933,6 @@ function renderSubTegels(thema, activeSubFilter) {
         card.innerHTML = `
             <div class="sub-kaart-top">
                 <span class="sub-kaart-naam">${escapeHtml(sub.naam)}</span>
-                <span class="sub-kaart-count">${sub.count}</span>
             </div>
             ${datumHtml}
         `;
@@ -978,12 +1111,29 @@ function showBeleidsnotaBlok(thema, subFilter) {
     blok.style.display = '';
 }
 
+function mergeBeleidsnotaLijsten(...lijsten) {
+    const seen = new Set();
+    const out = [];
+    for (const lijst of lijsten) {
+        if (!lijst || !lijst.length) continue;
+        for (const n of lijst) {
+            const key = `${n.naam || ''}|${n.link || ''}`;
+            if (seen.has(key)) continue;
+            seen.add(key);
+            out.push(n);
+        }
+    }
+    return out;
+}
+
 function showBeleidsnotaBlokBBV(bbvIndex, taakveldCode) {
     const blok = document.getElementById('beleidsnotaBlok');
     const lijst = document.getElementById('beleidsnotaLijst');
     if (!blok || !lijst) return;
 
-    const items = taakveldCode ? (BELEIDSNOTA_PER_TAAKVELD[taakveldCode] || []) : [];
+    const hoofd = BELEIDSNOTA_PER_HOOFDSTUK_BBV[bbvIndex] || [];
+    const sub = taakveldCode ? (BELEIDSNOTA_PER_TAAKVELD[taakveldCode] || []) : [];
+    const items = mergeBeleidsnotaLijsten(hoofd, sub);
     if (!items.length) {
         blok.style.display = 'none';
         return;
@@ -1052,12 +1202,26 @@ function parseOverdrachtsdossierMd(md) {
     let currentContent = [];
     let tableRows = [];
 
+    const cupStatusIcon = (val) => {
+        const v = val.trim();
+        if (v === 'ü') return '<span class="cup-status cup-status--gerealiseerd" title="Gerealiseerd" aria-label="Gerealiseerd">✓</span>';
+        if (v === '!') return '<span class="cup-status cup-status--knelpunt" title="Aandachtspunt of knelpunt" aria-label="Aandachtspunt of knelpunt">!</span>';
+        if (v === '') return '<span class="cup-status cup-status--gepland" title="Gepland of in behandeling" aria-label="Gepland of in behandeling">🏃</span>';
+        return inlineMd(val);
+    };
+
     const flushTable = () => {
         if (tableRows.length === 0) return;
+        const isCup = currentChapter && /Bijlage 2/.test(currentChapter.title || '');
         let html = '<table class="overdracht-tabel"><tbody>';
         tableRows.forEach((row, i) => {
             const tag = i === 0 ? 'th' : 'td';
-            html += '<tr>' + row.map(c => `<${tag}>${inlineMd(c.trim())}</${tag}>`).join('') + '</tr>';
+            const cells = row.map((c, j) => {
+                const v = c.trim();
+                if (isCup && i > 0 && j === 1 && (v === 'ü' || v === '!' || v === '')) return `<${tag}>${cupStatusIcon(v)}</${tag}>`;
+                return `<${tag}>${inlineMd(v)}</${tag}>`;
+            });
+            html += '<tr>' + cells.join('') + '</tr>';
         });
         html += '</tbody></table>';
         currentContent.push(html);
@@ -1068,7 +1232,34 @@ function parseOverdrachtsdossierMd(md) {
         const t = text.trim();
         if (!t) return;
         if (t === '---') return;
-        currentContent.push('<p>' + inlineMd(t) + '</p>');
+        const isCup = currentChapter && /Bijlage 2/.test(currentChapter.title || '');
+        let html;
+        if (isCup && t.includes('gerealiseerd') && t.includes('ü')) {
+            html = escapeHtml(t.replace('(ü)', '').trim()) + ' ' + cupStatusIcon('ü');
+        } else if (isCup && (t.includes('gepland') || t.includes('behandeling')) && t.includes('()')) {
+            html = escapeHtml(t.replace('()', '').trim()) + ' ' + cupStatusIcon('');
+        } else if (isCup && t.includes('knelpunt') && t.includes('!')) {
+            html = escapeHtml(t.replace('(!)', '').trim()) + ' ' + cupStatusIcon('!');
+        } else {
+            html = inlineMd(t);
+        }
+        currentContent.push('<p>' + html + '</p>');
+    };
+
+    const flushList = (items) => {
+        if (!items.length) return;
+        currentContent.push('<ul>' + items.map(it => '<li>' + inlineMd(it) + '</li>').join('') + '</ul>');
+    };
+    const flushOlList = (olItems) => {
+        if (!olItems.length) return;
+        let html = '<ol type="I" class="lta-bevoegdheden">';
+        olItems.forEach(content => {
+            const parts = content.split('<br>');
+            const safe = parts.map(p => inlineMd(p)).join('<br>');
+            html += '<li>' + safe + '</li>';
+        });
+        html += '</ol>';
+        currentContent.push(html);
     };
 
     const pushChapter = (title, content) => {
@@ -1077,15 +1268,23 @@ function parseOverdrachtsdossierMd(md) {
         if (body) chapters.push({ title: stripPageNum(title), body });
     };
 
+    let listItems = [];
+    let olItems = [];
+
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         const h1 = line.match(/^#\s+(.+)$/);
         const h2 = line.match(/^##\s+(.+)$/);
         const h3 = line.match(/^###\s+(.+)$/);
         const isTable = line.trim().startsWith('|');
+        const ulMatch = line.match(/^(\s*)[-*]\s+(.+)$/);
 
         if (h1) {
             flushTable();
+            flushList(listItems);
+            flushOlList(olItems);
+            listItems = [];
+            olItems = [];
             if (currentChapter) {
                 pushChapter(currentChapter.title, currentContent);
             }
@@ -1093,22 +1292,61 @@ function parseOverdrachtsdossierMd(md) {
             currentContent = [];
         } else if (h2) {
             flushTable();
+            flushList(listItems);
+            flushOlList(olItems);
+            listItems = [];
+            olItems = [];
             currentContent.push('<h2>' + escapeHtml(stripPageNum(h2[1])) + '</h2>');
         } else if (h3) {
             flushTable();
+            flushList(listItems);
+            flushOlList(olItems);
+            listItems = [];
+            olItems = [];
             currentContent.push('<h3>' + escapeHtml(stripPageNum(h3[1])) + '</h3>');
         } else if (isTable) {
+            flushList(listItems);
+            flushOlList(olItems);
+            listItems = [];
+            olItems = [];
             const cells = line.split('|').slice(1, -1).map(c => c.trim());
             const isSeparator = cells.every(c => !c || /^-+$/.test(c));
             if (cells.some(c => c) && !isSeparator) tableRows.push(cells);
-        } else {
-            if (tableRows.length > 0) {
-                flushTable();
+        } else if (line.trim() === 'Raadsbevoegdheid:' || line.trim() === 'Collegebevoegdheid:') {
+            flushList(listItems);
+            flushOlList(olItems);
+            olItems = [];
+            currentContent.push('<p class="lta-sectie-kop"><strong>' + escapeHtml(line.trim()) + '</strong></p>');
+        } else if (/^(I{1,3}|IV|V|VI{0,3}|IX|X)\.\s+/.test(line.trim())) {
+            if (tableRows.length > 0) flushTable();
+            flushList(listItems);
+            // Strip Romeins nummer uit tekst (ol type="I" voegt die automatisch toe)
+            let content = line.trim().replace(/^(I{1,3}|IV|V|VI{0,3}|IX|X)\.\s+/, '');
+            if (i + 1 < lines.length) {
+                const nextLine = lines[i + 1].trim();
+                if (nextLine.startsWith('Voorbeelden zijn') || nextLine.startsWith('De gemeenteraad')) {
+                    content += '<br>' + nextLine;
+                    i++;
+                }
             }
+            olItems.push(content);
+        } else if (ulMatch) {
+            if (tableRows.length > 0) flushTable();
+            flushOlList(olItems);
+            olItems = [];
+            listItems.push(ulMatch[2].trim());
+        } else if (line.trim()) {
+            flushList(listItems);
+            flushOlList(olItems);
+            listItems = [];
+            olItems = [];
+            if (tableRows.length > 0) flushTable();
             flushParagraph(line);
         }
     }
     flushTable();
+    flushList(listItems);
+    flushOlList(olItems);
     if (currentChapter) pushChapter(currentChapter.title, currentContent);
 
     return chapters;
@@ -1147,26 +1385,29 @@ function loadOverdrachtsdossierPagina() {
         });
 }
 
-function loadOverdrachtsdossierContent() {
+// BBV-index → OD-hoofdstuk (deeplink overdrachtsdossier.html#od-ch-X)
+const BBV_TO_OD_CHAPTER = { 0: 8, 1: 12, 2: 13, 3: 15, 4: 16, 5: 16, 6: 14, 7: 13, 8: 13 };
+
+function loadOverdrachtsdossierContent(bbvIndex) {
+    const blok = document.getElementById('overdrachtsdossierBlok');
     const container = document.getElementById('overdrachtsdossierInhoud');
+    const bron = document.getElementById('overdrachtsdossierBron');
+    const odLink = document.getElementById('overdrachtsdossierLink');
     if (!container) return;
+
+    const od = OD_SAMENVATTING_PER_BBV[bbvIndex];
+    if (!od) return;
+
+    const odCh = BBV_TO_OD_CHAPTER[bbvIndex];
+    if (odLink && odCh != null) {
+        odLink.href = `overdrachtsdossier.html#od-ch-${odCh}`;
+    }
+
     const ibabs = 'https://wassenaar.bestuurlijkeinformatie.nl/';
-    container.innerHTML = `
-<p>Het sociaal domein draait om drie wetten: de <strong>Wmo</strong>, de <strong>Jeugdwet</strong> en de <strong>Participatiewet</strong>. Voor Wmo en Jeugdwet is het Sociaal Team Wassenaar (STW) de toegangspoort. De gemeente richt zich op preventie: versterken van de sociale basis, toegankelijke informatie en passende ondersteuning. Verordeningen zijn vernieuwd.</p>
-
-<p>De uitdagingen zijn groot: meer regie en samenwerking binnen een complexer zorglandschap. De kosten gaan vaak voor de baten uit. Samenwerking met huisartsen, scholen, zorgaanbieders en vrijwilligers is onmisbaar.</p>
-
-<p>Investeren in de voorkant is noodzakelijk — vroeg hulp voorkomt later dure specialistische zorg. Dit vraagt om duidelijke keuzes. Zonder keuzes lopen de kosten verder op.</p>
-
-<h4>Relevante visies en beleidsdocumenten</h4>
-<ul class="overdracht-doclist">
-<li><a href="${ibabs}" target="_blank" rel="noopener noreferrer">Beleidsplan Sociaal Domein Wassenaar</a> (juni 2024)</li>
-<li><a href="${ibabs}" target="_blank" rel="noopener noreferrer">Lokaal Jeugdbeleid Wassenaar 2026</a></li>
-<li><a href="${ibabs}" target="_blank" rel="noopener noreferrer">Beleidsnota Ouderenbeleid 2025</a></li>
-<li><a href="${ibabs}" target="_blank" rel="noopener noreferrer">Startnotitie Lokale Woonzorgvisie</a> (sept 2025)</li>
-<li><a href="${ibabs}" target="_blank" rel="noopener noreferrer">Beleidsnota Schuldhulpverlening 2025–2028</a></li>
-<li><a href="${ibabs}" target="_blank" rel="noopener noreferrer">Verordening Adviesraad Sociaal Domein 2025</a></li>
-</ul>`;
+    const html = typeof od.html === 'function' ? od.html(ibabs) : od.html;
+    container.innerHTML = html || '';
+    if (bron) bron.textContent = od.bron;
+    if (blok) blok.classList.toggle('hidden', !html);
 }
 
 function loadCoalitieAkkoord(thema) {
@@ -1266,6 +1507,8 @@ function getSubFilterKeywords(thema, subFilter) {
 }
 
 function loadDossierBesluiten(thema) {
+    const details = document.getElementById('dossierBesluiten');
+    if (details) details.open = false; // standaard ingeklapt
     let besluiten = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === thema);
 
     if (activeDossier && activeDossier.subFilter) {
@@ -1603,150 +1846,32 @@ function navigateToDecision(refText) {
     }
 }
 
-// ─── Kwaliteitsdashboard ───
+// ─── Methodologie (in Compliance) ───
 
-function renderKwaliteit() {
-    const container = document.getElementById('kwaliteitInhoud');
-    if (!container || !allDecisions.length) return;
+function renderMethodologie() {
+    const container = document.getElementById('methodologieInhoud');
+    if (!container) return;
 
-    const total = allDecisions.length;
     const dates = allDecisions.map(d => d.datum).filter(Boolean).sort();
-    const newest = dates[dates.length - 1];
-    const oldest = dates[0];
-
-    const perYear = {};
-    const perType = {};
-    const perDomein = {};
-    let withLink = 0;
-    let classified = 0;
-
-    allDecisions.forEach(d => {
-        const year = (d.datum || '').substring(0, 4);
-        if (year) perYear[year] = (perYear[year] || 0) + 1;
-
-        const type = d.type_besluit || 'Onbekend';
-        perType[type] = (perType[type] || 0) + 1;
-
-        const dom = d.domein || 'Niet geclassificeerd';
-        perDomein[dom] = (perDomein[dom] || 0) + 1;
-
-        if (d.link) withLink++;
-        if (d.domein) classified++;
-    });
-
-    const classifiedPct = Math.round((classified / total) * 100);
-    const linkedPct = Math.round((withLink / total) * 100);
-
-    const years = Object.keys(perYear).sort();
-    const yearRows = years.map(y =>
-        `<tr><td>${y}</td><td class="kw-num">${perYear[y].toLocaleString('nl-NL')}</td></tr>`
-    ).join('');
-
-    const typeEntries = Object.entries(perType).sort((a, b) => b[1] - a[1]);
-    const topTypes = typeEntries.slice(0, 8);
-    const typeRows = topTypes.map(([t, c]) =>
-        `<tr><td>${escapeHtml(t)}</td><td class="kw-num">${c.toLocaleString('nl-NL')}</td></tr>`
-    ).join('');
-
-    const domeinEntries = Object.entries(perDomein).sort((a, b) => b[1] - a[1]);
-    const domeinRows = domeinEntries.map(([d, c]) => {
-        const pct = Math.round((c / total) * 100);
-        return `<tr><td>${escapeHtml(d)}</td><td class="kw-num">${c.toLocaleString('nl-NL')}</td><td class="kw-num kw-pct">${pct}%</td></tr>`;
-    }).join('');
-
-    const coalitieSecties = typeof COALITIEAKKOORD_DATA !== 'undefined'
-        ? COALITIEAKKOORD_DATA.secties.length : 0;
-    let coalitieMetBesluiten = 0;
-    if (typeof COALITIEAKKOORD_DATA !== 'undefined') {
-        COALITIEAKKOORD_DATA.secties.forEach(s => {
-            const thema = s.thema;
-            const count = allDecisions.filter(d => d.domein === thema).length;
-            if (count > 0) coalitieMetBesluiten++;
-        });
-    }
+    const newest = dates.length ? dates[dates.length - 1] : '—';
+    const oldest = dates.length ? dates[0] : '—';
 
     container.innerHTML = `
-        <div class="kw-grid">
-            <div class="kw-card kw-card-highlight">
-                <div class="kw-card-value">${total.toLocaleString('nl-NL')}</div>
-                <div class="kw-card-label">Publicaties verwerkt</div>
-            </div>
-            <div class="kw-card">
-                <div class="kw-card-value">${classifiedPct}%</div>
-                <div class="kw-card-label">Geclassificeerd naar domein</div>
-            </div>
-            <div class="kw-card">
-                <div class="kw-card-value">${linkedPct}%</div>
-                <div class="kw-card-label">Met bronlink naar OB</div>
-            </div>
-            <div class="kw-card">
-                <div class="kw-card-value">${formatDatumKort(newest)}</div>
-                <div class="kw-card-label">Nieuwste publicatie</div>
-            </div>
-        </div>
-
-        <div class="kw-tables">
-            <div class="kw-table-wrap">
-                <h4>Per jaar</h4>
-                <table class="kw-table">
-                    <thead><tr><th>Jaar</th><th>Aantal</th></tr></thead>
-                    <tbody>${yearRows}</tbody>
-                    <tfoot><tr><td><strong>Totaal</strong></td><td class="kw-num"><strong>${total.toLocaleString('nl-NL')}</strong></td></tr></tfoot>
-                </table>
-            </div>
-            <div class="kw-table-wrap">
-                <h4>Per domein</h4>
-                <table class="kw-table">
-                    <thead><tr><th>Domein</th><th>Aantal</th><th>%</th></tr></thead>
-                    <tbody>${domeinRows}</tbody>
-                </table>
-            </div>
-            <div class="kw-table-wrap">
-                <h4>Top publicatietypen</h4>
-                <table class="kw-table">
-                    <thead><tr><th>Type</th><th>Aantal</th></tr></thead>
-                    <tbody>${typeRows}</tbody>
-                </table>
-            </div>
-        </div>
-
-        ${coalitieSecties > 0 ? `
-        <div class="kw-coalitie-dekking">
-            <h4>Coalitieakkoord-dekking</h4>
-            <p>Van de <strong>${coalitieSecties}</strong> beleidsthema's in het coalitieakkoord hebben
-            <strong>${coalitieMetBesluiten}</strong> ten minste één publicatie in Besluit-Wijzer.</p>
-        </div>` : ''}
-
-        <div class="kw-methode">
-            <h4>Methodologie</h4>
-            <p>Besluit-Wijzer verzamelt publicaties uit het <strong>Gemeenteblad</strong> via de SRU-API van
-            <a href="https://repository.overheid.nl" target="_blank" rel="noopener">repository.overheid.nl</a>.
-            Elke publicatie wordt automatisch geclassificeerd naar beleidsdomein op basis van type en trefwoorden in de titel.
-            Alle data is openbaar en vrij beschikbaar. Elke publicatie bevat een directe link naar het origineel op
-            <a href="https://zoek.officielebekendmakingen.nl" target="_blank" rel="noopener">zoek.officielebekendmakingen.nl</a>.</p>
-            <p>Periode: <strong>${oldest}</strong> t/m <strong>${newest}</strong>
-            · Laatst bijgewerkt: <strong>maart 2026</strong></p>
-        </div>
+        <p>Besluit-Wijzer verzamelt publicaties uit het <strong>Gemeenteblad</strong> via de SRU-API van
+        <a href="https://repository.overheid.nl" target="_blank" rel="noopener">repository.overheid.nl</a>.
+        Elke publicatie wordt automatisch geclassificeerd naar beleidsdomein op basis van type en trefwoorden in de titel.
+        Alle data is openbaar en vrij beschikbaar. Elke publicatie bevat een directe link naar het origineel op
+        <a href="https://zoek.officielebekendmakingen.nl" target="_blank" rel="noopener">zoek.officielebekendmakingen.nl</a>.</p>
+        <p>Periode: <strong>${oldest}</strong> t/m <strong>${newest}</strong>
+        · Laatst bijgewerkt: <strong>maart 2026</strong></p>
     `;
 }
 
 // ─── Event listeners ───
 
-const KWALITEIT_OPEN_KEY = 'beleidswijzer_kwaliteit_open';
-
 document.addEventListener('DOMContentLoaded', () => {
     loadData();
-    renderKwaliteit();
-
-    // Kwaliteit & Verantwoording: standaard ingeklapt, voorkeur onthouden
-    const kwaliteitDetails = document.getElementById('kwaliteitDetails');
-    if (kwaliteitDetails) {
-        const opgeslagen = localStorage.getItem(KWALITEIT_OPEN_KEY);
-        kwaliteitDetails.open = opgeslagen === 'true';
-        kwaliteitDetails.addEventListener('toggle', () => {
-            localStorage.setItem(KWALITEIT_OPEN_KEY, kwaliteitDetails.open);
-        });
-    }
+    renderMethodologie();
 
     // Uitklap-knoppen (via event delegation op beide lijsten)
     document.addEventListener('click', (e) => {

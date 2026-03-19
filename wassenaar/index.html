@@ -32,6 +32,7 @@
             <div class="container site-nav-inner">
                 <a href="#dossierOverzicht" class="site-nav-link site-nav-actief" id="navBeleidsBibliotheek">BeleidsBibliotheek</a>
                 <a href="overdrachtsdossier.html" class="site-nav-link" id="navOverdrachtsdossier">Overdrachtsdossier</a>
+                <a href="beleidsnotas.html" class="site-nav-link" id="navBeleidsnotas">Beleidsnota's</a>
                 <a href="#compliance" class="site-nav-link" id="navCompliance">Compliance</a>
             </div>
         </nav>
@@ -86,6 +87,10 @@
                     <h3>Informatiebeveiliging</h3>
                     <p>De BeleidsBibliotheek is een statische tool die uitsluitend publieke bronnen gebruikt. Alle verbindingen verlopen via HTTPS. Voor de hosting wordt een hardened omgeving aanbevolen. Voor integriteit kunnen checksums en versiebeheer worden ingezet.</p>
                 </div>
+                <div class="compliance-kaart">
+                    <h3>Methodologie</h3>
+                    <div id="methodologieInhoud"></div>
+                </div>
             </div>
         </section>
 
@@ -96,13 +101,13 @@
 
         <section class="dossier-detail" id="dossierDetail" style="display: none;">
             <div class="dossier-kop">
-                <button type="button" class="dossier-terug" id="dossierTerug">← Overzicht</button>
+                <button type="button" class="dossier-terug" id="dossierTerug">← Terug</button>
                 <h2 class="dossier-kop-titel" id="dossierTitel"></h2>
             </div>
             <div id="subTegels" class="sub-tegels"></div>
             <div id="overdrachtsdossierBlok" class="overdrachtsdossier-blok" style="display:none;">
-                <h3 class="overdrachtsdossier-kop">DIT STAAT ER IN HET OVERDRACHTSDOSSIER</h3>
-                <p class="overdrachtsdossier-bron">Bron: Overdrachtsdossier raadsverkiezingen 2026, hoofdstuk 7 — Sociaal Domein en asielopvang (papier aan raadsleden). Mapping: OD hoofdstuk 7 = BBV 6 (Sociaal domein).</p>
+                <h3 class="overdrachtsdossier-kop" id="overdrachtsdossierKop">DIT STAAT ER IN HET <a href="overdrachtsdossier.html" id="overdrachtsdossierLink" class="overdrachtsdossier-deeplink">Overdrachtsdossier</a></h3>
+                <p class="overdrachtsdossier-bron" id="overdrachtsdossierBron">Bron: Overdrachtsdossier raadsverkiezingen 2026 (papier aan raadsleden).</p>
                 <div id="overdrachtsdossierInhoud" class="overdrachtsdossier-inhoud"></div>
             </div>
             <div id="subBreadcrumb" class="sub-breadcrumb" style="display:none;"></div>
@@ -239,43 +244,6 @@
             <div id="zoekNoResults" class="no-results" style="display: none;">
                 <p>Geen raads- of collegebesluiten gevonden voor deze zoekterm.</p>
             </div>
-        </section>
-
-        <section class="kwaliteit-sectie" id="kwaliteitSectie">
-            <details id="kwaliteitDetails">
-                <summary class="kwaliteit-kop">
-                    <span>Kwaliteit & Verantwoording</span>
-                </summary>
-                <div id="kwaliteitInhoud" class="kwaliteit-inhoud"></div>
-                <div class="bronnen-sectie" id="bronnenSectie">
-                    <h4 class="bronnen-titel">Bronnen</h4>
-                    <p class="bronnen-intro">Besluit-Wijzer Wassenaar gebruikt uitsluitend openbare overheidsbronnen:</p>
-                    <div class="bronnen-lijst">
-                        <div class="bron-item">
-                            <span class="bron-icoon">📋</span>
-                            <div>
-                                <a href="https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area%3D%3D%22officielepublicaties%22)%20AND%20(dt.creator%3D%3D%22Wassenaar%22)%20AND%20w.publicatienaam%3D%3D%22Gemeenteblad%22&zession=cleared" target="_blank" rel="noopener" class="bron-link">Officiële Bekendmakingen — Gemeenteblad Wassenaar</a>
-                                <p class="bron-detail">4.994 publicaties uit 2022–2025 · Verordeningen, vergunningen, verkeersbesluiten, beleidsregels en meer<br>
-                                API: <code>repository.overheid.nl/sru</code> · Laatst opgehaald: maart 2026</p>
-                            </div>
-                        </div>
-                        <div class="bron-item">
-                            <span class="bron-icoon">🏛️</span>
-                            <div>
-                                <a href="https://wassenaar.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener" class="bron-link">iBabs — Raadsinformatiesysteem Wassenaar</a>
-                                <p class="bron-detail">3.137 raads- en collegebesluiten uit 2019–2025 · Inclusief volledige besluittekst en agenda-informatie</p>
-                            </div>
-                        </div>
-                        <div class="bron-item">
-                            <span class="bron-icoon">📝</span>
-                            <div>
-                                <a href="https://www.wassenaar.nl/coalitieakkoord" target="_blank" rel="noopener" class="bron-link">Coalitieakkoord 2022–2026 &ldquo;Samen voor Wassenaar&rdquo;</a>
-                                <p class="bron-detail">VVD, D66, CDA en Hart voor Wassenaar</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </details>
         </section>
 
     </main>
