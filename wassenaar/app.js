@@ -231,7 +231,17 @@ const OD_SAMENVATTING_PER_BBV = {
         bron: 'Bron: OD hoofdstukken 6, 10 — Wonen en fysieke leefomgeving; Projecten.',
         html: `<p>De woningmarkt is uit evenwicht. Nota Woonbeleid 2025: twee derde betaalbaar bij nieuwbouw. Woningbouwopgave RRA: 991 woningen tot 2030. Lokale Woonzorgvisie 2026 vastgesteld. Woonwagenstandplaatsen: uitbreiding Lagerweide en Ruigelaan, Huisvestingsverordening aangepast (dec 2025).</p>
 <p>Omgevingsvisie: participatie 2026, vaststelling 2027. Omgevingsplan uiterlijk 2032. Projecten: ANWB-locatie, Kerkehout, gemeentewerf, Duindigt, De Paauw, SKOW-fusieschool, De Warenar, Programma Noordrand.</p>
-<p>Opgaven: periode zonder actueel beleidskader (jan–apr 2027); doorstroming woningmarkt; Warmteprogramma; netcongestie; klimaatadaptatie. Integrale keuzes nodig voor wonen, energie, natuur en leefomgeving.</p>`
+<p>Opgaven: periode zonder actueel beleidskader (jan–apr 2027); doorstroming woningmarkt; Warmteprogramma; netcongestie; klimaatadaptatie. Integrale keuzes nodig voor wonen, energie, natuur en leefomgeving.</p>
+<h4>Documenten en instrumenten (selectie; volledige lijst onder Beleidsnota’s op BBV 8)</h4>
+<ul class="overdracht-doclist">
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=416f5b70-c39b-47d4-b662-be73d3e71c63&agendaItemId=5abb6d11-0c07-463f-a4c0-10b66f8e58a8" target="_blank" rel="noopener noreferrer">Startnotitie Participatie Omgevingsvisie</a> (dec 2025)</li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/8f51ef1d-1b7a-4f0c-8343-4bf2f203930d?documentId=bdfb8868-7df2-422f-bfbe-dcd9528fbaa6&agendaItemId=88378d7f-f964-4391-90d3-01e88eb7752d" target="_blank" rel="noopener noreferrer">Nota Woonbeleid gemeente Wassenaar 2025</a></li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b40189c1-dcea-44f9-a416-e4120fa1eb15?agendaItemId=27762907-377f-4f73-a2ec-bcb9d7282f9f" target="_blank" rel="noopener noreferrer">Bestemmingsplan Residentie Parkzicht + beeldkwaliteitsplan (ANWB-locatie)</a></li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/2455d6c8-1c90-4564-be5b-62ee8bc8eb71?agendaItemId=fcf97e62-007f-4e8f-8d93-c6e6582496c1" target="_blank" rel="noopener noreferrer">Wensen en bedenkingen Concept-Programma Noordrand</a> (jun 2025)</li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=cc8bf828-300a-4098-9198-dc67d2e0a15c&agendaItemId=a71419b7-25db-4a02-800f-99707a0dd53b" target="_blank" rel="noopener noreferrer">Startnotitie Lokale Woonzorgvisie</a> (sep 2025)</li>
+<li><a href="https://zoek.officielebekendmakingen.nl/gmb-2023-261015.html" target="_blank" rel="noopener noreferrer">Delegatie tijdelijk deel omgevingsplan vaststellen</a> (Officiële Bekendmakingen)</li>
+<li><em>+ ca. 25 verdere titels in het Beleidsnota-blok (Omgevingsplan, volkshuisvestelijk programma, milieuzonering, erfgoed→visie, enz.)</em></li>
+</ul>`
     },
     6: {
         bron: 'Bron: OD hoofdstuk 7 — Sociaal Domein en asielopvang (papier aan raadsleden). Mapping: OD hoofdstuk 7 = BBV 6 (Sociaal domein).',
@@ -479,13 +489,16 @@ const BELEIDSNOTA_PER_THEMA = {
 
 // Beleidsnota's per BBV-taakveld (voor hoofdstukken/taakvelden-weergave)
 const BELEIDSNOTA_PER_TAAKVELD = {
-    '8.1': [ // Ruimte en leefomgeving
+    '8.1': [ // Ruimte en leefomgeving — aanvulling op hoofdstuk 8 (merge met BELEIDSNOTA_PER_HOOFDSTUK_BBV[8])
         { naam: 'Startnotitie Participatie Omgevingsvisie', datum: '2025-12-17', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=416f5b70-c39b-47d4-b662-be73d3e71c63&agendaItemId=5abb6d11-0c07-463f-a4c0-10b66f8e58a8', type: 'Startnotitie', toelichting: 'De raad heeft deze startnotitie vastgesteld (17 dec 2025). De Eerste proeve Omgevingsvisie 2040 is niet als vastgestelde visie aangenomen; de raad koos voor een nieuw participatietraject. Streefdatum vaststelling Omgevingsvisie: 1 april 2027.' }
     ],
-    '8.3': [ // Wonen en bouwen
+    '8.3': [ // Wonen en bouwen — aanvulling op hoofdstuk 8
         { naam: 'Nota Woonbeleid gemeente Wassenaar 2025', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/8f51ef1d-1b7a-4f0c-8343-4bf2f203930d?documentId=bdfb8868-7df2-422f-bfbe-dcd9528fbaa6&agendaItemId=88378d7f-f964-4391-90d3-01e88eb7752d', type: 'Beleidsnota' }
     ],
     // BBV 3 (Economie): algemene beleidsnota's staan op hoofdstukniveau — zie BELEIDSNOTA_PER_HOOFDSTUK_BBV[3]
+    // BBV 4 (Onderwijs): zie BELEIDSNOTA_PER_HOOFDSTUK_BBV[4] (o.a. LEA, verordening leerlingenvervoer)
+    // BBV 5 (Sport, cultuur, recreatie): zie BELEIDSNOTA_PER_HOOFDSTUK_BBV[5]
+    // BBV 8 (Volkshuisvesting, leefomgeving, stedelijke vernieuwing): uitgebreide OD-lijst in BELEIDSNOTA_PER_HOOFDSTUK_BBV[8]
     '6.811': [ // Beschermd wonen (Wmo)
         { naam: 'Startnotitie Lokale Woonzorgvisie', datum: '2025-09-22', link: null, type: 'Startnotitie' },
         { naam: 'Beleidsnota Ouderenbeleid 2025', datum: '2025-01-28', link: null, type: 'Beleidsnota' }
@@ -504,6 +517,7 @@ const BELEIDSNOTA_PER_TAAKVELD = {
     '6.3 - 6.5': [ // Clustering: 6.3, 6.4, 6.5
         { naam: 'Werk en inkomen', type: 'Clustering', toelichting: 'Deze tegel is een clustering van de BBV-taakvelden 6.3 (Inkomensregelingen), 6.4 (WSW en beschut werk) en 6.5 (Arbeidsparticipatie). Besluiten van het Sociaal Domein worden hier op hoofdniveau weergegeven.' }
     ]
+    // BBV 7: geen aparte TAAKVELD-lijst — stukken op hoofdstukniveau in BELEIDSNOTA_PER_HOOFDSTUK_BBV[7]
 };
 
 // Algemene beleidsnota's per BBV-hoofdstuk: zichtbaar zodra je het hoofdstuk opent (geen subtegel nodig), zelfde patroon als OD op de tegel.
@@ -514,6 +528,15 @@ const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
             link: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/df32a5b8-1b14-4a96-b325-bd3af644cc9f?documentId=d55bb8d1-54e5-473f-8302-33434af5914c&agendaItemId=77e257f7-68bb-42a3-92ae-8a2628d2a666',
             type: 'Beleidsnota',
             toelichting: 'Integraal veiligheidsbeleid — iBabs-document (controleer vergadering/stemming in iBabs).'
+        }
+    ],
+    2: [
+        {
+            naam: 'Wegencategoriseringsplan Wassenaar',
+            datum: '2025-12-17',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3a10e3a7-42a0-4d1d-b2d5-4665bcb18442?agendaItemId=fecb037d-9434-46c1-8d7c-d88b5082b02a',
+            type: 'Beleidsplan',
+            toelichting: 'Vastgesteld door de raad 17 dec 2025; invoering nieuwe snelheidsregimes o.a. per 27 feb 2026 (zie besluittekst in iBabs). Zelfde link als in briefing Verkeer & Mobiliteit.'
         }
     ],
     3: [
@@ -539,15 +562,253 @@ const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
             link: 'https://centraalplus.nl/2026/01/17/lokale-educatieve-agenda-van-wassenaar-ondertekend-een-horizon-waarmee-we-aan-de-slag-kunnen/',
             type: 'Samenwerkingsdocument',
             toelichting: 'Ondertekend 16 jan 2026 (18 partijen; o.a. gemeente, scholen, welzijn). Deze link is een nieuwsbericht van Centraal+, géén formeel bestuursdocument. Het openbare PDF-/iBabs-pad stond nog niet in onze data — zoek desgewenst in iBabs of op wassenaar.nl op “Lokale Educatieve Agenda”.'
+        },
+        {
+            naam: 'Verordening leerlingenvervoer 2025 gemeente Wassenaar',
+            datum: '2025-09-22',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=eec09f18-31bb-4477-9559-7a73cad358ee&agendaItemId=fea9db3b-6a30-47e4-8337-629eaeca711b',
+            type: 'Verordening',
+            toelichting: 'Hamerstuk 6.b, raad 22 sept 2025 — Raadsbesluit (iBabs). Geldt o.a. vanaf 1 jan 2026 (zie OD). BBV: hoofdzakelijk 4.3 Onderwijsbeleid en leerlingzaken.'
+        }
+    ],
+    5: [
+        {
+            naam: 'Sportvisie Wassenaar 2025',
+            datum: '2025-09-22',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=6db01b2d-15c8-4801-a2e2-521606bb81c4&agendaItemId=fea9db3b-6a30-47e4-8337-629eaeca711b',
+            type: 'Beleidsnota',
+            toelichting: 'Agendapunt 11 raadsvergadering 22 sept 2025 — controleer stemming in iBabs indien nodig.'
         }
     ],
     6: [
         { naam: 'Startnotitie Lokale Woonzorgvisie', datum: '2025-09-22', link: null, type: 'Startnotitie' },
         { naam: 'Beleidsnota Ouderenbeleid 2025', datum: '2025-01-28', link: null, type: 'Beleidsnota' }
     ],
+    7: [
+        {
+            naam: 'Bijlage 1. Verkenning reductie restafval',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Reports/Document/13e0eeae-ce9a-454d-8530-b43864972f79?documentId=3d92ea1b-1a04-4bf3-9bb2-07c976603c43',
+            type: 'Notitie',
+            toelichting: 'Informatiebrief 095 — bijlage verkenning reductie restafval (iBabs Reports/Document).'
+        },
+        {
+            naam: 'Motie reductie restafval en kostenbesparing afvalstoffenheffing',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/3e13ce7b-2972-4a14-9e63-5f8a03b8dde6?documentId=76cff862-0962-4859-85f7-a911708e963f&agendaItemId=a6645f92-6dff-4ca2-80b5-b396b0864d70',
+            type: 'Motie',
+            toelichting: 'Motie GL PvdA D66 VVD CDA'
+        }
+    ],
     8: [
-        { naam: 'Startnotitie Participatie Omgevingsvisie', datum: '2025-12-17', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=416f5b70-c39b-47d4-b662-be73d3e71c63&agendaItemId=5abb6d11-0c07-463f-a4c0-10b66f8e58a8', type: 'Startnotitie', toelichting: 'De raad heeft deze startnotitie vastgesteld (17 dec 2025). De Eerste proeve Omgevingsvisie 2040 is niet als vastgestelde visie aangenomen; de raad koos voor een nieuw participatietraject. Streefdatum vaststelling Omgevingsvisie: 1 april 2027.' },
-        { naam: 'Nota Woonbeleid gemeente Wassenaar 2025', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/8f51ef1d-1b7a-4f0c-8343-4bf2f203930d?documentId=bdfb8868-7df2-422f-bfbe-dcd9528fbaa6&agendaItemId=88378d7f-f964-4391-90d3-01e88eb7752d', type: 'Beleidsnota' }
+        // ─── Omgevingswet: kerninstrumenten & proces (OD hst. 6) ───
+        {
+            naam: 'Startnotitie Participatie Omgevingsvisie',
+            datum: '2025-12-17',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=416f5b70-c39b-47d4-b662-be73d3e71c63&agendaItemId=5abb6d11-0c07-463f-a4c0-10b66f8e58a8',
+            type: 'Startnotitie',
+            toelichting: 'Raad 17 dec 2025. Eerste proeve Omgevingsvisie 2040 niet als vastgestelde visie aangenomen; nieuw participatietraject. Streefdatum definitieve Omgevingsvisie: 1 april 2027.'
+        },
+        {
+            naam: 'Eerste proeve Omgevingsvisie 2040',
+            datum: '2025-12-17',
+            link: null,
+            type: 'Ontwerpdocument',
+            toelichting: 'Niet als vastgestelde omgevingsvisie aangenomen (dec 2025); gevolgd door participatietraject via Startnotitie. Controleer besluit in iBabs.'
+        },
+        {
+            naam: 'Participatie Omgevingsvisie (breed; fase 2026)',
+            link: null,
+            type: 'Proces',
+            toelichting: 'OD: brede participatie start 2026 (1e helft); periode zonder actueel toetsbaar ruimtelijk kader vanaf 1 jan 2027 tot vaststelling visie (risico OD).'
+        },
+        {
+            naam: 'Ontwerp Omgevingsvisie — eerste concept t.b.v. gemeenteraad',
+            link: null,
+            type: 'Concept',
+            toelichting: 'OD-planning: op basis van participatiedocument en technische sessies; streefdatum behandeling raad okt 2026.'
+        },
+        {
+            naam: 'Definitieve Omgevingsvisie Wassenaar',
+            link: null,
+            type: 'Omgevingsvisie',
+            toelichting: 'Nog niet vastgesteld; streef apr 2027. Wordt centraal koersdocument voor gebiedsontwikkeling en vervolgprogramma’s (OD).'
+        },
+        {
+            naam: 'Omgevingsplan Wassenaar (integraal)',
+            link: null,
+            type: 'Omgevingsplan',
+            toelichting: 'Vervangt alle bestaande bestemmingsplannen en relevante lokale regels; uiterlijk gereed 1 jan 2032. OD: streef gereedheid o.a. 2030. Gefaseerde opbouw.'
+        },
+        {
+            naam: 'Generieke delegatie vaststellen tijdelijk deel omgevingsplan',
+            datum: '2023-06-15',
+            link: 'https://zoek.officielebekendmakingen.nl/gmb-2023-261015.html',
+            type: 'Gemeentelijk besluit (OB)',
+            toelichting: 'Besluit gemeenteraad — bevoegdheid college delen tijdelijk omgevingsplan vast te stellen. Officiële Bekendmakingen.'
+        },
+        {
+            naam: 'Volkshuisvestelijk programma',
+            link: null,
+            type: 'Programma',
+            toelichting: 'Verplicht onderdeel van de Omgevingsvisie; woonbeleid en woonzorg ruimtelijk verankerd (OD).'
+        },
+        {
+            naam: 'Gebiedsgerichte uitvoeringsprogramma’s (uitwerking Omgevingsvisie)',
+            link: null,
+            type: 'Programma',
+            toelichting: 'OD: per gebied o.a. water, bodem, natuur, gezondheid, energie, wonen; maatregelen inhoudelijk en financieel haalbaar.'
+        },
+        {
+            naam: 'Klimaatadaptatie — programma na stresstest 2024',
+            link: null,
+            type: 'Programma',
+            toelichting: 'OD: stresstest 2024 → samenhangend programma water, bodem, droogte, hitte, overstromingsrisico’s als onderdeel van de Omgevingsvisie.'
+        },
+        {
+            naam: 'Thema’s en omgevingskwaliteit in het Omgevingsplan',
+            link: null,
+            type: 'Kader',
+            toelichting: 'OD: o.a. milieuzonering, geur, trilling, ontplofbare oorlogsresten, gewasbeschermingsmiddelen, circulariteit; actieplan geluid; Omgevingsdienst Haaglanden (advies).'
+        },
+        {
+            naam: 'Beleidsregels milieuzonering (uitwerking Omgevingswet)',
+            link: null,
+            type: 'Beleidsregels',
+            toelichting: 'Collegebesluit — genoemd in briefing Ruimte & Omgevingswet; exact document in iBabs zoeken.'
+        },
+        {
+            naam: 'Nota hogere waarden verkeerslawaai (uitwerking Omgevingswet)',
+            link: null,
+            type: 'Beleidsnota',
+            toelichting: 'Collegebesluit — genoemd in briefing Ruimte & Omgevingswet; exact document in iBabs zoeken.'
+        },
+        {
+            naam: 'Informatiebrief financiën invoering Omgevingswet',
+            link: null,
+            type: 'Informatie',
+            toelichting: 'College 10 mei 2022 — genoemd in briefing; link niet in deze bibliotheek gezet.'
+        },
+        {
+            naam: 'Plan van aanpak Omgevingsvisie 2023',
+            link: null,
+            type: 'Proces',
+            toelichting: 'Proces/inrichting — voorkomt in data.js; iBabs/college-archief.'
+        },
+        // ─── Programma Noordrand / Groene Zone ───
+        {
+            naam: 'Programma Noordrand (uitvoeringsprogramma Groene Zone)',
+            link: null,
+            type: 'Gebiedsprogramma',
+            toelichting: 'OD: college heeft Programma Noordrand in 2025 vastgesteld; participatietraject 2023–2024; sluit aan bij werkwijze Omgevingswet. Definitief stuk: iBabs.'
+        },
+        {
+            naam: 'Wensen en bedenkingen Concept-Programma Noordrand',
+            datum: '2025-06-03',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/2455d6c8-1c90-4564-be5b-62ee8bc8eb71?agendaItemId=fcf97e62-007f-4e8f-8d93-c6e6582496c1',
+            type: 'Raadsbesluit',
+            toelichting: 'Raad 3 jun 2025 — voorafgaand aan definitief programma (zie briefing Ruimte).'
+        },
+        {
+            naam: 'Onderzoek zweefvliegen / Visie Groene Zone — invoeding Omgevingsvisie',
+            link: null,
+            type: 'Onderzoek',
+            toelichting: 'CUP-doel: meenemen in Omgevingsvisie / Visie Groene Zone (OD Bijlage 2: gerealiseerd).'
+        },
+        // ─── Bestemmingsplannen (tot volledige overgang naar omgevingsplan) ───
+        {
+            naam: 'Bestemmingsplan Residentie Parkzicht + beeldkwaliteitsplan (ANWB-locatie)',
+            datum: '2024-01-30',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b40189c1-dcea-44f9-a416-e4120fa1eb15?agendaItemId=27762907-377f-4f73-a2ec-bcb9d7282f9f',
+            type: 'Bestemmingsplan',
+            toelichting: 'Herontwikkeling Wassenaarseweg 220; OD projecten: beroep RvS mogelijk, omgevingsvergunning, bouw najaar 2027 (doorlooptijd volgens OD).'
+        },
+        {
+            naam: 'Herstelbesluit bestemmingsplan Woongebied Valkenhorst',
+            datum: '2025-06-23',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/43135686-4970-4f3f-b7a4-b7600ccbe012?agendaItemId=4fb461f3-7cb3-4d3c-a4f2-071f91839464',
+            type: 'Bestemmingsplan',
+            toelichting: 'Raad jun 2025.'
+        },
+        {
+            naam: 'Samenhangende aanpak versterking dorpskern Wassenaar',
+            link: null,
+            type: 'Beleidsbesluit',
+            toelichting: 'OD/CUP: vier pilaren; planologische ruimte winkels→wonen in toekomstig Omgevingsplan; beeldkwaliteitsplan / stedenbouwkundig plan dorpskern.'
+        },
+        // ─── Wonen & huisvesting ───
+        {
+            naam: 'Nota Woonbeleid gemeente Wassenaar 2025',
+            datum: '2025-10-14',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/8f51ef1d-1b7a-4f0c-8343-4bf2f203930d?documentId=bdfb8868-7df2-422f-bfbe-dcd9528fbaa6&agendaItemId=88378d7f-f964-4391-90d3-01e88eb7752d',
+            type: 'Beleidsnota',
+            toelichting: 'Twee derde nieuwbouw betaalbaar; uiteindelijk in volkshuisvestelijk programma onder Omgevingsvisie (OD).'
+        },
+        {
+            naam: 'Woonvisie Wassenaar 2021–2025 (Grip op wonen)',
+            link: 'https://www.wassenaar.nl/_flysystem/media/woonvisie-wassenaar-2021-2025-grip-op-wonen.pdf',
+            type: 'Visie',
+            toelichting: 'Voorloper Nota Woonbeleid; gemeentelijke PDF.'
+        },
+        {
+            naam: 'Startnotitie Lokale Woonzorgvisie + uitvoeringsprogramma wonen-zorg',
+            datum: '2025-09-22',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=cc8bf828-300a-4098-9198-dc67d2e0a15c&agendaItemId=a71419b7-25db-4a02-800f-99707a0dd53b',
+            type: 'Startnotitie',
+            toelichting: 'OD: uitvoeringsprogramma onderdeel volkshuisvestelijk programma / Omgevingsvisie. Ook relevant voor BBV 6.'
+        },
+        {
+            naam: 'Tweede wijziging Huisvestingsverordening Wassenaar 2023',
+            datum: '2025-12-16',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f4dfcc53-672e-4d58-aa9e-edaa034c860b?agendaItemId=a46c480a-6a05-4612-87a9-9bef1fc58382',
+            type: 'Verordening',
+            toelichting: 'Raad dec 2025 — o.a. woonwagenstandplaatsen (OD). CVDR kan aanvullend.'
+        },
+        {
+            naam: 'Vestiging vervroegd voorkeursrecht Draf- en Renbaan Duindigt',
+            datum: '2025-09-22',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/ba1e5c4f-b0f7-402c-a81d-78a4a69793df?agendaItemId=2e4a9fcb-8262-450a-8001-e63cb2cefeae',
+            type: 'Raadsbesluit',
+            toelichting: 'Ruimtelijke ontwikkeling Duindigt (OD projecten).'
+        },
+        // ─── Beheer openbare ruimte ───
+        {
+            naam: 'Beheervisie Openbare Ruimte 2024–2028',
+            link: null,
+            type: 'Beheervisie',
+            toelichting: 'OD: kader beheer OR + uitvoeringsprogramma; college/raadsinformatie — zoek volledige PDF op wassenaar.nl of iBabs.'
+        },
+        // ─── Erfgoed & evenementen → Omgevingsvisie ───
+        {
+            naam: 'Visienota religieus erfgoed gemeente Wassenaar 2025',
+            link: null,
+            type: 'Visienota',
+            toelichting: 'OD-planning: na vaststelling betrokken bij Omgevingsvisie (streef jun 2026).'
+        },
+        {
+            naam: 'Startnotitie erfgoed gemeente Wassenaar 2026',
+            link: null,
+            type: 'Startnotitie',
+            toelichting: 'Opvolging Erfgoedvisie 2018–2024 en programma cultureel erfgoed; invoeding Omgevingsvisie (OD).'
+        },
+        {
+            naam: 'Evenementenbeleid — uitwerking in Omgevingsvisie',
+            link: null,
+            type: 'Beleid',
+            toelichting: 'Startnotitie Evenementenbeleid raad 2021; uitwerking volgens OD in Omgevingsvisie.'
+        },
+        // ─── Project / instrument Omgevingswet ───
+        {
+            naam: 'BOPA (buitenplanse omgevingsplanactiviteit) horeca Raadhuis De Paauw',
+            link: null,
+            type: 'BOPA',
+            toelichting: 'OD: past niet in geldend omgevingsplan; raadsbesluit vereist (Omgevingswet).'
+        },
+        {
+            naam: 'Vijfde wijziging gemeenschappelijke regeling Omgevingsdienst Haaglanden',
+            datum: '2025-12-16',
+            link: null,
+            type: 'GR-wijziging',
+            toelichting: 'Raad dec 2025 (briefing); exacte iBabs-link niet in deze set — controleer agenda.'
+        }
     ]
 };
 
