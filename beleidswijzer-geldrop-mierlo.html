@@ -1,0 +1,2547 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeleidsWijzer · Gemeente Geldrop-Mierlo</title>
+    <style>
+/* BeleidsWijzer Geldrop-Mierlo — v1.0.0-light */
+
+:root {
+    --gm-groen: #00796B;
+    --gm-groen-light: #009688;
+    --gm-geel: #FFC107;
+    --gm-donker: #1d1d1b;
+    --gray-dark: #333;
+    --gray-medium: #666;
+    --gray-light: #e0e0e0;
+    --gray-lighter: #f5f5f5;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--gray-dark);
+    background-color: var(--gray-lighter);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ─── Header ─── */
+.site-header {
+    background-color: var(--white);
+    color: var(--gm-donker);
+    padding: 1.2rem 0;
+    border-bottom: 2px solid var(--gray-lighter);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-link {
+    display: block;
+    flex-shrink: 0;
+    order: 2;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.site-logo-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gm-groen);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.header-text {
+    order: 1;
+    flex: 1;
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.1rem 0;
+    letter-spacing: -0.02em;
+    color: var(--gm-donker);
+}
+
+.subtitle {
+    font-size: 0.88rem;
+    color: var(--gray-medium);
+    margin: 0;
+}
+
+/* ─── Zoekbalk ─── */
+.overzicht-kop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.overzicht-zoek {
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1.5px solid var(--gray-light);
+    background: var(--white);
+    max-width: 340px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.overzicht-zoek input {
+    flex: 1;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    border: none;
+    min-width: 0;
+    color: var(--gray-dark);
+}
+
+.overzicht-zoek input::placeholder {
+    color: var(--gray-medium);
+}
+
+.overzicht-zoek input:focus {
+    outline: none;
+}
+
+.overzicht-zoek button {
+    padding: 0.5rem 1rem;
+    background: var(--gm-groen);
+    color: var(--white);
+    border: none;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.overzicht-zoek button:hover {
+    background: var(--gm-groen-light);
+}
+
+/* ─── Dossier-overzicht (startpagina) ─── */
+.dossier-overzicht {
+    margin: 1.5rem 0 1rem;
+}
+
+.dossier-sectie-titel {
+    font-size: 1.15rem;
+    color: var(--gm-donker);
+    margin-bottom: 0.75rem;
+}
+
+.dossier-kaarten {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.dossier-kaart {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    position: relative;
+    min-height: 0;
+    border-left: 6px solid var(--gray-light);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.dossier-kaart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.dossier-kaart-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.dossier-kaart-icoon {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.dossier-icoon {
+    width: 30px;
+    height: 30px;
+    color: var(--gm-donker);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dossier-kaart-naam {
+    font-weight: 700;
+    font-size: 0.92rem;
+    line-height: 1.25;
+    color: var(--gm-donker);
+    flex: 1;
+}
+
+.dossier-kaart-count {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--gray-medium);
+    background: var(--gray-lighter);
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.dossier-kaart-preview {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--gray-medium);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.dossier-kaart-begroting {
+    display: none;
+    align-items: baseline;
+    gap: 0.4rem;
+    padding: 0.35rem 0.55rem;
+    background: var(--gray-lighter);
+    border-radius: 6px;
+    margin-top: 0.15rem;
+}
+
+body.toon-begroting .dossier-kaart-begroting {
+    display: flex;
+}
+
+.begroting-bedrag {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--gm-donker);
+    white-space: nowrap;
+}
+
+.begroting-label {
+    font-size: 0.7rem;
+    color: var(--gray-medium);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dossier-kaart-cta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gm-groen);
+    margin-top: auto;
+}
+
+/* ─── Thema-kleuren ─── */
+.dossier-kaart[data-thema="Bestuur & Veiligheid"] {
+    border-left-color: #43a047;
+    background: linear-gradient(135deg, #c8e6c9 0%, #e8f5e9 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Bestuur & Veiligheid"] .dossier-icoon { color: #2e7d32; }
+.dossier-kaart[data-thema="Bestuur & Veiligheid"] .dossier-kaart-count { background: #a5d6a7; color: #1b5e20; }
+
+.dossier-kaart[data-thema="Financiën & Economie"] {
+    border-left-color: #ab47bc;
+    background: linear-gradient(135deg, #e1bee7 0%, #f3e5f5 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Financiën & Economie"] .dossier-icoon { color: #7b1fa2; }
+.dossier-kaart[data-thema="Financiën & Economie"] .dossier-kaart-count { background: #ce93d8; color: #4a148c; }
+
+.dossier-kaart[data-thema="Ruimte, Wonen & Mobiliteit"] {
+    border-left-color: #1e88e5;
+    background: linear-gradient(135deg, #bbdefb 0%, #e3f2fd 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Ruimte, Wonen & Mobiliteit"] .dossier-icoon { color: #1565c0; }
+.dossier-kaart[data-thema="Ruimte, Wonen & Mobiliteit"] .dossier-kaart-count { background: #90caf9; color: #0d47a1; }
+
+.dossier-kaart[data-thema="Duurzaamheid, Natuur & Leefbaarheid"] {
+    border-left-color: #00897b;
+    background: linear-gradient(135deg, #b2dfdb 0%, #e0f2f1 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Duurzaamheid, Natuur & Leefbaarheid"] .dossier-icoon { color: #00695c; }
+.dossier-kaart[data-thema="Duurzaamheid, Natuur & Leefbaarheid"] .dossier-kaart-count { background: #80cbc4; color: #004d40; }
+
+.dossier-kaart[data-thema="Sociaal Domein & Zorg"] {
+    border-left-color: #26a69a;
+    background: linear-gradient(135deg, #b2dfdb 0%, #e0f2f1 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Sociaal Domein & Zorg"] .dossier-icoon { color: #00796b; }
+.dossier-kaart[data-thema="Sociaal Domein & Zorg"] .dossier-kaart-count { background: #80cbc4; color: #004d40; }
+
+.dossier-kaart[data-thema="Onderwijs, Sport & Cultuur"] {
+    border-left-color: #ff9800;
+    background: linear-gradient(135deg, #ffe0b2 0%, #fff3e0 50%, #fff 100%);
+}
+.dossier-kaart[data-thema="Onderwijs, Sport & Cultuur"] .dossier-icoon { color: #e65100; }
+.dossier-kaart[data-thema="Onderwijs, Sport & Cultuur"] .dossier-kaart-count { background: #ffcc80; color: #bf360c; }
+
+.begroting-voetnoot {
+    font-size: 0.72rem;
+    color: var(--gray-medium);
+    margin-top: 0.5rem;
+    text-align: right;
+    font-style: italic;
+}
+
+/* ─── Dossier-detail ─── */
+.dossier-detail {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin: 1.5rem 0;
+    padding: 2rem;
+}
+
+.dossier-kop {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gray-light);
+}
+
+.dossier-terug {
+    background: none;
+    border: 1px solid var(--gray-light);
+    border-radius: 6px;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gm-groen);
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s;
+}
+
+.dossier-terug:hover {
+    background: var(--gm-groen);
+    color: var(--white);
+}
+
+.dossier-kop-titel {
+    font-size: 1.4rem;
+    color: var(--gm-donker);
+    font-weight: 700;
+}
+
+/* ─── Coalitieakkoord blok ─── */
+.coalitie-akkoord-blok {
+    margin-top: 2rem;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f1f8f6;
+}
+.coalitie-akkoord-kop {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--gm-donker);
+    cursor: pointer;
+    background: #e0f2f1;
+    list-style: none;
+    user-select: none;
+    transition: background 0.15s;
+}
+.coalitie-akkoord-kop::-webkit-details-marker { display: none; }
+.coalitie-akkoord-kop:hover { background: #c8e6c9; }
+.coalitie-akkoord-kop::before {
+    content: '▸';
+    font-size: 0.75em;
+    transition: transform 0.2s;
+}
+.coalitie-akkoord-blok[open] > .coalitie-akkoord-kop::before {
+    transform: rotate(90deg);
+}
+.coalitie-akkoord-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: var(--gm-groen);
+    color: #fff;
+    padding: 0.15rem 0.55rem;
+    border-radius: 10px;
+    margin-left: auto;
+    white-space: nowrap;
+}
+.coalitie-akkoord-inhoud {
+    padding: 1rem 1.5rem 1.5rem;
+}
+.coalitie-intro {
+    font-size: 0.85rem;
+    color: #5a6a7a;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+.coalitie-intro em {
+    font-style: italic;
+}
+.coalitie-hoofdstuk {
+    margin-bottom: 1.25rem;
+}
+.coalitie-hoofdstuk-titel {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gm-groen);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid #b2dfdb;
+}
+.coalitie-sectie {
+    margin-bottom: 1rem;
+    padding: 0.85rem 1rem;
+    background: #fff;
+    border-radius: 6px;
+    border-left: 3px solid var(--gm-groen);
+    scroll-margin-top: 5rem;
+}
+.coalitie-sectie-titel {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gm-donker);
+    margin-bottom: 0.4rem;
+}
+.coalitie-sectie-tekst {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: #333;
+}
+.coalitie-sectie-tekst p {
+    margin: 0 0 0.5rem;
+}
+.coalitie-sectie-tekst p:last-child {
+    margin-bottom: 0;
+}
+.coalitie-bron {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+.coalitie-bron a {
+    color: var(--gm-groen);
+    text-decoration: none;
+    font-weight: 600;
+}
+.coalitie-bron a:hover {
+    text-decoration: underline;
+}
+
+.ref-toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(120%);
+    background: #37474f;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    z-index: 9999;
+    max-width: 480px;
+    text-align: center;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
+.ref-toast.visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.coalitie-anchor {
+    color: inherit;
+    text-decoration: none;
+}
+.coalitie-anchor:hover {
+    color: var(--gm-groen);
+    text-decoration: underline;
+}
+.coalitie-anchor::before {
+    content: '§ ';
+    color: #bbb;
+    font-weight: 400;
+}
+.coalitie-anchor:hover::before {
+    color: var(--gm-groen);
+}
+.coalitie-portefeuille {
+    border-left-color: #7b1fa2;
+}
+.coalitie-sectie.highlight {
+    animation: coalitieHighlight 2s ease-out;
+}
+@keyframes coalitieHighlight {
+    0%   { background-color: #b2dfdb; border-left-color: #00695c; }
+    100% { background-color: #fff; }
+}
+
+/* ─── Besluiten sectie ─── */
+.dossier-besluiten {
+    margin-top: 2.5rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dossier-besluiten-kop {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gm-donker);
+    cursor: pointer;
+    background: var(--gray-lighter);
+    list-style: none;
+    user-select: none;
+    transition: background 0.15s;
+}
+
+.dossier-besluiten-kop::-webkit-details-marker {
+    display: none;
+}
+
+.dossier-besluiten-kop::before {
+    content: '▶';
+    font-size: 0.7rem;
+    color: var(--gray-medium);
+    transition: transform 0.2s;
+}
+
+.dossier-besluiten[open] > .dossier-besluiten-kop::before {
+    transform: rotate(90deg);
+}
+
+.dossier-besluiten-kop:hover {
+    background: #eaeaea;
+}
+
+.dossier-besluiten-count {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--gm-groen);
+}
+
+.dossier-besluiten-filters {
+    padding: 0.75rem 1.25rem;
+    background: var(--gray-lighter);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.filters-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+}
+
+.filter-group select,
+.filter-group input[type="date"] {
+    padding: 0.45rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.btn-secondary {
+    padding: 0.45rem 0.85rem;
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--gray-medium);
+    color: var(--white);
+}
+
+/* ─── Briefing inline content ─── */
+.briefing-inhoud {
+    line-height: 1.7;
+    color: var(--gray-dark);
+}
+
+.briefing-inhoud h2 {
+    font-size: 1.2rem;
+    color: var(--gm-groen);
+    margin: 1.75rem 0 0.6rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid #80cbc4;
+}
+
+.briefing-inhoud h2:first-child {
+    margin-top: 0;
+}
+
+.briefing-inhoud h3 {
+    font-size: 1.05rem;
+    color: var(--gm-donker);
+    margin: 1.25rem 0 0.4rem;
+}
+
+.briefing-inhoud p {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.briefing-inhoud .ref {
+    color: var(--gm-groen);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 1px dashed var(--gm-groen);
+    transition: background 0.15s;
+    border-radius: 2px;
+    padding: 0 0.15rem;
+}
+
+.briefing-inhoud .ref:hover {
+    background: #e0f2f1;
+}
+
+.result-item.highlight {
+    animation: refHighlight 2s ease-out;
+    box-shadow: inset 4px 0 0 var(--gm-groen);
+}
+
+@keyframes refHighlight {
+    0%   { background-color: #b2dfdb; }
+    100% { background-color: transparent; }
+}
+
+.briefing-inhoud .waarschuwing {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 0.6rem 0.85rem;
+    margin: 0.75rem 0;
+    font-size: 0.88rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.briefing-inhoud ul {
+    margin: 0.5rem 0 0.75rem 1.5rem;
+    font-size: 0.93rem;
+}
+
+.briefing-inhoud li {
+    margin-bottom: 0.35rem;
+}
+
+.briefing-inhoud table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75rem 0;
+    font-size: 0.85rem;
+}
+
+.briefing-inhoud th,
+.briefing-inhoud td {
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.briefing-inhoud th {
+    background: var(--gray-lighter);
+    font-weight: 600;
+}
+
+.briefing-inhoud .briefing-header {
+    border-bottom: 3px solid var(--gm-groen);
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.briefing-inhoud .briefing-header h1 {
+    font-size: 1.35rem;
+    color: var(--gm-donker);
+    margin-bottom: 0.2rem;
+}
+
+.briefing-inhoud .briefing-subtitle {
+    font-size: 1rem;
+    color: var(--gm-groen);
+    font-weight: 600;
+}
+
+.briefing-inhoud .briefing-meta {
+    font-size: 0.8rem;
+    color: var(--gray-medium);
+    margin-top: 0.4rem;
+}
+
+.briefing-inhoud footer {
+    margin-top: 2rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gray-light);
+    font-size: 0.78rem;
+    color: #999;
+}
+
+/* ─── Results (shared between dossier-besluiten and zoek-resultaten) ─── */
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+}
+
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.result-item {
+    padding: 1.25rem 1.25rem;
+    border-top: 1px solid var(--gray-light);
+    transition: background-color 0.15s;
+}
+
+.result-item:hover {
+    background-color: #fafafa;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 0.5rem;
+}
+
+.result-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gm-groen);
+    margin-bottom: 0.35rem;
+}
+
+.result-meta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+    color: var(--gray-medium);
+}
+
+.result-badge {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    background-color: var(--gray-lighter);
+    border-radius: 10px;
+    font-size: 0.78rem;
+}
+
+.result-badge.raad {
+    background-color: #e0f2f1;
+    color: var(--gm-groen);
+}
+
+.result-badge.college {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.result-text {
+    margin-top: 0.5rem;
+    color: var(--gray-dark);
+    line-height: 1.7;
+}
+
+.result-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    align-items: center;
+}
+
+.result-link {
+    display: inline-block;
+    color: var(--gm-groen-light);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.result-link:hover {
+    text-decoration: underline;
+}
+
+.result-link-secondary {
+    color: var(--gray-medium);
+    font-weight: 400;
+    font-size: 0.82rem;
+}
+
+.result-besluit {
+    margin-top: 0.5rem;
+}
+
+.result-besluit-college {
+    background-color: #f0f7f0;
+    border-left: 3px solid #2e7d32;
+    padding: 0.6rem 0.85rem;
+    border-radius: 4px;
+}
+
+.result-besluit-label {
+    display: block;
+    font-size: 0.82rem;
+    margin-bottom: 0.25rem;
+}
+
+.result-besluit-college .result-besluit-label {
+    color: #2e7d32;
+}
+
+.result-besluit:not(.result-besluit-college) .result-besluit-label {
+    color: var(--gray-medium);
+}
+
+.result-besluit-tekst {
+    color: var(--gray-dark);
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
+
+.result-besluit-tekst .result-text-meer[hidden] {
+    display: none;
+}
+
+.btn-uitklappen {
+    display: inline-block;
+    margin-top: 0.4rem;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.82rem;
+    color: var(--gm-groen-light);
+    background: none;
+    border: 1px solid var(--gm-groen-light);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-uitklappen:hover {
+    background-color: var(--gm-groen-light);
+    color: var(--white);
+}
+
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    color: var(--gray-medium);
+}
+
+/* ─── Zoekresultaten (zelfstandig) ─── */
+.zoek-resultaten {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.zoek-resultaten-kop {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 2px solid var(--gray-light);
+}
+
+.zoek-resultaten-titel {
+    font-size: 1.15rem;
+    color: var(--gm-donker);
+}
+
+.zoek-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.6rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--gray-lighter);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.zoek-filters .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.zoek-filters label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gray-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.zoek-filters select {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.82rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    background: var(--white);
+    color: var(--gray-dark);
+}
+
+/* ─── Footer ─── */
+.site-footer {
+    background-color: var(--gm-donker);
+    color: var(--white);
+    padding: 1rem 0;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.site-footer a {
+    color: var(--gm-geel);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ─── Verborgen versiemenu ─── */
+
+.versie-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.versie-overlay-visible {
+    opacity: 1;
+}
+
+.versie-panel {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+    max-width: 420px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.versie-panel-kop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.versie-panel-titel {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--gm-donker);
+}
+
+.versie-sluit {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--gray-medium);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 0.25rem;
+}
+
+.versie-sluit:hover {
+    color: var(--gm-donker);
+}
+
+.versie-lijst {
+    padding: 0.5rem;
+}
+
+.versie-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--gray-dark);
+    transition: background 0.15s;
+}
+
+.versie-item:hover {
+    background: var(--gray-lighter);
+}
+
+.versie-actief {
+    background: #e0f2f1;
+    border-left: 3px solid var(--gm-groen);
+}
+
+.versie-actief:hover {
+    background: #b2dfdb;
+}
+
+.versie-item-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.versie-nummer {
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--gm-groen);
+    min-width: 3rem;
+}
+
+.versie-naam {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--gm-donker);
+}
+
+.versie-huidig {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--gm-groen);
+    background: #b2dfdb;
+    padding: 0.1rem 0.4rem;
+    border-radius: 8px;
+    margin-left: auto;
+}
+
+.versie-beschrijving {
+    font-size: 0.78rem;
+    color: var(--gray-medium);
+    margin: 0.2rem 0 0 3.5rem;
+    line-height: 1.4;
+}
+
+.versie-hint {
+    font-size: 0.7rem;
+    color: #bbb;
+    text-align: center;
+    padding: 0.5rem 1rem 1rem;
+    font-style: italic;
+}
+
+/* ─── Responsive ─── */
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+    .subtitle {
+        font-size: 0.8rem;
+    }
+    .overzicht-kop {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .overzicht-zoek {
+        max-width: none;
+    }
+    .dossier-kaarten {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    .dossier-kaart {
+        padding: 0.85rem 1rem;
+    }
+    .dossier-kaart-preview {
+        -webkit-line-clamp: 2;
+    }
+    .dossier-detail {
+        padding: 1.25rem;
+    }
+    .dossier-kop-titel {
+        font-size: 1.15rem;
+    }
+    .filters-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .result-item {
+        padding: 1rem;
+    }
+    .result-title {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 0.75rem 0;
+    }
+    .site-logo-text {
+        font-size: 0.85rem;
+    }
+    .header-text h1 {
+        font-size: 1.3rem;
+    }
+    .dossier-sectie-titel {
+        font-size: 1.05rem;
+    }
+    .dossier-kaarten {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+    .dossier-kaart {
+        padding: 0.85rem;
+    }
+    .dossier-detail {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    .dossier-kop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .dossier-kop-titel {
+        font-size: 1.1rem;
+    }
+    .result-meta {
+        gap: 0.4rem;
+        font-size: 0.78rem;
+    }
+    .result-links {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    .site-footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 0 10px;
+    }
+    .header-inner {
+        gap: 0.5rem;
+    }
+    .site-logo-text {
+        font-size: 0.75rem;
+    }
+    .header-text h1 {
+        font-size: 1.15rem;
+    }
+    .dossier-kaart-naam {
+        font-size: 0.82rem;
+    }
+    .dossier-icoon {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (pointer: coarse) {
+    .dossier-kaart {
+        min-height: 48px;
+    }
+    .overzicht-zoek input {
+        padding: 0.65rem 0.85rem;
+        font-size: 1rem;
+    }
+    .overzicht-zoek button {
+        padding: 0.65rem 1.2rem;
+    }
+    .filter-group select,
+    .filter-group input[type="date"] {
+        padding: 0.55rem;
+        font-size: 1rem;
+    }
+    .btn-secondary {
+        padding: 0.55rem 0.85rem;
+    }
+    .btn-uitklappen {
+        padding: 0.45rem 0.85rem;
+    }
+}
+
+/* ─── Versienummer als knop ─── */
+
+#appVersion {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    cursor: default;
+    transition: background 0.2s;
+}
+
+#appVersion:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo-link" aria-label="Gemeente Geldrop-Mierlo">
+                <span class="site-logo-text">Gemeente Geldrop-Mierlo</span>
+            </a>
+            <div class="header-text">
+                <h1>BeleidsWijzer</h1>
+                <p class="subtitle">Gemeente Geldrop-Mierlo · Inzicht in beleid en besluitvorming</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="dossier-overzicht" id="dossierOverzicht">
+            <div class="overzicht-kop">
+                <h2 class="dossier-sectie-titel">Beleidsdossiers</h2>
+                <div class="overzicht-zoek">
+                    <input type="text" id="searchInput" placeholder="Zoek op onderwerp of trefwoord…">
+                    <button id="searchBtn" type="button">ZOEK</button>
+                </div>
+            </div>
+            <div id="dossierKaarten" class="dossier-kaarten"></div>
+            <p class="begroting-voetnoot" hidden>Begrotingsbedragen: Programmabegroting 2026. * = programma gedeeld met ander dossier.</p>
+        </section>
+
+        <section class="dossier-detail" id="dossierDetail" style="display: none;">
+            <div class="dossier-kop">
+                <button type="button" class="dossier-terug" id="dossierTerug">← Overzicht</button>
+                <h2 class="dossier-kop-titel" id="dossierTitel"></h2>
+            </div>
+            <div id="dossierSynthese" class="briefing-inhoud"></div>
+
+            <details class="coalitie-akkoord-blok" id="coalitieAkkoordBlok" open>
+                <summary class="coalitie-akkoord-kop">
+                    <span>Doelstellingenakkoord 2022–2026</span>
+                    <span class="coalitie-akkoord-badge">DGG · CDA · DPM</span>
+                </summary>
+                <div id="coalitieAkkoordInhoud" class="coalitie-akkoord-inhoud"></div>
+            </details>
+
+            <details class="dossier-besluiten" id="dossierBesluiten">
+                <summary class="dossier-besluiten-kop">
+                    <span>Raads- en collegebesluiten</span>
+                    <span class="dossier-besluiten-count" id="besluitenCount">(0)</span>
+                </summary>
+                <div class="dossier-besluiten-filters">
+                    <div class="filters-row">
+                        <div class="filter-group">
+                            <label for="yearFilter">Jaar</label>
+                            <select id="yearFilter">
+                                <option value="">Alle jaren</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="typeFilter">Type</label>
+                            <select id="typeFilter">
+                                <option value="">Alle typen</option>
+                                <option value="raad">Raadsbesluit</option>
+                                <option value="college">Collegebesluit (B&W)</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="sortBy">Sorteren</label>
+                            <select id="sortBy">
+                                <option value="datum-desc">Datum (nieuwste eerst)</option>
+                                <option value="datum-asc">Datum (oudste eerst)</option>
+                                <option value="naam-asc">Naam (A–Z)</option>
+                                <option value="naam-desc">Naam (Z–A)</option>
+                            </select>
+                        </div>
+                        <button id="clearFilters" type="button" class="btn-secondary">Wissen</button>
+                    </div>
+                </div>
+                <div class="results-header">
+                    <span id="resultsCount">0 raads- en collegebesluiten</span>
+                </div>
+                <div id="resultsList" class="results-list"></div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p id="noResultsText">Geen raads- of collegebesluiten gevonden.</p>
+                </div>
+            </details>
+        </section>
+
+        <section class="zoek-resultaten" id="zoekResultaten" style="display: none;">
+            <div class="zoek-resultaten-kop">
+                <h2 class="zoek-resultaten-titel">Zoekresultaten</h2>
+                <button type="button" class="dossier-terug" id="zoekSluiten">← Terug</button>
+            </div>
+            <div class="zoek-filters">
+                <div class="filter-group">
+                    <label for="zoekYearFilter">Jaar</label>
+                    <select id="zoekYearFilter">
+                        <option value="">Alle jaren</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="zoekTypeFilter">Type</label>
+                    <select id="zoekTypeFilter">
+                        <option value="">Alle typen</option>
+                        <option value="raad">Raadsbesluit</option>
+                        <option value="college">Collegebesluit (B&W)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="zoekSortBy">Sorteren</label>
+                    <select id="zoekSortBy">
+                        <option value="datum-desc">Datum (nieuwste eerst)</option>
+                        <option value="datum-asc">Datum (oudste eerst)</option>
+                        <option value="naam-asc">Naam (A–Z)</option>
+                        <option value="naam-desc">Naam (Z–A)</option>
+                    </select>
+                </div>
+                <button id="zoekClearFilters" type="button" class="btn-secondary">Wissen</button>
+            </div>
+            <div class="results-header">
+                <span id="zoekResultsCount">0 raads- en collegebesluiten</span>
+            </div>
+            <div id="zoekResultsList" class="results-list"></div>
+            <div id="zoekNoResults" class="no-results" style="display: none;">
+                <p>Geen raads- of collegebesluiten gevonden voor deze zoekterm.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>BeleidsWijzer Geldrop-Mierlo · Versie <span id="appVersion">1.0.0-light</span> · <a href="https://www.geldrop-mierlo.nl" target="_blank" rel="noopener">geldrop-mierlo.nl</a></p>
+        </div>
+    </footer>
+
+    <script>
+// BeleidsWijzer Geldrop-Mierlo — data.js
+// Versie: 1.0.0-light
+// Bron: https://www.geldrop-mierlo.nl/college-van-burgemeester-en-wethouders
+// Raadsinformatiesysteem: iBabs (geldropmierlo.bestuurlijkeinformatie.nl)
+//
+// College van B&W 2022–2026:
+//   Burgemeester J.C.J. (Jos) van Bree
+//   Wethouder F.J.M.C. (Frans) Stravers (DGG) — loco-burgemeester
+//   Wethouder G.J.A.H. (Godfried) van Gestel (CDA)
+//   Wethouder J.A.T.M. (Hans) van de Laar (DPM)
+//   Wethouder P.J. (Peter) Looijmans (DGG)
+//   Wethouder M.J. (Mathil) Sanders-de Jonge (CDA)
+//   Gemeentesecretaris N.J.H. (Nick) Scheltens
+//
+// Coalitie: DGG, CDA, DPM
+
+const ALL_DECISIONS_DATA = [];
+
+const THEMA_BOOM_DATA = [
+    {
+        "naam": "Bestuur & Veiligheid",
+        "kinderen": [
+            { "naam": "Openbare Orde en Veiligheid", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Handhaving", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Bestuurlijke samenwerking", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Dienstverlening", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Juridische Zaken", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Communicatie en representatie", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Informatieveiligheid", "aantal": 0, "raad": 0, "college": 0 }
+        ],
+        "aantal": 0,
+        "portefeuille": "Burgemeester Jos van Bree"
+    },
+    {
+        "naam": "Financiën & Economie",
+        "kinderen": [
+            { "naam": "Financiën", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Inkoop en aanbesteding", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Economie", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Recreatie en Toerisme", "aantal": 0, "raad": 0, "college": 0 }
+        ],
+        "aantal": 0,
+        "portefeuille": "Wethouder Hans van de Laar (DPM) · Wethouder Frans Stravers (DGG)"
+    },
+    {
+        "naam": "Ruimte, Wonen & Mobiliteit",
+        "kinderen": [
+            { "naam": "Ruimtelijke ordening", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Wonen", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Omgevingswet", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Gemeentelijk vastgoed", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Gemeentelijk grondbedrijf", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Mobiliteit", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Openbare ruimte", "aantal": 0, "raad": 0, "college": 0 }
+        ],
+        "aantal": 0,
+        "portefeuille": "Wethouder Godfried van Gestel (CDA) · Wethouder Hans van de Laar (DPM)"
+    },
+    {
+        "naam": "Duurzaamheid, Natuur & Leefbaarheid",
+        "kinderen": [
+            { "naam": "Duurzaamheid", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Natuur en milieu", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Afval", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Leefbaarheid", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Bosbeleid", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Gebiedsgericht werken", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Gulbergen", "aantal": 0, "raad": 0, "college": 0 }
+        ],
+        "aantal": 0,
+        "portefeuille": "Wethouder Frans Stravers (DGG) · Wethouder Hans van de Laar (DPM)"
+    },
+    {
+        "naam": "Sociaal Domein & Zorg",
+        "kinderen": [
+            { "naam": "Zorg", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Welzijn", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "WMO", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Jeugdbeleid", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Inclusie", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Inburgering", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Armoedebeleid", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Werk en Inkomen", "aantal": 0, "raad": 0, "college": 0 }
+        ],
+        "aantal": 0,
+        "portefeuille": "Wethouder Mathil Sanders-de Jonge (CDA) · Wethouder Peter Looijmans (DGG)"
+    },
+    {
+        "naam": "Onderwijs, Sport & Cultuur",
+        "kinderen": [
+            { "naam": "Onderwijs", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Accommodatiebeleid", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Sport en bewegen", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Cultuur", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Monumenten en Oudheidkunde", "aantal": 0, "raad": 0, "college": 0 },
+            { "naam": "Digitalisering", "aantal": 0, "raad": 0, "college": 0 }
+        ],
+        "aantal": 0,
+        "portefeuille": "Wethouder Frans Stravers (DGG) · Wethouder Peter Looijmans (DGG)"
+    }
+];
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { ALL_DECISIONS_DATA, THEMA_BOOM_DATA };
+}
+// Briefing HTML data — Geldrop-Mierlo light-versie 1.0.0
+// Per domein een beknopte beleidsbriefing op basis van het doelstellingenakkoord 2022-2026
+// en openbare informatie van de gemeentewebsite.
+
+const BRIEFING_HTML_DATA = {
+
+'Bestuur & Veiligheid': `<header>
+<h1>Beleidsbriefing Bestuur &amp; Veiligheid</h1>
+<p class="subtitle">Gemeente Geldrop-Mierlo</p>
+<p class="meta">Portefeuille: Burgemeester Jos van Bree &middot; Versie 1.0.0-light</p>
+</header>
+
+<h2>Samenvatting</h2>
+<p>Burgemeester Van Bree is verantwoordelijk voor openbare orde en veiligheid, handhaving, bestuurlijke samenwerking, dienstverlening, juridische zaken, communicatie en informatieveiligheid. De gemeente zet in op data-gedreven werken bij veiligheidsbeleid en een buurtgerichte aanpak met wijkschouwen en integrale handhaving.</p>
+
+<h2>Openbare orde, veiligheid en handhaving</h2>
+<p>De veiligheid wordt vergroot door als gemeente op te treden als regievoerder in samenwerking met in- en externe partners. Om ondermijning tegen te gaan worden gezamenlijk barrières opgeworpen. Handhaving is ook buiten kantoortijden zichtbaar aanwezig, met een proactieve buurtgerichte aanpak.</p>
+
+<h2>Dienstverlening</h2>
+<p>De gemeentelijke organisatie functioneert als servicebedrijf met het uitgangspunt "ja, tenzij…". Er zijn kwaliteitshandvesten en servicenormen vastgelegd. Online informatievoorziening en sociale media worden versterkt, met als principe: digitaal als het kan, persoonlijk als het moet.</p>
+
+<h2>Digitalisering en I&amp;A</h2>
+<p>Geldrop-Mierlo maakt de omslag naar digitalisering als kernactiviteit. De gemeente wapent zich tegen cybercriminaliteit, borgt privacy, en maakt beleidsdata digitaal beschikbaar (open data). De tien meest gebruikte diensten worden digitaal aangeboden.</p>
+
+<p class="light-notice"><em>Dit is een light-versie. Individuele besluiten worden in een volgende fase toegevoegd.</em></p>`,
+
+'Financiën & Economie': `<header>
+<h1>Beleidsbriefing Financi&euml;n &amp; Economie</h1>
+<p class="subtitle">Gemeente Geldrop-Mierlo</p>
+<p class="meta">Portefeuille: Wethouder Hans van de Laar (DPM) &middot; Wethouder Frans Stravers (DGG) &middot; Versie 1.0.0-light</p>
+</header>
+
+<h2>Samenvatting</h2>
+<p>Geldrop-Mierlo voert een gezond en gedegen financieel beleid met een structureel sluitende begroting. De gemeente combineert dit met een actief economisch beleid gericht op het versterken van de centra, het stimuleren van innovatie en ondernemen, en het vergroten van recreatieve voorzieningen en toerisme.</p>
+
+<h2>Financiën</h2>
+<p>Geen onnodige lastenverhogingen in 2022-2026. De begroting bestaat uit een financieel deel en een capaciteitsbegroting. Tarieven voor leges zijn kostendekkend. De vrij beschikbare reserve bedraagt minimaal 10% van de Algemene Uitkering. De weerstandsratio is 2.</p>
+
+<h2>Economie</h2>
+<p>Het centrum van Geldrop wordt getransformeerd tot verblijfsgebied (doelscore: 8). Weekmarkten worden versterkt. Er komt een vestigingsbeleid voor variëteit in ondernemingen en een lokaal innovatieplan om Brainport-gelden aan te trekken. In 2026 is 50% van de bedrijventerreinen gerevitaliseerd en verduurzaamd.</p>
+
+<h2>Recreatie en toerisme</h2>
+<p>Het aanbod aan recreatieve voorzieningen wordt zichtbaar vergroot, met kansen in gebieden als Gulbergen, Mierlo-Oost en langs het kanaal. De naamsbekendheid wordt vergroot via parels als De Strabrechtse Heide, het weverijmuseum en Dierenrijk.</p>
+
+<p class="light-notice"><em>Dit is een light-versie. Individuele besluiten worden in een volgende fase toegevoegd.</em></p>`,
+
+'Ruimte, Wonen & Mobiliteit': `<header>
+<h1>Beleidsbriefing Ruimte, Wonen &amp; Mobiliteit</h1>
+<p class="subtitle">Gemeente Geldrop-Mierlo</p>
+<p class="meta">Portefeuille: Wethouder Godfried van Gestel (CDA) &middot; Wethouder Hans van de Laar (DPM) &middot; Versie 1.0.0-light</p>
+</header>
+
+<h2>Samenvatting</h2>
+<p>De gemeente zet stevig in op woningbouw met een masterplan voor 500 nieuwe woningen in 2026, voorrang voor eigen inwoners, en een ambtelijke taskforce. Mobiliteit richt zich op fietsnetwerk, toegankelijk OV en verkeersveiligheid via Duurzaam Veilig.</p>
+
+<h2>Ruimte en woningbouw</h2>
+<p>Het volkshuisvestelijk beleid wordt gebundeld in een masterplan woningbouw met aandacht voor woningtypen, alternatieve woonvormen, specifieke doelgroepen en natuurinclusief bouwen. Bij toewijzing krijgen inwoners met lokale binding voorrang. Er komt flankerend grondbeleid waar nodig.</p>
+
+<h2>Mobiliteit</h2>
+<p>Een lokaal programma mobiliteit wordt opgesteld in lijn met de regionale mobiliteitstransitie. Het regionale fietsnetwerk wordt gecompleteerd. Alle bushaltes worden toegankelijk voor mindervaliden en er komt een bushalte bij het NS-station. In 2026 heeft 50% van de wijken het verkeersveiligheidslabel behaald.</p>
+
+<h2>Omgevingswet en vastgoed</h2>
+<p>Wethouder Van Gestel is verantwoordelijk voor de implementatie van de Omgevingswet, het gemeentelijk vastgoed en het grondbedrijf. De openbare ruimte wordt beheerd vanuit het GEO-beheersysteem.</p>
+
+<p class="light-notice"><em>Dit is een light-versie. Individuele besluiten worden in een volgende fase toegevoegd.</em></p>`,
+
+'Duurzaamheid, Natuur & Leefbaarheid': `<header>
+<h1>Beleidsbriefing Duurzaamheid, Natuur &amp; Leefbaarheid</h1>
+<p class="subtitle">Gemeente Geldrop-Mierlo</p>
+<p class="meta">Portefeuille: Wethouder Frans Stravers (DGG) &middot; Wethouder Hans van de Laar (DPM) &middot; Versie 1.0.0-light</p>
+</header>
+
+<h2>Samenvatting</h2>
+<p>Duurzaamheid is een kernthema: verleiden voor verplichten. De gemeente werkt aan verduurzaming van woningen, vergroening van de bebouwde kom, en terugdringen van restafval. Leefbaarheid wordt bottom-up aangepakt met wijkontwikkelingsplannen die passen bij elke wijk.</p>
+
+<h2>Duurzaamheid en afval</h2>
+<p>Het duurzaamheidsbeleid wordt voortgezet met het doel een inwonerstevredenheid van minimaal 7,5. In 2026 heeft 50% van de corporatiewoningen minimaal energielabel A. Restafval wordt teruggebracht tot minder dan 75 kg per inwoner via geoptimaliseerde DIFTAR-afvalscheiding. Geldrop-Mierlo blijft bij Cure.</p>
+
+<h2>Leefbaarheid en wijkontwikkeling</h2>
+<p>Elke wijk krijgt een wijkontwikkelingsplan, bottom-up ontwikkeld met inwoners. Positieve kenmerken worden versterkt, negatieve aangepakt. Het gebiedsgericht werken is een belangrijk instrument, evenals het bosbeleid en het beheer van recreatiegebied Gulbergen.</p>
+
+<h2>Natuur en milieu</h2>
+<p>Het groenbeleidsplan wordt aangepast om de hoeveelheid groen in de bebouwde kom te verhogen. Overlast gevende bedrijven worden waar mogelijk verplaatst. Er komen meer laadpalen voor elektrische auto's.</p>
+
+<p class="light-notice"><em>Dit is een light-versie. Individuele besluiten worden in een volgende fase toegevoegd.</em></p>`,
+
+'Sociaal Domein & Zorg': `<header>
+<h1>Beleidsbriefing Sociaal Domein &amp; Zorg</h1>
+<p class="subtitle">Gemeente Geldrop-Mierlo</p>
+<p class="meta">Portefeuille: Wethouder Mathil Sanders-de Jonge (CDA) &middot; Wethouder Peter Looijmans (DGG) &middot; Versie 1.0.0-light</p>
+</header>
+
+<h2>Samenvatting</h2>
+<p>Preventie en eigen kracht zijn de uitgangspunten in het sociaal domein. De Task Force Sociaal Domein rapporteert per kwartaal. Extra aandacht gaat naar jeugdzorg (geen jongere in gesloten instelling in 2026), dagbesteding voor kwetsbare ouderen in beide kernen, en een inclusieve gemeente waar iedereen meedoet.</p>
+
+<h2>WMO en zorg</h2>
+<p>Het CMD zoekt samenwerking met zorgprofessionals in een gezamenlijk zorgloket. In 2024 is er dagbesteding voor kwetsbare ouderen en mensen met dementie in zowel Geldrop als Mierlo. Het aantal Eerste Lijns Verblijf-bedden wordt geëvalueerd en zo nodig uitgebreid.</p>
+
+<h2>Jeugdzorg</h2>
+<p>Extra aandacht voor kleinschalige preventieprojecten bij verenigingen en scholen (gezond eten, meer bewegen). In 2026 verblijft geen jongere meer in een gesloten jeugdzorginstelling. Er wordt ruimte geboden voor initiatieven die uithuisplaatsingen voorkomen.</p>
+
+<h2>Participatie en armoedebeleid</h2>
+<p>In 2026 participeert 25% van de langdurig uitkeringsgerechtigden duurzaam. Het aantal leerwerkplekken groeit met 50%. Er komt een laagdrempelig portaal voor participatie. De armoedebestrijding en bijzondere bijstandsregelingen worden geactualiseerd — in 2026 maakt 60% van de doelgroep hiervan gebruik.</p>
+
+<h2>Inclusie</h2>
+<p>Geldrop-Mierlo wordt ervaren als een inclusieve gemeente. De Inclusie-agenda wordt uitgewerkt en verankerd in beleid, met extra aandacht voor onder meer covidpatiënten en andere kwetsbare groepen.</p>
+
+<p class="light-notice"><em>Dit is een light-versie. Individuele besluiten worden in een volgende fase toegevoegd.</em></p>`,
+
+'Onderwijs, Sport & Cultuur': `<header>
+<h1>Beleidsbriefing Onderwijs, Sport &amp; Cultuur</h1>
+<p class="subtitle">Gemeente Geldrop-Mierlo</p>
+<p class="meta">Portefeuille: Wethouder Frans Stravers (DGG) &middot; Wethouder Peter Looijmans (DGG) &middot; Versie 1.0.0-light</p>
+</header>
+
+<h2>Samenvatting</h2>
+<p>Het Integraal Huisvestingsplan Onderwijs wordt voortvarend uitgevoerd met als doel 100% brede scholen. Sport wordt ingezet als middel voor gezondheid en participatie. Het cultuurbeleid wordt herzien met bijzondere aandacht voor jongeren. Alle wijkaccommodaties worden verduurzaamd.</p>
+
+<h2>Onderwijs</h2>
+<p>Schoolgebouwen krijgen een centrale wijkfunctie. In 2026 is 100% van de scholen een brede school met meer dan alleen onderwijsfuncties, en heeft 50% bovendien wijkgebonden maatschappelijke functies. Er wordt een verkenning gedaan van 10-14-onderwijs.</p>
+
+<h2>Sport en bewegen</h2>
+<p>Buurtsportcoaches spelen een cruciale rol bij preventie en gezonde leefstijl. Er wordt geïnvesteerd in moderne buitensportfaciliteiten voor jeugd. In 2026 scoren sportvoorzieningen minimaal een 8, zijn alle accommodaties verduurzaamd en beschikt elke wijk over een beweegplek.</p>
+
+<h2>Cultuur</h2>
+<p>Laagdrempelige cultuur voor iedereen, bottom-up herzien met inwoners. Specifieke aandacht voor culturele activiteiten voor jongeren. In 2023 is er een culturele agenda 2023-2026.</p>
+
+<h2>Accommodatiebeleid</h2>
+<p>Multifunctioneel gebruik als uitgangspunt. Welzijnsaccommodaties worden met spoed verduurzaamd. In 2026 ligt de bezettingsgraad gemiddeld boven 60% en beschikt elke wijk over een toekomstbestendige wijkaccommodatie.</p>
+
+<p class="light-notice"><em>Dit is een light-versie. Individuele besluiten worden in een volgende fase toegevoegd.</em></p>`
+
+};
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { BRIEFING_HTML_DATA };
+}
+// Doelstellingenakkoord 2022–2026: "Bouwen aan en in een duurzaam toekomstbestendig Geldrop-Mierlo!"
+// Bron: https://www.geldrop-mierlo.nl/_flysystem/media/doelstellingenakkoord-2022-2026.pdf
+// Coalitie: DGG, CDA, DPM
+//
+// Elke sectie is gekoppeld aan het corresponderende BeleidsWijzer-thema.
+// De volgorde volgt het originele document.
+
+const COALITIEAKKOORD_DATA = {
+    bron_url: "https://www.geldrop-mierlo.nl/_flysystem/media/doelstellingenakkoord-2022-2026.pdf",
+    titel: "Bouwen aan en in een duurzaam toekomstbestendig Geldrop-Mierlo!",
+    datum: "2022",
+    partijen: ["DGG", "CDA", "DPM"],
+
+    woord_vooraf: `Hierbij presenteren wij ons doelstellingenakkoord. In dit akkoord vindt u de hoofdlijnen van onze keuzes voor de komende jaren. Hoofdlijnen gericht op het nog beter maken van Geldrop-Mierlo. Waar mensen wonen en werken in een groene en sfeervolle gemeente. Geldrop-Mierlo is een prettige en veilige leef- en werkgemeente waar mensen graag wonen en waar een sfeer heerst die mensen stimuleert om samen van Geldrop-Mierlo een leefbare gemeente te maken, die bruist van positieve energie en waarin inwoners samen vraagstukken aanpakken en oplossen.
+
+De nieuwe coalitie wil met passie en nieuwe energie de samenwerking van de afgelopen vier jaar voortzetten. Omdat we een zo groot mogelijk draagvlak binnen de gemeenteraad willen bereiken hebben we bij het opstellen van dit doelstellingenakkoord de input gevraagd aan alle fracties binnen de raad, de ambtelijke organisatie en de burgemeester.
+
+In onze aanpak de komende jaren zijn drie zaken van belang: samenwerking, snelheid en daadkracht. We kijken naar lange lijnen, onze blik gericht op 2040. We willen op de grotere dossiers — wonen, afval, accommodatiebeleid, digitalisering, sociaal domein, huisvesting van onderwijs en databeveiliging — aanpakken en doorpakken.`,
+
+    secties: [
+        // ──────────────────────────────────────────
+        // BESTUUR & VEILIGHEID
+        // ──────────────────────────────────────────
+        {
+            id: "openbare-orde-veiligheid-handhaving",
+            titel: "Openbare orde, veiligheid en handhaving",
+            hoofdstuk: "Bestuur",
+            thema: "Bestuur & Veiligheid",
+            tekst: `Binnen de samenwerking met in- en externe partners wordt de veiligheid binnen onze gemeente vergroot door als gemeente op te treden als regievoerder. Waar mogelijk is data-gedreven werken het uitgangspunt. Om ondermijning tegen te gaan maken partners gebruik van ieders mogelijkheden om barrières op te werpen.
+
+Naast de fysieke aanwezigheid van de handhavingsorganisatie op straat — ook buiten kantoortijden en op basis van klachten — wordt gewerkt aan zichtbaarheid door verruiming van de arbeidstijden en door communicatie over uitgevoerde activiteiten en resultaten.
+
+Netwerken worden opgebouwd door een buurtgerichte aanpak: organiseren van wijkschouwen, deelname aan informatiebijeenkomsten en bijwonen van wijkactiviteiten. Met integrale handhaving wordt een positieve invloed gecreëerd op het spontane naleefgedrag.`
+        },
+        {
+            id: "dienstverlening",
+            titel: "Dienstverlening",
+            hoofdstuk: "Bestuur",
+            thema: "Bestuur & Veiligheid",
+            tekst: `Inwoners, ondernemers, verenigingen en maatschappelijke organisaties krijgen binnen redelijke termijn een reactie op hun vraag. De gemeentelijke organisatie moet meer als een servicebedrijf gaan functioneren.
+
+De gemeente maakt afspraken met inwoners over de servicelevels en legt deze vast in kwaliteitshandvesten en servicenormen. We gaan binnen alle afdelingen denken in mogelijkheden en niet in onmogelijkheden. Het is altijd: "ja, tenzij…"
+
+Er is continue aandacht voor het verbeteren van de communicatie, waarbij de nadruk ligt op het versterken van de online informatievoorziening en sociale media. Digitaal als het kan, maar persoonlijk als het moet.`
+        },
+
+        // ──────────────────────────────────────────
+        // FINANCIËN & ECONOMIE
+        // ──────────────────────────────────────────
+        {
+            id: "financien",
+            titel: "Financiën",
+            hoofdstuk: "Financiën & Economie",
+            thema: "Financiën & Economie",
+            tekst: `Geldrop-Mierlo heeft een gezond en gedegen financieel beleid en dat houden we zo. In de periode 2022-2026 worden lastenverhogingen niet onnodig toegepast en er zijn geen algemene lastenstijgingen. De bestaande voorzieningen worden op het huidige niveau gehandhaafd.
+
+De meerjarenprogrammabegroting bestaat uit twee delen: een financiële begroting en een capaciteitsbegroting. Deze is financieel structureel sluitend en aantoonbaar qua beschikbare capaciteit volledig uitvoerbaar.
+
+De tarieven voor leges en retributies zijn kostendekkend. De vrij beschikbare reserve bedraagt in 2026 minimaal 10% van de Algemene Uitkering uit het gemeentefonds. De weerstandsratio in 2026 is 2.`
+        },
+        {
+            id: "economie",
+            titel: "Economie",
+            hoofdstuk: "Financiën & Economie",
+            thema: "Financiën & Economie",
+            tekst: `De centra Geldrop en Mierlo worden optimaal bereikbaar gemaakt via openbaar vervoer en duidelijk parkeerbeleid. Het centrum van Geldrop inclusief Kasteelgebied wordt getransformeerd tot verblijfsgebied — in 2026 scoort dit een 8 onder de inwoners.
+
+De weekmarkten worden voortgezet en verbeterd. We gaan innovatie en ondernemen ondersteunen en betrekken lokale ondernemingen bij gemeentelijke opdrachten. Er wordt een vestigingsbeleid opgesteld voor voldoende variëteit in ondernemingen.
+
+In 2026 hebben zich innovatieve ondernemingen binnen Geldrop-Mierlo gevestigd en zijn er twee innovatieprojecten operationeel. In 2026 is 50% van de bedrijventerreinen gerevitaliseerd en verduurzaamd.`
+        },
+        {
+            id: "recreatie-en-toerisme",
+            titel: "Recreatie en toerisme",
+            hoofdstuk: "Financiën & Economie",
+            thema: "Financiën & Economie",
+            tekst: `In 2026 is er een zichtbare vergroting van het aanbod aan recreatieve voorzieningen. Er liggen kansen in gebieden als Mierlo-Oost, Smelen, Gulbergen, Gijzenrooij, Luchen, rond de bibliotheek in Mierlo, het kasteel en langs het kanaal.
+
+We gaan het toerisme bevorderen door een betere link van de buitengebieden aan de kernen en de naamsbekendheid van Geldrop-Mierlo vergroten: De Strabrechtse Heide, het weverijmuseum, Dierenrijk en Sang en Goorkens. In 2026 wordt de website Visit Geldrop-Mierlo twee keer zo vaak bezocht als in 2022.
+
+We willen horeca toevoegen die zorgt voor meer toerisme en dorpspromotie versterken door vaste evenementen binnen te halen.`
+        },
+
+        // ──────────────────────────────────────────
+        // RUIMTE, WONEN & MOBILITEIT
+        // ──────────────────────────────────────────
+        {
+            id: "ruimte-en-woningbouw",
+            titel: "Ruimte en woningbouw",
+            hoofdstuk: "Ruimte, Wonen & Mobiliteit",
+            thema: "Ruimte, Wonen & Mobiliteit",
+            tekst: `In 2022 bundelen we het volkshuisvestelijk beleid in een "masterplan woningbouw" met aandacht voor verdeling in woningtypen, alternatieve woonvormen en bouwen voor specifieke doelgroepen. Duurzaamheid en natuurinclusief bouwen zijn uitgangspunten.
+
+In 2026 zijn er op basis van het masterplan 500 nieuwe woningen gerealiseerd. Bij toewijzing geven we, binnen de mogelijkheden van de huisvestingswet, voorrang aan inwoners uit Geldrop-Mierlo of mensen met economische binding.
+
+We vormen een ambtelijke taskforce wonen die twee maal per jaar rapporteert. Indien nodig komt er flankerend grondbeleid om sterk stijgende prijzen te verzachten. De niet-toekomstbestendige gebieden worden inzichtelijk gemaakt en we starten met transformatie.`
+        },
+        {
+            id: "mobiliteit",
+            titel: "Mobiliteit",
+            hoofdstuk: "Ruimte, Wonen & Mobiliteit",
+            thema: "Ruimte, Wonen & Mobiliteit",
+            tekst: `De lokale bereikbaarheid gaat meebewegen met de regionale mobiliteitstransitie en de centrumimpuls. In 2026 is het lokaal programma mobiliteit opgesteld, vastgesteld en in uitvoering.
+
+Het regionale fietsnetwerk in Geldrop-Mierlo wordt gecompleteerd. De grootste knelpunten in het openbaar vervoer worden weggenomen — alle bushaltes worden toegankelijk voor mindervaliden en er komt een bushalte bij het NS-station.
+
+Er komt geactualiseerd parkeerbeleid met differentiatie tussen lang- en kort-parkeren in het centrum. De verkeersveiligheid in de wijken wordt verbeterd via het beleid Duurzaam Veilig. In 2026 heeft 50% van de wijken het verkeersveiligheidslabel behaald.`
+        },
+
+        // ──────────────────────────────────────────
+        // DUURZAAMHEID, NATUUR & LEEFBAARHEID
+        // ──────────────────────────────────────────
+        {
+            id: "duurzaamheid-en-afval",
+            titel: "Duurzaamheid en afval",
+            hoofdstuk: "Duurzaamheid, Natuur & Leefbaarheid",
+            thema: "Duurzaamheid, Natuur & Leefbaarheid",
+            tekst: `Samen met inwoners en organisaties werken we aan duurzaamheid waarbij verleiden voor verplichten gaat. Het gemeentelijke duurzaamheidsbeleid wordt voortgezet. Het groenbeleidsplan wordt aangepast om de hoeveelheid groen binnen de bebouwde kom te verhogen.
+
+In 2026 geven de inwoners het duurzaamheidsbeleid een waardering van minimaal 7,5. We streven naar versnelling van de verduurzaming van corporatiewoningen — in 2026 heeft 50% minimaal energielabel A. Overlast gevende bedrijven worden zoveel mogelijk verplaatst.
+
+Het percentage restafval wordt teruggedrongen tot minder dan 75kg per inwoner. Door afvalscheiding wordt DIFTAR geoptimaliseerd. Geldrop-Mierlo blijft onderdeel van Cure, dat elke twee jaar wordt gebenchmarkt. De tarieven zijn kostendekkend.`
+        },
+        {
+            id: "leefbaarheid",
+            titel: "Leefbaarheid",
+            hoofdstuk: "Duurzaamheid, Natuur & Leefbaarheid",
+            thema: "Duurzaamheid, Natuur & Leefbaarheid",
+            tekst: `Leefbaarheid wordt bottom-up blijvend gestimuleerd. Elke wijk krijgt een wijkontwikkelingsplan in de vorm die past bij de wijk. Alle plannen worden bottom-up gemaakt met de inwoners, niet top-down vanuit het gemeentehuis.
+
+Positieve kenmerken in de wijken blijven behouden en waar mogelijk versterkt. Negatieve zaken worden aangepakt. In 2026 is er voor alle wijken een wijkontwikkelingsplan met een uitvoeringsprogramma dat past bij de kenmerken van de wijk.
+
+De inwoners geven de bottom-up benadering minimaal een 7,5.`
+        },
+
+        // ──────────────────────────────────────────
+        // SOCIAAL DOMEIN & ZORG
+        // ──────────────────────────────────────────
+        {
+            id: "sociaal-domein",
+            titel: "Sociaal Domein: WMO, jeugdzorg, inclusie en participatie",
+            hoofdstuk: "Sociaal Domein & Zorg",
+            thema: "Sociaal Domein & Zorg",
+            tekst: `In het sociaal domein is preventie en eigen kracht het uitgangspunt. De Task Force Sociaal Domein blijft bestaan en zorgt per kwartaal voor een financiële en inhoudelijke voortgangsrapportage.
+
+Het CMD zal samenwerking zoeken met zorgprofessionals in een gezamenlijk zorgloket. In 2024 is er voor kwetsbare ouderen en mensen met dementie een zinvolle dagbesteding beschikbaar in zowel Geldrop als Mierlo. We evalueren en breiden zo nodig het aantal Eerste Lijns Verblijf-bedden uit.
+
+In de jeugdzorg geven we extra aandacht aan kleinschalige preventieprojecten. In 2026 verblijft geen jongere uit Geldrop-Mierlo meer in een gesloten jeugdzorginstelling. Bij Participatie is het uitgangspunt dat iedereen mee moet kunnen doen — in 2026 participeert 25% van de langdurig uitkeringsgerechtigden duurzaam. Het aantal leerwerkplekken groeit met 50%.
+
+Geldrop-Mierlo wordt door haar inwoners ervaren als een inclusieve gemeente. De Inclusie-agenda wordt verder uitgewerkt en verankerd in beleid.`
+        },
+
+        // ──────────────────────────────────────────
+        // ONDERWIJS, SPORT & CULTUUR
+        // ──────────────────────────────────────────
+        {
+            id: "onderwijs",
+            titel: "Onderwijs",
+            hoofdstuk: "Onderwijs, Sport & Cultuur",
+            thema: "Onderwijs, Sport & Cultuur",
+            tekst: `Het Integraal Huisvestingsplan Onderwijs wordt voortvarend ter hand genomen. Schoolgebouwen krijgen een centrale functie in de wijk en worden beter benut door uitbreiding van activiteiten.
+
+In Geldrop-Mierlo streven we alleen nog naar brede scholen — bij (her-)investeringen wordt alleen geïnvesteerd in scholen met meerdere maatschappelijke functies. In 2026 is 100% van de scholen een brede school en heeft 50% bovendien wijkgebonden maatschappelijke functies.
+
+Er wordt een verkenning gedaan van 10-14-onderwijs voor leerlingen die voor VMBO-basis of -kader buiten de gemeente moeten.`
+        },
+        {
+            id: "sport-en-bewegen",
+            titel: "Sport en bewegen",
+            hoofdstuk: "Onderwijs, Sport & Cultuur",
+            thema: "Onderwijs, Sport & Cultuur",
+            tekst: `We creëren faciliteiten waarbij zoveel mogelijk inwoners individueel of in groepsverband kunnen sporten, bewegen en recreëren. Sport wordt ingezet als middel om gezondheid, welbevinden, leefbaarheid en participatie te bevorderen.
+
+We zetten volop in op preventie en een gezonde leefstijl waarbij de rol van buurtsportcoaches cruciaal is. Specifiek voor jeugd investeren we in moderne buitensportfaciliteiten zoals een pumptrackbaan, calisthenics of skatepark.
+
+In 2026 scoren de sportvoorzieningen minimaal een 8. Alle sportaccommodaties zijn verduurzaamd en alle wijken beschikken over minimaal één beweegplek.`
+        },
+        {
+            id: "cultuur",
+            titel: "Cultuur",
+            hoofdstuk: "Onderwijs, Sport & Cultuur",
+            thema: "Onderwijs, Sport & Cultuur",
+            tekst: `We gaan laagdrempelige, toegankelijke cultuur voor iedereen bevorderen. Laagdrempelige cultuur is van even groot belang als cultuuruitingen met de grote C. De middelen moeten in relatie staan tot het aantal betrokken inwoners en de bijdrage aan sociale cohesie.
+
+Het cultuurbeleid wordt herzien, bottom-up, door inwoners erbij te betrekken. Er zijn op dit moment te weinig culturele activiteiten voor jongeren — in samenwerking met jongeren en organisaties wordt het cultuurbeleid voor jongeren in 2023 herzien.
+
+In 2023 is er een culturele agenda 2023-2026.`
+        },
+        {
+            id: "accommodatiebeleid",
+            titel: "Accommodatiebeleid",
+            hoofdstuk: "Onderwijs, Sport & Cultuur",
+            thema: "Onderwijs, Sport & Cultuur",
+            tekst: `Multifunctioneel gebruik en een goede bezettingsgraad is het uitgangspunt. Er komt een integraal plan voor de huisvesting van gesubsidieerde stichtingen en verenigingen, gekoppeld aan de huisvestingssubsidie.
+
+Verduurzaming van welzijnsaccommodaties wordt met spoed ter hand genomen. De subsidieregeling wordt uitgebreid zodat alle verenigingen hun accommodatie kunnen verduurzamen. In 2026 zijn de welzijnsaccommodaties verduurzaamd en ligt de bezettingsgraad gemiddeld boven de 60%.
+
+Elke wijk dient over een toekomstbestendige wijkaccommodatie te beschikken, geschikt voor culturele activiteiten, zorg, maatschappelijke diensten en wijkverenigingsactiviteiten.`
+        },
+        {
+            id: "digitalisering",
+            titel: "Digitalisering en I&A",
+            hoofdstuk: "Bestuur",
+            thema: "Bestuur & Veiligheid",
+            tekst: `Geldrop-Mierlo maakt een omslag van digitalisering als element van bedrijfsvoering naar digitalisering als kernactiviteit. Er wordt een meerjarenprogramma digitalisering opgesteld. Digitaal als het kan, maar persoonlijk als het moet.
+
+Geldrop-Mierlo wapent zich tegen cybercriminaliteit en borgt de privacy van inwoners. De tien meest gebruikte diensten worden digitaal beschikbaar. Op minimaal drie beleidsterreinen spelen data en digitale diensten een belangrijke rol bij beleid.
+
+In 2026 is data die we gebruiken voor beleid digitaal beschikbaar voor inwoners en bestuur (open data). Geldrop-Mierlo voldoet aan de eisen voor een veilige digitale overheid.`
+        }
+    ],
+
+    portefeuilleverdeling: {
+        "Burgemeester Jos van Bree": [
+            "Openbare Orde en Veiligheid", "Handhaving", "Bestuurlijke samenwerking",
+            "Dienstverlening", "Juridische Zaken", "Communicatie en representatie",
+            "Personeel en organisatie", "Informatieveiligheid"
+        ],
+        "Wethouder Frans Stravers (DGG)": [
+            "Gebiedsgericht werken", "Onderwijs", "Accommodatiebeleid",
+            "Economie", "Duurzaamheid", "Natuur en milieu",
+            "Recreatie en Toerisme", "Digitalisering", "Archiefbeheer", "Loco-burgemeester"
+        ],
+        "Wethouder Godfried van Gestel (CDA)": [
+            "Ruimtelijke ordening", "Wonen", "Omgevingswet",
+            "Gemeentelijk vastgoed", "Gemeentelijk grondbedrijf"
+        ],
+        "Wethouder Hans van de Laar (DPM)": [
+            "Mobiliteit", "Financiën", "Inkoop en aanbesteding",
+            "Openbare ruimte", "Afval", "Bosbeleid", "GEO beheer",
+            "Gulbergen", "Speelvoorzieningen"
+        ],
+        "Wethouder Peter Looijmans (DGG)": [
+            "Sport en bewegen", "Cultuur", "Kunst", "Monumenten",
+            "Oudheidkunde", "Dierenwelzijn", "Inburgering",
+            "Armoedebeleid", "Werk en Inkomen"
+        ],
+        "Wethouder Mathil Sanders-de Jonge (CDA)": [
+            "Zorg", "Welzijn", "WMO", "Jeugdbeleid", "Inclusie"
+        ]
+    }
+};
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { COALITIEAKKOORD_DATA };
+}
+// BeleidsWijzer Geldrop-Mierlo v1.0.0-light — dossier-first
+
+// ─── Versiebeheer ───
+
+const VERSIE_MENU = [
+    { versie: '1.0.0-light', naam: 'Light-versie', beschrijving: 'Portefeuilles, coalitieakkoord en dossieroverzicht', url: 'index.html' },
+];
+
+function initVersieMenu() {
+    const badge = document.getElementById('appVersion');
+    if (!badge) return;
+    const huidigeVersie = badge.textContent.trim();
+    let pressTimer = null;
+
+    badge.style.cursor = 'default';
+    badge.addEventListener('mousedown', () => {
+        pressTimer = setTimeout(() => { pressTimer = null; toonVersieMenu(huidigeVersie); }, 800);
+    });
+    badge.addEventListener('mouseup', () => { if (pressTimer) clearTimeout(pressTimer); });
+    badge.addEventListener('mouseleave', () => { if (pressTimer) clearTimeout(pressTimer); });
+    badge.addEventListener('touchstart', () => {
+        pressTimer = setTimeout(() => { pressTimer = null; toonVersieMenu(huidigeVersie); }, 800);
+    }, { passive: true });
+    badge.addEventListener('touchend', () => { if (pressTimer) clearTimeout(pressTimer); });
+}
+
+function toonVersieMenu(huidigeVersie) {
+    let overlay = document.getElementById('versieMenuOverlay');
+    if (overlay) { overlay.remove(); return; }
+
+    overlay = document.createElement('div');
+    overlay.id = 'versieMenuOverlay';
+    overlay.className = 'versie-overlay';
+
+    const items = VERSIE_MENU.map(v => {
+        const actief = v.versie === huidigeVersie;
+        return `
+            <a href="${v.url}" class="versie-item ${actief ? 'versie-actief' : ''}">
+                <div class="versie-item-header">
+                    <span class="versie-nummer">${v.versie}</span>
+                    <span class="versie-naam">${v.naam}</span>
+                    ${actief ? '<span class="versie-huidig">huidige versie</span>' : ''}
+                </div>
+                <p class="versie-beschrijving">${v.beschrijving}</p>
+            </a>`;
+    }).join('');
+
+    overlay.innerHTML = `
+        <div class="versie-panel">
+            <div class="versie-panel-kop">
+                <span class="versie-panel-titel">BeleidsWijzer Geldrop-Mierlo — versies</span>
+                <button type="button" class="versie-sluit" aria-label="Sluiten">&times;</button>
+            </div>
+            <div class="versie-lijst">${items}</div>
+        </div>`;
+
+    document.body.appendChild(overlay);
+    requestAnimationFrame(() => overlay.classList.add('versie-overlay-visible'));
+
+    overlay.querySelector('.versie-sluit').addEventListener('click', () => sluitVersieMenu());
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) sluitVersieMenu(); });
+    document.addEventListener('keydown', versieMenuEsc);
+}
+
+function sluitVersieMenu() {
+    const overlay = document.getElementById('versieMenuOverlay');
+    if (!overlay) return;
+    overlay.classList.remove('versie-overlay-visible');
+    setTimeout(() => overlay.remove(), 200);
+    document.removeEventListener('keydown', versieMenuEsc);
+}
+
+function versieMenuEsc(e) { if (e.key === 'Escape') sluitVersieMenu(); }
+
+let allDecisions = [];
+let filteredDecisions = [];
+let activeDossier = null;
+let viewMode = 'overzicht';
+let briefingCache = {};
+let previewCache = {};
+
+const THEMA_ICONEN = {
+    'Bestuur & Veiligheid': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    'Financiën & Economie': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
+    'Ruimte, Wonen & Mobiliteit': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+    'Duurzaamheid, Natuur & Leefbaarheid': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/></svg>',
+    'Sociaal Domein & Zorg': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    'Onderwijs, Sport & Cultuur': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
+};
+
+const BRIEFING_BESTANDEN = {
+    'Bestuur & Veiligheid': '',
+    'Financiën & Economie': '',
+    'Ruimte, Wonen & Mobiliteit': '',
+    'Duurzaamheid, Natuur & Leefbaarheid': '',
+    'Sociaal Domein & Zorg': '',
+    'Onderwijs, Sport & Cultuur': ''
+};
+
+const BEGROTING_DATA = {};
+
+function formatBedrag(n) {
+    if (n >= 1000000) return '€' + (n / 1000000).toFixed(1).replace('.', ',') + 'M';
+    if (n >= 1000) return '€' + Math.round(n / 1000) + 'K';
+    return '€' + n;
+}
+
+// ─── Initialisation ───
+
+function loadData() {
+    try {
+        if (typeof ALL_DECISIONS_DATA === 'undefined' || typeof THEMA_BOOM_DATA === 'undefined') {
+            throw new Error('data.js niet geladen.');
+        }
+        allDecisions = ALL_DECISIONS_DATA;
+        console.log(`Data geladen: ${allDecisions.length} raads- en collegebesluiten`);
+
+        buildPreviewCache();
+        renderDossierKaarten(THEMA_BOOM_DATA);
+    } catch (error) {
+        console.error('Fout bij laden data:', error);
+    }
+}
+
+function buildPreviewCache() {
+    if (typeof BRIEFING_HTML_DATA === 'undefined') return;
+    Object.keys(BRIEFING_HTML_DATA).forEach(thema => {
+        const html = BRIEFING_HTML_DATA[thema];
+        previewCache[thema] = extractPreview(html);
+    });
+}
+
+function extractPreview(html) {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    const paragraphs = tmp.querySelectorAll('p');
+    for (let i = 0; i < paragraphs.length; i++) {
+        const text = paragraphs[i].textContent.trim();
+        if (text.length > 60 && !text.startsWith('Versie') && !text.startsWith('Datum')) {
+            const sentences = text.split(/(?<=[.!?])\s+/);
+            return sentences.slice(0, 3).join(' ');
+        }
+    }
+    return '';
+}
+
+// ─── Dossier-kaarten (startpagina) ───
+
+function renderDossierKaarten(tree) {
+    window.themaTree = tree;
+    const container = document.getElementById('dossierKaarten');
+    if (!container) return;
+    container.innerHTML = '';
+
+    const counts = calculateThemaCounts(allDecisions);
+
+    tree.forEach(domein => {
+        const naam = domein.naam;
+        const count = counts[naam] || 0;
+        const preview = previewCache[naam] || '';
+        const icoon = THEMA_ICONEN[naam] || '';
+
+        const kaart = document.createElement('button');
+        kaart.type = 'button';
+        kaart.className = 'dossier-kaart';
+        kaart.setAttribute('data-thema', naam);
+        const begr = BEGROTING_DATA[naam];
+        const begrHtml = begr ? `
+            <div class="dossier-kaart-begroting">
+                <span class="begroting-bedrag">${formatBedrag(begr.bedrag)}</span>
+                <span class="begroting-label">${escapeHtml(begr.programma)}${begr.gedeeld ? ' *' : ''}</span>
+            </div>
+        ` : '';
+
+        kaart.innerHTML = `
+            <div class="dossier-kaart-header">
+                <span class="dossier-kaart-icoon">${icoon}</span>
+                <span class="dossier-kaart-naam">${escapeHtml(naam)}</span>
+                <span class="dossier-kaart-count">${count}</span>
+            </div>
+            ${preview ? `<p class="dossier-kaart-preview">${escapeHtml(preview)}</p>` : ''}
+            ${begrHtml}
+            <span class="dossier-kaart-cta">Lees dossier →</span>
+        `;
+        kaart.onclick = () => openDossier(naam);
+        container.appendChild(kaart);
+    });
+}
+
+function calculateThemaCounts(decisions) {
+    const counts = {};
+    decisions.forEach(d => {
+        const dom = d.domein || 'Niet geclassificeerd';
+        counts[dom] = (counts[dom] || 0) + 1;
+    });
+    return counts;
+}
+
+// ─── View switching ───
+
+function showView(mode) {
+    viewMode = mode;
+    document.getElementById('dossierOverzicht').style.display = mode === 'overzicht' ? '' : 'none';
+    document.getElementById('dossierDetail').style.display = mode === 'dossier' ? '' : 'none';
+    document.getElementById('zoekResultaten').style.display = mode === 'zoekresultaten' ? '' : 'none';
+}
+
+// ─── Open / sluit dossier ───
+
+function openDossier(thema) {
+    activeDossier = { domein: thema };
+    showView('dossier');
+
+    document.getElementById('dossierTitel').textContent = thema;
+    loadSyntheseContent(thema);
+    loadCoalitieAkkoord(thema);
+    loadDossierBesluiten(thema);
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function sluitDossier() {
+    activeDossier = null;
+    resetFilters();
+    showView('overzicht');
+}
+
+function loadSyntheseContent(thema) {
+    const container = document.getElementById('dossierSynthese');
+    if (!container) return;
+
+    if (briefingCache[thema]) {
+        container.innerHTML = briefingCache[thema];
+        return;
+    }
+
+    if (typeof BRIEFING_HTML_DATA !== 'undefined' && BRIEFING_HTML_DATA[thema]) {
+        const body = extractBodyContent(BRIEFING_HTML_DATA[thema]);
+        briefingCache[thema] = body;
+        container.innerHTML = body;
+    } else {
+        container.innerHTML = '<p style="color: #999; text-align: center; padding: 2rem;">Geen beleidsdossier beschikbaar voor dit thema.</p>';
+    }
+}
+
+function extractBodyContent(html) {
+    const match = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+    if (match) return match[1];
+    return html;
+}
+
+// ─── Coalitieakkoord rendering ───
+
+function loadCoalitieAkkoord(thema) {
+    const container = document.getElementById('coalitieAkkoordInhoud');
+    if (!container) return;
+
+    if (typeof COALITIEAKKOORD_DATA === 'undefined') {
+        container.innerHTML = '<p style="color:#999;text-align:center;padding:1rem;">Geen doelstellingenakkoord beschikbaar.</p>';
+        return;
+    }
+
+    const data = COALITIEAKKOORD_DATA;
+    const secties = (data.secties || []).filter(s => s.thema === thema);
+
+    if (!secties.length) {
+        container.innerHTML = '<p style="color:#999;text-align:center;padding:1rem;">Geen passages uit het doelstellingenakkoord voor dit dossier.</p>';
+        return;
+    }
+
+    const hoofdstukken = {};
+    secties.forEach(s => {
+        const h = s.hoofdstuk || 'Overig';
+        if (!hoofdstukken[h]) hoofdstukken[h] = [];
+        hoofdstukken[h].push(s);
+    });
+
+    let html = '';
+
+    if (data.woord_vooraf) {
+        const korteIntro = data.woord_vooraf.split('\n')[0];
+        html += `<p class="coalitie-intro"><em>${escapeHtml(korteIntro)}</em></p>`;
+    }
+
+    Object.keys(hoofdstukken).forEach(h => {
+        html += `<div class="coalitie-hoofdstuk">`;
+        html += `<h3 class="coalitie-hoofdstuk-titel">${escapeHtml(h)}</h3>`;
+        hoofdstukken[h].forEach(s => {
+            const paragraphs = s.tekst.split('\n\n').filter(p => p.trim());
+            const tekst = paragraphs.map(p => `<p>${escapeHtml(p.trim())}</p>`).join('');
+            html += `
+                <div class="coalitie-sectie" id="coalitie-${s.id || ''}">
+                    <h4 class="coalitie-sectie-titel">${escapeHtml(s.titel)}</h4>
+                    <div class="coalitie-sectie-tekst">${tekst}</div>
+                </div>`;
+        });
+        html += `</div>`;
+    });
+
+    html += `<p class="coalitie-bron">Bron: <a href="${data.bron_url}" target="_blank" rel="noopener">Doelstellingenakkoord 2022–2026 (PDF)</a></p>`;
+
+    container.innerHTML = html;
+}
+
+function loadDossierBesluiten(thema) {
+    filteredDecisions = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === thema);
+
+    const countEl = document.getElementById('besluitenCount');
+    if (countEl) countEl.textContent = `(${filteredDecisions.length})`;
+
+    const sortBy = document.getElementById('sortBy').value;
+    sortDecisions(sortBy);
+    displayDecisions('resultsList', 'resultsCount', 'noResults');
+}
+
+// ─── Zoekfunctie (zelfstandig) ───
+
+let zoekBaseResults = [];
+
+function handleSearch() {
+    const term = document.getElementById('searchInput').value.trim();
+    if (!term) {
+        if (viewMode === 'zoekresultaten') showView('overzicht');
+        return;
+    }
+
+    const lowerTerm = term.toLowerCase();
+    zoekBaseResults = allDecisions.filter(d => {
+        const searchable = [d.naam || '', d.besluit || '', d.domein || '', d.onderwerp_begroting || '', d.portefeuille || ''].join(' ').toLowerCase();
+        return searchable.includes(lowerTerm);
+    });
+
+    showView('zoekresultaten');
+    activeDossier = null;
+
+    document.getElementById('zoekYearFilter').value = '';
+    document.getElementById('zoekTypeFilter').value = '';
+    document.getElementById('zoekSortBy').value = 'datum-desc';
+
+    applyZoekFilters();
+}
+
+function applyZoekFilters() {
+    const year = document.getElementById('zoekYearFilter').value;
+    const type = document.getElementById('zoekTypeFilter').value;
+    const sort = document.getElementById('zoekSortBy').value;
+
+    let filtered = zoekBaseResults.slice();
+
+    if (year) filtered = filtered.filter(d => (d.datum || '').startsWith(year));
+    if (type) {
+        if (type === 'raad') filtered = filtered.filter(d => d.type === 'Raadsbesluit');
+        else if (type === 'college') filtered = filtered.filter(d => d.type === 'Collegebesluit (B&W)');
+    }
+
+    if (sort === 'datum-desc') filtered.sort((a, b) => (b.datum || '').localeCompare(a.datum || ''));
+    else if (sort === 'datum-asc') filtered.sort((a, b) => (a.datum || '').localeCompare(b.datum || ''));
+    else if (sort === 'naam-asc') filtered.sort((a, b) => (a.naam || '').localeCompare(b.naam || ''));
+    else if (sort === 'naam-desc') filtered.sort((a, b) => (b.naam || '').localeCompare(a.naam || ''));
+
+    const countEl = document.getElementById('zoekResultsCount');
+    const listEl = document.getElementById('zoekResultsList');
+    const noEl = document.getElementById('zoekNoResults');
+
+    if (filtered.length === 0) {
+        listEl.style.display = 'none';
+        noEl.style.display = 'block';
+        countEl.textContent = '0 raads- en collegebesluiten';
+        return;
+    }
+
+    listEl.style.display = 'block';
+    noEl.style.display = 'none';
+    countEl.textContent = `${filtered.length} raads- en collegebesluit${filtered.length !== 1 ? 'en' : ''}`;
+    listEl.innerHTML = filtered.map(d => renderDecisionItem(d)).join('');
+}
+
+function sluitZoekresultaten() {
+    document.getElementById('searchInput').value = '';
+    zoekBaseResults = [];
+    showView('overzicht');
+}
+
+// ─── Filtering (binnen dossier) ───
+
+function applyDossierFilters() {
+    if (!activeDossier) return;
+    const year = document.getElementById('yearFilter').value;
+    const type = document.getElementById('typeFilter').value;
+
+    let results = allDecisions.filter(d => (d.domein || 'Niet geclassificeerd') === activeDossier.domein);
+
+    if (year) {
+        results = results.filter(d => {
+            const dy = d.datum ? d.datum.substring(0, 4) : '';
+            const jy = d.jaar ? String(d.jaar) : '';
+            return dy === year || jy === year;
+        });
+    }
+    if (type) {
+        results = results.filter(d => d.bron === type);
+    }
+
+    filteredDecisions = results;
+
+    const countEl = document.getElementById('besluitenCount');
+    if (countEl) countEl.textContent = `(${filteredDecisions.length})`;
+
+    const sortBy = document.getElementById('sortBy').value;
+    sortDecisions(sortBy);
+    displayDecisions('resultsList', 'resultsCount', 'noResults');
+}
+
+function resetFilters() {
+    const yf = document.getElementById('yearFilter');
+    const tf = document.getElementById('typeFilter');
+    if (yf) yf.value = '';
+    if (tf) tf.value = '';
+}
+
+function sortDecisions(sortBy) {
+    filteredDecisions.sort((a, b) => {
+        switch (sortBy) {
+            case 'datum-desc': return (b.datum || '').localeCompare(a.datum || '');
+            case 'datum-asc':  return (a.datum || '').localeCompare(b.datum || '');
+            case 'naam-asc':   return (a.naam || '').localeCompare(b.naam || '');
+            case 'naam-desc':  return (b.naam || '').localeCompare(a.naam || '');
+            default: return 0;
+        }
+    });
+}
+
+// ─── Render decisions ───
+
+function displayDecisions(listId, countId, noResultsId) {
+    const container = document.getElementById(listId);
+    const noResults = document.getElementById(noResultsId);
+    const countEl = document.getElementById(countId);
+
+    if (!filteredDecisions.length) {
+        container.style.display = 'none';
+        noResults.style.display = 'block';
+        if (countEl) countEl.textContent = '0 raads- en collegebesluiten';
+        return;
+    }
+
+    const n = filteredDecisions.length;
+    if (countEl) countEl.textContent = `${n} raads- en collegebesluit${n !== 1 ? 'en' : ''}`;
+
+    container.style.display = 'block';
+    noResults.style.display = 'none';
+    container.innerHTML = filteredDecisions.map(d => renderDecisionItem(d)).join('');
+}
+
+function renderDecisionItem(decision) {
+    const datum = decision.datum ? formatDate(decision.datum) : 'Onbekend';
+    const badgeClass = decision.bron === 'raad' ? 'raad' : 'college';
+    const badgeText = decision.type_besluit || (decision.bron === 'raad' ? 'Raadsbesluit' : 'Collegebesluit');
+
+    const besluitText = (decision.besluit || '').trim();
+    const isCollege = decision.bron === 'college';
+    const maxPreview = isCollege ? 500 : 300;
+    const isLong = besluitText.length > maxPreview;
+    const previewPart = isLong ? besluitText.substring(0, maxPreview) + '…' : besluitText;
+    const fullPart = isLong ? besluitText.substring(maxPreview) : '';
+    const idSuffix = Math.random().toString(36).slice(2, 9);
+    const links = buildDecisionLinks(decision);
+
+    const searchNaam = (decision.naam || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    return `
+        <div class="result-item" data-bron="${decision.bron || ''}" data-besluit-naam="${searchNaam}" data-besluit-datum="${decision.datum || ''}">
+            <div class="result-header">
+                <div>
+                    <div class="result-title">${escapeHtml(decision.naam || (isCollege ? 'Naamloos collegebesluit' : 'Naamloos raadsbesluit'))}</div>
+                    <div class="result-meta">
+                        <span>📅 ${datum}</span>
+                        <span class="result-badge ${badgeClass}">${badgeText}</span>
+                        ${decision.domein ? `<span>📁 ${escapeHtml(decision.domein)}</span>` : ''}
+                        ${decision.portefeuille ? `<span>👤 ${escapeHtml(decision.portefeuille)}</span>` : ''}
+                    </div>
+                </div>
+            </div>
+            ${besluitText ? `
+                <div class="result-besluit ${isCollege ? 'result-besluit-college' : ''}">
+                    <strong class="result-besluit-label">${isCollege ? 'Collegebesluit:' : 'Raadsbesluit:'}</strong>
+                    <div class="result-besluit-tekst">
+                        <span class="result-text-inhoud">${escapeHtml(previewPart)}</span>
+                        ${fullPart ? `<span class="result-text-meer" id="meer-${idSuffix}" hidden>${escapeHtml(fullPart)}</span>` : ''}
+                    </div>
+                    ${isLong ? `<button type="button" class="btn-uitklappen" data-id="meer-${idSuffix}" aria-expanded="false">Toon volledige tekst</button>` : ''}
+                </div>
+            ` : ''}
+            ${links}
+        </div>
+    `;
+}
+
+function buildDecisionLinks(decision) {
+    const parts = [];
+    if (decision.pdf_url) {
+        parts.push(`<a href="${decision.pdf_url}" target="_blank" rel="noopener noreferrer" class="result-link">Bekijk besluitenlijst (PDF) →</a>`);
+    }
+    if (decision.link && decision.link.startsWith('http')) {
+        parts.push(`<a href="${decision.link}" target="_blank" rel="noopener noreferrer" class="result-link">Bekijk document →</a>`);
+    } else if (decision.link && decision.link.includes('iBabs')) {
+        const q = encodeURIComponent(`"${decision.naam || ''}" site:geldropmierlo.bestuurlijkeinformatie.nl`);
+        parts.push(`<a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener noreferrer" class="result-link">Zoek in iBabs →</a>`);
+        parts.push(`<a href="https://geldropmierlo.bestuurlijkeinformatie.nl/" target="_blank" rel="noopener noreferrer" class="result-link result-link-secondary">iBabs Portaal →</a>`);
+    }
+    if (!parts.length && decision.bron === 'raad') {
+        const q = encodeURIComponent(`"${decision.naam || ''}" geldrop-mierlo raadsbesluit`);
+        parts.push(`<a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener noreferrer" class="result-link">Zoek document →</a>`);
+    }
+    return parts.length ? `<div class="result-links">${parts.join('')}</div>` : '';
+}
+
+// ─── Helpers ───
+
+function formatDate(dateStr) {
+    if (!dateStr) return 'Onbekend';
+    const date = new Date(dateStr);
+    const months = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+    return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// ─── Bronverwijzing navigatie ───
+
+function navigateToDecision(refText) {
+    const details = document.getElementById('dossierBesluiten');
+    if (!details) return;
+
+    if (!details.open) details.open = true;
+
+    const cleaned = refText.replace(/[\[\]]/g, '').trim();
+    const parts = cleaned.split(';').map(s => s.trim());
+    const firstRef = parts[0];
+
+    const namePart = firstRef
+        .replace(/^(Raadsbesluit|Collegebesluit|Coalitieakkoord)\s*:\s*/i, '')
+        .replace(/,\s*\d{2}-\d{2}-\d{4}.*$/, '')
+        .replace(/,\s*\d{4}.*$/, '')
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, '');
+
+    if (!namePart || namePart.length < 4) {
+        details.querySelector('.dossier-besluiten-kop').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+    }
+
+    const items = document.querySelectorAll('#resultsList .result-item');
+    let bestMatch = null;
+    let bestScore = 0;
+
+    items.forEach(item => {
+        const itemNaam = item.getAttribute('data-besluit-naam') || '';
+        if (!itemNaam) return;
+
+        let score = 0;
+        const words = namePart.match(/.{3,}/g) || [namePart];
+        words.forEach(w => { if (itemNaam.includes(w)) score += w.length; });
+
+        if (namePart.length > 6 && itemNaam.includes(namePart)) {
+            score += namePart.length * 2;
+        }
+
+        if (score > bestScore) {
+            bestScore = score;
+            bestMatch = item;
+        }
+    });
+
+    if (bestMatch && bestScore >= 6) {
+        document.querySelectorAll('.result-item.highlight').forEach(el => el.classList.remove('highlight'));
+        bestMatch.classList.add('highlight');
+        setTimeout(() => {
+            bestMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+        setTimeout(() => bestMatch.classList.remove('highlight'), 4000);
+    } else {
+        details.querySelector('.dossier-besluiten-kop').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// ─── Event listeners ───
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadData();
+
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.btn-uitklappen');
+        if (!btn) return;
+        e.preventDefault();
+        const id = btn.getAttribute('data-id');
+        const el = document.getElementById(id);
+        if (!el) return;
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        el.hidden = expanded;
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.textContent = expanded ? 'Toon volledige tekst' : 'Verberg tekst';
+    });
+
+    document.addEventListener('click', (e) => {
+        const ref = e.target.closest('.ref');
+        if (!ref) return;
+        navigateToDecision(ref.textContent);
+    });
+
+    document.getElementById('dossierTerug').addEventListener('click', sluitDossier);
+
+    document.getElementById('searchInput').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleSearch();
+    });
+    document.getElementById('searchBtn').addEventListener('click', handleSearch);
+    document.getElementById('zoekSluiten').addEventListener('click', sluitZoekresultaten);
+
+    document.getElementById('yearFilter').addEventListener('change', applyDossierFilters);
+    document.getElementById('typeFilter').addEventListener('change', applyDossierFilters);
+    document.getElementById('sortBy').addEventListener('change', (e) => {
+        sortDecisions(e.target.value);
+        displayDecisions('resultsList', 'resultsCount', 'noResults');
+    });
+    document.getElementById('clearFilters').addEventListener('click', () => {
+        resetFilters();
+        if (activeDossier) applyDossierFilters();
+    });
+
+    document.getElementById('zoekYearFilter').addEventListener('change', applyZoekFilters);
+    document.getElementById('zoekTypeFilter').addEventListener('change', applyZoekFilters);
+    document.getElementById('zoekSortBy').addEventListener('change', applyZoekFilters);
+    document.getElementById('zoekClearFilters').addEventListener('click', () => {
+        document.getElementById('zoekYearFilter').value = '';
+        document.getElementById('zoekTypeFilter').value = '';
+        document.getElementById('zoekSortBy').value = 'datum-desc';
+        applyZoekFilters();
+    });
+
+    const versieBadge = document.getElementById('appVersion');
+    if (versieBadge) {
+        versieBadge.addEventListener('dblclick', () => {
+            document.body.classList.toggle('toon-begroting');
+            const voetnoot = document.querySelector('.begroting-voetnoot');
+            if (voetnoot) voetnoot.hidden = !document.body.classList.contains('toon-begroting');
+        });
+    }
+
+    initVersieMenu();
+});
+    </script>
+</body>
+</html>

@@ -18,3 +18,7 @@ Dit kopieert `data.js`, `app.js`, `app_v5.js` en `app_v6.js` naar:
 
 Daarna: in de browser `Cmd+Shift+R` (of `Ctrl+Shift+R`) om de cache te verversen.
 
+### PWA-lite
+
+Het deploy-script kopieert ook `manifest.webmanifest`, `sw.js`, `pwa-register.js` en `pwa-icons/*.png`. Zie **`PWA.md`** (nginx MIME-type, gebruik op mobiel).
+

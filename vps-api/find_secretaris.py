@@ -31,6 +31,15 @@ GENERIC_PREFIXES = [
     'werkenbij@', 'werkenvoor@', 'vacatures@', 'sollicit', 'hr@', 'personeels',
     'recruitment@', 'redactie@', 'pers@', 'media@', 'helpdesk@', 'support@',
     'beheer@', 'postbus@', 'secretariaat@', 'griffie@', 'bestuur@',
+    'economie@', 'economisch@', 'ondernemer@', 'mkb@', 'bedrijv',
+    'vergunning', 'woo@', 'sociaal', 'jeugd@', 'zorg@', 'sport@',
+    'cultuur@', 'duurzaam', 'milieu@', 'groen@', 'verkeer@',
+    'welkom@', 'receptie@', 'planning@', 'archief@', 'belasting',
+    'financien@', 'inkoop@', 'aanbesteding', 'werken@', 'noreply',
+    'no-reply', 'notificatie', 'systeem', 'admin@', 'test@',
+    'bouwen@', 'wonen@', 'ruimte@', 'openbaar', 'publiek',
+    'subsidie', 'handhaving', 'toezicht', 'bezwaar', 'klant',
+    'onderwijs@', 'erfgoed@', 'parkeren@', 'evenement', 'afval@',
 ]
 
 DUTCH_PREFIXES = {'van', 'de', 'den', 'der', 'het', "'t", 'te', 'ten', 'ter', 'op', 'in'}
@@ -38,13 +47,21 @@ DUTCH_PREFIXES = {'van', 'de', 'den', 'der', 'het', "'t", 'te', 'ten', 'ter', 'o
 NOT_NAMES = {
     'openingstijden', 'publieksbalie', 'stadhuis', 'gemeentehuis', 'gemeente',
     'college', 'bestuur', 'pagina', 'secretaris', 'directeur', 'organisatie',
-    'contact', 'telefoon', 'adres', 'website', 'email', 'formulier',
+    'contact', 'contactgegevens', 'contactformulier', 'contactpersoon',
+    'telefoon', 'telefoonnummer', 'adres', 'website', 'email', 'formulier',
     'informatie', 'dienstverlening', 'burgerzaken', 'samenstelling',
     'wethouder', 'burgemeester', 'raadslid', 'griffier', 'fractievoorzitter',
-    'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag',
+    'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag', 'zondag',
     'januari', 'februari', 'maart', 'april', 'mei', 'juni',
     'juli', 'augustus', 'september', 'oktober', 'november', 'december',
     'portefeuille', 'taken', 'verantwoordelijk', 'nevenfuncties', 'coalitie',
+    'bereikbaar', 'bereikbaarheid', 'beschikbaar', 'beschikbaarheid',
+    'publicaties', 'besluiten', 'vergaderingen', 'documenten',
+    'meer', 'lees', 'terug', 'volgende', 'vorige', 'download',
+    'bekijk', 'overzicht', 'sluiten', 'zoeken', 'resultaten',
+    'biografie', 'profiel', 'foto', 'portret',
+    'partij', 'fractie', 'raad', 'commissie', 'agenda',
+    'beleid', 'regeling', 'verordening', 'besluit',
 }
 
 
@@ -67,10 +84,17 @@ def is_plausible_name(name):
     if len(meaningful) < 2:
         return False
     for p in meaningful:
-        if p.lower() in NOT_NAMES:
+        low = p.lower()
+        if low in NOT_NAMES:
+            return False
+        if any(len(stop) >= 5 and low.startswith(stop) for stop in NOT_NAMES):
             return False
         if len(p) < 2 or not p[0].isupper():
             return False
+        if len(p) > 18:
+            return False
+    if len(meaningful) > 3:
+        return False
     return len(name) <= 50
 
 
@@ -107,12 +131,20 @@ def find_website(gemeente):
 
 # ─── STEP 2: Find secretaris name ───
 
+_STOP_AFTER_NAME = (
+    r'(?!Contact|Telefoon|Bereik|Informatie|Openingstijd|Publicat|Nevenfunct'
+    r'|Portefeuille|Biografie|Profiel|Foto|Formulier|Lees|Meer|Bekijk|Download'
+    r'|Overzicht|Zoek|Document|Vergader|Agenda|Beleid|Regeling|Verordening'
+    r'|Besluit|Partij|Fractie|Raad|Commissie|Samenstelling)'
+)
+
 SECRETARIS_RE = re.compile(
     r'(?:gemeentesecretaris|algemeen\s+directeur|secretaris/algemeen\s+directeur'
     r'|gemeentesecretaris/algemeen\s+directeur)[:\s,/\-–—]*'
     r'(?:(?:mw\.|dhr\.|mr\.|dr\.|ir\.|prof\.|ing\.)\s*)*'
     r'([A-Z][a-zéëïöüàè]+(?:\s+(?:van\s+(?:de|den|der)|de|den|der|het|\'t|te|ten|ter))*'
-    r'\s+[A-Z][a-zéëïöüàè]+(?:\s+[A-Z][a-zéëïöüàè]+)?)',
+    r'\s+' + _STOP_AFTER_NAME + r'[A-Z][a-zéëïöüàè]+'
+    r'(?:\s+' + _STOP_AFTER_NAME + r'[A-Z][a-zéëïöüàè]+)?)',
     re.IGNORECASE
 )
 
@@ -214,16 +246,96 @@ def find_secretaris(base_url, homepage_html):
     return None, None, None
 
 
-# ─── STEP 3: Find email convention via vacatures ───
+# ─── STEP 3: Find email convention via vacatures + raadsinformatie ───
 
 def find_email_convention(base_url, homepage_html, email_domain):
     """
-    Go to vacature pages, open the first real vacancy,
-    find a personal email like Voornaam.Achternaam@gemeente.nl
+    Strategy order:
+    1. raadsinformatie.nl — raadsstukken hebben vaak steller + email
+    2. Vacature pages — personal emails in job postings
     """
     gemeente_naam = email_domain.replace('.nl', '').replace('.', '')
 
-    # Build vacature URL list: homepage links first, then guesses
+    email_pattern = re.compile(
+        r'[A-Za-z][A-Za-z0-9_.+-]+@' + re.escape(email_domain),
+        re.IGNORECASE
+    )
+
+    # Strategy A: raadsinformatie.nl
+    raadsinfo_url = f"https://{gemeente_naam}.raadsinformatie.nl"
+    log.info(f"Trying raadsinformatie: {raadsinfo_url}")
+    resp = safe_get(raadsinfo_url)
+    if resp and resp.status_code == 200:
+        emails = find_personal_emails(resp.text, email_pattern)
+        if emails:
+            convention = detect_convention(emails[0])
+            log.info(f"Email found on raadsinformatie homepage: {emails[0]} -> {convention}")
+            return convention, emails, raadsinfo_url
+
+        soup = BeautifulSoup(resp.text, 'lxml')
+        for a in soup.find_all('a', href=True):
+            href = a['href']
+            text_l = a.get_text(strip=True).lower()
+            href_l = href.lower()
+            if any(kw in text_l or kw in href_l for kw in
+                   ['document', 'vergadering', 'agenda', 'besluit', 'raadsvoorstel', 'memo']):
+                doc_url = urljoin(raadsinfo_url, href)
+                if urlparse(doc_url).netloc != urlparse(raadsinfo_url).netloc:
+                    continue
+                log.info(f"Opening raadsinformatie page: {doc_url}")
+                doc_resp = safe_get(doc_url)
+                if not doc_resp:
+                    continue
+                emails = find_personal_emails(doc_resp.text, email_pattern)
+                if emails:
+                    convention = detect_convention(emails[0])
+                    log.info(f"Email found on raadsinformatie: {emails[0]} -> {convention}")
+                    return convention, emails, doc_url
+
+    # Strategy B: economie/ondernemerspagina's (beleidsmedewerkers zijn bereikbaar)
+    econ_links = scan_homepage_links(base_url, homepage_html,
+        ['ondernemer', 'economie', 'bedrijv', 'vestig', 'bedrijfscontact'])
+    econ_guesses = [
+        urljoin(base_url, '/economische-visie'),
+        urljoin(base_url, '/ondernemers'),
+        urljoin(base_url, '/ondernemers-en-organisaties'),
+        urljoin(base_url, '/bedrijfscontactfunctionaris'),
+        urljoin(base_url, '/economie'),
+        urljoin(base_url, '/ondernemen'),
+    ]
+    econ_urls = list(dict.fromkeys(econ_links + econ_guesses))
+
+    for econ_url in econ_urls:
+        log.info(f"Trying economie page: {econ_url}")
+        resp = safe_get(econ_url)
+        if not resp or resp.status_code != 200:
+            continue
+        emails = find_personal_emails(resp.text, email_pattern)
+        if emails:
+            convention = detect_convention(emails[0])
+            log.info(f"Email found on economie page: {emails[0]} -> {convention}")
+            return convention, emails, econ_url
+
+        soup = BeautifulSoup(resp.text, 'lxml')
+        for a in soup.find_all('a', href=True):
+            href_l = a['href'].lower()
+            text_l = a.get_text(strip=True).lower()
+            if any(kw in text_l or kw in href_l for kw in
+                   ['visie', 'contact', 'bedrijfscontact', 'mkb', 'economisch', 'vestiging']):
+                sub_url = urljoin(econ_url, a['href'])
+                if urlparse(sub_url).netloc != urlparse(base_url).netloc:
+                    continue
+                log.info(f"Opening economie sub-page: {sub_url}")
+                sub_resp = safe_get(sub_url)
+                if not sub_resp:
+                    continue
+                emails = find_personal_emails(sub_resp.text, email_pattern)
+                if emails:
+                    convention = detect_convention(emails[0])
+                    log.info(f"Email found on economie sub-page: {emails[0]} -> {convention}")
+                    return convention, emails, sub_url
+
+    # Strategy C: vacatures
     vacature_urls = []
     hp_links = scan_homepage_links(base_url, homepage_html,
         ['vacatur', 'werken-bij', 'werken bij', 'werkenbij', 'carriere', 'banen'])
@@ -238,25 +350,18 @@ def find_email_convention(base_url, homepage_html, email_domain):
     ])
     vacature_urls = list(dict.fromkeys(vacature_urls))
 
-    email_pattern = re.compile(
-        r'[A-Za-z][A-Za-z0-9_.+-]+@' + re.escape(email_domain),
-        re.IGNORECASE
-    )
-
     for vac_url in vacature_urls:
         log.info(f"Trying vacatures: {vac_url}")
         resp = safe_get(vac_url)
         if not resp or resp.status_code != 200:
             continue
 
-        # First check the vacature overview page itself for emails
         emails = find_personal_emails(resp.text, email_pattern)
         if emails:
             convention = detect_convention(emails[0])
             log.info(f"Email found on overview: {emails[0]} -> {convention}")
             return convention, emails, vac_url
 
-        # Open the first vacancy link
         soup = BeautifulSoup(resp.text, 'lxml')
         for a in soup.find_all('a', href=True):
             href = a['href']
@@ -294,14 +399,20 @@ def detect_convention(email):
     """Detect pattern from a single example email like Diana.Peute@maastricht.nl"""
     local = email.split('@')[0]
     parts = local.split('.')
+
+    if '.' not in local and len(local) > 2:
+        if len(local) <= 12 and local[1:].isalpha() and local[1:][0].isupper():
+            return 'VAchternaam'
+        if len(local) <= 12 and local[0].islower() and local[1:].islower():
+            return 'VAchternaam'
+        return 'voornaamachternaam'
+
     if len(parts) == 2 and len(parts[0]) > 1 and len(parts[1]) > 1:
         return 'Voornaam.Achternaam'
     if len(parts) == 2 and len(parts[0]) == 1:
         return 'V.Achternaam'
     if len(parts) == 3 and len(parts[0]) > 1:
         return 'Voornaam.Tussenvoegsel.Achternaam'
-    if '.' not in local and len(local) > 3:
-        return 'voornaamachternaam'
     return 'Voornaam.Achternaam'
 
 
@@ -319,37 +430,57 @@ def derive_email(name, convention, domain):
         else:
             achternaam_parts.append(p)
     achternaam = achternaam_parts[-1] if achternaam_parts else parts[-1]
+    tv = ''.join(t.lower() for t in tussenvoegsels)
 
     candidates = []
-    if convention == 'Voornaam.Achternaam':
+    if convention == 'VAchternaam':
+        candidates.append(f"{voornaam[0].lower()}{tv}{achternaam.lower()}@{domain}")
         if tussenvoegsels:
-            candidates.append(f"{voornaam}.{''.join(t.lower() for t in tussenvoegsels)}{achternaam}@{domain}")
+            candidates.append(f"{voornaam[0].lower()}{achternaam.lower()}@{domain}")
+        candidates.append(f"{voornaam[0]}.{tv}{achternaam}@{domain}" if tv else f"{voornaam[0]}.{achternaam}@{domain}")
+    elif convention == 'Voornaam.Achternaam':
+        if tussenvoegsels:
+            candidates.append(f"{voornaam}.{tv}{achternaam}@{domain}")
             candidates.append(f"{voornaam}.{'.'.join(t.lower() for t in tussenvoegsels)}.{achternaam}@{domain}")
         candidates.append(f"{voornaam}.{achternaam}@{domain}")
     elif convention == 'V.Achternaam':
         candidates.append(f"{voornaam[0]}.{achternaam}@{domain}")
         if tussenvoegsels:
-            candidates.append(f"{voornaam[0]}.{''.join(t.lower() for t in tussenvoegsels)}{achternaam}@{domain}")
+            candidates.append(f"{voornaam[0]}.{tv}{achternaam}@{domain}")
     elif convention == 'Voornaam.Tussenvoegsel.Achternaam':
         if tussenvoegsels:
             candidates.append(f"{voornaam}.{'.'.join(t.lower() for t in tussenvoegsels)}.{achternaam}@{domain}")
         candidates.append(f"{voornaam}.{achternaam}@{domain}")
+    elif convention == 'voornaamachternaam':
+        candidates.append(f"{voornaam.lower()}{tv}{achternaam.lower()}@{domain}")
+        if tussenvoegsels:
+            candidates.append(f"{voornaam.lower()}{achternaam.lower()}@{domain}")
+        candidates.append(f"{voornaam[0].lower()}{tv}{achternaam.lower()}@{domain}")
     else:
-        tv = ''.join(t.lower() for t in tussenvoegsels)
         if tussenvoegsels:
             candidates.append(f"{voornaam}.{tv}{achternaam}@{domain}")
             candidates.append(f"{voornaam}.{tv}.{achternaam}@{domain}")
             candidates.append(f"{voornaam[0]}.{tv}{achternaam}@{domain}")
-            candidates.append(f"{voornaam[0]}.{tv}.{achternaam}@{domain}")
         candidates.append(f"{voornaam}.{achternaam}@{domain}")
         candidates.append(f"{voornaam[0]}.{achternaam}@{domain}")
+        candidates.append(f"{voornaam[0].lower()}{achternaam.lower()}@{domain}")
 
     return list(dict.fromkeys(candidates))
 
 
 # ─── MAIN PIPELINE ───
 
-def search_gemeente(gemeente):
+def _derive_email_domain_from_url(url):
+    """Extract email domain (e.g. gemeentegroningen.nl) from website URL."""
+    parsed = urlparse(url)
+    netloc = parsed.netloc or url
+    if netloc.startswith('www.'):
+        netloc = netloc[4:]
+    return netloc if netloc else None
+
+
+def search_gemeente(gemeente, manual=None):
+    manual = manual or {}
     result = {
         'gemeente': gemeente,
         'status': 'started',
@@ -362,16 +493,40 @@ def search_gemeente(gemeente):
         'found_emails': [],
         'vacature_url': None,
         'error': None,
+        'stuck_at': None,
+        'prompt': None,
+        'prompt_field': None,
     }
 
     # Step 1: Website
     result['steps'].append({'step': 1, 'action': f'Zoek www.{gemeente.lower().replace(" ","-")}.nl'})
-    website_url, homepage_html, email_domain = find_website(gemeente)
-    if not website_url:
-        result['steps'][-1]['status'] = 'mislukt'
-        result['status'] = 'mislukt'
-        result['error'] = f'Website voor {gemeente} niet gevonden'
-        return result
+    if manual.get('website'):
+        website_url = manual['website'].strip()
+        if not website_url.startswith(('http://', 'https://')):
+            website_url = 'https://' + website_url
+        resp = safe_get(website_url)
+        if resp and resp.status_code == 200:
+            website_url = resp.url
+            homepage_html = resp.text
+            email_domain = _derive_email_domain_from_url(website_url) or f"{gemeente.lower().replace(' ', '-')}.nl"
+        else:
+            result['steps'][-1]['status'] = 'mislukt'
+            result['status'] = 'mislukt'
+            result['error'] = f'Handmatige URL niet bereikbaar: {website_url}'
+            result['stuck_at'] = 'step1'
+            result['prompt'] = 'URL van de gemeente niet bereikbaar. Controleer en vul opnieuw in (bijv. www.gemeenteX.nl):'
+            result['prompt_field'] = 'website'
+            return result
+    else:
+        website_url, homepage_html, email_domain = find_website(gemeente)
+        if not website_url:
+            result['steps'][-1]['status'] = 'mislukt'
+            result['status'] = 'mislukt'
+            result['error'] = f'Website voor {gemeente} niet gevonden'
+            result['stuck_at'] = 'step1'
+            result['prompt'] = 'URL van de gemeente niet gevonden. Vul handmatig in (bijv. www.gemeenteX.nl):'
+            result['prompt_field'] = 'website'
+            return result
     result['website'] = website_url
     result['steps'][-1]['status'] = 'gevonden'
     result['steps'][-1]['url'] = website_url
@@ -380,7 +535,26 @@ def search_gemeente(gemeente):
 
     # Step 2: Secretaris
     result['steps'].append({'step': 2, 'action': 'Gemeentesecretaris zoeken'})
-    naam, bestuur_url, methode = find_secretaris(base_url, homepage_html)
+    if manual.get('secretaris_naam'):
+        naam = manual['secretaris_naam'].strip()
+        bestuur_url = manual.get('bestuur_url', '').strip() or website_url
+        methode = 'handmatig'
+    elif manual.get('bestuur_url'):
+        bestuur_url = manual['bestuur_url'].strip()
+        if not bestuur_url.startswith(('http://', 'https://')):
+            bestuur_url = urljoin(base_url, bestuur_url)
+        resp = safe_get(bestuur_url)
+        if resp:
+            soup = BeautifulSoup(resp.text, 'lxml')
+            text = soup.get_text(' ', strip=True)
+            m = SECRETARIS_RE.search(text)
+            naam = m.group(1).strip() if m and is_plausible_name(m.group(1)) else None
+        else:
+            naam = None
+        methode = 'handmatige college-URL'
+    else:
+        naam, bestuur_url, methode = find_secretaris(base_url, homepage_html)
+
     if naam:
         result['secretaris_naam'] = naam
         result['bestuur_url'] = bestuur_url
@@ -389,34 +563,47 @@ def search_gemeente(gemeente):
         result['steps'][-1]['url'] = bestuur_url
     else:
         result['steps'][-1]['status'] = 'niet gevonden'
+        result['stuck_at'] = 'step2'
+        result['prompt'] = 'Naam gemeentesecretaris niet gevonden. Vul handmatig in (bijv. Jan Jansen) of geef de URL van de collegepagina:'
+        result['prompt_field'] = 'secretaris_naam'
+        result['status'] = 'deels gevonden'
+        result['error'] = 'Gemeentesecretaris niet gevonden'
+        return result
 
-    # Step 3: Email convention via vacatures
+    # Step 3: Email convention
     result['steps'].append({'step': 3, 'action': f'Emailconventie zoeken via vacatures (@{email_domain})'})
-    convention, emails, vac_url = find_email_convention(base_url, homepage_html, email_domain)
+    if manual.get('email_convention'):
+        convention = manual['email_convention'].strip()
+        emails = []
+        vac_url = None
+    else:
+        convention, emails, vac_url = find_email_convention(base_url, homepage_html, email_domain)
     result['found_emails'] = emails
     result['vacature_url'] = vac_url
     if convention:
         result['email_convention'] = convention
-        result['steps'][-1]['status'] = f'gevonden: {convention}'
+        result['steps'][-1]['status'] = f'gevonden: {convention}' if not manual.get('email_convention') else f'handmatig: {convention}'
         result['steps'][-1]['voorbeeld'] = emails[0] if emails else ''
         result['steps'][-1]['url'] = vac_url
     else:
         result['steps'][-1]['status'] = 'geen persoonlijk email gevonden'
+        result['stuck_at'] = 'step3'
+        result['prompt'] = 'Emailconventie niet gevonden. Kies of vul in: Voornaam.Achternaam | V.Achternaam | voornaamachternaam | VAchternaam'
+        result['prompt_field'] = 'email_convention'
+        result['status'] = 'deels gevonden'
+        result['error'] = 'Emailconventie niet gevonden'
+        return result
 
     # Step 4: Generate email
-    if naam:
-        candidates = derive_email(naam, convention, email_domain)
-        result['email_candidates'] = candidates
-        result['status'] = 'gevonden'
-        result['steps'].append({
-            'step': 4,
-            'action': 'Email gegenereerd',
-            'status': f'{convention or "standaard"} toegepast op {naam}',
-            'candidates': candidates,
-        })
-    else:
-        result['status'] = 'deels gevonden' if website_url else 'mislukt'
-
+    candidates = derive_email(naam, convention, email_domain)
+    result['email_candidates'] = candidates
+    result['status'] = 'gevonden'
+    result['steps'].append({
+        'step': 4,
+        'action': 'Email gegenereerd',
+        'status': f'{convention} toegepast op {naam}',
+        'candidates': candidates,
+    })
     return result
 
 

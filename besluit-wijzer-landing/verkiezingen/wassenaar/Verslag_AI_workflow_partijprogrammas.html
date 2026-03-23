@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verslag: AI-workflow partijprogramma's Wassenaar 2026</title>
+  <style>
+    :root {
+      --tekst: #1a1a1a;
+      --tekst-zacht: #4a5568;
+      --accent: #2c5282;
+      --accent-licht: #e6f0ff;
+      --rand: #e2e8f0;
+      --achtergrond: #fafbfc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--tekst);
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: var(--achtergrond);
+    }
+    h1 {
+      font-size: 1.75rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+    }
+    .meta {
+      color: var(--tekst-zacht);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      color: var(--tekst);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .prompt-blockquote {
+      background: var(--accent-licht);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      font-style: italic;
+      color: var(--tekst);
+    }
+    .prompt-elementen {
+      font-size: 0.9rem;
+      color: var(--tekst-zacht);
+      margin-top: 0.5rem;
+    }
+    .prompt-actie {
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin-top: 0.5rem;
+    }
+    ul { padding-left: 1.5rem; }
+    li { margin: 0.35rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 0.6rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--rand);
+    }
+    th {
+      background: var(--accent-licht);
+      color: var(--accent);
+      font-weight: 600;
+    }
+    code, .code {
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 0.9em;
+      background: #f1f5f9;
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #f1f5f9;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+    .do-sectie { color: #276749; }
+    .dont-sectie { color: #c53030; }
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rand);
+      font-size: 0.9rem;
+      color: var(--tekst-zacht);
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--rand);
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Verslag: AI-workflow voor het ophalen van partijprogramma's</h1>
+  <p class="meta"><strong>Project:</strong> Analyse Wassenaarse verkiezingsprogramma's 2026 · <strong>Datum:</strong> 12 maart 2026<br>
+  <strong>Doel:</strong> Documenteren van de aanpak en prompts voor collega's die willen leren van deze oefening</p>
+
+  <h2>1. Context</h2>
+  <p>Bij de gemeenteraadsverkiezingen van Wassenaar (2026) doen negen partijen mee. Om hun programma's te analyseren, moeten de teksten eerst digitaal beschikbaar zijn. Sommige programma's staan alleen op websites in HTML en moeten worden omgezet naar platte tekst (.txt) voor verdere verwerking.</p>
+  <p><strong>Deelnemende partijen (lijstnummers):</strong></p>
+  <ul>
+    <li>1. VVD</li>
+    <li>2. Hart voor Wassenaar</li>
+    <li>3. Lokaal Wassenaar</li>
+    <li>4. GroenLinks/PvdA</li>
+    <li>5. CDA</li>
+    <li>6. D66</li>
+    <li>7. Democratische Liberalen Wassenaar</li>
+    <li>8. Forum voor Democratie</li>
+    <li>9. Volt</li>
+  </ul>
+  <p><strong>Bestandsstructuur:</strong> Alle programma's volgen de naamgeving <code>Verkiezingsprogramma&lt;lijstnummer&gt;&lt;Partijnaam&gt;.txt</code> (bijv. Verkiezingsprogramma2HartvoorWassenaar.txt) voor eenvoudige controleerbaarheid.</p>
+
+  <hr>
+
+  <h2>2. Alle prompts (chronologisch)</h2>
+
+  <h3>Prompt 1 – Ophalen Hart voor Wassenaar</h3>
+  <blockquote class="prompt-blockquote">
+    "We gaan de Wassenaarse verkiezingsprogramma's analyseren! Leuk!! ik heb je nodig. Het gaat om deze programma's: [lijst met partijen en lijstnummers]<br><br>
+    ik ben bezig de partijprogramma's te downloaden; maar enkele daarvan staan op de website, in html en moeten eerst als tekst worden gedownload om te kunnen gebruiken. Laten we eerst beginnen met Hart voor Wassenaar om te zien of dit lukt. Sla het bestand als .txt bestand op. Hier is het te vinden: https://hartvoorwassenaar.nl/standpunten/"
+  </blockquote>
+  <p class="prompt-elementen"><strong>Belangrijke elementen:</strong> context, concrete taak, één partij als pilot, expliciete URL.</p>
+
+  <h3>Prompt 2 – Verslag voor collega's</h3>
+  <blockquote class="prompt-blockquote">
+    "Ik bedenk me iets leuks; mijn collega's willen graag leren van deze excercitie. Kun je een goed leesbaar verslag maken van de prompts en hoe je te werk bent gegaan? Ik denk dat de publicatie op ons intranet een mooie veilige plek is om de informatie te delen."
+  </blockquote>
+  <p class="prompt-elementen"><strong>Belangrijke elementen:</strong> doel (leren delen), gewenst product (verslag), doelgroep (collega's), publicatieplek (intranet).</p>
+
+  <h3>Prompt 3 – Uitbreiding workflow</h3>
+  <blockquote class="prompt-blockquote">
+    "werk dat verslag bij met elke prompt. kun jij dat zelf in de gaten houden?<br><br>
+    verder wil ik dat alle 9 verkiezingsprogramma's dezelfde structuur in de naam hebben; &lt;Verkiezingsprogramma&gt;&lt;het volgnummer&gt;&lt;NaamvandePartij&gt;. Dat maakt het makkelijker controleerbaar als de collega's letterlijke formulering erbij willen zoeken.<br><br>
+    Opdracht 2: zet alle tekst van de verkiezingsprogramma's volledig en letterlijk in één bestand om de performance te optimaliseren en de controleerbaarheid van de tekst te maximaliseren."
+  </blockquote>
+  <p class="prompt-elementen"><strong>Belangrijke elementen:</strong> drie deelopdrachten (verslag bijwerken, bestandsnamen standaardiseren, gecombineerd bestand), expliciete redenen (controleerbaarheid, performance).</p>
+
+  <h3>Prompt 4 – GroenLinks-PvdA PDF verwerken</h3>
+  <blockquote class="prompt-blockquote">
+    "ik heb nu ook groenlinkspvda.pdf toegevoegd. analyseer die op dezelfde wijze"
+  </blockquote>
+  <p class="prompt-elementen"><strong>Context:</strong> De gebruiker had eerder de VVD-PDF verwerkt met het script <code>pdf_naar_txt.py</code>. GroenLinks-PvdA stond als PDF in de map. Dezelfde aanpak werd gevraagd: tekst extraheren en opslaan als <code>Verkiezingsprogramma4GroenLinksPvdA.txt</code>.</p>
+  <p class="prompt-elementen"><strong>Belangrijke elementen:</strong> verwijzing naar bestaande workflow ("op dezelfde wijze"), nieuw bestand toevoegen aan de reeks.</p>
+  <p class="prompt-actie"><strong>Actie:</strong> Het script <code>pdf_naar_txt.py</code> werd uitgebreid om een PDF-bestand als argument te accepteren. Uitvoer: <code>Verkiezingsprogramma4GroenLinksPvdA.txt</code> (38.109 tekens).</p>
+
+  <h3>Prompt 5 – Promptgeschiedenis bijwerken en HTML voor collega's</h3>
+  <blockquote class="prompt-blockquote">
+    "zorg je ervoor dat onze promptgeschiedenis ook wordt bijgewerkt? die wil ik goed leesbaar als html beschikbaar maken voor de collega's, remember?"
+  </blockquote>
+  <p class="prompt-elementen"><strong>Belangrijke elementen:</strong> verslag actueel houden, extra formaat (HTML) voor intranet/publicatie, doelgroep (collega's).</p>
+  <p class="prompt-actie"><strong>Actie:</strong> Dit verslag bijwerken met de nieuwe prompts én een HTML-versie genereren voor eenvoudige publicatie op het intranet.</p>
+
+  <h3>Prompt 6 – Lokaal Wassenaar: PDF-link, concept-notitie, bronvergelijking</h3>
+  <blockquote class="prompt-blockquote">
+    "Lokaal wassenaar - ja loop die ook langs. die hebben ook een link naar het programma, een beetje verstopt. https://lokaalwassenaar.nl/wp-content/uploads/2026/02/Programma-2026-2030-concept-v1.pdf voeg de link toe aan het tekst bestand. Onthoud: ALLES MOET TRACEERBAAR zijn. werk ons promptlogboek ook steeds bij. Oh ja; maak de notitie EXPLICIET dat op het pdf dat je kunt downloaden van de site in de titel 'concept' staat. wel V1. maar laat de collega's daar notie van nemen. ze hebben best een uitgebreide gewone pagina met inhoud https://lokaalwassenaar.nl/?page_id=50 misschien moet je eerst de analyse doen of er verschil zit, inhoudelijk, tussen de pdf en de webpagina. Voer deze stappen in een logische volgorde uit."
+  </blockquote>
+  <p class="prompt-elementen"><strong>Belangrijke elementen:</strong> traceerbaarheid, PDF-link toevoegen, expliciete waarschuwing over "concept" in PDF-bestandsnaam, vergelijking PDF vs webpagina vóór aanpassingen, verslag bijwerken.</p>
+  <p class="prompt-actie"><strong>Actie (uitgevoerd in volgorde):</strong> (1) PDF gedownload en tekst geëxtraheerd voor vergelijking. (2) Webpagina opgehaald en inhoudelijk vergeleken met PDF. (3) Bevinding: PDF en webpagina komen inhoudelijk overeen; PDF is concept (v1); bevat extra kandidatenlijst. (4) Verkiezingsprogramma3LokaalWassenaar.txt bijgewerkt met beide bronlinks, expliciete concept-notitie voor collega's, en samenvatting van de PDF-vs-webpagina-analyse. (5) Dit verslag bijgewerkt.</p>
+
+  <h3>Prompt 7 – GroenLinks-PvdA: PDF analyseren en extraheren</h3>
+  <blockquote class="prompt-blockquote">
+    "glpvda; analyseer pdf en extraheer naar tekst."
+  </blockquote>
+  <p class="prompt-actie"><strong>Actie:</strong> PDF gedownload, tekst geëxtraheerd met pdf_naar_txt.py naar Verkiezingsprogramma4GroenLinksPvdA.txt (38.094 tekens). Bronvermelding en verificatielinks toegevoegd.</p>
+
+  <h3>Prompt 8 – CDA: PDF analyseren en extraheren</h3>
+  <blockquote class="prompt-blockquote">
+    "ok ik check = is ok . nu cda"
+  </blockquote>
+  <p class="prompt-actie"><strong>Actie:</strong> PDF gedownload, tekst geëxtraheerd naar Verkiezingsprogramma5CDA.txt (17.907 tekens). Parser parse_cda toegevoegd. Database en HTML opnieuw gegenereerd (70 CDA-standpunten).</p>
+
+  <h3>Prompt 9 – D66: PDF lokaal extraheren</h3>
+  <blockquote class="prompt-blockquote">
+    "super. nu d66 pdf staat in de map lokaal"
+  </blockquote>
+  <p class="prompt-actie"><strong>Actie:</strong> PDF lokaal. Tekst geëxtraheerd naar Verkiezingsprogramma6D66.txt (48.268 tekens). Parser parse_d66 toegevoegd. Database en HTML opnieuw gegenereerd (81 D66-standpunten).</p>
+
+  <h3>Prompt 10 – Democratische Liberalen Wassenaar: kopjes herstellen</h3>
+  <blockquote class="prompt-blockquote">
+    "top - bij de democratische LIBERALEN zie ik dat de kopjes zijn weggevallen"
+  </blockquote>
+  <p class="prompt-actie"><strong>Actie:</strong> Aparte parser parse_dlw toegevoegd die genummerde kopjes (1 EEN BETROUWBAAR..., 2 WONEN..., etc.) herkent en bullet points aan het juiste thema koppelt. DLW nu 13 thema's en 85 standpunten (was 1 thema). Database en HTML opnieuw gegenereerd.</p>
+
+  <h3>Prompt 11 – Forum voor Democratie: scrapen van website met submenus</h3>
+  <blockquote class="prompt-blockquote">
+    "mooi. fvd is lastig met submenus alleen op de website. kun jij die scrapen? https://fvd.nl/gemeentes/wassenaar"
+  </blockquote>
+  <p class="prompt-actie"><strong>Actie:</strong> Script scrape_fvd_wassenaar.py toegevoegd dat de Nuxt-payload uit de HTML parseert. Alle 10 hoofdstukken geëxtraheerd. Parser parse_fvd toegevoegd. FvD nu 10 thema's en 130 standpunten in de database.</p>
+
+  <h3>Prompt 12 – Volt: PDF lokaal extraheren</h3>
+  <blockquote class="prompt-blockquote">
+    "super. doe volt nu, ik check fvd" / "hij staat lokaal he"
+  </blockquote>
+  <p class="prompt-actie"><strong>Actie:</strong> Volt-PDF lokaal (verkiezingsprogramma-program-2026-volt-wassenaar.pdf). Tekst geëxtraheerd met pdf_naar_txt.py. Parser parse_volt toegevoegd. Volt nu 10 thema's en 50 standpunten in de database.</p>
+
+  <h3>Promptdocumentatie actueel houden</h3>
+  <p>De AI-assistent onthoudt prompts niet automatisch tussen sessies. <strong>Tip:</strong> maak aan het einde van elke sessie een vaste afsluiting, bijvoorbeeld: "Werk het verslag bij met de prompts van deze sessie." Of: "Zorg dat de promptgeschiedenis wordt bijgewerkt en als HTML beschikbaar is voor collega's." Dan blijft de promptdocumentatie up-to-date.</p>
+
+  <hr>
+
+  <h2>3. Werkwijze van de AI-assistent</h2>
+
+  <h3>Stap 1: Webpagina ophalen</h3>
+  <p>De assistent gebruikte een <strong>web fetch-tool</strong> om de inhoud van de URL op te halen. De tool haalt de pagina op en zet de HTML om naar leesbare tekst (Markdown-achtig formaat).</p>
+
+  <h3>Stap 2: Verkenning van de projectmap</h3>
+  <p>Er werd gekeken welke bestanden al in de projectmap stonden. Daarbij viel op dat er al een bestand <code>Verkiezingsprogramma_2-Hart voor Wassenaar.txt</code> was, maar dat dit onvolledig was (alleen kopjes en een deel van Financiën).</p>
+
+  <h3>Stap 3: Tekst opschonen en structureren</h3>
+  <p>De opgehaalde inhoud werd:</p>
+  <ul>
+    <li>Van HTML/Markdown omgezet naar platte tekst</li>
+    <li>Logisch gestructureerd met kopjes en scheidingslijnen</li>
+    <li>Voorzien van bronvermelding (URL en datum)</li>
+  </ul>
+
+  <h3>Stap 4: Bestand opslaan</h3>
+  <p>Het resultaat werd opgeslagen als <code>Verkiezingsprogramma2HartvoorWassenaar.txt</code> in de projectmap (na Prompt 3: hernoemd naar standaardstructuur).</p>
+
+  <h3>Stap 5: PDF naar tekst (voor programma's als PDF)</h3>
+  <p>Voor programma's die als PDF beschikbaar zijn (zoals VVD en GroenLinks-PvdA) wordt het Python-script <code>pdf_naar_txt.py</code> gebruikt. Het script ondersteunt PyMuPDF (fitz) voor snelle extractie. Gebruik:</p>
+  <pre>python pdf_naar_txt.py &lt;pdf-bestand&gt; [uitvoer-bestand]</pre>
+  <p>Bijvoorbeeld: <code>python pdf_naar_txt.py Verkiezingsprogramma4GroenLinksPvdA.pdf Verkiezingsprogramma4GroenLinksPvdA.txt</code></p>
+
+  <hr>
+
+  <h2>4. Gebruikte tools</h2>
+  <table>
+    <thead>
+      <tr><th>Tool</th><th>Doel</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Web fetch</strong></td><td>Ophalen van webpagina-inhoud via URL</td></tr>
+      <tr><td><strong>Glob/file search</strong></td><td>Zoeken naar bestaande bestanden in het project</td></tr>
+      <tr><td><strong>Read</strong></td><td>Bestaande bestanden lezen om duplicatie te voorkomen</td></tr>
+      <tr><td><strong>Write</strong></td><td>Nieuw tekstbestand aanmaken of bestaand bestand overschrijven</td></tr>
+      <tr><td><strong>pdf_naar_txt.py</strong></td><td>Tekst extraheren uit PDF-bestanden (PyMuPDF)</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2>5. Resultaat</h2>
+  <p><strong>Individuele bestanden</strong> (standaardnaamgeving):</p>
+  <ul>
+    <li><code>Verkiezingsprogramma1VVD.txt</code> – volledig (uit PDF)</li>
+    <li><code>Verkiezingsprogramma2HartvoorWassenaar.txt</code> – volledig</li>
+    <li><code>Verkiezingsprogramma3LokaalWassenaar.txt</code> – volledig</li>
+    <li><code>Verkiezingsprogramma4GroenLinksPvdA.txt</code> – volledig (uit PDF)</li>
+    <li><code>Verkiezingsprogramma5CDA.txt</code> – volledig</li>
+    <li><code>Verkiezingsprogramma7DemocratischeLiberalenWassenaar.txt</code> – volledig</li>
+    <li>Overige partijen: D66, DLW, FvD, Volt – zie gecombineerd bestand</li>
+  </ul>
+  <p><strong>Gecombineerd bestand:</strong> <code>Alle_verkiezingsprogrammas_gecombineerd.txt</code> bevat alle beschikbare programma's volledig en letterlijk in één bestand voor optimale performance en controleerbaarheid.</p>
+
+  <p><strong>Verificatie door collega's:</strong> In alle tekstbestanden en in <code>Gebruikte_verkiezingsprogrammas.txt</code> staan links naar de originele PDF's en websites op internet. Zo kunnen collega's de bronnen zelf controleren.</p>
+
+  <hr>
+
+  <h2>6. Tips voor collega's: hoe krijg je goede resultaten?</h2>
+
+  <h3 class="do-sectie">✅ Do's</h3>
+  <ol>
+    <li><strong>Geef context</strong> – Leg uit wat je wilt doen en waarom.</li>
+    <li><strong>Begin klein</strong> – Test eerst met één voorbeeld (zoals Hart voor Wassenaar).</li>
+    <li><strong>Geef de URL</strong> – Als je webinhoud wilt ophalen, vermeld de exacte URL.</li>
+    <li><strong>Specificeer het formaat</strong> – Bijvoorbeeld: "opslaan als .txt" of "als Markdown".</li>
+    <li><strong>Stel vervolgvragen</strong> – Vraag om hetzelfde voor andere partijen of om aanpassingen.</li>
+    <li><strong>Sluit af met:</strong> "Werk het verslag bij met de prompts van deze sessie."</li>
+  </ol>
+
+  <h3 class="dont-sectie">❌ Don'ts</h3>
+  <ol>
+    <li><strong>Niet te vaag</strong> – "Haal iets van internet" is minder effectief dan "Haal de standpunten van deze URL op".</li>
+    <li><strong>Niet te veel in één keer</strong> – Eerst één partij, daarna uitbreiden.</li>
+    <li><strong>Bron niet vergeten</strong> – Zonder URL kan de assistent de juiste pagina niet ophalen.</li>
+  </ol>
+
+  <hr>
+
+  <h2>7. Mogelijke vervolgstappen</h2>
+  <ul>
+    <li>Hetzelfde doen voor de overige partijen (als hun programma's online staan)</li>
+    <li>Vergelijkende analyse van thema's en standpunten</li>
+    <li>Samenvattingen per partij</li>
+    <li>Overzichtstabel: partij × thema × standpunt</li>
+  </ul>
+
+  <p class="footer">Dit verslag is opgesteld om de AI-workflow transparant te maken en collega's handvatten te geven voor vergelijkbare taken.</p>
+</body>
+</html>

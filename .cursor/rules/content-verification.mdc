@@ -1,0 +1,28 @@
+---
+description: Inhoudelijke verificatie van beleidsdocumenten en toelichtingen
+globs: app.js,**/BELEIDSNOTA*.md,**/VOORSTEL*.md
+alwaysApply: true
+---
+
+# Inhoudelijke verificatie beleidsdocumenten
+
+Bij het toevoegen of wijzigen van **toelichtingen, samenvattingen of contextteksten** bij strategische documenten (beleidsnota's, visies, verordeningen) moet altijd inhoudelijke verificatie plaatsvinden.
+
+## Controleprocedure
+
+1. **Raadpleeg de bron** — agenda iBabs, raadsbesluit, data.js besluittekst.
+2. **Controleer stemming** — was het stuk aangenomen, verworpen, of alleen ter kennisgeving?
+3. **Controleer relaties** — bijv. Eerste proeve vs. Startnotitie: wat is aangenomen, wat niet?
+4. **Formuleer nauwkeurig** — vermeld wat wél is vastgesteld; vermeld wat níet is aangenomen als dat relevant is.
+
+## Als verificatie NIET lukt
+
+- **Geef aan dat je het niet weet** — schrijf expliciet: "Niet kunnen verifiëren" of "Bron niet geraadpleegd".
+- **Vraag de lezer om zelf te onderzoeken** — bijv. "Controleer in iBabs of [agenda X] wat er is besloten."
+- **Ga nooit iets bedenken** — geen gokken, geen aannames, geen "waarschijnlijk" als feit presenteren.
+
+## Voorbeeld
+
+❌ **Fout:** Een toelichting schrijven zonder de agenda/besluit te controleren.  
+✅ **Goed:** Agenda ophalen, stemming controleren, pas dan de toelichting formuleren.  
+✅ **Goed (bij twijfel):** "De inhoud van dit besluit kon niet worden geverifieerd. Controleer zelf in [link naar iBabs-agenda]."

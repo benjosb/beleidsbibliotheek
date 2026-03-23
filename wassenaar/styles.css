@@ -1,5 +1,10 @@
-/* BeleidsWijzer Wassenaar — v4 dossier-first */
+/* BeleidsBibliotheek Wassenaar — v6 dossier-first */
 /* Design tokens van wassenaar.nl (openbare-documenten) */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 
 :root {
     --primary: #55601c;
@@ -27,6 +32,17 @@
     --thema-dienst:         #b3e5fc;
     --thema-openbare-ruimte:#a5d6a7;
     --thema-overig:         #e0e0e0;
+
+    /* BBV Iv3 hoofdstukkleuren — accent (donker), licht (achtergrond), lighter (hover) */
+    --bbv0: #1e3a5f; --bbv0-light: #e8eef5; --bbv0-lighter: #f4f7fb;
+    --bbv1: #b71c1c; --bbv1-light: #fce4e4; --bbv1-lighter: #fef0f0;
+    --bbv2: #00695c; --bbv2-light: #e0f2f1; --bbv2-lighter: #f1f9f8;
+    --bbv3: #6a1b9a; --bbv3-light: #f3e5f5; --bbv3-lighter: #faf2fc;
+    --bbv4: #e65100; --bbv4-light: #fff3e0; --bbv4-lighter: #fff8ee;
+    --bbv5: #2e7d32; --bbv5-light: #e8f5e9; --bbv5-lighter: #f1f8f2;
+    --bbv6: #ad1457; --bbv6-light: #fce4ec; --bbv6-lighter: #fef0f4;
+    --bbv7: #33691e; --bbv7-light: #f1f8e9; --bbv7-lighter: #f8fbf3;
+    --bbv8: #283593; --bbv8-light: #e8eaf6; --bbv8-lighter: #f1f2fa;
 }
 
 .footer-link-btn { background: none; border: none; padding: 0; font-size: inherit; color: rgba(255,255,255,0.9); cursor: pointer; text-decoration: underline; }
@@ -363,6 +379,15 @@ body {
 
 .hub-kaart-besluiten .hub-kaart-cta {
     color: var(--primary);
+}
+
+@media (max-width: 480px) {
+    .hub-kaarten {
+        grid-template-columns: 1fr;
+    }
+    .hub-kaart {
+        padding: 1.2rem 1.25rem;
+    }
 }
 
 /* ─── Zoekbalk (nu onder dossier-titel) ─── */
@@ -796,6 +821,16 @@ body.dossier-detail-open .dossier-overzicht {
     width: 30px;
     height: 30px;
     color: var(--wassenaar-donker);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dossier-icoon-wrap svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: var(--kaart-accent, var(--wassenaar-donker));
+    stroke-width: 1.6;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -1560,6 +1595,293 @@ body.toon-begroting .dossier-kaart-begroting {
     margin-bottom: 1.5rem;
 }
 
+/* ─── BBV-dossier: Iv3-nav links, OD-samenvatting + verdieping rechts ─── */
+.bbv-dossier-shell {
+    display: grid;
+    grid-template-columns: minmax(10.5rem, 14rem) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 0.75rem 1.25rem;
+    align-items: start;
+    margin-bottom: 1.5rem;
+}
+
+.bbv-tv-hint {
+    margin: 0 0 0.35rem;
+    padding: 0 0.55rem;
+    font-size: 0.7rem;
+    color: var(--gray-medium);
+    font-style: italic;
+}
+
+/* Iv3-taakveld navigatie (links in bbv-dossier-shell) */
+.bbv-taakveld-nav {
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0.5rem;
+}
+
+.bbv-taakveld-lijst {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.bbv-tv-item {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.3rem;
+    width: 100%;
+    margin: 0;
+    padding: 0.35rem 0.55rem;
+    text-align: left;
+    font: inherit;
+    font-size: 0.76rem;
+    line-height: 1.3;
+    color: var(--wassenaar-donker);
+    background: transparent;
+    border: none;
+    border-left: 3px solid var(--gray-light);
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.bbv-tv-item:hover,
+.bbv-tv-item:focus-visible {
+    background: var(--bbv-lighter, var(--gray-lighter));
+    border-left-color: var(--bbv-accent, var(--wassenaar-blue));
+    outline: none;
+}
+
+.bbv-tv-item:focus-visible {
+    box-shadow: inset 0 0 0 2px var(--bbv-accent, var(--wassenaar-blue));
+}
+
+.bbv-tv-item--actief {
+    background: var(--bbv-light, #e8eef5);
+    border-left-color: var(--bbv-accent, #1e3a5f);
+    font-weight: 600;
+    color: var(--bbv-accent, #1e3a5f);
+}
+
+.bbv-tv-code {
+    font-family: ui-monospace, monospace;
+    font-size: 0.68rem;
+    color: var(--gray-medium);
+    flex-shrink: 0;
+    min-width: 2.2em;
+}
+
+.bbv-tv-item--actief .bbv-tv-code {
+    color: var(--bbv-accent, #1e3a5f);
+}
+
+.bbv-tv-naam {
+    font-size: 0.73rem;
+    color: inherit;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Rechterkolom */
+.bbv-dossier-rechts {
+    min-width: 0;
+}
+
+.bbv-dossier-rechts .overdrachtsdossier-blok {
+    margin-top: 0;
+}
+
+/* Hoofdstuk-icoon + titel (boven de twee kolommen) */
+.bbv-hoofdstuk-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 2px solid var(--bbv-accent, var(--gray-light));
+    grid-column: 1 / -1;
+}
+
+.bbv-hoofdstuk-icoon {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bbv-light, #e8eef5);
+    border-radius: 6px;
+}
+
+.bbv-hoofdstuk-icoon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    stroke: var(--bbv-accent, #1e3a5f);
+    fill: none;
+    stroke-width: 2;
+}
+
+.bbv-hoofdstuk-ondertitel {
+    font-size: 0.82rem;
+    color: var(--gray-medium);
+    font-weight: 400;
+}
+
+/* Samenvatting-panel (eerste 2 alinea's OD) */
+.bbv-hoofdstuk-samenvatting {
+    margin-bottom: 1rem;
+    padding: 0.85rem 1rem;
+    background: var(--bbv-lighter, #f4f7fb);
+    border: 1px solid var(--bbv-light, var(--gray-light));
+    border-radius: 6px;
+    border-left: 4px solid var(--bbv-accent, var(--wassenaar-blue));
+}
+
+.bbv-panel-titel {
+    margin: 0 0 0.45rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--bbv-accent, var(--wassenaar-donker));
+}
+
+.bbv-hoofdstuk-samenvatting-inhoud {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--gray-dark);
+    max-width: 50em;
+}
+
+.bbv-hoofdstuk-samenvatting-inhoud p {
+    margin: 0 0 0.55rem;
+}
+
+.bbv-hoofdstuk-samenvatting-inhoud p:last-child {
+    margin-bottom: 0;
+}
+
+/* Geselecteerd taakveld — subtiel accent */
+.bbv-taakveld-context {
+    margin: 0 0 1rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--bbv-lighter, #f4f7fb);
+    border: 1px solid var(--bbv-light, #e0e0e0);
+    border-left: 3px solid var(--bbv-accent, #1e3a5f);
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.bbv-taakveld-context-kop {
+    margin: 0 0 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--bbv-accent, #1e3a5f);
+}
+
+.bbv-taakveld-context-tekst {
+    margin: 0 0 0.3rem;
+    line-height: 1.45;
+    color: var(--gray-dark);
+}
+
+.bbv-taakveld-context-hint {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--gray-medium);
+    font-style: italic;
+}
+
+/* ─── Responsive: mobiel ─── */
+@media (max-width: 800px) {
+    .bbv-dossier-shell {
+        grid-template-columns: 1fr;
+    }
+    .bbv-hoofdstuk-header {
+        grid-column: 1;
+    }
+    .bbv-taakveld-nav {
+        position: static;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .bbv-taakveld-lijst {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0;
+        padding-bottom: 0.3rem;
+    }
+    .bbv-tv-item {
+        flex-shrink: 0;
+        width: auto;
+        min-width: max-content;
+        border-left: none;
+        border-bottom: 2px solid var(--gray-light);
+        border-radius: 0;
+        padding: 0.4rem 0.6rem;
+        white-space: nowrap;
+    }
+    .bbv-tv-item--actief {
+        border-bottom-color: var(--bbv-accent, #1e3a5f);
+    }
+    .bbv-tv-item:hover {
+        border-bottom-color: var(--bbv-accent, var(--wassenaar-blue));
+    }
+}
+
+@media (max-width: 480px) {
+    .bbv-taakveld-lijst {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .bbv-tv-item {
+        width: 100%;
+        min-width: 0;
+        white-space: normal;
+        border-bottom: none;
+        border-left: 3px solid var(--gray-light);
+        border-radius: 0;
+    }
+    .bbv-tv-item--actief {
+        border-left-color: var(--bbv-accent, #1e3a5f);
+    }
+}
+
+/* ─── WCAG: reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+    .bbv-tv-item,
+    .sub-kaart,
+    .dossier-kaart {
+        transition: none !important;
+    }
+}
+
+/* Verdieping als details/summary */
+.overdrachtsdossier-blok--diep > summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.overdrachtsdossier-blok--diep > summary::-webkit-details-marker {
+    display: none;
+}
+
+.overdrachtsdossier-blok--diep > summary::before {
+    content: '▸ ';
+    color: var(--bbv-accent, var(--wassenaar-blue));
+    margin-right: 0.25rem;
+}
+
+.overdrachtsdossier-blok--diep[open] > summary::before {
+    content: '▾ ';
+}
+
 /* ─── Overdrachtsdossier-blok (BBV 6. Sociaal domein) ─── */
 .overdrachtsdossier-blok {
     margin: 1.75rem 0 2rem;
@@ -1667,6 +1989,18 @@ body.toon-begroting .dossier-kaart-begroting {
     gap: 0.6rem;
 }
 
+/* BBV Iv3-taakvelden: compactere tegels, meer kolommen op breed scherm */
+.sub-tegels-grid--bbv-taakvelden {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.45rem;
+}
+
+@media (max-width: 720px) {
+    .sub-tegels-grid--bbv-taakvelden {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 .sub-kaart {
     display: flex;
     flex-direction: column;
@@ -1734,6 +2068,38 @@ body.toon-begroting .dossier-kaart-begroting {
     font-weight: 600;
     font-size: 0.85rem;
     line-height: 1.25;
+}
+
+/* BBV-taakveld: alleen code + naam in de knop; uitleg via title (hover) */
+.sub-kaart-taakveld {
+    padding: 0.38rem 0.5rem;
+    gap: 0.15rem;
+    font-size: 0.78rem;
+    line-height: 1.2;
+    cursor: help;
+}
+
+.sub-kaart-taakveld .sub-kaart-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+}
+
+.sub-kaart-taakveld .sub-kaart-code {
+    font-size: 0.68rem;
+    margin-right: 0;
+}
+
+.sub-kaart-taakveld .sub-kaart-naam {
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 100%;
 }
 
 .sub-kaart-count {
@@ -1868,8 +2234,21 @@ body.toon-begroting .dossier-kaart-begroting {
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--gray-light);
     font-size: 0.95rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem 0.75rem;
 }
 .beleidsnota-item:last-child { border-bottom: none; }
+.beleidsnota-item-main {
+    flex: 1 1 65%;
+    min-width: 0;
+}
+.beleidsnota-item-acties {
+    flex: 0 0 auto;
+    align-self: center;
+}
 .beleidsnota-link {
     color: var(--wassenaar-blue);
     text-decoration: none;
@@ -1894,6 +2273,51 @@ body.toon-begroting .dossier-kaart-begroting {
     color: var(--gray-medium);
     font-style: italic;
     line-height: 1.4;
+}
+
+/* Bijdrage badge — goedgekeurd voorstel van een bezoeker */
+.beleidsnota-item--bijdrage {
+    background: rgba(5, 150, 105, 0.06);
+    margin: 0 -0.35rem;
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+    border-radius: 6px;
+    border-bottom-color: rgba(5, 150, 105, 0.2);
+}
+.beleidsnota-badge-bijdrage {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #047857;
+    background: rgba(16, 185, 129, 0.25);
+    border: 1px solid rgba(5, 150, 105, 0.4);
+    padding: 0.2em 0.45em;
+    border-radius: 4px;
+    margin-right: 0.45rem;
+    vertical-align: middle;
+}
+.beleidsnota-type--bijdrage {
+    background: rgba(16, 185, 129, 0.15);
+    color: #047857;
+}
+.bn-btn-accept {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+    border: 1px solid #059669;
+    background: #fff;
+    color: #047857;
+    font-weight: 600;
+    cursor: pointer;
+}
+.bn-btn-accept:hover {
+    background: rgba(5, 150, 105, 0.12);
+}
+.bn-modal-actions--stack {
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .samenvatting-per-thema-blok {
@@ -2010,6 +2434,10 @@ body.toon-begroting .dossier-kaart-begroting {
         grid-template-columns: 1fr;
         gap: 0.4rem;
     }
+    /* BBV-taakvelden: liever 2 smalle kolommen dan één zeer hoge kolom */
+    .sub-tegels-grid.sub-tegels-grid--bbv-taakvelden {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 600px) {
@@ -2040,6 +2468,15 @@ body.toon-begroting .dossier-kaart-begroting {
 
 .site-footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .site-footer .container > p {
+        line-height: 1.55;
+        padding: 0 0.35rem;
+        hyphens: auto;
+        word-break: break-word;
+    }
 }
 
 .footer-contact {
@@ -2458,9 +2895,23 @@ body.review-mode .review-mode-toggle {
     .header-zoek-inner {
         max-width: none;
     }
+    .header-zoek-inner input {
+        font-size: 1rem;
+    }
+    .header-zoek-inner button {
+        font-size: 0.9rem;
+        padding: 0.55rem 1rem;
+    }
+    .site-nav-inner {
+        flex-wrap: wrap;
+        row-gap: 0.15rem;
+    }
     .site-nav-link {
-        padding: 0.5rem 0.9rem;
+        padding: 0.55rem 0.85rem;
         font-size: 0.88rem;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
     }
     .site-logo {
         height: 36px;
@@ -2525,6 +2976,11 @@ body.review-mode .review-mode-toggle {
 @media (pointer: coarse) {
     .dossier-kaart {
         min-height: 48px;
+    }
+    .site-footer .footer-link-btn {
+        min-height: 44px;
+        padding: 0.45rem 0.5rem;
+        box-sizing: border-box;
     }
     .overzicht-zoek input {
         padding: 0.65rem 0.85rem;
@@ -2788,4 +3244,139 @@ body.review-mode .review-mode-toggle {
     .kw-card-value {
         font-size: 1.3rem;
     }
+}
+
+/* ─── BBV: Beleidsnota toevoegen (mutatieformulier) ─── */
+.beleidsnota-tools {
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.beleidsnota-add-context {
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+    font-weight: 500;
+}
+
+.bn-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 10000;
+}
+
+.bn-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bn-modal-card {
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    padding: 1rem 1.1rem 1.1rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.22);
+}
+
+.bn-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.bn-modal-header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--wassenaar-donker);
+}
+
+.bn-modal-close {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.1rem 0.35rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--gray-medium);
+}
+
+.bn-modal-close:hover {
+    background: var(--gray-lighter);
+    color: var(--wassenaar-donker);
+}
+
+.bn-modal-context {
+    margin: 0.6rem 0 0.9rem;
+    color: var(--gray-medium);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.bn-modal-form label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--gray-dark);
+    margin-top: 0.75rem;
+}
+
+.bn-modal-form input,
+.bn-modal-form textarea {
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.55rem 0.65rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--gray-dark);
+}
+
+.bn-modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.bn-btn-primary {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 0.95rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.bn-btn-primary:hover {
+    background: #6b7a24;
+}
+
+.bn-modal-hint {
+    font-size: 0.88rem;
+    color: var(--gray-medium);
+    line-height: 1.45;
+}
+.bn-modal-status {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+}
+
+@media (max-width: 480px) {
+    .beleidsnota-tools { gap: 0.5rem; }
+    .bn-modal-card { padding: 0.9rem; }
 }

@@ -309,7 +309,7 @@ def main():
 
     <footer class="site-footer" role="contentinfo">
         <div class="container">
-            <p>Besluit-Wijzer Wassenaar · Versie 5.3.0 (maart 2026) · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a> · <a href="index.html" class="footer-link-btn">Terug naar BeleidsBibliotheek</a> · <button type="button" id="disclaimerLink" class="footer-link-btn">Disclaimer</button></p>
+            <p>BeleidsBibliotheek Wassenaar · Versie 6.0.0 (maart 2026) · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a> · <a href="index.html" class="footer-link-btn">Terug naar BeleidsBibliotheek</a> · <button type="button" id="disclaimerLink" class="footer-link-btn">Disclaimer</button></p>
             <p class="footer-contact">Contact: Dick Braam · Eenheid Informatie en Datamanagement</p>
         </div>
     </footer>

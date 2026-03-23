@@ -130,6 +130,10 @@ cd beleidsbibliotheek-wassenaar
 # Open index.html in de browser
 ```
 
+## Documentatie (operatie & compliance)
+
+- **`docs/ACCEPTATIE_TEST_EN_BACKOFFICE_CISO.md`** — acceptatietestchecklist, uitleg voor backoffice en samenvatting voor CISO (website + API + e-mailketen).
+
 ## Disclaimer
 
 De data is door AI in samenhang gebracht. Gebruikers zijn zelf verantwoordelijk voor het toetsen van informatie in de originele documenten.

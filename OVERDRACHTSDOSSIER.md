@@ -12,19 +12,22 @@ De volgende onderdelen zijn **niet meer via het menu bereikbaar** (besluit 25 fe
 |------|---------|-------|
 | **Roadmap** | `wassenaar/roadmap.html` | Eerst 1-op-1 met opdrachtgever bespreken |
 | **Verbeterpunten** | `wassenaar/verbeterpunten-beheer.html` | Idem |
+| **Schrijf-Wijzer** | `wassenaar/schrijf-wijzer/schrijf-wijzer-formulier.html` | Tijdelijk verborgen |
 
 ### Directe URLs (voor intern gebruik)
 
 - Roadmap: `wassenaar/roadmap.html`
 - Verbeterpunten: `wassenaar/verbeterpunten-beheer.html`
+- Schrijf-Wijzer: `wassenaar/schrijf-wijzer/schrijf-wijzer-formulier.html`
 
 ### Weer zichtbaar maken
 
-In `wassenaar/index.html` (en eventueel roadmap.html, verbeterpunten-beheer.html, schrijf-wijzer-formulier.html) de menu-links weer toevoegen:
+In `wassenaar/index.html` (en roadmap.html, verbeterpunten-beheer.html, schrijf-wijzer-formulier.html) de menu-links weer toevoegen:
 
 ```html
 <a href="roadmap.html" class="overzicht-tab">Roadmap</a>
 <a href="verbeterpunten-beheer.html" class="overzicht-tab">Verbeterpunten</a>
+<a href="schrijf-wijzer/schrijf-wijzer-formulier.html" class="overzicht-tab">Schrijfwijzer (beta)</a>
 ```
 
 ---

@@ -1,10 +1,17 @@
-// Besluit-Wijzer Wassenaar v4 — dossier-first
+// BeleidsBibliotheek Wassenaar v6.0 — dossier-first
 
 // ─── Versiebeheer ───
 
+/** Eerste semver-token uit badgetekst, e.g. "6.0.0 (maart 2026)" → "6.0.0" */
+function versieNummerUitBadge(txt) {
+    const m = (txt || '').trim().match(/^([\d.]+)/);
+    return m ? m[1] : (txt || '').trim();
+}
+
 const VERSIE_MENU = [
-    { versie: '6.0.0', naam: 'Publish-after-approval', beschrijving: 'Briefings pas zichtbaar na goedkeuring beleidsadviseur', url: 'index_v6_verificatie.html' },
-    { versie: '5.1.0', naam: 'Dossier-first', beschrijving: 'Modulaire opzet met beleidsdossiers, briefings en coalitieakkoord', url: 'index_v4_modulair.html' },
+    { versie: '6.0.0', naam: 'BeleidsBibliotheek', beschrijving: 'Huidige productie: dossiers, BBV, briefings, coalitieakkoord', url: 'index.html' },
+    { versie: '6.0-lab', naam: 'Publish-after-approval', beschrijving: 'Experimenteel: briefings pas zichtbaar na goedkeuring', url: 'index_v6_verificatie.html' },
+    { versie: '5.1.0', naam: 'Dossier-first (archief)', beschrijving: 'Oudere modulaire build', url: 'index_v4_modulair.html' },
     { versie: '3.0',   naam: 'Alles-in-één', beschrijving: 'Complete dataset in één HTML-bestand (457 KB)', url: 'index_v3_alles_in_een.html' },
     { versie: '2.0',   naam: 'Verbeterd', beschrijving: 'Verbeterde layout en zoekfunctie', url: 'index_v2.html' },
     { versie: '1.0',   naam: 'Prototype', beschrijving: 'Eerste werkende prototype', url: 'index_v1.html' },
@@ -37,7 +44,7 @@ function toonVersieMenu(huidigeVersie) {
     overlay.className = 'versie-overlay';
 
     const items = VERSIE_MENU.map(v => {
-        const actief = v.versie === huidigeVersie;
+        const actief = v.versie === versieNummerUitBadge(huidigeVersie);
         return `
             <a href="${v.url}" class="versie-item ${actief ? 'versie-actief' : ''}">
                 <div class="versie-item-header">
@@ -52,11 +59,11 @@ function toonVersieMenu(huidigeVersie) {
     overlay.innerHTML = `
         <div class="versie-panel">
             <div class="versie-panel-kop">
-                <span class="versie-panel-titel">Besluit-Wijzer — versies</span>
+                <span class="versie-panel-titel">BeleidsBibliotheek — versies</span>
                 <button type="button" class="versie-sluit" aria-label="Sluiten">&times;</button>
             </div>
             <div class="versie-lijst">${items}</div>
-            <p class="versie-hint">Tip: dubbelklik op het versienummer voor begrotingsweergave</p>
+            <p class="versie-hint">Tip: lang indrukken op het versienummer toont oudere builds; dubbelklik voor begrotingsweergave</p>
         </div>`;
 
     document.body.appendChild(overlay);
@@ -276,74 +283,74 @@ const BBV_HOOFDTAAKVELDEN = {
     8: "8. Volkshuisvesting, leefomgeving en stedelijke vernieuwing",
 };
 
-// Sub-taakvelden per hoofdstuk (Findo.nl / Iv3)
+// Sub-taakvelden per hoofdstuk (Iv3 / BBV — zie https://findo.nl/content/taakvelden-gemeenten )
+// `omschrijving` = beknopte toelichting welke baten/lasten hier landen (niet ter vervanging van officiële Iv3-handleiding).
 const BBV_TAAKVELDEN_PER_HOOFDSTUK = {
     0: [
-        { code: '0.1', naam: 'Bestuur' },
-        { code: 'Subsidiebeleid', naam: 'Subsidiebeleid' },
-        { code: '0.2', naam: 'Burgerzaken' },
-        { code: '0.3', naam: 'Beheer overige gebouwen en gronden' },
-        { code: '0.4', naam: 'Overhead' },
-        { code: '0.5', naam: 'Treasury' },
-        { code: '0.61', naam: 'OZB woningen' },
-        { code: '0.62', naam: 'OZB niet-woningen' },
-        { code: '0.63', naam: 'Parkeerbelasting' },
-        { code: '0.64', naam: 'Belastingen overig' },
-        { code: '0.7', naam: 'Algemene uitkering en overige uitkeringen gemeentefonds' },
-        { code: '0.8', naam: 'Overige baten en lasten' },
-        { code: '0.9', naam: 'Vennootschapsbelasting (VpB)' },
-        { code: '0.10', naam: 'Mutaties reserves' },
-        { code: '0.11', naam: 'Resultaat van de rekening van baten en lasten' },
+        { code: '0.1', naam: 'Bestuur', omschrijving: 'Democratisch bestuur en ambtelijke ondersteuning: college, raad, griffie, burgemeester, democratie.' },
+        { code: '0.2', naam: 'Burgerzaken', omschrijving: 'Dienstverlening aan burgers: burgerlijke stand, reisdocumenten, basisregistratie (BRP-keten).' },
+        { code: '0.3', naam: 'Beheer overige gebouwen en gronden', omschrijving: 'Beheer en onderhoud van gemeentelijke panden en gronden (niet onderwijs- of woningbouw).' },
+        { code: '0.4', naam: 'Overhead', omschrijving: 'Interne bedrijfsvoering: stafdiensten, ICT, huisvesting ambtelijk apparaat, algemene bedrijfskosten.' },
+        { code: '0.5', naam: 'Treasury', omschrijving: 'Liquiditeitsbeheer, kasstromen, leningen en beleggingen (treasuryfunctie).' },
+        { code: '0.61', naam: 'OZB woningen', omschrijving: 'Onroerendezaakbelasting op woningen.' },
+        { code: '0.62', naam: 'OZB niet-woningen', omschrijving: 'OZB op niet-woningen (bedrijven, instellingen).' },
+        { code: '0.63', naam: 'Parkeerbelasting', omschrijving: 'Parkeer- en stilstaanbelasting.' },
+        { code: '0.64', naam: 'Belastingen overig', omschrijving: 'Overige heffingen en retributies (niet OZB of parkeerbelasting), bv. precario, leges, toeristenbelasting.' },
+        { code: '0.7', naam: 'Algemene uitkering en overige uitkeringen gemeentefonds', omschrijving: 'Middelen uit het gemeentefonds: algemene uitkering en overige uitkeringen.' },
+        { code: '0.8', naam: 'Overige baten en lasten', omschrijving: 'Baten en lasten die niet onder een ander taakveld vallen.' },
+        { code: '0.9', naam: 'Vennootschapsbelasting (VpB)', omschrijving: 'VpB over gemeentelijke rechtspersonen (bv. nv, bv).' },
+        { code: '0.10', naam: 'Mutaties reserves', omschrijving: 'Toevoegingen aan en onttrekkingen uit reserves en voorzieningen.' },
+        { code: '0.11', naam: 'Resultaat van de rekening van baten en lasten', omschrijving: 'Saldo op de rekening van baten en lasten (tekort/overschot).' },
     ],
     1: [
-        { code: '1.1', naam: 'Crisisbeheersing en brandweer' },
-        { code: '1.2', naam: 'Openbare orde en veiligheid' },
+        { code: '1.1', naam: 'Crisisbeheersing en brandweer', omschrijving: 'Brandweer, crisisbeheersing, rampenbestrijding (incl. VRH-samenwerking).' },
+        { code: '1.2', naam: 'Openbare orde en veiligheid', omschrijving: 'Openbare orde, handhaving, integrale veiligheid (niet brandweer).' },
     ],
     2: [
-        { code: '2.1', naam: 'Verkeer en vervoer' },
-        { code: '2.2', naam: 'Parkeren' },
-        { code: '2.3', naam: 'Recreatieve havens' },
-        { code: '2.4', naam: 'Economische havens en waterwegen' },
-        { code: '2.5', naam: 'Openbaar vervoer' },
+        { code: '2.1', naam: 'Verkeer en vervoer', omschrijving: 'Wegen, verkeersveiligheid, verkeersmaatregelen (excl. openbaar vervoer).' },
+        { code: '2.2', naam: 'Parkeren', omschrijving: 'Parkeerbeleid en parkeervoorzieningen (niet de parkeerbelasting zelf — die zit onder 0.63).' },
+        { code: '2.3', naam: 'Recreatieve havens', omschrijving: 'Havens en aanleg met vooral recreatieve functie.' },
+        { code: '2.4', naam: 'Economische havens en waterwegen', omschrijving: 'Bedrijfshavens en economisch gebruik van waterwegen.' },
+        { code: '2.5', naam: 'Openbaar vervoer', omschrijving: 'OV-concessies en gemeentelijke bijdragen aan openbaar vervoer.' },
     ],
     3: [
-        { code: '3.1', naam: 'Economische ontwikkeling' },
-        { code: '3.2', naam: 'Fysieke bedrijfsinfrastructuur' },
-        { code: '3.3', naam: 'Bedrijvenloket en bedrijfsregelingen' },
-        { code: '3.4', naam: 'Economische promotie' },
+        { code: '3.1', naam: 'Economische ontwikkeling', omschrijving: 'Werkgelegenheid, bedrijventerreinen, bedrijfsvestiging en economische structuur.' },
+        { code: '3.2', naam: 'Fysieke bedrijfsinfrastructuur', omschrijving: 'Kabels, leidingen, bedrijventerreinen en fysieke bedrijfsvoorzieningen.' },
+        { code: '3.3', naam: 'Bedrijvenloket en bedrijfsregelingen', omschrijving: 'Vergunningen, ondernemersloket en regelingen voor bedrijven.' },
+        { code: '3.4', naam: 'Economische promotie', omschrijving: 'Promotie, toerisme, winkel- en centrumbeleid, acquisitie.' },
     ],
     4: [
-        { code: '4.1', naam: 'Openbaar basisonderwijs' },
-        { code: '4.2', naam: 'Onderwijshuisvesting' },
-        { code: '4.3', naam: 'Onderwijsbeleid en leerlingzaken' },
+        { code: '4.1', naam: 'Openbaar basisonderwijs', omschrijving: 'Primair onderwijs en gemeentelijke rol in openbaar onderwijs.' },
+        { code: '4.2', naam: 'Onderwijshuisvesting', omschrijving: 'Gebouwen en huisvesting voor onderwijs en peuteropvang (incl. investeringen).' },
+        { code: '4.3', naam: 'Onderwijsbeleid en leerlingzaken', omschrijving: 'Leerplicht, leerlingenvervoer, onderwijsbeleid en leerlingondersteuning.' },
     ],
     5: [
-        { code: '5.1', naam: 'Sportbeleid en activering' },
-        { code: '5.2', naam: 'Sportaccommodaties' },
-        { code: '5.3', naam: 'Cultuurpresentatie, cultuurproductie en cultuurparticipatie' },
-        { code: '5.4', naam: 'Musea' },
-        { code: '5.5', naam: 'Cultureel erfgoed' },
-        { code: '5.6', naam: 'Media' },
-        { code: '5.7', naam: 'Openbaar groen en (openlucht) recreatie' },
+        { code: '5.1', naam: 'Sportbeleid en activering', omschrijving: 'Sportbeleid, subsidies en programma’s (niet de accommodaties zelf).' },
+        { code: '5.2', naam: 'Sportaccommodaties', omschrijving: 'Sporthallen, velden, zwembaden en overige sportaccommodaties.' },
+        { code: '5.3', naam: 'Cultuurpresentatie, cultuurproductie en cultuurparticipatie', omschrijving: 'Podia, cultuurprogramma’s en cultuurparticipatie (niet musea).' },
+        { code: '5.4', naam: 'Musea', omschrijving: 'Musea, collecties en tentoonstellingen.' },
+        { code: '5.5', naam: 'Cultureel erfgoed', omschrijving: 'Monumenten, archeologie en beheer van cultureel erfgoed.' },
+        { code: '5.6', naam: 'Media', omschrijving: 'Lokale publieke omroep en media-informatievoorziening.' },
+        { code: '5.7', naam: 'Openbaar groen en (openlucht) recreatie', omschrijving: 'Parken, plantsoenen, bos en openluchtrecreatie.' },
     ],
     6: [
-        { code: '6.1', naam: 'Samenkracht en burgerparticipatie' },
-        { code: '6.2', naam: 'Toegang eerste lijns' },
-        { code: '6.3 - 6.5', naam: 'Werk en inkomen' },
-        { code: '6.60 - 6.91', naam: 'WMO' },
-        { code: '6.7 - 6.9', naam: 'Jeugd' },
+        { code: '6.1', naam: 'Samenkracht en burgerparticipatie', omschrijving: 'Participatie, wijkinitiatieven en sociale samenhang (Iv3: samenkracht).' },
+        { code: '6.2', naam: 'Toegang eerste lijns', omschrijving: 'Cluster Iv3 6.21–6.23: toegang en eerstelijnsvoorzieningen Wmo, jeugd en integraal.' },
+        { code: '6.3 - 6.5', naam: 'Werk en inkomen', omschrijving: 'Cluster: inkomensregelingen, WSW, beschut werk en arbeidsparticipatie (6.3 t/m 6.5).' },
+        { code: '6.60 - 6.91', naam: 'WMO', omschrijving: 'Cluster: maatwerkarrangementen, hulp, beschermd wonen en coördinatie Wmo (Iv3-codes 6.60 e.v.).' },
+        { code: '6.7 - 6.9', naam: 'Jeugd', omschrijving: 'Cluster: jeugdhulp, jeugdbescherming, jeugdreclassering en coördinatie jeugd (Iv3 6.7x e.v.).' },
     ],
     7: [
-        { code: '7.1', naam: 'Volksgezondheid' },
-        { code: '7.2', naam: 'Riolering' },
-        { code: '7.3', naam: 'Afval' },
-        { code: '7.4', naam: 'Milieubeheer' },
-        { code: '7.5', naam: 'Begraafplaatsen en crematoria' },
+        { code: '7.1', naam: 'Volksgezondheid', omschrijving: 'GGD, publieke gezondheid, infectieziektebestrijding en gezondheidsbeleid.' },
+        { code: '7.2', naam: 'Riolering', omschrijving: 'Rioolwaterzuivering, rioolbeheer en waterketen (riolering).' },
+        { code: '7.3', naam: 'Afval', omschrijving: 'Inzameling, verwerking en beleid rond afvalstoffen.' },
+        { code: '7.4', naam: 'Milieubeheer', omschrijving: 'Milieubeleid, bodem, geluid, lucht en milieuvergunningen (niet afval/riool).' },
+        { code: '7.5', naam: 'Begraafplaatsen en crematoria', omschrijving: 'Begraafplaatsen, crematorium en uitvaartvoorzieningen.' },
     ],
     8: [
-        { code: '8.1', naam: 'Ruimte en leefomgeving' },
-        { code: '8.2', naam: 'Grondexploitatie (niet-bedrijventerreinen)' },
-        { code: '8.3', naam: 'Wonen en bouwen' },
+        { code: '8.1', naam: 'Ruimte en leefomgeving', omschrijving: 'Ruimtelijke ordening, bestemmingsplannen, leefomgeving en fysieke kwaliteit.' },
+        { code: '8.2', naam: 'Grondexploitatie (niet-bedrijventerreinen)', omschrijving: 'Grondposities en exploitatie voor woningbouw en niet-bedrijventerreinen.' },
+        { code: '8.3', naam: 'Wonen en bouwen', omschrijving: 'Woningbouw, volkshuisvesting en stedelijke vernieuwing.' },
     ],
 };
 const PORTEFEUILLE_NAAR_BBV = {
@@ -364,6 +371,54 @@ const THEMA_ICONEN = {
     'Bedrijfsvoering': '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>'
 };
 const BBV_ICON = '<svg class="dossier-icoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>';
+
+const BBV_HOOFDSTUK_META = {
+    0: {
+        kleur: { accent: '#1e3a5f', light: '#e8eef5', lighter: '#f4f7fb' },
+        icoon: '<svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><rect x="9" y="13" width="6" height="8"/><path d="M9 9h2v2H9zM13 9h2v2h-2z"/></svg>',
+        ondertitel: 'Gemeentebestuur, burgerzaken, financiën, belastingen en overhead',
+    },
+    1: {
+        kleur: { accent: '#b71c1c', light: '#fce4e4', lighter: '#fef0f0' },
+        icoon: '<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>',
+        ondertitel: 'Openbare orde, brandweer en crisisbeheersing',
+    },
+    2: {
+        kleur: { accent: '#00695c', light: '#e0f2f1', lighter: '#f1f9f8' },
+        icoon: '<svg viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17h2M15 17h2M9 17h6M4 12h16M7 12V8l5-3 5 3v4"/></svg>',
+        ondertitel: 'Wegen, verkeer, parkeren en openbaar vervoer',
+    },
+    3: {
+        kleur: { accent: '#6a1b9a', light: '#f3e5f5', lighter: '#faf2fc' },
+        icoon: '<svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>',
+        ondertitel: 'Economische ontwikkeling, promotie en bedrijventerreinen',
+    },
+    4: {
+        kleur: { accent: '#e65100', light: '#fff3e0', lighter: '#fff8ee' },
+        icoon: '<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>',
+        ondertitel: 'Basisonderwijs, huisvesting en leerlingenbeleid',
+    },
+    5: {
+        kleur: { accent: '#2e7d32', light: '#e8f5e9', lighter: '#f1f8f2' },
+        icoon: '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M8 18h8"/><path d="M7.5 5.5l-2-2M16.5 5.5l2-2"/></svg>',
+        ondertitel: 'Sport, cultuur, erfgoed en recreatie',
+    },
+    6: {
+        kleur: { accent: '#ad1457', light: '#fce4ec', lighter: '#fef0f4' },
+        icoon: '<svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>',
+        ondertitel: 'Wmo, jeugdhulp, participatie en schuldhulpverlening',
+    },
+    7: {
+        kleur: { accent: '#33691e', light: '#f1f8e9', lighter: '#f8fbf3' },
+        icoon: '<svg viewBox="0 0 24 24"><path d="M12 22c-4 0-8-2-8-6 0-3 2-5 4-6s4-4 4-8c0 4 2 7 4 8s4 3 4 6c0 4-4 6-8 6z"/><path d="M12 22v-7"/></svg>',
+        ondertitel: 'GGD, riolering, afval en milieubeheer',
+    },
+    8: {
+        kleur: { accent: '#283593', light: '#e8eaf6', lighter: '#f1f2fa' },
+        icoon: '<svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10l8-7 8 7v11"/><rect x="9" y="14" width="6" height="7"/><rect x="10" y="8" width="4" height="3" rx="0.5"/></svg>',
+        ondertitel: 'Woningbouw, ruimtelijke ordening en stedelijke vernieuwing',
+    },
+};
 
 // Beleidssamenvatting per thema (binnen portefeuille) — Cultuur & Welzijn, Bestuur & Veiligheid, etc.
 const SAMENVATTING_PER_THEMA = {
@@ -671,15 +726,17 @@ const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
         },
         {
             naam: 'Beleidsregels milieuzonering (uitwerking Omgevingswet)',
-            link: null,
+            datum: '2024-09-16',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/bfa224c5-fa50-4bb5-a8d6-5fa7824fe588?agendaItemId=eb7a24cf-8c2b-411b-a7d9-ba80d8293dc6',
             type: 'Beleidsregels',
-            toelichting: 'Collegebesluit — genoemd in briefing Ruimte & Omgevingswet; exact document in iBabs zoeken.'
+            toelichting: 'Raadsbesluit 16 sep 2024; vastgesteld als Beleidsregels Milieuzonering Richtafstanden Wassenaar 2024.'
         },
         {
             naam: 'Nota hogere waarden verkeerslawaai (uitwerking Omgevingswet)',
-            link: null,
+            datum: '2024-09-16',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9702fdf6-75c5-4207-be22-6246d4aba4ce?agendaItemId=4f6181b7-d8f7-4e1c-8cbf-82f4f9b84a6d',
             type: 'Beleidsnota',
-            toelichting: 'Collegebesluit — genoemd in briefing Ruimte & Omgevingswet; exact document in iBabs zoeken.'
+            toelichting: 'Raadsbesluit 16 sep 2024; vastgesteld als Nota Hogere Waarden Wegverkeerslawaai Wassenaar 2024.'
         },
         {
             naam: 'Informatiebrief financiën invoering Omgevingswet',
@@ -696,9 +753,10 @@ const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
         // ─── Programma Noordrand / Groene Zone ───
         {
             naam: 'Programma Noordrand (uitvoeringsprogramma Groene Zone)',
-            link: null,
+            datum: '2024-11-28',
+            link: 'https://zoek.officielebekendmakingen.nl/gmb-2024-498607.html',
             type: 'Gebiedsprogramma',
-            toelichting: 'OD: college heeft Programma Noordrand in 2025 vastgesteld; participatietraject 2023–2024; sluit aan bij werkwijze Omgevingswet. Definitief stuk: iBabs.'
+            toelichting: 'Bekendmaking ontwerpprogramma Noordrand (nov 2024). College heeft definitief programma in 2025 vastgesteld na participatietraject 2023–2024.'
         },
         {
             naam: 'Wensen en bedenkingen Concept-Programma Noordrand',
@@ -730,9 +788,10 @@ const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
         },
         {
             naam: 'Samenhangende aanpak versterking dorpskern Wassenaar',
-            link: null,
+            datum: '2023-12-19',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9b3eec18-9f83-45d0-9cbf-610e3f0049ea?agendaItemId=da0b1ced-bff4-4f28-9acb-5a40134b9fbf',
             type: 'Beleidsbesluit',
-            toelichting: 'OD/CUP: vier pilaren; planologische ruimte winkels→wonen in toekomstig Omgevingsplan; beeldkwaliteitsplan / stedenbouwkundig plan dorpskern.'
+            toelichting: 'Raadsbesluit 19 dec 2023; vier pilaren: herinrichting, leegstand, winkels→wonen, parkeren. Aanvullend investeringskrediet vastgesteld.'
         },
         // ─── Wonen & huisvesting ───
         {
@@ -772,9 +831,10 @@ const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
         // ─── Beheer openbare ruimte ───
         {
             naam: 'Beheervisie Openbare Ruimte 2024–2028',
-            link: null,
+            datum: '2023-09-19',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/eacc1bd6-189f-47ee-bbb6-412c644c903e?agendaItemId=67f7fcd0-4f59-4473-98a9-b4c38f703d0a',
             type: 'Beheervisie',
-            toelichting: 'OD: kader beheer OR + uitvoeringsprogramma; college/raadsinformatie — zoek volledige PDF op wassenaar.nl of iBabs.'
+            toelichting: 'Raadsbesluit 19 sep 2023; kader beheer openbare ruimte + uitvoeringsprogramma 2024–2028.'
         },
         // ─── Erfgoed & evenementen → Omgevingsvisie ───
         {
@@ -791,9 +851,10 @@ const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
         },
         {
             naam: 'Evenementenbeleid — uitwerking in Omgevingsvisie',
-            link: null,
+            datum: '2022-11-08',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/41bea0f9-90bc-4b22-bf83-872bb713f1f8?agendaItemId=ba853240-d91a-4345-84b9-ebc526f38471',
             type: 'Beleid',
-            toelichting: 'Startnotitie Evenementenbeleid raad 2021; uitwerking volgens OD in Omgevingsvisie.'
+            toelichting: 'Startnotitie Evenementenbeleid vastgesteld door raad (nov 2022); uitwerking volgens OD in Omgevingsvisie.'
         },
         // ─── Project / instrument Omgevingswet ───
         {
@@ -805,9 +866,9 @@ const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
         {
             naam: 'Vijfde wijziging gemeenschappelijke regeling Omgevingsdienst Haaglanden',
             datum: '2025-12-16',
-            link: null,
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42',
             type: 'GR-wijziging',
-            toelichting: 'Raad dec 2025 (briefing); exacte iBabs-link niet in deze set — controleer agenda.'
+            toelichting: 'Raadsbesluit 16 dec 2025; toestemming college voor vijfde wijziging GR Omgevingsdienst Haaglanden.'
         }
     ]
 };
@@ -926,7 +987,8 @@ function renderDossierKaarten(tree) {
         const naam = item.naam;
         const count = isBBV ? (counts[item.bbvIndex] || 0) : (counts[naam] || 0);
         const preview = isBBV ? '' : (previewCache[naam] || '');
-        const icoon = isBBV ? BBV_ICON : (THEMA_ICONEN[naam] || '');
+        const bbvMeta = isBBV ? (BBV_HOOFDSTUK_META[item.bbvIndex] || {}) : {};
+        const icoon = isBBV ? (bbvMeta.icoon ? `<span class="dossier-icoon-wrap">${bbvMeta.icoon}</span>` : BBV_ICON) : (THEMA_ICONEN[naam] || '');
         const begr = !isBBV && BEGROTING_DATA[naam];
         const begrHtml = begr ? `
             <div class="dossier-kaart-begroting">
@@ -939,6 +1001,10 @@ function renderDossierKaarten(tree) {
         kaart.type = 'button';
         kaart.className = 'dossier-kaart';
         kaart.setAttribute('data-thema', naam);
+        if (isBBV && bbvMeta.kleur) {
+            kaart.style.setProperty('--kaart-accent', bbvMeta.kleur.accent);
+            kaart.style.borderLeftColor = bbvMeta.kleur.accent;
+        }
 
         kaart.innerHTML = `
             <div class="dossier-kaart-header">
@@ -1005,23 +1071,54 @@ function openDossier(thema, subFilter) {
 
     showView('dossier');
 
-    document.getElementById('dossierTitel').textContent = thema;
+    const bbvShell = document.getElementById('bbvDossierShell');
+    const subTegelsPortefeuille = document.getElementById('subTegels');
+    const titelEl = document.getElementById('dossierTitel');
     if (bbvMode) {
+        if (titelEl) titelEl.style.display = 'none';
+        const meta = BBV_HOOFDSTUK_META[bbvIndex] || {};
+        if (bbvShell) {
+            bbvShell.hidden = false;
+            if (meta.kleur) {
+                bbvShell.style.setProperty('--bbv-accent', meta.kleur.accent);
+                bbvShell.style.setProperty('--bbv-light', meta.kleur.light);
+                bbvShell.style.setProperty('--bbv-lighter', meta.kleur.lighter);
+            }
+        }
+        renderBbvHoofdstukHeader(bbvIndex);
+        if (subTegelsPortefeuille) {
+            subTegelsPortefeuille.innerHTML = '';
+            subTegelsPortefeuille.style.display = 'none';
+        }
         renderSubTegelsBBV(bbvIndex);
         document.getElementById('samenvattingGeselecteerdBlok').style.display = 'none';
         document.getElementById('samenvattingPerThemaBlok').style.display = 'none';
         document.getElementById('briefingBlok').style.display = 'none';
         document.getElementById('coalitieAkkoordBlok').style.display = 'none';
-        // OD-blok: toon overdrachtsdossier-samenvatting voor elk BBV-hoofdstuk
         const odBlok = document.getElementById('overdrachtsdossierBlok');
         if (odBlok) {
             const heeftOD = bbvIndex in OD_SAMENVATTING_PER_BBV;
             odBlok.style.display = heeftOD ? '' : 'none';
             if (heeftOD) loadOverdrachtsdossierContent(bbvIndex);
+            else {
+                const sumSect = document.getElementById('bbvHoofdstukSamenvatting');
+                const sumInh = document.getElementById('bbvHoofdstukSamenvattingInhoud');
+                const inh = document.getElementById('overdrachtsdossierInhoud');
+                if (sumSect) sumSect.style.display = 'none';
+                if (sumInh) sumInh.innerHTML = '';
+                if (inh) inh.innerHTML = '';
+            }
         }
         loadDossierBesluitenBBV(bbvIndex);
         showBeleidsnotaBlokBBV(bbvIndex, activeDossier.subFilter);
     } else {
+        if (titelEl) { titelEl.textContent = thema; titelEl.style.display = ''; }
+        if (bbvShell) {
+            bbvShell.hidden = true;
+            const oldHeader = bbvShell.querySelector('.bbv-hoofdstuk-header');
+            if (oldHeader) oldHeader.remove();
+        }
+        if (subTegelsPortefeuille) subTegelsPortefeuille.style.display = '';
         const odBlok = document.getElementById('overdrachtsdossierBlok');
         if (odBlok) odBlok.style.display = 'none';
         document.getElementById('samenvattingGeselecteerdBlok').style.display = '';
@@ -1038,38 +1135,73 @@ function openDossier(thema, subFilter) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function renderBbvHoofdstukHeader(bbvIndex) {
+    const shell = document.getElementById('bbvDossierShell');
+    if (!shell) return;
+    let header = shell.querySelector('.bbv-hoofdstuk-header');
+    if (!header) {
+        header = document.createElement('div');
+        header.className = 'bbv-hoofdstuk-header';
+        shell.prepend(header);
+    }
+    const meta = BBV_HOOFDSTUK_META[bbvIndex] || {};
+    const naam = BBV_HOOFDTAAKVELDEN[bbvIndex] || `Hoofdstuk ${bbvIndex}`;
+    const icoonHtml = meta.icoon || '';
+    const ondertitel = meta.ondertitel || '';
+    header.innerHTML = `
+        <div class="bbv-hoofdstuk-icoon">${icoonHtml}</div>
+        <div>
+            <strong>${escapeHtml(naam)}</strong>
+            ${ondertitel ? `<br><span class="bbv-hoofdstuk-ondertitel">${escapeHtml(ondertitel)}</span>` : ''}
+        </div>`;
+}
+
 function renderSubTegelsBBV(bbvIndex) {
-    const container = document.getElementById('subTegels');
+    const container = document.getElementById('bbvSubTegels');
     if (!container) return;
     container.innerHTML = '';
     const taakvelden = BBV_TAAKVELDEN_PER_HOOFDSTUK[bbvIndex];
     if (!taakvelden || !taakvelden.length) return;
-    const dossierBesluiten = getDecisionsForBBV(bbvIndex);
-    const grid = document.createElement('div');
-    grid.className = 'sub-tegels-grid';
+
+    const heading = document.createElement('p');
+    heading.className = 'bbv-tv-hint';
+    heading.id = 'bbvTvHint';
+    heading.textContent = 'Kies een taakveld — hover voor toelichting';
+    container.appendChild(heading);
+
+    const list = document.createElement('div');
+    list.className = 'bbv-taakveld-lijst';
+    list.setAttribute('role', 'listbox');
+    list.setAttribute('aria-label', 'Iv3-taakvelden');
     const subFilter = activeDossier && activeDossier.subFilter;
-    const accent = '#059669';
-    const totaalCount = dossierBesluiten.length;
     taakvelden.forEach(tv => {
-        const count = totaalCount; // Hoofdstuk-totaal; per-taakveld filtering kan later worden toegevoegd
         const label = `${tv.code} ${tv.naam}`;
         const isActief = subFilter === tv.code;
         const card = document.createElement('button');
         card.type = 'button';
-        card.className = 'sub-kaart sub-kaart-taakveld' + (isActief ? ' sub-kaart-actief' : '');
-        card.style.borderLeftColor = isActief ? accent : 'rgba(0,0,0,0.15)';
-        if (isActief) card.style.background = accent;
-        if (isActief) card.style.color = '#fff';
-        card.innerHTML = `<div class="sub-kaart-top"><span class="sub-kaart-code">${escapeHtml(tv.code)}</span><span class="sub-kaart-naam">${escapeHtml(tv.naam)}</span></div>`;
+        card.className = 'bbv-tv-item' + (isActief ? ' bbv-tv-item--actief' : '');
+        card.setAttribute('role', 'option');
+        card.setAttribute('aria-selected', isActief ? 'true' : 'false');
+        const oms = (tv.omschrijving || '').trim();
+        if (oms) {
+            card.setAttribute('title', `${label}\n\n${oms}`);
+            card.setAttribute('aria-label', `${label}. ${oms}`);
+        } else {
+            card.setAttribute('title', label);
+            card.setAttribute('aria-label', label);
+        }
+        card.innerHTML = `<span class="bbv-tv-code">${escapeHtml(tv.code)}</span><span class="bbv-tv-naam">${escapeHtml(tv.naam)}</span>`;
         card.onclick = () => {
             activeDossier.subFilter = activeDossier.subFilter === tv.code ? null : tv.code;
             renderSubTegelsBBV(bbvIndex);
             loadDossierBesluitenBBV(bbvIndex);
             showBeleidsnotaBlokBBV(bbvIndex, activeDossier.subFilter);
+            updateBbvTaakveldContext(bbvIndex);
         };
-        grid.appendChild(card);
+        list.appendChild(card);
     });
-    container.appendChild(grid);
+    container.appendChild(list);
+    updateBbvTaakveldContext(bbvIndex);
 }
 
 function loadDossierBesluitenBBV(bbvIndex) {
@@ -1387,6 +1519,219 @@ function mergeBeleidsnotaLijsten(...lijsten) {
     return out;
 }
 
+// ─── Beleidsnota voorstellen (Voorstel → Beoordeling → Publicatie) ───
+const BELEIDSNOTA_API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+    ? 'http://127.0.0.1:5050/api'
+    : 'https://api.besluit-wijzer.nl/api';
+
+let goedgekeurdeVoorstellen = [];
+let beleidsnotaAddScope = null;
+let beleidsnotaAddUiInitialized = false;
+
+async function fetchGoedgekeurdeVoorstellen() {
+    try {
+        const r = await fetch(`${BELEIDSNOTA_API_BASE}/beleidsbibliotheek/wassenaar/voorstellen`, {
+            headers: { Accept: 'application/json' },
+            cache: 'no-store'
+        });
+        if (!r.ok) return;
+        const data = await r.json();
+        if (data && Array.isArray(data.items)) {
+            goedgekeurdeVoorstellen = data.items;
+        }
+    } catch (e) { /* offline */ }
+}
+
+function getGoedgekeurdeVoorstellenForScope(bbvIndex, taakveldCode) {
+    const code = taakveldCode || null;
+    return goedgekeurdeVoorstellen.filter(r => {
+        const s = r && r.scope;
+        if (!s || s.bbvIndex !== bbvIndex) return false;
+        return (s.taakveldCode || null) === code;
+    });
+}
+
+function mapVoorstelToItem(rec) {
+    return {
+        naam: rec.titel,
+        link: rec.link,
+        type: 'Bijdrage',
+        toelichting: (rec.extra || '').trim(),
+        _bijdrage: true,
+        _bijdrageId: rec.id
+    };
+}
+
+async function submitVoorstel(record, statusEl) {
+    const payload = {
+        titel: record.titel,
+        link: record.link,
+        extra: record.extra || '',
+        scope: record.scope
+    };
+    try {
+        const r = await fetch(`${BELEIDSNOTA_API_BASE}/beleidsbibliotheek/wassenaar/voorstellen`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(payload),
+            cache: 'no-store'
+        });
+        if (r.ok) {
+            if (statusEl) statusEl.textContent = 'Bedankt! Je voorstel is ingediend en wordt beoordeeld door de redactie.';
+            return 'ok';
+        }
+        if (r.status === 400) {
+            if (statusEl) statusEl.textContent = 'Gegevens geweigerd. Controleer titel en link.';
+            return 'error';
+        }
+        if (r.status === 429) {
+            if (statusEl) statusEl.textContent = 'Te veel voorstellen vanaf dit netwerk. Probeer het later opnieuw.';
+            return 'error';
+        }
+        if (statusEl) statusEl.textContent = 'Er ging iets mis op de server. Probeer het later opnieuw.';
+        return 'error';
+    } catch (e) {
+        if (statusEl) statusEl.textContent = 'Geen verbinding met de server. Controleer je internetverbinding.';
+        return 'error';
+    }
+}
+
+
+function getTaakveldNaam(bbvIndex, taakveldCode) {
+    const tvs = BBV_TAAKVELDEN_PER_HOOFDSTUK[bbvIndex] || [];
+    const tv = tvs.find(t => t.code === taakveldCode);
+    return tv ? tv.naam : '';
+}
+
+function getTaakveldInfo(bbvIndex, taakveldCode) {
+    const tvs = BBV_TAAKVELDEN_PER_HOOFDSTUK[bbvIndex] || [];
+    const tv = tvs.find(t => t.code === taakveldCode);
+    if (!tv) return { naam: '', omschrijving: '' };
+    return { naam: tv.naam || '', omschrijving: (tv.omschrijving || '').trim() };
+}
+
+/** Toont Iv3-context rechts wanneer een taakveld is gekozen */
+function updateBbvTaakveldContext(bbvIndex) {
+    const box = document.getElementById('bbvTaakveldContext');
+    const p = document.getElementById('bbvTaakveldContextTekst');
+    if (!box || !p) return;
+    const sub = activeDossier && activeDossier.subFilter;
+    if (!sub) {
+        box.style.display = 'none';
+        return;
+    }
+    const info = getTaakveldInfo(bbvIndex, sub);
+    const kopEl = box.querySelector('.bbv-taakveld-context-kop');
+    if (kopEl) kopEl.textContent = `${sub} — ${info.naam || '(onbekend)'}`;
+    p.textContent = info.omschrijving || '';
+    box.style.display = '';
+}
+
+function setBeleidsnotaAddContext(bbvIndex, taakveldCode) {
+    const ctxEl = document.getElementById('bnAddContext');
+    if (!ctxEl) return;
+
+    if (taakveldCode) {
+        const naam = getTaakveldNaam(bbvIndex, taakveldCode);
+        ctxEl.textContent = `Voorstel voor kindtegel: ${taakveldCode}${naam ? ' ' + naam : ''}`;
+    } else {
+        const hoofdstuk = BBV_HOOFDTAAKVELDEN[bbvIndex] || `Hoofdstuk ${bbvIndex}`;
+        ctxEl.textContent = `Voorstel op hoofdniveau: ${hoofdstuk}`;
+    }
+}
+
+function initBeleidsnotaAddUiOnce() {
+    if (beleidsnotaAddUiInitialized) return;
+    beleidsnotaAddUiInitialized = true;
+
+    const modal = document.getElementById('bnAddModal');
+    const overlay = document.getElementById('bnAddOverlay');
+    const closeBtn = document.getElementById('bnAddModalSluit');
+    const cancelBtn = document.getElementById('bnAddCancel');
+    const saveBtn = document.getElementById('bnAddSave');
+
+    const setOpen = (open) => {
+        if (overlay) overlay.style.display = open ? 'block' : 'none';
+        if (modal) modal.style.display = open ? 'flex' : 'none';
+        if (open) {
+            const t = document.getElementById('bnAddTitel');
+            if (t) t.focus({ preventScroll: true });
+        }
+    };
+
+    const close = () => {
+        beleidsnotaAddScope = null;
+        setOpen(false);
+        const st = document.getElementById('bnAddStatus');
+        if (st) st.textContent = '';
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    if (cancelBtn) cancelBtn.addEventListener('click', close);
+    if (overlay) overlay.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+    if (saveBtn) {
+        saveBtn.addEventListener('click', async () => {
+            const status = document.getElementById('bnAddStatus');
+            if (!beleidsnotaAddScope) {
+                if (status) status.textContent = 'Geen plek gekozen. Open een BBV-dossier en gebruik de knop opnieuw.';
+                return;
+            }
+
+            const titel = (document.getElementById('bnAddTitel').value || '').trim();
+            const link = (document.getElementById('bnAddLink').value || '').trim();
+            const extra = (document.getElementById('bnAddExtra').value || '').trim();
+
+            if (!titel) { if (status) status.textContent = 'Titel is verplicht.'; return; }
+            if (!link) { if (status) status.textContent = 'Link is verplicht.'; return; }
+
+            let urlObj = null;
+            try { urlObj = new URL(link); } catch (e) {
+                if (status) status.textContent = 'Link is geen geldige URL.';
+                return;
+            }
+            if (!['http:', 'https:'].includes(urlObj.protocol)) {
+                if (status) status.textContent = 'Alleen http/https links toegestaan.';
+                return;
+            }
+
+            const record = {
+                titel,
+                link: urlObj.href,
+                extra: extra || '',
+                scope: {
+                    bbvIndex: beleidsnotaAddScope.bbvIndex,
+                    taakveldCode: beleidsnotaAddScope.taakveldCode || null,
+                    niveau: beleidsnotaAddScope.taakveldCode ? 'kindtegel' : 'hoofdniveau'
+                }
+            };
+
+            saveBtn.disabled = true;
+            const result = await submitVoorstel(record, status);
+            saveBtn.disabled = false;
+
+            if (result === 'ok') {
+                document.getElementById('bnAddTitel').value = '';
+                document.getElementById('bnAddLink').value = '';
+                document.getElementById('bnAddExtra').value = '';
+            }
+        });
+    }
+}
+
+
+function openBeleidsnotaAddModal(bbvIndex, taakveldCode) {
+    initBeleidsnotaAddUiOnce();
+    beleidsnotaAddScope = { bbvIndex, taakveldCode: taakveldCode || null };
+    setBeleidsnotaAddContext(bbvIndex, taakveldCode || null);
+
+    const modal = document.getElementById('bnAddModal');
+    const overlay = document.getElementById('bnAddOverlay');
+    if (overlay) overlay.style.display = 'block';
+    if (modal) modal.style.display = 'flex';
+}
+
 function showBeleidsnotaBlokBBV(bbvIndex, taakveldCode) {
     const blok = document.getElementById('beleidsnotaBlok');
     const lijst = document.getElementById('beleidsnotaLijst');
@@ -1394,25 +1739,38 @@ function showBeleidsnotaBlokBBV(bbvIndex, taakveldCode) {
 
     const hoofd = BELEIDSNOTA_PER_HOOFDSTUK_BBV[bbvIndex] || [];
     const sub = taakveldCode ? (BELEIDSNOTA_PER_TAAKVELD[taakveldCode] || []) : [];
-    const items = mergeBeleidsnotaLijsten(hoofd, sub);
-    if (!items.length) {
-        blok.style.display = 'none';
-        return;
-    }
+    const bijdragen = getGoedgekeurdeVoorstellenForScope(bbvIndex, taakveldCode || null).map(mapVoorstelToItem);
+    const items = mergeBeleidsnotaLijsten(hoofd, sub, bijdragen);
 
     blok.style.borderLeftColor = '#059669';
-    lijst.innerHTML = items.map(n => {
-        const datumStr = n.datum ? formatDatumKort(n.datum) : '';
-        const typeLabel = n.type ? `<span class="beleidsnota-type">${escapeHtml(n.type)}</span>` : '';
-        const linkHtml = n.link
-            ? `<a href="${escapeHtml(n.link)}" target="_blank" rel="noopener" class="beleidsnota-link">${escapeHtml(n.naam)}</a>`
-            : escapeHtml(n.naam);
-        const meta = [typeLabel, datumStr ? `<span class="beleidsnota-datum">${datumStr}</span>` : ''].filter(Boolean).join(' · ');
-        const toelichtingHtml = n.toelichting ? `<p class="beleidsnota-toelichting">${escapeHtml(n.toelichting)}</p>` : '';
-        return `<li class="beleidsnota-item">${linkHtml}${meta ? ` <span class="beleidsnota-meta">${meta}</span>` : ''}${toelichtingHtml}</li>`;
-    }).join('');
+    if (!items.length) {
+        lijst.innerHTML = '<li class="beleidsnota-item">Nog geen beleidsnota\'s voor dit BBV-onderdeel. Klik op "+ Beleidsnota voorstellen".</li>';
+    } else {
+        lijst.innerHTML = items.map(n => {
+            const datumStr = n.datum ? formatDatumKort(n.datum) : '';
+            const typeLabel = n.type ? `<span class="beleidsnota-type${n._bijdrage ? ' beleidsnota-type--bijdrage' : ''}">${escapeHtml(n.type)}</span>` : '';
+            const bijdrageBadge = n._bijdrage
+                ? '<span class="beleidsnota-badge-bijdrage" title="Ingediend door een bezoeker en goedgekeurd door de redactie.">Bijdrage</span>'
+                : '';
+            const linkHtml = n.link
+                ? `<a href="${escapeHtml(n.link)}" target="_blank" rel="noopener" class="beleidsnota-link">${escapeHtml(n.naam)}</a>`
+                : escapeHtml(n.naam);
+            const meta = [typeLabel, datumStr ? `<span class="beleidsnota-datum">${datumStr}</span>` : ''].filter(Boolean).join(' \u00b7 ');
+            const toelichtingHtml = n.toelichting ? `<p class="beleidsnota-toelichting">${escapeHtml(n.toelichting)}</p>` : '';
+            const main = `${bijdrageBadge}${linkHtml}${meta ? ` <span class="beleidsnota-meta">${meta}</span>` : ''}${toelichtingHtml}`;
+            return `<li class="beleidsnota-item${n._bijdrage ? ' beleidsnota-item--bijdrage' : ''}"><div class="beleidsnota-item-main">${main}</div></li>`;
+        }).join('');
+    }
     blok.style.display = '';
+
+    const addBtn = document.getElementById('beleidsnotaAddBtn');
+    if (addBtn) {
+        addBtn.textContent = '+ Beleidsnota voorstellen';
+        addBtn.style.display = 'inline-flex';
+        addBtn.onclick = () => openBeleidsnotaAddModal(bbvIndex, taakveldCode || null);
+    }
 }
+
 
 function loadSyntheseContent(thema) {
     const container = document.getElementById('dossierSynthese');
@@ -1649,15 +2007,42 @@ function loadOverdrachtsdossierPagina() {
 // BBV-index → OD-hoofdstuk (deeplink overdrachtsdossier.html#od-ch-X)
 const BBV_TO_OD_CHAPTER = { 0: 8, 1: 12, 2: 13, 3: 15, 4: 16, 5: 16, 6: 14, 7: 13, 8: 13 };
 
+/** Eerste twee top-level <p>’s (opeenvolgend vanaf het begin) naar samenvatting; rest = verdieping. */
+function splitOverdrachtHtmlToSummaryAndRest(htmlString) {
+    const wrap = document.createElement('div');
+    wrap.innerHTML = htmlString || '';
+    const summaryParts = [];
+    let taken = 0;
+    const maxP = 2;
+    while (taken < maxP) {
+        const ch = wrap.firstElementChild;
+        if (!ch || ch.tagName !== 'P') break;
+        summaryParts.push(ch.outerHTML);
+        ch.remove();
+        taken++;
+    }
+    return {
+        summaryHtml: summaryParts.join(''),
+        remainderHtml: wrap.innerHTML.trim()
+    };
+}
+
 function loadOverdrachtsdossierContent(bbvIndex) {
     const blok = document.getElementById('overdrachtsdossierBlok');
     const container = document.getElementById('overdrachtsdossierInhoud');
     const bron = document.getElementById('overdrachtsdossierBron');
     const odLink = document.getElementById('overdrachtsdossierLink');
+    const sumSect = document.getElementById('bbvHoofdstukSamenvatting');
+    const sumInh = document.getElementById('bbvHoofdstukSamenvattingInhoud');
     if (!container) return;
 
     const od = OD_SAMENVATTING_PER_BBV[bbvIndex];
-    if (!od) return;
+    if (!od) {
+        if (sumSect) sumSect.style.display = 'none';
+        if (sumInh) sumInh.innerHTML = '';
+        if (blok) blok.style.display = 'none';
+        return;
+    }
 
     const odCh = BBV_TO_OD_CHAPTER[bbvIndex];
     if (odLink && odCh != null) {
@@ -1665,10 +2050,20 @@ function loadOverdrachtsdossierContent(bbvIndex) {
     }
 
     const ibabs = 'https://wassenaar.bestuurlijkeinformatie.nl/';
-    const html = typeof od.html === 'function' ? od.html(ibabs) : od.html;
-    container.innerHTML = html || '';
+    const fullHtml = typeof od.html === 'function' ? od.html(ibabs) : od.html;
+    const { summaryHtml, remainderHtml } = splitOverdrachtHtmlToSummaryAndRest(fullHtml || '');
+
+    if (sumInh) sumInh.innerHTML = summaryHtml || '';
+    if (sumSect) sumSect.style.display = summaryHtml ? '' : 'none';
+
+    container.innerHTML = remainderHtml || '';
     if (bron) bron.textContent = od.bron;
-    if (blok) blok.classList.toggle('hidden', !html);
+
+    const hasRemainder = !!remainderHtml;
+    if (blok) {
+        blok.style.display = hasRemainder ? '' : 'none';
+        blok.classList.toggle('overdrachtsdossier-blok--leeg', !hasRemainder);
+    }
 }
 
 function loadCoalitieAkkoord(thema) {
@@ -2118,7 +2513,7 @@ function renderMethodologie() {
     const oldest = dates.length ? dates[0] : '—';
 
     container.innerHTML = `
-        <p>Besluit-Wijzer verzamelt publicaties uit het <strong>Gemeenteblad</strong> via de SRU-API van
+        <p>De BeleidsBibliotheek verzamelt publicaties uit het <strong>Gemeenteblad</strong> via de SRU-API van
         <a href="https://repository.overheid.nl" target="_blank" rel="noopener">repository.overheid.nl</a>.
         Elke publicatie wordt automatisch geclassificeerd naar beleidsdomein op basis van type en trefwoorden in de titel.
         Alle data is openbaar en vrij beschikbaar. Elke publicatie bevat een directe link naar het origineel op
@@ -2133,6 +2528,11 @@ function renderMethodologie() {
 document.addEventListener('DOMContentLoaded', () => {
     loadData();
     renderMethodologie();
+    fetchGoedgekeurdeVoorstellen().then(() => {
+        if (typeof activeDossier !== 'undefined' && activeDossier && activeDossier.bbvMode) {
+            showBeleidsnotaBlokBBV(activeDossier.bbvIndex, activeDossier.subFilter || null);
+        }
+    });
 
     // Uitklap-knoppen (via event delegation op beide lijsten)
     document.addEventListener('click', (e) => {

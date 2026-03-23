@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beleidswijzer – Verwijzing</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f4f8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,50,0.10);
+      max-width: 680px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #1a4f8a 0%, #2d7dd2 100%);
+      padding: 2.5rem 2.5rem 2rem;
+      color: #fff;
+    }
+
+    .card-header .label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-header p {
+      opacity: 0.85;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .card-body {
+      padding: 2rem 2.5rem;
+    }
+
+    .cta-box {
+      background: #eaf3ff;
+      border: 2px solid #2d7dd2;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .cta-box p {
+      font-size: 1.05rem;
+      color: #1a3a5c;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .cta-box p strong {
+      color: #1a4f8a;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #1a4f8a, #2d7dd2);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.85rem 2.2rem;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s, transform 0.15s;
+      box-shadow: 0 4px 14px rgba(45,125,210,0.35);
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .url-label {
+      margin-top: 0.7rem;
+      font-size: 0.88rem;
+      color: #5a7fa8;
+    }
+
+    .notice {
+      background: #fff8e1;
+      border-left: 4px solid #f5a623;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+    }
+
+    .notice-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      color: #7a5000;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .notice-title .icon {
+      font-size: 1.2rem;
+    }
+
+    .notice p {
+      color: #5a4000;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      margin-bottom: 0.6rem;
+    }
+
+    .notice p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2rem 2rem;
+      border-top: 1px solid #e8eef5;
+      font-size: 0.8rem;
+      color: #9ab0c8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="label">Doorverwijzing</div>
+      <h1>De Beleidswijzer</h1>
+      <p>De Beleidswijzer heeft een eigen omgeving en is beschikbaar via een apart platform.</p>
+    </div>
+
+    <div class="card-body">
+
+      <div class="cta-box">
+        <p>De <strong>Beleidswijzer</strong> is te vinden op:</p>
+        <a href="https://besluit-wijzer.nl" target="_blank" rel="noopener noreferrer" class="btn">
+          🔗 Ga naar besluit-wijzer.nl
+        </a>
+        <div class="url-label">https://besluit-wijzer.nl</div>
+      </div>
+
+      <div class="notice">
+        <div class="notice-title">
+          <span class="icon">⚠️</span>
+          Melding vanuit gemeentelijke of bedrijfsomgeving?
+        </div>
+        <p>
+          Bezoekt u deze site vanuit een <strong>gemeentelijke of bedrijfsomgeving</strong>? Dan kan het voorkomen dat u een beveiligingswaarschuwing krijgt — meestal afkomstig van <strong>CloudFlare</strong>.
+        </p>
+        <p>
+          De site <strong>besluit-wijzer.nl</strong> is aangemeld bij CloudFlare als een vertrouwde omgeving. De melding ontstaat echter vaak door de instellingen van de eigen IT-afdeling. Desgewenst — en na de juiste controle — kan de site worden goedgekeurd in het lokale beveiligingsbeleid, waarna de waarschuwing niet meer verschijnt.
+        </p>
+        <p>
+          U kunt de melding <strong>wegklikken en het risico accepteren</strong> om de site te bezoeken.
+        </p>
+      </div>
+
+    </div>
+
+    <footer>besluit-wijzer.nl &nbsp;·&nbsp; Beleidswijzer</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schrijf-Wijzer · Concept collegevoorstel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="schrijf-wijzer-formulier.css">
+</head>
+<body>
+    <script src="../disclaimer.js"></script>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo-link" aria-label="Gemeente Wassenaar">
+                <img src="../wassenaar_logo_fc%20kopie.svg" alt="Gemeente Wassenaar" class="site-logo">
+            </a>
+            <div class="header-text">
+                <h1><a href="../index.html" class="header-title-link">Besluit-Wijzer</a></h1>
+                <p class="subtitle">Gemeente Wassenaar · Schrijfwijzer (beta) · Concept collegevoorstel</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="overzicht-kop">
+            <nav class="overzicht-tabs" aria-label="Pagina's">
+                <a href="../index.html" class="overzicht-tab">Beleidsdossiers</a>
+                <a href="../verkiezingen/" class="overzicht-tab">Verkiezingsprogramma's 2026</a>
+                <span class="overzicht-tab overzicht-tab-actief">Schrijfwijzer (beta)</span>
+            </nav>
+        </div>
+        <p class="swf-subtitle" style="margin:0 0 1rem;font-size:.9rem"><a href="schrijf-wijzer.html">Eenvoudige versie</a></p>
+
+    <div class="swf-main">
+        <!-- Trap 1: Portefeuille -->
+        <section class="swf-trap1" id="swfTrap1">
+            <h2>Stap 1: Kies je portefeuille</h2>
+            <p class="swf-hint">De beleidsmedewerker werkt binnen één portefeuille. Kies de portefeuille waarvoor je dit voorstel schrijft.</p>
+            <div id="swfPortefeuilleKnoppen" class="swf-portefeuille-knoppen"></div>
+        </section>
+
+        <!-- Formulier (verschijnt na portefeuille-keuze) -->
+        <form id="swfFormulier" class="swf-formulier" style="display: none;">
+            <input type="hidden" id="swfPortefeuille" name="portefeuille">
+            <p class="swf-portefeuille-badge">
+                Portefeuille: <strong id="swfPortefeuilleLabel"></strong>
+                <button type="button" id="swfWijzigPortefeuille" class="swf-link-btn">Wijzig</button>
+            </p>
+
+            <div class="swf-veld">
+                <label for="swfTitel">Titel / Onderwerp</label>
+                <input type="text" id="swfTitel" name="titel" placeholder="Bijv. Vaststelling subsidie...">
+            </div>
+
+            <!-- Sectie: Aanleiding -->
+            <div class="swf-sectie" data-sectie="aanleiding">
+                <label>Aanleiding</label>
+                <p class="swf-sectie-hint">Waarom nu? Beschrijf de achtergrond. Selecteer hieronder de relevante beleidsthema's.</p>
+                <div class="swf-subthema-knoppen" id="swfKnoppenAanleiding"></div>
+                <div class="swf-beleidspanel" id="swfBeleidAanleiding"></div>
+                <textarea name="aanleiding" id="swfAanleiding" rows="5" placeholder="Schrijf hier de aanleiding..."></textarea>
+            </div>
+
+            <!-- Sectie: Gevraagde beslissing -->
+            <div class="swf-sectie" data-sectie="gevraagde_beslissing">
+                <label>Gevraagde beslissing</label>
+                <p class="swf-sectie-hint">Wat wordt van het college gevraagd? Formuleer helder.</p>
+                <div class="swf-subthema-knoppen" id="swfKnoppenBeslissing"></div>
+                <div class="swf-beleidspanel" id="swfBeleidBeslissing"></div>
+                <textarea name="gevraagde_beslissing" id="swfBeslissing" rows="4" placeholder="Schrijf hier de gevraagde beslissing..."></textarea>
+            </div>
+
+            <!-- Sectie: Gevraagde beslispunten -->
+            <div class="swf-sectie" data-sectie="beslispunten">
+                <label>Gevraagde beslispunten</label>
+                <p class="swf-sectie-hint">Genummerde punten (1. ..., 2. ..., etc.)</p>
+                <div class="swf-subthema-knoppen" id="swfKnoppenBeslispunten"></div>
+                <div class="swf-beleidspanel" id="swfBeleidBeslispunten"></div>
+                <textarea name="beslispunten" id="swfBeslispunten" rows="6" placeholder="1. ...&#10;2. ..."></textarea>
+            </div>
+
+            <!-- Sectie: Financiële consequenties -->
+            <div class="swf-sectie" data-sectie="financieel">
+                <label>Financiële consequenties</label>
+                <p class="swf-sectie-hint">Budget, reserves, programma. Indien niet van toepassing: "Geen financiële consequenties."</p>
+                <div class="swf-subthema-knoppen" id="swfKnoppenFinancieel"></div>
+                <div class="swf-beleidspanel" id="swfBeleidFinancieel"></div>
+                <textarea name="financieel" id="swfFinancieel" rows="4" placeholder="Schrijf hier de financiële consequenties..."></textarea>
+            </div>
+
+            <!-- Sectie: Juridisch kader -->
+            <div class="swf-sectie" data-sectie="juridisch">
+                <label>Juridisch kader</label>
+                <p class="swf-sectie-hint">Indien van toepassing. Anders leeg laten.</p>
+                <div class="swf-subthema-knoppen" id="swfKnoppenJuridisch"></div>
+                <div class="swf-beleidspanel" id="swfBeleidJuridisch"></div>
+                <textarea name="juridisch" id="swfJuridisch" rows="3" placeholder="Wettelijke grondslag, verordening..."></textarea>
+            </div>
+
+            <div class="swf-actions">
+                <button type="button" id="swfOpslaan" class="swf-btn swf-btn-primary">Opslaan (lokaal)</button>
+                <button type="button" id="swfExporteren" class="swf-btn">Exporteer als tekst</button>
+                <button type="button" id="swfExportJson" class="swf-btn">Exporteer JSON (voor agent)</button>
+            </div>
+        </form>
+    </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Besluit-Wijzer Wassenaar · <a href="../index.html">Beleidsdossiers</a> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a> · <button type="button" id="disclaimerLink" class="footer-link-btn">Disclaimer</button></p>
+        </div>
+    </footer>
+
+    <script src="schrijf-wijzer-data.js"></script>
+    <script src="schrijf-wijzer-formulier.js"></script>
+</body>
+</html>

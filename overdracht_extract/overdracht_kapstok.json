@@ -1,0 +1,1077 @@
+{
+  "bron": "overdracht voor check.docx",
+  "titel": "Overdrachtsdossier raadsverkiezingen 2026",
+  "gemeente": "Wassenaar",
+  "versie": "4.1",
+  "datum": "2026-03-18",
+  "inhoudsopgave": [
+    {
+      "level": 1,
+      "titel": "Inhoud"
+    },
+    {
+      "level": 1,
+      "titel": "Voorwoord"
+    },
+    {
+      "level": 1,
+      "titel": "Inleiding"
+    },
+    {
+      "level": 1,
+      "titel": "Veranderende rol van de gemeente"
+    },
+    {
+      "level": 1,
+      "titel": "Regionale samenwerking en landelijke ontwikkelingen"
+    },
+    {
+      "level": 1,
+      "titel": "Koersvast besturen en realistisch uitvoeren"
+    },
+    {
+      "level": 1,
+      "titel": "Leeswijzer"
+    },
+    {
+      "level": 1,
+      "titel": "1. De staat van de samenleving"
+    },
+    {
+      "level": 2,
+      "titel": "1.1 Waar staan we?"
+    },
+    {
+      "level": 3,
+      "titel": "1.1.1 Internationaal en diversiteit"
+    },
+    {
+      "level": 3,
+      "titel": "1.1.2 Meer dan een woonplaats"
+    },
+    {
+      "level": 2,
+      "titel": "1.2 Opgaven voor de komende jaren"
+    },
+    {
+      "level": 3,
+      "titel": "1.2.1 Internationaal en diversiteit"
+    },
+    {
+      "level": 2,
+      "titel": "1.3 Aandachtspunten voor de komende jaren"
+    },
+    {
+      "level": 1,
+      "titel": "2. De staat van de gemeentelijke organisatie"
+    },
+    {
+      "level": 2,
+      "titel": "2.1 Waar staan we?"
+    },
+    {
+      "level": 3,
+      "titel": "2.1.1 Personeel"
+    },
+    {
+      "level": 3,
+      "titel": "2.1.2 Gemeentelijke huisvesting"
+    },
+    {
+      "level": 3,
+      "titel": "2.1.3 Klant Contact Centrum"
+    },
+    {
+      "level": 3,
+      "titel": "2.1.4 Juridische zaken"
+    },
+    {
+      "level": 3,
+      "titel": "2.1.5 Informatie- en datamanagement"
+    },
+    {
+      "level": 3,
+      "titel": "2.1.6 Strategisch vastgoedbeleid"
+    },
+    {
+      "level": 2,
+      "titel": "2.2 Opgaven voor de komende jaren"
+    },
+    {
+      "level": 3,
+      "titel": "2.2.1 Personele bezetting"
+    },
+    {
+      "level": 3,
+      "titel": "2.2.2 Gemeentelijke huisvesting"
+    },
+    {
+      "level": 3,
+      "titel": "2.2.3 Klant Contact Centrum"
+    },
+    {
+      "level": 3,
+      "titel": "2.2.4 Juridische zaken"
+    },
+    {
+      "level": 3,
+      "titel": "2.2.5 Informatie- en datamanagement"
+    },
+    {
+      "level": 3,
+      "titel": "2.2.6 Strategisch vastgoedbeleid"
+    },
+    {
+      "level": 2,
+      "titel": "2.3 Aandachtspunten voor de komende jaren"
+    },
+    {
+      "level": 1,
+      "titel": "3. De financiële positie"
+    },
+    {
+      "level": 2,
+      "titel": "3.1 Waar staan we?"
+    },
+    {
+      "level": 3,
+      "titel": "3.1.1.1 Ontwikkeling schuldenpositie"
+    },
+    {
+      "level": 3,
+      "titel": "3.1.2. Ontwikkelingen na vaststelling van de begroting op 4 november"
+    },
+    {
+      "level": 2,
+      "titel": "3.2 Opgaven voor de komende jaren"
+    },
+    {
+      "level": 3,
+      "titel": "3.2.1 Zorgen voor een jaarlijks structureel sluitende begroting"
+    },
+    {
+      "level": 3,
+      "titel": "3.2.2. Het financieringsvraagstuk"
+    },
+    {
+      "level": 3,
+      "titel": "3.2.3 Welke mogelijkheden heeft de gemeente om financieel bij te sturen?"
+    },
+    {
+      "level": 2,
+      "titel": "3.3 Aandachtspunten voor de komende jaren"
+    },
+    {
+      "level": 1,
+      "titel": "4. Regionale samenwerkingen"
+    },
+    {
+      "level": 2,
+      "titel": "4.1 Waar staan we?"
+    },
+    {
+      "level": 3,
+      "titel": "4.1.1 Gemeenschappelijke regelingen"
+    },
+    {
+      "level": 3,
+      "titel": "4.1.2 Andere intergemeentelijke samenwerkingsvormen (niet GR)"
+    },
+    {
+      "level": 2,
+      "titel": "4.2 Opgaven voor de komende jaren"
+    },
+    {
+      "level": 3,
+      "titel": "4.2.1 Nieuwe ontwikkelingen die invloed hebben op regionale samenwerking"
+    },
+    {
+      "level": 3,
+      "titel": "4.2.2 Rekenkameronderzoek"
+    },
+    {
+      "level": 2,
+      "titel": "4.3 Aandachtspunten voor de komende jaren"
+    },
+    {
+      "level": 1,
+      "titel": "5. Veiligheid en leefbaarheid"
+    },
+    {
+      "level": 2,
+      "titel": "5.1 Waar staan we?"
+    },
+    {
+      "level": 3,
+      "titel": "5.1.1 Veiligheid, toezicht en handhaving"
+    },
+    {
+      "level": 3,
+      "titel": "5.1.2 Toezicht en vergunningverlening in het kader van Omgevingswet"
+    },
+    {
+      "level": 3,
+      "titel": "5.1.3 Openbare ruimte"
+    },
+    {
+      "level": 3,
+      "titel": "5.1.4 Afvalverwerking"
+    },
+    {
+      "level": 3,
+      "titel": "5.1.5 Wijkgericht werken"
+    },
+    {
+      "level": 2,
+      "titel": "5.2 Opgaven voor de komende jaren"
+    },
+    {
+      "level": 3,
+      "titel": "5.2.1 Veiligheid, toezicht en handhaving"
+    },
+    {
+      "level": 3,
+      "titel": "5.2.2 Toezicht en vergunningverlening in het kader van Omgevingswet"
+    },
+    {
+      "level": 3,
+      "titel": "5.2.3 Openbare ruimte"
+    },
+    {
+      "level": 3,
+      "titel": "5.2.4 Afvalverwerking"
+    },
+    {
+      "level": 3,
+      "titel": "5.2.3 Wijkgericht werken"
+    },
+    {
+      "level": 2,
+      "titel": "5.3 Aandachtspunten voor de komende jaren"
+    },
+    {
+      "level": 1,
+      "titel": "6. Wonen en fysieke leefomgeving"
+    },
+    {
+      "level": 2,
+      "titel": "6.1 Waar staan we?"
+    },
+    {
+      "level": 3,
+      "titel": "6.1.1 Wonen"
+    },
+    {
+      "level": 3,
+      "titel": "6.1.2 Energietransitie en klimaatadaptatie"
+    },
+    {
+      "level": 3,
+      "titel": "6.1.3 Natuurlijke gebieden"
+    },
+    {
+      "level": 3,
+      "titel": "6.1.4 Cultureel erfgoed"
+    },
+    {
+      "level": 3,
+      "titel": "6.1.5 Mobiliteit"
+    },
+    {
+      "level": 2,
+      "titel": "6.2 Opgaven voor de komende jaren"
+    },
+    {
+      "level": 3,
+      "titel": "6.2.1 Wonen"
+    },
+    {
+      "level": 3,
+      "titel": "6.2.2 Energietransitie en klimaatadaptatie"
+    },
+    {
+      "level": 3,
+      "titel": "6.2.4 Natuurlijke gebieden"
+    },
+    {
+      "level": 3,
+      "titel": "6.2.5 Cultureel erfgoed"
+    },
+    {
+      "level": 3,
+      "titel": "6.2.6 Mobiliteit"
+    },
+    {
+      "level": 3,
+      "titel": "6.2.7 Aanvullende opgaven"
+    },
+    {
+      "level": 2,
+      "titel": "6.3 Aandachtspunten voor de komende jaren"
+    },
+    {
+      "level": 1,
+      "titel": "7. Sociaal Domein en asielopvang"
+    },
+    {
+      "level": 2,
+      "titel": "7.1 Waar staan we?"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.1 Sociaal Team Wassenaar"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.2 Sociale basis"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.3 Adviesraad Sociaal Domein Wassenaar"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.4 Jeugdwet"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.5 Wet maatschappelijke ondersteuning"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.6 Participatiewet – Werk & Inkomen"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.7 Asielopvang en huisvesting van statushouders"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.8 Opvang Oekraïners"
+    },
+    {
+      "level": 2,
+      "titel": "7.2 Opgaven voor de komende jaren"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.1 Sociaal Team Wassenaar"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.2 Sociale basis"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.3 Jeugdwet"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.4 Wmo"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.5 Participatiewet – Werk & Inkomen"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.6 Asielopvang en huisvesting statushouders"
+    },
+    {
+      "level": 2,
+      "titel": "7.3 Aandachtspunten voor de komende jaren"
+    },
+    {
+      "level": 1,
+      "titel": "8. Economie, recreatie en toerisme"
+    },
+    {
+      "level": 2,
+      "titel": "8.1 Waar staan we?"
+    },
+    {
+      "level": 3,
+      "titel": "8.1.1 De lokale economie"
+    },
+    {
+      "level": 3,
+      "titel": "8.1.2 Recreatie en toerisme"
+    },
+    {
+      "level": 2,
+      "titel": "8.2 Opgaven voor de komende jaren"
+    },
+    {
+      "level": 3,
+      "titel": "8.2.1 Lokale economie"
+    },
+    {
+      "level": 3,
+      "titel": "8.2.2 Recreatie en toerisme"
+    },
+    {
+      "level": 2,
+      "titel": "8.3 Aandachtspunten voor de komende jaren"
+    },
+    {
+      "level": 1,
+      "titel": "9. Sport, cultuur en onderwijs"
+    },
+    {
+      "level": 2,
+      "titel": "9.1 Waar staan we?"
+    },
+    {
+      "level": 3,
+      "titel": "9.1.1 Sport"
+    },
+    {
+      "level": 3,
+      "titel": "9.1.2 Kunst en cultuur"
+    },
+    {
+      "level": 3,
+      "titel": "9.1.3 Onderwijs"
+    },
+    {
+      "level": 2,
+      "titel": "9.2 Opgaven voor de komende jaren"
+    },
+    {
+      "level": 3,
+      "titel": "9.2.1 Sport"
+    },
+    {
+      "level": 3,
+      "titel": "9.2.2 Cultuur"
+    },
+    {
+      "level": 3,
+      "titel": "9.2.3 Onderwijs"
+    },
+    {
+      "level": 2,
+      "titel": "9.3 Aandachtspunten voor de komende jaren"
+    },
+    {
+      "level": 1,
+      "titel": "10. Projecten"
+    },
+    {
+      "level": 2,
+      "titel": "10.1 Woningbouwprojecten"
+    },
+    {
+      "level": 3,
+      "titel": "10.1.1 Herontwikkeling ANWB-locatie"
+    },
+    {
+      "level": 3,
+      "titel": "10.1.2 Investeren in Het Kerkehout"
+    },
+    {
+      "level": 3,
+      "titel": "10.1.3 Herontwikkeling Gemeentewerf"
+    },
+    {
+      "level": 3,
+      "titel": "10.1.4 Uitbreiding woonwagenstandplaatsen"
+    },
+    {
+      "level": 2,
+      "titel": "10.2 Projecten niet zijnde woningbouwprojecten"
+    },
+    {
+      "level": 3,
+      "titel": "10.2.1 Draf- en renbaan Duindigt"
+    },
+    {
+      "level": 3,
+      "titel": "10.2.2 Renovatie De Paauw"
+    },
+    {
+      "level": 3,
+      "titel": "10.2.3 Nieuwbouw fusieschool en inrichting omgeving SKOW"
+    },
+    {
+      "level": 3,
+      "titel": "10.2.4 Renovatie de Warenar"
+    },
+    {
+      "level": 2,
+      "titel": "10.3 Uitvoeringsprogramma’s"
+    },
+    {
+      "level": 3,
+      "titel": "10.3.1 Uitvoeringsprogramma Noordrand"
+    },
+    {
+      "level": 1,
+      "titel": "11. Langetermijnagenda"
+    },
+    {
+      "level": 2,
+      "titel": "11.1 Wanneer komt een onderwerp op een LTA?"
+    },
+    {
+      "level": 2,
+      "titel": "11.2 Eerste opzet LTA"
+    },
+    {
+      "level": 1,
+      "titel": "Bijlage 1: Verwijzingen"
+    },
+    {
+      "level": 1,
+      "titel": "Bijlage 2: Evaluatie College-uitvoeringsprogramma 2023-2026"
+    },
+    {
+      "level": 1,
+      "titel": "Deel I"
+    },
+    {
+      "level": 1,
+      "titel": "Stand van zaken"
+    },
+    {
+      "level": 3,
+      "titel": "2.1.1.1 Capaciteit vs. politieke ambities"
+    },
+    {
+      "level": 3,
+      "titel": "2.2.1 Rol op het gebied van ruimtelijke ontwikkelingen"
+    },
+    {
+      "level": 3,
+      "titel": "2.2.5.1 Kaders AI"
+    },
+    {
+      "level": 3,
+      "titel": "2.2.5.3 Weerbaarheid en cybersecurity"
+    },
+    {
+      "level": 1,
+      "titel": "Deel II"
+    },
+    {
+      "level": 3,
+      "titel": "5.1.1.1 Zorg en veiligheid"
+    },
+    {
+      "level": 3,
+      "titel": "5.2.1.1 Informatiebeveiliging, privacy en cyberweerbaarheid"
+    },
+    {
+      "level": 3,
+      "titel": "5.2.1.2 Zorg en veiligheid"
+    },
+    {
+      "level": 3,
+      "titel": "6.1.1.1 Wonen met zorg"
+    },
+    {
+      "level": 3,
+      "titel": "6.1.1.2 Woonwagenstandplaatsen"
+    },
+    {
+      "level": 3,
+      "titel": "6.2.1.1 Wonen met zorg"
+    },
+    {
+      "level": 3,
+      "titel": "6.2.1.2 Woonwagenstandplaatsen"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.2.1 Gezondheidsbeleid"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.4.1 Servicebureau Jeugdhulp Haaglanden"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.4.2 Verordening"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.4.3 Hervormingsagenda Jeugd"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.5.1 Vergrijzing in Wassenaar"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.5.2 Verordening Wmo"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.5.3 Beschermd wonen en maatschappelijke opvang"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.6.1 Uitvoering door Leidschendam-Voorburg"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.6.2 Beschut werken bij Provalu"
+    },
+    {
+      "level": 3,
+      "titel": "7.1.7.1 Huisvesting statushouders"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.2.1 Gezondheidsbeleid"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.4.1 Wonen met zorg"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.4.2 Beschermd wonen en maatschappelijke opvang"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.6.1 Huisvesting statushouders"
+    },
+    {
+      "level": 3,
+      "titel": "7.2.6.2 Opvang Oekraïners"
+    },
+    {
+      "level": 3,
+      "titel": "8.1.2.1 De Wassenaarse Slag"
+    },
+    {
+      "level": 3,
+      "titel": "8.1.2.2 Meijendel"
+    },
+    {
+      "level": 3,
+      "titel": "8.2.1.1 Bedrijventerrein Maaldrift"
+    },
+    {
+      "level": 3,
+      "titel": "9.1.1.1 Gezond en Actief Leven akkoord"
+    },
+    {
+      "level": 3,
+      "titel": "9.1.1.2 Scouting"
+    },
+    {
+      "level": 3,
+      "titel": "9.1.2.1 De Warenar"
+    },
+    {
+      "level": 3,
+      "titel": "9.1.3.2 Leerplicht en voortijdig schoolverlaten"
+    },
+    {
+      "level": 3,
+      "titel": "9.1.3.2 Onderwijshuisvesting"
+    },
+    {
+      "level": 3,
+      "titel": "9.1.3.3 Leerlingenvervoer"
+    },
+    {
+      "level": 3,
+      "titel": "9.2.1.1 Gezond en Actief Leven Akkoord"
+    },
+    {
+      "level": 3,
+      "titel": "9.2.3.1 Leerplicht en voortijdig schoolverlaten"
+    },
+    {
+      "level": 3,
+      "titel": "9.2.3.2 Onderwijshuisvesting"
+    },
+    {
+      "level": 3,
+      "titel": "9.2.3.2 Onderwijs aan anderstaligen"
+    },
+    {
+      "level": 3,
+      "titel": "10.2.3 Nieuwbouw fusieschool en inrichting omgeving Stichting Katholiek Onderwijs Wassenaar (SKOW)"
+    },
+    {
+      "level": 1,
+      "titel": "Deel III"
+    },
+    {
+      "level": 1,
+      "titel": "Aanvullend"
+    }
+  ],
+  "aantal_tabellen": 13,
+  "aantal_afbeeldingen": 91,
+  "afbeeldingen": [
+    {
+      "bestand": "image1.png",
+      "grootte_kb": 502.2
+    },
+    {
+      "bestand": "image10.jpeg",
+      "grootte_kb": 119.3
+    },
+    {
+      "bestand": "image11.jpeg",
+      "grootte_kb": 623.7
+    },
+    {
+      "bestand": "image12.jpeg",
+      "grootte_kb": 443.7
+    },
+    {
+      "bestand": "image13.jpeg",
+      "grootte_kb": 227.4
+    },
+    {
+      "bestand": "image14.jpeg",
+      "grootte_kb": 246.4
+    },
+    {
+      "bestand": "image15.jpeg",
+      "grootte_kb": 140.1
+    },
+    {
+      "bestand": "image16.jpeg",
+      "grootte_kb": 170.1
+    },
+    {
+      "bestand": "image17.jpeg",
+      "grootte_kb": 105.2
+    },
+    {
+      "bestand": "image18.jpeg",
+      "grootte_kb": 141.2
+    },
+    {
+      "bestand": "image19.jpeg",
+      "grootte_kb": 134.8
+    },
+    {
+      "bestand": "image2.jpeg",
+      "grootte_kb": 245.2
+    },
+    {
+      "bestand": "image20.jpeg",
+      "grootte_kb": 210.8
+    },
+    {
+      "bestand": "image21.jpeg",
+      "grootte_kb": 882.3
+    },
+    {
+      "bestand": "image22.jpeg",
+      "grootte_kb": 203.0
+    },
+    {
+      "bestand": "image23.jpeg",
+      "grootte_kb": 963.6
+    },
+    {
+      "bestand": "image24.jpg",
+      "grootte_kb": 441.9
+    },
+    {
+      "bestand": "image25.jpeg",
+      "grootte_kb": 192.8
+    },
+    {
+      "bestand": "image26.jpeg",
+      "grootte_kb": 123.2
+    },
+    {
+      "bestand": "image27.jpeg",
+      "grootte_kb": 187.6
+    },
+    {
+      "bestand": "image28.jpeg",
+      "grootte_kb": 632.0
+    },
+    {
+      "bestand": "image29.jpeg",
+      "grootte_kb": 368.9
+    },
+    {
+      "bestand": "image3.jpeg",
+      "grootte_kb": 219.2
+    },
+    {
+      "bestand": "image30.jpeg",
+      "grootte_kb": 287.7
+    },
+    {
+      "bestand": "image31.jpg",
+      "grootte_kb": 93.0
+    },
+    {
+      "bestand": "image32.jpeg",
+      "grootte_kb": 210.7
+    },
+    {
+      "bestand": "image33.jpeg",
+      "grootte_kb": 247.7
+    },
+    {
+      "bestand": "image34.jpeg",
+      "grootte_kb": 147.1
+    },
+    {
+      "bestand": "image35.jpeg",
+      "grootte_kb": 86.8
+    },
+    {
+      "bestand": "image36.jpeg",
+      "grootte_kb": 516.7
+    },
+    {
+      "bestand": "image37.jpeg",
+      "grootte_kb": 106.6
+    },
+    {
+      "bestand": "image38.jpg",
+      "grootte_kb": 263.2
+    },
+    {
+      "bestand": "image39.jpeg",
+      "grootte_kb": 203.2
+    },
+    {
+      "bestand": "image4.jpeg",
+      "grootte_kb": 444.8
+    },
+    {
+      "bestand": "image40.jpeg",
+      "grootte_kb": 503.5
+    },
+    {
+      "bestand": "image41.jpeg",
+      "grootte_kb": 153.5
+    },
+    {
+      "bestand": "image42.jpeg",
+      "grootte_kb": 158.2
+    },
+    {
+      "bestand": "image43.jpg",
+      "grootte_kb": 206.6
+    },
+    {
+      "bestand": "image44.jpeg",
+      "grootte_kb": 137.2
+    },
+    {
+      "bestand": "image45.jpeg",
+      "grootte_kb": 185.4
+    },
+    {
+      "bestand": "image46.jpeg",
+      "grootte_kb": 162.1
+    },
+    {
+      "bestand": "image47.jpeg",
+      "grootte_kb": 688.4
+    },
+    {
+      "bestand": "image48.jpeg",
+      "grootte_kb": 635.1
+    },
+    {
+      "bestand": "image49.tiff",
+      "grootte_kb": 167.6
+    },
+    {
+      "bestand": "image5.jpeg",
+      "grootte_kb": 681.2
+    },
+    {
+      "bestand": "image50.jpeg",
+      "grootte_kb": 283.7
+    },
+    {
+      "bestand": "image51.jpeg",
+      "grootte_kb": 136.6
+    },
+    {
+      "bestand": "image52.jpeg",
+      "grootte_kb": 382.6
+    },
+    {
+      "bestand": "image53.jpeg",
+      "grootte_kb": 164.1
+    },
+    {
+      "bestand": "image54.jpeg",
+      "grootte_kb": 130.7
+    },
+    {
+      "bestand": "image55.jpeg",
+      "grootte_kb": 167.1
+    },
+    {
+      "bestand": "image56.jpeg",
+      "grootte_kb": 178.2
+    },
+    {
+      "bestand": "image57.jpeg",
+      "grootte_kb": 1000.1
+    },
+    {
+      "bestand": "image58.jpeg",
+      "grootte_kb": 161.2
+    },
+    {
+      "bestand": "image59.jpeg",
+      "grootte_kb": 221.3
+    },
+    {
+      "bestand": "image6.jpeg",
+      "grootte_kb": 265.4
+    },
+    {
+      "bestand": "image60.jpeg",
+      "grootte_kb": 697.7
+    },
+    {
+      "bestand": "image61.jpeg",
+      "grootte_kb": 189.7
+    },
+    {
+      "bestand": "image62.jpeg",
+      "grootte_kb": 914.7
+    },
+    {
+      "bestand": "image63.jpeg",
+      "grootte_kb": 679.0
+    },
+    {
+      "bestand": "image64.jpeg",
+      "grootte_kb": 139.3
+    },
+    {
+      "bestand": "image65.jpeg",
+      "grootte_kb": 128.2
+    },
+    {
+      "bestand": "image66.jpeg",
+      "grootte_kb": 118.3
+    },
+    {
+      "bestand": "image67.jpeg",
+      "grootte_kb": 111.5
+    },
+    {
+      "bestand": "image68.jpeg",
+      "grootte_kb": 634.9
+    },
+    {
+      "bestand": "image69.jpeg",
+      "grootte_kb": 513.2
+    },
+    {
+      "bestand": "image7.jpeg",
+      "grootte_kb": 984.1
+    },
+    {
+      "bestand": "image70.jpeg",
+      "grootte_kb": 654.2
+    },
+    {
+      "bestand": "image71.jpeg",
+      "grootte_kb": 125.4
+    },
+    {
+      "bestand": "image72.png",
+      "grootte_kb": 742.3
+    },
+    {
+      "bestand": "image73.jpeg",
+      "grootte_kb": 149.3
+    },
+    {
+      "bestand": "image74.jpeg",
+      "grootte_kb": 415.3
+    },
+    {
+      "bestand": "image75.jpeg",
+      "grootte_kb": 696.9
+    },
+    {
+      "bestand": "image76.jpeg",
+      "grootte_kb": 434.5
+    },
+    {
+      "bestand": "image77.jpeg",
+      "grootte_kb": 134.4
+    },
+    {
+      "bestand": "image78.jpeg",
+      "grootte_kb": 128.7
+    },
+    {
+      "bestand": "image79.jpeg",
+      "grootte_kb": 953.2
+    },
+    {
+      "bestand": "image8.jpeg",
+      "grootte_kb": 837.6
+    },
+    {
+      "bestand": "image80.jpeg",
+      "grootte_kb": 701.5
+    },
+    {
+      "bestand": "image81.jpeg",
+      "grootte_kb": 834.6
+    },
+    {
+      "bestand": "image82.jpeg",
+      "grootte_kb": 194.2
+    },
+    {
+      "bestand": "image83.jpeg",
+      "grootte_kb": 174.7
+    },
+    {
+      "bestand": "image84.jpeg",
+      "grootte_kb": 406.4
+    },
+    {
+      "bestand": "image85.jpeg",
+      "grootte_kb": 161.6
+    },
+    {
+      "bestand": "image86.jpeg",
+      "grootte_kb": 551.0
+    },
+    {
+      "bestand": "image87.jpeg",
+      "grootte_kb": 419.4
+    },
+    {
+      "bestand": "image88.png",
+      "grootte_kb": 4.2
+    },
+    {
+      "bestand": "image89.svg",
+      "grootte_kb": 0.8
+    },
+    {
+      "bestand": "image9.png",
+      "grootte_kb": 68.5
+    },
+    {
+      "bestand": "image90.jpeg",
+      "grootte_kb": 1073.8
+    },
+    {
+      "bestand": "image91.jpeg",
+      "grootte_kb": 36.2
+    }
+  ]
+}

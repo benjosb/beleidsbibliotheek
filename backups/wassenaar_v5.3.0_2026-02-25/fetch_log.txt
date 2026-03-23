@@ -1,0 +1,34 @@
+Ophalen besluiten Wassenaar...
+
+=== Jaar 2022 ===
+  [2022] Ophalen records 1–1000...
+  [2022] Totaal beschikbaar: 1291
+  [2022] Ophalen records 1001–2000...
+  [2022] Opgehaald: 1280 (na filtering)
+
+=== Jaar 2023 ===
+  [2023] Ophalen records 1–1000...
+  [2023] Totaal beschikbaar: 1315
+  [2023] Ophalen records 1001–2000...
+  [2023] Opgehaald: 1306 (na filtering)
+
+=== Jaar 2024 ===
+  [2024] Ophalen records 1–1000...
+  [2024] Totaal beschikbaar: 1133
+  [2024] Ophalen records 1001–2000...
+  [2024] Opgehaald: 1133 (na filtering)
+
+=== Jaar 2025 ===
+  [2025] Ophalen records 1–1000...
+  [2025] Totaal beschikbaar: 1279
+  [2025] Ophalen records 1001–2000...
+  [2025] Opgehaald: 1275 (na filtering)
+
+Totaal opgehaald: 4994 besluiten (na filtering)
+
+Per domein:
+  4581  Bestuur & Veiligheid
+   297  Ruimte, Duurzaamheid & Mobiliteit
+   103  Financiën, Economie & Sport
+    11  Sociaal Domein, Wonen & Onderwijs
+     2  Cultuur & Welzijn

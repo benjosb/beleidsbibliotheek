@@ -1,0 +1,5598 @@
+═══════════════════════════════════════════════════════════════
+
+SYSTEEMPROMPT
+
+═══════════════════════════════════════════════════════════════
+
+Je bent een beleidsanalist van de gemeente Wassenaar. Je taak is het opstellen van een
+geconsolideerde beleidsbriefing voor een nieuw aangetreden wethouder.
+
+═══════════════════════════════════════════════════════════════
+DOEL
+═══════════════════════════════════════════════════════════════
+
+Schrijf een beknopte, feitelijke synthese van het vigerende gemeentelijk beleid
+binnen het opgegeven beleidsdomein. De briefing stelt een nieuwe wethouder in staat
+om binnen 15 minuten te begrijpen:
+  1. Welke beleidskeuzes er zijn gemaakt
+  2. Wat de actuele stand van zaken is
+  3. Welke besluiten aan die keuzes ten grondslag liggen
+
+═══════════════════════════════════════════════════════════════
+BRONREGELS — NIET-ONDERHANDELBAAR
+═══════════════════════════════════════════════════════════════
+
+1. ELKE feitelijke bewering MOET eindigen met een bronverwijzing in dit formaat:
+   [Besluit: «naam besluit», «datum»]
+
+2. Als een bewering op MEERDERE besluiten steunt, vermeld ze allemaal:
+   [Besluit: «naam 1», «datum 1»; «naam 2», «datum 2»]
+
+3. Je mag UITSLUITEND informatie gebruiken die LETTERLIJK in de aangeleverde
+   besluitteksten staat. Je mag NIET:
+   - Informatie toevoegen uit je eigen kennis
+   - Aannames doen over beleid dat niet in de besluiten staat
+   - Gevolgtrekkingen maken die niet expliciet in een besluit staan
+   - Termen of beleidsdoelen noemen die niet in de bronteksten voorkomen
+
+4. Als je iets NIET kunt vaststellen op basis van de bronnen, schrijf dan
+   expliciet: "Op basis van de beschikbare besluiten is niet vast te stellen of…"
+
+5. Als de besluittekst ONDUIDELIJK of ONVOLLEDIG is, meld dit:
+   "⚠ De besluittekst van [naam, datum] is onvolledig; verificatie bij de bron-PDF
+   wordt aanbevolen."
+
+═══════════════════════════════════════════════════════════════
+STRUCTUUR VAN DE BRIEFING
+═══════════════════════════════════════════════════════════════
+
+Gebruik exact deze opbouw:
+
+### 1. SAMENVATTING BELEIDSDOMEIN
+- Maximaal 5 zinnen die het domein in hoofdlijnen beschrijven
+- Elke zin met bronverwijzing
+
+### 2. BELEIDSCLUSTERS
+Groepeer de besluiten in inhoudelijke thema's (bijv. "Jeugdzorg", "Wmo",
+"Schuldhulpverlening" binnen Sociaal Domein). Per cluster:
+
+#### 2.x «Naam thema»
+
+**Actueel beleid:**
+- Beschrijf in 2–5 zinnen wat het huidige beleid is op dit thema
+- Elke zin met bronverwijzing(en)
+
+**Chronologie:**
+- Geef een tijdlijn van relevante besluiten (oudste eerst)
+- Markeer waar een besluit een eerder besluit WIJZIGT of VERVANGT
+
+**Aandachtspunten:**
+- Eventuele tegenstrijdigheden tussen besluiten
+- Besluiten met een einddatum of evaluatiemoment
+- Zaken die nog in uitvoering zijn (als dat uit de tekst blijkt)
+
+### 3. BELEIDSWIJZIGINGEN EN OPVOLGING
+- Overzicht van besluiten die eerdere besluiten wijzigen of vervangen
+- Expliciet benoemen welk besluit welk eerder besluit raakt
+
+### 4. LACUNES EN KANTTEKENINGEN
+- Onderwerpen die je op basis van gangbaar gemeentelijk beleid zou verwachten
+  maar die NIET in de besluiten voorkomen → benoem dit als observatie,
+  NIET als feit
+- Besluiten waarvan de tekst onvolledig of onduidelijk was
+- Besluiten die niet eenduidig in één cluster passen
+
+### 5. BRONNENLIJST
+- Volledige lijst van alle besluiten die in de briefing zijn gebruikt
+- Formaat: «datum» | «naam besluit» | «type (raad/college)» | «PDF-bron»
+
+═══════════════════════════════════════════════════════════════
+STIJL EN TAAL
+═══════════════════════════════════════════════════════════════
+
+- Schrijf in het Nederlands
+- Formeel maar toegankelijk — geschikt voor een bestuurder, niet voor een jurist
+- Gebruik actieve zinnen: "De raad heeft besloten…", niet "Er is besloten…"
+- Vermijd jargon dat niet in de bronteksten voorkomt
+- Wees precies: "verlenging met één jaar" is iets anders dan "structurele voortzetting"
+- Wees kort: de briefing moet in 15 minuten leesbaar zijn
+
+═══════════════════════════════════════════════════════════════
+ZELFVERIFICATIE — VOER DIT UIT VOOR JE ANTWOORDT
+═══════════════════════════════════════════════════════════════
+
+Voordat je de briefing oplevert, controleer:
+
+☐ Heeft ELKE feitelijke zin een bronverwijzing?
+☐ Komt ELKE genoemde bronverwijzing voor in de aangeleverde data?
+☐ Heb ik NERGENS informatie toegevoegd die niet in de besluitteksten staat?
+☐ Heb ik tegenstrijdigheden of opvolging van besluiten gesignaleerd?
+☐ Heb ik lacunes en onduidelijkheden expliciet benoemd?
+☐ Is de bronnenlijst compleet?
+
+Als je op een van deze punten twijfelt, meld dit aan het einde van de briefing
+onder het kopje "⚠ Opmerkingen bij deze synthese".
+
+
+═══════════════════════════════════════════════════════════════
+
+GEBRUIKERSPROMPT
+
+═══════════════════════════════════════════════════════════════
+
+
+Hieronder vind je alle besluiten van de gemeente Wassenaar binnen het portefeuille-thema
+"Sociaal Domein, Wonen & Onderwijs". De besluiten omvatten zowel raadsbesluiten (2019–2025) als 
+collegebesluiten (2022–2025) uit de volledige huidige collegeperiode.
+
+Aanvullend is het coalitieakkoord 2022–2026 "Samen voor Wassenaar" bijgevoegd 
+als referentiekader.
+
+Stel een beleidsbriefing op volgens de instructies in de systeemprompt.
+
+
+═══════════════════════════════════════════════════════════════
+
+COALITIEAKKOORD 2022–2026 — SAMEN VOOR WASSENAAR
+
+═══════════════════════════════════════════════════════════════
+
+SAMEN VOOR WASSENAAR
+KOERSVAST, OPEN EN BETROKKEN
+
+2
+SAMEN VOOR WASSENAAR
+KOERSVAST, OPEN EN BETROKKEN
+INHOUDSOPGAVE
+Woord vooraf 3
+Bestuur en Middelen 4
+Mens en Maatschappij 7
+Fysieke Leefomgeving 9
+Portefeuilleverdeling college b&w 14
+
+Woord vooraf
+We staan voor grote maatschappelijke Wassenaar wil een inclusieve, groene en
+opgaven, onder meer op het gebied van financieel gezonde gemeente zijn waar
+klimaat en duurzaamheid, voldoende iedereen prettig kan leven, wonen en
+betaalbare woningen, vergrijzing, werken. Een plek waar onze kinderen
+toegang tot zorg en (verkeers)veiligheid. gezond en veilig kunnen opgroeien en
+Op lokaal niveau verlangen inwoners en waar onze ouderen langer vitaal kunnen
+ondernemers antwoorden op hun blijven.
+vragen, ondersteuning bij maatschappe­
+lijke initiatieven en hulp bij problemen. De coalitie streeft naar rust en even­
+Zij vragen om een betrokken gemeente wicht in het bestuur. Zorgvuldige en
+die luistert, duidelijk en betrouwbaar is. transparante besluitvorming vormt het
+Een gemeente die koers houdt in uitgangspunt van ons handelen. Het
+onstuimige tijden. politieke debat en de gesprekken met
+inwoners, ondernemers en maat­
+Wij werken samen vanuit onze idealen schappelijke organisaties worden
+en ambities; we vinden elkaar in onze gevoerd op basis van wederzijds respect.
+overtuiging van wat goed is voor We gaan in gesprek over dit coalitie­
+Wassenaar. De partijen VVD, CDA, D66, akkoord en de keuzes die we hierin
+DLW en PvdA presenteren een coalitie­ hebben gemaakt. Het nieuwe college
+akkoord waarin we zoveel mogelijk treedt verbindend op; we doen het
+rekening houden met de behoeften van immers samen voor Wassenaar.
+alle Wassenaarders.
+3
+
+Bestuur en Middelen
+Financiën en belastingen We sparen voldoende voor de toekomst
+De gemeente houdt de financiën op door afschrijvingen op te nemen in de
+orde met een structureel sluitende begroting. Ook de opbrengsten van de
+begroting. verkoop van gemeentelijke onroerende
+zaken worden toegevoegd aan de
+In 2024 en 2025 komt er in beginsel geen algemene reserve. Bestemmingsreserves
+extra verhoging van de onroerendezaak­ worden beperkt.
+belasting (ozb) bovenop de inflatie­
+correctie, tenzij dit echt nodig is voor Economie
+het voorzieningenniveau voor inwoners. We werken aan een economische visie
+De toeristenbelasting wordt deze in samenspraak met ondernemers die in
+raads periode niet verhoogd; na een jaar 2024 gereed moet zijn. Hierin wordt
+evalueren we de effectieve inzet van onder meer opgenomen het behoud en
+deze belasting. toekomstbestendig maken van de
+bestaande bedrijventerreinen en
+In de Kadernota 2024 volgt de uitwer­ aansluiting gezocht bij de regionale
+king voor wat betreft ons ambitie­ strategie werklocaties van de Metro­
+niveau. Op basis hiervan maken we poolregio Rotterdam Den Haag (MRDH).
+keuzes binnen het beschikbare
+financiële kader. Ambtelijke organisatie
+De ingeslagen weg na de ontvlechting
+We overwegen het lenen van geld alleen van de Werkorganisatie Duivenvoorde
+als dit noodzakelijk is voor (project­) (de voormalige ambtelijke samen wer­
+investeringen. De gemeente gaat niet king tussen Voorschoten en Wassenaar)
+lenen om lopende uitgaven te dekken. wordt voortgezet. We werken aan de
+We gaan daarnaast actief op zoek naar verdere ontwikkeling van de jonge
+44 subsidies, fondsen en mogelijkheden ambtelijke organisatie, zodat maat ­
+voor cofinanciering van projecten, zoals schappelijke vraagstukken effectief
+de restauratie van De Paauw en het kunnen worden aangepakt. Daarbij is
+revitaliseren van onze dorpskern. het van belang voldoende deskundig
+
+personeel in dienst te hebben en een Gemeenschappelijke regelingen
+aantrekkelijke werkgever te zijn. De Veel maatschappelijke uitdagingen
+coalitiepartners zullen de voortgang vragen om samenwerking met partners
+binnen de ambtelijke organisatie in de regio. Dat vraagt een open
+jaarlijks evalueren. houding om gezamenlijk deze uitda­
+gingen aan te kunnen gaan. Onze
+Servicegerichtheid en gemeente is een actieve, betrouwbare 5
+dienstbaarheid partner in de regio.
+De gemeente behartigt het algemeen
+belang en heeft oog voor het individu. In We zorgen voor een kundige, construc­
+Wassenaar voelen inwoners en onder­ tieve vertegenwoordiging van het
+nemers zich geholpen en gesteund door Wassenaarse belang. We willen hier
+de gemeente dankzij toegankelijke en maximale impact behalen en stellen
+efficiënte dienstverlening. De communi­ hiervoor voldoende ambtelijke capaciteit
+catie tussen gemeente, inwoners en beschikbaar.
+ondernemers is transparant, duidelijk en
+getuigt van wederzijds respect. Openbare orde en veiligheid
+De veiligheidsprioriteiten krijgen een
+Gemeentewinkel plaats in het nieuw op te stellen
+We realiseren een toegankelijke, laag­ integraal veiligheidsbeleid.
+drempelige locatie voor de Gemeente­
+winkel, waar inwoners en ondernemers De openbare orde wordt gehandhaafd
+terecht kunnen voor gemeentelijke door de politie, inspecteurs openbare
+dienstverlening, zoals een paspoort. Ook ruimte en buitengewoon opsporings­
+zijn ze hier welkom met vragen, bijvoor­ ambtenaren (boa’s). Zij houden toezicht
+beeld over mogelijkheden om te en treden waar nodig op tegen mis­
+verduurz amen. standen en overtredingen.
+
+Om in te spelen op de thema’s als Evenementen en vergunningen
+‘omgaan met onbegrepen gedrag’ en Wassenaar is een dorp waar veel
+meervoudige sociale problematiek is het evenementen worden georganiseerd.
+belangrijk om zorg en veiligheid in een Evenementen zorgen voor verbinding en
+lokale kamer samen te brengen. Dit samenhang. We werken aan een nieuw
+geeft de mogelijkheid om naargelang de evenementenbeleid om duidelijke kaders
+situatie snel te schakelen en mensen te bieden. We denken mee om
+persoonsgericht te helpen. evenementen mogelijk te maken.
+Om de gemeentelijke handhaving goed Inwonersparticipatie
+te organiseren, stellen we duidelijke In Wassenaar doet iedereen mee, van
+66 prioriteiten en ontwikkelen we een visie jong tot oud. We schetsen heldere
+en een aanpak. Ook bezien we de kaders voor inwonersparticipatie langs
+benodigde handhavingscapaciteit. de lijnen van de verordening en het
+participatiekompas.
+Politiebureau
+We willen het politiebureau behouden Vergrijzing wordt een groot thema in
+voor het dorp. Wassenaar. We zullen dit oppakken
+samen met de ouderen en met hen
+Ondermijning komen tot een plan voor ouderen­
+De inzet op ondermijning is de participatie.
+afgelopen jaren geïntensiveerd: zo is er
+inmiddels een vaste formatieplaats voor Er wonen veel internationals in
+een onder mijningsregisseur in het team. Wassenaar. Dit is een flinke groep
+De regisseur houdt zich bezig met inwoners die ook kan meedraaien in het
+signalen rond thema’s als (vastgoed) verenigings leven of zich kan inzetten als
+fraude, drugs en mensenhandel. De vrijwilliger. In oktober 2021 is de start­
+regisseur zet de komende jaren vooral in notitie ‘Internationale Wassenaarders’
+op bewust wording onder inwoners en besproken en vastgesteld.
+ondernemers en hoe zij vormen van
+ondermijning kunnen melden.
+
+Mens en Maatschappij
+Sociaal domein mering van activiteiten. We koesteren
+In Wassenaar behouden we goede en ondersteunen een sterk verenigings­
+welzijns­ en zorgvoorzieningen. We leven en de vrijwilligers. We zorgen voor
+geven uitvoering aan bestaand beleid. een gerichte spreiding van sociale
+De gemeente, inwoners en maat­ activiteiten en vaste ontmoetings centra
+schappel ijke instellingen onders teunen in verschillende buurten van Wassenaar.
+elkaar. Een nauwe en efficiënte samen­
+werking is daarvoor een voor waarde. In 2023 herijken we het bestaand beleid
+en stellen we de kaders op voor de
+Om de kwaliteit en toegankelijkheid van komende jaren. Verder leggen we
+zorg te garanderen, dient deze in accenten op preventie, het wegwerken
+financieel en maatschappelijk opzicht en van wachtlijsten, aandacht voor mantel­
+qua personele bezetting houdbaar te zorg en respijtzorg (bijvoorbeeld met
+zijn. Dit vraagt om scherpe keuzes in het Odensecafé), dementie vriendelijke
+prioritering, waarbij de mens centraal gemeente en armoede bestrijding. Ten
+staat. Daarbij wordt goed gekeken naar aanzien van ons armoedebeleid
+de hulpvraag en situatie per individu. evalueren we het maatwerkfonds en bij
+We handelen vanuit vertrouwen en gebleken toegevoegde waarde, zien we
+respect, normaliseren zorg volgens toe op een meer permanent karakter.
+landelijke richtlijnen en maken waar
+mogelijk gebruik van landelijke finan­ Sociaal Team Wassenaar
+ciering en fondsen. Het Sociaal Team Wassenaar heeft een
+spilfunctie als het gaat om samen­
+We zetten in op het versterken en werking in het sociaal domein. We
+verbinden van het maatschappelijk streven naar een sterk team, waarin
+middenveld. Dit doen we onder meer via voor alle betrokkenen een duidelijke rol
+een breed scala aan bestaande en is weggelegd. We beginnen zo snel 7
+nieuwe activiteiten; door multifunctio­ mogelijk aan het vergroten van de
+neel gebruik van accommodaties en het bekendheid en bereikbaarheid van het
+gezamenlijk optrekken in de program­ team (1 loket, 1 telefoonnummer).
+
+Er is aandacht voor centrale huisvesting meerjarige contracten. We kijken altijd
+van het Sociaal Team Wassenaar. Samen naar de beste financieringsvorm voor
+met andere partijen inventariseren we zowel de ketenpartners als de
+wat nodig is en maken een realistische gemeente.
+begroting van kosten die nodig zijn voor
+het versterken van het preventief veld. Inclusie
+De inclusieagenda wordt opgesteld, in
+Jeugd- en jongerenbeleid 2023 starten we met de uitvoering van
+Er wordt gewerkt aan jeugd­ en concrete acties.
+jongeren beleid, daarbij gebruiken we de
+inbreng die wordt opgehaald in sessies Sport
+met jongeren en hun ouders. Sporten is belangrijk voor de lichame­
+lijke en geestelijke gezondheid van alle
+We onderzoeken de mogelijkheden voor inwoners en is daarnaast een sterk
+een Jeugd­ of Jongerenraad en andere wapen in de strijd tegen eenzaamheid.
+vormen van betrokkenheid van de jeugd. We focussen op verbinding en samen­
+Samen met de jongeren in ons dorp hang door het stimuleren van sport­ en
+komen we tot een plan voor Jeugd­ cultuurparticipatie en waar nodig extra
+participatie. te investeren in activiteiten.
+Naast het bestaande ambulante jeugd­ Er wordt een sportvisie opgesteld en we
+en jongerenwerk gaan we op zoek naar herzien het subsidiebeleid. We voeren
+ontmoetingsplekken waar de jeugd het Sport­ en Preventieakkoord uit. We
+naartoe kan om tijd met elkaar door te geven sport een stevige plaats in de
+brengen. inclusieagenda en het preventiebeleid.
+88 We zetten in op betere voorlichting over Gezondheidszorg
+alcohol en drugs, mentale gezondheid, De gemeente onderkent het maat­
+seksualiteit, voeding en sport; scholen schappelijk belang van gezondheid en
+zijn hierin een belangrijke partner. zet in op voldoende beschikbare huis­
+artsenzorg in Wassenaar. Het initiatief
+Subsidie- en inkoopbeleid van de Wassenaarse huisartsen om een
+We zorgen voor een zuivere lijn in het gezondheidscentrum te vestigen in de
+toekennen van subsidies dan wel inkoop voormalige Sint Jozefkerk bezien we
+en onderzoeken mogelijkheden om vanuit een positieve grondhouding.
+aanvragers meer zekerheid te bieden via
+
+Fysieke Leefomgeving
+schaps tafel Duin, Horst en Weide en het
+Openbare ruimte Nationaal Park Hollandse Duinen,
+In de bebouwde omgeving gaan we benutten we als middel om onze
+komende jaren naar onderhouds­ ruimtelijke ambities te bereiken.
+niveau B. Dit betekent dat de openbare
+ruimte schoon, heel en veilig is met Beschermd dorpsgezicht
+minimale oneffenheden. Per gebied We koesteren ons beschermd dorps­
+doen we wat nodig is; dit vraagt om gezicht. Het huidige beleid is afdoende
+maatwerk, prioritering en fasering. We om enerzijds ons dorpsgezicht te
+maken een inhaalslag waar het gaat om behouden en anderzijds ons erfgoed 9
+bestrating in de openbare ruimte. verantwoord te verduurzamen.
+We stellen een beheervisie op, waaruit Woningbouw en bouwlocaties
+instandhoudingsplannen volgen. Hierin We maken vanuit de huidige Woonvisie
+wordt ook aandacht besteed aan het tempo met de uitvoering van vier
+onderhoudsniveau van de landgoederen. projecten Den Deijl, Gemeentewerf,
+De beheervisie wordt in 2023 voorgelegd Kerkehout en ANWB. In de Woonzorg­
+aan de raad. visie (gereed in 2024) worden de
+ontwikkelingen van deze bouwplannen
+Natuur en groen meegenomen.
+Wassenaar wil het groene en landelijke
+karakter van de gebieden behouden. Er We realiseren 30% sociale huur op de
+komt een integrale visie op hoe we de toekomstige bouwlocaties om te
+meest kwetsbare natuurgebieden, zoals voldoen aan de landelijke streefwaarde.
+Meijendel, gaan ontlasten. Daarbij Er is daarnaast voldoende aandacht voor
+bezien we deze gebieden in onderlinge koopwoningen in het middensegment
+verbinding met elkaar. We zetten in op en het stimuleren van doorstroming. De
+spreiding van recreatie binnen de gemeente staat positief tegenover
+verschil lende natuurgebieden en we flexwoningen, mits inpasbaar in de
+beheersen de recreatiedruk. De samen­ omgeving.
+werkingsverbanden, zoals de land­
+
+Bij het project Gemeentewerf, inclusief voordeel bestaat om een gebouw te
+het voor woningbouw geschikt te behouden voor de toekomst. De
+maken gemeentekantoor, gaan we uit opbrengsten van de verkoop worden
+van minimaal 30% sociale huur, toegevoegd aan de algemene reserve.
+40% middenhuur en ­koop en voor het
+overige het hogere segment. Eerst Monumenten en cultureel
+wordt de huidige gemeentewerf erfgoed
+verplaatst naar een nieuwe locatie We doen er alles aan om ons cultureel
+1100 (in het eerste kwartaal van 2024). De erfgoed te behouden en toekomst­
+vervuilde bodem wordt gesaneerd. bestendig te maken door adequaat
+onderhoud en toezicht. We helpen
+Het burgerinitiatief tot zelfstandige eigenaren bij de verduurzaming van
+seniorenwoningen met zorgfaciliteiten monumenten door te informeren,
+wordt zo snel mogelijk gerealiseerd. stimuleren en faciliteren. Wij bevorderen
+Over andere zorgfaciliteiten maakt de passende herbestemmingen, die
+gemeente prestatieafspraken met de aansluiten bij de mogelijkheden die het
+woningbouwcorporaties. monument biedt.
+Door de samenvoeging van de Sint Integraal Huisvestingsplan
+Jozefschool en Sint Jan Baptistschool Onderwijs
+komen beide locaties vrij. Op deze Het Integraal Huisvestingsplan wordt
+locaties worden appartementen herijkt (2023). De huidige norm voor
+gebouwd, met een evenwichtige schoolgebouwen is bijna energie­
+verde ling in sociale huur en middenhuur neutraal (BENG). We onderzoeken wat
+en ­koop. de meerkosten zijn om bij nieuwbouw
+energieneutraal (ENG) te zijn en zullen
+Gemeentelijk vastgoed hierin per project een keuze maken. We
+De gemeente maakt tempo met het gaan in gesprek met scholen over
+verkopen van onroerende zaken, tenzij duurzaamheid en ventilatie.
+er een duidelijk maatschappelijk
+
+We zoeken naar een geschikte locatie De Warenar blijft eigendom van de
+voor de gezamenlijke nieuwbouw voor gemeente, omdat is gebleken dat
+de Sint Jozefschool en Sint Jan Baptist­ verkoop niet reëel is. We investeren
+school in een Integraal Kindcentrum. alleen in de Warenar als de langdurige
+erfpacht kan worden verlengd.
+De Paauw
+Raadhuis De Paauw krijgt de functie van We onderzoeken of het haalbaar is
+gemeentelijk bestuurscentrum. Daar­ verschillende functies te combineren,
+voor wordt het rijksmonument zo snel zoals een cultuurhuis met een buurt­
+mogelijk op passende wijze gerestau­ functie en museum (bijvoorbeeld een
+reerd en ingericht. We proberen dorpsmuseum en/of het brand­
+hiervoor financiering te verkrijgen via weermuseum). Het doel is de theater­
+subsidies, fondsen en/of crowdfunding. functie te behouden.
+We gaan uit van het financiële kader
+zoals eerder door de gemeenteraad is Duurzaamheid
+vastgesteld en maken de kosten voor dit We gaan inwoners actief informeren,
+project zo inzichtelijk mogelijk. faciliteren en stimuleren om zelf te
+verduurzamen.
+Op korte termijn moet er een integraal
+plan liggen voor de locatiekeuze van de De gemeente geeft zelf het goede
+huisvesting van de overige ambtenaren voorbeeld en neemt daarom maat­
+en de gemeentewinkel. In 2023 hakken regelen om te verduurzamen. Deze
+we knopen door. maatregelen moeten zich binnen
+twintig jaar terugverdienen. Onze
+De Warenar duurzaamheidsdoelstellingen moeten
+De Warenar zorgt voor verbinding. Wij ook meetbaar zijn; hiervoor wordt de
+vinden het daarom belangrijk dat de CO2­ladder gebruikt. 11
+culturele en sociale functie van de
+Warenar behouden blijft voor de
+Wassenaarders.
+
+Avalex en milieustraat ten niet worden toegestaan. Bij het
+We onderzoeken welke mogelijkheden opstellen van de visie betrekken we
+er zijn om het afvalbrengstation op ondern emers.
+termijn te verplaatsen. Uiteraard De toegankelijkheid van het strand
+behouden we de service voor de wordt geoptimaliseerd; denk aan
+inwoners van Wassenaar. Er komt een leuningen bij de trappen en verharding
+concreet plan om restafval te reduceren. van het pad naar zee. Er komen meer
+faciliteiten, zoals een rolstoelvriendelijke
+Levendige dorpskern openbare wc en een bewaakte fietsen­
+Een levendige dorpskern draagt bij aan stalling met elektrische laadpalen. We
+economische activiteit en sociale zetten in op een OV­verbinding naar het
+verbinding. De gemeente draagt bij aan strand.
+een gezellig dorpshart met mooie
+winkels en goede voorzieningen. Verkeer
+1122 Verkeersveiligheid en leefbaarheid zijn
+De dorpskern moet voor iedereen belangrijke uitgangspunten. We hebben
+toegankelijk zijn (inclusief); we zorgen de ambitie om bijna overal in de
+voor een rolstoeltoegankelijke openbare bebouwde kom de snelheid van 30 km/u
+wc. We zorgen voor een smaakvolle te behouden of in te voeren. Daarbij zijn
+inrichting van de openbare ruimte met we pragmatisch met betrekking tot de
+aandacht voor het beschermd inrichting op korte termijn. Bij groot
+dorpsgezicht. onderhoud gaan we herinrichten,
+daarbij zijn de richtlijnen van CROW van
+We beginnen in 2023 met de vernieu­ belang. Een aantal gebiedsontsluitende
+wing van de dorpskern gebaseerd op het wegen (bijvoorbeeld Stoeplaan, Groot
+beeldkwaliteitsplan, brancheringsp lan Haesebroekseweg tot aan Papegaaien­
+en stedenbouwkundig plan. De planning laan, de Wittenburgerweg) blijft
+dient realistisch te zijn qua uitvoering 50 km/u; hier kan verkeer (inclusief
+en financiering. Mogelijkheden tot openbaar vervoer en hulpdiensten)
+co­financiering en fondsenwerving doorstromen zonder dat dit gevolgen
+moeten worden onderzocht. heeft voor de leefbaarheid en verkeers­
+veiligheid.
+Strand
+We ontwikkelen een strandvisie gericht We stimuleren fietsverkeer en bevor­
+op behoud van het huidige karakter als deren fietsveiligheid bij scholen en
+familiestrand, waarin jaarrond­activitei­ sport verenigingen, bijvoorbeeld d.m.v.
+
+schoolzones of schoolstraten. Op De verkeerssituatie op het Rozenplein is
+gebiedsontsluitende wegen worden moeilijk oplosbaar. Naast onvoldoende
+vrijliggende fietspaden behouden of doorstroming is ook de veilig heids­
+neergelegd. Waar vrijliggende fiets­ situatie voor verbetering vat baar. We
+paden liggen, blijven die gehandhaafd. wachten het lopende onder zoek af.
+We gaan in gesprek met de provincie Geluidshinder vliegverkeer
+over de afwaardering van de N441 naar
+overal 60 km/u. We blijven in gesprek Wassenaar monitort geluidoverlast
+over de snelle realisatie van een samen met de Omgevingsdienst West­
+verkeers doseerlicht om sluipverkeer Holland (ODWH), door het inrichten van
+tegen te gaan. Ook de N44 wordt op gezamenlijke metingen. We agenderen
+termijn afgewaardeerd, zodat er een de toenemende overlast van laag­
+groenverbinding ontstaat van het strand vliegend verkeer bij de relevante over­
+tot aan het Groene Hart. Hiervoor moet leggen en belanghebbenden.
+wel een oplossing worden gevonden
+voor het verkeer, door middel van een Ruimte voor zweefvliegen
+tunnel en/of hoogfrequent, hoog­ De gemeente zoekt uit wat de mogelijk­
+waardig openbaar vervoer. heden in Wassenaar zijn voor zweef­
+vliegen zonder belasting van natuur en
+milieu.
+13
+
+Portefeuilleverdeling college b&w
+Burgemeester
+• Veiligheid
+• Handhaving
+• Communicatie
+• Internationale Wassenaarders
+• Regio
+• Ambtelijke organisatie
+• Burgerzaken/KCC/Dienstverlening
+• Ambassadeur Wassenaar
+• Inburgering, statushouders, asielzoekers
+Wethouder Financiën, Economie en Sport
+FINANCIËN
+• Gemeentelijk vastgoed
+• Belastingen
+• ICT
+• Avalex (bestuur)
+• Gemeenschappelijke regelingen (bestuur)
+• Projectmanagement
+• Project De Paauw
+• Project Gemeentewerf (bouwrijp maken)
+• Project gemeentelijke sporthal
+• Project Schulpwei
+1144 ECONOMISCHE ZAKEN
+• Project dorpskern
+• Metropoolregio Rotterdam Den Haag (economisch vestigingsklimaat)
+SPORT
+Wethouder Ruimte, Duurzaamheid en Mobiliteit
+RUIMTELIJKE ORDENING
+• Strand en toerisme
+• Omgevingswet
+• Structuur­ en omgevingsvisie
+• Visie Duindigt
+• Project Duindigt
+• Duin, Horst en Weide
+• Groene Zone/Valkenhorst
+
+DUURZAAMHEID
+• Klimaat en duurzaamheid
+• Agrarische Zaken
+• Dierenwelzijn
+• Riolering
+• Afval
+• Energietransitie
+MOBILITEIT
+• Verkeer en wegen
+• Openbaar vervoer
+• Metropoolregio Rotterdam Den Haag (vervoersautoriteit)
+• Project N44
+Wethouder Sociaal, Wonen en Onderwijs
+SOCIAAL DOMEIN
+• Jeugdzorg
+• Wet maatschappelijke ondersteuning (Wmo)
+• Ouderenbeleid
+• Werk en inkomen (Participatiewet)
+WONEN
+• Bouwen en wonen, inclusief:
+• Den Deijl
+• Gemeentewerf 15
+• ANWB
+• Kerkehout
+• Volkshuisvesting
+• Woonzorgvisie
+• Onderwijs
+• Wassenaars onderwijs en Schooladviesdienst (SAD)
+• Integraal Huisvestingsplan (IHP)
+Wethouder Cultuur en Welzijn
+CULTUUR
+• Erfgoedbeleid/cultureel erfgoed
+• Project de Warenar
+WELZIJN
+• Subsidiebeleid
+• Vrijwilligerswerk
+• Welzijn en wijken
+• Inwonersparticipatie
+• Volksgezondheid (GGD)
+• Inclusie en anti­discriminatie
+
+COLOFON
+Publicatiedatum:
+11 maart 2023
+www.wassenaar.nl
+
+
+═══════════════════════════════════════════════════════════════
+
+RAADSBESLUITEN — SOCIAAL DOMEIN, WONEN & ONDERWIJS (14 besluiten)
+
+═══════════════════════════════════════════════════════════════
+
+---
+Besluit: Beleidsnota Ouderenbeleid 2025
+Datum: 2025-01-28
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Ouderenbeleid
+
+Besluittekst (kort):
+De beleidsnota Ouderenbeleid 2025 vast te stellen.
+---
+
+---
+Besluit: Vaststellen beleidsnota schuldhulpverlening 2025-2028
+Datum: 2025-04-01
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Schuldhulpverlening
+
+Besluittekst (kort):
+De Beleidsnota Schuldhulpverlening 2025–2028 vast te stellen als richtinggevend beleid voor schuldhulpverlening in Wassenaar, met focus op kwalitatieve dienstverlening, preventie, vroeg signalering, curatie & nazorg, met dien verstande dat de passage in de 
+beleidsnota op pagina 9 als volgt wordt gewijzigd:
+Van:
+“Specifieke doelgroepen beter in beeld brengen → Extra aandacht voor ondernemers, jongeren en laaggeletterden.”
+Naar:
+“Onderzoek doen naar de demografische kenmerken van inwoners met schulden, om vervolgens de specifieke doelgroepen te definiëren die beter in beeld gebracht moeten worden.”
+---
+
+---
+Besluit: Herijking Integraal Huisvestingsplan (IHP) onderwijs (2024-2039)
+Datum: 2025-04-01
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Onderwijshuisvesting
+
+Besluittekst (kort):
+1. De herijking van het Integraal huisvestingsplan (IHP) onderwijs (2024-2039) vast te stellen. 2. Een gedeelte van de renovatie van het Adelbert College ad € 2.872.000 naar voren te halen van 2029 naar 2027 en deze kosten op te nemen in de meerjarenraming (kadernota 2025-2028)
+---
+
+---
+Besluit: Verordening Adviesraad Sociaal Domein 2025
+Datum: 2025-06-03
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Sociaal Domein
+
+Besluittekst (kort):
+De Verordening Adviesraad Sociaal Domein gemeente Wassenaar 2025 vast te stellen.
+---
+
+---
+Besluit: Voorbereidingskrediet nieuwbouw onderwijshuisvesting Sint Baptistschool en Sint Jozefschool
+Datum: 2025-06-03
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Onderwijshuisvesting
+
+Besluittekst (kort):
+Een voorbereidingskrediet van € 950.500 te voteren voor de nieuwbouw van de huisvesting voor de Sint Jan Baptistschool en de Sint Jozefschool.
+---
+
+---
+Besluit: Nieuw inkoopkader jeugdhulp GR SbJH
+Datum: 2025-06-03
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Jeugd
+
+Besluittekst (kort):
+1. De in de inkoopstrategie geformuleerde kaders vast te stellen (Bijlage 2. Nieuw inkoopkader jeugdhulp GR SbJH); 2. Het college opdracht te geven de kaders voor het afsluiten van de contracten voor de regionale jeugdhulp per 1 januari 2027, verder uit te werken.
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2026 GR SbJH
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Jeugd
+
+Besluittekst (kort):
+1. Een zienswijze naar voren te brengen op de ontwerpbegroting 2026 bij het bestuur van het Servicebureau Jeugdhulp Haaglanden, zoals verwoord in de bij dit besluit behorende brief.
+---
+
+---
+Besluit: Intrekken Subsidieregeling kindgebonden financiering peuteropvang gemeente Wassenaar uit 2019
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Voor- en vroegschoolse educatie
+
+Besluittekst (kort):
+1. De Subsidieregeling kindgebonden financiering peuteropvang gemeente Wassenaar uit 2019 per 1 augustus 2025 in te trekken.
+---
+
+---
+Besluit: Aanvullend voorbereidingskrediet voor de renovatie en vernieuwbouw van de Kievietschool
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Onderwijshuisvesting
+
+Besluittekst (kort):
+1. Een aanvullend voorbereidingskrediet van € 69.090 te voteren voor de renovatie en vernieuwbouw van de Kievietschool.
+---
+
+---
+Besluit: Verordening leerlingenvervoer 2025 gemeente Wassenaar en bijbehorende beleidsregels
+Datum: 2025-09-22
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Wmo
+
+Besluittekst (kort):
+Vast te stellen van de volgende verordening: Verordening leerlingenvervoer gemeente Wassenaar 2025
+---
+
+---
+Besluit: Startnotitie Lokale Woonzorgvisie
+Datum: 2025-09-22
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Woonzorgvisie
+
+Besluittekst (kort):
+1. de Startnotitie Lokale Woonzorgvisie gemeente Wassenaar 2025 vast te stellen en daarbij uit te gaan van de in hoofdstuk 4 uitgewerkte uitgangspunten: 
+a. Passend wonen stimuleren; 
+b. Lokale doorstroming bevorderen;
+c. Transparantie over lokaal versus regionaal;
+d. Duurzame woonoplossingen; 
+e. Zelfstandigheid bevorderen;
+Pagina 2 van 4
+f. Toegankelijke zorg en ondersteuning;
+g. Welzijn bevorderen;
+h. Flexibiliteit.
+---
+
+---
+Besluit: Jaarrekening 2024 Stichting Openbaar Primair Onderwijs Wassenaar
+Datum: 2025-10-14
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Onderwijs
+
+Besluittekst (kort):
+1. In te stemmen met de jaarrekening 2024 van de Stichting Openbaar Primair Onderwijs Wassenaar
+---
+
+---
+Besluit: Lokaal Jeugdbeleid Wassenaar 2026
+Datum: 2025-11-25
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Jeugd
+
+Besluittekst (kort):
+1. Het beleidsdocument ‘Lokaal Jeugdbeleid Wassenaar 2026’ vast te stellen, met de daarin
+geformuleerde maatschappelijke opgaven en doelen, als richtinggevend kader voor het 
+gemeentelijk jeugdbeleid, en daarbij uit te gaan van de volgende uitgangspunten: 
+a. Internationale kinderrechten als fundament 
+b. Een veilige, gezonde en kansrijke omgeving 
+c. Toegankelijke basisvoorzieningen als fundament 
+d. Versterken van beschermende factoren en vroegsignalering 
+e. Normaliseren van alledaagse opvoedingsvragen 
+f. Samen opvoeden in een sterke gemeenschap 
+g. Samenwerking als sleutel tot succes 
+h. Breed draagvlak en participatie
+---
+
+---
+Besluit: Verordening Jeugdhulp gemeente Wassenaar 2025
+Datum: 2025-11-25
+Type: raadsbesluit
+Domein: Sociaal Domein, Wonen & Onderwijs
+Onderwerp: Jeugd
+
+Besluittekst (kort):
+De Verordening Jeugdhulp gemeente Wassenaar 2025 vast te stellen.
+---
+
+
+═══════════════════════════════════════════════════════════════
+
+COLLEGEBESLUITEN — SOCIAAL DOMEIN, WONEN & ONDERWIJS (352 besluiten)
+
+═══════════════════════════════════════════════════════════════
+
+---
+Besluit: De aanvraag van het Rijnlands Lyceum Wassenaar op te nemen in het
+Datum: 2022-05-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_mei_2022.pdf
+
+Besluittekst (kort):
+Overzicht; Huisvesting Onderwijsprogramma 2023.
+
+Volledige tekst:
+De aanvraag van het Rijnlands Lyceum Wassenaar op te nemen in het
+Overzicht; Huisvesting Onderwijsprogramma 2023.
+---
+
+---
+Besluit: Vaststellen definitieve scope herontwikkeling Den Deylschool.
+Datum: 2022-05-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_mei_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+Vast te stellen dat bij de herontwikkeling Den Deylschool de BSO definitief onderdeel
+is van het te realiseren programma en dat de Fabritiuslaan (tussen Hofcampweg en
+Hillenaarlaan) en het Deijlerhuis; Hofcampweg 3 in de herontwikkeling betrokken
+worden.
+
+Volledige tekst:
+Vaststellen definitieve scope herontwikkeling Den Deylschool.
+Besluit:
+Vast te stellen dat bij de herontwikkeling Den Deylschool de BSO definitief onderdeel
+is van het te realiseren programma en dat de Fabritiuslaan (tussen Hofcampweg en
+Hillenaarlaan) en het Deijlerhuis; Hofcampweg 3 in de herontwikkeling betrokken
+worden.
+---
+
+---
+Besluit: Intentie overeenkomst Amerikaanse School tbv ontwikkeling Deijlerhoeve
+Datum: 2022-05-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_mei_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+Akkoord te gaan met de bijgevoegde intentieovereenkomst tussen de Gemeente
+Wassenaar en de American School of The Hague (ASH) over (de haalbaarheid van)
+de herontwikkeling Deijlerhoeve; Deijlerweg 175 te Wassenaar.
+
+Volledige tekst:
+Intentie overeenkomst Amerikaanse School tbv ontwikkeling Deijlerhoeve
+Besluit:
+Akkoord te gaan met de bijgevoegde intentieovereenkomst tussen de Gemeente
+Wassenaar en de American School of The Hague (ASH) over (de haalbaarheid van)
+de herontwikkeling Deijlerhoeve; Deijlerweg 175 te Wassenaar.
+---
+
+---
+Besluit: Huurovereenkomst SchoolAdviesDienst (SAD)
+Datum: 2022-05-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_mei_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+Akkoord te gaan met bijgevoegde huurovereenkomst tussen de gemeente als
+verhuurder en de SchoolAdviesDienst (SAD) als huurder.
+
+Volledige tekst:
+Huurovereenkomst SchoolAdviesDienst (SAD)
+Besluit:
+Akkoord te gaan met bijgevoegde huurovereenkomst tussen de gemeente als
+verhuurder en de SchoolAdviesDienst (SAD) als huurder.
+---
+
+---
+Besluit: Dashboard Jeugdhulp Wassenaar d.d. mei 2022
+Datum: 2022-05-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_mei_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De raadsinformatiebrief met de bijlagen ‘dashboard jeugdhulp’ en ‘lokale
+maatregelen jeugd Wassenaar’ vast te stellen
+
+Volledige tekst:
+Dashboard Jeugdhulp Wassenaar d.d. mei 2022
+Besluit:
+De raadsinformatiebrief met de bijlagen ‘dashboard jeugdhulp’ en ‘lokale
+maatregelen jeugd Wassenaar’ vast te stellen
+---
+
+---
+Besluit: Het college besluit, gezien de oproep van het Rijk, de kostendelersnorm
+Datum: 2022-05-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_mei_2022.pdf
+
+Besluittekst (kort):
+niet toe te passen bij het tijdelijk verblijf van ontheemden bij particuliere
+huishoudens die een bijstandsuitkering ontvangen en een eventuele
+vrijwillige bijdrage van een ontheemde, mits redelijk in verhouding tot de
+kosten, niet te verrekenen met de bijstandsuitkering.
+
+Volledige tekst:
+Het college besluit, gezien de oproep van het Rijk, de kostendelersnorm
+niet toe te passen bij het tijdelijk verblijf van ontheemden bij particuliere
+huishoudens die een bijstandsuitkering ontvangen en een eventuele
+vrijwillige bijdrage van een ontheemde, mits redelijk in verhouding tot de
+kosten, niet te verrekenen met de bijstandsuitkering.
+---
+
+---
+Besluit: Evaluatie Re-integratie en participatie beleid
+Datum: 2022-06-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_juni_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad met bijgaande informatiebrief te informeren over het proces om
+tot nieuw re-integratie en participatiebeleid te komen.
+
+Volledige tekst:
+Evaluatie Re-integratie en participatie beleid
+Besluit:
+De raad met bijgaande informatiebrief te informeren over het proces om
+tot nieuw re-integratie en participatiebeleid te komen.
+---
+
+---
+Besluit: Zevende wijziging Verordening maatschappelijke ondersteuning
+Datum: 2022-06-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_juni_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen de zevende wijziging van de Verordening
+maatschappelijke ondersteuning gemeente Wassenaar 2015 vast te stellen.
+Pagina 2
+
+Volledige tekst:
+Zevende wijziging Verordening maatschappelijke ondersteuning
+gemeente Wassenaar 2015 en eerste wijziging beleidsregels
+Besluit:
+De raad voor te stellen de zevende wijziging van de Verordening
+maatschappelijke ondersteuning gemeente Wassenaar 2015 vast te stellen.
+Pagina 2
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen DLW inzake wonen voor
+Datum: 2022-08-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_augustus_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door DLW-fractie d.d. 15
+augustus 2022 met betrekking tot woonruimten voor aandachtsgroepen vast
+te stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen DLW inzake wonen voor
+aandachtsgroepen
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door DLW-fractie d.d. 15
+augustus 2022 met betrekking tot woonruimten voor aandachtsgroepen vast
+te stellen.
+---
+
+---
+Besluit: Intrekking Aanwijzingsbesluit toezichthouder rechtmatigheid Wmo
+Datum: 2022-08-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_augustus_2022.pdf
+
+Volledige tekst:
+Intrekking Aanwijzingsbesluit toezichthouder rechtmatigheid Wmo
+---
+
+---
+Besluit: Het gebruik van de Den Deijlschool garanderen voor het onderwijs aan
+Datum: 2022-09-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_september_2022.pdf
+
+Besluittekst (kort):
+ontheemden voor het schooljaar 2022-2023.
+
+Volledige tekst:
+Het gebruik van de Den Deijlschool garanderen voor het onderwijs aan
+ontheemden voor het schooljaar 2022-2023.
+---
+
+---
+Besluit: Voor de volgende schooljaren voldoende fysieke ruimte te garanderen
+Datum: 2022-09-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_september_2022.pdf
+
+Besluittekst (kort):
+indien een onderwijsvoorziening voor ontheemden dan nog nodig is.
+
+Volledige tekst:
+Voor de volgende schooljaren voldoende fysieke ruimte te garanderen
+indien een onderwijsvoorziening voor ontheemden dan nog nodig is.
+---
+
+---
+Besluit: Met het primair onderwijs Wassenaar een overeenkomst op te stellen voor
+Datum: 2022-09-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_september_2022.pdf
+
+Besluittekst (kort):
+de uitvoering en verantwoording van het onderwijs aan ontheemden.
+
+Volledige tekst:
+Met het primair onderwijs Wassenaar een overeenkomst op te stellen voor
+de uitvoering en verantwoording van het onderwijs aan ontheemden.
+---
+
+---
+Besluit: Voor de leerlingen in de VO-leeftijd aansluiten bij de ISK in Leiden.
+Datum: 2022-09-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_september_2022.pdf
+
+Volledige tekst:
+Voor de leerlingen in de VO-leeftijd aansluiten bij de ISK in Leiden.
+---
+
+---
+Besluit: 3 Onderwijs aan ontheemden in Wassenaar
+Datum: 2022-09-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_september_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+3 Onderwijs aan ontheemden in Wassenaar
+Besluit:
+---
+
+---
+Besluit: De raad voor te stellen de Verordening inburgering Wassenaar 2022 vast
+Datum: 2022-10-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_oktober_2022.pdf
+
+Besluittekst (kort):
+te stellen.
+
+Volledige tekst:
+De raad voor te stellen de Verordening inburgering Wassenaar 2022 vast
+te stellen.
+---
+
+---
+Besluit: De raad voor te stellen de wijzigingsverordening vast te stellen met de
+Datum: 2022-10-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_oktober_2022.pdf
+
+Besluittekst (kort):
+wijziging van artikel 9 van de Afstemmingsverordening Participatiewet,
+IOAW en IOAZ gemeente Wassenaar 2015.
+
+Volledige tekst:
+De raad voor te stellen de wijzigingsverordening vast te stellen met de
+wijziging van artikel 9 van de Afstemmingsverordening Participatiewet,
+IOAW en IOAZ gemeente Wassenaar 2015.
+---
+
+---
+Besluit: 3 Verordening inburgering
+Datum: 2022-10-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_oktober_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+3 Verordening inburgering
+Besluit:
+---
+
+---
+Besluit: Voorbereiding Raad van 18 okt (moties en amendementen)
+Datum: 2022-10-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_oktober_2022.pdf
+
+Volledige tekst:
+Voorbereiding Raad van 18 okt (moties en amendementen)
+---
+
+---
+Besluit: Convenant regionale samenwerking beschermd wonen en
+Datum: 2022-12-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_december_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Convenant regionale samenwerking beschermd wonen en
+maatschappelijke opvang 2023
+Besluit:
+---
+
+---
+Besluit: Diverse onderwerpen jeugdhulpregio Haaglanden WS
+Datum: 2022-12-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_december_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad met de bijgevoegde informatiebrief te informeren over de volgende
+onderwerpen:
+a. Regionale samenwerking jeugdhulp Haaglanden en de Haagse
+doorontwikkeling jeugd- en gezinshulp;
+b. Het proces rondom het Uitvoeringsplan Regiovisie Jeugdhulp;
+c. De reactie op het eindrapport van de evaluatie gemeenschappelijke regeling
+Servicebureau Jeugdhulp Haaglanden;
+d. De situatie in de jeugdhulpplus.
+
+Volledige tekst:
+Diverse onderwerpen jeugdhulpregio Haaglanden WS
+Besluit:
+De raad met de bijgevoegde informatiebrief te informeren over de volgende
+onderwerpen:
+a. Regionale samenwerking jeugdhulp Haaglanden en de Haagse
+doorontwikkeling jeugd- en gezinshulp;
+b. Het proces rondom het Uitvoeringsplan Regiovisie Jeugdhulp;
+c. De reactie op het eindrapport van de evaluatie gemeenschappelijke regeling
+Servicebureau Jeugdhulp Haaglanden;
+d. De situatie in de jeugdhulpplus.
+---
+
+---
+Besluit: Deelname Stichting Maatschappelijke Ondersteuning Wassenaar
+Datum: 2022-12-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_december_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+Vasthouden aan het inrichtingsplan zoals op 21 juni 2022 door het College
+vastgesteld en de Stichting Maatschappelijke Ondersteuning Wassenaar laten
+weten dat aansturing van diensten in het Sociaal Team Wassenaar door de
+gemeente zowel noodzakelijk is als ook een belangrijke voorwaarde voor
+subsidieverlening.
+
+Volledige tekst:
+Deelname Stichting Maatschappelijke Ondersteuning Wassenaar
+(SMOW) in het Sociaal Team Wassenaar
+Besluit:
+Vasthouden aan het inrichtingsplan zoals op 21 juni 2022 door het College
+vastgesteld en de Stichting Maatschappelijke Ondersteuning Wassenaar laten
+weten dat aansturing van diensten in het Sociaal Team Wassenaar door de
+gemeente zowel noodzakelijk is als ook een belangrijke voorwaarde voor
+subsidieverlening.
+---
+
+---
+Besluit: Ophoging bestemmingsreserves SAD
+Datum: 2022-12-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_december_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De Schooladviesdienst (SAD) toe te staan hun bestemmingsreserves op te
+hogen voor deskundigheidsbevordering/externe inhuur (tot 20.000 euro) en
+huisvesting/verhuizing (tot 30.000 euro), mits de egalisatiereserve de
+verhouding 1 staat tot 8 met de totale inkomsten per jaar niet overschrijdt.
+
+Volledige tekst:
+Ophoging bestemmingsreserves SAD
+Besluit:
+De Schooladviesdienst (SAD) toe te staan hun bestemmingsreserves op te
+hogen voor deskundigheidsbevordering/externe inhuur (tot 20.000 euro) en
+huisvesting/verhuizing (tot 30.000 euro), mits de egalisatiereserve de
+verhouding 1 staat tot 8 met de totale inkomsten per jaar niet overschrijdt.
+---
+
+---
+Besluit: 5 Resultaten cliëntervaringsonderzoek Wmo 2021/2022
+Datum: 2022-12-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_december_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over het cliëntervaringsonderzoek door de
+raadsinformatiebrief vanuit bijlage 1 van dit voorstel aan te bieden.
+
+Volledige tekst:
+5 Resultaten cliëntervaringsonderzoek Wmo 2021/2022
+Besluit:
+De gemeenteraad te informeren over het cliëntervaringsonderzoek door de
+raadsinformatiebrief vanuit bijlage 1 van dit voorstel aan te bieden.
+---
+
+---
+Besluit: Uitstel behandeling ontwikkelcompetitie Den Deylschool
+Datum: 2023-01-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_januari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Uitstel behandeling ontwikkelcompetitie Den Deylschool
+Besluit:
+---
+
+---
+Besluit: Toekennen van de hardheidsclausule voor het aangewezen
+Datum: 2023-01-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_januari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Het toekennen van de hardheidsclausule aan de huurders die onder het
+aangewezen actiegebied vallen met een verzamelinkomen dat hoger is dan
+anderhalf maal het norminkomen van de Wet op de huurtoeslag.
+
+Volledige tekst:
+Toekennen van de hardheidsclausule voor het aangewezen
+actiegebied in de wijk Oostdorp
+Besluit:
+Het toekennen van de hardheidsclausule aan de huurders die onder het
+aangewezen actiegebied vallen met een verzamelinkomen dat hoger is dan
+anderhalf maal het norminkomen van de Wet op de huurtoeslag.
+---
+
+---
+Besluit: Toelichting op cijfers Wmo
+Datum: 2023-01-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_januari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de Wmo door de raadsinformatiebrief
+vanuit bijlage 1 van dit voorstel aan te bieden.
+
+Volledige tekst:
+Toelichting op cijfers Wmo
+Besluit:
+De gemeenteraad te informeren over de Wmo door de raadsinformatiebrief
+vanuit bijlage 1 van dit voorstel aan te bieden.
+---
+
+---
+Besluit: Vaststellen winnend plan ontwikkelcompetitie Den Deylschool
+Datum: 2023-01-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen winnend plan ontwikkelcompetitie Den Deylschool
+Besluit:
+---
+
+---
+Besluit: Koers Nieuw Re-integratie en Participatiebeleid
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de koers nieuw re-integratie en
+participatiebeleid door de raadsinformatiebrief vanuit bijlage 1 van dit voorstel
+aan te bieden.
+
+Volledige tekst:
+Koers Nieuw Re-integratie en Participatiebeleid
+Besluit:
+De gemeenteraad te informeren over de koers nieuw re-integratie en
+participatiebeleid door de raadsinformatiebrief vanuit bijlage 1 van dit voorstel
+aan te bieden.
+---
+
+---
+Besluit: Te bevestigen dat EFY Group B.V. – Driestar de ontwikkelcompetitie Den
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf
+
+Besluittekst (kort):
+Deylschool heeft gewonnen.
+
+Volledige tekst:
+Te bevestigen dat EFY Group B.V. – Driestar de ontwikkelcompetitie Den
+Deylschool heeft gewonnen.
+---
+
+---
+Besluit: De herontwikkeling en verkoop van de locatie van de Den Deylschool c.s.
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf
+
+Besluittekst (kort):
+niet te gunnen aan EFY Group B.V. – Driestar en een (volledig) nieuwe
+procedure te starten.
+
+Volledige tekst:
+De herontwikkeling en verkoop van de locatie van de Den Deylschool c.s.
+niet te gunnen aan EFY Group B.V. – Driestar en een (volledig) nieuwe
+procedure te starten.
+---
+
+---
+Besluit: Vaststellen winnend plan ontwikkelcompetitie Den Deylschool
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen om:
+
+Volledige tekst:
+Vaststellen winnend plan ontwikkelcompetitie Den Deylschool
+Besluit:
+De raad voor te stellen om:
+---
+
+---
+Besluit: Te bevestigen dat EFY Group B.V. – Driestar de ontwikkelcompetitie Den
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023_0.pdf
+
+Besluittekst (kort):
+Deylschool heeft gewonnen.
+
+Volledige tekst:
+Te bevestigen dat EFY Group B.V. – Driestar de ontwikkelcompetitie Den
+Deylschool heeft gewonnen.
+---
+
+---
+Besluit: De herontwikkeling en verkoop van de locatie van de Den Deylschool c.s.
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023_0.pdf
+
+Besluittekst (kort):
+niet te gunnen aan EFY Group B.V. – Driestar en de huidige procedure te
+beëindigen.
+
+Volledige tekst:
+De herontwikkeling en verkoop van de locatie van de Den Deylschool c.s.
+niet te gunnen aan EFY Group B.V. – Driestar en de huidige procedure te
+beëindigen.
+---
+
+---
+Besluit: Vaststellen winnend plan ontwikkelcompetitie Den Deylschool
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023_0.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen om:
+
+Volledige tekst:
+Vaststellen winnend plan ontwikkelcompetitie Den Deylschool
+Besluit:
+De raad voor te stellen om:
+---
+
+---
+Besluit: De indexatie voor zorgproducten binnen de H6 vast te stellen vanaf 01-04-
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Besluittekst (kort):
+2023:
+a. voor zorgproducten begeleiding op 3,05%.
+b. voor vervoersproducten binnen de begeleiding op 2,5%.
+
+Volledige tekst:
+De indexatie voor zorgproducten binnen de H6 vast te stellen vanaf 01-04-
+2023:
+a. voor zorgproducten begeleiding op 3,05%.
+b. voor vervoersproducten binnen de begeleiding op 2,5%.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Afwijken inkoopbeleid Wonen 2023
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Afwijken inkoopbeleid Wonen 2023 vast te stellen.
+
+Volledige tekst:
+Afwijken inkoopbeleid Wonen 2023
+Besluit:
+Afwijken inkoopbeleid Wonen 2023 vast te stellen.
+---
+
+---
+Besluit: Indexatie Wmo-tarieven door inkoop H6-gemeenten vanaf 1 april
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Volledige tekst:
+Indexatie Wmo-tarieven door inkoop H6-gemeenten vanaf 1 april
+---
+
+---
+Besluit: Proces actualisatie Uitvoeringsplan Jeugdhulp Haaglanden
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad te informeren over het proces van de actualisatie van het
+Uitvoeringsplan Jeugdhulp Haaglanden.
+
+Volledige tekst:
+Proces actualisatie Uitvoeringsplan Jeugdhulp Haaglanden
+Besluit:
+De raad te informeren over het proces van de actualisatie van het
+Uitvoeringsplan Jeugdhulp Haaglanden.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-03-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: 2 Raadsinformatiebrief toezegging in kader van herontwikkeling locatie
+Datum: 2023-03-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De bijgevoegde raadsinformatiebrief over de beantwoording van de
+toezeggingen over de herontwikkeling locatie Den Deylschool vast te stellen.
+
+Volledige tekst:
+2 Raadsinformatiebrief toezegging in kader van herontwikkeling locatie
+Den Deylschool
+Besluit:
+De bijgevoegde raadsinformatiebrief over de beantwoording van de
+toezeggingen over de herontwikkeling locatie Den Deylschool vast te stellen.
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 260 DLW: Verlengde jeugdhulp na
+Datum: 2023-03-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Ben Paulides van
+DLW d.8 maart 2023 met betrekking tot verlengde jeugdhulp na de leeftijd
+van 18 jaren vast te stellen.
+Pagina 3
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 260 DLW: Verlengde jeugdhulp na
+de leeftijd van 18 jaren
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Ben Paulides van
+DLW d.8 maart 2023 met betrekking tot verlengde jeugdhulp na de leeftijd
+van 18 jaren vast te stellen.
+Pagina 3
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Managementrapportage (Marap) Werk & Inkomen, Minimabeleid en
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De Raad te informeren via de gebruikelijke managementrapportage over de
+ontwikkelingen op het beleidsterrein van werk & inkomen, minimaregelingen
+en schuldhulpverlening met de bijgevoegde informatiebrief 2022.
+
+Volledige tekst:
+Managementrapportage (Marap) Werk & Inkomen, Minimabeleid en
+Schuldhulpverlening 2022
+Besluit:
+De Raad te informeren via de gebruikelijke managementrapportage over de
+ontwikkelingen op het beleidsterrein van werk & inkomen, minimaregelingen
+en schuldhulpverlening met de bijgevoegde informatiebrief 2022.
+---
+
+---
+Besluit: Mandaatbesluit inzake uitvoering regeling specifieke uitkering
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Mandaatbesluit inzake uitvoering regeling specifieke uitkering
+gemeentelijke hulp gedupeerden toeslagenproblematiek
+Besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief toezegging in kader van herontwikkeling locatie
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De bijgevoegde raadsinformatiebrief over de beantwoording van de
+toezeggingen over de herontwikkeling locatie Den Deylschool vast te stellen.
+
+Volledige tekst:
+Raadsinformatiebrief toezegging in kader van herontwikkeling locatie
+Den Deylschool
+Besluit:
+De bijgevoegde raadsinformatiebrief over de beantwoording van de
+toezeggingen over de herontwikkeling locatie Den Deylschool vast te stellen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-04-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_april_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Samenwerkingsovereenkomst Wonen-plus voorziening in voormalig
+Datum: 2023-04-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Samenwerkingsovereenkomst Wonen-plus voorziening in voormalig
+O&O-gebouw
+Besluit:
+---
+
+---
+Besluit: á 33 studio’s gaat exploiteren in het voormalig O&O-gebouw aan de
+Datum: 2023-04-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_april_2023.pdf
+
+Besluittekst (kort):
+Zonneveldweg 55a;
+c. Den Haag garant staat voor een leegstandsvergoeding de eerste 4
+opstartjaren;
+d. Er een gezamenlijke verantwoordelijkheid is voor plaatsing van
+(geschikte)
+kandidaten;
+e. Er een communicatietraject is afgesproken met het Leger des Heils in de
+regierol;
+f. Ingezet wordt op verlenging met 5 jaar van huurcontract en de Wonen-
+plus
+voorziening als de 10 jaar is verlopen.
+
+Volledige tekst:
+á 33 studio’s gaat exploiteren in het voormalig O&O-gebouw aan de
+Zonneveldweg 55a;
+c. Den Haag garant staat voor een leegstandsvergoeding de eerste 4
+opstartjaren;
+d. Er een gezamenlijke verantwoordelijkheid is voor plaatsing van
+(geschikte)
+kandidaten;
+e. Er een communicatietraject is afgesproken met het Leger des Heils in de
+regierol;
+f. Ingezet wordt op verlenging met 5 jaar van huurcontract en de Wonen-
+plus
+voorziening als de 10 jaar is verlopen.
+---
+
+---
+Besluit: Gebruik Middelweg 31A voor onderwijs aan kinderen van
+Datum: 2023-04-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Gebruik Middelweg 31A voor onderwijs aan kinderen van statushouders en
+ontheemden.
+
+Volledige tekst:
+Gebruik Middelweg 31A voor onderwijs aan kinderen van
+statushouders en ontheemden
+Besluit:
+Gebruik Middelweg 31A voor onderwijs aan kinderen van statushouders en
+ontheemden.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-04-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_april_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Actualisatie bovenregionaal plan Jeugdhulp Plus
+Datum: 2023-04-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Actualisatie bovenregionaal plan Jeugdhulp Plus
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-04-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-05-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_mei_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-05-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_mei_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Aanbesteding begeleidingsproducten samenwerkingsverband
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Kennis te nemen van de inkoopstrategie voor het opstellen van de
+aanbesteding begeleidingsproducten in de Wmo.
+
+Volledige tekst:
+Aanbesteding begeleidingsproducten samenwerkingsverband
+Toekomst Sociaal Domein
+Besluit:
+Kennis te nemen van de inkoopstrategie voor het opstellen van de
+aanbesteding begeleidingsproducten in de Wmo.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-05-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_mei_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: 5.b Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2023.pdf
+
+Volledige tekst:
+5.b Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Ontvangstbevestiging opzegging DVO
+Datum: 2023-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Het college van Voorschoten met bijgaande brief de ontvangst te bevestigen
+van hun brieven d.d. 7 maart en 18 april 2023 met respectievelijk het
+voornemen en het definitieve besluit om de dienstverlening aan de gemeente
+Wassenaar voor maatschappelijke ondersteuning aan de gemeente Wassenaar
+te beëindigen.
+
+Volledige tekst:
+Ontvangstbevestiging opzegging DVO
+Besluit:
+Het college van Voorschoten met bijgaande brief de ontvangst te bevestigen
+van hun brieven d.d. 7 maart en 18 april 2023 met respectievelijk het
+voornemen en het definitieve besluit om de dienstverlening aan de gemeente
+Wassenaar voor maatschappelijke ondersteuning aan de gemeente Wassenaar
+te beëindigen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-06-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_juni_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-06-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Het volmacht- en machtigingenbesluit IZA gemeente Wassenaar 2023
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Besluittekst (kort):
+(bijlage), in het kader van het Integraal Zorgakkoord, vast te stellen en te
+ondertekenen.
+
+Volledige tekst:
+Het volmacht- en machtigingenbesluit IZA gemeente Wassenaar 2023
+(bijlage), in het kader van het Integraal Zorgakkoord, vast te stellen en te
+ondertekenen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Raad: voorbereiding Kadernota (moties en amendementen)
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Besluittekst (kort):
+College bespreekt de aanstaande Kadernota, die in de middag wordt
+gehouden.
+
+Volledige tekst:
+Raad: voorbereiding Kadernota (moties en amendementen)
+College bespreekt de aanstaande Kadernota, die in de middag wordt
+gehouden.
+---
+
+---
+Besluit: Monitor jeugdhulp 2022
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Kennis te nemen van de regionale en lokale monitoring van de jeugdhulp en
+de raad hierover te informeren met de raadsinformatiebrief en bijgevoegde
+stukken.
+
+Volledige tekst:
+Monitor jeugdhulp 2022
+Besluit:
+Kennis te nemen van de regionale en lokale monitoring van de jeugdhulp en
+de raad hierover te informeren met de raadsinformatiebrief en bijgevoegde
+stukken.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-07-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_juli_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Ontwikkelingen jeugdbescherming regio Zuid-West
+Datum: 2023-07-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_juli_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Ontwikkelingen jeugdbescherming regio Zuid-West
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-08-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_augustus_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Beleidsplan voor- en vroegschoolse educatie 2024-2027
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Beleidsplan voor- en vroegschoolse educatie 2024-2027
+Besluit:
+---
+
+---
+Besluit: Benoeming nieuwe directeur-bestuurder Bloemcampschool (Stichting
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Benoeming nieuwe directeur-bestuurder Bloemcampschool (Stichting
+openbaar primair onderwijs Wassenaar)
+Besluit:
+---
+
+---
+Besluit: Koop- en ontwikkelovereenkomst Den Deylschool
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Koop- en ontwikkelovereenkomst Den Deylschool
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-09-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Vaststellen herzieningen inkoopovereenkomsten jeugdhulp H10 2024
+Datum: 2023-09-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen herzieningen inkoopovereenkomsten jeugdhulp H10 2024
+Besluit:
+---
+
+---
+Besluit: Aangepast Beleidsplan re-integratie en participatie gemeente
+Datum: 2023-09-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Vaststellen raadstukken Re-integratie en Participatiebeleid.
+
+Volledige tekst:
+Aangepast Beleidsplan re-integratie en participatie gemeente
+Wassenaar
+Pagina 3
+
+Besluit:
+Vaststellen raadstukken Re-integratie en Participatiebeleid.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Memo verwachte kostenstijgingen Jeugdhulp Wassenaar
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+College neemt kennis van de memo verwachte kostenstijgingen jeugdzorg
+
+Volledige tekst:
+Memo verwachte kostenstijgingen Jeugdhulp Wassenaar
+Besluit:
+College neemt kennis van de memo verwachte kostenstijgingen jeugdzorg
+---
+
+---
+Besluit: Regionale samenwerking
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+College neemt kennis van de annotaties GGD Haaglanden, Bestuurlijke Tafel
+Wonen, JGZ en MRDH.
+
+Volledige tekst:
+Regionale samenwerking
+Alle collegeleden koppelen terug wat er de afgelopen week is besproken in
+regionale overleggen en/of wat er op de agenda staat van regionale
+overleggen van de komende week.
+Besluit:
+College neemt kennis van de annotaties GGD Haaglanden, Bestuurlijke Tafel
+Wonen, JGZ en MRDH.
+---
+
+---
+Besluit: Beleidsplan voor- en vroegschoolse educatie 2024- 2027
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Aangepast Beleidsplan voor- en vroegschoolse educatie 2024- 2027 vast te
+stellen.
+
+Volledige tekst:
+Beleidsplan voor- en vroegschoolse educatie 2024- 2027
+Besluit:
+Aangepast Beleidsplan voor- en vroegschoolse educatie 2024- 2027 vast te
+stellen.
+---
+
+---
+Besluit: De gemeenteraad te informeren over de jaarverantwoording kinderopvang
+Datum: 2023-09-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_september_2023.pdf
+
+Volledige tekst:
+De gemeenteraad te informeren over de jaarverantwoording kinderopvang
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-09-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_september_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Jaarverantwoording kinderopvang 2022 gemeente Wassenaar
+Datum: 2023-09-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Jaarverantwoording kinderopvang 2022 gemeente Wassenaar
+Besluit:
+---
+
+---
+Besluit: Afdoening toezegging werkende mantelzorgers
+Datum: 2023-09-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Afdoening toezegging werkende mantelzorgers vast te stellen.
+
+Volledige tekst:
+Afdoening toezegging werkende mantelzorgers
+Besluit:
+Afdoening toezegging werkende mantelzorgers vast te stellen.
+---
+
+---
+Besluit: Vernietiging van Amendement J, m.b.t. structurele uitbreiding in de
+Datum: 2023-09-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_september_2023.pdf
+
+Besluittekst (kort):
+ambtelijke organisatie en deze verantwoordelijkheid terug te leggen bij de
+verantwoordelijke, nl. de gemeentesecretaris.
+Toelichting:
+Besloten met de besproken tekstuele wijzigingen.
+
+Volledige tekst:
+Vernietiging van Amendement J, m.b.t. structurele uitbreiding in de
+ambtelijke organisatie en deze verantwoordelijkheid terug te leggen bij de
+verantwoordelijke, nl. de gemeentesecretaris.
+Toelichting:
+Besloten met de besproken tekstuele wijzigingen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-10-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_oktober_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-10-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Raadsinformatiebrief Kostenstijgingen jeugdhulp 2023
+Datum: 2023-10-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Kostenstijgingen jeugdhulp 2023
+Besluit:
+---
+
+---
+Besluit: Regionale samenwerking
+Datum: 2023-10-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+College neemt kennis van de annotatie Bestuurlijke Tafel Wonen.
+
+Volledige tekst:
+Regionale samenwerking
+Besluit:
+College neemt kennis van de annotatie Bestuurlijke Tafel Wonen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-10-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_oktober_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: De gemeenteraad via raadsinformatiebrief te informeren over de
+Datum: 2023-10-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_oktober_2023.pdf
+
+Besluittekst (kort):
+managementrapportage eerste helft 2023 inzake ontwikkelingen op het
+beleidsterrein van werk & inkomen, minimaregelingen en
+schuldhulpverlening.
+
+Volledige tekst:
+De gemeenteraad via raadsinformatiebrief te informeren over de
+managementrapportage eerste helft 2023 inzake ontwikkelingen op het
+beleidsterrein van werk & inkomen, minimaregelingen en
+schuldhulpverlening.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-10-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_oktober_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Re-integratie- en Participatieverordening Participatiewet
+Datum: 2023-11-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Re-integratie- en Participatieverordening Participatiewet
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-11-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_november_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Re-integratie- en Participatieverordening Participatiewet
+Datum: 2023-11-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De aangepaste reactiebrief Adviesraad Sociaal Domein Wassenaar Re-
+integratie- en participatieverordening Wassenaar 2023 vast te stellen.
+
+Volledige tekst:
+Re-integratie- en Participatieverordening Participatiewet
+
+Besluit:
+De aangepaste reactiebrief Adviesraad Sociaal Domein Wassenaar Re-
+integratie- en participatieverordening Wassenaar 2023 vast te stellen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-11-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_november_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-11-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_november_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Ontwikkelingen jeugdhulpregio Haaglanden
+Datum: 2023-11-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Ontwikkelingen jeugdhulpregio Haaglanden
+Besluit:
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen PvdA 286 Tarief informele zorg
+Datum: 2023-11-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Beantwoording schriftelijke vragen PvdA 286 Tarief informele zorg
+WMO-begeleiding
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-12-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_december_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Mandaat te verlenen aan de gemeente Leidschendam-Voorburg voor het
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+nemen van toetredings-, uittredings- en weigeringsbesluiten die
+voortvloeien uit de regionale inkoop Wmo begeleiding 2023 zoals
+afgesproken in de samenwerkingsovereenkomst ’Toekomst Sociaal
+Domein’, (zie bijlage 3);
+
+Volledige tekst:
+Mandaat te verlenen aan de gemeente Leidschendam-Voorburg voor het
+nemen van toetredings-, uittredings- en weigeringsbesluiten die
+voortvloeien uit de regionale inkoop Wmo begeleiding 2023 zoals
+afgesproken in de samenwerkingsovereenkomst ’Toekomst Sociaal
+Domein’, (zie bijlage 3);
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Voortzetting inkoopsamenwerking Wmo-producten en mandatering
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Voortzetting inkoopsamenwerking Wmo-producten en mandatering
+Leidschendam-Voorburg
+Besluit:
+---
+
+---
+Besluit: Integraal Zorgakkoord
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Integraal Zorgakkoord
+Besluit:
+---
+
+---
+Besluit: Mandaatbesluit over ISK onderwijs
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Mandaatbesluit over ISK onderwijs
+Besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief adviezen amendementen ontwerp-
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief adviezen op amendementen Wegencategoriseringsplan
+vast te stellen.
+
+Volledige tekst:
+Raadsinformatiebrief adviezen amendementen ontwerp-
+Wegencategoriseringsplan
+Besluit:
+Raadsinformatiebrief adviezen op amendementen Wegencategoriseringsplan
+vast te stellen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-01-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_januari_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Cliëntervaringsonderzoek (CEO) Wmo 2022–2023
+Datum: 2024-01-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_januari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Cliëntervaringsonderzoek (CEO) Wmo 2022–2023
+Besluit:
+---
+
+---
+Besluit: Verhogen vrijlating giften in de Participatiewet
+Datum: 2024-01-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_januari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+a. De Tweede wijziging beleidsregels ‘Vaststellen vermogen en vaststellen
+vermogen in eigen woning Participatiewet wassenaar 2015’ vast te stellen;
+b. De Raadsbrief ‘Verhoging vrijlating giften in de Participatiewet’ naar de Raad
+sturen.
+
+Volledige tekst:
+Verhogen vrijlating giften in de Participatiewet
+Besluit:
+a. De Tweede wijziging beleidsregels ‘Vaststellen vermogen en vaststellen
+vermogen in eigen woning Participatiewet wassenaar 2015’ vast te stellen;
+b. De Raadsbrief ‘Verhoging vrijlating giften in de Participatiewet’ naar de Raad
+sturen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Invoering landelijk tarief jeugdbescherming en jeugdreclassering
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Invoering landelijk tarief jeugdbescherming en jeugdreclassering
+Besluit:
+---
+
+---
+Besluit: De Beleidsregels Re-integratie en Participatie Participatiewet gemeente
+Datum: 2024-02-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_februari_2024.pdf
+
+Besluittekst (kort):
+Wassenaar 2024 vast te stellen.
+
+Volledige tekst:
+De Beleidsregels Re-integratie en Participatie Participatiewet gemeente
+Wassenaar 2024 vast te stellen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-02-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_februari_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Vaststellen beleidsregels Re-integratie en Participatie Participatiewet
+Datum: 2024-02-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_februari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen beleidsregels Re-integratie en Participatie Participatiewet
+Wassenaar 2024
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-02-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_februari_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Achtste wijziging Verordening maatschappelijke ondersteuning
+Datum: 2024-02-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_februari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen de achtste wijziging van de Verordening
+maatschappelijke ondersteuning gemeente Wassenaar 2015 vast te stellen.
+
+Volledige tekst:
+Achtste wijziging Verordening maatschappelijke ondersteuning
+gemeente Wassenaar 2015
+Besluit:
+De raad voor te stellen de achtste wijziging van de Verordening
+maatschappelijke ondersteuning gemeente Wassenaar 2015 vast te stellen.
+---
+
+---
+Besluit: Actualisatie aanwijzing crisisfunctionarissen Bevolkingszorg
+Datum: 2024-02-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_februari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Actualisatie aanwijzing crisisfunctionarissen Bevolkingszorg
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Raadsinformatiebrief Ontwikkelingen JeugdhulpPlus
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Ontwikkelingen JeugdhulpPlus
+Besluit:
+---
+
+---
+Besluit: 1 Geschoonde bijlage 1: Was wordt lijst achtste wijziging Wmo
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Geschoonde bijlage 1: Was wordt lijst achtste wijziging Wmo verordening vast
+te stellen.
+
+Volledige tekst:
+1 Geschoonde bijlage 1: Was wordt lijst achtste wijziging Wmo
+verordening
+Besluit:
+Geschoonde bijlage 1: Was wordt lijst achtste wijziging Wmo verordening vast
+te stellen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-03-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_maart_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-03-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_maart_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-04-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_april_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-04-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_april_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-04-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_april_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Integraal Zorgakkoord (IZA) en Opgroeien in een Kansrijke Omgeving
+Datum: 2024-04-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Integraal Zorgakkoord (IZA) en Opgroeien in een Kansrijke Omgeving
+(OKO)
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: 6e wijziging Gemeenschappelijke Regeling Servicebureau Jeugdhulp
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+6e wijziging Gemeenschappelijke Regeling Servicebureau Jeugdhulp
+Haaglanden
+Besluit:
+---
+
+---
+Besluit: Jaarverantwoording Onderwijsachterstandenbeleid (LEA/vve) 2023
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief “Jaarverantwoording VVE en LEA” vast te stellen.
+
+Volledige tekst:
+Jaarverantwoording Onderwijsachterstandenbeleid (LEA/vve) 2023
+Besluit:
+Raadsinformatiebrief “Jaarverantwoording VVE en LEA” vast te stellen.
+---
+
+---
+Besluit: De gemeenteraad te informeren over de jaarverantwoording kinderopvang
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Volledige tekst:
+De gemeenteraad te informeren over de jaarverantwoording kinderopvang
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Jaarverantwoording kinderopvang 2022 gemeente Wassenaar
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Pagina 3 van 4
+
+Volledige tekst:
+Jaarverantwoording kinderopvang 2022 gemeente Wassenaar
+Besluit:
+Pagina 3 van 4
+---
+
+---
+Besluit: De raad hierover te informeren via raadsinformatiebrief
+Datum: 2024-05-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_mei_2024.pdf
+
+Besluittekst (kort):
+‘Managementrapportage Werk & Inkomen, Minimabeleid en
+Schuldhulpverlening tweede helft 2023’.
+
+Volledige tekst:
+De raad hierover te informeren via raadsinformatiebrief
+‘Managementrapportage Werk & Inkomen, Minimabeleid en
+Schuldhulpverlening tweede helft 2023’.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-05-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_mei_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-05-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_mei_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Wijzigingen Langetermijnagenda
+Datum: 2024-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+LTA-overzicht is akkoord met LTA-wijzigingen m.u.v. startnotitie jeugdbeleid
+
+Volledige tekst:
+Wijzigingen Langetermijnagenda
+Besluit:
+LTA-overzicht is akkoord met LTA-wijzigingen m.u.v. startnotitie jeugdbeleid
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-06-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_juni_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Subsidieregeling voorschoolse educatie, peuteropvang en
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregeling voorschoolse educatie, peuteropvang en
+peuterconsulent gemeente Wassenaar 2025
+Besluit:
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor Voor- en vroegschoolse educatie vast te
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+stellen op € 70.000.
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor Voor- en vroegschoolse educatie vast te
+stellen op € 70.000.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Subsidieregeling voorschoolse educatie, peuteropvang en
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregeling voorschoolse educatie, peuteropvang en
+peuterconsulent gemeente Wassenaar 2025
+Besluit:
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor Voor- en vroegschoolse educatie vast te
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+stellen op € 70.000.
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor Voor- en vroegschoolse educatie vast te
+stellen op € 70.000.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Verlenging samenwerkingsovereenkomst (POH Jeugd) Wassenaar
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Verlenging samenwerkingsovereenkomst (POH Jeugd) Wassenaar
+Besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief monitor jeugdhulp Wassenaar 2023
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de monitor jeugdhulp Wassenaar 2023
+via bijgevoegde raadsinformatiebrief en bijlagen.
+
+Volledige tekst:
+Raadsinformatiebrief monitor jeugdhulp Wassenaar 2023
+Besluit:
+De gemeenteraad te informeren over de monitor jeugdhulp Wassenaar 2023
+via bijgevoegde raadsinformatiebrief en bijlagen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Pagina 1 van 7
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+Pagina 1 van 7
+---
+
+---
+Besluit: Huisvesting taalklas bij the American School of The Hague
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Huisvesting taalklas bij the American School of The Hague
+Besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief Ontwikkeling nieuw beleidsplan
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de ontwikkeling van het nieuwe
+beleidsplan Schuldhulpverlening via bijgevoegde bijlage.
+Pagina 2 van 7
+
+Volledige tekst:
+Raadsinformatiebrief Ontwikkeling nieuw beleidsplan
+Schuldhulpverlening
+Besluit:
+De gemeenteraad te informeren over de ontwikkeling van het nieuwe
+beleidsplan Schuldhulpverlening via bijgevoegde bijlage.
+Pagina 2 van 7
+---
+
+---
+Besluit: Raadsinformatiebrief proces ouderenbeleid
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief proces ouderenbeleid
+Besluit:
+---
+
+---
+Besluit: Mantelzorgondersteuning in het algemeen en respijtzorg in het
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over het beleidsproces en de noodzaak tot het
+versterken van het uitvoeringsbeleid voor mantelzorgondersteuning door de
+inzet van respijtzorg door middel van de bijgevoegde raadsinformatiebrief.
+
+Volledige tekst:
+Mantelzorgondersteuning in het algemeen en respijtzorg in het
+bijzonder
+Besluit:
+De gemeenteraad te informeren over het beleidsproces en de noodzaak tot het
+versterken van het uitvoeringsbeleid voor mantelzorgondersteuning door de
+inzet van respijtzorg door middel van de bijgevoegde raadsinformatiebrief.
+---
+
+---
+Besluit: Raadsinformatiebrief Gezondheidsmonitor Jeugd 2023
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de Gezondheidsmonitor Jeugd 2023 via
+bijgevoegde raadinformatiebrief.
+
+Volledige tekst:
+Raadsinformatiebrief Gezondheidsmonitor Jeugd 2023
+Besluit:
+De gemeenteraad te informeren over de Gezondheidsmonitor Jeugd 2023 via
+bijgevoegde raadinformatiebrief.
+---
+
+---
+Besluit: Overeenkomst Meldpunt Zorgwekkend Gedrag 2024
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De Regiogemeenteovereenkomst ter zake het verrichten van de lokale taak
+Meldpunt Zorgwekkend Gedrag 2024 tussen de Gemeente Wassenaar en de
+Gemeente Den Haag aan te gaan.
+
+Volledige tekst:
+Overeenkomst Meldpunt Zorgwekkend Gedrag 2024
+Besluit:
+De Regiogemeenteovereenkomst ter zake het verrichten van de lokale taak
+Meldpunt Zorgwekkend Gedrag 2024 tussen de Gemeente Wassenaar en de
+Gemeente Den Haag aan te gaan.
+---
+
+---
+Besluit: Straatnaam voor de herontwikkeling Den Deylschool
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Straatnaam voor de herontwikkeling Den Deylschool
+Besluit:
+---
+
+---
+Besluit: Jaarverantwoording kinderopvang 2024
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De Jaarverantwoording Kinderopvang 2023 gemeente Wassenaar vast te
+stellen;
+
+Volledige tekst:
+Jaarverantwoording kinderopvang 2024
+Besluit:
+De Jaarverantwoording Kinderopvang 2023 gemeente Wassenaar vast te
+stellen;
+---
+
+---
+Besluit: Het programma Bibliotheek op School
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Het programma Bibliotheek op School
+Besluit:
+---
+
+---
+Besluit: 2. Een financiële bijdrage van € 3.575 in 2024 en € 7.500 in 2025 aan de
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Openbare Bibliotheek Voorschoten-Wassenaar beschikbaar te stellen voor
+één locatie van de Bibliotheek op school in Wassenaar.
+
+Volledige tekst:
+2. Een financiële bijdrage van € 3.575 in 2024 en € 7.500 in 2025 aan de
+Openbare Bibliotheek Voorschoten-Wassenaar beschikbaar te stellen voor
+één locatie van de Bibliotheek op school in Wassenaar.
+---
+
+---
+Besluit: Woo-verzoek met betrekking tot de Amerikaanse school
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Woo-verzoek met betrekking tot de Amerikaanse school
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-08-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_augustus_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: 5.b Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-08-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024.pdf
+
+Volledige tekst:
+5.b Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Cliëntervaringsonderzoek Wmo 2023-2024
+Datum: 2024-08-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Cliëntervaringsonderzoek Wmo 2023-2024
+Besluit:
+---
+
+---
+Besluit: 5.b Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-08-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024_0.pdf
+
+Volledige tekst:
+5.b Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Cliëntervaringsonderzoek Wmo 2023-2024
+Datum: 2024-08-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024_0.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Cliëntervaringsonderzoek Wmo 2023-2024
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Herzieningen inkoopovereenkomsten jeugdhulp H9 2025
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De inkoopovereenkomsten jeugdhulp H9 2025 conform bijgevoegde
+herzieningsvoorstellen te wijzigen op de onderdelen zoals vermeld in de
+bijlagen.
+
+Volledige tekst:
+Herzieningen inkoopovereenkomsten jeugdhulp H9 2025
+Pagina 1 van 4
+
+Besluit:
+De inkoopovereenkomsten jeugdhulp H9 2025 conform bijgevoegde
+herzieningsvoorstellen te wijzigen op de onderdelen zoals vermeld in de
+bijlagen.
+---
+
+---
+Besluit: Raadsinformatiebrief Monitor Inburgering 2023
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Monitor Inburgering 2023
+Besluit:
+---
+
+---
+Besluit: Beantwoording 119 raadslid Paulides DLW inzake 119 vragen over
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 119 raadslid Paulides DLW inzake 119 vragen over voortgang
+beschermd wonen vml. O&O-gebouw vast te stellen.
+
+Volledige tekst:
+Beantwoording 119 raadslid Paulides DLW inzake 119 vragen over
+voortgang beschermd wonen vml. O&O-gebouw.
+Besluit:
+Beantwoording 119 raadslid Paulides DLW inzake 119 vragen over voortgang
+beschermd wonen vml. O&O-gebouw vast te stellen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Bestuurlijke reactie bod woningcorporaties 2025
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Bestuurlijke reactie bod woningcorporaties 2025
+Besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief Woningbouwprogrammering Wassenaar 2024
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Woningbouwprogrammering Wassenaar 2024
+Besluit:
+---
+
+---
+Besluit: Voorstel tot wijziging van de Participatiewet in verband met
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De wijziging van de Participatiewet in verband met de inwerkingtreding van de
+tijdelijke regeling “Wet tijdelijke regeling alleenverdienersproblematiek” af te
+wachten.
+
+Volledige tekst:
+Voorstel tot wijziging van de Participatiewet in verband met
+categoriale bijzondere bijstand voor alleenverdieners
+Besluit:
+De wijziging van de Participatiewet in verband met de inwerkingtreding van de
+tijdelijke regeling “Wet tijdelijke regeling alleenverdienersproblematiek” af te
+wachten.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-09-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_september_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-09-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_september_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-09-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_september_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-10-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_oktober_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-10-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_oktober_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: De gemeenteraad te informeren over het Integraal Zorgakkoord en
+Datum: 2024-10-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_oktober_2024.pdf
+
+Besluittekst (kort):
+Opgroeien in een Kansrijke Omgeving door de raadsinformatiebrief in bijlage 1
+aan te bieden.
+
+Volledige tekst:
+De gemeenteraad te informeren over het Integraal Zorgakkoord en
+Opgroeien in een Kansrijke Omgeving door de raadsinformatiebrief in bijlage 1
+aan te bieden.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-10-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_oktober_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-10-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_oktober_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: De post indexatie Wmo-demografie op te nemen als lastenbudget aan de
+Datum: 2024-11-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_november_2024.pdf
+
+Besluittekst (kort):
+uitgavenkant en definitieve beslissing te nemen bij de Kadernota 2026 o.b.v.
+meeste actuele gegevens;
+
+Volledige tekst:
+De post indexatie Wmo-demografie op te nemen als lastenbudget aan de
+uitgavenkant en definitieve beslissing te nemen bij de Kadernota 2026 o.b.v.
+meeste actuele gegevens;
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-11-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_november_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: AANGEPAST Startnotitie Uitgangspunten herijking Integraal
+Datum: 2024-11-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+AANGEPAST Startnotitie Uitgangspunten herijking Integraal Huisvestingsplan
+Onderwijs PO en VO gemeente Wassenaar vast te stellen.
+
+Volledige tekst:
+AANGEPAST Startnotitie Uitgangspunten herijking Integraal
+Huisvestingsplan Onderwijs PO en VO gemeente Wassenaar
+Besluit:
+AANGEPAST Startnotitie Uitgangspunten herijking Integraal Huisvestingsplan
+Onderwijs PO en VO gemeente Wassenaar vast te stellen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-11-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_november_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-11-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_november_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Beleidsnota Ouderenbeleid 2025
+Datum: 2024-11-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Beleidsnota Ouderenbeleid 2025
+Besluit:
+---
+
+---
+Besluit: 344 Schriftelijke vragen ex art. 36 RvO raadslid Krabbendam D66
+Datum: 2024-11-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 344 Schriftelijke vragen ex art. 36 RvO raadslid Krabbendam
+D66 inzake mantelzorgwoningen vast te stellen.
+
+Volledige tekst:
+344 Schriftelijke vragen ex art. 36 RvO raadslid Krabbendam D66
+inzake mantelzorgwoningen
+Besluit:
+Beantwoording 344 Schriftelijke vragen ex art. 36 RvO raadslid Krabbendam
+D66 inzake mantelzorgwoningen vast te stellen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-11-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_november_2024.pdf
+
+Besluittekst (kort):
+Pagina 1 van 3
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+Pagina 1 van 3
+---
+
+---
+Besluit: Samenwerkingsovereenkomst Laaggeletterdheid/ WEB (Wet educatie
+Datum: 2024-11-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Samenwerkingsovereenkomst Laaggeletterdheid/ WEB (Wet educatie
+en beroepsonderwijs) 2025
+Besluit:
+---
+
+---
+Besluit: De medewerkers van de Gemeente Leidschendam-Voorburg, die zijn
+Datum: 2024-12-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_december_2024.pdf
+
+Besluittekst (kort):
+aangesteld in de functie van sociaal rechercheur/medewerker beleidsuitvoering
+II, aan te wijzen als toezichthouders belast met het toezicht op de naleving
+van het bepaalde bij of krachtens de Participatiewet, de Wet
+inkomensvoorziening oudere en gedeeltelijk arbeidsongeschikte werkloze
+werknemers (IOAW) en de Wet inkomensvoorziening oudere en gedeeltelijk
+arbeidsongeschikte gewezen zelfstandigen (de IOAZ) (en eventuele
+opvolgende wetten en verordeningen).
+
+Volledige tekst:
+De medewerkers van de Gemeente Leidschendam-Voorburg, die zijn
+aangesteld in de functie van sociaal rechercheur/medewerker beleidsuitvoering
+II, aan te wijzen als toezichthouders belast met het toezicht op de naleving
+van het bepaalde bij of krachtens de Participatiewet, de Wet
+inkomensvoorziening oudere en gedeeltelijk arbeidsongeschikte werkloze
+werknemers (IOAW) en de Wet inkomensvoorziening oudere en gedeeltelijk
+arbeidsongeschikte gewezen zelfstandigen (de IOAZ) (en eventuele
+opvolgende wetten en verordeningen).
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-12-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_december_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Aanwijzen toezichthouders Participatiewet, IOAW en IOAZ
+Datum: 2024-12-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_december_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Aanwijzen toezichthouders Participatiewet, IOAW en IOAZ
+Besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Convenant regionale samenwerking beschermd wonen en
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Convenant regionale samenwerking beschermd wonen en
+maatschappelijke opvang en het bijbehorend mandaatbesluit
+Besluit:
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-01-07
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_januari_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-01-07
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_januari_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-01-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_januari_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-01-14
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_januari_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-01-14
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_januari_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-01-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_januari_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Het aangaan van raamovereenkomsten voor Wmo-hulpmiddelen
+Datum: 2025-01-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_januari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Het aangaan van raamovereenkomsten voor Wmo-hulpmiddelen
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-01-21
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_januari_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-01-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_januari_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-01-28
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_januari_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-01-28
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_januari_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-01-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_januari_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Jaarverantwoording kinderopvang 2023 gemeente Wassenaar
+Datum: 2025-01-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_januari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Jaarverantwoording kinderopvang 2023 gemeente Wassenaar
+Besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief toezeggingen commissie M&M 15 jan. 2025
+Datum: 2025-01-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_januari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief toezeggingen commissie M&M 15 jan. 2025 m.b.t.
+Ouderenbeleid vast te stellen.
+
+Volledige tekst:
+Raadsinformatiebrief toezeggingen commissie M&M 15 jan. 2025
+m.b.t. Ouderenbeleid
+Besluit:
+Raadsinformatiebrief toezeggingen commissie M&M 15 jan. 2025 m.b.t.
+Ouderenbeleid vast te stellen.
+---
+
+---
+Besluit: De bijgevoegde “Samenwerkingsovereenkomst Kennisnetwerk Jeugd
+Datum: 2025-02-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_februari_2025.pdf
+
+Besluittekst (kort):
+Haaglanden 2025-2030” aan te gaan per 1 januari 2025.
+
+Volledige tekst:
+De bijgevoegde “Samenwerkingsovereenkomst Kennisnetwerk Jeugd
+Haaglanden 2025-2030” aan te gaan per 1 januari 2025.
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-02-04
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_februari_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-02-04
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_februari_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: 2. Toestemming te verlenen voor verhuur.
+Datum: 2025-02-04
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_februari_2025.pdf
+
+Volledige tekst:
+2. Toestemming te verlenen voor verhuur.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-02-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_februari_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Aanwijzingsbesluit toezichthouder Wmo en Jeugdwet
+Datum: 2025-02-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_februari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Aanwijzingsbesluit toezichthouder Wmo en Jeugdwet
+Besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief Uitvoeringsplan Regiovisie Jeugdzorg
+Datum: 2025-02-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_februari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Uitvoeringsplan Regiovisie Jeugdzorg
+Haaglanden 2025-2026
+Besluit:
+---
+
+---
+Besluit: Samenwerkingsovereenkomst Kennisnetwerk Jeugd Haaglanden
+Datum: 2025-02-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_februari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Samenwerkingsovereenkomst Kennisnetwerk Jeugd Haaglanden
+2025-2030
+Pagina 2 van 3
+
+Besluit:
+---
+
+---
+Besluit: De gemeenteraad te informeren te informeren over het rapport van Ipsos
+Datum: 2025-02-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_februari_2025.pdf
+
+Besluittekst (kort):
+I&O over de ervaringen van mantelzorgers in de gemeente Wassenaar.
+
+Volledige tekst:
+De gemeenteraad te informeren te informeren over het rapport van Ipsos
+I&O over de ervaringen van mantelzorgers in de gemeente Wassenaar.
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-02-11
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_februari_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-02-11
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_februari_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-02-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_februari_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Raadsinformatiebrief Ontwikkelingen JeugdhulpPlus
+Datum: 2025-02-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_februari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Ontwikkelingen JeugdhulpPlus
+Besluit:
+---
+
+---
+Besluit: Het totaalbedrag van de grondverkoop van de woningbouw, te storten in de
+Datum: 2025-02-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_februari_2025.pdf
+
+Besluittekst (kort):
+algemene reserve;
+
+Volledige tekst:
+Het totaalbedrag van de grondverkoop van de woningbouw, te storten in de
+algemene reserve;
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-02-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_februari_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-03-04
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_maart_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-03-04
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_maart_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-03-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_maart_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-03-11
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_maart_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-03-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_maart_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-03-25
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_maart_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-03-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_maart_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-04-01
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_april_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-04-01
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_april_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-04-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_april_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Raadsinformatiebrief toezegging 755 inzake leerling prognose en
+Datum: 2025-04-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad in het kader van het IHP te informeren over de
+leerlingenprognoses en de invloed van het bieden van onderwijs aan
+nieuwkomerskinderen op de kwaliteit van het reguliere onderwijs via
+bijgevoegde bijlage.
+
+Volledige tekst:
+Raadsinformatiebrief toezegging 755 inzake leerling prognose en
+kwaliteit onderwijs
+Besluit:
+De gemeenteraad in het kader van het IHP te informeren over de
+leerlingenprognoses en de invloed van het bieden van onderwijs aan
+nieuwkomerskinderen op de kwaliteit van het reguliere onderwijs via
+bijgevoegde bijlage.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-04-08
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_april_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-04-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_april_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: 3 Voorbereidingskrediet nieuwbouw onderwijshuisvesting Sint Jan
+Datum: 2025-04-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+3 Voorbereidingskrediet nieuwbouw onderwijshuisvesting Sint Jan
+Baptistschool en Sint Jozefschool
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-04-15
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_april_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Beantwoording vragen fractie DLW inzake Renovatie en Restauratie de
+Datum: 2025-04-15
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording vragen fractie DLW inzake renovatie en restauratie De Paauw
+vast te stellen.
+
+Volledige tekst:
+Beantwoording vragen fractie DLW inzake Renovatie en Restauratie de
+Paauw
+Besluit:
+Beantwoording vragen fractie DLW inzake renovatie en restauratie De Paauw
+vast te stellen.
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-04-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_april_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 152 ex art. 37 RvO van raadslid
+Datum: 2025-04-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Paulides,
+fractie Democratische Liberalen (DLW) Wassenaar d.d. 03-04-2025 met
+betrekking tot de kwaliteit van het havo en vwo-onderwijs op het Rijnlands
+Lyceum vast te stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 152 ex art. 37 RvO van raadslid
+Paulides (DLW) inzake kwaliteit van het onderwijs op het Rijnlands
+Lyceum
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Paulides,
+fractie Democratische Liberalen (DLW) Wassenaar d.d. 03-04-2025 met
+betrekking tot de kwaliteit van het havo en vwo-onderwijs op het Rijnlands
+Lyceum vast te stellen.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-04-29
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-04-29
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025_0.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025_0.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-05-06
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_mei_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-05-06
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_mei_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-05-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_mei_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-05-13
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_mei_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-05-13
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_mei_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-05-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_mei_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: De subsidie peuteropvang uit de Subsidieregeling voorschoolse educatie,
+Datum: 2025-05-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_mei_2025.pdf
+
+Besluittekst (kort):
+peuteropvang en peuterconsulent gemeente Wassenaar 2025 met een
+openeinderegeling beschikbaar te stellen en te bekostigen uit het vroeg-
+en voorschoolse educatie budget.
+
+Volledige tekst:
+De subsidie peuteropvang uit de Subsidieregeling voorschoolse educatie,
+peuteropvang en peuterconsulent gemeente Wassenaar 2025 met een
+openeinderegeling beschikbaar te stellen en te bekostigen uit het vroeg-
+en voorschoolse educatie budget.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-05-20
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_mei_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-05-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_mei_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Wijziging van de Subsidieregeling voorschoolse educatie,
+Datum: 2025-05-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_mei_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Wijziging van de Subsidieregeling voorschoolse educatie,
+peuteropvang en peuterconsulent gemeente Wassenaar 2025
+Besluit:
+---
+
+---
+Besluit: De subsidie voorschoolse educatie uit de Subsidieregeling voorschoolse
+Datum: 2025-05-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_mei_2025.pdf
+
+Besluittekst (kort):
+educatie, peuteropvang en peuterconsulent gemeente Wassenaar 2025
+met een subsidieplafond van € 245.000 met een indexatie conform de
+indexatie van het landelijke normtarief kinderopvang en de subsidie
+peuterconsulent uit Subsidieregeling voorschoolse educatie, peuteropvang
+en peuterconsulent gemeente Wassenaar 2025 met een subsidieplafond
+van € 20.000 met indexatie conform de Asv te bekostigen uit het budget
+voor Gemeentelijk Onderwijsachterstandenbeleid (GOAB).
+
+Volledige tekst:
+De subsidie voorschoolse educatie uit de Subsidieregeling voorschoolse
+educatie, peuteropvang en peuterconsulent gemeente Wassenaar 2025
+met een subsidieplafond van € 245.000 met een indexatie conform de
+indexatie van het landelijke normtarief kinderopvang en de subsidie
+peuterconsulent uit Subsidieregeling voorschoolse educatie, peuteropvang
+en peuterconsulent gemeente Wassenaar 2025 met een subsidieplafond
+van € 20.000 met indexatie conform de Asv te bekostigen uit het budget
+voor Gemeentelijk Onderwijsachterstandenbeleid (GOAB).
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-05-27
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_mei_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-05-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_mei_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: In te stemmen met de vrijval in de volgende voorzieningen:
+Datum: 2025-06-03
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juni_2025.pdf
+
+Besluittekst (kort):
+- In het kader van de actualisering van het Onderhoudsprogramma Openbare
+Ruimte 2024-2028:
+· Vrijval voorziening openbare verlichting (OVL): € 36.000
+· Vrijval voorziening verkeersregelinstallaties (VRI): € 66.971
+- Vrijval egalisatievoorziening rioolheffing: € 33.975
+
+Volledige tekst:
+In te stemmen met de vrijval in de volgende voorzieningen:
+- In het kader van de actualisering van het Onderhoudsprogramma Openbare
+Ruimte 2024-2028:
+· Vrijval voorziening openbare verlichting (OVL): € 36.000
+· Vrijval voorziening verkeersregelinstallaties (VRI): € 66.971
+- Vrijval egalisatievoorziening rioolheffing: € 33.975
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-06-03
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juni_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-06-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juni_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-06-10
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-06-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Overeenkomst Meldpunt Zorgwekkend Gedrag 2025-2027
+Datum: 2025-06-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Overeenkomst Meldpunt Zorgwekkend Gedrag 2025-2027
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-06-16
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_juni_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-06-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_juni_2025.pdf
+
+Besluittekst (kort):
+Pagina 1 van 3
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+Pagina 1 van 3
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-06-24
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: De gemeenteraad te informeren over Jeugdparticipatie via bijgevoegde
+Datum: 2025-07-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_juli_2025.pdf
+
+Besluittekst (kort):
+bijlage.
+
+Volledige tekst:
+De gemeenteraad te informeren over Jeugdparticipatie via bijgevoegde
+bijlage.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-07-01
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_juli_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-07-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_juli_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Raadsinformatiebrief over Jeugdparticipatie
+Datum: 2025-07-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief over Jeugdparticipatie
+Besluit:
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-07-08
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-07-08
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Bestuurlijke reactie Rekenkamercommissie-onderzoek Inburgering
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Pagina 1 van 4
+
+Volledige tekst:
+Bestuurlijke reactie Rekenkamercommissie-onderzoek Inburgering
+Besluit:
+Pagina 1 van 4
+---
+
+---
+Besluit: Selectiecriteria voor toewijzing woningen Den Deylschool
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Selectiecriteria voor toewijzing woningen Den Deylschool
+Besluit:
+---
+
+---
+Besluit: Jaarverantwoording kinderopvang 2024 gemeente Wassenaar
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Jaarverantwoording kinderopvang 2024 gemeente Wassenaar
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-07-15
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Uitvoeringsprogramma Welzijn & Zorg
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Uitvoeringsprogramma Welzijn & Zorg
+Besluit:
+---
+
+---
+Besluit: Wijziging Beleidsregels bijzondere bijstand en minimabeleid
+Datum: 2025-07-15
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+De Eerste wijziging van de beleidsregels bijzondere bijstand en minimabeleid
+Wassenaar 2020-1 vast te stellen per 1 augustus 2025.
+
+Volledige tekst:
+Wijziging Beleidsregels bijzondere bijstand en minimabeleid
+Wassenaar 2020-1
+Besluit:
+De Eerste wijziging van de beleidsregels bijzondere bijstand en minimabeleid
+Wassenaar 2020-1 vast te stellen per 1 augustus 2025.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-08-19
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_augustus_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-08-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_augustus_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-08-26
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_augustus_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-08-26
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_augustus_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-08-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_augustus_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Buurtbemiddeling in te schakelen tussen de bezwaarmakers en
+Datum: 2025-08-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_augustus_2025.pdf
+
+Besluittekst (kort):
+kinderopvang Piccolini.
+
+Volledige tekst:
+Buurtbemiddeling in te schakelen tussen de bezwaarmakers en
+kinderopvang Piccolini.
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-09-02
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_september_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-09-02
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_september_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-09-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_september_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: De wethouder Sociaal Domein, Wonen en Onderwijs de opdracht te geven
+Datum: 2025-09-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_september_2025.pdf
+
+Besluittekst (kort):
+tijdens het eerstkomende Bestuurlijk Overleg Jeugd een voorbehoud te maken
+ten aanzien van de verdeelsystematiek.
+Pagina 2 van 4
+
+Volledige tekst:
+De wethouder Sociaal Domein, Wonen en Onderwijs de opdracht te geven
+tijdens het eerstkomende Bestuurlijk Overleg Jeugd een voorbehoud te maken
+ten aanzien van de verdeelsystematiek.
+Pagina 2 van 4
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-09-09
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_september_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-09-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_september_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Raadsinformatiebrief Uitvoeringsprogramma Welzijn en Zorg
+Datum: 2025-09-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Uitvoeringsprogramma Welzijn en Zorg
+Besluit:
+---
+
+---
+Besluit: Bestendigen crisisvoorziening jeugdhulp
+Datum: 2025-09-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Bestendigen crisisvoorziening jeugdhulp
+Besluit:
+---
+
+---
+Besluit: Monitor jeugdhulp Wassenaar 2024
+Datum: 2025-09-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Monitor jeugdhulp Wassenaar 2024
+Beantwoording paraferingsvragen is toegevoegd.
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-09-16
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_september_2025.pdf
+
+Besluittekst (kort):
+Pagina 1 van 3
+
+Volledige tekst:
+Financiën, Economie en Sport
+Pagina 1 van 3
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-09-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_september_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Beantwoording art 38 RvO door raadslid Hofman-de Raad inzake
+Datum: 2025-09-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording art 38 RvO door raadslid Hofman-de Raad inzake prijsklassen
+van het woningbouwcomplex De Tuynen van Den Deyl vast te stellen.
+
+Volledige tekst:
+Beantwoording art 38 RvO door raadslid Hofman-de Raad inzake
+prijsklassen van het woningbouwcomplex De Tuynen van Den Deyl
+Besluit:
+Beantwoording art 38 RvO door raadslid Hofman-de Raad inzake prijsklassen
+van het woningbouwcomplex De Tuynen van Den Deyl vast te stellen.
+---
+
+---
+Besluit: De gemeenteraad te informeren over het Inspectierapport en
+Datum: 2025-09-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_september_2025.pdf
+
+Besluittekst (kort):
+ontwikkelingen jeugdbeschermingsstelsel via bijgevoegde raadsinformatiebrief.
+
+Volledige tekst:
+De gemeenteraad te informeren over het Inspectierapport en
+ontwikkelingen jeugdbeschermingsstelsel via bijgevoegde raadsinformatiebrief.
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-09-23
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_september_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-09-23
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_september_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-09-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_september_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-09-30
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_september_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-09-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_september_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Correctie Beleidsregel bestuurlijke boete Participatiewet, IOAW en
+Datum: 2025-09-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Correctie Beleidsregel bestuurlijke boete Participatiewet, IOAW en
+IOAZ gemeente Wassenaar 2025 en Beleidsregel Social return
+Wassenaar 2016
+Besluit:
+---
+
+---
+Besluit: Samenwerking nieuwkomersonderwijs primair onderwijs Leidse Regio
+Datum: 2025-09-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Samenwerking nieuwkomersonderwijs primair onderwijs Leidse Regio
+Besluit:
+---
+
+---
+Besluit: te dekken uit het Gemeentelijk Onderwijsachterstandenbeleid-budget
+Datum: 2025-09-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_september_2025.pdf
+
+Besluittekst (kort):
+met een maximum van € 15.000
+
+Volledige tekst:
+te dekken uit het Gemeentelijk Onderwijsachterstandenbeleid-budget
+met een maximum van € 15.000
+---
+
+---
+Besluit: Kosten voor leerlingenvervoer naar taalklassen in de Leidse regio tot en met
+Datum: 2025-09-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_september_2025.pdf
+
+Besluittekst (kort):
+schooljaar 2025-2026 te dekken uit het Gemeentelijk
+Onderwijsachterstandenbeleid-budget, en vanaf schooljaar 2026-2027 over te
+hevelen naar het budget leerlingenvervoer.
+
+Volledige tekst:
+Kosten voor leerlingenvervoer naar taalklassen in de Leidse regio tot en met
+schooljaar 2025-2026 te dekken uit het Gemeentelijk
+Onderwijsachterstandenbeleid-budget, en vanaf schooljaar 2026-2027 over te
+hevelen naar het budget leerlingenvervoer.
+---
+
+---
+Besluit: Advies op voornemen tot positieve principe-uitspraak zorgwoningen
+Datum: 2025-09-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Advies op voornemen tot positieve principe-uitspraak zorgwoningen
+op achterterrein van Hoge Klei 4
+Besluit:
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-10-07
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-10-07
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-10-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Het subsidieplafond voor de regeling Welzijn jeugd gemeente Wassenaar
+Datum: 2025-10-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_oktober_2025.pdf
+
+Volledige tekst:
+Het subsidieplafond voor de regeling Welzijn jeugd gemeente Wassenaar
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-10-14
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_oktober_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-10-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_oktober_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Verhoging subsidieplafonds Sociaal Team Wassenaar, Welzijn jeugd,
+Datum: 2025-10-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_oktober_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Verhoging subsidieplafonds Sociaal Team Wassenaar, Welzijn jeugd,
+Welzijn 18+ en Kunst en Cultuur
+Besluit:
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-10-28
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_oktober_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-10-28
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_oktober_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-10-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_oktober_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-11-03
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_november_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-11-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_november_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-11-11
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_november_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-11-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_november_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Tijdelijke overeenkomst jeugdactiviteiten Gro-Up Buurtwerk 2026
+Datum: 2025-11-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_november_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Tijdelijke overeenkomst jeugdactiviteiten Gro-Up Buurtwerk 2026
+Besluit:
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-11-18
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_november_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-11-18
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_november_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-11-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_november_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: De raad voor te stellen om een aanvraag in te dienen bij het Ministerie van
+Datum: 2025-11-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_november_2025.pdf
+
+Besluittekst (kort):
+Binnenlandse Zaken en Koninkrijkrelaties voor een suppletie-uitkering uit het
+gemeentefonds voor de in 2025 gemaakte kosten voor het onderzoeken,
+opsporen en ruimen van ontplofbare oorlogsresten.
+
+Volledige tekst:
+De raad voor te stellen om een aanvraag in te dienen bij het Ministerie van
+Binnenlandse Zaken en Koninkrijkrelaties voor een suppletie-uitkering uit het
+gemeentefonds voor de in 2025 gemaakte kosten voor het onderzoeken,
+opsporen en ruimen van ontplofbare oorlogsresten.
+---
+
+---
+Besluit: Wassenaar collegevoorstellen
+Datum: 2025-11-25
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_november_2025.pdf
+
+Volledige tekst:
+Wassenaar collegevoorstellen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-11-25
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_november_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-11-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_november_2025.pdf
+
+Besluittekst (kort):
+Pagina 1 van 3
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+Pagina 1 van 3
+---
+
+---
+Besluit: Raadsinformatiebrief Toezegging 862 m.b.t. de behandeling
+Datum: 2025-11-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_november_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over via bijgevoegde Raadsinformatiebrief
+Toezegging 862 m.b.t. de behandeling Verordening Jeugdhulp gemeente
+Wassenaar 2025.
+
+Volledige tekst:
+Raadsinformatiebrief Toezegging 862 m.b.t. de behandeling
+Verordening Jeugdhulp gemeente Wassenaar 2025
+Besluit:
+De gemeenteraad te informeren over via bijgevoegde Raadsinformatiebrief
+Toezegging 862 m.b.t. de behandeling Verordening Jeugdhulp gemeente
+Wassenaar 2025.
+---
+
+---
+Besluit: 2 Verordening antidiscriminatievoorziening gemeente Wassenaar 2026
+Datum: 2025-12-02
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+2 Verordening antidiscriminatievoorziening gemeente Wassenaar 2026
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-12-02
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_december_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-12-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_december_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Raadsinformatiebrief ontwikkelingen regionale inkoop jeugdhulp
+Datum: 2025-12-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief ontwikkelingen regionale inkoop jeugdhulp Haaglanden
+
+Volledige tekst:
+Raadsinformatiebrief ontwikkelingen regionale inkoop jeugdhulp
+Haaglanden 2027
+Besluit:
+Raadsinformatiebrief ontwikkelingen regionale inkoop jeugdhulp Haaglanden
+---
+
+---
+Besluit: 2 Startnotitie Kunst- en cultuurbeleid gemeente Wassenaar 2026
+Datum: 2025-12-09
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+2 Startnotitie Kunst- en cultuurbeleid gemeente Wassenaar 2026
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2025-12-09
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Samenwerkingsovereenkomst Nidos, Jeugdformaat en gemeente
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Samenwerkingsovereenkomst Nidos, Jeugdformaat en gemeente
+Wassenaar bij opvang van alleenstaande minderjarige vluchtelingen
+met verblijfsstatus
+Besluit:
+---
+
+---
+Besluit: Bijgevoegde raadsbrief Toelichting gewijzigde implementatie Regeling hoge
+Datum: 2025-12-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Besluittekst (kort):
+zorgkosten gemeente Wassenaar 2026 aan de raad te versturen.
+
+Volledige tekst:
+Bijgevoegde raadsbrief Toelichting gewijzigde implementatie Regeling hoge
+zorgkosten gemeente Wassenaar 2026 aan de raad te versturen.
+---
+
+---
+Besluit: tot en met 31 december 2026
+Datum: 2025-12-16
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Sociaal Domein, Wonen en Onderwijs
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Pagina 2 van 6
+
+Het college besluit:
+
+Volledige tekst:
+tot en met 31 december 2026
+Besluit:
+Pagina 2 van 6
+
+Het college besluit:
+---
+
+---
+Besluit: Sociaal Domein, Wonen en Onderwijs
+Datum: 2025-12-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Volledige tekst:
+Sociaal Domein, Wonen en Onderwijs
+---
+
+---
+Besluit: Raadsinformatiebrief Participatiewet in Balans en noodzakelijke
+Datum: 2025-12-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Het college besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Participatiewet in Balans en noodzakelijke
+wijzigingen beleidsregels
+Besluit:
+Het college besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief Verlengde toepassing Beleid Inburgering 2022-
+Datum: 2025-12-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Volledige tekst:
+Raadsinformatiebrief Verlengde toepassing Beleid Inburgering 2022-
+---
+
+---
+Besluit: Het Uitvoeringsprogramma Schuldhulpverlening 2025–2028 te delen met de
+Datum: 2025-12-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Besluittekst (kort):
+raad.
+
+Volledige tekst:
+Het Uitvoeringsprogramma Schuldhulpverlening 2025–2028 te delen met de
+raad.
+---
+
+---
+Besluit: Besteding onbenutte Gemeentelijk Onderwijsachterstandbeleid
+Datum: 2025-12-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Besteding onbenutte Gemeentelijk Onderwijsachterstandbeleid
+(GOAB)-middelen 2026
+Besluit:
+---

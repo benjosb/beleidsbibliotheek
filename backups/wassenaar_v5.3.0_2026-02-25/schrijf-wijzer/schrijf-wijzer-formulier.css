@@ -1,0 +1,226 @@
+/* Schrijf-Wijzer Formulier — tweetraps, knoppen in document */
+:root {
+    --wassenaar-blue: #0060ac;
+    --wassenaar-donker: #1d1d1b;
+    --gray-light: #f8f9fa;
+    --gray-border: #dee2e6;
+    --gray-medium: #6c757d;
+}
+
+* { box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--wassenaar-donker);
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.swf-header {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-bottom: 4px solid var(--wassenaar-blue);
+    padding: 1rem 1.5rem;
+}
+.swf-header-inner { max-width: 720px; margin: 0 auto; }
+.swf-back {
+    font-size: 0.9rem;
+    color: var(--wassenaar-blue);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.swf-back:hover { text-decoration: underline; }
+.swf-header h1 { font-size: 1.6rem; margin: 0 0 0.2rem; }
+.swf-subtitle { font-size: 0.9rem; color: var(--gray-medium); margin: 0; }
+.swf-subtitle a { color: var(--wassenaar-blue); }
+
+/* Main */
+.swf-main { max-width: 720px; margin: 0 auto; padding: 1.5rem 1.5rem 3rem; }
+
+/* Trap 1: Portefeuille */
+.swf-trap1 { margin-bottom: 2rem; }
+.swf-trap1 h2 { font-size: 1.2rem; margin: 0 0 0.3rem; }
+.swf-hint {
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+    margin: 0 0 1rem;
+    line-height: 1.5;
+}
+.swf-portefeuille-knoppen {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+}
+.swf-portefeuille-knop {
+    padding: 1rem;
+    border: 2px solid var(--gray-border);
+    border-radius: 10px;
+    background: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.swf-portefeuille-knop:hover {
+    border-color: currentColor;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+.swf-portefeuille-knop.swf-geselecteerd {
+    border-width: 3px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+
+/* Formulier */
+.swf-formulier { margin-top: 1.5rem; }
+.swf-portefeuille-badge {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+}
+.swf-portefeuille-badge strong { color: var(--wassenaar-donker); }
+.swf-link-btn {
+    margin-left: 0.5rem;
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--wassenaar-blue);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.swf-link-btn:hover { color: #004d8c; }
+
+.swf-veld {
+    margin-bottom: 1.5rem;
+}
+.swf-veld label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+}
+.swf-veld input[type="text"] {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Sectie */
+.swf-sectie {
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    background: var(--gray-light);
+    border-radius: 10px;
+    border: 1px solid var(--gray-border);
+}
+.swf-sectie label {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+.swf-sectie-hint {
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+    margin: 0 0 0.75rem;
+}
+
+/* Subthema-knoppen (Trap 2) */
+.swf-subthema-knoppen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+}
+.swf-subthema-knop {
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    background: #fff;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.12s ease;
+}
+.swf-subthema-knop:hover { border-color: currentColor; }
+.swf-subthema-knop.swf-geselecteerd {
+    color: #fff;
+    border-color: transparent;
+}
+
+/* Beleidspanel — inline in sectie */
+.swf-beleidspanel {
+    margin-bottom: 1rem;
+    padding: 0.9rem 1rem;
+    background: #fff;
+    border-radius: 8px;
+    border-left: 4px solid var(--gray-border);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    min-height: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.swf-beleidspanel:empty { display: none; }
+.swf-beleidspanel .swf-beleid-item {
+    margin-bottom: 0.6rem;
+}
+.swf-beleidspanel .swf-beleid-item:last-child { margin-bottom: 0; }
+.swf-beleidspanel .swf-beleid-thema {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+}
+.swf-beleidspanel .swf-beleid-tekst {
+    color: #444;
+    font-size: 0.84rem;
+}
+
+/* Textarea */
+.swf-sectie textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+/* Actions */
+.swf-actions {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-border);
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+.swf-btn {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    background: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+.swf-btn:hover { background: var(--gray-light); }
+.swf-btn-primary {
+    background: var(--wassenaar-blue);
+    color: #fff;
+    border-color: var(--wassenaar-blue);
+}
+.swf-btn-primary:hover { background: #004d8c; border-color: #004d8c; }
+
+@media (max-width: 520px) {
+    .swf-portefeuille-knoppen { grid-template-columns: 1fr; }
+}

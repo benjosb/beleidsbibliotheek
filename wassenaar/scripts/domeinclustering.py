@@ -282,7 +282,7 @@ def update_datajs():
     decisions_json = json.dumps(decisions, ensure_ascii=False, indent=2)
     boom_json = json.dumps(boom, ensure_ascii=False, indent=2)
 
-    new_content = f"""// Besluit-Wijzer Wassenaar — data.js · 5.3.0 (7 mrt 2026) · domeinclustering
+    new_content = f"""// BeleidsBibliotheek Wassenaar — data.js · 6.0.0 (maart 2026) · domeinclustering
 
 const ALL_DECISIONS_DATA = {decisions_json};
 

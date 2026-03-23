@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schrijf-Wijzer · Beleidscontext bij collegevoorstel</title>
+    <link rel="stylesheet" href="schrijf-wijzer.css">
+</head>
+<body>
+    <header class="sw-header">
+        <div class="sw-header-inner">
+            <a href="../index.html" class="sw-logo-link">← Besluit-Wijzer</a>
+            <div>
+                <h1>Schrijf-Wijzer</h1>
+                <p class="sw-subtitle">Selecteer de beleidscontext voor je collegevoorstel · Klik op de knoppen</p>
+            <p><a href="schrijf-wijzer-formulier.html" class="sw-formulier-link">→ Naar concept collegevoorstel (tweetraps, knoppen in document)</a></p>
+            </div>
+        </div>
+    </header>
+
+    <main class="sw-main">
+        <section class="sw-selectie">
+            <h2>Selecteer beleidsdomein(en)</h2>
+            <p class="sw-hint">Klik op een of meer domeinen. De samenvatting verschijnt hieronder.</p>
+            <div id="swKnoppen" class="sw-knoppen"></div>
+        </section>
+
+        <section id="swSamenvattingBlok" class="sw-samenvatting-blok" style="display: none;">
+            <div class="sw-samenvatting-kop">
+                <h2>Beleidssamenvatting</h2>
+                <button type="button" id="swKopieer" class="sw-btn sw-btn-kopieer">Kopieer naar klembord</button>
+            </div>
+            <div id="swSamenvattingInhoud" class="sw-samenvatting-inhoud"></div>
+        </section>
+
+        <section class="sw-lege-staat" id="swLegeStaat">
+            <p>Selecteer één of meer domeinen om de beleidssamenvatting te zien.</p>
+        </section>
+
+        <section class="sw-footer-links">
+            <a href="../collegevoorstel%20sjabloon%20Wassenaar.docx" class="sw-download-link">📄 Download collegevoorstel-sjabloon (Word)</a>
+            <a href="../index.html">← Terug naar Beleidsdossiers</a>
+        </section>
+    </main>
+
+    <script src="schrijf-wijzer-data.js"></script>
+    <script src="schrijf-wijzer.js"></script>
+</body>
+</html>

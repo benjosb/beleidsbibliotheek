@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeleidsBibliotheek — Technische eisen en compliance · Gemeente Wassenaar</title>
+    <!-- Fonts en design van gemeentesite wassenaar.nl (zie openbare-documenten) -->
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=roboto:300,400,500,700|open-sans:300,400,600,700">
+    <style>
+        /* Design tokens van wassenaar.nl/openbare-documenten */
+        :root {
+            --primary: #55601c;
+            --bodyColor: #6f6f6f;
+            --contentColor: #555;
+            --iconsColor: #394A58;
+            --paragraphEvenColor: #f4f4f4;
+            --fontFamily: Roboto, 'Open Sans', -apple-system, sans-serif;
+        }
+        @media print { @page { size: A4; margin: 18mm; } body { max-width: none; background: #fff; } .skip-link { display: none; } }
+        .skip-link { position: absolute; top: -2.5em; left: 0; background: var(--primary); color: #fff; padding: 0.5em 1em; z-index: 100; text-decoration: none; }
+        .skip-link:focus { top: 0; }
+        body { font-family: var(--fontFamily); font-size: 1.12rem; line-height: 1.5; color: var(--bodyColor); max-width: 210mm; margin: 0 auto; padding: 12mm; background: #fff; }
+        .doc-header { display: flex; align-items: center; gap: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--paragraphEvenColor); }
+        .doc-header .logo-link { flex-shrink: 0; }
+        .doc-header .site-logo { height: 44px; width: auto; display: block; }
+        .doc-header .header-text h1 { font-size: 1.5rem; font-weight: 400; color: var(--primary); margin: 0 0 0.25rem 0; }
+        .doc-header .subtitle { font-size: 0.9rem; color: var(--contentColor); margin: 0; }
+        h2 { font-size: 1.25rem; color: var(--primary); margin-top: 1.25rem; font-weight: 400; }
+        h3 { font-size: 1.1rem; color: var(--primary); margin-top: 1rem; font-weight: 400; }
+        table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.9rem; }
+        th, td { border: 1px solid #ddd; padding: 0.35rem 0.5rem; text-align: left; vertical-align: top; }
+        th { background: var(--paragraphEvenColor); font-weight: 600; color: var(--iconsColor); }
+        th[scope="col"] { background: #e8ebe8; }
+        ul { margin: 0.35rem 0; padding-left: 1.5rem; }
+        .intro { font-style: italic; margin-bottom: 0.75rem; }
+        .summary { background: var(--paragraphEvenColor); padding: 0.75rem; margin-top: 1rem; border-left: 4px solid var(--primary); }
+        .footer { font-size: 0.8rem; color: var(--contentColor); margin-top: 1rem; }
+        .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+        @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+    </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Ga naar inhoud</a>
+
+<header class="doc-header" role="banner">
+        <a href="https://www.wassenaar.nl" class="logo-link" aria-label="Gemeente Wassenaar" target="_blank" rel="noopener">
+            <img src="https://cuatro.sim-cdn.nl/wassenaar/uploads/2023-09/wassenaar_logo_fc.svg" alt="Gemeente Wassenaar" class="site-logo" width="200" height="35">
+        </a>
+        <div class="header-text">
+            <h1>BeleidsBibliotheek — Technische eisen en compliance</h1>
+            <p class="subtitle">Besluit-Wijzer Wassenaar · Voor collega's en CISO</p>
+        </div>
+</header>
+
+<main id="main" role="main">
+<p class="intro"><strong>Technische eisen, testinstructie en compliance-overzicht</strong></p>
+<p><strong>Doel:</strong> Transparantietool voor raads- en collegebesluiten. Nieuwe wethouders snel overzicht van vigerend beleid per portefeuille. <em>Aanvulling op het Overdrachtsdossier Gemeenteraad 2026.</em></p>
+<p><strong>Techniek:</strong> Statische HTML/CSS/JavaScript — geen server-side code, geen externe API-calls. De inhoud is <strong>statisch</strong>; alleen de weergave (zoeken, filters) is dynamisch.</p>
+
+<h2>1. Benodigde functies van het CMS / hosting</h2>
+<table>
+    <caption class="visually-hidden">Overzicht benodigde CMS-functies en reden</caption>
+    <tr><th scope="col">Functie</th><th scope="col">Waarom nodig</th></tr>
+    <tr><td>Statische bestanden hosten</td><td>De BeleidsBibliotheek bestaat uit HTML, CSS en JavaScript-bestanden. Het CMS moet deze kunnen uitdelen aan bezoekers.</td></tr>
+    <tr><td>JavaScript uitvoeren</td><td>Zoekfunctie, filters, uitklapbare secties, disclaimer-modal en navigatie werken via JavaScript. Zonder JS is de tool niet bruikbaar.</td></tr>
+    <tr><td>Inline of ingesloten scripts toestaan</td><td>De disclaimer en app-logica draaien via &lt;script&gt;-tags. Een strikte Content Security Policy die unsafe-inline blokkeert kan problemen geven.</td></tr>
+    <tr><td>Correcte MIME-types</td><td>.js en .css moeten als application/javascript en text/css worden geserveerd. Anders laden ze niet.</td></tr>
+    <tr><td>Bestandsgrootte ~2 MB</td><td>De monolith-versie of losse bestanden samen kunnen groot zijn. Upload- en weergavelimieten mogen dit niet blokkeren.</td></tr>
+</table>
+
+<h2>2. Wat de BeleidsBibliotheek níet nodig heeft</h2>
+<ul>
+    <li>Geen database of backend</li>
+    <li>Geen cookies (alleen sessionStorage voor de disclaimer “Ik ga akkoord”)</li>
+    <li>Geen externe API-calls of third-party scripts</li>
+    <li>Geen analytics of tracking</li>
+    <li>Geen gebruikersregistratie of login</li>
+</ul>
+
+<h2>3. Testinstructie — zo controleer je of het werkt</h2>
+<ol>
+    <li><strong>Open de URL</strong> van de BeleidsBibliotheek in een moderne browser (Chrome, Edge, Firefox, Safari).</li>
+    <li><strong>Disclaimer:</strong> Er verschijnt een modal “Over deze Besluit-Wijzer”. Klik op “Ik begrijp het en ga verder”.</li>
+    <li><strong>Overzicht:</strong> Je ziet kaarten per portefeuille. Klik op een kaart.</li>
+    <li><strong>Detail:</strong> Er verschijnen besluiten, filters (jaar, type) en een zoekbalk. Typ een zoekterm en controleer of resultaten verschijnen.</li>
+    <li><strong>Weergave wisselen:</strong> Klik op “BBV-taakveld” — de indeling moet veranderen.</li>
+    <li><strong>Geen foutmeldingen:</strong> Open de ontwikkeltools (F12) → tab Console. Er mogen geen rode fouten staan.</li>
+</ol>
+<p><strong>Werkt het?</strong> Disclaimer sluit, kaarten laden, zoeken en filters werken, geen console errors.<br>
+<strong>Werkt het niet?</strong> Lege pagina, geen kaarten of rode fouten → vaak wordt JavaScript geblokkeerd of zijn MIME-types niet correct.</p>
+
+<h2>4. Compliance — voor CISO en andere belanghebbenden</h2>
+
+<h3>4.1 Huisstijl</h3>
+<table>
+    <caption class="visually-hidden">Huisstijl compliance-overzicht</caption>
+    <tr><th scope="col">Aspect</th><th scope="col">Status</th></tr>
+    <tr><td>Logo</td><td>Gemeente Wassenaar-logo (SVG) — officieel huisstijl</td></tr>
+    <tr><td>Kleuren</td><td>Primair #55601c (groen), zoals op <a href="https://www.wassenaar.nl/openbare-documenten" target="_blank" rel="noopener">wassenaar.nl</a></td></tr>
+    <tr><td>Typografie</td><td>Standaard webfonts; geen externe font-host</td></tr>
+    <tr><td>Domein</td><td>Onder wassenaar.nl (subdomein) — conform huisstijl</td></tr>
+    <tr><td>Vormgeving</td><td><strong>Verzoek aan Communicatie:</strong> keuze — naadloos in wassenaar.nl OF bewuste afwijking zoals wassenaar.bestuurlijkeinformatie.nl (iBabs).</td></tr>
+</table>
+
+<h3>4.2 WCAG (toegankelijkheid)</h3>
+<table>
+    <caption class="visually-hidden">WCAG compliance-overzicht</caption>
+    <tr><th scope="col">Aspect</th><th scope="col">Status</th></tr>
+    <tr><td>Taal</td><td>lang="nl" op &lt;html&gt;</td></tr>
+    <tr><td>Semantiek</td><td>&lt;header&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;section&gt;, koppen hiërarchie</td></tr>
+    <tr><td>ARIA</td><td>aria-label, aria-expanded, aria-modal, role="dialog" voor modals en knoppen</td></tr>
+    <tr><td>Contrast</td><td>Tekst op achtergrond voldoet aan contrast-eisen</td></tr>
+    <tr><td>Toetsenbord</td><td>Navigatie en acties via toetsenbord mogelijk</td></tr>
+    <tr><td>Links</td><td>Externe links met rel="noopener"</td></tr>
+</table>
+<p><em>Aanbeveling:</em> Periodieke WCAG 2.1 AA-audit (bijv. screenreader-test, axe DevTools).</p>
+
+<h3>4.3 Privacy</h3>
+<table>
+    <caption class="visually-hidden">Privacy compliance-overzicht</caption>
+    <tr><th scope="col">Aspect</th><th scope="col">Status</th></tr>
+    <tr><td>Persoonsgegevens</td><td>Geen verzameling of verwerking</td></tr>
+    <tr><td>Cookies</td><td>Geen cookies</td></tr>
+    <tr><td>sessionStorage</td><td>Alleen voor disclaimer “Ik ga akkoord” — per sessie, geen tracking</td></tr>
+    <tr><td>Third-party scripts</td><td>Geen — geen Google Analytics, geen externe trackers</td></tr>
+    <tr><td>AVG</td><td>Geen verwerking persoonsgegevens → geen AVG-meldplicht voor deze tool</td></tr>
+</table>
+
+<h3>4.4 Informatiebeveiliging</h3>
+<table>
+    <caption class="visually-hidden">Informatiebeveiliging compliance-overzicht</caption>
+    <tr><th scope="col">Aspect</th><th scope="col">Status</th></tr>
+    <tr><td>Gegevensbron</td><td>Alleen openbare bronnen: raads- en collegebesluiten (iBabs), Officiële Bekendmakingen, coalitieakkoord</td></tr>
+    <tr><td>Vertrouwelijke data</td><td>Geen BSN, geen inloggegevens, geen interne stukken</td></tr>
+    <tr><td>Hosting</td><td>Voorkeur: hardened omgeving van gemeente Wassenaar. Gesloten CMS (Shift2) — geen externe API-calls.</td></tr>
+    <tr><td>HTTPS</td><td>Verplicht — alle verkeer via HTTPS</td></tr>
+    <tr><td>Dependencies</td><td>Geen externe npm/CDN-afhankelijkheden — alles lokaal</td></tr>
+</table>
+<p><strong>Risico-inschatting:</strong> Laag — statische tool, publieke bronnen, geen gebruikersdata. <em>Integriteit:</em> het faken van historische data is niet denkbeeldig; mitigerende maatregelen (bijv. checksums, versiebeheer) zijn aan te raden.</p>
+
+<div class="summary">
+<h3>5. Samenvatting voor CISO</h3>
+<p><strong>BeleidsBibliotheek / Besluit-Wijzer Wassenaar</strong> is een statische webapplicatie die:</p>
+<ul>
+    <li>alleen openbare bronnen gebruikt</li>
+    <li>geen persoonsgegevens verwerkt</li>
+    <li>geen cookies of third-party tracking gebruikt</li>
+    <li>geen externe verbindingen maakt buiten het domein</li>
+    <li>voorkeur: hardened omgeving gemeente Wassenaar</li>
+</ul>
+<p>De tool is bedoeld voor interne transparantie (wethouders, raadsleden) en publieke toegang tot beleidsinformatie. Risicoprofiel laag; standaard security review voldoende.</p>
+</div>
+
+</main>
+
+<footer class="footer" role="contentinfo">Document versie: februari 2026 · Contact: [verantwoordelijke afdeling]</footer>
+
+</body>
+</html>
