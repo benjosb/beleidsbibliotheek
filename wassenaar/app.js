@@ -181,16 +181,14 @@ const OD_SAMENVATTING_PER_BBV = {
         bron: 'Bron: OD hoofdstukken 2, 3, 4 — De staat van de gemeentelijke organisatie; De financiële positie; Regionale samenwerkingen.',
         html: `<p>De gemeentelijke organisatie telt circa 300 medewerkers en kent een open, collegiale cultuur. Circa 80% van het werk bestaat uit wettelijke taken; de ruimte voor extra politieke ambities is beperkt. Het Klant Contact Centrum (KCC) is het eerste aanspreekpunt; bij sociale vragen wordt direct doorverbonden naar het Sociaal Team Wassenaar.</p>
 <p>De financiële positie is stabiel voor 2026, maar vanaf 2028 zijn keuzes nodig om de begroting structureel sluitend te houden. Wassenaar gaat vanaf 2026 lenen voor investeringen (o.a. De Paauw, onderwijshuisvesting). De inkomsten uit het gemeentefonds zijn onzeker door het regeerakkoord en het verschoven ravijnjaar.</p>
-<p><strong>Subsidiebeleid:</strong> Jaarlijkse vaststelling subsidieplafonds (2025: Economie €35.960, SAD €478.969, Volksgezondheid €34.228). Subsidieregeling structurele activiteiten (2024). Nieuw en herzien subsidiebeleid gerealiseerd; coalitie onderzoekt subsidies, fondsen en cofinanciering.</p>
-<p>Regionale samenwerking is essentieel: Veiligheidsregio Haaglanden, GGD, Avalex, MRDH, Servicebureau Jeugdhulp. De Rekenkamer WVOLV onderzoekt de effectiviteit van de samenwerkingsverbanden; het rapport volgt in 2026.</p>
 <h4>Relevante visies en beleidsdocumenten</h4>
 <ul class="overdracht-doclist">
-<li><a href="https://www.wassenaar.nl/coalitieakkoord" target="_blank" rel="noopener noreferrer">Coalitieakkoord 2022–2026</a> (VVD, CDA, D66, DLW, PvdA)</li>
-<li><a href="https://www.wassenaar.nl/begroting-2026" target="_blank" rel="noopener noreferrer">Begroting 2026</a></li>
+<li><a href="https://www.wassenaar.nl/financien/" target="_blank" rel="noopener noreferrer">Financiën gemeente Wassenaar</a> (begrotingen, jaarrekeningen)</li>
+<li><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/Organogram%20gemeente%20Wassenaar%20januari%202026.pdf?cb=Eidtrwq1" target="_blank" rel="noopener noreferrer">Organogram gemeente Wassenaar</a> (januari 2026)</li>
 <li><a href="https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f771bed8-2066-4bd2-95c3-06287cc72379?agendaItemId=ee1e7028-db90-4250-bc31-f94f8a4459d5" target="_blank" rel="noopener noreferrer">Financiële Verordening en Controleprotocol 2025</a> (raadsbesluit 14-10-2025)</li>
 <li><a href="https://www.wassenaar.nl/subsidieregelingen" target="_blank" rel="noopener noreferrer">Subsidiebeleid / Subsidieregelingen</a></li>
 <li><a href="https://organisaties.overheid.nl/40204/Gemeente_Wassenaar#gemeenschappelijke-regelingen" target="_blank" rel="noopener noreferrer">Gemeenschappelijke regelingen</a> (Overheid.nl)</li>
-<li><a href="https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf" target="_blank" rel="noopener noreferrer">Dienstverleningsmodel gemeente Wassenaar</a> (dec 2024, 0.2 Burgerzaken)</li>
+<li><a href="https://wassenaar.bestuurlijkeinformatie.nl/Reports/Document/d90c795e-273f-4c2a-9ccf-02693592592c?documentId=160b2774-4771-4018-b96e-734ef8b6d5ae" target="_blank" rel="noopener noreferrer">Dienstverleningsmodel gemeente Wassenaar</a> (dec 2024, 0.2 Burgerzaken)</li>
 </ul>`
     },
     1: {
@@ -283,9 +281,9 @@ const BBV_HOOFDTAAKVELDEN = {
     8: "8. Volkshuisvesting, leefomgeving en stedelijke vernieuwing",
 };
 
-// Sub-taakvelden per hoofdstuk (Iv3 / BBV — zie https://findo.nl/content/taakvelden-gemeenten )
-// `omschrijving` = beknopte toelichting welke baten/lasten hier landen (niet ter vervanging van officiële Iv3-handleiding).
-const BBV_TAAKVELDEN_PER_HOOFDSTUK = {
+// Sub-taakvelden per hoofdstuk — verrijkte versie uit taakvelden_iv3.js
+// Bevat: omschrijving (IV3), niet (afbakening), keywords (trefwoorden-index)
+const BBV_TAAKVELDEN_PER_HOOFDSTUK = (typeof BBV_TAAKVELDEN_IV3 !== 'undefined') ? BBV_TAAKVELDEN_IV3 : {
     0: [
         { code: '0.1', naam: 'Bestuur', omschrijving: 'Democratisch bestuur en ambtelijke ondersteuning: college, raad, griffie, burgemeester, democratie.' },
         { code: '0.2', naam: 'Burgerzaken', omschrijving: 'Dienstverlening aan burgers: burgerlijke stand, reisdocumenten, basisregistratie (BRP-keten).' },
@@ -544,8 +542,12 @@ const BELEIDSNOTA_PER_THEMA = {
 
 // Beleidsnota's per BBV-taakveld (voor hoofdstukken/taakvelden-weergave)
 const BELEIDSNOTA_PER_TAAKVELD = {
+    '0.4': [
+        { naam: 'Algemene Subsidieverordening (ASV) gemeente Wassenaar 2025', datum: '2024-11-26', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/eb29a294-7f08-44d2-aab8-e917f88a4c3a?agendaItemId=87e9e940-6bcc-48e7-9c58-40f9e8eba921', type: 'Verordening' },
+        { naam: 'Subsidiebeleid gemeente Wassenaar 2025', datum: '2024-11-26', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/eb29a294-7f08-44d2-aab8-e917f88a4c3a?agendaItemId=87e9e940-6bcc-48e7-9c58-40f9e8eba921', type: 'Beleidsnota', toelichting: 'Raad 26 nov 2024; subsidiebeleid en ASV gezamenlijk vastgesteld.' },
+    ],
     '8.1': [ // Ruimte en leefomgeving — aanvulling op hoofdstuk 8 (merge met BELEIDSNOTA_PER_HOOFDSTUK_BBV[8])
-        { naam: 'Startnotitie Participatie Omgevingsvisie', datum: '2025-12-17', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=416f5b70-c39b-47d4-b662-be73d3e71c63&agendaItemId=5abb6d11-0c07-463f-a4c0-10b66f8e58a8', type: 'Startnotitie', toelichting: 'De raad heeft deze startnotitie vastgesteld (17 dec 2025). De Eerste proeve Omgevingsvisie 2040 is niet als vastgestelde visie aangenomen; de raad koos voor een nieuw participatietraject. Streefdatum vaststelling Omgevingsvisie: 1 april 2027.' }
+        { naam: 'Raadsvoorstel Startnotitie Participatie Omgevingsvisie', datum: '2025-12-17', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=c42f813b-833e-4d65-af0a-c76e2824095d&agendaItemId=5abb6d11-0c07-463f-a4c0-10b66f8e58a8', type: 'Raadsvoorstel', toelichting: 'De raad heeft deze startnotitie vastgesteld (17 dec 2025, geamendeerd). De Eerste proeve Omgevingsvisie 2040 is niet als vastgestelde visie aangenomen; de raad koos voor een nieuw participatietraject. Streefdatum vaststelling Omgevingsvisie: 1 april 2027.' }
     ],
     '8.3': [ // Wonen en bouwen — aanvulling op hoofdstuk 8
         { naam: 'Nota Woonbeleid gemeente Wassenaar 2025', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/8f51ef1d-1b7a-4f0c-8343-4bf2f203930d?documentId=bdfb8868-7df2-422f-bfbe-dcd9528fbaa6&agendaItemId=88378d7f-f964-4391-90d3-01e88eb7752d', type: 'Beleidsnota' }
@@ -555,13 +557,13 @@ const BELEIDSNOTA_PER_TAAKVELD = {
     // BBV 5 (Sport, cultuur, recreatie): zie BELEIDSNOTA_PER_HOOFDSTUK_BBV[5]
     // BBV 8 (Volkshuisvesting, leefomgeving, stedelijke vernieuwing): uitgebreide OD-lijst in BELEIDSNOTA_PER_HOOFDSTUK_BBV[8]
     '6.811': [ // Beschermd wonen (Wmo)
-        { naam: 'Startnotitie Lokale Woonzorgvisie', datum: '2025-09-22', link: null, type: 'Startnotitie' },
-        { naam: 'Beleidsnota Ouderenbeleid 2025', datum: '2025-01-28', link: null, type: 'Beleidsnota' }
+        { naam: 'Startnotitie Lokale Woonzorgvisie', datum: '2025-09-22', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=847d0caa-b04b-493e-9d14-d72c9d85b640&agendaItemId=a71419b7-25db-4a02-800f-99707a0dd53b', type: 'Startnotitie' },
+        { naam: 'Beleidsnota Ouderenbeleid 2025', datum: '2025-01-28', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/85393b37-a676-4ffb-a9f2-33b6f0d9b58b?documentId=79a101d9-552b-49cc-9d34-31f6923cc1a9&agendaItemId=6ac84012-a995-46de-b19f-d58cb5aa952a', type: 'Beleidsnota' }
     ],
     '6.60 - 6.91': [ // Clustering: 6.60, 6.711-6.714, 6.791, 6.811, 6.812, 6.91
         { naam: 'WMO', type: 'Clustering', toelichting: 'Deze tegel is een clustering van alle Wmo-gerelateerde BBV-taakvelden: 6.60 (Hulpmiddelen en diensten), 6.711 (Huishoudelijke hulp), 6.712 (Begeleiding), 6.713 (Dagbesteding), 6.714 (Overige maatwerkarrangementen), 6.791 (PGB Wmo), 6.811 (Beschermd wonen), 6.812 (Maatschappelijke- en vrouwenopvang) en 6.91 (Coördinatie en beleid Wmo). Besluiten van het Sociaal Domein worden hier op hoofdniveau weergegeven.' },
-        { naam: 'Startnotitie Lokale Woonzorgvisie', datum: '2025-09-22', link: null, type: 'Startnotitie' },
-        { naam: 'Beleidsnota Ouderenbeleid 2025', datum: '2025-01-28', link: null, type: 'Beleidsnota' }
+        { naam: 'Startnotitie Lokale Woonzorgvisie', datum: '2025-09-22', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=847d0caa-b04b-493e-9d14-d72c9d85b640&agendaItemId=a71419b7-25db-4a02-800f-99707a0dd53b', type: 'Startnotitie' },
+        { naam: 'Beleidsnota Ouderenbeleid 2025', datum: '2025-01-28', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/85393b37-a676-4ffb-a9f2-33b6f0d9b58b?documentId=79a101d9-552b-49cc-9d34-31f6923cc1a9&agendaItemId=6ac84012-a995-46de-b19f-d58cb5aa952a', type: 'Beleidsnota' }
     ],
     '6.2': [ // Clustering: 6.21, 6.22, 6.23
         { naam: 'Toegang eerste lijns', type: 'Clustering', toelichting: 'Deze tegel is een clustering van de BBV-taakvelden 6.21 (Toegang en eerstelijnsvoorzieningen Wmo), 6.22 (Toegang en eerstelijnsvoorzieningen Jeugd) en 6.23 (Toegang en eerstelijnsvoorzieningen Integraal). Besluiten van het Sociaal Domein worden hier op hoofdniveau weergegeven.' }
@@ -577,97 +579,97 @@ const BELEIDSNOTA_PER_TAAKVELD = {
 
 // Algemene beleidsnota's per BBV-hoofdstuk: zichtbaar zodra je het hoofdstuk opent (geen subtegel nodig), zelfde patroon als OD op de tegel.
 const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
+    0: [
+        { naam: 'Begroting 2026', datum: '2025-11-04', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/964a41c4-2602-4196-8835-c90bb6564133?agendaItemId=c49a5b6e-0050-4064-8850-39b5d7cc1b78', type: 'Begroting' },
+        { naam: 'Kadernota 2026', datum: '2025-07-01', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d240e703-1043-49fe-80ca-2da36f006186?agendaItemId=7f9347ff-fc91-49fe-983e-04bb13ba2512', type: 'Kadernota' },
+        { naam: 'Voorjaarsnota 2025', datum: '2025-07-08', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/ce5b3644-d267-4fd7-a1c2-12084df980ed?agendaItemId=f8054240-3405-4e87-8e13-c80bde3af166', type: 'P&C' },
+        { naam: 'Najaarsnota 2025', datum: '2025-12-17', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b0c65dcd-d44c-4e1a-8fda-9276ca0da9a7?agendaItemId=ed3af2b5-d8fc-4650-930c-46682ebc8401', type: 'P&C' },
+        { naam: 'Jaarstukken 2024', datum: '2025-07-08', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/7424ae6a-15b2-4e56-b1bc-12a38e77266d?agendaItemId=82626e1c-2301-4c9f-b7c2-847adc7325aa', type: 'Jaarrekening' },
+        { naam: 'Begroting 2025 (geamendeerd)', datum: '2024-11-05', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4dcff663-4bfe-4863-8847-32553ab2bf6d?agendaItemId=e7d129d0-b72a-48ed-bb1a-51e096615adb', type: 'Begroting' },
+        { naam: 'Kadernota 2025', datum: '2024-06-24', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/08674c76-c557-49b1-8c64-e7a3c57f2d6c?agendaItemId=a6b329d3-b33a-4c83-8ca0-a7a9f6f66da6', type: 'Kadernota' },
+        { naam: 'Najaarsnota 2024', datum: '2024-12-17', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/1f88a1fb-3d63-494d-8871-d2670027ac1a?agendaItemId=bd85b42a-bb0d-4023-9559-af27396ca800', type: 'P&C' },
+        { naam: 'Voorjaarsnota 2024', datum: '2024-07-02', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/10404874-6210-4fd0-ade1-88b116a52464?agendaItemId=0dbd0d81-e5f8-401b-91b7-3ab9d97e457d', type: 'P&C' },
+        { naam: 'Jaarstukken 2023', datum: '2024-07-02', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/ad8e4d4e-dab1-43f3-bfab-499591e1562b?agendaItemId=09c9fc1a-65a6-4822-b393-93fde00c5d07', type: 'Jaarrekening' },
+        { naam: 'Subsidiebeleid en ASV gemeente Wassenaar 2025', datum: '2024-11-26', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/eb29a294-7f08-44d2-aab8-e917f88a4c3a?agendaItemId=87e9e940-6bcc-48e7-9c58-40f9e8eba921', type: 'Beleidsnota' },
+        { naam: 'Actualisatie financiële verordening 2025', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f771bed8-2066-4bd2-95c3-06287cc72379?agendaItemId=ee1e7028-db90-4250-bc31-f94f8a4459d5', type: 'Verordening' },
+        { naam: 'Controleprotocol incl. normen- en toetsingskader 2025', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4d82bb56-1f5a-404a-9b78-d3f4d8f4c4a2?agendaItemId=18294431-0fb6-4de6-9fea-729545258d24', type: 'Protocol' },
+        { naam: 'Nota reserves en voorzieningen', datum: '2024-06-04', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f7633982-4464-480a-9ba7-676611fe5ec0?agendaItemId=732e6baa-be53-4253-a275-14c28c298d59', type: 'Nota' },
+        { naam: 'Nota waardering en afschrijving vaste activa', datum: '2024-06-04', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/29c19054-bead-476e-ac4e-04e7704bbb15?agendaItemId=94a299db-4d50-46a0-b571-8e25b4b47176', type: 'Nota' },
+    ],
     1: [
-        {
-            naam: 'Integraal Veiligheidsbeleid 2024–2027 gemeente Wassenaar',
-            link: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/df32a5b8-1b14-4a96-b325-bd3af644cc9f?documentId=d55bb8d1-54e5-473f-8302-33434af5914c&agendaItemId=77e257f7-68bb-42a3-92ae-8a2628d2a666',
-            type: 'Beleidsnota',
-            toelichting: 'Integraal veiligheidsbeleid — iBabs-document (controleer vergadering/stemming in iBabs).'
-        }
+        { naam: 'Integraal Veiligheidsbeleid 2024–2027', link: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/df32a5b8-1b14-4a96-b325-bd3af644cc9f?documentId=d55bb8d1-54e5-473f-8302-33434af5914c&agendaItemId=77e257f7-68bb-42a3-92ae-8a2628d2a666', type: 'Beleidsnota' },
+        { naam: 'Beleidsplan aanpak ondermijnende criminaliteit 2025–2028', datum: '2024-12-17', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f72b7f00-4963-4817-bf9a-269c85b21ecd?agendaItemId=471de35e-33ab-41a0-9911-6fdcaa82d461', type: 'Beleidsplan' },
+        { naam: 'Algemene Plaatselijke Verordening (APV) 2024', datum: '2024-10-15', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/49583aaa-9cee-4104-8ca3-5a012adba2f0?agendaItemId=d63bc6bd-fcdc-4b97-a105-ce320d18c782', type: 'Verordening' },
+        { naam: 'Regiovisie Aanpak Huiselijk Geweld Haaglanden 2026', datum: '2025-12-16', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/c349b273-ff0c-4199-a92e-638f051c7953?agendaItemId=994549eb-e2ff-48d7-abb8-c9acd3d9d4d7', type: 'Regiovisie' },
+        { naam: 'Bekrachtiging Noodverordening NAVO-top 2025', datum: '2025-06-03', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/554b128e-d10b-4b2c-bace-e2fd2a405e6b?agendaItemId=6ef51e08-d21a-4a49-974e-cad22b0ab0af', type: 'Verordening' },
     ],
     2: [
-        {
-            naam: 'Wegencategoriseringsplan Wassenaar',
-            datum: '2025-12-17',
-            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3a10e3a7-42a0-4d1d-b2d5-4665bcb18442?agendaItemId=fecb037d-9434-46c1-8d7c-d88b5082b02a',
-            type: 'Beleidsplan',
-            toelichting: 'Vastgesteld door de raad 17 dec 2025; invoering nieuwe snelheidsregimes o.a. per 27 feb 2026 (zie besluittekst in iBabs). Zelfde link als in briefing Verkeer & Mobiliteit.'
-        }
+        { naam: 'Wegencategoriseringsplan Wassenaar', datum: '2025-12-17', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3a10e3a7-42a0-4d1d-b2d5-4665bcb18442?agendaItemId=fecb037d-9434-46c1-8d7c-d88b5082b02a', type: 'Beleidsplan', toelichting: 'Raad 17 dec 2025; invoering nieuwe snelheidsregimes o.a. per 27 feb 2026.' },
+        { naam: 'Zienswijze concept-ontwerp Mobiliteitsvisie MRDH', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/72097dba-46b1-46ba-8d2f-d9b3d967ac32?agendaItemId=6d3352c2-e61b-4816-b1cf-d5d95f80698b', type: 'Zienswijze' },
+        { naam: 'Beheervisie Openbare Ruimte', datum: '2023-09-19', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/eacc1bd6-189f-47ee-bbb6-412c644c903e?agendaItemId=67f7fcd0-4f59-4473-98a9-b4c38f703d0a', type: 'Beleidsnota' },
     ],
     3: [
-        {
-            naam: 'Economische Visie Wassenaar 2025',
-            datum: '2025-09-22',
-            link: 'https://www.wassenaar.nl/economische-visie-wassenaar',
-            type: 'Beleidsnota',
-            toelichting: 'Visie lokale economie — officiële gemeentepagina met PDF en bijlagen.'
-        },
-        {
-            naam: 'Visie voor De Wassenaarse Slag',
-            datum: '2025-03-04',
-            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42',
-            type: 'Beleidsnota',
-            toelichting: 'Strand en recreatie (economische promotie)'
-        }
+        { naam: 'Economische Visie Wassenaar 2025', datum: '2025-09-22', link: 'https://www.wassenaar.nl/economische-visie-wassenaar', type: 'Beleidsnota' },
+        { naam: 'Visie voor De Wassenaarse Slag', datum: '2025-03-04', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/bf450551-9740-45fb-9e48-36978432ec61?documentId=ae1f505f-1c39-4f65-af01-7ef35f1d053a&agendaItemId=6038eaee-e37d-4d6d-a760-a222db95d7a6', type: 'Beleidsnota', toelichting: 'Raad 4 mrt 2025 (geamendeerd).' },
+        { naam: 'Zienswijze Visie Economisch Vestigingsklimaat MRDH', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/050aaa0d-3c92-444e-8f8f-31690817632f?agendaItemId=56b75768-2727-41dc-96c2-c2b05c47f7b8', type: 'Zienswijze' },
+        { naam: 'Nota Internationals in Wassenaar', datum: '2024-10-15', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/63d57462-b5b2-4b7d-87e7-c39175e246cf?agendaItemId=bc938db7-cafb-45ce-8274-9407c09693c6', type: 'Nota', toelichting: 'Raad 15 okt 2024 (geamendeerd).' },
+        { naam: 'Verordening BIZ Maaldrift 2026–2030', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5416554c-41d9-4d46-8ccf-29cdf24ed70c?agendaItemId=84b3c7ff-39de-461d-892e-250f7e17c400', type: 'Verordening' },
     ],
     4: [
-        {
-            naam: 'Lokale Educatieve Agenda (LEA) 2026–2037',
-            datum: '2026-01-16',
-            link: 'https://centraalplus.nl/2026/01/17/lokale-educatieve-agenda-van-wassenaar-ondertekend-een-horizon-waarmee-we-aan-de-slag-kunnen/',
-            type: 'Samenwerkingsdocument',
-            toelichting: 'Ondertekend 16 jan 2026 (18 partijen; o.a. gemeente, scholen, welzijn). Deze link is een nieuwsbericht van Centraal+, géén formeel bestuursdocument. Het openbare PDF-/iBabs-pad stond nog niet in onze data — zoek desgewenst in iBabs of op wassenaar.nl op “Lokale Educatieve Agenda”.'
-        },
-        {
-            naam: 'Verordening leerlingenvervoer 2025 gemeente Wassenaar',
-            datum: '2025-09-22',
-            link: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=eec09f18-31bb-4477-9559-7a73cad358ee&agendaItemId=fea9db3b-6a30-47e4-8337-629eaeca711b',
-            type: 'Verordening',
-            toelichting: 'Hamerstuk 6.b, raad 22 sept 2025 — Raadsbesluit (iBabs). Geldt o.a. vanaf 1 jan 2026 (zie OD). BBV: hoofdzakelijk 4.3 Onderwijsbeleid en leerlingzaken.'
-        }
+        { naam: 'Herijking IHP onderwijs 2024–2039', datum: '2025-04-01', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/e6f1b8eb-5947-4c6f-aacd-ecec379ebf19?agendaItemId=126c9ef7-1bf2-4c4b-b4fc-237d2a77a14a', type: 'Beleidsnota' },
+        { naam: 'Lokale Educatieve Agenda (LEA) 2026–2037', datum: '2026-01-16', link: 'https://centraalplus.nl/2026/01/17/lokale-educatieve-agenda-van-wassenaar-ondertekend-een-horizon-waarmee-we-aan-de-slag-kunnen/', type: 'Samenwerkingsdocument', toelichting: 'Ondertekend 16 jan 2026 (18 partijen). Link = nieuwsbericht Centraal+.' },
+        { naam: 'Verordening leerlingenvervoer 2025', datum: '2025-09-22', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=eec09f18-31bb-4477-9559-7a73cad358ee&agendaItemId=8d2e9fc6-907b-4a74-abd4-76997db3eb28', type: 'Verordening' },
+        { naam: 'Beleidsplan voor- en vroegschoolse educatie 2024–2027', datum: '2023-10-24', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/c8c0f21e-dd33-456b-a182-22934d896f06?agendaItemId=c5b55bf1-d57c-4230-80a4-42822bfd36f4', type: 'Beleidsplan' },
+        { naam: 'Jaarrekening 2024 Stichting Openbaar Primair Onderwijs', datum: '2025-10-14', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9b27a575-85e2-4683-8660-5c095a078221?agendaItemId=c91c7ca5-469e-43ec-ac05-51dc2bd28ba5', type: 'Jaarrekening' },
     ],
     5: [
-        {
-            naam: 'Sportvisie Wassenaar 2025',
-            datum: '2025-09-22',
-            link: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=6db01b2d-15c8-4801-a2e2-521606bb81c4&agendaItemId=fea9db3b-6a30-47e4-8337-629eaeca711b',
-            type: 'Beleidsnota',
-            toelichting: 'Agendapunt 11 raadsvergadering 22 sept 2025 — controleer stemming in iBabs indien nodig.'
-        }
+        { naam: 'Sportvisie Wassenaar 2025', datum: '2025-09-22', link: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=6db01b2d-15c8-4801-a2e2-521606bb81c4&agendaItemId=fea9db3b-6a30-47e4-8337-629eaeca711b', type: 'Beleidsnota' },
+        { naam: 'Erfgoedverordening Wassenaar (technische aanpassing)', datum: '2023-12-19', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/8fd0aab1-1373-4620-8893-b0c19136eaed?agendaItemId=ad73767c-b5a2-4c1d-ae8d-9b5c12993e5b', type: 'Verordening' },
+        { naam: 'Visie voor De Wassenaarse Slag', datum: '2025-03-04', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/bf450551-9740-45fb-9e48-36978432ec61?documentId=ae1f505f-1c39-4f65-af01-7ef35f1d053a&agendaItemId=6038eaee-e37d-4d6d-a760-a222db95d7a6', type: 'Beleidsnota', toelichting: 'Strand en recreatie — ook onder BBV 3.' },
     ],
     6: [
-        { naam: 'Startnotitie Lokale Woonzorgvisie', datum: '2025-09-22', link: null, type: 'Startnotitie' },
-        { naam: 'Beleidsnota Ouderenbeleid 2025', datum: '2025-01-28', link: null, type: 'Beleidsnota' }
+        { naam: 'Beleidsplan Sociaal Domein Wassenaar', datum: '2024-06-04', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3f581f85-72e6-4a72-8160-022faeec7fbd?agendaItemId=84887548-5c4b-4211-a5fd-1bd690ee2fe5', type: 'Beleidsplan', toelichting: 'Raad 4 jun 2024 (geamendeerd).' },
+        { naam: 'Beleidsnota Ouderenbeleid 2025', datum: '2025-01-28', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/85393b37-a676-4ffb-a9f2-33b6f0d9b58b?documentId=79a101d9-552b-49cc-9d34-31f6923cc1a9&agendaItemId=6ac84012-a995-46de-b19f-d58cb5aa952a', type: 'Beleidsnota' },
+        { naam: 'Beleidsnota schuldhulpverlening 2025–2028', datum: '2025-04-01', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/271db830-fe76-477f-ac64-1d68e329da63?documentId=8992182e-7fc7-4bdf-9874-f3ca5df4a8b1&agendaItemId=f537e129-28d2-4cea-8f4c-128ca0037086', type: 'Beleidsnota' },
+        { naam: 'Startnotitie Lokale Woonzorgvisie', datum: '2025-09-22', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=847d0caa-b04b-493e-9d14-d72c9d85b640&agendaItemId=a71419b7-25db-4a02-800f-99707a0dd53b', type: 'Startnotitie' },
+        { naam: 'Verordening Jeugdhulp 2025', datum: '2025-11-25', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/041d458f-7873-4b2a-9db1-88a41773cf24?agendaItemId=fa3bbe2f-569c-4bf4-b213-a5893d4c89d8', type: 'Verordening' },
+        { naam: 'Nieuw inkoopkader jeugdhulp GR SbJH', datum: '2025-06-03', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d4914c7b-9e25-4b06-be74-d1b345a9aa48?agendaItemId=95316a18-f7b8-483a-a252-3d491f042373', type: 'Kader' },
+        { naam: 'Achtste wijziging Verordening Wmo', datum: '2024-03-26', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5757b8bf-5b63-47cc-a65d-cda4fed90a7a?agendaItemId=b3b6af7b-1019-47db-b91d-662d185ff049', type: 'Verordening' },
+        { naam: 'Re-integratie- en participatieverordening 2023', datum: '2023-12-19', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9637b51a-17ae-4509-b272-3a32bcd9009c?agendaItemId=0df627bf-b311-47ad-85a9-dcfd8085792c', type: 'Verordening', toelichting: 'Raad 19 dec 2023 (geamendeerd).' },
+        { naam: 'Beleidsplan re-integratie en participatie', datum: '2023-09-19', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6b69e949-b9d7-4138-85b6-0b428d282738?agendaItemId=851d5e9e-f1fa-41b9-94dc-229cc6bc48a6', type: 'Beleidsplan' },
+        { naam: 'Verordening Adviesraad Sociaal Domein 2025', datum: '2025-06-03', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9543cef6-fcdf-4e83-b61d-4c23d4b82945?agendaItemId=36195d79-8757-4165-9b23-bcb9944b5d19', type: 'Verordening' },
+        { naam: 'Regiovisie Aanpak Huiselijk Geweld 2026', datum: '2025-12-16', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/c349b273-ff0c-4199-a92e-638f051c7953?agendaItemId=994549eb-e2ff-48d7-abb8-c9acd3d9d4d7', type: 'Regiovisie', toelichting: 'Ook relevant voor BBV 1.' },
     ],
     7: [
-        {
-            naam: 'Bijlage 1. Verkenning reductie restafval',
-            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Reports/Document/13e0eeae-ce9a-454d-8530-b43864972f79?documentId=3d92ea1b-1a04-4bf3-9bb2-07c976603c43',
-            type: 'Notitie',
-            toelichting: 'Informatiebrief 095 — bijlage verkenning reductie restafval (iBabs Reports/Document).'
-        },
-        {
-            naam: 'Motie reductie restafval en kostenbesparing afvalstoffenheffing',
-            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/3e13ce7b-2972-4a14-9e63-5f8a03b8dde6?documentId=76cff862-0962-4859-85f7-a911708e963f&agendaItemId=a6645f92-6dff-4ca2-80b5-b396b0864d70',
-            type: 'Motie',
-            toelichting: 'Motie GL PvdA D66 VVD CDA'
-        }
+        { naam: 'Afvalstoffenverordening Wassenaar 2024', datum: '2024-03-26', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/800fc254-3771-44fd-8f0b-7ff404fefe78?agendaItemId=be7acf0a-cac9-4d53-8982-083973ca88a8', type: 'Verordening' },
+        { naam: 'Nota bodembeheer 2023', datum: '2024-06-04', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/22221fe9-4cb2-407d-8a18-f61036d8bd84?agendaItemId=e88332bc-f459-4f74-9ca4-08f6dd490a6e', type: 'Nota' },
+        { naam: 'Integraal Waterketenplan 2024–2028 (Leidse regio)', datum: '2024-03-26', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/fa0ec318-96ec-452f-b614-22ee6e393c73?agendaItemId=8ada5b45-3a51-4648-8e25-bd092cbe6c5c', type: 'Beleidsnota' },
+        { naam: 'Beleidsregels Milieuzonering Richtafstanden 2024', datum: '2024-09-16', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/bfa224c5-fa50-4bb5-a8d6-5fa7824fe588?agendaItemId=eb7a24cf-8c2b-411b-a7d9-ba80d8293dc6', type: 'Beleidsregels' },
+        { naam: 'Verkenning reductie restafval', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Reports/Document/13e0eeae-ce9a-454d-8530-b43864972f79?documentId=3d92ea1b-1a04-4bf3-9bb2-07c976603c43', type: 'Notitie' },
+        { naam: 'Motie reductie restafval en kostenbesparing afvalstoffenheffing', link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/3e13ce7b-2972-4a14-9e63-5f8a03b8dde6?documentId=76cff862-0962-4859-85f7-a911708e963f&agendaItemId=a6645f92-6dff-4ca2-80b5-b396b0864d70', type: 'Motie' },
     ],
     8: [
         // ─── Omgevingswet: kerninstrumenten & proces (OD hst. 6) ───
         {
-            naam: 'Startnotitie Participatie Omgevingsvisie',
+            naam: 'Raadsvoorstel Startnotitie Participatie Omgevingsvisie',
             datum: '2025-12-17',
-            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=416f5b70-c39b-47d4-b662-be73d3e71c63&agendaItemId=5abb6d11-0c07-463f-a4c0-10b66f8e58a8',
-            type: 'Startnotitie',
-            toelichting: 'Raad 17 dec 2025. Eerste proeve Omgevingsvisie 2040 niet als vastgestelde visie aangenomen; nieuw participatietraject. Streefdatum definitieve Omgevingsvisie: 1 april 2027.'
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=c42f813b-833e-4d65-af0a-c76e2824095d&agendaItemId=5abb6d11-0c07-463f-a4c0-10b66f8e58a8',
+            type: 'Raadsvoorstel',
+            toelichting: 'Raad 17 dec 2025 (geamendeerd vastgesteld). Eerste proeve Omgevingsvisie 2040 niet als vastgestelde visie aangenomen; nieuw participatietraject. Streefdatum definitieve Omgevingsvisie: 1 april 2027.'
+        },
+        {
+            naam: 'Raadsbesluit Startnotitie Participatie Omgevingsvisie (getekend)',
+            datum: '2025-12-17',
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=1f0d1303-443d-4bac-be61-874445a68f10&agendaItemId=5abb6d11-0c07-463f-a4c0-10b66f8e58a8',
+            type: 'Raadsbesluit',
+            toelichting: 'Getekend raadsbesluit, inclusief amendementen.'
         },
         {
             naam: 'Eerste proeve Omgevingsvisie 2040',
             datum: '2025-12-17',
-            link: null,
+            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/4df79561-b943-43a1-a21d-da484727f1ad?documentId=1937af73-dc95-419d-a95e-5081654dad2d&agendaItemId=c0a156c8-b6fa-4551-8378-b569e95f29af',
             type: 'Ontwerpdocument',
-            toelichting: 'Niet als vastgestelde omgevingsvisie aangenomen (dec 2025); gevolgd door participatietraject via Startnotitie. Controleer besluit in iBabs.'
+            toelichting: 'Niet als vastgestelde omgevingsvisie aangenomen (dec 2025); gevolgd door participatietraject via Startnotitie.'
         },
         {
             naam: 'Participatie Omgevingsvisie (breed; fase 2026)',
@@ -866,9 +868,9 @@ const BELEIDSNOTA_PER_HOOFDSTUK_BBV = {
         {
             naam: 'Vijfde wijziging gemeenschappelijke regeling Omgevingsdienst Haaglanden',
             datum: '2025-12-16',
-            link: 'https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90987d08-8b03-4da3-acdb-20a49b865b45?agendaItemId=2dae2006-9f02-48ab-b696-4d2a25349c42',
+            link: 'https://zoek.officielebekendmakingen.nl/gmb-2025-558725.html',
             type: 'GR-wijziging',
-            toelichting: 'Raadsbesluit 16 dec 2025; toestemming college voor vijfde wijziging GR Omgevingsdienst Haaglanden.'
+            toelichting: 'Raadsbesluit 16 dec 2025; toestemming college voor vijfde wijziging GR Omgevingsdienst Haaglanden. Link: Officiële Bekendmakingen.'
         }
     ]
 };
@@ -1183,8 +1185,10 @@ function renderSubTegelsBBV(bbvIndex) {
         card.setAttribute('role', 'option');
         card.setAttribute('aria-selected', isActief ? 'true' : 'false');
         const oms = (tv.omschrijving || '').trim();
+        const niet = (tv.niet || '').trim();
         if (oms) {
-            card.setAttribute('title', `${label}\n\n${oms}`);
+            const fullTip = niet ? `${oms}\n\nNiet: ${niet}` : oms;
+            card.setAttribute('title', `${label}\n\n${fullTip}`);
             card.setAttribute('aria-label', `${label}. ${oms}`);
         } else {
             card.setAttribute('title', label);
@@ -1606,8 +1610,8 @@ function getTaakveldNaam(bbvIndex, taakveldCode) {
 function getTaakveldInfo(bbvIndex, taakveldCode) {
     const tvs = BBV_TAAKVELDEN_PER_HOOFDSTUK[bbvIndex] || [];
     const tv = tvs.find(t => t.code === taakveldCode);
-    if (!tv) return { naam: '', omschrijving: '' };
-    return { naam: tv.naam || '', omschrijving: (tv.omschrijving || '').trim() };
+    if (!tv) return { naam: '', omschrijving: '', niet: '', toelichting: '', type: '' };
+    return { naam: tv.naam || '', omschrijving: (tv.omschrijving || '').trim(), niet: (tv.niet || '').trim(), toelichting: (tv.toelichting || '').trim(), type: tv.type || '' };
 }
 
 /** Toont Iv3-context rechts wanneer een taakveld is gekozen */
@@ -1622,8 +1626,12 @@ function updateBbvTaakveldContext(bbvIndex) {
     }
     const info = getTaakveldInfo(bbvIndex, sub);
     const kopEl = box.querySelector('.bbv-taakveld-context-kop');
-    if (kopEl) kopEl.textContent = `${sub} — ${info.naam || '(onbekend)'}`;
-    p.textContent = info.omschrijving || '';
+    const typeLabel = info.type === 'Clustering' ? ' [clustering]' : '';
+    if (kopEl) kopEl.textContent = `${sub} — ${info.naam || '(onbekend)'}${typeLabel}`;
+    let tekst = info.omschrijving || '';
+    if (info.niet) tekst += '\n\nNiet onder dit taakveld: ' + info.niet;
+    if (info.toelichting) tekst += '\n\n⚙ ' + info.toelichting;
+    p.textContent = tekst;
     box.style.display = '';
 }
 
@@ -2053,17 +2061,13 @@ function loadOverdrachtsdossierContent(bbvIndex) {
     const fullHtml = typeof od.html === 'function' ? od.html(ibabs) : od.html;
     const { summaryHtml, remainderHtml } = splitOverdrachtHtmlToSummaryAndRest(fullHtml || '');
 
-    if (sumInh) sumInh.innerHTML = summaryHtml || '';
-    if (sumSect) sumSect.style.display = summaryHtml ? '' : 'none';
+    const combinedHtml = [summaryHtml, remainderHtml].filter(Boolean).join('<hr class="od-scheiding">');
+    if (sumInh) sumInh.innerHTML = combinedHtml || '';
+    if (sumSect) sumSect.style.display = combinedHtml ? '' : 'none';
 
-    container.innerHTML = remainderHtml || '';
-    if (bron) bron.textContent = od.bron;
-
-    const hasRemainder = !!remainderHtml;
-    if (blok) {
-        blok.style.display = hasRemainder ? '' : 'none';
-        blok.classList.toggle('overdrachtsdossier-blok--leeg', !hasRemainder);
-    }
+    container.innerHTML = '';
+    if (bron) bron.textContent = '';
+    if (blok) blok.style.display = 'none';
 }
 
 function loadCoalitieAkkoord(thema) {

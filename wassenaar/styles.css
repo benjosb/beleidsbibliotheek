@@ -1690,6 +1690,20 @@ body.toon-begroting .dossier-kaart-begroting {
     overflow: hidden;
 }
 
+.bbv-tv-badge {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--bbv-light, #e8eef5);
+    color: var(--bbv-accent, #1e3a5f);
+    border: 1px solid var(--bbv-accent, #1e3a5f);
+    border-radius: 3px;
+    padding: 0.05em 0.35em;
+    margin-left: auto;
+    flex-shrink: 0;
+    line-height: 1.4;
+}
+
 /* Rechterkolom */
 .bbv-dossier-rechts {
     min-width: 0;
@@ -1765,6 +1779,39 @@ body.toon-begroting .dossier-kaart-begroting {
 
 .bbv-hoofdstuk-samenvatting-inhoud p:last-child {
     margin-bottom: 0;
+}
+
+.bbv-hoofdstuk-samenvatting-inhoud hr.od-scheiding {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    margin: 1rem 0;
+}
+
+.bbv-hoofdstuk-samenvatting-inhoud h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--wassenaar-donker);
+}
+
+.bbv-hoofdstuk-samenvatting-inhoud ul {
+    margin: 0.3rem 0 0 1.2rem;
+    padding-left: 0.5rem;
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.bbv-hoofdstuk-samenvatting-inhoud li {
+    margin-bottom: 0.4rem;
+}
+
+.bbv-hoofdstuk-samenvatting-inhoud .overdracht-doclist a {
+    color: var(--wassenaar-blue);
+    text-decoration: none;
+}
+
+.bbv-hoofdstuk-samenvatting-inhoud .overdracht-doclist a:hover {
+    text-decoration: underline;
 }
 
 /* Geselecteerd taakveld — subtiel accent */
