@@ -188,6 +188,49 @@ h2 { color: #1e293b; font-size: 1.25rem; margin-top: 0; }
 /* Disclaimer – footer, subtiel */
 .disclaimer { margin-top: 3rem; padding: 1rem 1.25rem; font-size: 0.85rem; color: #64748b; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
 .disclaimer strong { color: #475569; font-weight: 600; }
+
+/* ─── Betrouwbaarheidsindicatoren ─── */
+.betrouwbaarheid-legenda { background: white; border-radius: 12px; padding: 1.25rem; margin: 1.5rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
+.betrouwbaarheid-legenda h2 { margin: 0 0 0.75rem; font-size: 1rem; color: #1e293b; }
+.betrouwbaarheid-legenda-items { display: flex; flex-wrap: wrap; gap: 1rem; }
+.betrouwbaarheid-legenda-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #475569; }
+.betrouwbaarheid-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.betrouwbaarheid-dot--groen { background: #059669; }
+.betrouwbaarheid-dot--oranje { background: #d97706; }
+.betrouwbaarheid-dot--rood { background: #dc2626; }
+
+.bento-sectie-kop { display: flex; align-items: center; gap: 0.6rem; margin: 2rem 0 0.75rem; font-size: 1rem; font-weight: 600; }
+.bento-sectie-kop .betrouwbaarheid-dot { width: 14px; height: 14px; }
+.bento-sectie-kop--groen { color: #047857; }
+.bento-sectie-kop--oranje { color: #b45309; }
+.bento-sectie-kop--rood { color: #b91c1c; }
+.bento-sectie-sub { font-size: 0.82rem; color: #64748b; margin: 0 0 0.75rem; font-weight: 400; }
+
+.bento-tile--groen { border-left: 4px solid #059669; background: linear-gradient(135deg, #ecfdf5 0%, #fff 60%); }
+.bento-tile--groen:hover { border-left-color: #047857; box-shadow: 0 4px 16px rgba(5,150,105,0.15); }
+.bento-tile--oranje { border-left: 4px solid #d97706; }
+.bento-tile--rood { border-left: 4px solid #dc2626; }
+.bento-tile--grijs { border-left: 4px solid #9ca3af; opacity: 0.55; filter: grayscale(60%); position: relative; }
+.bento-tile--grijs:hover { opacity: 0.75; }
+.bento-tile--grijs .bento-tile-titel { text-decoration: line-through; color: #6b7280; }
+.bento-tile--grijs .bento-tile-sub { color: #9ca3af; }
+.bento-tile--grijs .bento-tile-icon { opacity: 0.4; }
+.bento-tile-badge {
+  display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px;
+  padding: 2px 8px; border-radius: 10px; margin-left: 0.5rem; vertical-align: middle;
+  text-transform: uppercase;
+}
+.bento-tile-badge--tip { background: #fbbf24; color: #78350f; animation: tip-pulse 2s ease-in-out infinite; }
+@keyframes tip-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(251,191,36,0.4); } 50% { box-shadow: 0 0 0 6px rgba(251,191,36,0); } }
+.bento-tile-badge--let-op { background: #fca5a5; color: #7f1d1d; font-size: 0.65rem; }
+
+/* Betrouwbaarheidsbanner op subpagina's */
+.betrouwbaarheid-banner { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.9rem 1.25rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.85rem; line-height: 1.5; }
+.betrouwbaarheid-banner strong { display: block; font-size: 0.9rem; margin-bottom: 0.15rem; }
+.betrouwbaarheid-banner--groen { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; }
+.betrouwbaarheid-banner--oranje { background: #fffbeb; border: 1px solid #fde68a; color: #78350f; }
+.betrouwbaarheid-banner--rood { background: #fef2f2; border: 1px solid #fecaca; color: #7f1d1d; }
+.betrouwbaarheid-banner-icon { font-size: 1.25rem; flex-shrink: 0; line-height: 1; margin-top: 0.1rem; }
 .carousel-wrapper { overflow-x: auto; margin: 1.5rem 0; }
 .carousel { display: flex; gap: 1rem; padding: 0.5rem 0; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
 .carousel-card { flex: 0 0 min(340px, 85%); scroll-snap-align: start; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 1.25rem; min-height: 300px; transition: transform 0.25s, box-shadow 0.25s; animation: carousel-fade-in 0.5s ease-out both; }
@@ -274,3 +317,19 @@ h2 { color: #1e293b; font-size: 1.25rem; margin-top: 0; }
 .subpage-nav .subnav-link:hover { text-decoration: underline; }
 .subpage-nav .subnav-overzicht { font-weight: 600; }
 .subpage-nav .subnav-current { color: #64748b; font-weight: 500; }
+
+/* Zoekterm highlighting */
+mark.zoek-highlight { background: #fef08a; color: #1e293b; padding: 1px 3px; border-radius: 3px; font-weight: inherit; }
+mark.zoek-highlight-scroll { background: #fb923c; color: #1e293b; padding: 1px 3px; border-radius: 3px; outline: 2px solid #f97316; }
+
+/* Ambtelijk deep-link */
+.ambtelijk-kaart-zoek { display: inline-block; font-size: 0.8rem; color: #2563eb; text-decoration: none; margin-top: 0.35rem; opacity: 0.7; transition: opacity 0.2s; }
+.ambtelijk-kaart-zoek:hover { opacity: 1; text-decoration: underline; }
+
+/* Partijen zoekbalk floating */
+.partij-zoekbalk { position: sticky; top: 0; z-index: 50; background: #fffbeb; border-bottom: 2px solid #fbbf24; padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.partij-zoekbalk-tekst { flex: 1; }
+.partij-zoekbalk-nav { display: flex; gap: 0.5rem; }
+.partij-zoekbalk-btn { background: #f59e0b; color: white; border: none; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 500; }
+.partij-zoekbalk-btn:hover { background: #d97706; }
+.partij-zoekbalk-sluit { background: #e5e7eb; color: #374151; border: none; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }

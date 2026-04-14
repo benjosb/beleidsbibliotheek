@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Werkwijze BeleidsBibliotheek Wassenaar</title>
+<style>
+  :root {
+    --blauw: #1a56db;
+    --blauw-licht: #e8eefb;
+    --groen: #16a34a;
+    --groen-licht: #ecfdf5;
+    --oranje: #ea580c;
+    --oranje-licht: #fff7ed;
+    --grijs: #64748b;
+    --grijs-licht: #f8fafc;
+    --border: #e2e8f0;
+    --tekst: #1e293b;
+    --wit: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    color: var(--tekst);
+    background: var(--grijs-licht);
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  header p {
+    color: var(--grijs);
+    font-size: 0.95rem;
+  }
+
+  /* ── Omgevingen ── */
+  .envs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .env-card {
+    background: var(--wit);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .env-card .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .env-card.lokaal .label { color: var(--blauw); }
+  .env-card.acc .label { color: var(--oranje); }
+  .env-card.prod .label { color: var(--groen); }
+
+  .env-card .naam {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .env-card .url {
+    font-size: 0.8rem;
+    color: var(--grijs);
+    word-break: break-all;
+  }
+
+  .env-card .url a {
+    color: var(--grijs);
+    text-decoration: none;
+  }
+
+  .env-card .url a:hover { text-decoration: underline; }
+
+  .env-card .host {
+    font-size: 0.75rem;
+    color: var(--grijs);
+    margin-top: 0.25rem;
+  }
+
+  /* ── Rollen ── */
+  .rollen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .rol-card {
+    background: var(--wit);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+  }
+
+  .rol-card .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--wit);
+    margin-bottom: 0.75rem;
+  }
+
+  .rol-card.dick .avatar { background: var(--blauw); }
+  .rol-card.joyce .avatar { background: var(--oranje); }
+  .rol-card.ricardo .avatar { background: var(--groen); }
+
+  .rol-card .naam {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .rol-card .functie {
+    font-size: 0.85rem;
+    color: var(--grijs);
+    margin-bottom: 0.5rem;
+  }
+
+  .rol-card .taken {
+    font-size: 0.85rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .rol-card .taken li {
+    padding: 0.2rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .rol-card .taken li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--grijs);
+  }
+
+  /* ── Flow ── */
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .flow {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+
+  .flow-line {
+    position: absolute;
+    left: 32px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+
+  .stap {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stap:last-child { margin-bottom: 0; }
+
+  .stap-nummer {
+    width: 64px;
+    min-width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--wit);
+    flex-shrink: 0;
+  }
+
+  .stap.dick .stap-nummer { background: var(--blauw); }
+  .stap.joyce .stap-nummer { background: var(--oranje); }
+  .stap.ricardo .stap-nummer { background: var(--groen); }
+
+  .stap-content {
+    background: var(--wit);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .stap.dick .stap-content { border-left: 3px solid var(--blauw); }
+  .stap.joyce .stap-content { border-left: 3px solid var(--oranje); }
+  .stap.ricardo .stap-content { border-left: 3px solid var(--groen); }
+
+  .stap-wie {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+  }
+
+  .stap.dick .stap-wie { color: var(--blauw); }
+  .stap.joyce .stap-wie { color: var(--oranje); }
+  .stap.ricardo .stap-wie { color: var(--groen); }
+
+  .stap-titel {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .stap-detail {
+    font-size: 0.85rem;
+    color: var(--grijs);
+  }
+
+  .stap-detail code {
+    background: var(--grijs-licht);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: 'SF Mono', Menlo, monospace;
+  }
+
+  /* ── Pijl tussen envs ── */
+  .pijl-rij {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+  }
+
+  .pijl-cel {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--grijs);
+    line-height: 1;
+  }
+
+  /* ── Versioning ── */
+  .versie-info {
+    background: var(--wit);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .versie-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .versie-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  .versie-tabel td {
+    padding: 0.35rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .versie-tabel td:first-child {
+    font-weight: 600;
+    white-space: nowrap;
+    width: 140px;
+  }
+
+  .versie-tabel tr:last-child td { border-bottom: none; }
+
+  /* ── Checklist ── */
+  .checklist {
+    background: var(--wit);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+  }
+
+  .checklist h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .check-groep {
+    margin-bottom: 1rem;
+  }
+
+  .check-groep:last-child { margin-bottom: 0; }
+
+  .check-groep-titel {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .check-groep.dick .check-groep-titel { color: var(--blauw); }
+  .check-groep.joyce .check-groep-titel { color: var(--oranje); }
+  .check-groep.ricardo .check-groep-titel { color: var(--groen); }
+
+  .check-item {
+    font-size: 0.85rem;
+    padding: 0.2rem 0 0.2rem 1.5rem;
+    position: relative;
+  }
+
+  .check-item::before {
+    content: '☐';
+    position: absolute;
+    left: 0;
+  }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    color: var(--grijs);
+    font-size: 0.75rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 700px) {
+    .envs, .rollen { grid-template-columns: 1fr; }
+    .pijl-rij { display: none; }
+  }
+
+  @media print {
+    body { background: white; }
+    .container { max-width: 100%; padding: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Werkwijze BeleidsBibliotheek</h1>
+    <p>Gemeente Wassenaar &mdash; drie omgevingen, drie rollen, zes stappen</p>
+  </header>
+
+  <!-- Omgevingen -->
+  <div class="envs">
+    <div class="env-card lokaal">
+      <div class="label">Lokaal</div>
+      <div class="naam">MacBook Dick</div>
+      <div class="url">localhost</div>
+      <div class="host">Ontwikkeling</div>
+    </div>
+    <div class="env-card acc">
+      <div class="label">Acceptatie</div>
+      <div class="naam">Besluit-Wijzer</div>
+      <div class="url"><a href="https://wassenaar.besluit-wijzer.nl" target="_blank">wassenaar.besluit-wijzer.nl</a></div>
+      <div class="host">VPS Hostinger</div>
+    </div>
+    <div class="env-card prod">
+      <div class="label">Productie</div>
+      <div class="naam">BeleidsBibliotheek</div>
+      <div class="url"><a href="https://beleidsbibliotheekwassenaar.nl" target="_blank">beleidsbibliotheekwassenaar.nl</a></div>
+      <div class="host">Argeweb</div>
+    </div>
+  </div>
+
+  <!-- Rollen -->
+  <div class="rollen">
+    <div class="rol-card dick">
+      <div class="avatar">D</div>
+      <div class="naam">Dick</div>
+      <div class="functie">Ontwikkelaar</div>
+      <ul class="taken">
+        <li>Wijzigingen doorvoeren</li>
+        <li>Deploy naar acceptatie</li>
+        <li>Git backup beheren</li>
+      </ul>
+    </div>
+    <div class="rol-card joyce">
+      <div class="avatar">J</div>
+      <div class="naam">Joyce</div>
+      <div class="functie">Contentbeheer</div>
+      <ul class="taken">
+        <li>Controleren op acceptatie</li>
+        <li>Documenten toevoegen</li>
+        <li>Akkoord geven</li>
+      </ul>
+    </div>
+    <div class="rol-card ricardo">
+      <div class="avatar">R</div>
+      <div class="naam">Ricardo</div>
+      <div class="functie">Technisch beheer</div>
+      <ul class="taken">
+        <li>ACC naar PROD promoveren</li>
+        <li>Controleren op productie</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Flow -->
+  <h2>Stappen per wijziging</h2>
+
+  <div class="flow">
+    <div class="flow-line"></div>
+
+    <div class="stap dick">
+      <div class="stap-nummer">1</div>
+      <div class="stap-content">
+        <div class="stap-wie">Dick</div>
+        <div class="stap-titel">Wijzig lokaal</div>
+        <div class="stap-detail">Pas de bestanden aan in <code>wassenaar/</code> en test in de browser.</div>
+      </div>
+    </div>
+
+    <div class="stap dick">
+      <div class="stap-nummer">2</div>
+      <div class="stap-content">
+        <div class="stap-wie">Dick</div>
+        <div class="stap-titel">Deploy naar acceptatie</div>
+        <div class="stap-detail">Draai <code>./deploy.sh</code> &mdash; maakt automatisch een git backup en uploadt naar ACC.</div>
+      </div>
+    </div>
+
+    <div class="stap joyce">
+      <div class="stap-nummer">3</div>
+      <div class="stap-content">
+        <div class="stap-wie">Joyce</div>
+        <div class="stap-titel">Controleer op acceptatie</div>
+        <div class="stap-detail">Open <a href="https://wassenaar.besluit-wijzer.nl" target="_blank">wassenaar.besluit-wijzer.nl</a> en bekijk de wijziging. Cache verversen met <code>Cmd+Shift+R</code>.</div>
+      </div>
+    </div>
+
+    <div class="stap joyce">
+      <div class="stap-nummer">4</div>
+      <div class="stap-content">
+        <div class="stap-wie">Joyce</div>
+        <div class="stap-titel">Akkoord geven</div>
+        <div class="stap-detail">Laat Dick of Ricardo weten: &ldquo;Akkoord, mag naar productie.&rdquo;</div>
+      </div>
+    </div>
+
+    <div class="stap ricardo">
+      <div class="stap-nummer">5</div>
+      <div class="stap-content">
+        <div class="stap-wie">Ricardo</div>
+        <div class="stap-titel">Promoveer naar productie</div>
+        <div class="stap-detail">Draai <code>./promote-to-prod.sh</code> &mdash; kopieert ACC naar PROD via FTP.</div>
+      </div>
+    </div>
+
+    <div class="stap ricardo">
+      <div class="stap-nummer">6</div>
+      <div class="stap-content">
+        <div class="stap-wie">Ricardo</div>
+        <div class="stap-titel">Controleer op productie</div>
+        <div class="stap-detail">Open <a href="https://beleidsbibliotheekwassenaar.nl" target="_blank">beleidsbibliotheekwassenaar.nl</a> en verifieer. Cache verversen met <code>Cmd+Shift+R</code>.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Versienummering -->
+  <div class="versie-info">
+    <h3>Versienummering</h3>
+    <table class="versie-tabel">
+      <tr><td>Patch (8.0.6 &rarr; 8.0.7)</td><td>Kleine correctie &mdash; link gefixt, typo</td></tr>
+      <tr><td>Minor (8.0.7 &rarr; 8.1.0)</td><td>Nieuwe content of functionaliteit</td></tr>
+      <tr><td>Major (8.1.0 &rarr; 9.0.0)</td><td>Grote herstructurering</td></tr>
+    </table>
+  </div>
+
+  <!-- Checklist per rol -->
+  <div class="checklist">
+    <h3>Checklist per wijziging</h3>
+
+    <div class="check-groep dick">
+      <div class="check-groep-titel">Dick</div>
+      <div class="check-item">Wijziging doorgevoerd en lokaal getest</div>
+      <div class="check-item">Versienummer opgehoogd in VERSION</div>
+      <div class="check-item"><code>./deploy.sh "omschrijving"</code> uitgevoerd</div>
+      <div class="check-item">Joyce ge&iuml;nformeerd</div>
+    </div>
+
+    <div class="check-groep joyce">
+      <div class="check-groep-titel">Joyce</div>
+      <div class="check-item">Acceptatie-site gecontroleerd (cache ververst)</div>
+      <div class="check-item">Akkoord gegeven aan Dick / Ricardo</div>
+    </div>
+
+    <div class="check-groep ricardo">
+      <div class="check-groep-titel">Ricardo</div>
+      <div class="check-item"><code>./promote-to-prod.sh "omschrijving"</code> uitgevoerd</div>
+      <div class="check-item">Productie-site gecontroleerd (cache ververst)</div>
+    </div>
+  </div>
+
+  <footer>
+    BeleidsBibliotheek Wassenaar &mdash; versie 8.0.6 &mdash; april 2026
+  </footer>
+
+</div>
+
+</body>
+</html>

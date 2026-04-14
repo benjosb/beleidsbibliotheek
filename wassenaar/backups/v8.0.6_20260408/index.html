@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeleidsBibliotheek Wassenaar · Gemeente Wassenaar</title>
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=roboto:300,400,500,700|open-sans:300,400,600,700">
+    <link rel="stylesheet" href="styles.css?v=20260407f">
+    <meta name="theme-color" content="#55601c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="application-name" content="BeleidsBibl.">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="pwa-icons/icon-192.png">
+    <script src="pwa-register.js" defer data-pwa-register></script>
+</head>
+<body>
+    <a href="#main" class="skip-link">Ga naar inhoud</a>
+    <script src="disclaimer.js?v=20260328b"></script>
+    <header class="site-header" role="banner">
+        <div class="container header-top">
+            <a href="https://www.wassenaar.nl" class="logo-link" aria-label="Gemeente Wassenaar" target="_blank" rel="noopener">
+                <img src="https://cuatro.sim-cdn.nl/wassenaar/uploads/2023-09/wassenaar_logo_fc.svg" alt="Gemeente Wassenaar" class="site-logo" width="200" height="35">
+            </a>
+            <div class="header-text">
+                <h1><a href="index.html" class="header-title-link">BeleidsBibliotheek Wassenaar</a></h1>
+                <p class="subtitle">Gemeente Wassenaar · Inzicht in beleid en besluitvorming</p>
+            </div>
+        </div>
+        <nav class="site-nav-bar" aria-label="BeleidsBibliotheek">
+            <div class="container site-nav-inner">
+                <a href="#dossierOverzicht" class="site-nav-link site-nav-actief" id="navBeleidsBibliotheek">BeleidsBibliotheek</a>
+                <a href="overdrachtsdossier.html" class="site-nav-link" id="navOverdrachtsdossier">Overdrachtsdossier</a>
+                <div class="nav-zoek-wrap" id="headerZoekCombo">
+                    <div class="header-zoek-inner">
+                        <input type="text" id="searchInput" placeholder="Zoek…" aria-label="Zoeken" aria-controls="zoekSuggesties" aria-expanded="false" autocomplete="off" onkeydown="if(event.key==='Enter'){event.preventDefault();if(typeof handleSearch==='function')handleSearch();}">
+                        <button id="searchBtn" type="button" onclick="handleSearch();">ZOEK</button>
+                    </div>
+                    <div class="zoek-suggesties" id="zoekSuggesties" role="group" aria-label="Voorbeeldzoektermen" aria-hidden="true">
+                        <span class="zoek-suggesties-label">Probeer:</span>
+                        <button type="button" class="zoek-chip" data-zoek="Wmo">Wmo</button>
+                        <button type="button" class="zoek-chip" data-zoek="Jeugdhulp">Jeugdhulp</button>
+                        <button type="button" class="zoek-chip" data-zoek="Omgevingsvisie">Omgevingsvisie</button>
+                        <button type="button" class="zoek-chip" data-zoek="Parkeren">Parkeren</button>
+                        <button type="button" class="zoek-chip" data-zoek="Subsidie">Subsidie</button>
+                        <button type="button" class="zoek-chip" data-zoek="Wonen">Wonen</button>
+                        <button type="button" class="zoek-chip" data-zoek="Duurzaamheid">Duurzaamheid</button>
+                        <button type="button" class="zoek-chip" data-zoek="Coalitieakkoord">Coalitieakkoord</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="nav-hamburger" id="navHamburger" aria-label="Menu openen" aria-expanded="false">
+                <span class="nav-hamburger-bar"></span>
+                <span class="nav-hamburger-bar"></span>
+                <span class="nav-hamburger-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container" id="main" role="main">
+        <section class="hub-overzicht" id="hubOverzicht" style="display:none">
+            <h2 class="hub-titel">Kies een onderdeel</h2>
+            <p class="hub-intro">Inzicht in beleid en besluitvorming Wassenaar — analyse van verkiezingsprogramma's en raads- en collegebesluiten.</p>
+            <div class="hub-kaarten">
+                <a href="verkiezingen/" class="hub-kaart hub-kaart-verkiezingen">
+                    <span class="hub-kaart-icoon">📊</span>
+                    <span class="hub-kaart-naam">Verkiezingsprogramma's 2026</span>
+                    <span class="hub-kaart-omschrijving">9 partijen · 21 zetels · Analyse per BBV-taakveld, samenvatting, raakvlakken, interactief netwerk</span>
+                    <span class="hub-kaart-cta">Bekijk analyse →</span>
+                </a>
+                <a href="#dossierOverzicht" class="hub-kaart hub-kaart-besluiten">
+                    <span class="hub-kaart-icoon">📋</span>
+                    <span class="hub-kaart-naam">Beleidsdossiers &amp; besluiten</span>
+                    <span class="hub-kaart-omschrijving">Raads- en collegebesluiten · Per portefeuille én per BBV-taakveld · Coalitieakkoord · Beleidssamenvattingen</span>
+                    <span class="hub-kaart-cta">Bekijk besluiten →</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="overdrachtsdossier-sectie" id="overdrachtsdossier" style="display:none" aria-labelledby="overdrachtsdossier-titel">
+            <h2 id="overdrachtsdossier-titel" class="overdrachtsdossier-pagina-titel">Overdrachtsdossier raadsverkiezingen 2026</h2>
+            <p class="overdrachtsdossier-pagina-intro">Inhoud per hoofdstuk — klik om in te klappen of uit te klappen.</p>
+            <nav class="overdrachtsdossier-nav" aria-label="Navigatie overdrachtsdossier">
+                <a href="#overdrachtsdossierInhoudPagina" class="skip-link-inline">Ga naar inhoud</a>
+            </nav>
+            <div id="overdrachtsdossierInhoudPagina" class="overdrachtsdossier-inhoud-pagina" role="region" aria-label="Inhoud overdrachtsdossier"></div>
+        </section>
+
+        <section class="compliance-sectie" id="compliance" style="display:none">
+            <div class="compliance-header">
+                <h2 class="compliance-titel">Compliance &amp; verantwoording</h2>
+                <p class="compliance-intro">De BeleidsBibliotheek is ontwikkeld met oog voor de eisen die gelden voor overheidsapplicaties. Hieronder vindt u een overzicht van de maatregelen op het gebied van huisstijl, toegankelijkheid, privacy en informatiebeveiliging.</p>
+            </div>
+
+            <div class="compliance-grid">
+                <div class="compliance-kaart">
+                    <div class="compliance-kaart-icoon">🎨</div>
+                    <h3>Huisstijl</h3>
+                    <p>De BeleidsBibliotheek sluit aan bij de huisstijl van de gemeente Wassenaar. Het logo, de kleuren (waaronder het groen #55601c) en de typografie zijn conform de richtlijnen van wassenaar.nl. De applicatie wordt gehost onder het domein wassenaar.nl.</p>
+                </div>
+                <div class="compliance-kaart">
+                    <div class="compliance-kaart-icoon">♿</div>
+                    <h3>Toegankelijkheid (WCAG)</h3>
+                    <p>De pagina voldoet aan de toegankelijkheidseisen voor overheidswebsites. Er is aandacht voor semantische HTML, ARIA-attributen waar nodig, voldoende contrast en volledige toetsenbordnavigatie. Externe links krijgen <code>rel="noopener"</code>. De pagina is in het Nederlands (<code>lang="nl"</code>).</p>
+                </div>
+                <div class="compliance-kaart">
+                    <div class="compliance-kaart-icoon">🔒</div>
+                    <h3>Privacy</h3>
+                    <p>Er worden geen persoonsgegevens verwerkt. Er zijn geen cookies, met uitzondering van sessionStorage voor het onthouden van de disclaimer-akkoord. Er is geen tracking of analytics. De applicatie is daarmee AVG-conform.</p>
+                </div>
+                <div class="compliance-kaart">
+                    <div class="compliance-kaart-icoon">🛡️</div>
+                    <h3>Informatiebeveiliging</h3>
+                    <p>De BeleidsBibliotheek is een statische tool die uitsluitend publieke bronnen gebruikt. Alle verbindingen verlopen via HTTPS. Voor de hosting wordt een hardened omgeving aanbevolen. Voor integriteit kunnen checksums en versiebeheer worden ingezet.</p>
+                </div>
+                <div class="compliance-kaart">
+                    <div class="compliance-kaart-icoon">📐</div>
+                    <h3>Methodologie</h3>
+                    <div id="methodologieInhoud"></div>
+                </div>
+            </div>
+
+            <div class="compliance-verantwoording">
+                <h3 class="compliance-verantwoording-titel">Verantwoording</h3>
+                <div class="compliance-verantwoording-inhoud">
+                    <p>De BeleidsBibliotheek is tot stand gekomen op initiatief van de concerncontroller. De ambitie om de kwaliteit van collegevoorstellen te versterken wordt breed gedragen binnen zowel het college als de raad. De gedachte is dat eenvoudige toegang tot actuele beleidsinformatie — in samenhang weergegeven — een noodzakelijke basis vormt voor zorgvuldige besluitvorming.</p>
+                    <p>Dit concept is gerealiseerd door de informatiemanager, met de onmisbare kennis en ervaring van de strateeg sociaal domein.</p>
+                    <p>De bibliotheek is technisch gerealiseerd in circa drie weken, naast de reguliere werkzaamheden, door slim gebruik van <em>vibe coding</em>: een nieuwe manier van softwareontwikkeling waarbij een AI-model (Claude Opus 4) wordt aangestuurd via Cursor, een gespecialiseerde code-editor. Deze techniek — waarbij de ontwikkelaar richting geeft en het model de code schrijft — bestaat pas sinds begin 2026 en is in de afgelopen weken significant krachtiger geworden.</p>
+                    <p>In deze fase spreken we de <em>wisdom of the crowd</em> aan: collega's worden uitgenodigd om via het reactieformulier aanvullingen en verfijningen door te geven. Over de doorontwikkeling wordt nagedacht en het beheer richten we gezamenlijk in.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="dossier-overzicht" id="dossierOverzicht">
+            <p class="dossier-intro">In de beleidsbibliotheek van de gemeente Wassenaar vindt u alle beleidsdocumenten die door de gemeenteraad zijn vastgesteld vanaf 2021. De bibliotheek is nog in ontwikkeling en wordt stap voor stap aangevuld met actuele documenten. Aan de informatie op deze website kunnen geen rechten worden ontleend. De beleidsbibliotheek is ingericht volgens de begrotingsregels (BBV), zodat documenten logisch en overzichtelijk zijn geordend. Naast deze bibliotheek heeft Wassenaar ook <a href="https://www.wassenaar.nl/bestuur" target="_blank" rel="noopener">een aparte webpagina waar u alle bestuurlijke stukken kunt vinden</a>.</p>
+            <div id="dossierKaarten" class="dossier-kaarten"></div>
+            <p class="begroting-voetnoot" hidden>Begrotingsbedragen: Programmabegroting 2026. * = programma gedeeld met ander dossier.</p>
+        </section>
+
+        <section class="dossier-detail" id="dossierDetail" style="display: none;">
+            <div class="dossier-kop">
+                <button type="button" class="dossier-terug" id="dossierTerug">← Terug</button>
+                <h2 class="dossier-kop-titel" id="dossierTitel"></h2>
+            </div>
+            <!-- BBV (Iv3): taakvelden links, samenvatting + OD-tekst rechts — zie app.js -->
+            <div id="bbvDossierShell" class="bbv-dossier-shell" hidden>
+                <nav id="bbvSubTegels" class="bbv-taakveld-nav" aria-label="BBV-taakvelden (Iv3)"></nav>
+                <div class="bbv-dossier-rechts">
+                    <section id="bbvHoofdstukSamenvatting" class="bbv-hoofdstuk-samenvatting" style="display:none" aria-labelledby="bbvHoofdstukSamenvattingKop">
+                        <h3 id="bbvHoofdstukSamenvattingKop" class="bbv-panel-titel">Samenvatting — Overdrachtsdossier</h3>
+                        <div id="bbvHoofdstukSamenvattingInhoud" class="bbv-hoofdstuk-samenvatting-inhoud"></div>
+                    </section>
+                    <div id="bbvTaakveldContext" class="bbv-taakveld-context" style="display:none">
+                        <h4 class="bbv-taakveld-context-kop">Geselecteerd taakveld</h4>
+                        <p id="bbvTaakveldContextTekst" class="bbv-taakveld-context-tekst"></p>
+                        <p class="bbv-taakveld-context-hint">Beleidsnota’s en besluiten voor dit onderwerp staan verderop op deze pagina.</p>
+                    </div>
+                    <details id="overdrachtsdossierBlok" class="overdrachtsdossier-blok overdrachtsdossier-blok--diep" style="display:none;" open>
+                        <summary class="overdrachtsdossier-kop" id="overdrachtsdossierKop">Verdieping — <a href="overdrachtsdossier.html" id="overdrachtsdossierLink" class="overdrachtsdossier-deeplink">Overdrachtsdossier</a></summary>
+                        <p class="overdrachtsdossier-bron" id="overdrachtsdossierBron">Bron: Overdrachtsdossier raadsverkiezingen 2026 (papier aan raadsleden).</p>
+                        <div id="overdrachtsdossierInhoud" class="overdrachtsdossier-inhoud"></div>
+                    </details>
+                </div>
+            </div>
+            <div id="subTegels" class="sub-tegels"></div>
+            <div id="subBreadcrumb" class="sub-breadcrumb" style="display:none;"></div>
+            <div id="samenvattingGeselecteerdBlok" class="samenvatting-geselecteerd-blok" style="display:none;">
+                <h3 id="samenvattingGeselecteerdTitel" class="samenvatting-geselecteerd-titel"></h3>
+                <p id="samenvattingGeselecteerdTekst" class="samenvatting-geselecteerd-tekst"></p>
+            </div>
+            <div id="samenvattingPerThemaBlok" class="samenvatting-per-thema-blok" style="display:none;">
+                <h3 class="samenvatting-per-thema-kop">Samenvatting per thema</h3>
+                <div id="samenvattingPerThemaInhoud" class="samenvatting-per-thema-grid"></div>
+            </div>
+            <div id="beleidsnotaBlok" class="beleidsnota-blok" style="display:none;">
+                <h3 class="beleidsnota-kop">Beleidsnota's en beleidsdocumenten</h3>
+                <p class="beleidsnota-intro">Essentiële beleidsdocumenten bij dit onderwerp:</p>
+                <ul id="beleidsnotaLijst" class="beleidsnota-lijst"></ul>
+            </div>
+
+            <div id="mutatieBlok" class="mutatie-blok" style="display:none;">
+                <div class="mutatie-blok-actions">
+                    <button type="button" id="beleidsnotaAddBtn" class="btn-mutatie">+ Document voorstellen</button>
+                    <span class="mutatie-info-wrap">
+                        <span class="mutatie-info-trigger" tabindex="0" aria-label="Meer informatie over wijzigingen voorstellen">ℹ</span>
+                        <span class="mutatie-info-balloon" role="tooltip">Wijzigingen worden na goedkeuring door de redactie hier gepubliceerd en wekelijks doorgezet naar de productieomgeving.</span>
+                    </span>
+                    <a href="wijzigingen.html" class="mutatie-log-link">Wijzigingslogboek →</a>
+                </div>
+            </div>
+            <details class="briefing-blok" id="briefingBlok">
+                <summary class="briefing-kop">
+                    <span>Beleidssamenvatting</span>
+                </summary>
+                <div id="dossierSynthese" class="briefing-inhoud"></div>
+            </details>
+
+            <details class="coalitie-akkoord-blok" id="coalitieAkkoordBlok" open>
+                <summary class="coalitie-akkoord-kop">
+                    <span>Coalitieakkoord 2022–2026</span>
+                    <span class="coalitie-akkoord-badge">Samen voor Wassenaar</span>
+                </summary>
+                <div id="coalitieAkkoordInhoud" class="coalitie-akkoord-inhoud"></div>
+            </details>
+
+            <!-- VERBORGEN: Raads- en collegebesluiten blok tijdelijk uit (bare minimum; besluit beleidsadviseurs mrt 2026). Script blijft intact; display:none verwijderen om te reactiveren. -->
+            <details class="dossier-besluiten" id="dossierBesluiten" style="display:none;">
+                <summary class="dossier-besluiten-kop">
+                    <span>Raads- en collegebesluiten</span>
+                    <span class="dossier-besluiten-count" id="besluitenCount">(0)</span>
+                </summary>
+                <div class="dossier-besluiten-filters">
+                    <div class="filters-row">
+                        <div class="filter-group">
+                            <label for="yearFilter">Jaar</label>
+                            <select id="yearFilter">
+                                <option value="">Alle jaren</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="typeFilter">Type</label>
+                            <select id="typeFilter">
+                                <option value="">Alle typen</option>
+                                <option value="raad">Raadsbesluit</option>
+                                <option value="college">Collegebesluit (B&W)</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="niveauFilter">Niveau</label>
+                            <select id="niveauFilter">
+                                <option value="">Alle niveaus</option>
+                                <option value="STRATEGISCH">▲ Strategisch</option>
+                                <option value="TACTISCH">◆ Tactisch</option>
+                                <option value="OPERATIONEEL">● Operationeel</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="sortBy">Sorteren</label>
+                            <select id="sortBy">
+                                <option value="datum-desc">Datum (nieuwste eerst)</option>
+                                <option value="datum-asc">Datum (oudste eerst)</option>
+                                <option value="niveau-desc">Beleidsniveau</option>
+                                <option value="naam-asc">Naam (A–Z)</option>
+                                <option value="naam-desc">Naam (Z–A)</option>
+                            </select>
+                        </div>
+                        <button id="clearFilters" type="button" class="btn-secondary">Wissen</button>
+                    </div>
+                </div>
+                <div class="results-header">
+                    <span id="resultsCount">0 raads- en collegebesluiten</span>
+                </div>
+                <div id="resultsList" class="results-list"></div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p id="noResultsText">Geen raads- of collegebesluiten gevonden.</p>
+                </div>
+            </details>
+        </section>
+
+        <section class="zoek-resultaten" id="zoekResultaten" style="display: none;">
+            <p id="zoekLiveStatus" class="zoek-live-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            <div class="zoek-resultaten-kop">
+                <h2 class="zoek-resultaten-titel">Zoekresultaten</h2>
+                <button type="button" class="dossier-terug" id="zoekSluiten">← Terug</button>
+            </div>
+            <div id="zoekGegroepeerd" class="zoek-gegroepeerd"></div>
+            <div id="zoekNoResults" class="no-results" style="display: none;">
+                <p>Geen resultaten gevonden.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal: Beleidsnota voorstel indienen -->
+    <div id="bnAddOverlay" class="bn-modal-overlay" style="display:none;" aria-hidden="true"></div>
+    <div id="bnAddModal" class="bn-modal" role="dialog" aria-modal="true" aria-labelledby="bnAddModalTitel" style="display:none;">
+        <div class="bn-modal-card">
+            <div class="bn-modal-header">
+                <h2 id="bnAddModalTitel">Beleidsnota voorstellen</h2>
+                <button type="button" class="bn-modal-close" id="bnAddModalSluit" aria-label="Sluiten">×</button>
+            </div>
+            <div class="bn-modal-form">
+                <p class="bn-modal-hint" style="margin-top:0;">Stel een beleidsdocument voor. Na beoordeling door de redactie wordt het zichtbaar in de bibliotheek.</p>
+
+                <label for="bnAddScope">Toevoegen aan</label>
+                <select id="bnAddScope" class="bn-modal-select"></select>
+
+                <label for="bnAddTitel">Titel / omschrijving</label>
+                <input type="text" id="bnAddTitel" placeholder="Bijv. Beleidsnota Belastingen" maxlength="120">
+
+                <label for="bnAddLink">Hyperlink naar document</label>
+                <div class="bn-link-row">
+                    <input type="url" id="bnAddLink" placeholder="https://..." inputmode="url">
+                    <button type="button" class="btn-test-link" id="bnTestLink" title="Open de link in een klein venster om te controleren of het juiste document opent">Test link</button>
+                </div>
+                <p class="bn-link-hint">Tip: plak de link en klik op "Test link" om te controleren of het juiste document opent.</p>
+
+                <label for="bnAddExtra">Extra toelichting (optioneel)</label>
+                <textarea id="bnAddExtra" placeholder="Korte context (optioneel)" rows="3" maxlength="500"></textarea>
+
+                <div class="bn-modal-actions">
+                    <button type="button" class="btn-secondary" id="bnAddCancel">Annuleren</button>
+                    <button type="button" class="bn-btn-primary" id="bnAddSave">Voorstel indienen</button>
+                </div>
+
+                <div id="bnAddStatus" class="bn-modal-status" role="status" aria-live="polite"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stempel watermark -->
+    <div class="stempel-watermark" id="stempelWatermark" role="button" tabindex="0" aria-label="Klik voor disclaimer en vuistregels">
+        <img src="stempel.svg" alt="" width="200" height="200">
+        <div class="stempel-tooltip">
+            <strong>De drie vuistregels:</strong><br>
+            1. Geen persoonsgegevens<br>
+            2. Menselijke controle<br>
+            3. Transparant<br>
+            <span class="stempel-tooltip-cta">Klik voor meer →</span>
+        </div>
+    </div>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>BeleidsBibliotheek Wassenaar · Versie <span id="appVersion">8.0.5 (april 2026)</span> · <a href="wijzigingen.html" class="footer-link-btn">Wijzigingen</a> · <a href="#compliance" class="footer-link-btn" id="navCompliance">Compliance</a> · <button type="button" id="disclaimerLink" class="footer-link-btn">Disclaimer</button></p>
+        </div>
+    </footer>
+
+    <!-- FAB + slide-in reactiepaneel -->
+    <button class="fab-reactie" id="fabReactie" aria-label="Foutje gezien? Meld het!" onclick="toggleReactiePanel()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span class="fab-label">Foutje? Meld het!</span>
+    </button>
+
+    <div class="rp-overlay" id="rpOverlay" onclick="toggleReactiePanel()"></div>
+    <aside class="rp-panel" id="rpPanel" aria-label="Reactiepaneel">
+        <div class="rp-header">
+            <h3>Foutje gezien? Meld het!</h3>
+            <button class="rp-sluit" onclick="toggleReactiePanel()" aria-label="Sluiten">&times;</button>
+        </div>
+        <form onsubmit="return false;" class="rp-form">
+            <div class="rp-veld">
+                <label for="rpSectie">Hoofdstuk</label>
+                <select id="rpSectie" class="rp-select" onchange="rpVulTaakvelden()">
+                    <option value="">— Kies hoofdstuk —</option>
+                    <option value="H0 Bestuur en ondersteuning">H0 · Bestuur en ondersteuning</option>
+                    <option value="H1 Veiligheid">H1 · Veiligheid</option>
+                    <option value="H2 Verkeer, vervoer en waterstaat">H2 · Verkeer, vervoer en waterstaat</option>
+                    <option value="H3 Economie">H3 · Economie</option>
+                    <option value="H4 Onderwijs">H4 · Onderwijs</option>
+                    <option value="H5 Sport, cultuur en recreatie">H5 · Sport, cultuur en recreatie</option>
+                    <option value="H6 Sociaal domein">H6 · Sociaal domein</option>
+                    <option value="H7 Volksgezondheid en milieu">H7 · Volksgezondheid en milieu</option>
+                    <option value="H8 VHROSV">H8 · VHROSV</option>
+                    <option value="Overdrachtsdossier">Overdrachtsdossier</option>
+                    <option value="Algemeen / Overig">Algemeen / Overig</option>
+                </select>
+            </div>
+            <div class="rp-veld">
+                <label for="rpTaakveld">Taakveld</label>
+                <select id="rpTaakveld" class="rp-select">
+                    <option value="">— Geen taakveld —</option>
+                </select>
+            </div>
+            <div class="rp-veld">
+                <label for="rpNaam">Naam of initialen (optioneel)</label>
+                <input type="text" id="rpNaam" maxlength="80" placeholder="Bijv. Jan J. of AB" autocomplete="name">
+            </div>
+            <div class="rp-veld">
+                <label>Wat is er aan de hand?</label>
+                <div class="rp-type-opties">
+                    <input type="radio" name="rpType" id="rpT1" value="Link klopt niet" checked class="rp-radio">
+                    <label for="rpT1" class="rp-type-label">Link klopt niet</label>
+                    <input type="radio" name="rpType" id="rpT2" value="Document ontbreekt" class="rp-radio">
+                    <label for="rpT2" class="rp-type-label">Ontbreekt</label>
+                    <input type="radio" name="rpType" id="rpT3" value="Hoort hier niet" class="rp-radio">
+                    <label for="rpT3" class="rp-type-label">Hoort hier niet</label>
+                    <input type="radio" name="rpType" id="rpT4" value="Overig" class="rp-radio">
+                    <label for="rpT4" class="rp-type-label">Overig</label>
+                </div>
+            </div>
+            <div class="rp-veld">
+                <label for="rpDoc">Document</label>
+                <input type="text" id="rpDoc" placeholder="Welk document?">
+            </div>
+            <div class="rp-veld">
+                <label for="rpToelichting">Toelichting</label>
+                <textarea id="rpToelichting" rows="3" placeholder="Vertel wat er niet klopt..."></textarea>
+            </div>
+            <div class="rp-acties">
+                <button type="button" class="rp-btn rp-btn-mail" onclick="rpVerstuur()">Verstuur via e-mail</button>
+            </div>
+            <div class="rp-bevestiging" id="rpBevestiging"></div>
+        </form>
+    </aside>
+
+    <script>
+    function bbvReactieNu() {
+        var d = new Date();
+        function p(n) { return n < 10 ? '0' + n : '' + n; }
+        return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
+    }
+    function bbvWassenaarPortaalBasis() {
+        var h = location.hostname;
+        if (h === 'localhost' || h === '127.0.0.1') {
+            return location.origin + location.pathname.replace(/[^/]*$/, '');
+        }
+        return 'https://wassenaar.besluit-wijzer.nl/';
+    }
+    function bbvUrlWerklijstReacties() { return bbvWassenaarPortaalBasis() + 'werklijst-reacties.html'; }
+    function bbvUrlWijzigingenLog() { return bbvWassenaarPortaalBasis() + 'wijzigingen.html'; }
+    var RP_BBV_NAAR_SECTIE = {
+        0: 'H0 Bestuur en ondersteuning',
+        1: 'H1 Veiligheid',
+        2: 'H2 Verkeer, vervoer en waterstaat',
+        3: 'H3 Economie',
+        4: 'H4 Onderwijs',
+        5: 'H5 Sport, cultuur en recreatie',
+        6: 'H6 Sociaal domein',
+        7: 'H7 Volksgezondheid en milieu',
+        8: 'H8 VHROSV'
+    };
+    var RP_SECTIE_NAAR_BBV = {};
+    (function() {
+        for (var k in RP_BBV_NAAR_SECTIE) RP_SECTIE_NAAR_BBV[RP_BBV_NAAR_SECTIE[k]] = parseInt(k, 10);
+    })();
+
+    function rpGetTaakvelden(bbvIdx) {
+        if (typeof BBV_TAAKVELDEN_PER_HOOFDSTUK !== 'undefined') return BBV_TAAKVELDEN_PER_HOOFDSTUK[bbvIdx];
+        if (typeof BBV_TAAKVELDEN_IV3 !== 'undefined') return BBV_TAAKVELDEN_IV3[bbvIdx];
+        return null;
+    }
+    function rpVulTaakvelden(selectCode) {
+        var sel = document.getElementById('rpSectie');
+        var tvSel = document.getElementById('rpTaakveld');
+        if (!tvSel) return;
+        tvSel.innerHTML = '<option value="">\u2014 Geen taakveld \u2014</option>';
+        if (!sel || !sel.value) return;
+        var bbvIdx = RP_SECTIE_NAAR_BBV[sel.value];
+        if (bbvIdx === undefined) return;
+        var tvs = rpGetTaakvelden(bbvIdx);
+        if (!tvs) return;
+        for (var i = 0; i < tvs.length; i++) {
+            var opt = document.createElement('option');
+            opt.value = tvs[i].code;
+            opt.textContent = tvs[i].code + ' \u00B7 ' + tvs[i].naam;
+            tvSel.appendChild(opt);
+        }
+        if (selectCode) {
+            for (var j = 0; j < tvSel.options.length; j++) {
+                if (tvSel.options[j].value === selectCode) { tvSel.selectedIndex = j; return; }
+            }
+        }
+    }
+
+    function syncRpDropdowns() {
+        var sel = document.getElementById('rpSectie');
+        var tvSel = document.getElementById('rpTaakveld');
+        if (!sel) return;
+        var hoofdstuk = '';
+        var taakveldCode = '';
+        if (typeof activeDossier !== 'undefined' && activeDossier) {
+            if (activeDossier.bbvMode && activeDossier.bbvIndex !== undefined) {
+                hoofdstuk = RP_BBV_NAAR_SECTIE[activeDossier.bbvIndex] || '';
+                taakveldCode = activeDossier.subFilter || '';
+            }
+        }
+        if (typeof viewMode !== 'undefined' && viewMode === 'overdrachtsdossier') {
+            hoofdstuk = 'Overdrachtsdossier';
+        }
+        sel.selectedIndex = 0;
+        if (hoofdstuk) {
+            for (var i = 0; i < sel.options.length; i++) {
+                if (sel.options[i].value === hoofdstuk) { sel.selectedIndex = i; break; }
+            }
+        }
+        rpVulTaakvelden(taakveldCode);
+    }
+
+    function toggleReactiePanel() {
+        var panel = document.getElementById('rpPanel');
+        var overlay = document.getElementById('rpOverlay');
+        var fab = document.getElementById('fabReactie');
+        var open = panel.classList.toggle('rp-open');
+        overlay.classList.toggle('rp-overlay-open', open);
+        fab.style.display = open ? 'none' : '';
+        if (open) {
+            syncRpDropdowns();
+        } else {
+            if (rpAutoSluitTimer) { clearTimeout(rpAutoSluitTimer); rpAutoSluitTimer = null; }
+            var bev = document.getElementById('rpBevestiging');
+            if (bev) { bev.style.display = 'none'; bev.innerHTML = ''; }
+        }
+    }
+    function rpVerstuur() {
+        var doc = document.getElementById('rpDoc').value.trim();
+        var toel = document.getElementById('rpToelichting').value.trim();
+        if (!toel && !doc) {
+            document.getElementById('rpToelichting').focus();
+            return;
+        }
+        var type = document.querySelector('input[name="rpType"]:checked').value;
+        var sectie = document.getElementById('rpSectie').value || 'Algemeen';
+        var tvSel = document.getElementById('rpTaakveld');
+        var taakveld = (tvSel && tvSel.value) ? tvSel.options[tvSel.selectedIndex].textContent : '';
+        var naam = document.getElementById('rpNaam').value.trim() || '\u2014';
+        var nu = bbvReactieNu();
+
+        var locatie = sectie;
+        if (taakveld) locatie += ' \u2192 ' + taakveld;
+
+        var werklijstUrl = bbvUrlWerklijstReacties();
+        var wijzigingenUrl = bbvUrlWijzigingenLog();
+        var subj = 'BeleidsBibliotheek \u2014 ' + type + ' (' + locatie + ') \u2014 ' + nu;
+        var mailBody = 'Nieuwe reactie op de BeleidsBibliotheek:\n\n'
+            + 'Verzonden: ' + nu + ' (lokale tijd)\n'
+            + 'Van: ' + naam + '\n\n'
+            + 'Type: ' + type + '\nHoofdstuk: ' + sectie + '\nTaakveld: ' + (taakveld || '\u2014') + '\nDocument: ' + (doc || '\u2014') + '\n\n'
+            + (toel || '') + '\n\n\u2500\u2500\u2500\n'
+            + 'Werklijst reacties (formulier-meldingen):\n' + werklijstUrl + '\n\n'
+            + 'Wijzigingslogboek (alle voorstellen / mutaties):\n' + wijzigingenUrl;
+        window.location.href = 'mailto:ehiep@wassenaar.nl;mheijting@wassenaar.nl;dickbraam@me.com;dbraam@wassenaar.nl?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(mailBody);
+
+        var bev = document.getElementById('rpBevestiging');
+        bev.innerHTML = 'Je e-mail staat klaar in je mailprogramma. <button class="rp-sluit-bevestiging" onclick="toggleReactiePanel()">Sluiten</button>';
+        bev.style.display = 'block';
+        bev.style.background = '#e8f5e9';
+        bev.style.color = '#2e7d32';
+        rpAutoSluitTimer = setTimeout(function() { toggleReactiePanel(); }, 4000);
+    }
+    var rpAutoSluitTimer = null;
+    function rpMelding(msg, isError) {
+        var el = document.getElementById('rpBevestiging');
+        el.textContent = msg;
+        el.style.display = 'block';
+        el.style.background = isError ? '#fde8e8' : '#e8f5e9';
+        el.style.color = isError ? '#c81e1e' : '#2e7d32';
+        setTimeout(function() { el.style.display = 'none'; }, 3000);
+    }
+    </script>
+
+    <script src="data.js"></script>
+    <script src="briefings.js?v=20260318b"></script>
+    <script src="coalitieakkoord.js"></script>
+    <script src="taakvelden_iv3.js?v=20260407"></script>
+    <script src="app.js?v=20260407merge2"></script>
+    <script>
+    (function() {
+        var btn = document.getElementById('navHamburger');
+        var bar = btn && btn.closest('.site-nav-bar');
+        if (!btn || !bar) return;
+        btn.addEventListener('click', function() {
+            var open = bar.classList.toggle('nav-open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+        });
+        document.querySelectorAll('.site-nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                bar.classList.remove('nav-open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Menu openen');
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

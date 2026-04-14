@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werklijst Mutaties · BeleidsBibliotheek Wassenaar</title>
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=roboto:300,400,500,700|open-sans:300,400,600,700">
+    <link rel="stylesheet" href="styles.css?v=20260409a">
+    <style>
+        .mutatie-lijst { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+        .mutatie-card {
+            background: #fff; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.12);
+            margin-bottom: 1.5rem; overflow: hidden; border-left: 5px solid var(--primary);
+        }
+        .mutatie-card.status-akkoord { border-left-color: #2e7d32; }
+        .mutatie-card.status-afgewezen { border-left-color: #b71c1c; }
+        .mutatie-header {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            padding: 1rem 1.2rem .6rem; gap: 1rem; flex-wrap: wrap;
+        }
+        .mutatie-meta { font-size: .82rem; color: #888; }
+        .mutatie-badge {
+            display: inline-block; font-size: .75rem; font-weight: 600; padding: 2px 10px;
+            border-radius: 12px; text-transform: uppercase; letter-spacing: .03em;
+        }
+        .badge-nieuw       { background: #e3f2fd; color: #1565c0; }
+        .badge-akkoord     { background: #e8f5e9; color: #2e7d32; }
+        .badge-afgewezen   { background: #fce4e4; color: #b71c1c; }
+        .badge-strategisch { background: #f3e5f5; color: #6a1b9a; }
+        .mutatie-body { padding: 0 1.2rem 1rem; }
+        .mutatie-type { font-weight: 600; color: var(--primary); margin-bottom: .3rem; }
+        .mutatie-locatie { font-size: .9rem; color: #555; }
+        .mutatie-doc { font-weight: 500; margin: .5rem 0; }
+        .mutatie-opmerking {
+            background: var(--gray-lighter); padding: .7rem 1rem; border-radius: 6px;
+            font-size: .9rem; margin: .6rem 0; line-height: 1.5; white-space: pre-wrap;
+        }
+        .mutatie-voorstel {
+            background: #e8f5e9; padding: .5rem 1rem; border-radius: 6px;
+            font-size: .9rem; font-weight: 500; color: #2e7d32; margin: .5rem 0;
+        }
+
+        /* Publiek zichtbare reactie van beheerteam */
+        .reactie-beheer {
+            background: #fff8e1; border-left: 3px solid #f9a825; padding: .7rem 1rem;
+            border-radius: 0 6px 6px 0; margin: .5rem 0; font-size: .9rem; line-height: 1.5;
+        }
+        .reactie-beheer-header {
+            font-weight: 600; color: #f57f17; font-size: .82rem; margin-bottom: .3rem;
+        }
+        .reactie-beheer-tekst { white-space: pre-wrap; }
+
+        /* Admin knoppen — verborgen tot ingelogd */
+        .admin-only { display: none; }
+        body.admin-mode .admin-only { display: flex; }
+        body.admin-mode .admin-block { display: block; }
+        .admin-block { display: none; }
+
+        .mutatie-actions {
+            gap: .5rem; flex-wrap: wrap; padding: .6rem 1.2rem 1rem;
+            border-top: 1px solid #eee;
+        }
+        .btn-akkoord, .btn-afwijzen, .btn-terugdraaien, .btn-reactie {
+            border: none; padding: 6px 16px; border-radius: 4px; cursor: pointer;
+            font-size: .85rem; font-weight: 500; transition: opacity .2s;
+        }
+        .btn-akkoord    { background: #2e7d32; color: #fff; }
+        .btn-afwijzen   { background: #b71c1c; color: #fff; }
+        .btn-terugdraaien { background: #ff9800; color: #fff; }
+        .btn-reactie    { background: #1565c0; color: #fff; }
+        .btn-akkoord:hover, .btn-afwijzen:hover, .btn-terugdraaien:hover, .btn-reactie:hover { opacity: .85; }
+
+        .reactie-invoer {
+            padding: .6rem 1.2rem 1rem; border-top: 1px solid #eee;
+        }
+        .reactie-invoer textarea {
+            width: 100%; min-height: 80px; border: 1px solid #ccc; border-radius: 4px;
+            padding: .5rem; font-family: inherit; font-size: .9rem; resize: vertical;
+        }
+        .btn-publiceer {
+            background: #f57f17; color: #fff; border: none; padding: 6px 16px;
+            border-radius: 4px; cursor: pointer; font-size: .85rem; margin-top: .4rem;
+        }
+
+        .logboek { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+        .logboek h2 { color: var(--primary); margin-bottom: 1rem; font-size: 1.3rem; }
+        .log-entry {
+            display: flex; gap: .8rem; padding: .5rem 0; border-bottom: 1px solid #eee;
+            font-size: .85rem; align-items: baseline;
+        }
+        .log-datum { color: #888; white-space: nowrap; min-width: 140px; }
+        .log-actie { font-weight: 500; }
+
+        .page-title { text-align: center; margin: 2rem 0 .5rem; color: var(--primary); }
+        .page-subtitle { text-align: center; color: #888; font-size: .9rem; margin-bottom: 1.5rem; }
+
+        .filter-bar {
+            max-width: 960px; margin: 0 auto 1rem; padding: 0 1rem;
+            display: flex; gap: .5rem; flex-wrap: wrap; align-items: center;
+        }
+        .filter-btn {
+            border: 1px solid #ccc; background: #fff; padding: 4px 12px;
+            border-radius: 16px; cursor: pointer; font-size: .82rem;
+        }
+        .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+        .samenvatting {
+            max-width: 960px; margin: 0 auto 1.5rem; padding: 1rem 1.2rem;
+            background: #fff; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.08);
+        }
+        .samenvatting-grid { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .samenvatting-item { text-align: center; min-width: 80px; }
+        .samenvatting-getal { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+        .samenvatting-label { font-size: .78rem; color: #888; }
+
+        .admin-bar {
+            max-width: 960px; margin: 0 auto 1rem; padding: 0 1rem;
+            display: flex; gap: .5rem; align-items: center; justify-content: flex-end;
+        }
+        .btn-login {
+            background: var(--primary); color: #fff; border: none; padding: 5px 14px;
+            border-radius: 4px; cursor: pointer; font-size: .82rem;
+        }
+        .admin-label {
+            font-size: .8rem; color: #2e7d32; font-weight: 600;
+            background: #e8f5e9; padding: 3px 10px; border-radius: 12px;
+        }
+
+        .intro-tekst {
+            max-width: 960px; margin: 0 auto 1.5rem; padding: 0 1rem;
+            font-size: .92rem; line-height: 1.6; color: #555;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Ga naar inhoud</a>
+    <header class="site-header" role="banner">
+        <div class="container header-top">
+            <a href="https://www.wassenaar.nl" class="logo-link" aria-label="Gemeente Wassenaar" target="_blank" rel="noopener">
+                <img src="https://cuatro.sim-cdn.nl/wassenaar/uploads/2023-09/wassenaar_logo_fc.svg" alt="Gemeente Wassenaar" class="site-logo" width="200" height="35">
+            </a>
+            <div class="header-text">
+                <h1><a href="index.html" class="header-title-link">BeleidsBibliotheek Wassenaar</a></h1>
+                <p class="subtitle">Gemeente Wassenaar · Inzicht in beleid en besluitvorming</p>
+            </div>
+        </div>
+        <nav class="site-nav-bar" aria-label="BeleidsBibliotheek">
+            <div class="container site-nav-inner">
+                <a href="index.html#dossierOverzicht" class="site-nav-link">BeleidsBibliotheek</a>
+                <a href="overdrachtsdossier.html" class="site-nav-link">Overdrachtsdossier</a>
+                <a href="werklijst-mutaties.html" class="site-nav-link site-nav-actief">Werklijst</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <h1 class="page-title">Werklijst Mutaties</h1>
+        <p class="page-subtitle">Ontvangen reacties en onze opvolging</p>
+
+        <div class="intro-tekst">
+            Hieronder staan de ontvangen reacties van collega's op de BeleidsBibliotheek, inclusief de opvolging door het beheerteam.
+            Heeft u zelf een opmerking? Gebruik de knop <em>Foutje gezien? Meld het!</em> op de <a href="index.html">hoofdpagina</a>.
+        </div>
+
+        <div class="admin-bar" id="adminBar">
+            <button class="btn-login" id="btnLogin" onclick="toggleAdmin()">Beheer</button>
+        </div>
+
+        <div class="samenvatting" id="samenvatting"></div>
+
+        <div class="filter-bar" id="filterBar">
+            <button class="filter-btn active" data-filter="alle">Alle</button>
+            <button class="filter-btn" data-filter="nieuw">Open</button>
+            <button class="filter-btn" data-filter="akkoord">Verwerkt</button>
+            <button class="filter-btn" data-filter="afgewezen">Afgewezen</button>
+            <button class="filter-btn" data-filter="strategisch">Strategisch</button>
+        </div>
+
+        <div class="mutatie-lijst" id="mutatieLijst"></div>
+
+        <div class="logboek admin-block" id="logboekSectie">
+            <h2>Logboek (alleen zichtbaar voor beheer)</h2>
+            <div id="logboekInhoud"></div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>BeleidsBibliotheek Wassenaar · Werklijst Mutaties</p>
+        </div>
+    </footer>
+
+<script>
+var ADMIN_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8';
+var isAdmin = false;
+
+var MUTATIES = [
+    {
+        id: 'M2026-001',
+        datum: '2026-04-08 20:17',
+        afzender: 'Erwin',
+        type: 'Hoort hier niet',
+        hoofdstuk: 'H1 Veiligheid',
+        taakveld: '',
+        document: 'Organisatieverordening van de griffie',
+        opmerking: 'hoort bij taakveld 0.1',
+        voorstel: 'Verplaatsen van H1 (hoofdstukniveau) naar taakveld 0.1',
+        categorie: 'verplaatsing',
+        status: 'nieuw',
+        reacties: []
+    },
+    {
+        id: 'M2026-002',
+        datum: '2026-04-08 20:18',
+        afzender: 'Erwin',
+        type: 'Hoort hier niet',
+        hoofdstuk: 'H1 Veiligheid',
+        taakveld: '',
+        document: 'Mandaatregeling college en burgemeester 2024',
+        opmerking: 'hoort bij taakveld 0.1',
+        voorstel: 'Verplaatsen van H1 (hoofdstukniveau) naar taakveld 0.1',
+        categorie: 'verplaatsing',
+        status: 'nieuw',
+        reacties: []
+    },
+    {
+        id: 'M2026-003',
+        datum: '2026-04-08 20:18',
+        afzender: 'Erwin',
+        type: 'Hoort hier niet',
+        hoofdstuk: 'H1 Veiligheid',
+        taakveld: '',
+        document: 'Mandaatbesluit werkgeverscommissie Wassenaar',
+        opmerking: 'hoort bij taakveld 0.1',
+        voorstel: 'Verplaatsen van H1 (hoofdstukniveau) naar taakveld 0.1',
+        categorie: 'verplaatsing',
+        status: 'nieuw',
+        reacties: []
+    },
+    {
+        id: 'M2026-004',
+        datum: '2026-04-08 20:45',
+        afzender: 'Erwin',
+        type: 'Hoort hier niet',
+        hoofdstuk: 'H2 Verkeer, vervoer en waterstaat',
+        taakveld: '2.4 — Economische havens en waterwegen',
+        document: 'Damwand havenkade en liggeld',
+        opmerking: 'horen beide bij taakveld 2.3 recreatieve havens',
+        voorstel: 'Verplaatsen van taakveld 2.4 naar taakveld 2.3',
+        categorie: 'verplaatsing',
+        status: 'nieuw',
+        reacties: []
+    },
+    {
+        id: 'M2026-005',
+        datum: '2026-04-08 12:36',
+        afzender: 'Marijke',
+        type: 'Strategische feedback',
+        hoofdstuk: 'H3 Economie',
+        taakveld: '3.1 — Economische ontwikkeling',
+        document: 'Beheerplannen openbare ruimte',
+        opmerking: 'Zijn niet door raad vastgesteld, deze krijgen wel een plek, terwijl wel door de raad vastgestelde documenten dan weer ontbreken.\n\nOproep: overweeg om door college vastgestelde kaders wel hier te plaatsen (geldt niet specifiek voor 1 thema). Alleen door raad vastgestelde kaders is mager en biedt geen volledig overzicht.\n\nAmbtenaren werken met alle vastgestelde stukken.',
+        voorstel: '',
+        categorie: 'strategisch',
+        status: 'nieuw',
+        reacties: [
+            {
+                datum: '2026-04-09',
+                auteur: 'Beheerteam',
+                tekst: 'Dank Marijke! Twee punten:\n\n1. Beheerplan openbare ruimte staat inderdaad op een vreemde plek bij Economie. De Beheervisie Openbare Ruimte staat al bij Hoofdstuk 8 op hoofdstukniveau \u2014 dat is de juiste plek. Het beheerplan wordt verplaatst naar H8, bij de overige raadsstukken.\n\n2. Collegebesluiten zijn ZEKER onderdeel van de BeleidsBibliotheek. Dat zijn we helemaal mee eens. Als er specifieke besluiten van het college van B&W ontbreken, geef die gerust aan \u2014 die publiceren we graag.',
+                status: 'concept'
+            }
+        ]
+    },
+    {
+        id: 'M2026-006',
+        datum: '2026-04-08 20:40',
+        afzender: 'Erwin',
+        type: 'Duplicaat',
+        hoofdstuk: 'H2 Verkeer, vervoer en waterstaat',
+        taakveld: '2.2 — Parkeren',
+        document: 'Parkeerverordening en Raadsbesluit',
+        opmerking: 'Verordening parkeerbelastingen de Wassenaarse slag is zelfde document. Parkeerverordening, 1e document verwijderen.',
+        voorstel: 'Duplicaat verwijderen: parkeerverordening (is zelfde als Verordening parkeerbelastingen)',
+        categorie: 'verwijdering',
+        status: 'nieuw',
+        reacties: []
+    },
+    {
+        id: 'M2026-007',
+        datum: '2026-04-08 23:28',
+        afzender: 'Jacko',
+        type: 'Link klopt niet',
+        hoofdstuk: 'H0 Bestuur en ondersteuning',
+        taakveld: '0.8 / 0.10 / 0.11 — Fin. beheer',
+        document: 'Zoekresultaat "Reserves"',
+        opmerking: 'Bij zoek op \'Reserves\' komen er 6 Besluiten. 2 uit de raad en 4 uit college. Uit de raad verwijst naar raadsbesluit maar niet naar de nota. En de verwijzing naar de collegebesluiten horen er toch niet in. Op deze collegebesluiten kan je ook niet (door)klikken.\n\nTip: geef gaarne ook de mogelijkheid van schermprint in deze melding plakken.',
+        voorstel: 'Onderzoeken: links bij zoekresultaat "Reserves" controleren en niet-klikbare collegebesluiten verwijderen of repareren',
+        categorie: 'onderzoek',
+        status: 'nieuw',
+        reacties: []
+    }
+];
+
+var LOGBOEK_KEY = 'bbw_mutatie_logboek';
+var STATUS_KEY  = 'bbw_mutatie_status';
+var DRAFT_KEY   = 'bbw_mutatie_drafts';
+
+function loadState() {
+    try {
+        var s = JSON.parse(localStorage.getItem(STATUS_KEY) || '{}');
+        MUTATIES.forEach(function(m) { if (s[m.id]) m.status = s[m.id]; });
+        var d = JSON.parse(localStorage.getItem(DRAFT_KEY) || '{}');
+        MUTATIES.forEach(function(m) {
+            if (d[m.id]) {
+                d[m.id].forEach(function(r) { m.reacties.push(r); });
+            }
+        });
+    } catch(e) {}
+}
+
+function saveStatus() {
+    var s = {};
+    MUTATIES.forEach(function(m) { s[m.id] = m.status; });
+    localStorage.setItem(STATUS_KEY, JSON.stringify(s));
+}
+
+function getLogboek() {
+    try { return JSON.parse(localStorage.getItem(LOGBOEK_KEY) || '[]'); } catch(e) { return []; }
+}
+function addLog(tekst) {
+    var log = getLogboek();
+    log.unshift({ datum: new Date().toLocaleString('nl-NL'), tekst: tekst });
+    localStorage.setItem(LOGBOEK_KEY, JSON.stringify(log));
+}
+
+function saveDraft(id, reactieObj) {
+    try {
+        var d = JSON.parse(localStorage.getItem(DRAFT_KEY) || '{}');
+        if (!d[id]) d[id] = [];
+        d[id].push(reactieObj);
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(d));
+    } catch(e) {}
+}
+
+async function sha256(msg) {
+    var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(msg));
+    return Array.from(new Uint8Array(buf)).map(function(b) { return b.toString(16).padStart(2,'0'); }).join('');
+}
+
+async function toggleAdmin() {
+    if (isAdmin) {
+        isAdmin = false;
+        document.body.classList.remove('admin-mode');
+        document.getElementById('btnLogin').textContent = 'Beheer';
+        render();
+        return;
+    }
+    var pw = prompt('Wachtwoord voor beheer:');
+    if (!pw) return;
+    var hash = await sha256(pw);
+    if (hash === ADMIN_HASH) {
+        isAdmin = true;
+        document.body.classList.add('admin-mode');
+        document.getElementById('btnLogin').textContent = 'Vergrendel';
+        render();
+    } else {
+        alert('Onjuist wachtwoord.');
+    }
+}
+
+function doeActie(id, actie) {
+    if (!isAdmin) return;
+    var m = MUTATIES.find(function(x) { return x.id === id; });
+    if (!m) return;
+    var vorig = m.status;
+    m.status = actie;
+    saveStatus();
+    addLog(m.id + ' \u00B7 ' + m.document.substring(0,40) + ' \u00B7 ' + vorig + ' \u2192 ' + actie);
+    render();
+}
+
+function publiceerReactie(id) {
+    if (!isAdmin) return;
+    var ta = document.getElementById('ta-' + id);
+    if (!ta || !ta.value.trim()) return;
+    var reactieObj = {
+        datum: new Date().toISOString().slice(0,10),
+        auteur: 'Beheerteam',
+        tekst: ta.value.trim(),
+        status: 'gepubliceerd'
+    };
+    var m = MUTATIES.find(function(x) { return x.id === id; });
+    m.reacties.push(reactieObj);
+    saveDraft(id, reactieObj);
+    addLog(m.id + ' \u00B7 Reactie gepubliceerd');
+    ta.value = '';
+    render();
+}
+
+function publiceerConcept(id, idx) {
+    if (!isAdmin) return;
+    var m = MUTATIES.find(function(x) { return x.id === id; });
+    if (!m || !m.reacties[idx]) return;
+    m.reacties[idx].status = 'gepubliceerd';
+    saveDraft(id, m.reacties[idx]);
+    addLog(m.id + ' \u00B7 Conceptreactie gepubliceerd');
+    render();
+}
+
+function render() {
+    var filter = document.querySelector('.filter-btn.active');
+    var af = filter ? filter.getAttribute('data-filter') : 'alle';
+
+    var counts = { total: MUTATIES.length, nieuw: 0, akkoord: 0, afgewezen: 0, strategisch: 0 };
+    MUTATIES.forEach(function(m) {
+        if (m.status === 'nieuw') counts.nieuw++;
+        else if (m.status === 'akkoord') counts.akkoord++;
+        else if (m.status === 'afgewezen') counts.afgewezen++;
+        if (m.categorie === 'strategisch') counts.strategisch++;
+    });
+    document.getElementById('samenvatting').innerHTML =
+        '<div class="samenvatting-grid">' +
+        '<div class="samenvatting-item"><div class="samenvatting-getal">' + counts.total + '</div><div class="samenvatting-label">Totaal</div></div>' +
+        '<div class="samenvatting-item"><div class="samenvatting-getal" style="color:#1565c0">' + counts.nieuw + '</div><div class="samenvatting-label">Open</div></div>' +
+        '<div class="samenvatting-item"><div class="samenvatting-getal" style="color:#2e7d32">' + counts.akkoord + '</div><div class="samenvatting-label">Verwerkt</div></div>' +
+        '<div class="samenvatting-item"><div class="samenvatting-getal" style="color:#b71c1c">' + counts.afgewezen + '</div><div class="samenvatting-label">Afgewezen</div></div>' +
+        '<div class="samenvatting-item"><div class="samenvatting-getal" style="color:#6a1b9a">' + counts.strategisch + '</div><div class="samenvatting-label">Strategisch</div></div>' +
+        '</div>';
+
+    var html = '';
+    MUTATIES.forEach(function(m, mi) {
+        if (af !== 'alle') {
+            if (af === 'strategisch' && m.categorie !== 'strategisch') return;
+            if (af !== 'strategisch' && m.status !== af) return;
+        }
+
+        var badgeClass = 'badge-' + m.status;
+        if (m.categorie === 'strategisch' && m.status === 'nieuw') badgeClass = 'badge-strategisch';
+        var statusLabel = m.status === 'nieuw' ? 'Open' : m.status === 'akkoord' ? 'Verwerkt' : 'Afgewezen';
+        if (m.categorie === 'strategisch' && m.status === 'nieuw') statusLabel = 'Strategisch';
+
+        html += '<div class="mutatie-card status-' + m.status + '">';
+
+        html += '<div class="mutatie-header">';
+        html += '<div><span class="mutatie-meta">' + m.id + ' \u00B7 ' + m.datum + ' \u00B7 Gemeld door <strong>' + m.afzender + '</strong></span></div>';
+        html += '<span class="mutatie-badge ' + badgeClass + '">' + statusLabel + '</span>';
+        html += '</div>';
+
+        html += '<div class="mutatie-body">';
+        html += '<div class="mutatie-type">' + esc(m.type) + '</div>';
+        html += '<div class="mutatie-locatie">' + esc(m.hoofdstuk) + (m.taakveld ? ' \u2192 ' + esc(m.taakveld) : '') + '</div>';
+        html += '<div class="mutatie-doc">' + esc(m.document) + '</div>';
+        html += '<div class="mutatie-opmerking">' + escNl(m.opmerking) + '</div>';
+        if (m.voorstel) html += '<div class="mutatie-voorstel">\u25B6 ' + esc(m.voorstel) + '</div>';
+
+        m.reacties.forEach(function(r, ri) {
+            if (r.status === 'gepubliceerd') {
+                html += '<div class="reactie-beheer">';
+                html += '<div class="reactie-beheer-header">\u270D\uFE0F Reactie ' + esc(r.auteur) + ' \u00B7 ' + r.datum + '</div>';
+                html += '<div class="reactie-beheer-tekst">' + escNl(r.tekst) + '</div>';
+                html += '</div>';
+            } else if (r.status === 'concept' && isAdmin) {
+                html += '<div class="reactie-beheer" style="border-left-color:#90caf9;background:#e3f2fd">';
+                html += '<div class="reactie-beheer-header" style="color:#1565c0">CONCEPT \u00B7 ' + esc(r.auteur) + ' \u00B7 ' + r.datum + '</div>';
+                html += '<div class="reactie-beheer-tekst">' + escNl(r.tekst) + '</div>';
+                html += '<button class="btn-publiceer" style="margin-top:.5rem" onclick="publiceerConcept(\'' + m.id + '\',' + ri + ')">Publiceer deze reactie</button>';
+                html += '</div>';
+            }
+        });
+
+        html += '</div>';
+
+        html += '<div class="mutatie-actions admin-only">';
+        if (m.status === 'nieuw') {
+            html += '<button class="btn-akkoord" onclick="doeActie(\'' + m.id + '\',\'akkoord\')">Nu verwerken</button>';
+            html += '<button class="btn-afwijzen" onclick="doeActie(\'' + m.id + '\',\'afgewezen\')">Afwijzen</button>';
+        } else {
+            html += '<button class="btn-terugdraaien" onclick="doeActie(\'' + m.id + '\',\'nieuw\')">Heropenen</button>';
+        }
+        html += '</div>';
+
+        html += '<div class="reactie-invoer admin-block">';
+        html += '<textarea id="ta-' + m.id + '" placeholder="Schrijf een publieke reactie\u2026"></textarea>';
+        html += '<button class="btn-publiceer" onclick="publiceerReactie(\'' + m.id + '\')">Publiceer reactie</button>';
+        html += '</div>';
+
+        html += '</div>';
+    });
+    document.getElementById('mutatieLijst').innerHTML = html;
+
+    var log = getLogboek();
+    var logHtml = '';
+    if (!log.length) {
+        logHtml = '<p style="color:#888;font-size:.9rem">Nog geen acties vastgelegd.</p>';
+    } else {
+        log.forEach(function(l) {
+            logHtml += '<div class="log-entry"><span class="log-datum">' + l.datum + '</span><span class="log-actie">' + esc(l.tekst) + '</span></div>';
+        });
+    }
+    document.getElementById('logboekInhoud').innerHTML = logHtml;
+}
+
+function esc(s) {
+    var d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+}
+function escNl(s) { return esc(s).replace(/\n/g, '<br>'); }
+
+document.getElementById('filterBar').addEventListener('click', function(ev) {
+    var btn = ev.target.closest('.filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    render();
+});
+
+loadState();
+render();
+</script>
+</body>
+</html>

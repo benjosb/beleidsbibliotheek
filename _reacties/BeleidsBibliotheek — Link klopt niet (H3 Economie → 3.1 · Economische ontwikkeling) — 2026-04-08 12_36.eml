@@ -1,0 +1,277 @@
+Return-path: <MHofstra@wassenaar.nl>
+Original-recipient: rfc822;dickbraam@me.com
+Received: from p00-icloudmta-smtpin-us-west-2a-60-percent-25 by p175-mailgateway-smtp-55ff75dff5-7mj78 (mailgateway 2612B123)
+	with SMTP id 542c2a2d-f431-4b73-95f2-a0f00be918df 
+	for <dickbraam@me.com>; Wed, 8 Apr 2026 10:37:41 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 542c2a2d-f431-4b73-95f2-a0f00be918df
+Received: from AS8PR04CU009.outbound.protection.outlook.com (mail-westeuropeazon11021079.outbound.protection.outlook.com [52.101.70.79])
+	by p00-icloudmta-smtpin-us-west-2a-60-percent-25 (Postfix) with ESMTPS id 706A3C00142
+	for <dickbraam@me.com>; Wed, 08 Apr 2026 10:37:36 +0000 (UTC)
+X-ICL-Info: GAtbRVYDBVFFSlVFSgMFUFUKE0oWX1gHVQoPB0UFBExESVdZTwAYVUxZAxNFfX4NEwoSBRlwQQMGCgMZGVFETBsVRhEcDUEDBgoDGRlRREwbFUYFGw1SCxYSBAUZUVsiGBxIFBddFgoQFQlKOWMOMidJUjQtAAZbWxYTAxpfQwwRVxYFF0RTAQEQCRlWX0MWGRYJHFZTWQ9VCRIFRV1XCxlUERILRFMXBxYWEhlKWQxESFZFSQABW1sWEwMaX0MMEVcWBRdEUwEBEAkZVl9DFhkWCRxWU1kPVR0CSg9RRREQFwcWCh5YDlUUDxNFDHcvTClXTkt9dFNMSVA1OXEGWk1MUUdKCXBWMUpURjlzcCNETCQ2OHF7WyVIX0Q1cgdbRU9IMi1iZlNMSkgnKn9yTDosMjs3f31MNjYrSQ==
+X-ICL-Score: 2.33303322332
+Authentication-Results: bimi.icloud.com; bimi=none
+X-ARC-Info: policy=pass; arc=pass; id=mx.microsoft.com 1; r1=1; r2=1
+Authentication-Results: arc.icloud.com; arc=pass
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=wassenaar.nl
+X-DMARC-Policy: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc_report@wassenaar.nl,mailto:rapportages@dmarc.ibdgemeenten.nl; ruf=mailto:dmarc_report@wassenaar.nl; fo=1; adkim=r; aspf=r
+X-DMARC-Info: pass=pass; dmarc-policy=reject; s=r1; d=r1; pdomain=wassenaar.nl
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=wassenaar.nl header.i=@wassenaar.nl header.b=RarLaXg8
+Received-SPF: pass (spf.icloud.com: domain of MHofstra@wassenaar.nl designates 52.101.70.79 as permitted sender) receiver=spf.icloud.com; client-ip=52.101.70.79; helo=AS8PR04CU009.outbound.protection.outlook.com; envelope-from=MHofstra@wassenaar.nl
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of MHofstra@wassenaar.nl designates 52.101.70.79 as permitted sender) smtp.mailfrom=MHofstra@wassenaar.nl
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=Wj54rNCD0RqbBCMqMKee4X9waNVWkqCHUxl8JTyURLJkSpEZIpFapnFALSUq/JE+LVN43r7x+ifxkWsskY+E3UfGhKwixkJ7iV5pWmoMioBhwLPKKM3to2DArIzkEidhLVFVfsTbUFl0Er5R7pCnziUHfq9xDj2rub8/ct8adJQ2tH4Rb+JYI1f2uFU75zT8GVZXtaICr3lsZlnOVHHaQtDDLfXBJ5dA6CQqf+Iii+43ck1Mrol/iQEwLRzYcbTXSukQhafPCMZDEjunnjxh+v+y4ZAhd6I0t5k2nQXMOZdmDoSKfpw3jEMOxwfR78SCrLUOwKU2Q+8kYcBpPQ2Hwg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=U3WckSCLZxR7ai00qwl7rVvUOQxJV96YrblQB22BRjA=;
+ b=ZaBSI8IBLTfRVnNiZ8wZLzhOfXRM+NcZJiV36CHhTw2PMEZkXCv3j55fkiO1RRZBom8oWCYPDg0SN9F7/8w0Dav0BNIZmtcOa5rTAO7+k6UIcls6IlNjAP68fF4boH7Cc/JYKVCx5LNkfXh5hipfyrMGm/O3dlEzMhA9eZC1PPIsG4FjHFQhE4ZypmVQF3azvWAHxePkscc0l0zw60m/MjqWQJmeYr+ZzW7TbErhj+kDxoldfMZioiIzC3VV8na/sF105I0WtkTTABqj/iJAFkYAhZ9gteU1DLW+dLJ31vwCRhXONS0nNK0k4YY1Ne4mEGIGFYzH9PCXAgVrRqKaig==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=wassenaar.nl; dmarc=pass action=none header.from=wassenaar.nl;
+ dkim=pass header.d=wassenaar.nl; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wassenaar.nl;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=U3WckSCLZxR7ai00qwl7rVvUOQxJV96YrblQB22BRjA=;
+ b=RarLaXg8hTiOAhJ7715BPSQNfGo7c2b98KRtlrPAmq4AVpP6QyuX4+C63cYEqMVs0H5AvYwgOzJbmLGNhU4wajnwmWVsoTK5Vw+99K9LGKMnEwRUecDS+UpYH52EOoD8sohR+tQp/MMlCbxi/+1/xSRKZMSd4O9CG7y1p5UILUw=
+Received: from AM9P193MB1906.EURP193.PROD.OUTLOOK.COM (2603:10a6:20b:3b4::22)
+ by AS8P193MB2349.EURP193.PROD.OUTLOOK.COM (2603:10a6:20b:40e::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9769.18; Wed, 8 Apr
+ 2026 10:37:32 +0000
+Received: from AM9P193MB1906.EURP193.PROD.OUTLOOK.COM
+ ([fe80::e48f:c055:8dad:46ea]) by AM9P193MB1906.EURP193.PROD.OUTLOOK.COM
+ ([fe80::e48f:c055:8dad:46ea%6]) with mapi id 15.20.9769.014; Wed, 8 Apr 2026
+ 10:37:32 +0000
+From: Marijke Hofstra <MHofstra@wassenaar.nl>
+To: Erwin Hiep <EHiep@wassenaar.nl>, Mechteld Heijting
+	<Mheijting@wassenaar.nl>, "dickbraam@me.com" <dickbraam@me.com>, Dick Braam
+	<DBraam@wassenaar.nl>
+Subject:
+ =?big5?B?QmVsZWlkc0JpYmxpb3RoZWVrIKFYIExpbmsga2xvcHQgbmlldCAoSDMgRWNvbm9t?=
+ =?big5?B?aWUgofcgMy4xIKFQIEVjb25vbWlzY2hlIG9udHdpa2tlbGluZykgoVggMjAyNi0w?=
+ =?big5?Q?4-08_12:36?=
+Thread-Topic:
+ =?big5?B?QmVsZWlkc0JpYmxpb3RoZWVrIKFYIExpbmsga2xvcHQgbmlldCAoSDMgRWNvbm9t?=
+ =?big5?B?aWUgofcgMy4xIKFQIEVjb25vbWlzY2hlIG9udHdpa2tlbGluZykgoVggMjAyNi0w?=
+ =?big5?Q?4-08_12:36?=
+Thread-Index: AdzHQ6Fa4qxSqYxWTzWbz4O7xZOdyQ==
+Date: Wed, 8 Apr 2026 10:37:32 +0000
+Message-ID:
+ <AM9P193MB1906BAA08857029F4D321ACFA15BA@AM9P193MB1906.EURP193.PROD.OUTLOOK.COM>
+Accept-Language: nl-NL, en-US
+Content-Language: nl-NL
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-processedbytemplafy: true
+x-templafyemailsigvstoversion: 9.26.0.0
+x-zorgmail-nta-outlook-addin: not-default
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: AM9P193MB1906:EE_|AS8P193MB2349:EE_
+x-ms-office365-filtering-correlation-id: bf103d60-8f65-4dc9-a6f8-08de955ad723
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|1800799024|366016|376014|38070700021|13003099007|18002099003|56012099003|8096899003;
+x-microsoft-antispam-message-info:
+ S0SCKH6mBw5A6Db2Y/zwU5iqkyna46M/NrljcIiAo5/wrTH7SakIER/yvTj2/b1IgCrMEPWU3jA90dfe5iKrzCY96VRLtgzFy4M6dWCJBizKQ3IxVZYhG9CHGeYU/4TbxB47I2mBZYZWrnW4+tpQE+bCLI3AWzKhxQKLT1Q/3QevqiCuC642ptxF556K5Pv3HsXjqAKOA6r47kapMqvD4TUCxVdjJ/j97wQ/ZZg6IEwBGtg+wvP0fFe4OYXA604UzEBQbr2KJ6UMzLtRrMAroy+xowkAnyCRWL1dPeuSyk5TwNzaV4SiCkEFPdRrnXCU6VLSjohc22UgQLg19Qc5Wfvj95KdVSpyJKxSlICOZjhlKuc3UDPCqYacTCtE5rW2PfEWkZUd2kJ9YsJjAQ8UDPbKtYBYOMHmWVWTC52uBOo4aCcgf+mcMzr5egbiri9SIcv8EZNhBNq/TxYhOa4WReK7yb5gjiqztSX3ZGc34hDZEw4AM8jb2JSZqeorFNk6L0co4IwEb1wn9C0/Ul4BXHYnhV/6N5c0039fKJOVGLYggYahG2h7sg4lzDRaQ726k2wGvqULtNybDqAnSamDA8t+Vx6uw0lRrbdat/nEFJa+1vZRlkeXFXsgcbnrP/36x0nx5zF6UhZHDIzOmDhjTiYniDIgJLw9bGzTLfaGicW3wVe5QB0m0FGJP2z+mMyStjtGThP05FlAoHyWCo+1tVt7ZOe4zB1j2Itmo4l97UVurFVUUACap36swQuHXQYz
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:zh-tw;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:AM9P193MB1906.EURP193.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230040)(1800799024)(366016)(376014)(38070700021)(13003099007)(18002099003)(56012099003)(8096899003);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?big5?B?V1JDN2hTWFFYY2JxbG80V2ZyY3VPanBSMkJwMXdwRFlvZW10YnFWQlovbWtYa0g4?=
+ =?big5?B?SjJKV3Nxa002MGxMTGtuNDN4LzVLRXBRcHZPN2JSbG9zUUJPVFY2WWhjSlVvOEhB?=
+ =?big5?B?N3h1MFBrcVhZUzB0VFZwbU1RcTNhbTdyS2FLR250b09FZE9JdEZPZVByZXBMNVFZ?=
+ =?big5?B?QlRlb3ltd0Y3L0FoNVFudTE3cHZiU0ZwUndMNTV1OFYvL0M5OWZKclNHck5BYW5i?=
+ =?big5?B?K3RrRkM5d21xRDUySURsemxoR1ZxbmR4NlZpVWZlSVZVdmdtQTV0Vy9abzUySDYw?=
+ =?big5?B?dkxkTEdVV1NjdCtGcGRSblhvMDZyUEhBVit5SFZOczdJTGF3SmFRTDlIbWRVdkgv?=
+ =?big5?B?aHlFRGZEaVFkQmhIZDlVaTM4VGptMlJLbTV0bm1QcTB6SkRaTnpuWWNvWWlKejRL?=
+ =?big5?B?djNDeURoQ2hGb09iMjNWb3d5blpLa3NoZ25kWHdyZXg4TTU3UFJLaG9YeFJwNlg3?=
+ =?big5?B?VUQwckVqTE5CNHB0WHVjdGMwMThBMFB6QUJoazdSZmVmY0xRUmk0L3lWK1FtOTY0?=
+ =?big5?B?TjFLWWxoOTdPeTE2MDJpTXRDSzVYbjRNSjhSS3pGeUZ0U1BDQVJSeTZVOEJrS2ZC?=
+ =?big5?B?a0FUT0pqcm5RdDFCY1hubFdHY0l5SUpWR3ZUcm9ueHAxS2RxSUJVMk1QQm9GMk9B?=
+ =?big5?B?RU9ZbXBZNmR1dktZa1VjTFp0OXp6Njk2Q3grWDdCVnhmQ1VMem1WaFl2N2thN2Vt?=
+ =?big5?B?SmlnMGFzSmd6bmtlWFFZUlFnMkJ3alo3ZUQ3Rnh5eEowNUw4L3NyTjVrWjl4c3E1?=
+ =?big5?B?Ri9TNDB4OEcwU2JaNTZoTFZQVlA3amNFbWdNRHY1dG9CVkFlcmxSOEV6Snk0WXhI?=
+ =?big5?B?YjZ6aGFSTDEwZ2orTGNFTVBCTEt6enN5UG10QnV2RC9mdkpHekQ3dVdUNTBYY2Vl?=
+ =?big5?B?MlJTNG9ZZEh6K2VkNWJIV1BSQy9sR3FJb1FwUjllckJ4ek1hQnh1dk54eHBjYU9p?=
+ =?big5?B?K1lITEZ4cUV3UFhVdDJHdm5XeHlueUtNblJQMDJTVmdVU1duR0NuRW41VWNFNlRZ?=
+ =?big5?B?Q0tpQlhtTHR1MnJKRnU5eStyZ0xTVUdFQ2JVWDV2T2wwblZlaGtxbFNrTDhSN00w?=
+ =?big5?B?WHJBaHgvRWxJTGZ1dXIyTXQxSElBdkhiS3ZiVDNSYWdhRFhHeG9QZGsvOFowa1gv?=
+ =?big5?B?WVR5Vm9sU3J2ak94QkRlaDhGc0pPamhMS1dETUpQMDk1Um9EUEJndU83ZzNFaEsy?=
+ =?big5?B?bTd1b3JZNUdaTlRWUFNHUyt2dGVER3ZoeVdFSm5YTUowRldWVmdvWnZSWHhwSW5R?=
+ =?big5?B?Mkl4MjdjcmIySEJQZFRhSzFZbzNJRnFNenpoSnZrcVpoZCtDN2puZnhpOC9DUzV3?=
+ =?big5?B?SUp1bVpSMFFuVXMvc3hSNU0ybytZUW8vL3FWcnQrcHRXdklOOU9SVStzSTdadW9s?=
+ =?big5?B?SjU4VFhBVkVCSWk3Sk1JUnRqWjB2dkdjQXlzWUN5RmRXMmpRMkVwZ2R6NjhDYTln?=
+ =?big5?B?UHkvUGY0Q29QdmtNZ2NBQ2pJU1h6SkpQZU9HSXBlaTBISlM0NmI0azhQNHd3anhP?=
+ =?big5?B?MkZ6S1A3K3RxRlVNeXNnazFxOFJaV1hLTlRGVU1MajVjcjRDTnBjNTNvV2w4UVA1?=
+ =?big5?B?T1Jod29QcWVWcGF4Q0piMC9pZHBGWEtENDIyVXMrc0ljNC9TWnZGV0RqRVBOQnlU?=
+ =?big5?B?UklHbEhXdXJtdUxEcGxzV01ETStpSnRDTnpxTWFRanVMSW56TXB2RndKeWZsRWxS?=
+ =?big5?B?OFlZTlAycVRnZG9WbFlwKy9VSFYyaTU1VFRRM3N1bW51dnNoQ3NPTG52ZVE0Q3Rh?=
+ =?big5?B?anF6WUZseTRvUEVJNHI1Kyt5K2dycnBhRWZuZUNZNlFjMk9iNUh6dWEwbURZLzVL?=
+ =?big5?B?czFtZlM0WTNCWmVUcmQ1MEQrMlB3MjRVcTlDNzhHQ3dGZXJJUjcyQWtyb1JCTXg5?=
+ =?big5?B?cmFUNmVkbjJ6VGtRY01LVjR1Qmpya1JwVEtONDhnZUQxdUJLZ3BoTDB6NlM0Zzdq?=
+ =?big5?B?aDg0a3Y1U3hOWjl6UlhOR2gza3Y3b2lFakQ3QzdGODFOQVdBZE9FOXp2NEh2VC9B?=
+ =?big5?B?ZjlmSVZTNEZIOGFjalJzM1lETkVxekUzWEptNFhCQXlFdDdZRzVVeERycExvT2ts?=
+ =?big5?B?VEMvZFlmaFl4YVhCNnhtMWhMckNpU3ZLbHdiNXhaSEFaNkdDSHdiK0FXc1FERUdL?=
+ =?big5?Q?w/1JUstQSuDJyp/lv4iM7DwBpET6ShuKBysZ1+XI04iMz6Xd?=
+Content-Type: multipart/alternative;
+	boundary="_000_AM9P193MB1906BAA08857029F4D321ACFA15BAAM9P193MB1906EURP_"
+MIME-Version: 1.0
+X-OriginatorOrg: wassenaar.nl
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: AM9P193MB1906.EURP193.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: bf103d60-8f65-4dc9-a6f8-08de955ad723
+X-MS-Exchange-CrossTenant-originalarrivaltime: 08 Apr 2026 10:37:32.1778
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: a1ad7daf-a971-46c6-aac0-68836b6f290e
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: 4L/FrAvlyW6OwN6woKTDwbMuxyvw0kW+Hveu8Owpn/klqK31v3B+NmeOhPXSSAAp/C08NYI6sAjBx/PNrUhnmQ==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AS8P193MB2349
+X-MANTSH: 1TFkXGBoRCllEF2MbWkNpeBMfXH1dEQpZTRdkRURPEQpfWRcYEx0RCl9NF2RFRE8
+ RCllJFxkbcRsGHBh3BhsfHAYaBhoGGxoaBhpxGhAadwYaBhsaBhoGGgYaBhpxGhAadwYaEQpZX
+ hdsbHkRCkNOFx4Hb04efx1YGWRBTlt5YhxfcEZ5B1piGGxnSFt/UnsaEQpYXBcZBBoEHx4FGxo
+ aBB0aBBsTEgQbGRAbHhofGhEKXlkXQmkTeWURCk1cFxkdHBEKTFoXaGlNa2sRCkxGF29ra2trT
+ WsRCkNaFx8YBBsaGwQdGgQdExEKQl4XGxEKRF4XHxEKQlwXGxEKXk4XGxEKQksXZEVtRWljfkR
+ rSG8RCkJJF2RFbUVpY35Ea0hvEQpCRRd6em1rUk5nZXtCUxEKQk4XZEVtRWljfkRrSG8RCkJMF
+ 2JrG0hoWxxsYl5aEQpCbBdsY1hoYWZhcxNrfhEKQkAXegFnHGdwZU9dHEgRCkJYF2J6eUFDEmF
+ TbVpsEQpCeBdjcht9a2BQHUZzRBEKTV4XBxsRCnBoF2QBRl4TRR5EfEdEEAcZGhEKcGgXa214W
+ l4BUkhyZ18QBxkaEQpwaBdoGwETX2lvHFpNZhAHGRoRCnBoF2B/HGJPZ2V5bh5sEAcZGhEKcGg
+ XZH1Fa1BfX05eXU0QBxkaEQpwaBdjWlliTWtPBUhuexAHGRoRCnBoF25Ya1B/U31He1luEAcZG
+ hEKcGgXZWdERx0Teh9wAWcQBxkaEQpwfxd6Z0lSRl8YTxJdRxAHGRoRCnBfF2hSR3gZW2tiBQF
+ mEAcZGhEKcH0XZBNAH2FOEhxZeWwQBxkaEQpwfRdkE0AfYU4SHFl5bBAHGRoRCnBsF21SYnlTX
+ GB9bFtyEAcZGhEKbX4XBxsRClhNF0sR
+X-Proofpoint-GUID: 4-Ed4U7r3NkdqSH6uZlS-pH2FMbqUxQ0
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNDA4MDA5NyBTYWx0ZWRfX/+Fiap8UV5lE
+ Eui0hG+qspLQUlz24YsNzTiy7R7chWxHv2jMbkTk38WhTv0JL7KLDHfu0aJZp9fHl6DONm57Nsh
+ svywy7pUACjxahUTdrqWdM24NmLXcmFJ0OFSpy1pffJi7Mjmh0LFDFj4Q5tOFi0Nu1cc04oTbDE
+ 6g9DpWUpICTgYqG+jlqx8JJW7W6pfJv596/HWW6T56QwPYxMt5glRETTKB771+BJNjs6Qtg5zhC
+ haLSRqOsgXRqD0oz4HdTDDM+naoS6MYsUGCixedjV5LKGtttXnys/BQpSJ4T9ESAATbOTB6chGx
+ dUWYoPWJVoewmWDzBJG
+X-Proofpoint-ORIG-GUID: 4-Ed4U7r3NkdqSH6uZlS-pH2FMbqUxQ0
+X-JNJ: AAAAAAAByhBA2Gs2ywqzoDFKVvCW5gQRYot6nZlFrXZdcfG7iCydTtLFdnPWoZnF2520lZyeWCa80ngKQMMott9ZIpMHKpUUVLBHdAQ9l6J5pSkwNUXtsbfDAG2WGbyDAxh+UAQK9MRLFU7jS2kMB4hXcvllxV+zS2DfEop643U5KdgnhKPKARj7gR8oWl7xsjL9S60n6nhJvT8K3RtWDYw0JedchrzHzVtFqmU+r2UCOL4nHVN+e/COJpz5xAiHVaM3MUv+LrxMZr/T8ol7utauMPM9g7DPMWpxF265asIJxIkqPy9TgjhfcWgJJKOcw/fMYiL9UggDBUhiZM+Vt61c5TfJkc2gcL/KSXcMUJc/dedKthurwoVlXSN2VgENChvTkcZgr0P0kh3LsizS0+/dDnlGVtWVuwlowtWGuTR7jedWuPJ3q+SkopvzdsUUneyID5ivlnVgBC9sIJ3uUj4NYmi8sZ/I/0oQ3Az6PyBT7zVuADzBPQU8w8xbQfc+1+igbPVGKnD/7cRzKuhh6Cp6xXebBxv2h6tW6JDabyicB04pds/Co118pu/qdPWs64Zl+IAxDCqkc96AUuBdoetyJd2StQTHlqYkIrtLDxHoTIFOBoOpZuCmWQd4N5EK9TkV9aHEUX2ZppPPsoWh6PxSW82FC+PWc3kefhM7QLjsniDrCV3pi3MAvfOP2Sqw4x5otIQyq/oDKZTTtXcOGCnxCmIP0+SKQRsv0SSH+Ypko8KO9lBWXwkhX8gdgvKnqFCjHBvbeBNt0ucj71T57xuuIL+D0PBtdhSb9yHDfYbkqVoNcV3XyZD/t/5dTceAPBLj353IjiXHhLePqOUInWtdoneiSuTp6D+Y+Ttrs6srHHTRSSTaPisNb3Vr1fQ5yRLfwioIeF65CpTMUYPcb6so6DUXJKFqnk4uzSqXBx61NB3JO2sZrGmC2UL37JjgsfpRgYeV0grbjr3Ib/e3CuGhBTdsy58IQ24Kmt0l+gMlY2XL49c=
+
+--_000_AM9P193MB1906BAA08857029F4D321ACFA15BAAM9P193MB1906EURP_
+Content-Type: text/plain; charset="big5"
+Content-Transfer-Encoding: base64
+
+TmlldXdlIHJlYWN0aWUgb3AgZGUgQmVsZWlkc0JpYmxpb3RoZWVrOg0KDQpWZXJ6b25kZW46IDIw
+MjYtMDQtMDggMTI6MzYgKGxva2FsZSB0aWpkKQ0KVmFuOiChWA0KDQpUeXBlOiBMaW5rIGtsb3B0
+IG5pZXQNCkhvb2Zkc3R1azogSDMgRWNvbm9taWUNClRhYWt2ZWxkOiAzLjEgoVAgRWNvbm9taXNj
+aGUgb250d2lra2VsaW5nDQpEb2N1bWVudDogQmVoZWVycGxhbm5lbiBvcGVuYmFyZSBydWltdGUN
+Cg0KemlqbiBuaWV0IGRvb3IgcmFhZCB2YXN0Z2VzdGVsZCwgZGV6ZSBrcmlqZ2VuIHdlbCBlZW4g
+cGxlaywgdGVyd2lqbCB3ZWwgZG9vciBkZSByYWFkIHZhc3RnZXN0ZWxkZSBkb2N1bWVudGVuIGRh
+biB3ZWVyIG9udGJyZWtlbi4NCg0Kb3Byb2VwOiBvdmVyd2VlZyBvbSBkb29yIGNvbGxlZ2UgdmFz
+dGdlc3RlbGRlIGthZGVycyB3ZWwgaGllciB0ZSBwbGFhdHNlbiAoZ2VsZHQgbmlldCBzcGVjaWZp
+ZWsgdm9vciAxIHRoZW1hKS4gYWxsZWVuIGRvb3IgcmFhZCB2YXN0Z2VzdGVsZGUga2FkZXJzIGlz
+IG1hZ2VyIGVuIGJpZWR0IGdlZW4gdm9sbGVkaWcgb3ZlcnppY2h0Lg0KDQphbWJ0ZW5hcmVuIHdl
+cmtlbiBtZXQgYWxsZSB2YXN0Z2VzdGVsZGUgc3R1a2tlbi4NCg0Koneid6J3DQpXZXJrbGlqc3Qg
+cmVhY3RpZXM6DQpodHRwczovL3dhc3NlbmFhci5iZXNsdWl0LXdpanplci5ubC93ZXJrbGlqc3Qt
+cmVhY3RpZXMuaHRtbA0K
+
+--_000_AM9P193MB1906BAA08857029F4D321ACFA15BAAM9P193MB1906EURP_
+Content-Type: text/html; charset="big5"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dbig5">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:"Microsoft JhengHei";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Microsoft JhengHei";}
+/* Style Definitions */
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+span.E-mailStijl19
+	{mso-style-type:personal-compose;
+	font-family:"Verdana",sans-serif;
+	color:black;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;
+	mso-ligatures:none;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"NL" link=3D"blue" vlink=3D"purple" style=3D"word-wrap:break-w=
+ord">
+<div class=3D"WordSection1">
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">Nieuwe reactie op de BeleidsBibliotheek:</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">Verzonden: 2026-04-08 12:36 (lokale tijd)</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Van:</span>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">=A1X</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">Type: Link klopt niet</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Hoofdstuk: H3 Economie</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Taakveld: 3.1</span>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">=A1P Economische ontwikkeling</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Document: Beheerplannen openbare ruimte</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">zijn niet door raad vastgesteld, deze krijgen wel een plek,=
+ terwijl wel door de raad vastgestelde documenten dan weer ontbreken.</span=
+><o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">oproep: overweeg om door college vastgestelde kaders wel hi=
+er te plaatsen (geldt niet specifiek voor 1 thema). alleen door raad vastge=
+stelde kaders is mager en biedt geen volledig
+ overzicht.</span><o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">ambtenaren werken met alle vastgestelde stukken.</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Microsoft JhengHei&quo=
+t;,sans-serif;color:black">=A2w=A2w=A2w</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Werklijst reacties:</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black"><a href=3D"https://wassenaar.besluit-wijzer.nl/werklijst-react=
+ies.html">https://wassenaar.besluit-wijzer.nl/werklijst-reacties.html</a></=
+span>
+<o:p></o:p></p>
+</div>
+</body>
+</html>
+
+--_000_AM9P193MB1906BAA08857029F4D321ACFA15BAAM9P193MB1906EURP_--

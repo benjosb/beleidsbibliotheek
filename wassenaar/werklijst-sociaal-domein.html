@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Werklijst Sociaal Domein · BeleidsBibliotheek Wassenaar</title>
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=roboto:300,400,500,700">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+:root {
+    --primary: #55601c;
+    --primary-light: #e8ebd3;
+    --oranje: #f9a825;
+    --oranje-bg: #fff8e1;
+    --groen: #2e7d32;
+    --groen-bg: #e8f5e9;
+    --rood: #c62828;
+    --rood-bg: #ffebee;
+    --blauw: #1565c0;
+    --blauw-bg: #e3f2fd;
+    --grijs: #757575;
+    --grijs-bg: #f5f5f5;
+    --radius: 8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Roboto', sans-serif; background: #fafafa; color: #333; line-height: 1.5; }
+.header { background: var(--primary); color: #fff; padding: 1.25rem 0; }
+.container { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
+.header h1 { font-size: 1.35rem; font-weight: 500; }
+.header p { font-size: 0.85rem; opacity: 0.85; margin-top: 0.2rem; }
+.stats { display: flex; gap: 0.5rem; flex-wrap: wrap; padding: 1rem 0; position: sticky; top: 0; background: #fafafa; z-index: 10; border-bottom: 1px solid #ddd; }
+.stat { padding: 0.4rem 0.75rem; border-radius: 20px; font-size: 0.82rem; font-weight: 500; white-space: nowrap; }
+.stat--totaal { background: var(--grijs-bg); color: var(--grijs); }
+.stat--behandeling { background: var(--oranje-bg); color: #e65100; }
+.stat--goedgekeurd { background: var(--groen-bg); color: var(--groen); }
+.stat--afgekeurd { background: var(--rood-bg); color: var(--rood); }
+.stat--verwerkt { background: var(--blauw-bg); color: var(--blauw); }
+.taakveld-groep { margin-top: 1.5rem; }
+.taakveld-kop { font-size: 1.05rem; font-weight: 700; color: var(--primary); padding: 0.5rem 0; border-bottom: 2px solid var(--primary-light); margin-bottom: 0.75rem; }
+.kaart { background: #fff; border: 1px solid #e0e0e0; border-radius: var(--radius); padding: 1rem; margin-bottom: 0.75rem; transition: border-color 0.2s; }
+.kaart:focus-within { border-color: var(--primary); }
+.kaart-kop { display: flex; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap; }
+.kaart-titel { font-weight: 500; font-size: 0.95rem; flex: 1; min-width: 200px; }
+.badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; }
+.badge--link { background: #e3f2fd; color: #1565c0; }
+.badge--verwijderen { background: #ffebee; color: #c62828; }
+.badge--verplaatsen { background: #fff3e0; color: #e65100; }
+.badge--toevoegen { background: #e8f5e9; color: #2e7d32; }
+.badge--opmerking { background: #f3e5f5; color: #7b1fa2; }
+.kaart-detail { margin-top: 0.6rem; font-size: 0.82rem; }
+.kaart-detail dt { color: var(--grijs); font-weight: 400; margin-top: 0.35rem; }
+.kaart-detail dd { margin-left: 0; word-break: break-all; }
+.kaart-detail a { color: var(--blauw); text-decoration: none; }
+.kaart-detail a:hover { text-decoration: underline; }
+.link-oud { color: #999; text-decoration: line-through; }
+.link-nieuw { color: var(--groen); font-weight: 500; }
+.kaart-acties { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.75rem; flex-wrap: wrap; }
+.kaart-acties select { padding: 0.3rem 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.82rem; font-family: inherit; }
+.kaart-acties select.status--in_behandeling { border-color: var(--oranje); background: var(--oranje-bg); }
+.kaart-acties select.status--goedgekeurd { border-color: var(--groen); background: var(--groen-bg); }
+.kaart-acties select.status--afgekeurd { border-color: var(--rood); background: var(--rood-bg); }
+.kaart-acties select.status--verwerkt { border-color: var(--blauw); background: var(--blauw-bg); }
+.opmerking-input { flex: 1; min-width: 150px; padding: 0.3rem 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.82rem; font-family: inherit; }
+.opmerking-input:focus { outline: none; border-color: var(--primary); }
+.toolbar { display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap; }
+.btn { padding: 0.45rem 1rem; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-family: inherit; font-size: 0.85rem; cursor: pointer; }
+.btn:hover { background: #f5f5f5; }
+.btn--primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn--primary:hover { background: #6b7a24; }
+.footer { margin: 2rem 0 1rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; font-size: 0.8rem; color: var(--grijs); text-align: center; }
+@media (max-width: 600px) {
+    .stats { gap: 0.3rem; }
+    .stat { font-size: 0.75rem; padding: 0.3rem 0.5rem; }
+    .kaart-kop { flex-direction: column; }
+    .kaart-acties { flex-direction: column; align-items: stretch; }
+}
+</style>
+</head>
+<body>
+
+<div class="header"><div class="container">
+    <h1>Werklijst Sociaal Domein</h1>
+    <p>Mutaties uit: Beleidsbib sociaal domein.docx &middot; Bron: strateeg sociaal domein &middot; Controle: redactie</p>
+</div></div>
+
+<div class="container">
+    <div class="stats" id="stats"></div>
+    <div class="toolbar">
+        <button class="btn" onclick="zetAlles('goedgekeurd')">Alles goedkeuren</button>
+        <button class="btn" onclick="zetAlles('in_behandeling')">Alles reset</button>
+        <button class="btn btn--primary" onclick="exportCSV()">Download CSV</button>
+    </div>
+    <div id="werklijst"></div>
+    <div class="footer">
+        <p>BeleidsBibliotheek Wassenaar &middot; Werklijst gegenereerd op 27 maart 2026</p>
+        <p>Status wordt opgeslagen in je browser (localStorage). <button class="btn" onclick="if(confirm('Weet je het zeker? Alle statussen worden gewist.')){localStorage.removeItem('werklijst-sd-status');location.reload();}">Wis opgeslagen status</button></p>
+    </div>
+</div>
+
+<script>
+const MUTATIES = [
+  {
+    id: 'sd-01', taakveld: 'H6', taakveldNaam: '6. Sociaal domein (strategisch)',
+    document: 'Beleidsplan Sociaal Domein Wassenaar',
+    actie: 'link_wijzigen',
+    toelichting: 'Raadsbesluit verwijderen, link naar het daadwerkelijke beleidsplan.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/87b901da-cc1c-46b4-9717-b5640708acc3?documentId=3f581f85-72e6-4a72-8160-022faeec7fbd&agendaItemId=84887548-5c4b-4211-a5fd-1bd690ee2fe5',
+    nieuwLink: null,
+    opmerking_default: 'Collega: raadsbesluit verwijderen. Nieuwe link ontbreekt in .docx — navragen.'
+  },
+  {
+    id: 'sd-02', taakveld: 'H6', taakveldNaam: '6. Sociaal domein (strategisch)',
+    document: 'Lokaal Jeugdbeleid Wassenaar 2026',
+    actie: 'link_wijzigen',
+    toelichting: 'Link wijzigen naar wassenaar.nl/lokaal-jeugdbeleid.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/3e13ce7b-2972-4a14-9e63-5f8a03b8dde6?documentId=a7aca3e0-ab0b-4061-80d7-63301fa5a2d3&agendaItemId=b6056161-8751-4a89-852c-5b92234b07ad',
+    nieuwLink: 'https://www.wassenaar.nl/lokaal-jeugdbeleid'
+  },
+  {
+    id: 'sd-03', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Verordening Adviesraad Sociaal Domein 2025',
+    actie: 'link_wijzigen',
+    toelichting: 'Raadsbesluit eruit — link naar de verordening zelf.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/37e4fd08-333d-4616-9304-e15b9444f657?documentId=9543cef6-fcdf-4e83-b61d-4c23d4b82945&agendaItemId=36195d79-8757-4165-9b23-bcb9944b5d19',
+    nieuwLink: null,
+    opmerking_default: 'Collega: "raadsbesluit eruit". Nieuwe link ontbreekt — navragen.'
+  },
+  {
+    id: 'sd-04', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Regiovisie Aanpak Huiselijk Geweld 2026',
+    actie: 'link_wijzigen',
+    toelichting: 'Raadsvoorstel verwijderen, wijzigen in bijlage 1.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/a68138b4-d094-4124-8798-4b0d774c009b?documentId=c349b273-ff0c-4199-a92e-638f051c7953&agendaItemId=994549eb-e2ff-48d7-abb8-c9acd3d9d4d7',
+    nieuwLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/a68138b4-d094-4124-8798-4b0d774c009b?documentId=e34891e9-c105-4d18-9d9b-e2a9b6d66806&agendaItemId=994549eb-e2ff-48d7-abb8-c9acd3d9d4d7'
+  },
+  {
+    id: 'sd-05', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Wijziging Verordening op het burgerinitiatief',
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020'
+  },
+  {
+    id: 'sd-06', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: "Burgerinitiatief 'Vernieuwing Accommodaties Kerkehout'",
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019'
+  },
+  {
+    id: 'sd-07', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Burgerinitiatief Kerkehout',
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020'
+  },
+  {
+    id: 'sd-08', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Reactie op burgerinitiatief wijkpark Wassenaar-noord',
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/55c3d3ec-054f-4773-9e25-29eee67b2454?documentId=a6668165-fbd7-4094-b330-1032af3073c2&agendaItemId=3f5f4c28-5daa-4911-a3b1-2c01ec5c6b89'
+  },
+  {
+    id: 'sd-09', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: "Burgerinitiatief 'Woningbouwproject Twee Stokstaartjes'",
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019'
+  },
+  {
+    id: 'sd-10', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Beleidsplan inburgering Wassenaar',
+    actie: 'link_wijzigen',
+    toelichting: 'Agenda commissievergadering verwijderen, aanpassen naar document.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021',
+    nieuwLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/d2f300f0-a707-4f03-98c4-aa913038632e?documentId=8ff9ac1c-99c3-4de8-bee4-2a2e3349fa91&agendaItemId=8d7226ad-285a-4419-a6e3-8ba4504ebbae'
+  },
+  {
+    id: 'sd-11', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Verordening Inburgering Wassenaar 2022',
+    actie: 'link_wijzigen',
+    toelichting: 'Raadsbesluit verwijderen, link naar lokaleregelgeving.overheid.nl.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/a1e0df82-3491-46de-8cc7-138629de9708?documentId=c9694e2e-5b6b-48d3-bc59-10e04fa7da65&agendaItemId=426ad8f5-59f7-456b-a375-744bf77c9685',
+    nieuwLink: 'https://lokaleregelgeving.overheid.nl/CVDR683759/1'
+  },
+  {
+    id: 'sd-12', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Startnotitie Lokale Inclusie Agenda Wassenaar',
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/67715b87-28ff-4ba5-b701-aae4bf903aa0?documentId=48be9c24-f7cb-40d3-8629-e90105aedf88&agendaItemId=90b884fc-ce36-485c-be5d-004d65ec0060'
+  },
+  {
+    id: 'sd-13', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Nota Internationals',
+    actie: 'link_wijzigen',
+    toelichting: 'Link wijzigen naar juiste document.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/55c3d3ec-054f-4773-9e25-29eee67b2454?documentId=63d57462-b5b2-4b7d-87e7-c39175e246cf&agendaItemId=bc938db7-cafb-45ce-8274-9407c09693c6',
+    nieuwLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/55c3d3ec-054f-4773-9e25-29eee67b2454?documentId=696006b0-7ff3-4966-9211-8c9f6d05b918&agendaItemId=bc938db7-cafb-45ce-8274-9407c09693c6'
+  },
+  {
+    id: 'sd-14', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Verordening antidiscriminatievoorziening gemeente Wassenaar',
+    actie: 'link_wijzigen',
+    toelichting: 'Link wijzigen naar lokaleregelgeving.overheid.nl.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Calendar',
+    nieuwLink: 'https://lokaleregelgeving.overheid.nl/CVDR757453/1'
+  },
+  {
+    id: 'sd-15', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Schuldhulpverlening-items (2 stuks)',
+    actie: 'verplaatsen',
+    toelichting: 'Alles van schuldhulpverlening verplaatsen van 6.1 naar 6.3.',
+    nieuwLocatie: '6.3 - 6.5'
+  },
+  {
+    id: 'sd-16', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Vaststellen beleidsnota schuldhulpverlening 2025-2028',
+    actie: 'link_wijzigen',
+    toelichting: 'Link wijzigen (en verplaatsen naar 6.3).',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/271db830-fe76-477f-ac64-1d68e329da63?documentId=3c07326e-7102-4eb3-932c-023cce4d3185&agendaItemId=f537e129-28d2-4cea-8f4c-128ca0037086',
+    nieuwLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/271db830-fe76-477f-ac64-1d68e329da63?documentId=8992182e-7fc7-4bdf-9874-f3ca5df4a8b1&agendaItemId=f537e129-28d2-4cea-8f4c-128ca0037086',
+    nieuwLocatie: '6.3 - 6.5'
+  },
+  {
+    id: 'sd-17', taakveld: '6.1', taakveldNaam: '6.1 Samenkracht en burgerparticipatie',
+    document: 'Raadsbesluit Verordening Schuldhulpverlening Wassenaar 2021',
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021'
+  },
+  {
+    id: 'sd-18', taakveld: '6.3', taakveldNaam: '6.3 Werk en inkomen',
+    document: 'Re-integratie- en participatieverordening 2023',
+    actie: 'link_wijzigen',
+    toelichting: 'Link wijzigen naar lokaleregelgeving.overheid.nl.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/d338a903-674a-46c6-8d0a-2e2745322486?documentId=9637b51a-17ae-4509-b272-3a32bcd9009c&agendaItemId=0df627bf-b311-47ad-85a9-dcfd8085792c',
+    nieuwLink: 'https://lokaleregelgeving.overheid.nl/CVDR714007/1'
+  },
+  {
+    id: 'sd-19', taakveld: '6.3', taakveldNaam: '6.3 Werk en inkomen',
+    document: 'Beleidsplan re-integratie- en participatie gemeente Wassenaar',
+    actie: 'link_wijzigen',
+    toelichting: 'Link wijzigen naar juiste document.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/8b213f81-c9f8-4870-865e-cdd42cf0b09a?documentId=6b69e949-b9d7-4138-85b6-0b428d282738&agendaItemId=851d5e9e-f1fa-41b9-94dc-229cc6bc48a6',
+    nieuwLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/8b213f81-c9f8-4870-865e-cdd42cf0b09a?documentId=356b07de-affb-47eb-96c0-0f6ebe329580&agendaItemId=851d5e9e-f1fa-41b9-94dc-229cc6bc48a6'
+  },
+  {
+    id: 'sd-20', taakveld: '6.3', taakveldNaam: '6.3 Werk en inkomen',
+    document: 'Verordening kwijtschelding gemeentelijke belastingen Wassenaar 2026',
+    actie: 'link_wijzigen',
+    toelichting: 'Link wijzigen naar juiste document.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/1f7d2571-e7fb-4ddf-a989-ecfb5a3f92e8?documentId=57b7fa4c-ddc4-45ad-b7f0-60c828f01f9b&agendaItemId=0ed97f25-b533-4c6a-a26f-7b3a4ad97914',
+    nieuwLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/1f7d2571-e7fb-4ddf-a989-ecfb5a3f92e8?documentId=5cd99a33-66b5-4ac4-a6c1-499e311f9f03&agendaItemId=e5929d69-9697-41d4-b2fa-10eb6731e462'
+  },
+  {
+    id: 'sd-21', taakveld: '6.3', taakveldNaam: '6.3 Werk en inkomen',
+    document: 'Toepassen verruimde vermogensnorm bij kwijtschelding lokale belastingen',
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/740c48f5-0e49-4d82-b0c9-b114c1340d30?documentId=3ff6ffa9-d79b-423b-8405-09b4b11dcd4d&agendaItemId=4f48d3b1-62a5-4aa7-b238-6680e8980e37'
+  },
+  {
+    id: 'sd-22', taakveld: '6.3', taakveldNaam: '6.3 Werk en inkomen',
+    document: 'Rapport Rekenkamercommissie Minimabeleid',
+    actie: 'link_wijzigen',
+    toelichting: 'Link wijzigen naar juiste document.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/d338a903-674a-46c6-8d0a-2e2745322486?documentId=e8a6a7db-b603-4c08-8b34-6a6ec1e97c88&agendaItemId=60c7e8a7-99e3-44d1-8a52-8e7a3c2b1a67',
+    nieuwLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/d338a903-674a-46c6-8d0a-2e2745322486?documentId=09705f6e-8080-4c42-b9af-63d3889919a4&agendaItemId=72e2e265-f4c5-4e81-8cf0-4b3ffd2dfb87'
+  },
+  {
+    id: 'sd-23', taakveld: '6.3', taakveldNaam: '6.3 Werk en inkomen',
+    document: 'Dynamisch Minimabeleid Wassenaar 2024',
+    actie: 'link_wijzigen',
+    toelichting: 'Link wijzigen naar juiste document.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/55c3d3ec-054f-4773-9e25-29eee67b2454?documentId=82a9578e-d672-41c2-ab24-78a317a87ed8&agendaItemId=1a9d9218-8820-4285-9ede-946ad82d86e8',
+    nieuwLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/55c3d3ec-054f-4773-9e25-29eee67b2454?documentId=82a9578e-d672-41c2-ab24-78a317a87ed8&agendaItemId=1a9d9218-8820-4285-9ede-946ad82d86e8#'
+  },
+  {
+    id: 'sd-24', taakveld: '6.60', taakveldNaam: '6.60 Wmo',
+    document: "Regiovisie beschermd Wonen en maatschappelijke opvang 2022-2025",
+    actie: 'link_wijzigen',
+    toelichting: "Link aanpassen naar juist document ('Samen bouwen aan maatschappelijk herstel').",
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/f72bff25-4c77-4eb1-9b1c-2a87d82ee9c3',
+    nieuwLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/6afc2f69-9753-4459-9f00-521e285489dc?documentId=d85a90bd-790e-457e-a490-45fbfa873a58&agendaItemId=08ebef84-6fd6-4004-9b07-705f2c301ab1'
+  },
+  {
+    id: 'sd-25', taakveld: '6.60', taakveldNaam: '6.60 Wmo',
+    document: 'Verordening leerlingenvervoer 2025',
+    actie: 'verplaatsen',
+    toelichting: 'Verplaatsen van 6.60 (Wmo) naar 6.7 (Jeugd) en link aanpassen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=eec09f18-31bb-4477-9559-7a73cad358ee&agendaItemId=fea9db3b-6a30-47e4-8337-629eaeca711b',
+    nieuwLink: 'https://lokaleregelgeving.overheid.nl/CVDR745567/1',
+    nieuwLocatie: '6.7 - 6.9'
+  },
+  {
+    id: 'sd-26', taakveld: '6.60', taakveldNaam: '6.60 Wmo',
+    document: 'Rekenkamercommissie: Rapport onderzoek Toegang tot voorzieningen Wmo',
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019'
+  },
+  {
+    id: 'sd-27', taakveld: '6.60', taakveldNaam: '6.60 Wmo',
+    document: 'Kostenbesparende maatregelen Wmo',
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/ce0a8157-c4ef-480a-ad55-8e29331fadda'
+  },
+  {
+    id: 'sd-28', taakveld: '6.7', taakveldNaam: '6.7 Jeugd',
+    document: 'Verordening Jeugdhulp 2025',
+    actie: 'link_wijzigen',
+    toelichting: 'Link aanpassen naar lokaleregelgeving.overheid.nl.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/3e13ce7b-2972-4a14-9e63-5f8a03b8dde6?documentId=041d458f-7873-4b2a-9db1-88a41773cf24&agendaItemId=fa3bbe2f-569c-4bf4-b213-a5893d4c89d8',
+    nieuwLink: 'https://lokaleregelgeving.overheid.nl/CVDR749873/1'
+  },
+  {
+    id: 'sd-29', taakveld: '6.7', taakveldNaam: '6.7 Jeugd',
+    document: 'Nieuw inkoopkader jeugdhulp GR SbJH',
+    actie: 'link_wijzigen',
+    toelichting: 'Link aanpassen naar juist document.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/37e4fd08-333d-4616-9304-e15b9444f657?documentId=d4914c7b-9e25-4b06-be74-d1b345a9aa48&agendaItemId=95316a18-f7b8-483a-a252-3d491f042373',
+    nieuwLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/37e4fd08-333d-4616-9304-e15b9444f657?documentId=96777f2a-640c-432c-94e2-ffd9f8825445&agendaItemId=95316a18-f7b8-483a-a252-3d491f042373'
+  },
+  {
+    id: 'sd-30', taakveld: '6.7', taakveldNaam: '6.7 Jeugd',
+    document: 'Regiovisie Jeugdhulp Haaglanden',
+    actie: 'link_wijzigen',
+    toelichting: 'Link aanpassen naar externe bron.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/ce0a8157-c4ef-480a-ad55-8e29331fadda',
+    nieuwLink: 'https://jeugdhulphaaglanden.nl/regionale+bibliotheek/handlerdownloadfiles.ashx?idnv=2184098'
+  },
+  {
+    id: 'sd-31', taakveld: '6.7', taakveldNaam: '6.7 Jeugd',
+    document: 'Beleidsregels Jeugdhulp',
+    actie: 'opmerking',
+    toelichting: 'Worden herzien — geen actie nu, later opnieuw beoordelen.',
+    opmerking_default: 'Collega: "worden herzien". Afwachten.'
+  },
+  {
+    id: 'sd-32', taakveld: '6.7', taakveldNaam: '6.7 Jeugd',
+    document: 'Zienswijze ontwerpbegroting 2026 GR SbJH',
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/756adab0-f3ef-4298-87db-32c3a693e4b3?documentId=62fce322-a3c8-4bbb-a814-58bb222fb5e6&agendaItemId=49e2db46-f254-43fc-a249-fca43f3ee87f'
+  },
+  {
+    id: 'sd-33', taakveld: '6.7', taakveldNaam: '6.7 Jeugd',
+    document: 'Kostenbesparende maatregelen Jeugdhulp',
+    actie: 'verwijderen',
+    toelichting: 'Verwijderen.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021'
+  },
+  {
+    id: 'sd-34', taakveld: '6.7', taakveldNaam: '6.7 Jeugd',
+    document: 'Gemeenschappelijke regeling Servicebureau Jeugdhulp Haaglanden',
+    actie: 'link_wijzigen',
+    toelichting: 'Link aanpassen naar lokaleregelgeving.overheid.nl.',
+    huidigLink: 'https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Document/87b901da-cc1c-46b4-9717-b5640708acc3?documentId=b0e26561-27b6-4759-8230-391657f1d83e&agendaItemId=1a0c84d0-c64d-45d3-a106-08dbc838a988',
+    nieuwLink: null,
+    opmerking_default: 'Collega noemt "Lokale wet- en regelgeving" — exacte URL navragen.'
+  }
+];
+
+const ACTIE_LABELS = {
+    link_wijzigen: { label: 'Link wijzigen', css: 'badge--link' },
+    verwijderen: { label: 'Verwijderen', css: 'badge--verwijderen' },
+    verplaatsen: { label: 'Verplaatsen', css: 'badge--verplaatsen' },
+    toevoegen: { label: 'Toevoegen', css: 'badge--toevoegen' },
+    opmerking: { label: 'Opmerking', css: 'badge--opmerking' }
+};
+
+const STORAGE_KEY = 'werklijst-sd-status';
+
+function loadStatus() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+    catch { return {}; }
+}
+function saveStatus(data) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+let statusData = loadStatus();
+
+function getStatus(id) { return statusData[id]?.status || 'in_behandeling'; }
+function getOpmerking(id) {
+    if (statusData[id]?.opmerking != null) return statusData[id].opmerking;
+    const m = MUTATIES.find(x => x.id === id);
+    return m?.opmerking_default || '';
+}
+
+function updateStats() {
+    const counts = { totaal: MUTATIES.length, in_behandeling: 0, goedgekeurd: 0, afgekeurd: 0, verwerkt: 0 };
+    MUTATIES.forEach(m => { counts[getStatus(m.id)]++; });
+    document.getElementById('stats').innerHTML =
+        `<span class="stat stat--totaal">${counts.totaal} totaal</span>` +
+        `<span class="stat stat--behandeling">${counts.in_behandeling} in behandeling</span>` +
+        `<span class="stat stat--goedgekeurd">${counts.goedgekeurd} goedgekeurd</span>` +
+        `<span class="stat stat--afgekeurd">${counts.afgekeurd} afgekeurd</span>` +
+        `<span class="stat stat--verwerkt">${counts.verwerkt} verwerkt</span>`;
+}
+
+function kortUrl(url) {
+    if (!url) return '(geen)';
+    try {
+        const u = new URL(url);
+        const p = u.pathname + u.search;
+        return p.length > 60 ? u.hostname + p.substring(0, 57) + '...' : u.hostname + p;
+    } catch { return url.substring(0, 70) + '...'; }
+}
+
+function renderKaart(m) {
+    const a = ACTIE_LABELS[m.actie] || ACTIE_LABELS.opmerking;
+    const st = getStatus(m.id);
+    const opm = getOpmerking(m.id);
+    let details = '';
+    if (m.huidigLink) {
+        details += `<dt>Huidige link:</dt><dd><a href="${m.huidigLink}" target="_blank" rel="noopener" class="${m.actie === 'verwijderen' ? 'link-oud' : ''}">${kortUrl(m.huidigLink)}</a></dd>`;
+    }
+    if (m.nieuwLink) {
+        details += `<dt>Nieuwe link:</dt><dd><a href="${m.nieuwLink}" target="_blank" rel="noopener" class="link-nieuw">${kortUrl(m.nieuwLink)}</a></dd>`;
+    }
+    if (m.nieuwLocatie) {
+        details += `<dt>Verplaatsen naar:</dt><dd class="link-nieuw">${m.nieuwLocatie}</dd>`;
+    }
+    details += `<dt>Toelichting collega:</dt><dd>${m.toelichting}</dd>`;
+
+    return `<div class="kaart" id="kaart-${m.id}">
+        <div class="kaart-kop">
+            <span class="kaart-titel">${m.document}</span>
+            <span class="badge ${a.css}">${a.label}</span>
+        </div>
+        <dl class="kaart-detail">${details}</dl>
+        <div class="kaart-acties">
+            <select data-id="${m.id}" class="status--${st}" onchange="wijzigStatus(this)">
+                <option value="in_behandeling" ${st==='in_behandeling'?'selected':''}>In behandeling</option>
+                <option value="goedgekeurd" ${st==='goedgekeurd'?'selected':''}>Goedgekeurd</option>
+                <option value="afgekeurd" ${st==='afgekeurd'?'selected':''}>Afgekeurd</option>
+                <option value="verwerkt" ${st==='verwerkt'?'selected':''}>Verwerkt</option>
+            </select>
+            <input type="text" class="opmerking-input" data-id="${m.id}" placeholder="Opmerking..." value="${opm.replace(/"/g,'&quot;')}" onchange="wijzigOpmerking(this)">
+        </div>
+    </div>`;
+}
+
+function render() {
+    const groepen = {};
+    MUTATIES.forEach(m => {
+        const key = m.taakveldNaam;
+        if (!groepen[key]) groepen[key] = [];
+        groepen[key].push(m);
+    });
+    let html = '';
+    for (const [naam, items] of Object.entries(groepen)) {
+        html += `<div class="taakveld-groep"><h2 class="taakveld-kop">${naam}</h2>`;
+        items.forEach(m => { html += renderKaart(m); });
+        html += `</div>`;
+    }
+    document.getElementById('werklijst').innerHTML = html;
+    updateStats();
+}
+
+function wijzigStatus(el) {
+    const id = el.dataset.id;
+    const val = el.value;
+    if (!statusData[id]) statusData[id] = {};
+    statusData[id].status = val;
+    el.className = 'status--' + val;
+    saveStatus(statusData);
+    updateStats();
+}
+
+function wijzigOpmerking(el) {
+    const id = el.dataset.id;
+    if (!statusData[id]) statusData[id] = {};
+    statusData[id].opmerking = el.value;
+    saveStatus(statusData);
+}
+
+function zetAlles(status) {
+    MUTATIES.forEach(m => {
+        if (!statusData[m.id]) statusData[m.id] = {};
+        statusData[m.id].status = status;
+    });
+    saveStatus(statusData);
+    render();
+}
+
+function exportCSV() {
+    const header = 'ID;Taakveld;Document;Actie;Status;Huidige link;Nieuwe link;Verplaatsen naar;Toelichting;Opmerking\n';
+    const rows = MUTATIES.map(m => {
+        const st = getStatus(m.id);
+        const opm = getOpmerking(m.id);
+        return [m.id, m.taakveld, `"${m.document}"`, m.actie, st,
+            m.huidigLink || '', m.nieuwLink || '', m.nieuwLocatie || '',
+            `"${m.toelichting}"`, `"${opm}"`].join(';');
+    });
+    const csv = header + rows.join('\n');
+    const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'werklijst-sociaal-domein.csv';
+    a.click();
+}
+
+render();
+</script>
+</body>
+</html>

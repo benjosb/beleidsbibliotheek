@@ -8,13 +8,17 @@
 </head>
 <body id="top">
   <a href="#top" class="naar-boven" title="Naar boven">↑ Naar boven</a>
-  <p><a href="/verkiezingen/" style="color:#2c5282;text-decoration:none;">← Terug naar overzicht</a></p>
+
+  <div class="betrouwbaarheid-banner betrouwbaarheid-banner--groen">
+  <span class="betrouwbaarheid-banner-icon">&#9679;</span>
+  <div><strong>Feitelijk</strong> Deze pagina bevat directe citaten uit de verkiezingsprogramma's over de ambtelijke organisatie. Verifieerbaar tegen de oorspronkelijke bronteksten.</div>
+</div>
     <form class="zoek-form" action="zoek.html" method="get" role="search">
     <input type="search" name="q" placeholder="Zoek op trefwoord…" class="zoek-input" aria-label="Zoek op trefwoord">
     <button type="submit" class="zoek-knop">Zoek</button>
   </form>
     <nav class="subpage-nav" aria-label="Secties">
-    <a href="index.html" class="subnav-link subnav-overzicht">← Overzicht</a> · <a href="zoek.html" class="subnav-link">Zoeken</a> · <a href="samenvatting.html" class="subnav-link">Samenvatting</a> · <a href="Chat_history_Wassenaar_2026.html" class="subnav-link">Chat history</a> · <a href="issues.html" class="subnav-link">Issues</a> · <a href="programmas.html" class="subnav-link">Programma&#x27;s</a> · <a href="themas.html" class="subnav-link">Thema&#x27;s</a> · <a href="raakvlakken.html" class="subnav-link">Raakvlakken</a> · <span class="subnav-current">Ambt. organisatie</span> · <a href="taakveld.html" class="subnav-link">Per taakveld</a> · <a href="spectrum.html" class="subnav-link">Spectrum</a> · <a href="partijen.html" class="subnav-link">Volledige programma&#x27;s</a>
+    <a href="index.html" class="subnav-link subnav-overzicht">← Overzicht</a> · <a href="zoek.html" class="subnav-link">Zoeken</a> · <a href="samenvatting.html" class="subnav-link">Samenvatting</a> · <a href="issues.html" class="subnav-link">Issues</a> · <a href="programmas.html" class="subnav-link">Programma&#x27;s</a> · <a href="themas.html" class="subnav-link">Thema&#x27;s</a> · <a href="netwerk.html" class="subnav-link">Netwerk</a> · <span class="subnav-current">Ambt. organisatie</span> · <a href="taakveld.html" class="subnav-link">Per taakveld</a> · <a href="spectrum.html" class="subnav-link">Spectrum</a> · <a href="partijen.html" class="subnav-link">Volledige programma&#x27;s</a>
   </nav>
     <section class="sectie">
     <h2>Ambtelijke organisatie</h2>
@@ -369,6 +373,30 @@ ondermijning en (drugs)criminaliteit te herkennen en aan te pakken.</p>
 
   <p class="bron">Bron: BBV-taakvelden via Findo.nl. Data: verkiezingsprogrammas_database.json</p>
   </section>
+  <script>
+(function(){
+  document.querySelectorAll('.ambtelijk-kaart').forEach(function(kaart){
+    var tekst = kaart.querySelector('.ambtelijk-kaart-tekst');
+    var partijLink = kaart.querySelector('.partij-link');
+    if (!tekst || !partijLink) return;
+
+    var href = partijLink.getAttribute('href');
+    var hash = href.split('#')[1] || '';
+    var woorden = tekst.textContent.trim().split(/\s+/).slice(0, 6).join(' ')
+      .replace(/[.,;:!?]+$/, '');
+
+    var deepHref = 'partijen.html?zoek=' + encodeURIComponent(woorden) +
+      (hash ? '#' + hash : '');
+
+    var link = document.createElement('a');
+    link.href = deepHref;
+    link.className = 'ambtelijk-kaart-zoek';
+    link.textContent = '→ zoek in brontekst';
+    link.title = 'Zoek "' + woorden + '" in het volledige programma';
+    tekst.insertAdjacentElement('afterend', link);
+  });
+})();
+  </script>
   <footer class="disclaimer">
     <strong>Over deze analyse</strong> — Dit overzicht is geautomatiseerd samengesteld. De bronprogramma's en uw eigen oordeel blijven leidend. AI ondersteunt, maar vervangt geen menselijke beoordeling.
   </footer>

@@ -18,3 +18,11 @@ pdfs/*.pdf
 # OS
 .DS_Store
 Thumbs.db
+
+# Credentials (NOOIT committen)
+.env.prod
+
+# Bezoekteller (first-party stats op productie-server)
+wassenaar/stats/data/*.sqlite
+wassenaar/stats/data/salt.bin
+.env.mail

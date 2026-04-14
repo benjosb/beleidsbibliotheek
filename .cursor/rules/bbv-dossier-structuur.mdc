@@ -1,0 +1,54 @@
+# BBV Dossierstructuur — BeleidsBibliotheek Wassenaar
+
+## Hiërarchie
+
+De BeleidsBibliotheek is opgebouwd rond de BBV-hoofdstukindeling (0–8).
+Elk hoofdstuk heeft twee niveaus:
+
+### Moedertegel (hoofdstukniveau)
+Wat de gebruiker ziet bij klik op bijv. "8. Volkshuisvesting, leefomgeving en stedelijke vernieuwing":
+
+1. **OD-samenvatting** — Tekst uit het overdrachtsdossier raadsverkiezingen 2026 (`OD_SAMENVATTING_PER_BBV`). Bevat samenvattende alinea's. Geen documentenlijst in de OD-tekst zelf.
+2. **Beleidsnota's en beleidsdocumenten** (`BELEIDSNOTA_PER_HOOFDSTUK_BBV[n]`) — Alleen **strategische, overkoepelende** documenten: visies, kadernota's, begrotingen, beleidsplannen. Voorbeelden: Omgevingsvisie, Nota Woonbeleid, Woonvisie, Beheervisie Openbare Ruimte.
+
+### Kindtegel (taakveldniveau)
+Wat de gebruiker ziet bij klik op bijv. "8.1 Ruimte en leefomgeving":
+
+1. **OD-samenvatting verdwijnt** — `bbvHoofdstukSamenvatting` wordt verborgen.
+2. **Taakveld-context** verschijnt — Iv3-omschrijving van het taakveld.
+3. **Beleidsnota's en beleidsdocumenten** (`BELEIDSNOTA_PER_TAAKVELD['8.1']`) — **Specifieke** documenten voor dat taakveld: verordeningen, beleidsregels, raadsbesluiten, zienswijzen, GR-wijzigingen. Bron: Excel van de controller (`Beleidsbibliotheek_eh_tot2025.xlsx`).
+
+### Terugnavigatie
+- **Hoofdstuktitel** (bijv. "8. Volkshuisvesting...") is klikbaar → reset subFilter, toont weer moedertegel.
+- **"← Terug"** knop → terug naar het overzicht met alle 9 tegels.
+
+## Datastructuren in app.js
+
+| Structuur | Niveau | Inhoud |
+|-----------|--------|--------|
+| `OD_SAMENVATTING_PER_BBV[n]` | Moedertegel | HTML-tekst overdrachtsdossier |
+| `BELEIDSNOTA_PER_HOOFDSTUK_BBV[n]` | Moedertegel | Strategische beleidsdocumenten (array of objects) |
+| `BELEIDSNOTA_PER_TAAKVELD['n.x']` | Kindtegel | Specifieke beleidsdocumenten per taakveld |
+| `BBV_TAAKVELDEN_PER_HOOFDSTUK[n]` | Kindtegels | Definitie van beschikbare taakvelden per hoofdstuk |
+
+## Weergavelogica (showBeleidsnotaBlokBBV)
+
+```
+als taakveldCode actief:
+    toon BELEIDSNOTA_PER_TAAKVELD[taakveldCode]
+    verberg OD-samenvatting
+anders (hoofdstukniveau):
+    toon BELEIDSNOTA_PER_HOOFDSTUK_BBV[bbvIndex]
+    toon OD-samenvatting
+```
+
+## Principes
+
+1. **Strategisch = moedertegel, specifiek = kindtegel.** Visies, kadernota's en overkoepelende beleidsplannen staan op hoofdstukniveau. Verordeningen, besluiten, beschikkingen staan op taakveldniveau.
+2. **Dubbelingen zijn toegestaan.** Als een document in twee categorieën past, mag het op beide plekken staan (bijv. Nota Woonbeleid op moedertegel én onder 8.3).
+3. **Geen operationele vervuiling.** Bestemmingsplanbesluiten, individuele vergunningen en vergelijkbare operationele items worden niet opgenomen.
+4. **Excel van de controller is leidend** voor de taakveld-toewijzing. Bestandsnaam: `Beleidsbibliotheek_eh_tot2025.xlsx`. Matching met iBabs-links via `data.js`.
+5. **Links moeten werken.** Elke hyperlink moet verwijzen naar een werkend iBabs-document, agenda of kalender. Bij oudere items (pre-2022) zijn agenda- of kalenderniveau-links acceptabel als fallback.
+
+## Titel
+Het blok heet **"Beleidsnota's en beleidsdocumenten"** (niet "losse stukken").

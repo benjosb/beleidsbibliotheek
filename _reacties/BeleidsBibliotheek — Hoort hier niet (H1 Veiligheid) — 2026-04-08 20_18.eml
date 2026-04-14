@@ -1,0 +1,259 @@
+Return-path: <EHiep@wassenaar.nl>
+Original-recipient: rfc822;dickbraam@me.com
+Received: from p00-icloudmta-smtpin-us-west-2a-100-percent-0 by p175-mailgateway-smtp-55ff75dff5-c76nt (mailgateway 2612B123)
+	with SMTP id f8dee253-8e89-48e4-9c48-07f4199b4b90 
+	for <dickbraam@me.com>; Wed, 8 Apr 2026 18:19:11 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: f8dee253-8e89-48e4-9c48-07f4199b4b90
+Received: from DB3PR0202CU003.outbound.protection.outlook.com (mail-northeuropeazon11020075.outbound.protection.outlook.com [52.101.84.75])
+	by p00-icloudmta-smtpin-us-west-2a-100-percent-0 (Postfix) with ESMTPS id 29538C0008A
+	for <dickbraam@me.com>; Wed, 08 Apr 2026 18:19:05 +0000 (UTC)
+X-ICL-Info: GAtbRVYDBVFFSlVHSgMFUFUKE0oWX1gHVQoPB0UFBExESVdZQAQYVUBZAxNFdX4LEAkmABlDRQcbGAcFVl5aQhMdWwAZQ0UHGxgHBVZeWkIHGlsTEVNdAAcYBxo4XVNMFhYLVxBVWg1IPSREKGIGUEVLJSJIAAVMGgwSFRdFWAZbCRQYDFVVFhwWCFkXRUIOGhYNWRtfW0IFDRRKFVFfDlgXCQUMWFMXBxYWEhlKWQxESFZFSAABV1sWEwMaX0MMEVcWBRdEUwEBEAkZVl9DFhkWCRxWU1kPVR0CSg9RRREQFwcWCh5YDlUUDxNFDHI3RylXTkt9dFBFTFZCQAl1Jkw9JU4+AXVXQEFWTkwABCFNTCRFOHRjUCVIX0Q1cgRSQElIMi1iZlNMSkgnKn9yTDosMjs3f31MNjYrSQ==
+X-ICL-Score: 2.33303302332
+Authentication-Results: bimi.icloud.com; bimi=none
+X-ARC-Info: policy=pass; arc=pass; id=mx.microsoft.com 1; r1=1; r2=1
+Authentication-Results: arc.icloud.com; arc=pass
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=wassenaar.nl
+X-DMARC-Policy: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc_report@wassenaar.nl,mailto:rapportages@dmarc.ibdgemeenten.nl; ruf=mailto:dmarc_report@wassenaar.nl; fo=1; adkim=r; aspf=r
+X-DMARC-Info: pass=pass; dmarc-policy=reject; s=r1; d=r1; pdomain=wassenaar.nl
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=wassenaar.nl header.i=@wassenaar.nl header.b=HgIX8jkq
+Received-SPF: pass (spf.icloud.com: domain of EHiep@wassenaar.nl designates 52.101.84.75 as permitted sender) receiver=spf.icloud.com; client-ip=52.101.84.75; helo=DB3PR0202CU003.outbound.protection.outlook.com; envelope-from=EHiep@wassenaar.nl
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of EHiep@wassenaar.nl designates 52.101.84.75 as permitted sender) smtp.mailfrom=EHiep@wassenaar.nl
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=KiKXMbM/c3LxJOBSLGGoTwKqh7cZFo+DoUs/vqU7LsTLZHfm+PqN6+O5+yWpwSJqEOfL2weA4S6KZBw5X33mqPLk/9yt1JwHo50qvCYiYfmPS9wF6+82GfjGcVAjgp92EuwKBuPQgC7CRAbr3GG5UJyZMkZtpm/0jGka3zRPpciRopPYhODqbVj3WlRQaOpR6G0LRXYd79bQ61zMc+j3SlIF4MU6K5Xwkwm97sVKUwRG0qP32Goi6FzCWXriFwH1SEw490cARcUdQBZpjCiCQXH3JOf0YbBF5T6roIW+FlX3+Y59DwOOaT4Y587V8HLyLxvJyNMBPAzHQyVj5diJQQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=NSi1dtls5F9yhISppNNxST4yPbAb6qWLP2Da5KhHbtM=;
+ b=BD5Ug1820R5UN0GPNCRBHD0rcb8ENhWSFmAfMhjhTWFIM2KuYlY+NdhLw4sJUoM0uobCZ1+nN2La0EUC7Qme1jidzPkT+XWQZyFKU+h9dlzqJw/XRu9n0KdJiRrUNwO/NRI+8qUlRJ/fmYgN+lw6+1ZWrPxdi+p6Sv4fMByKGQYVe5Re4Sr7ZHKmYvyjgCXiKk8uW7a9H5zOq7ILLV3JDBrUrpu+/Eolvu5weLPtvPCl2dLsQuIfr5Ae3g7KCbPAkuMQeQqMbbhPmCUZUxjF2kfjd+u3odq8AhJNbB4V042SCVUpt6fUGDU0KxVasuvDF6+maRCoxW8WszH26TxpdQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=wassenaar.nl; dmarc=pass action=none header.from=wassenaar.nl;
+ dkim=pass header.d=wassenaar.nl; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wassenaar.nl;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=NSi1dtls5F9yhISppNNxST4yPbAb6qWLP2Da5KhHbtM=;
+ b=HgIX8jkqt6t21bBQ90pXz9lGQ4I2NkqYFYiY9p38am5AvNmqtdlNMrx9R8GJA8DvJonrgZVIN8RI0n9Fg3PAcujJ6mQulKvrfvUlROnlhBvKQMREkNV4sHY+W6jMMCEyoD2Xwjh/NIfNz+yvGjImSugMFyLqBcQ8+sZDRQZ+1fc=
+Received: from DU2P193MB2050.EURP193.PROD.OUTLOOK.COM (2603:10a6:10:2f6::10)
+ by DB9P193MB3042.EURP193.PROD.OUTLOOK.COM (2603:10a6:10:5fd::20) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9769.17; Wed, 8 Apr
+ 2026 18:19:02 +0000
+Received: from DU2P193MB2050.EURP193.PROD.OUTLOOK.COM
+ ([fe80::94d3:3aec:566a:99ca]) by DU2P193MB2050.EURP193.PROD.OUTLOOK.COM
+ ([fe80::94d3:3aec:566a:99ca%4]) with mapi id 15.20.9769.014; Wed, 8 Apr 2026
+ 18:19:02 +0000
+From: Erwin Hiep <EHiep@wassenaar.nl>
+To: Erwin Hiep <EHiep@wassenaar.nl>, Mechteld Heijting
+	<Mheijting@wassenaar.nl>, "dickbraam@me.com" <dickbraam@me.com>, Dick Braam
+	<DBraam@wassenaar.nl>
+Subject:
+ =?big5?B?QmVsZWlkc0JpYmxpb3RoZWVrIKFYIEhvb3J0IGhpZXIgbmlldCAoSDEgVmVpbGln?=
+ =?big5?B?aGVpZCkgoVggMjAyNi0wNC0wOCAyMDoxOA==?=
+Thread-Topic:
+ =?big5?B?QmVsZWlkc0JpYmxpb3RoZWVrIKFYIEhvb3J0IGhpZXIgbmlldCAoSDEgVmVpbGln?=
+ =?big5?B?aGVpZCkgoVggMjAyNi0wNC0wOCAyMDoxOA==?=
+Thread-Index: AdzHhCteEe66+rneT72wbJYfAXMJ9g==
+Date: Wed, 8 Apr 2026 18:19:02 +0000
+Message-ID:
+ <DU2P193MB2050589CD9DC9F1C55809402C85B2@DU2P193MB2050.EURP193.PROD.OUTLOOK.COM>
+Accept-Language: nl-NL, en-US
+Content-Language: nl-NL
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-zorgmail-nta-outlook-addin: not-default
+x-processedbytemplafy: true
+x-templafyemailsigvstoversion: 9.26.0.0
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: DU2P193MB2050:EE_|DB9P193MB3042:EE_
+x-ms-office365-filtering-correlation-id: 58d9dcea-9a61-4fc3-0ea6-08de959b4fa0
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|1800799024|10070799003|366016|376014|38070700021|13003099007|8096899003|18002099003|56012099003;
+x-microsoft-antispam-message-info:
+ dAFARRda/wnJqYHyarxE9YdmWFkt/mf67FZcc6PJbmRdGkj7B0xyAg0Q0rInRPbD/Ow0FXF5Vop0GYICZLyJYqdRiBame/mb7AznZFFtVckqd3NP5ZeNwq2pZbFkZE3QpK7h+g4escFlLzl4a0o6Obl3PsiLY5N19K8uytXhkY1iR8aPqQefGTlBut7/P1CdjmVmJrbx3g1fV/VaTRbD63f6nV2JYK+UeHeD4o6icrZjUJN1Td3F1VHbox2wYUWXWZPqppvFLrgHgQqJuJLxknfizZeMuMf2835O/W/wBv8fK9dhXf1oWx7XsHlc4xo8wS6iqMbnd7zM16lIig4Pj3R8oJyxRB2mmcaOejco+2fQGtZDUWki/Cy8tfco/BpZA4+Pp9+UzdWE3O8nOLQKdOoOJz70Mt7jzW5jW2OjWK0hkJLMeFPFapDJczW4Uc/e1jzddIxie1cEDf/aE4Sqb9hZNU92oVbiPt3iOUd71ilkVAjWRz8KgzaB8/IzRTsoKSfzKmwWUP7hhNQMiXV21hNqL/uD+GfPg7rm5t4NXkWlDnYJN3/mbCE2KRzlaXapXsl7paWmgtZxKZsYHhtoFK55jQEASTTJ0ls/14n+huUuEONwOwIDOu1iJbMipfhRxzFcmL65ibQYBVWmySYIEjdZ1flNrpreL0hvhDiQ8qhEfvmF5vCINRZRb0TTxqNGY/L2J2mnDcXbWl75q+M+B+4d/Db++LqR19F9vJXlu1U=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:zh-tw;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:DU2P193MB2050.EURP193.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230040)(1800799024)(10070799003)(366016)(376014)(38070700021)(13003099007)(8096899003)(18002099003)(56012099003);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?big5?B?SEdiL2ZaNlM2UStpNWlIWFM5STlGMWI2cjNjQlN0eGRPajBBUVF6dnFoQmg0Wm5s?=
+ =?big5?B?ajZQVG9KL0JONUU1dmFpbEQrZG9jeCtrR3BoOXYwMGFva1k4RTZUdzRUWFNldVJn?=
+ =?big5?B?TlBCNHIxUUR6YmhWUDhSL0x5OFlTNXBJT25yeHA5SllHVU45c3VnNElIQUh3VUc2?=
+ =?big5?B?ZENUS2IvdWQrWXdzdk5jSTJBaW9mMWV2WjdUa0xGaXByamUyMzVBWnBrNzlaWGYv?=
+ =?big5?B?OUpWd2pEdzJTazg2MVpValk0a0VMZVBVRExmNFhRNURLUGFXTXpRZTVpeTVhRHhZ?=
+ =?big5?B?L2RCb3BqZ3hNaVdEenEyWkszS0o3ZVlIeTZYOG5DczBtZU5qWHNGSE9LbWpTaVpm?=
+ =?big5?B?MGRsdnA3TUFRSlhMK1NUTmJwdExiWE5JTE11QitLQWV3RUMwSGlZLy9vUlgvbE9R?=
+ =?big5?B?Y3lEaEtHVkdTY1NYT3ZtTm0zSTFvcit5QmFxSzc0YjFPT0dCOVNNdjhaMnNPZmdx?=
+ =?big5?B?dzFMd2lyaGUxaVNDbTBFYVlScXJhcGJaNlZZem1hZ01uZk0xb3YzRGF4bTNlaXpx?=
+ =?big5?B?S0ljSDdhODdiSmJUa0ZyZ3cwVHY1K1FwR3BXWS9PcU93VUpPODNoQlUxZjh6SWtk?=
+ =?big5?B?WS8xOFJHUUpTQ2FqdEpMc2g5ZTVDdHNrd3hNbnhMQnQwVHFvcnQzREErNlBWOTlF?=
+ =?big5?B?NWxkaUtYUTlpc3RxdDJNbThhS2xxTWN6Y0pxRzFqeGlDZklJMVg1WFJ0cEpVMmU3?=
+ =?big5?B?Z250eG9SZEU5dE0vZDJ5end0eUc5WDBkcWdIVU93clZhTU1LWi95SUdTZW84bzl4?=
+ =?big5?B?Q2pHU0tydHhnSmgwazNhb2hsNTM2aUpwQ2o2NVI5NTV4Y2RtWFpERHJKSzFlQjlW?=
+ =?big5?B?ZDFqQXNFTzdNS1FmWVJYYWczVDVzeUlNb2l5Z0FSYlltM1ZrZGVvMU1YcTFmZnFL?=
+ =?big5?B?UHJqQ0dzVExnTCtzYUVmZ0w2eExCbDlTUEIrWE4xaytVY3ZncVFzbFlGcDZpV3Y1?=
+ =?big5?B?VWZ3V0RTb3MzWU5nTUFSL1k1ZFkybTVRY28rcUtBY1g1YVlsSkJjcXA2TSs0NE55?=
+ =?big5?B?NGdEMldTdXNGZThZWWRBQWxjZmdxR2k3REptdm9McFpGeXdlSmZReHhxSjByUE5Y?=
+ =?big5?B?RFg3RWltYVozZ1pQMW4wSzhFdmYrdGNJeEl3bTdsWExPbExmdjEyMnlZZTNPeVRR?=
+ =?big5?B?cXlKdi8vSFUrV20xTzUvQUU5akFyb3RBQlV4MmdJTm5pcVpOcmlkSkdxeVo5Q2dk?=
+ =?big5?B?MG9NREYzNUtNRy8wMWFGTWJiN0ZScHg4MzBHTWl2Yk1TOEwraGt6U1IvNStJWFFW?=
+ =?big5?B?MWIxVmNOaDBGZlZhaDQ4d0NxUmZIYkloNm9CbTlzMHpCYkVYU1lvOVB4Um94NkZ3?=
+ =?big5?B?ZXZqQTVUaWZ5OUJoVUIrZzFxR2VFcWIwZzcvS2ZFVDlQbFZKb0x0MHR6NTQ2UzNH?=
+ =?big5?B?R25Pd3IxQTIwSDI5b2tCQTN1R1BQS2NHWjhmY2NIKzVJQkhCTXp2Q2tQYThRdzFJ?=
+ =?big5?B?dmdYamJNb0xzNWhJMS9ockNXVy9Pc09lcnFDcTFvMUVUSnRCNVUxT2ZQYklXcTBR?=
+ =?big5?B?TDlEbWt3VFpwdHcxdHg1YU0wUW5JRWlRVVJOdC9pdUxUUnNiSXQrdmNrTldRNkpi?=
+ =?big5?B?UkNPNGF6KzlMT1Iwak0xaGpocGxaMTdoZVRia1Q0YTE3cTBKN3lVUXAvUlhZR0xD?=
+ =?big5?B?M08vQ2QvU3NWb0VhTzRBRW02d09xQ1JtUmtaNEhKNjlMejdva09ERjB0bHAzTVNx?=
+ =?big5?B?V3Q2dEhhc0QvQndrUEU0bVB3YWg1Ym9DL3VqTFV6T3lyRGpzZHpsc2ZoYVlmeGdU?=
+ =?big5?B?bnl0R2FTMXJLc0ZidXA3ZSs0cFpWOVhjQ1NxYVBTL3liUGxBMHNMMmFDZXVoZjJ1?=
+ =?big5?B?eCtqRmlLTlgrK1JhT2cwc2VYVXlUU3J6bEZNYXdaODhJWDl6VTRoNGxEN0NpZHlW?=
+ =?big5?B?MWpsYlpxY2tUemJlOFI4ZGlUeVNqMDFVS3JIRjBUSUpsV0c2U0RtcGxZT1UzTkFV?=
+ =?big5?B?MHNieEVDVExob0NUcnphRDdlVFMyUFY4TFlsbWlLYm42bDBXWjBHdUw3SjJrRlMz?=
+ =?big5?B?eW5qdTdGa05hNUtldnhFTFQyZ29FSFMvSUtMczdmWU5sQkpvZkxjNVBzdTRQVUYv?=
+ =?big5?B?VUc3SjRwNGxESXFiV2FCcGU5VlF4SDRYQWNSaDVmM0E0MERaZCtuNmErN1gwZUJk?=
+ =?big5?B?QXFZcEJkcDZzWkYyUGJJMVhVRzVmTk0rOXlCbytFR21FeGQra21ad1JRNUl6TEg1?=
+ =?big5?B?RnN0NTlBTi9zK0NsNzN0SlpENGJkMkM1TXNWYmVULzNUQytjaUxGTlRka3h2OUpZ?=
+ =?big5?Q?RQXx6DQZlkds3fyT?=
+Content-Type: multipart/alternative;
+	boundary="_000_DU2P193MB2050589CD9DC9F1C55809402C85B2DU2P193MB2050EURP_"
+MIME-Version: 1.0
+X-OriginatorOrg: wassenaar.nl
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: DU2P193MB2050.EURP193.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: 58d9dcea-9a61-4fc3-0ea6-08de959b4fa0
+X-MS-Exchange-CrossTenant-originalarrivaltime: 08 Apr 2026 18:19:02.1150
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: a1ad7daf-a971-46c6-aac0-68836b6f290e
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: YYSB+DdI5HBCyEeupobN5AOeSWdNisWdtIr5QN89lwXDZfM3dOoQbPGDfDHx+Dd+LLfDG5jZeD2nuO1ADJ8taA==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DB9P193MB3042
+X-MANTSH: 1TFkXGxoaHxEKWUQXbht+RWVpHVN5WU4RCllNF25PRkNcT1gRCl9ZFxkdHBEKX00
+ XZEVETxEKWUkXHR9xGwYbHxp3BhscGwYaBhoGGxoaBhpxGhAadwYaBhsaBhkaBhoGGgYacRoQG
+ ncGGhEKWV4XbGx5EQpDThcfaUtcYmxGHFxYYXVHW2hlXUZ4ZHpvTXljUGBkbWdOfREKWFwXGQQ
+ aBB8eBRsaGgQSGAQbHxIEGBMQGx4aHxoRCl5ZF0Jub2keEQpNXBcZEhMRCkxaF2hpTWtrEQpMR
+ hdva2tra01rEQpDWhcfGAQbGhsEEh4EHR8RCkJeFxsRCkReFx8RCkJcFxsRCl5OFxsRCkJLF2R
+ FbUVpY35Ea0hvEQpCSRdkRW1FaWN+RGtIbxEKQkUXYxNJQWFwY1x/RFoRCkJOF2RFbUVpY35Ea
+ 0hvEQpCTBdhTUVPYkBwax97BREKQmwXa2Z6Tx9OXR8aW2kRCkJAF3oBZxxncGVPXRxIEQpCWBd
+ ienlBQxJhU21abBEKQngXY3IbfWtgUB1Gc0QRCk1eFwcbEQpwaBdlc2QZQ2MSYmJFaBAHGRoRC
+ nBoF2dBektsE0hiRU1/EAcZGhEKcGgXYV5aARNAfHlafR0QBxkaEQpwaBdpYGduSRJ5El9yfxA
+ HGRoRCnBoF2tteFpeAVJIcmdfEAcZGhEKcGgXZRlfGFBibhNrZkUQBxkaEQpwaBduHFsSZnlPT
+ 0dzbxAHGRoRCnBoF2B/HGJPZ2V5bh5sEAcZGhEKcH8XemdJUkZfGE8SXUcQBxkaEQpwXxdoUkd
+ 4GVtrYgUBZhAHGRoRCnB9F2QTQB9hThIcWXlsEAcZGhEKcH0XZBNAH2FOEhxZeWwQBxkaEQpwb
+ BdtbFBOXxofZWVgGxAHGRoRCm1+FwcbEQpYTRdLEQ==
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNDA4MDE3MSBTYWx0ZWRfX7CJNVmckdSyf
+ QXsTuvw1UDatxZUAbtSeM1yqeFJkARnTH3ChhS5EHvhS9brU8N819ogrJAyNMXRBan9RU+Ydtud
+ QnbqOvNQnp0PbAemEboWD7lw0ePxkIAGJEN2jgNRLtpIg6QeVz51PD7LQDuaGvkaKYVR/1cihq5
+ +w8bqTgNh0apxEVvAJMq8BbyKdJgsYENTncQw/hweCTMRqapsWbSnMOsP2gDj6W1qrDs29ZbW0L
+ BeY4hzPdewMRlo+lAv/1wO3m1YMelfbquLuWiRjWdYlr0c1yknCTmHcCzUc/UtOR3px1XFMqv27
+ KNJfo27Dzgq36BB+1SAZShE5Zq8Z5btIMmnyvBWIQ==
+X-Proofpoint-GUID: 5CavHFl6vrK_mqBOwlRNPEgSIzJNGMdW
+X-Proofpoint-ORIG-GUID: 5CavHFl6vrK_mqBOwlRNPEgSIzJNGMdW
+X-JNJ: AAAAAAABLuKAX+RpAmWV1L2Vr1Bl9EoVmJqf/i6LPcPFs45U5SqPN+4r3yq0CgTickaUTYrW91dIfmjOxmTE8A4rBrfvb7cdOdWCF5CTawmXto1uW/+/jEasc7dXas764jusDuM1tO90NwKpe9ibflIUTaLcwq5HgcVjticFRa3OBmnsmbkVnL7NI7P+x1xRhzDNqLmR+vOTjaXswCiVBMoSsDyhqNA6xMmSY4FUe+CLn1Uh2qWZi3jgdVmqToRcRnvc+dkPGpbVP/jdSiRJWP0Rw0tS5OLaUnY/KtCAvuHwGKi0s9YmX9+DwgYQ0/f68gsOfWp+2hk8I/CpvbH4yw87sS6RGYiNxNQtIPN6lJ/lZMOeb77quQHriPYNVG8Y5S/VK30wFGYsN71yKFSUNNR0IJcIRI0wz6XJSmEiTXODQJgvJg6l/5e9GfpvjKqwexgrX2gh/K2OwX152bBc3Qbac2FLWFy/tlf3mt0nh7bRC72w1AG1Uu+MwwiIzAsnUlsgAQUrN5ffPfzAEmjJff8mM/Dv6eUPr9d/RwKPARsqvcLOyHRD3UBCKq7W8TnVhBEKTHZgwJrMQ0ehUzUp16yxploc45quW5lEF/dbcqEX1zb1uaKoch3no2Zuw7LU7CbbNDyl5jKP2ZCpIhrofA5/xNvhDpKHctyvNiVW0DF9Kz9Jl+R3wp5p5iJ2GfsFolPogSu5aaUzOhnzlN5hSLZGjfWlYMe9hjeZrQl6MNvDkGswwtiZ24j4/h+anEKtxitd6WQA8wjEKNRy81rYihvNGj4VKririBwZZR7fAigZZGw9EftMW2Y7PvIF1RSMuRU9p6i++1Nl/VLm3FMOMV/9FzKxb1OxeTcf+LABWIIVVH/UTArWDnEdzYlEoMw2j/JoPWi/AVjjz31z1DR1zBf6B6uH/+gFGWEKnPjPFIvy/kcJiZ/86w6tgStiWauK/I/u9IWppzvtumc=
+
+--_000_DU2P193MB2050589CD9DC9F1C55809402C85B2DU2P193MB2050EURP_
+Content-Type: text/plain; charset="big5"
+Content-Transfer-Encoding: base64
+
+TmlldXdlIHJlYWN0aWUgb3AgZGUgQmVsZWlkc0JpYmxpb3RoZWVrOg0KDQpWZXJ6b25kZW46IDIw
+MjYtMDQtMDggMjA6MTggKGxva2FsZSB0aWpkKQ0KVmFuOiChWA0KDQpUeXBlOiBIb29ydCBoaWVy
+IG5pZXQNCkhvb2Zkc3R1azogSDEgVmVpbGlnaGVpZA0KVGFha3ZlbGQ6IKFYDQpEb2N1bWVudDog
+bWFuZGFhdGJlc2x1aXQgd2Vya2dldmVyc2NvbW1pc3NpZSBXYXNzZW5hYXINCg0KaG9vcnQgYmlq
+IHRhYWt2ZWxkIDAuMQ0KDQqid6J3oncNCldlcmtsaWpzdCByZWFjdGllczoNCmh0dHBzOi8vd2Fz
+c2VuYWFyLmJlc2x1aXQtd2lqemVyLm5sL3dlcmtsaWpzdC1yZWFjdGllcy5odG1sDQo=
+
+--_000_DU2P193MB2050589CD9DC9F1C55809402C85B2DU2P193MB2050EURP_
+Content-Type: text/html; charset="big5"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dbig5">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:"Microsoft JhengHei";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Microsoft JhengHei";}
+/* Style Definitions */
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+span.E-mailStijl19
+	{mso-style-type:personal-compose;
+	font-family:"Verdana",sans-serif;
+	color:black;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;
+	mso-ligatures:none;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"NL" link=3D"blue" vlink=3D"purple" style=3D"word-wrap:break-w=
+ord">
+<div class=3D"WordSection1">
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">Nieuwe reactie op de BeleidsBibliotheek:</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">Verzonden: 2026-04-08 20:18 (lokale tijd)</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Van:</span>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">=A1X</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">Type: Hoort hier niet</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Hoofdstuk: H1 Veiligheid</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Taakveld: =A1X</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Document: mandaatbesluit werkgeverscommissie Wassenaar</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">hoort bij taakveld 0.1</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Microsoft JhengHei&quo=
+t;,sans-serif;color:black">=A2w=A2w=A2w</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Werklijst reacties:</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black"><a href=3D"https://wassenaar.besluit-wijzer.nl/werklijst-react=
+ies.html">https://wassenaar.besluit-wijzer.nl/werklijst-reacties.html</a></=
+span>
+<o:p></o:p></p>
+</div>
+</body>
+</html>
+
+--_000_DU2P193MB2050589CD9DC9F1C55809402C85B2DU2P193MB2050EURP_--

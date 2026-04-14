@@ -1,0 +1,265 @@
+Return-path: <EHiep@wassenaar.nl>
+Original-recipient: rfc822;dickbraam@me.com
+Received: from p00-icloudmta-smtpin-us-west-3a-100-percent-10 by p175-mailgateway-smtp-55ff75dff5-qz5s5 (mailgateway 2612B123)
+	with SMTP id 07ed0a09-7e05-47fd-be7c-1bb9dfde3fef 
+	for <dickbraam@me.com>; Wed, 8 Apr 2026 18:46:07 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 07ed0a09-7e05-47fd-be7c-1bb9dfde3fef
+Received: from DU2PR03CU002.outbound.protection.outlook.com (mail-northeuropeazon11021089.outbound.protection.outlook.com [52.101.65.89])
+	by p00-icloudmta-smtpin-us-west-3a-100-percent-10 (Postfix) with ESMTPS id 86BD3C000B6
+	for <dickbraam@me.com>; Wed, 08 Apr 2026 18:46:03 +0000 (UTC)
+X-ICL-Info: GAtbRVYHBVFFSlVHSgMFUFUKE0oWX1gHVQoPB0UFBExESVdZTgUYWkxZAxNFdX4LEAkmABlDRQcbGAcFVl5aQhMdWwAZQ0UHGxgHBVZeWkIHGlsTEVNdAAcYBxo4XVNMFhYLVxBVWg1IPTNFKGIGUTYsVkdKHlkXARsJAhZUGBIHFhISG0RfDRtXCQIMXFkNHlcFGBUQRhYHRAsWEVwbDBoLEh8dRUQNBRwHDRdeB1NFS1dHQAkYDQANBBgNXlJMBQsJAx1TQgsaF0gYDURaDRoSSBQXXRYGEUQRFgtDUwwUGBRZFlwWDxwdW0s8ZQQyREBVOjoCBldFP1dOPAkAJjBIIkFPcnRQQ01URTpzDlc3SyYzLQJmU0xKKzVKAANSWzwzJSgBD1FbKTQ4PB55NyE1KTgzHnUtOEc=
+X-ICL-Score: 2.73303302332
+Authentication-Results: bimi.icloud.com; bimi=skipped reason="insufficient spf"
+X-ARC-Info: policy=pass; arc=pass; id=mx.microsoft.com 1; r1=1; r2=1
+Authentication-Results: arc.icloud.com; arc=pass
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=wassenaar.nl
+X-DMARC-Policy: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc_report@wassenaar.nl,mailto:rapportages@dmarc.ibdgemeenten.nl; ruf=mailto:dmarc_report@wassenaar.nl; fo=1; adkim=r; aspf=r
+X-DMARC-Info: pass=pass; dmarc-policy=reject; s=r0; d=r1; pdomain=wassenaar.nl
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=wassenaar.nl header.i=@wassenaar.nl header.b=pbJJVpR5
+Received-SPF: temperror (spf.icloud.com: Error in retrieving data from DNS) receiver=spf.icloud.com; client-ip=52.101.65.89; helo=DU2PR03CU002.outbound.protection.outlook.com; envelope-from=EHiep@wassenaar.nl
+Authentication-Results: spf.icloud.com; spf=temperror (spf.icloud.com: Error in retrieving data from DNS) smtp.mailfrom=EHiep@wassenaar.nl
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=Hj8oybFkPrriT7DKJevA6ZtVQbaP+FStOkSviHNIyhvYxziOBzfcBzJfSTxBVnab4211riYH2Uu9pV10QDQEA/z2yMfpQpCs+4W2AMN3RS560YuBfW1KNRCR/+aA56iglkE0TgduN1EfkgnDu3xXw+xBWC9W39eOlKNWxJ9LDlS2Uz7v25At2PKl7dnG7NNauFlbI1NW9RVUCA9GUgjgszu/fmIzM8cca88Akj36HASgviYoDnePlPRajA1lMIsntkQVsAQe7VU5JCIbWroa1VHqV75Ym39rX86vuMpBb6+5mtsCwk5UfrExY8Cv2LXBF8Q5n9j2g06klnGxd7cDeA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=Nv9t/y1JVM8UCVxyto3h957Xjm9V1/3fuHhWbbLlVkE=;
+ b=T4F+pCGC8C2LOlvYRYOGKA1UefCaKtVhwTdB1Qp/L0/yZG8VSJPfaLNR1460kRqEs6gwZiQDRWG4wiUUMMUhU+E5nZjh/p8NnApemm8sXk7GcAUh2+7Wws5PN/ZQj2biragQHOfCgQ7Awy7n09r88jX4b8ljGSIUVsS+nfkAIbrqN2/BOUoaYKoXvYfh8bNpk3wJQM4B/LmRunQlWJP6BqRmRnfJloYxOVKAX9IYnfGGJdQJmOExcbGf7i37yRqxa6rrKIY9hmfmg4/whVrLwzHXB2jdodQ4P8jVW7dT4BuEoo3yLOfcIVvHCeNITKpI+9WU0PhB7oWUJf6jYHMKrg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=wassenaar.nl; dmarc=pass action=none header.from=wassenaar.nl;
+ dkim=pass header.d=wassenaar.nl; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wassenaar.nl;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=Nv9t/y1JVM8UCVxyto3h957Xjm9V1/3fuHhWbbLlVkE=;
+ b=pbJJVpR5QhMdhEDKjNNO+9ora5OqX6Qq6sKikbxZWRmnREIymuLJzZ72Wvi098KFiAIhxZk37ML7kriZaFyTlR7HPrkduOGOaccXT/9ARAmyVVv/hZqNyQvUVbc0GcAfNrHi8Taxwk+4r48TIK6mrXG+JG1JEhIcisFhAy3lcy0=
+Received: from DU2P193MB2050.EURP193.PROD.OUTLOOK.COM (2603:10a6:10:2f6::10)
+ by BESP193MB2865.EURP193.PROD.OUTLOOK.COM (2603:10a6:b10:ea::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9769.18; Wed, 8 Apr
+ 2026 18:46:00 +0000
+Received: from DU2P193MB2050.EURP193.PROD.OUTLOOK.COM
+ ([fe80::94d3:3aec:566a:99ca]) by DU2P193MB2050.EURP193.PROD.OUTLOOK.COM
+ ([fe80::94d3:3aec:566a:99ca%4]) with mapi id 15.20.9769.014; Wed, 8 Apr 2026
+ 18:45:59 +0000
+From: Erwin Hiep <EHiep@wassenaar.nl>
+To: Erwin Hiep <EHiep@wassenaar.nl>, Mechteld Heijting
+	<Mheijting@wassenaar.nl>, "dickbraam@me.com" <dickbraam@me.com>, Dick Braam
+	<DBraam@wassenaar.nl>
+Subject:
+ =?big5?B?QmVsZWlkc0JpYmxpb3RoZWVrIKFYIEhvb3J0IGhpZXIgbmlldCAoSDIgVmVya2Vl?=
+ =?big5?B?ciwgdmVydm9lciBlbiB3YXRlcnN0YWF0IKH3IDIuNCChUCBFY29ub21pc2NoZSBo?=
+ =?big5?B?YXZlbnMgZW4gd2F0ZXJ3ZWdlbikgoVggMjAyNi0wNC0wOCAyMDo0NQ==?=
+Thread-Topic:
+ =?big5?B?QmVsZWlkc0JpYmxpb3RoZWVrIKFYIEhvb3J0IGhpZXIgbmlldCAoSDIgVmVya2Vl?=
+ =?big5?B?ciwgdmVydm9lciBlbiB3YXRlcnN0YWF0IKH3IDIuNCChUCBFY29ub21pc2NoZSBo?=
+ =?big5?B?YXZlbnMgZW4gd2F0ZXJ3ZWdlbikgoVggMjAyNi0wNC0wOCAyMDo0NQ==?=
+Thread-Index: AdzHh++s5N/HFoRSQIWPKtT4lVME7Q==
+Date: Wed, 8 Apr 2026 18:45:59 +0000
+Message-ID:
+ <DU2P193MB2050F19D96DE1D67BB26422BC85B2@DU2P193MB2050.EURP193.PROD.OUTLOOK.COM>
+Accept-Language: nl-NL, en-US
+Content-Language: nl-NL
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-zorgmail-nta-outlook-addin: not-default
+x-processedbytemplafy: true
+x-templafyemailsigvstoversion: 9.26.0.0
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: DU2P193MB2050:EE_|BESP193MB2865:EE_
+x-ms-office365-filtering-correlation-id: 98f86353-8f63-49d6-5345-08de959f13c9
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|376014|10070799003|366016|1800799024|38070700021|13003099007|18002099003|56012099003|8096899003;
+x-microsoft-antispam-message-info:
+ Cj8ZWQ910eMXOO4iqFtt87eav7AQyHYk5gIfGA0TNrUBIVdgqWenqmK3Cwm8BvKxwgIXUS5KA2VHUDbGfRA+ZgVb7zN553uYrcsTmwcUERIf1S4FK7FEKL1KOWMJ97Nge/GXXN8Xnyc5kFzSYDypVQzLLAxYym9E2GjnkRlnZcMUOZr/rMD2jAL8kuCUyXb9tQIAyaJYR5RekZ8AttBySj+kDP/NIk65FnRVUD05/LLZZE4kSDq10/ces55UTQppX8Kz0pA4SeZWRNfqkSJIq4ulqRvm3/u3e+oPQiOvfxdisVUWK0HlaJbNh2dBdgPSLriW1IxjplEdZKG3v6Cvw0gUZjoNx2uuR94iTkZognetbe9T9rg74lkpEe08OcgJ9OtyjPTrK6Z09rkfoELuM9FcVePNFS8+fKWZmlYJhVXCXN74hlQFfDRG59tjauTCEwE8vIgIfhoeG2nZaVGNmYELTemPhYjIkBrik2X+hvl2d8qO74bwXR3vEhbV6Yme8RAEVOFzQzRS6iFIqrth38TC1nNC81m6MIB7lHmQpPlLj3lhtGIclN6yMCTBmyvjwmOJAFs/JscvP9YVf8mL5DKxqBZJYZgHJ9VE+wcT3dmXn0xQZ+I3pGwGhSqP2QKc9aMZTA1o8TimvQeVI7faQQdWowIz/EA2sL7cnIgOZRVNwPGtXJY1Sv/4gMjkMkI6hdKLeDpo9qr0mGWmH0uK8Oq2NVbmrcL0Q08Ly6bIZ/cBzhU14nWXYFVGtr8f1TnD
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:zh-tw;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:DU2P193MB2050.EURP193.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230040)(376014)(10070799003)(366016)(1800799024)(38070700021)(13003099007)(18002099003)(56012099003)(8096899003);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?big5?B?OVlVQnBvSTVXZDlXQVVkcVA0djFvNDV3M0crQS9rK0tNdE91Y2h4TElqV1N5QjFx?=
+ =?big5?B?YTM2OG9jV0JOaVovbzNyVG1UeFJNWEFxaGRML29lKzUraUw4aGpzWGlGMXdEd0ZL?=
+ =?big5?B?d29KeGo5U3lSYzVlR0VmeTQrcmV4bUNSWVlhTFhRVzZLM0hId1VBZkZUS1h5bHVk?=
+ =?big5?B?eFhFVnVIZndNTmM0ZHRXbUphNW9SVzRMY1hJVmZnb1hWTlJvNHFlVmsyNUxtajZo?=
+ =?big5?B?RWM1ako2S1dJUXRRUjB5ejNiVTMvSlB0MmZuRXVKTWNOUnZwdTRPMTI3ZFdXVlht?=
+ =?big5?B?WkNROTlwRTlQbWtBN0wwTGJpRlM2dmRFdTNtSHZKL1hiRUpWZHZJZTIweDBPV2VV?=
+ =?big5?B?Z2FpVHY5OVlJcndUTnkwYWxpTE8yS2ViRmlsSXVTbHdFRXc2UURlZ0RzRlRPQkdy?=
+ =?big5?B?WUxIaWFkYVl6RDE1clNQMzZFYzJEZXFobEdnMGJ3d0FVSWRQckk1S214QVg2WFR3?=
+ =?big5?B?T0lQdCtHU3pxSVpFeGJnUEF4d1F6NGdNSDhlTFowL2ZXVmc5WEFyb0ZudEx6OENh?=
+ =?big5?B?MFIzOVl0b01HL25WTzhuTm1YcEw2cFJlQTQ0UGVkZ1AyWnRzUktWcEk5My9qaU1B?=
+ =?big5?B?eWZPUHhFalJycVp4aUd5dnl2WkpvNzgyU3dsZ1poeHFBYm8rc3NmUmUrSkJTQjkx?=
+ =?big5?B?dGllaWlJanFDU1VhSTdTMmY3MVpEWmk4cm9xZE1PaUQ0ZUR3RTN2SXl2SVYxakc2?=
+ =?big5?B?RU5TZ1F1TDVhNjhhSTVaV08zOWJXb3NtNm9kSUUyRjI4N0dLdkVmeDVlb2FpT29q?=
+ =?big5?B?VkMvaEx1bVgvVnc1MzNQb1hEK1NqcTl4WFdZMGY0allTYkV4RS9mU09RQnpXUS8v?=
+ =?big5?B?MWs0MzhOMzVJenI4cW5YeEtrQVV6TnMvT2krY3hUNlJMVlNXOWwwSEJpWjJjM0pZ?=
+ =?big5?B?NE5kTUF5dWhuSnJmZlpmY3RSMjNveXF4TWViRTZkb2VVVWxybnJYZW90N2gzczl2?=
+ =?big5?B?QS84dndEcVRLRzBUczZDckdzbkIwMVFkVjNmRkZjNnI2VWN1MFVCL3k2aCtIVGE0?=
+ =?big5?B?MnY3cXc5VlB5VWtDNWs4blRuN3h0TVMwMUFjUytkL3hCWFhsSWlpUndtM1U5MjhM?=
+ =?big5?B?dHJjb08xS0t6Uk90YXhERHJ4ZE5KQnFNN0V0UVRvWVhCd1FsY21sTTlQcTZQQUJt?=
+ =?big5?B?M2RQc0M0SHNzakphSENiWmYwVzVtQVRST0pCbzFnQ2hLYmZ5SUpHLzdRTk1mcDFR?=
+ =?big5?B?WDYzbTQxeDZSZnd5em00c2hWRllKNUlLOHVYMHZyaTkvYzNBRksrbWloaHlQUS9G?=
+ =?big5?B?Q0U4b3BsV2JGc2J0T0hQSGRsUXc1THIzUUZjN0s3ZEtHS3NYQmxCclBWaEEwMlAr?=
+ =?big5?B?Yk9pa3dUc0FkRVhONWNWMlg3dEdrMWxWTTVaN3NNL3JnbDV2VTRleDl6RjJ2TFM0?=
+ =?big5?B?Tk9zbTR2MWk5U3BHKyt1VmhuT3JnZFk0MEJqYVdXd3RuYTMxRVVNVytGbTAvUUU5?=
+ =?big5?B?ckxKY2pUSG5lSXF1a2czLytUTzYyZ2hiRXZqU21SdCtyYi9nUDZORzNpUWl4aXZh?=
+ =?big5?B?dFhtOTJmT08vUEFuQWZVY3BHckZwN1Zjei9YUFZ0UGtvNlR2eE1HQ3BUSytEOVpV?=
+ =?big5?B?L3JiWjdkMXFpZTQxb2V2V2pkM1lFRmV0Nm5DSVRwdlQ1NnM0Zk1SOTRwd2FFbzQz?=
+ =?big5?B?bkR5cnFzbzYrRmg2Z25iSVBFcSsxMkJrRjNjU2cxNEdHTXU0U0RwbVhORExoTGEy?=
+ =?big5?B?MFFBaUpwS2lEdTF3RWFVN0N1WVlMSUNYanNvTkx0Ujk4bTBpcktvOUV4SUlSODND?=
+ =?big5?B?Vk1BN1d0R3pHbHp0VzhKODdockNSRkVvQmVmZTlDRHdvejZqRWtMUlZlZk00WEpE?=
+ =?big5?B?ODEybSt6NmE2N2lMT294U0lTWTlyVVJITUZEdExFZTlDMnJVR0tIWnVVZnpZQ2Mr?=
+ =?big5?B?WXdLLzF4bkNrQ3lzdDJveW1yZWFaWTVURzQzZU9QUVlxNjI0NjRDVjdDbjg0dDlx?=
+ =?big5?B?RUpUTlgwbW13dzA1cVRvekpSV29RVHhyczYyd1Qzc21tOTJ0L25nd2pjNHBEM1J3?=
+ =?big5?B?OERyVDFkLzkxbDNEY3dXL1FLaStzaXZzLzlMbXBGTHNUTjlVY09OeWNTbE04c2Yw?=
+ =?big5?B?dUNvd1plQ3VIWW5zRy85cC93THZNcmFobkVLN1lWMTBJVzFXNG5GZlZTSStGUFRT?=
+ =?big5?B?MXo3R3VJRkRZSkVOZm9kaDBKeG5udUQ1cVJ6cVZVT28wU1dIVWJZV1NWc0h3TnBU?=
+ =?big5?B?ZEQ5RDFsMDhiTCtjc25aaXdUYXJVYVlIZmdzSVhjb0MwcWY1Vm1peDZ0aXZSd2VP?=
+ =?big5?Q?u0P8zZkGMwQCwnz8?=
+Content-Type: multipart/alternative;
+	boundary="_000_DU2P193MB2050F19D96DE1D67BB26422BC85B2DU2P193MB2050EURP_"
+MIME-Version: 1.0
+X-OriginatorOrg: wassenaar.nl
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: DU2P193MB2050.EURP193.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: 98f86353-8f63-49d6-5345-08de959f13c9
+X-MS-Exchange-CrossTenant-originalarrivaltime: 08 Apr 2026 18:45:59.7356
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: a1ad7daf-a971-46c6-aac0-68836b6f290e
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: VHydn1NoSPjrzLUsMyLSpfZvxC4H/iAD/kvQWLWhlZ44YN0ORN69gdW7a4NKWho/jm02NA+E/jd1K/3JJ+H2pA==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BESP193MB2865
+X-MANTSH: 1TFkXGxoaHxEKWUQXbht+RWVpHVN5WU4RCllNF25PRkNcT1gRCl9ZFxkTHhEKX00
+ XZEVETxEKWUkXHR9xGwYbHxp3BhsfEwYZGkIbGwYaBhsaGgYacRoQGncGGgYaBhkaBhoGGgYac
+ RoQGncGGhEKWV4XbGx5EQpDThddEmd8XXN+XRwdRXNLTEZJeW9/b295bmdabmxgZ31mRxEKWFw
+ XGQQaBB8eBRsaGgQdGwQbHBoEExgQGx4aHxoRCl5ZF0Jub0ljEQpNXBceHx4RCkxaF2lNa2sRC
+ kxGF29ra2trTWsRCkNaFx8YBBsaGwQcHwQSExEKQl4XGxEKRF4XHxEKQlwXGxEKXk4XGxEKQks
+ XZEVtRWljfkRrSG8RCkJJF2RFbUVpY35Ea0hvEQpCRRdjE0lBYXBjXH9EWhEKQk4XZEVtRWljf
+ kRrSG8RCkJMF2FNRU9iQHBrH3sFEQpCbBdrZnpPH05dHxpbaREKQkAXegFnHGdwZU9dHEgRCkJ
+ YF2J6eUFDEmFTbVpsEQpCeBdjcht9a2BQHUZzRBEKTV4XBxsRCnBoF3oebHN/S0ETS0NnEAcZG
+ hEKcGgXaWBnbkkSeRJfcn8QBxkaEQpwaBdrbXhaXgFSSHJnXxAHGRoRCnBoF2wYQnxIWGRgckh
+ GEAcZGhEKcGgXbWlMRgFJUGxlYUUQBxkaEQpwaBdneHsaYGZGTkVHbhAHGRoRCnBoF2B/HGJPZ
+ 2V5bh5sEAcZGhEKcGgXZ2QBaExGXAVyXmcQBxkaEQpwfxd6Z0lSRl8YTxJdRxAHGRoRCnBfF2h
+ SR3gZW2tiBQFmEAcZGhEKcH0XZBNAH2FOEhxZeWwQBxkaEQpwfRdkE0AfYU4SHFl5bBAHGRoRC
+ nBsF21sUE5fGh9lZWAbEAcZGhEKbX4XBxsRClhNF0sR
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNDA4MDE3NSBTYWx0ZWRfXylD3i08ZWaRm
+ 4u3EYQPinTiLoombcmMJWChLMJX4bxpllNsUj7YiVXmnJAq1vfjmrb6TZxLY0wYJ6Yd+sHAgmIT
+ e7CUcQEmFWrhE13EkNeomzOol7GjAsKkyAzl0VuPVWxHeEvlFhNVRgsIxuAN8Uud7eREY8OY8Vf
+ v/6uERSFs3c12SFkuZqCNBohejd+wIVPmyTQQNKnToY404oBbmExponWtPdF8AXeKsLMlsxQJJu
+ iA5XrJI1nLP6AgLuBmnGizlJlJ0L4C147NANXr5wzShqBtjD/Ad8Ep1suLJYYIWkYaYDJT63TBR
+ mFTf+SSd4/4iygOYFpzTYJ1U9nKp7tdjMGxQfPTwA==
+X-Proofpoint-ORIG-GUID: w8MVwYTw67oYaflcSEUEESDMpDFJMWLm
+X-Proofpoint-GUID: w8MVwYTw67oYaflcSEUEESDMpDFJMWLm
+X-JNJ: AAAAAAABhp3UAIeXadxPQFgx+Qr7DnP2z88V90O4liIO1iCr4llJtAy093DCATCsSfJeV2zdGsQph21HsI0T8ovr04XouTv4VcPwsKm54vTlKn6xfEqzUp6hrN7bbboL5HjVjw0e8U2elRZGeFon7IFfrcbnFuUGfidr2TH1SYhUco9adwV9bWo9hI48/Cq/zPKdhVOSK2+T2TKeR9pOXauyh4SHr2a9mfaDTEeRnReMGEMzrVBpNV+oADDuSoArwlmU7joTrw40B14v7lSLYRmI5jZd1k6wZ3Pi8VdGJOyMnri0/jhz+5bbBY9wf+ZlcSzwcOQFG4JWp9dzCCad8Wl907QxCASnzaQ9AgtT1mdsTf3Nlu2t5haqTRqm3z5w7l77U9QXDlhM7YHmtV0R9dIOHLTJcV2xMAsS4FuiXk92xmmjaSmv3zKJOOKvHUnO/hKd+RUFeQ8vwO0DsaKXHuG7HaBuzO+w8ch/9QQSozmn2rRj5T99oIW+wanPX0Jd4YO7qC3bzt1Bi8ltCtXLBG403wpa6UKhxFpzftRTQoVzZf6x5kTjh180LMKfXCfhQyrfTv74aTDFTCJ+COPd5/oHGJQfz+nqpcEEQR13Pf03+u/K4NqNLnUCzwWntY6tIuNzY4+uyZY1tNMIcuLDPACneC4EjXDMwvO+ooMG/5ZME8y4PMw/Cz4uA43+7OOsSdOtlbwuJ6a2dGvSFtDCNmRyB2d2o93iQfYlIToVwyL3SL6FBIhxJA5dEnBtulI7wJyVrRh4JAeD5dYjWxzMhC8UmbHTed/56aI8GyhmXzE3rAeeKSQItYSua8Sqru4lBEyM0dunks/6KLyPa/Wq1QrFhl1zG4AnUcDPrlWPmJvFi2tF9TsL79dMz0UAwM0LtbhIyvLHfPp7f1rIyl37d1IhLQCTS7p7fY+dMEMQ+nlKy1CwLMkUxf8scNFthy41WKIUzQlYT47IYfyKDZ/ESNAJ+QlLh9gLOXyTNS4vbSI0X+DP2TINzqnR/5VjHafuidPFHlk4TymU+PzgF8KdZU3iTXB9esphoUrNA0sX
+
+--_000_DU2P193MB2050F19D96DE1D67BB26422BC85B2DU2P193MB2050EURP_
+Content-Type: text/plain; charset="big5"
+Content-Transfer-Encoding: base64
+
+TmlldXdlIHJlYWN0aWUgb3AgZGUgQmVsZWlkc0JpYmxpb3RoZWVrOg0KDQpWZXJ6b25kZW46IDIw
+MjYtMDQtMDggMjA6NDUgKGxva2FsZSB0aWpkKQ0KVmFuOiChWA0KDQpUeXBlOiBIb29ydCBoaWVy
+IG5pZXQNCkhvb2Zkc3R1azogSDIgVmVya2VlciwgdmVydm9lciBlbiB3YXRlcnN0YWF0DQpUYWFr
+dmVsZDogMi40IKFQIEVjb25vbWlzY2hlIGhhdmVucyBlbiB3YXRlcndlZ2VuDQpEb2N1bWVudDog
+ZGFtd2FuZCBoYXZlbmthZGUgZW4gbGlnZ2VsZA0KDQpob3JlbiBiZWlkZSBiaWogdGFha3ZlbGQg
+Mi4zIHJlY3JlYXRpZXZlIGhhdmVucw0KDQqid6J3oncNCldlcmtsaWpzdCByZWFjdGllczoNCmh0
+dHBzOi8vd2Fzc2VuYWFyLmJlc2x1aXQtd2lqemVyLm5sL3dlcmtsaWpzdC1yZWFjdGllcy5odG1s
+DQo=
+
+--_000_DU2P193MB2050F19D96DE1D67BB26422BC85B2DU2P193MB2050EURP_
+Content-Type: text/html; charset="big5"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dbig5">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:"Microsoft JhengHei";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Microsoft JhengHei";}
+/* Style Definitions */
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+span.E-mailStijl19
+	{mso-style-type:personal-compose;
+	font-family:"Verdana",sans-serif;
+	color:black;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;
+	mso-ligatures:none;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"NL" link=3D"blue" vlink=3D"purple" style=3D"word-wrap:break-w=
+ord">
+<div class=3D"WordSection1">
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">Nieuwe reactie op de BeleidsBibliotheek:</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">Verzonden: 2026-04-08 20:45 (lokale tijd)</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Van:</span>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">=A1X</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">Type: Hoort hier niet</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Hoofdstuk: H2 Verkeer, vervoer en waterstaat</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Taakveld: 2.4</span>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">=A1P Economische havens en waterwegen</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Document: damwand havenkade en liggeld</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-ser=
+if;color:black">horen beide bij taakveld 2.3 recreatieve havens</span>
+<o:p></o:p></p>
+<p><span style=3D"font-size:10.0pt;font-family:&quot;Microsoft JhengHei&quo=
+t;,sans-serif;color:black">=A2w=A2w=A2w</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black">Werklijst reacties:</span>
+<br>
+<span style=3D"font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;=
+color:black"><a href=3D"https://wassenaar.besluit-wijzer.nl/werklijst-react=
+ies.html">https://wassenaar.besluit-wijzer.nl/werklijst-reacties.html</a></=
+span>
+<o:p></o:p></p>
+</div>
+</body>
+</html>
+
+--_000_DU2P193MB2050F19D96DE1D67BB26422BC85B2DU2P193MB2050EURP_--

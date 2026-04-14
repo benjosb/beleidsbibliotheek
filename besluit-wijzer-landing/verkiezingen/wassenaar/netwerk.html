@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netwerk · Wassenaar 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <style>
+    .netwerk-container { position: relative; }
+    .netwerk-layout { display: grid; grid-template-columns: 1fr 360px; gap: 1rem; align-items: start; }
+    @media (max-width: 900px) {
+      .netwerk-layout { grid-template-columns: 1fr; }
+      #cy { order: 2; }
+      .netwerk-panel { order: 1; max-height: 35vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    }
+    #cy {
+      width: 100%; height: 70vh; min-height: 420px;
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+      border-radius: 12px; border: 1px solid #c7d2fe;
+      box-shadow: inset 0 2px 12px rgba(99,102,241,0.06);
+      transition: all 0.3s ease;
+    }
+    .netwerk-panel {
+      background: #fff; border-radius: 12px; padding: 1.25rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07); border: 1px solid #e2e8f0;
+      position: sticky; top: 1rem; transition: all 0.25s ease;
+      max-height: 75vh; overflow-y: auto;
+    }
+    .netwerk-panel.pinned { border-color: #6366f1; box-shadow: 0 4px 16px rgba(99,102,241,0.15); }
+    .netwerk-panel h3 { margin: 0 0 0.75rem; font-size: 1rem; color: #1e293b; }
+    .netwerk-panel .panel-status {
+      display: inline-block; font-size: 0.75rem; padding: 2px 8px;
+      border-radius: 10px; margin-left: 0.5rem; font-weight: 500; vertical-align: middle;
+    }
+    .panel-status.hover { background: #dbeafe; color: #1e40af; }
+    .panel-status.pinned { background: #e0e7ff; color: #4338ca; }
+    .netwerk-panel .empty { color: #64748b; font-size: 0.9rem; }
+    .netwerk-panel ul { margin: 0; padding-left: 1.25rem; font-size: 0.9rem; line-height: 1.6; }
+    .netwerk-panel li { margin: 0.5rem 0; color: #334155; }
+    .netwerk-panel .link-to-partij { display: inline-block; margin-top: 0.75rem; color: #4f46e5; font-weight: 500; text-decoration: none; }
+    .netwerk-panel .link-to-partij:hover { text-decoration: underline; }
+    .netwerk-panel .unpin-btn {
+      display: none; float: right; background: #f1f5f9; border: 1px solid #e2e8f0;
+      padding: 0.25rem 0.6rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; color: #64748b;
+    }
+    .netwerk-panel.pinned .unpin-btn { display: inline-block; }
+    .netwerk-panel .unpin-btn:hover { background: #e2e8f0; }
+    .netwerk-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .netwerk-filter-btn {
+      padding: 0.4rem 0.75rem; font-size: 0.85rem; border-radius: 6px;
+      border: 1px solid #e2e8f0; background: #fff; cursor: pointer; color: #475569;
+      transition: all 0.15s ease;
+    }
+    .netwerk-filter-btn:hover { background: #eef2ff; border-color: #a5b4fc; color: #4338ca; }
+    .netwerk-filter-btn.active { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+    .netwerk-hint { font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; }
+
+    .popout-btn {
+      position: absolute; top: 0.75rem; right: 0.75rem; z-index: 20;
+      background: rgba(255,255,255,0.92); border: 1px solid #c7d2fe;
+      padding: 0.5rem 0.85rem; border-radius: 8px; cursor: pointer;
+      font-size: 0.85rem; color: #4f46e5; font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.2s ease;
+      backdrop-filter: blur(4px);
+    }
+    .popout-btn:hover { background: #4f46e5; color: #fff; transform: scale(1.05); }
+
+    .fullscreen-overlay {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(15,23,42,0.95); backdrop-filter: blur(8px);
+    }
+    .fullscreen-overlay.active { display: flex; }
+    .fullscreen-overlay .fs-grid {
+      display: grid; grid-template-columns: 1fr 380px; gap: 1rem;
+      width: 100%; height: 100%; padding: 1rem;
+    }
+    @media (max-width: 900px) {
+      .fullscreen-overlay .fs-grid { grid-template-columns: 1fr; }
+    }
+    .fullscreen-overlay #cy-fs {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      border-radius: 12px; border: 1px solid #334155;
+    }
+    .fullscreen-overlay .fs-panel {
+      background: rgba(255,255,255,0.95); border-radius: 12px; padding: 1.5rem;
+      overflow-y: auto; max-height: 100%;
+    }
+    .fullscreen-overlay .fs-panel h3 { margin: 0 0 0.75rem; }
+    .fullscreen-overlay .fs-panel ul { margin: 0; padding-left: 1.25rem; font-size: 0.9rem; line-height: 1.6; }
+    .fullscreen-overlay .fs-panel li { margin: 0.5rem 0; }
+    .fs-close {
+      position: absolute; top: 1rem; right: 1.5rem; z-index: 1001;
+      background: #ef4444; color: #fff; border: none; padding: 0.5rem 1rem;
+      border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 600;
+    }
+    .fs-close:hover { background: #dc2626; }
+  </style>
+</head>
+<body id="top">
+  <a href="#top" class="naar-boven" title="Naar boven">↑ Naar boven</a>
+
+<div class="betrouwbaarheid-banner betrouwbaarheid-banner--oranje">
+    <span class="betrouwbaarheid-banner-icon">&#9679;</span>
+    <div><strong>Gestructureerd</strong> Deze netwerkgrafiek toont verbindingen tussen partijen en BBV-taakvelden op basis van AI-geselecteerde standpunten. De citaten zijn verifieerbaar; de groepering is geautomatiseerd.</div>
+  </div>
+
+  <nav class="subpage-nav" aria-label="Secties">
+    <a href="index.html" class="subnav-link subnav-overzicht">← Overzicht</a> · <a href="zoek.html" class="subnav-link">Zoeken</a> · <a href="samenvatting.html" class="subnav-link">Samenvatting</a> · <a href="issues.html" class="subnav-link">Issues</a> · <a href="themas.html" class="subnav-link">Thema&#x27;s</a> · <span class="subnav-current">Netwerk</span> · <a href="ambtelijk.html" class="subnav-link">Ambt. organisatie</a> · <a href="taakveld.html" class="subnav-link">Per taakveld</a> · <a href="spectrum.html" class="subnav-link">Spectrum</a> · <a href="partijen.html" class="subnav-link">Volledige programma&#x27;s</a>
+  </nav>
+
+  <section class="sectie sectie-tile">
+    <h2>Partijen en BBV-taakvelden</h2>
+    <p class="sectie-intro">Beweeg over een lijn voor standpunten. Klik om vast te zetten. Filter op taakveld om overlap te zien.</p>
+
+    <div class="netwerk-filters" id="filters">
+      <button type="button" class="netwerk-filter-btn active" data-taakveld="">Alles</button>
+    </div>
+
+    <div class="netwerk-container">
+      <div class="netwerk-layout">
+        <div style="position:relative;">
+          <div id="cy"></div>
+          <button class="popout-btn" id="popout-btn" title="Volledig scherm">⛶ Volledig scherm</button>
+        </div>
+        <aside class="netwerk-panel" id="panel">
+          <button class="unpin-btn" id="unpin-btn" title="Loslaten">✕ loslaten</button>
+          <h3 id="panel-title">Beweeg over een lijn</h3>
+          <div id="panel-body"><p class="empty">Hover over een verbinding tussen partij en taakveld om standpunten te zien.</p></div>
+        </aside>
+      </div>
+    </div>
+    <p class="netwerk-hint">💡 Sleep nodes om het netwerk te herschikken · Hover over lijn = preview · Klik = vastzetten · ⛶ = volledig scherm</p>
+  </section>
+
+  <div class="fullscreen-overlay" id="fs-overlay">
+    <button class="fs-close" id="fs-close">✕ Sluiten</button>
+    <div class="fs-grid">
+      <div id="cy-fs"></div>
+      <aside class="fs-panel" id="fs-panel">
+        <h3 id="fs-panel-title">Beweeg over een lijn</h3>
+        <div id="fs-panel-body"><p class="empty">Hover over een verbinding om standpunten te zien.</p></div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="disclaimer">
+    <strong>Over deze analyse</strong> — Dit overzicht is geautomatiseerd samengesteld. De bronprogramma's en uw eigen oordeel blijven leidend.
+  </footer>
+
+  <script>
+(function() {
+  function slug(naam) {
+    return naam.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[-\s]+/g, '-').replace(/^-|-$/g, '') || 'partij';
+  }
+  function escapeHtml(s) {
+    var div = document.createElement('div');
+    div.textContent = s;
+    return div.innerHTML;
+  }
+
+  var pinned = false;
+  var fsCy = null;
+
+  fetch('partij_teksten/netwerk_graph.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var linkDetails = data.link_details || {};
+      var taakvelden = data.taakvelden || [];
+
+      var filterEl = document.getElementById('filters');
+      taakvelden.forEach(function(tv) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'netwerk-filter-btn';
+        btn.dataset.taakveld = tv;
+        btn.textContent = tv;
+        filterEl.appendChild(btn);
+      });
+
+      var elements = [];
+      data.elements.forEach(function(el, i) {
+        var d = el.data;
+        if (d.source !== undefined) {
+          elements.push({ group: 'edges', data: { id: 'e' + i, source: d.source, target: d.target, value: d.value || 1 } });
+        } else {
+          elements.push({ group: 'nodes', data: d });
+        }
+      });
+
+      var cyStyle = [
+        {
+          selector: 'node[group=1]',
+          style: {
+            'label': 'data(label)', 'background-color': '#4f46e5', 'color': '#fff',
+            'text-valign': 'center', 'text-halign': 'center', 'font-size': '10px',
+            'width': 'data(size)', 'height': 'data(size)', 'text-max-width': '80px',
+            'text-wrap': 'ellipsis', 'border-width': 2, 'border-color': '#312e81',
+            'text-outline-width': 2, 'text-outline-color': '#312e81'
+          }
+        },
+        {
+          selector: 'node[group=2]',
+          style: {
+            'label': 'data(label)', 'background-color': '#059669', 'color': '#fff',
+            'text-valign': 'center', 'text-halign': 'center', 'font-size': '9px',
+            'width': 'data(size)', 'height': 'data(size)', 'shape': 'round-rectangle',
+            'text-max-width': '140px', 'text-wrap': 'wrap', 'line-height': '1.3',
+            'border-width': 2, 'border-color': '#065f46',
+            'text-outline-width': 1.5, 'text-outline-color': '#065f46'
+          }
+        },
+        {
+          selector: 'edge',
+          style: {
+            'width': 'mapData(value, 1, 20, 1.5, 5)', 'line-color': '#cbd5e1',
+            'curve-style': 'bezier', 'opacity': 0.6,
+            'transition-property': 'line-color, opacity, width',
+            'transition-duration': '150ms'
+          }
+        },
+        {
+          selector: 'edge.hover',
+          style: { 'line-color': '#6366f1', 'opacity': 1, 'width': 'mapData(value, 1, 20, 3, 8)', 'z-index': 10 }
+        },
+        {
+          selector: 'edge.pinned',
+          style: { 'line-color': '#4f46e5', 'opacity': 1, 'width': 'mapData(value, 1, 20, 3, 8)', 'z-index': 10 }
+        }
+      ];
+
+      var cyStyleDark = JSON.parse(JSON.stringify(cyStyle));
+      cyStyleDark[0].style['text-outline-color'] = '#1e1b4b';
+      cyStyleDark[1].style['text-outline-color'] = '#064e3b';
+      cyStyleDark[2].style['line-color'] = '#475569';
+
+      var layoutOpts = { name: 'cose', animate: 'end', nodeRepulsion: 8000, animationDuration: 600 };
+
+      function buildPanel(edge, targetCy) {
+        var src = edge.data('source');
+        var tgt = edge.data('target');
+        var srcNode = targetCy.getElementById(src);
+        var isPartijFirst = srcNode.data('group') === 1;
+        var partij = isPartijFirst ? src : tgt;
+        var taakveld = isPartijFirst ? tgt : src;
+        var key = partij + '|' + taakveld;
+        var standpunten = linkDetails[key] || [];
+
+        var titleHtml = escapeHtml(partij) + ' → ' + escapeHtml(taakveld);
+        var bodyHtml = '';
+        if (standpunten.length) {
+          bodyHtml = '<ul>' + standpunten.map(function(s) { return '<li>' + escapeHtml(s) + '</li>'; }).join('') + '</ul>';
+        } else {
+          bodyHtml = '<p class="empty">Geen standpunten in samenvatting.</p>';
+        }
+        bodyHtml += '<a href="partijen.html?zoek=' + encodeURIComponent(standpunten[0] ? standpunten[0].split(' ').slice(0,5).join(' ') : partij) + '#partij-' + slug(partij) + '" class="link-to-partij">→ Zoek in programma ' + escapeHtml(partij) + '</a>';
+        return { title: titleHtml, body: bodyHtml };
+      }
+
+      function updatePanel(content, isPinned, isFullscreen) {
+        var prefix = isFullscreen ? 'fs-' : '';
+        var titleEl = document.getElementById(prefix + 'panel-title');
+        var bodyEl = document.getElementById(prefix + 'panel-body');
+        var panelEl = document.getElementById(isFullscreen ? 'fs-panel' : 'panel');
+        titleEl.innerHTML = content.title;
+        bodyEl.innerHTML = content.body;
+        if (!isFullscreen) {
+          var statusHtml = isPinned ?
+            ' <span class="panel-status pinned">📌 vastgezet</span>' :
+            ' <span class="panel-status hover">👆 hover</span>';
+          titleEl.innerHTML += statusHtml;
+          panelEl.classList.toggle('pinned', isPinned);
+        }
+      }
+
+      function clearPanel(isFullscreen) {
+        var prefix = isFullscreen ? 'fs-' : '';
+        document.getElementById(prefix + 'panel-title').textContent = 'Beweeg over een lijn';
+        document.getElementById(prefix + 'panel-body').innerHTML = '<p class="empty">Hover over een verbinding om standpunten te zien.</p>';
+        if (!isFullscreen) document.getElementById('panel').classList.remove('pinned');
+      }
+
+      function attachEvents(targetCy, isFullscreen) {
+        var localPinned = false;
+
+        targetCy.on('mouseover', 'edge', function(evt) {
+          if (localPinned) return;
+          targetCy.edges().removeClass('hover');
+          evt.target.addClass('hover');
+          var content = buildPanel(evt.target, targetCy);
+          updatePanel(content, false, isFullscreen);
+        });
+
+        targetCy.on('mouseout', 'edge', function(evt) {
+          if (localPinned) return;
+          evt.target.removeClass('hover');
+          clearPanel(isFullscreen);
+        });
+
+        targetCy.on('tap', 'edge', function(evt) {
+          targetCy.edges().removeClass('hover pinned');
+          evt.target.addClass('pinned');
+          localPinned = true;
+          if (!isFullscreen) pinned = true;
+          var content = buildPanel(evt.target, targetCy);
+          updatePanel(content, true, isFullscreen);
+        });
+
+        targetCy.on('tap', 'node', function(evt) {
+          if (evt.target.data('group') === 1) {
+            window.location.href = 'partijen.html#partij-' + slug(evt.target.data('id'));
+          }
+        });
+
+        targetCy.on('tap', function(evt) {
+          if (evt.target === targetCy) {
+            targetCy.edges().removeClass('hover pinned');
+            localPinned = false;
+            if (!isFullscreen) pinned = false;
+            clearPanel(isFullscreen);
+          }
+        });
+
+        if (!isFullscreen) {
+          document.getElementById('unpin-btn').onclick = function() {
+            targetCy.edges().removeClass('hover pinned');
+            localPinned = false;
+            pinned = false;
+            clearPanel(false);
+          };
+        }
+      }
+
+      var cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements: elements,
+        style: cyStyle,
+        layout: layoutOpts
+      });
+      attachEvents(cy, false);
+
+      // Filters
+      document.getElementById('filters').addEventListener('click', function(e) {
+        var btn = e.target.closest('.netwerk-filter-btn');
+        if (!btn) return;
+        document.querySelectorAll('.netwerk-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var tv = btn.dataset.taakveld;
+        if (!tv) {
+          cy.elements().show();
+        } else {
+          var tvNode = cy.nodes().filter(function(n) { return n.data('id') === tv; }).first();
+          cy.elements().hide();
+          if (tvNode.length) tvNode.add(tvNode.closedNeighborhood()).show();
+        }
+        cy.layout(layoutOpts).run();
+      });
+
+      // Fullscreen
+      document.getElementById('popout-btn').onclick = function() {
+        var overlay = document.getElementById('fs-overlay');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        if (fsCy) { fsCy.destroy(); }
+        fsCy = cytoscape({
+          container: document.getElementById('cy-fs'),
+          elements: JSON.parse(JSON.stringify(elements)),
+          style: cyStyleDark,
+          layout: layoutOpts
+        });
+        attachEvents(fsCy, true);
+      };
+
+      document.getElementById('fs-close').onclick = function() {
+        document.getElementById('fs-overlay').classList.remove('active');
+        document.body.style.overflow = '';
+        if (fsCy) { fsCy.destroy(); fsCy = null; }
+      };
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && document.getElementById('fs-overlay').classList.contains('active')) {
+          document.getElementById('fs-close').click();
+        }
+      });
+    })
+    .catch(function(err) {
+      document.getElementById('cy').innerHTML = '<p style="padding:2rem;color:#dc2626;">Kon netwerkdata niet laden.</p>';
+      console.error(err);
+    });
+})();
+  </script>
+</body>
+</html>

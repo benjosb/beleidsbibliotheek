@@ -1,17 +1,46 @@
 #!/bin/bash
 # ─────────────────────────────────────────────────
 # BeleidsWijzer — Deploy naar VPS
-# Eén druk op de knop: wassenaar → productie
 # ─────────────────────────────────────────────────
+#
+# Gebruik:
+#   ./deploy.sh                  → deploy naar ACCEPTATIE
+#   ./deploy.sh "korte notitie"  → idem, met notitie in deploy-log
+#
+# Workflow:
+#   1. Git commit + push (automatische backup)
+#   2. Upload bestanden naar ACC op VPS
+#   3. Regel toevoegen aan docs/deploy-log.md
+#
+# Productie-deploy gaat NIET via dit script.
+# Gebruik promote-to-prod.sh op de VPS (Ricardo).
+# ─────────────────────────────────────────────────
+
+set -euo pipefail
 
 VPS_HOST="187.77.93.148"
 VPS_USER="root"
-VPS_PATH="/var/www/wassenaar.besluit-wijzer.nl"
+SSH_KEY="$HOME/.ssh/id_vps"
+SSH_OPTS="-o StrictHostKeyChecking=no -i $SSH_KEY"
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LOCAL_DIR="$SCRIPT_DIR/wassenaar"
 
-DEPLOY_FILES=(
+ENV_NAAM="ACCEPTATIE"
+VPS_PATH="/var/www/wassenaar.besluit-wijzer.nl"
+SITE_URL="https://wassenaar.besluit-wijzer.nl"
+EXCLUDE_FILES=("")
+
+DEPLOY_NOTITIE="${1:-}"
+VERSIE=$(cat "$SCRIPT_DIR/VERSION" 2>/dev/null | tr -d '[:space:]' || echo "0.0.0")
+
+# ─── Auto patch-versie bump ───
+IFS='.' read -r V_MAJOR V_MINOR V_PATCH <<< "$VERSIE"
+V_PATCH=$((V_PATCH + 1))
+VERSIE="${V_MAJOR}.${V_MINOR}.${V_PATCH}"
+echo "$VERSIE" > "$SCRIPT_DIR/VERSION"
+
+ALL_FILES=(
     index.html
     app.js
     styles.css
@@ -25,10 +54,23 @@ DEPLOY_FILES=(
     coalitieakkoord.js
     voorstel.html
     beheer.html
+    werklijst-reacties.html
+    wijzigingen.html
     sw.js
     manifest.webmanifest
     pwa-register.js
+    reactie.html
 )
+
+# Filter excludes
+DEPLOY_FILES=()
+for f in "${ALL_FILES[@]}"; do
+    skip=false
+    for ex in "${EXCLUDE_FILES[@]}"; do
+        [ "$f" = "$ex" ] && skip=true
+    done
+    $skip || DEPLOY_FILES+=("$f")
+done
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -37,10 +79,32 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 echo ""
-echo -e "${BLUE}╔══════════════════════════════════════════╗${NC}"
-echo -e "${BLUE}║   BeleidsWijzer — Deploy naar productie  ║${NC}"
-echo -e "${BLUE}║   wassenaar.besluit-wijzer.nl             ║${NC}"
-echo -e "${BLUE}╚══════════════════════════════════════════╝${NC}"
+echo -e "${BLUE}╔══════════════════════════════════════════════════╗${NC}"
+echo -e "${BLUE}║   BeleidsWijzer — Deploy ${ENV_NAAM}${NC}"
+printf "${BLUE}║   %-47s║${NC}\n" "$SITE_URL"
+echo -e "${BLUE}║   Versie: ${VERSIE}${NC}"
+echo -e "${BLUE}╚══════════════════════════════════════════════════╝${NC}"
+echo ""
+
+# ─── Git backup ───
+echo -e "${YELLOW}Git backup...${NC}"
+cd "$SCRIPT_DIR"
+if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    git add -A
+    if ! git diff --staged --quiet 2>/dev/null; then
+        git commit -m "Deploy v${VERSIE} naar ACC — $(date +%Y-%m-%d)"
+        echo -e "  ${GREEN}✓${NC} Commit aangemaakt"
+        if git remote get-url origin > /dev/null 2>&1; then
+            git push origin main 2>/dev/null && echo -e "  ${GREEN}✓${NC} Push naar GitHub" \
+                || echo -e "  ${YELLOW}⚠${NC} Push mislukt (niet blokkerend)"
+        fi
+    else
+        echo -e "  ${GREEN}✓${NC} Geen wijzigingen — al up-to-date"
+    fi
+else
+    echo -e "  ${YELLOW}⚠${NC} Geen git repo gevonden (overgeslagen)"
+fi
+cd "$LOCAL_DIR"
 echo ""
 
 missing=()
@@ -82,21 +146,31 @@ pkg_size=$(wc -c < "$TMPTAR" | tr -d ' ')
 echo -e "  Pakket: $((pkg_size / 1024)) KB (gecomprimeerd)"
 echo ""
 echo -e "${YELLOW}Uploaden en uitpakken op VPS...${NC}"
-echo -e "${BLUE}→ Je wordt één keer om het VPS-wachtwoord gevraagd.${NC}"
 echo ""
 
-scp -o StrictHostKeyChecking=no "$TMPTAR" "${VPS_USER}@${VPS_HOST}:/tmp/_bw_deploy.tar.gz" \
-    && ssh -o StrictHostKeyChecking=no "${VPS_USER}@${VPS_HOST}" \
+scp $SSH_OPTS "$TMPTAR" "${VPS_USER}@${VPS_HOST}:/tmp/_bw_deploy.tar.gz" \
+    && ssh $SSH_OPTS "${VPS_USER}@${VPS_HOST}" \
         "tar -xzf /tmp/_bw_deploy.tar.gz -C ${VPS_PATH} && rm /tmp/_bw_deploy.tar.gz && echo 'OK'"
 
 if [ $? -eq 0 ]; then
     echo ""
     echo -e "${GREEN}══════════════════════════════════════════${NC}"
-    echo -e "${GREEN}  Klaar! ${#DEPLOY_FILES[@]} bestanden live.${NC}"
-    echo -e "${GREEN}  https://wassenaar.besluit-wijzer.nl${NC}"
+    echo -e "${GREEN}  Klaar! ${#DEPLOY_FILES[@]} bestanden live (${ENV_NAAM}).${NC}"
+    echo -e "${GREEN}  ${SITE_URL}${NC}"
     echo -e "${GREEN}══════════════════════════════════════════${NC}"
+
+    # ─── Deploy-log bijwerken ───
+    DEPLOY_LOG="$SCRIPT_DIR/docs/deploy-log.md"
+    DATUM_LOG=$(date +"%Y-%m-%d %H:%M")
+    NOTITIE_KOLOM="${DEPLOY_NOTITIE:-—}"
+    if [ -f "$DEPLOY_LOG" ]; then
+        echo "| ${DATUM_LOG} | ${VERSIE} | ACC | Dick | ${NOTITIE_KOLOM} |" >> "$DEPLOY_LOG"
+        echo -e "  ${GREEN}✓${NC} Deploy-log bijgewerkt"
+    fi
 else
     echo ""
     echo -e "${RED}Deploy mislukt. Controleer wachtwoord en verbinding.${NC}"
 fi
+echo ""
+echo -e "${YELLOW}  Vergeet niet: Cmd+Shift+R in de browser.${NC}"
 echo ""

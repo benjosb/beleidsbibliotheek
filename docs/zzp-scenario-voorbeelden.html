@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scenario’s: omzet, uren en fiscale ordegrootte (voorbeeld)</title>
+  <style>
+    :root {
+      --bg: #f6f4f1;
+      --card: #fff;
+      --ink: #1a1a1a;
+      --muted: #5c5c5c;
+      --accent: #0d5c4a;
+      --warn: #8a4b00;
+      --border: #e0dcd4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--bg);
+      margin: 0;
+      padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 3rem;
+      max-width: 56rem;
+      margin-inline: auto;
+    }
+    h1 { font-size: 1.45rem; font-weight: 650; margin: 0 0 0.35rem; }
+    .sub { color: var(--muted); font-size: 0.95rem; margin: 0 0 1.25rem; }
+    h2 { font-size: 1.05rem; margin: 1.75rem 0 0.6rem; color: var(--accent); }
+    p { margin: 0.5rem 0; }
+    .disclaimer {
+      background: #fff8e8;
+      border: 1px solid #f0d9a8;
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+      color: #3d3200;
+    }
+    .assumptions {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .assumptions ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+    .assumptions li { margin: 0.25rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0.75rem 0 1.5rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th { background: #eef5f2; font-weight: 600; }
+    tr:last-child td { border-bottom: none; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .scenario {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.15rem 1.15rem;
+      margin: 1rem 0;
+    }
+    .scenario h3 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: #e8f0ed;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .note { font-size: 0.88rem; color: var(--muted); margin-top: 0.65rem; }
+    footer { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); }
+    code { font-size: 0.88em; background: #eee; padding: 0.1em 0.35em; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <h1>Scenario’s: uren, omzet en belasting (voorbeeldberekening)</h1>
+  <p class="sub">Statische schattingen om ordegrootte te zien — niet geschikt als advies.</p>
+
+  <div class="disclaimer">
+    <strong>Let op.</strong> Dit is géén belasting- of juridisch advies. De Belastingdienst en je accountant bepalen wat bij jouw situatie klopt (loon naast onderneming, urencriterium, echte kosten, schijven, premies, 2025 vs 2026-regels). Cijfers hieronder zijn <em>puur illustratief</em>.
+  </div>
+
+  <div class="assumptions">
+    <strong>Aannames in deze pagina</strong>
+    <ul>
+      <li><strong>Facturabele tijd</strong> = de uren die je in het scenario aan opdrachten besteedt.</li>
+      <li><strong>Tarief:</strong> €50 per uur <strong>excl. BTW</strong> (vergelijkbaar met ± €400 per 8-uursdag).</li>
+      <li><strong>Kosten:</strong> 15% van de omzet (excl. BTW) als eenvoudige proxy voor reizen, software, boekhouder, klein materiaal — aanpasbaar in je eigen model.</li>
+      <li><strong>Inkomstenbelasting (IB):</strong> ordegrootte met een <strong>vast testtarief van 45%</strong> over de winst ná ondernemersaftrek. In de praktijk kan jouw marginale tarief lager of hoger zijn (zeker naast een hoog salaris).</li>
+      <li><strong>Zelfstandigenaftrek 2026:</strong> €1.200 als je aan het urencriterium voldoet — hieronder per scenario een <em>indicatie</em> of dat aannemelijk is (1225 uur totaal aan de onderneming per jaar).</li>
+      <li><strong>BTW</strong> laat je buiten de winst: je brengt die op de factuur en verrekent die met de Belastingdienst; ze hoort niet bij “netto uit onderneming” zoals hier geschat.</li>
+    </ul>
+  </div>
+
+  <h2>Overzicht drie scenario’s</h2>
+  <p>Jouw keuze: scenario 1 = <strong>50 uur</strong>, scenario 2 = <strong>250 uur</strong>, scenario 3 = <strong>2000 uur</strong> factureerbaar. (Als je “50 dagen” bedoelt tegen 8 uur per dag, is dat ongeveer <strong>400 uur</strong> — geen 2000 uur.)</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Scenario</th>
+        <th class="num">Uren (factuur)</th>
+        <th class="num">Omzet excl. BTW</th>
+        <th class="num">Kosten (15%)</th>
+        <th class="num">Winst vóór ondernemersaftrek</th>
+        <th>Zelfstandigenaftrek (indicatie)</th>
+        <th class="num">Winst na aftrek</th>
+        <th class="num">IB ca. 45%</th>
+        <th class="num">Geschat netto uit onderneming</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1 — Opstart</strong></td>
+        <td class="num">50</td>
+        <td class="num">€ 2.500</td>
+        <td class="num">€ 375</td>
+        <td class="num">€ 2.125</td>
+        <td>Meestal <strong>nee</strong> (totaal uren onderneming &lt; 1225)</td>
+        <td class="num">€ 2.125</td>
+        <td class="num">€ 956</td>
+        <td class="num"><strong>€ 1.169</strong></td>
+      </tr>
+      <tr>
+        <td><strong>2 — Groei beperkt</strong></td>
+        <td class="num">250</td>
+        <td class="num">€ 12.500</td>
+        <td class="num">€ 1.875</td>
+        <td class="num">€ 10.625</td>
+        <td>Vaak <strong>nee</strong> tenzij je veel niet‑factureerbare ondernemersuren bijtelt</td>
+        <td class="num">€ 10.625</td>
+        <td class="num">€ 4.781</td>
+        <td class="num"><strong>€ 5.844</strong></td>
+      </tr>
+      <tr>
+        <td><strong>3 — Veel uren</strong></td>
+        <td class="num">2.000</td>
+        <td class="num">€ 100.000</td>
+        <td class="num">€ 15.000</td>
+        <td class="num">€ 85.000</td>
+        <td><strong>Mogelijk ja</strong> als totaal ondernemingsuren ≥ 1225 (hier vaak wel)</td>
+        <td class="num">€ 83.800</td>
+        <td class="num">€ 37.710</td>
+        <td class="num"><strong>€ 46.090</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="note">Rij “Winst na aftrek”: scenario 3 trekt €1.200 zelfstandigenaftrek af (bedrag 2026 volgens wetgever; voordeel in de praktijk kan door extra regels beperkt zijn — zie Belastingdienst).</p>
+
+  <h2>Toelichting per scenario</h2>
+
+  <div class="scenario">
+    <span class="tag">Scenario 1</span>
+    <h3>50 uur (~5 dagen van 10 uur, of ~6¼ dag van 8 uur)</h3>
+    <p>Omzet blijft klein; met 15% kosten blijft er nog steeds een netto‑orde van <strong>ruim €1.000</strong> over bij 45% IB — maar je echte tarief, kosten en schijf bepalen het echte beeld.</p>
+    <p class="note">Voor het urencriterium telt <em>alle</em> tijd voor je onderneming (admin, acquisitie, product). Alleen 50 factureerbare uren is vrijwel nooit genoeg voor 1225 uur totaal.</p>
+  </div>
+
+  <div class="scenario">
+    <span class="tag">Scenario 2</span>
+    <h3>250 uur (~31 dagen van 8 uur factureerbaar)</h3>
+    <p>Ordegrootte <strong>~€5.800 netto</strong> uit de onderneming bij deze aannames — vergelijkbaar met “serieuze bijverdienste”, nog steeds afhankelijk van je loon en marginale tarief.</p>
+    <p class="note">250 factureerbare uren per jaar = gemiddeld nog geen dag per week. Zonder veel extra niet‑factureerbare ondernemersuren haal je 1225 uur meestal niet.</p>
+  </div>
+
+  <div class="scenario">
+    <span class="tag">Scenario 3</span>
+    <h3>2000 uur factureerbaar (bijna fulltime verkoopbare tijd)</h3>
+    <p>Omzetorde <strong>€100k excl. BTW</strong> — dat is een andere fiscale en administratieve schaal dan scenario 1 en 2. Het IB‑bedrag wordt in de praktijk sterk beïnvloed door je <strong>salaris</strong> en totale box‑1‑inkomen.</p>
+    <p class="note">Als “2000 uur” alleen factureerbare tijd is en je er weinig administratie bij doet, moet je alsnog aantonen dat je <strong>totaal ≥ 1225 uur</strong> aan de onderneming besteedt. Startersaftrek en andere regels zijn hier niet meegenomen.</p>
+  </div>
+
+  <h2>Snel herrekenen</h2>
+  <p><strong>Omzet excl. BTW</strong> = uren × €50. <strong>Winst vóór aftrek</strong> ≈ omzet × 0,85. <strong>IB‑golf</strong> ≈ (winst − eventuele €1.200) × 0,45. Pas het tarief (€50/u) of kostenpercentage aan in je hoofd om andere uitkomsten te voelen.</p>
+
+  <footer>
+    Bestand: <code>docs/zzp-scenario-voorbeelden.html</code> — alleen ter illustratie. Voor beslissingen: accountant of belastingadviseur.
+  </footer>
+
+</body>
+</html>

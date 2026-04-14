@@ -1,0 +1,32 @@
+---
+description: Sessie-continuïteit via STATUS.md
+globs:
+alwaysApply: true
+---
+
+# Sessie-continuïteit
+
+## Bij START van elke sessie
+
+1. Lees `STATUS.md` in de projectroot
+2. Vat kort samen waar we gebleven zijn
+3. Ga door — GEEN vragen stellen die in STATUS.md staan
+
+## Bij EINDE van elke sessie
+
+Werk `STATUS.md` bij met:
+- **Laatste sessie:** datum
+- **Wat er gedaan is** (deze sessie)
+- **Volgende stap** (concreet, actionable)
+- **Blokkades** (als die er zijn)
+- **Openstaande backlog** (top 3 uit BACKLOG.md)
+
+## Bij "verder" of "doorgaan"
+
+Lees STATUS.md → vat samen → werk door. Geen transcripten doorlezen tenzij STATUS.md ontbreekt of verouderd is.
+
+## Eerdere chats zoeken (alleen als Dick erom vraagt)
+
+Dick heeft `chats` in zijn terminal:
+- `chats` — laatste 7 dagen
+- `chats zoek <term>` — zoek in chatinhoud

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werklijst Reacties · BeleidsBibliotheek Wassenaar</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#55601c">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        .wl-wrap { max-width: 960px; margin: 0 auto; padding: 1rem 0 3rem; }
+        .wl-stats { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+        .wl-stat { padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.82rem; font-weight: 600; background: #f5f5f7; }
+        .wl-stat-nieuw { background: #fff3e0; color: #e65100; }
+        .wl-stat-behandeling { background: #e3f2fd; color: #1565c0; }
+        .wl-stat-afgehandeld { background: #e8f5e9; color: #2e7d32; }
+        .wl-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .wl-filter { padding: 0.35rem 0.8rem; border-radius: 16px; font-size: 0.8rem; border: 1px solid #ccc; background: #f9f9f9; cursor: pointer; font-family: inherit; }
+        .wl-filter.active { background: #e65100; color: #fff; border-color: #e65100; }
+        .wl-tabel { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        .wl-tabel th { text-align: left; padding: 0.6rem 0.5rem; border-bottom: 2px solid #d2d2d7; font-weight: 600; font-size: 0.8rem; color: #555; }
+        .wl-tabel td { padding: 0.55rem 0.5rem; border-bottom: 1px solid #eee; vertical-align: top; }
+        .wl-tabel tr:hover td { background: #fafafa; }
+        .wl-type { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+        .wl-type-link { background: #e8f0fe; color: #1a56db; }
+        .wl-type-ontbreekt { background: #fff3e0; color: #e65100; }
+        .wl-type-hoort-niet { background: #fde8e8; color: #c81e1e; }
+        .wl-type-overig { background: #f3e5f5; color: #7b1fa2; }
+        .wl-detail { font-size: 0.8rem; color: #555; margin-top: 0.2rem; line-height: 1.4; }
+        .wl-datum { font-size: 0.78rem; color: #888; white-space: nowrap; }
+        .wl-status-select { font-size: 0.8rem; padding: 0.25rem 0.4rem; border-radius: 4px; border: 1px solid #ccc; font-family: inherit; }
+        .wl-eigenaar-select { font-size: 0.8rem; padding: 0.25rem 0.4rem; border-radius: 4px; border: 1px solid #ccc; font-family: inherit; }
+        .wl-geen { text-align: center; padding: 2rem; color: #999; font-size: 0.9rem; }
+        .wl-refresh { padding: 0.4rem 1rem; font-size: 0.82rem; border: 1px solid #ccc; border-radius: 6px; background: #fff; cursor: pointer; font-family: inherit; }
+        .wl-refresh:hover { background: #f5f5f5; }
+        .wl-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; }
+        @media (max-width: 700px) {
+            .wl-tabel, .wl-tabel thead, .wl-tabel tbody, .wl-tabel th, .wl-tabel td, .wl-tabel tr { display: block; }
+            .wl-tabel thead { display: none; }
+            .wl-tabel tr { margin-bottom: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; padding: 0.5rem; }
+            .wl-tabel td { border: none; padding: 0.25rem 0.5rem; }
+            .wl-tabel td::before { content: attr(data-label); font-weight: 600; font-size: 0.75rem; color: #888; display: block; }
+        }
+    </style>
+</head>
+<body>
+    <script src="disclaimer.js"></script>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link" aria-label="Gemeente Wassenaar">
+                <img src="wassenaar_logo_fc%20kopie.svg" alt="Gemeente Wassenaar" class="site-logo">
+            </a>
+            <div class="header-text">
+                <h1><a href="index.html" class="header-title-link">BeleidsBibliotheek Wassenaar</a></h1>
+                <p class="subtitle">Werklijst Reacties</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="wl-wrap">
+            <div class="wl-header">
+                <h2 style="margin:0; font-size:1.15rem;">Binnengekomen reacties</h2>
+                <button class="wl-refresh" onclick="laadReacties()">Ververs</button>
+            </div>
+
+            <div class="wl-stats" id="wlStats"></div>
+            <div class="wl-filters" id="wlFilters">
+                <button class="wl-filter active" data-filter="alle" onclick="setFilter('alle',this)">Alle</button>
+                <button class="wl-filter" data-filter="nieuw" onclick="setFilter('nieuw',this)">Nieuw</button>
+                <button class="wl-filter" data-filter="in behandeling" onclick="setFilter('in behandeling',this)">In behandeling</button>
+                <button class="wl-filter" data-filter="afgehandeld" onclick="setFilter('afgehandeld',this)">Afgehandeld</button>
+            </div>
+
+            <table class="wl-tabel">
+                <thead>
+                    <tr>
+                        <th style="width:90px">Datum</th>
+                        <th style="width:100px">Type</th>
+                        <th>Sectie / Document</th>
+                        <th style="width:110px">Status</th>
+                        <th style="width:100px">Wie</th>
+                    </tr>
+                </thead>
+                <tbody id="wlBody"></tbody>
+            </table>
+            <div class="wl-geen" id="wlGeen" style="display:none">Geen reacties gevonden.</div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><a href="index.html" class="footer-link-btn">Terug naar overzicht</a></p>
+        </div>
+    </footer>
+
+    <script>
+    var REACTIES = [];
+    var LOKALE_STATUS = JSON.parse(localStorage.getItem('wl_reactie_status') || '{}');
+    var huidigFilter = 'alle';
+
+    var API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+        ? 'http://127.0.0.1:5050/api' : 'https://api.besluit-wijzer.nl/api';
+
+    function parseExtra(extra) {
+        var r = { type: '', pagina: '', sectie: '', document: '', toelichting: '' };
+        if (!extra) return r;
+        var lines = extra.split('\n');
+        var inToelichting = false;
+        var toelLines = [];
+        for (var i = 0; i < lines.length; i++) {
+            var line = lines[i];
+            if (line.indexOf('Type: ') === 0) r.type = line.substring(6);
+            else if (line.indexOf('Pagina: ') === 0) r.pagina = line.substring(8);
+            else if (line.indexOf('Sectie: ') === 0) r.sectie = line.substring(8);
+            else if (line.indexOf('Document: ') === 0) r.document = line.substring(10);
+            else if (inToelichting || line.trim() !== '') { inToelichting = true; toelLines.push(line); }
+        }
+        r.toelichting = toelLines.join('\n').trim();
+        return r;
+    }
+
+    function getLokaal(id) {
+        return LOKALE_STATUS[id] || { status: 'nieuw', eigenaar: '' };
+    }
+    function setLokaal(id, key, val) {
+        if (!LOKALE_STATUS[id]) LOKALE_STATUS[id] = { status: 'nieuw', eigenaar: '' };
+        LOKALE_STATUS[id][key] = val;
+        localStorage.setItem('wl_reactie_status', JSON.stringify(LOKALE_STATUS));
+        renderStats();
+    }
+
+    function typeClass(type) {
+        if (!type) return 'wl-type-overig';
+        var t = type.toLowerCase();
+        if (t.indexOf('link') >= 0) return 'wl-type-link';
+        if (t.indexOf('ontbreekt') >= 0) return 'wl-type-ontbreekt';
+        if (t.indexOf('hoort') >= 0) return 'wl-type-hoort-niet';
+        return 'wl-type-overig';
+    }
+
+    function formatDatum(iso) {
+        if (!iso) return '';
+        var d = new Date(iso);
+        return d.toLocaleDateString('nl-NL', { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
+    function escHtml(s) {
+        var d = document.createElement('div'); d.textContent = s; return d.innerHTML;
+    }
+
+    async function laadReacties() {
+        try {
+            var r = await fetch(API_BASE + '/beleidsbibliotheek/wassenaar/voorstellen', { cache: 'no-store' });
+            var data = await r.json();
+            REACTIES = (data.items || []).filter(function(item) {
+                return item.titel && item.titel.indexOf('[REACTIE]') === 0;
+            }).sort(function(a, b) {
+                return (b.ingediendOp || '').localeCompare(a.ingediendOp || '');
+            });
+            render();
+        } catch (e) {
+            document.getElementById('wlGeen').style.display = '';
+            document.getElementById('wlGeen').textContent = 'Kan reacties niet laden. Controleer de verbinding.';
+        }
+    }
+
+    function render() {
+        var body = document.getElementById('wlBody');
+        var geen = document.getElementById('wlGeen');
+        var filtered = REACTIES.filter(function(item) {
+            if (huidigFilter === 'alle') return true;
+            return getLokaal(item.id).status === huidigFilter;
+        });
+
+        if (filtered.length === 0) {
+            body.innerHTML = '';
+            geen.style.display = '';
+            geen.textContent = huidigFilter === 'alle' ? 'Nog geen reacties binnengekomen.' : 'Geen reacties met status "' + huidigFilter + '".';
+            return;
+        }
+        geen.style.display = 'none';
+
+        body.innerHTML = filtered.map(function(item) {
+            var p = parseExtra(item.extra);
+            var lok = getLokaal(item.id);
+            var docTekst = p.document && p.document !== '\u2014' ? p.document : '';
+            var toel = p.toelichting ? '<div class="wl-detail">' + escHtml(p.toelichting).substring(0, 200) + '</div>' : '';
+
+            return '<tr>'
+                + '<td data-label="Datum"><span class="wl-datum">' + formatDatum(item.ingediendOp) + '</span></td>'
+                + '<td data-label="Type"><span class="wl-type ' + typeClass(p.type) + '">' + escHtml(p.type || 'Overig') + '</span></td>'
+                + '<td data-label="Details"><strong>' + escHtml(p.sectie || '—') + '</strong>'
+                    + (docTekst ? '<br>' + escHtml(docTekst) : '')
+                    + toel + '</td>'
+                + '<td data-label="Status"><select class="wl-status-select" onchange="setLokaal(\'' + item.id + '\',\'status\',this.value);render()">'
+                    + '<option value="nieuw"' + (lok.status === 'nieuw' ? ' selected' : '') + '>Nieuw</option>'
+                    + '<option value="in behandeling"' + (lok.status === 'in behandeling' ? ' selected' : '') + '>In behandeling</option>'
+                    + '<option value="afgehandeld"' + (lok.status === 'afgehandeld' ? ' selected' : '') + '>Afgehandeld</option>'
+                + '</select></td>'
+                + '<td data-label="Wie"><select class="wl-eigenaar-select" onchange="setLokaal(\'' + item.id + '\',\'eigenaar\',this.value)">'
+                    + '<option value=""' + (!lok.eigenaar ? ' selected' : '') + '>—</option>'
+                    + '<option value="Erwin"' + (lok.eigenaar === 'Erwin' ? ' selected' : '') + '>Erwin</option>'
+                    + '<option value="Mechteld"' + (lok.eigenaar === 'Mechteld' ? ' selected' : '') + '>Mechteld</option>'
+                    + '<option value="Redactie"' + (lok.eigenaar === 'Redactie' ? ' selected' : '') + '>Redactie</option>'
+                + '</select></td>'
+                + '</tr>';
+        }).join('');
+
+        renderStats();
+    }
+
+    function renderStats() {
+        var nieuw = 0, behandeling = 0, afgehandeld = 0;
+        REACTIES.forEach(function(item) {
+            var s = getLokaal(item.id).status;
+            if (s === 'nieuw') nieuw++;
+            else if (s === 'in behandeling') behandeling++;
+            else if (s === 'afgehandeld') afgehandeld++;
+        });
+        document.getElementById('wlStats').innerHTML =
+            '<span class="wl-stat">Totaal: ' + REACTIES.length + '</span>'
+            + '<span class="wl-stat wl-stat-nieuw">Nieuw: ' + nieuw + '</span>'
+            + '<span class="wl-stat wl-stat-behandeling">In behandeling: ' + behandeling + '</span>'
+            + '<span class="wl-stat wl-stat-afgehandeld">Afgehandeld: ' + afgehandeld + '</span>';
+    }
+
+    function setFilter(f, btn) {
+        huidigFilter = f;
+        document.querySelectorAll('.wl-filter').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        render();
+    }
+
+    laadReacties();
+    </script>
+</body>
+</html>

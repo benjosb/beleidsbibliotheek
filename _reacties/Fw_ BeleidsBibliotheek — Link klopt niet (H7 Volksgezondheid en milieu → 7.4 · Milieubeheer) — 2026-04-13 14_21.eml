@@ -1,0 +1,309 @@
+Return-path: <DBraam@wassenaar.nl>
+Original-recipient: rfc822;dickbraam@me.com
+Received: from p00-icloudmta-smtpin-us-east-2d-60-percent-12 by p175-mailgateway-smtp-76d5fd66d4-btg8t (mailgateway 2614B88)
+	with SMTP id acdddaf8-6431-4e12-9a64-40c5d6dcf731 
+	for <dickbraam@me.com>; Mon, 13 Apr 2026 20:54:40 GMT
+X-ICLOUD-MAIL-BWL: 1
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: WL/INBOX
+X-Apple-UUID: acdddaf8-6431-4e12-9a64-40c5d6dcf731
+Received: from DB3PR0202CU003.outbound.protection.outlook.com (mail-northeuropeazon11020074.outbound.protection.outlook.com [52.101.84.74])
+	by p00-icloudmta-smtpin-us-east-2d-60-percent-12 (Postfix) with ESMTPS id 85C61C00126
+	for <dickbraam@me.com>; Mon, 13 Apr 2026 20:54:34 +0000 (UTC)
+X-ICL-Info: GAtbRVYDBVFFSlVHSgMFUFUKE0oWX1gHVQoPB0UFBExESVdZQAQYVUFZAxNFdHQQFBgLNw9RRREQFwcWCh5YDlUfAkoPUUUREBcHFgoeWA5VCwVKHFlVCRcLBxYVcFsHWxoJGlhYUw4aRCI1S2BkUkdJVDQtAAZRWxYTAxpfQwwRVxYFF0RTAQEQCRlWX0MWGRYJHFZTWQ9VCRIFRV1XCxlUCBgKRF4HAAsJBx1RTA0bSFdHSgAGVUFXCQIMUlkXGx1IBwpfQgcWDQ8YFh5ZFwEVCRgTHlUNGFkCE0VHVxEGHAgWGUIYDBlZCx4cDQolIyE2RkEDeyBHTFdEOwYEVUI7JE88AQNSMDpeRksIciQ0SVRDSnBxNC0pV05LfXRQQEhVWT1lZDJEQFVZKGJ5Jls2MyM0f3kpWzopOkY=
+X-ICL-Score: 2.33303302332
+Authentication-Results: bimi.icloud.com; bimi=none
+X-ARC-Info: policy=pass; arc=pass; id=mx.microsoft.com 1; r1=1; r2=1
+Authentication-Results: arc.icloud.com; arc=pass
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=wassenaar.nl
+X-DMARC-Policy: v=DMARC1; p=reject; pct=100; rua=mailto:dmarc_report@wassenaar.nl,mailto:rapportages@dmarc.ibdgemeenten.nl; ruf=mailto:dmarc_report@wassenaar.nl; fo=1; adkim=r; aspf=r
+X-DMARC-Info: pass=pass; dmarc-policy=reject; s=r1; d=r1; pdomain=wassenaar.nl
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=wassenaar.nl header.i=@wassenaar.nl header.b=UsmP+vq3
+Received-SPF: pass (spf.icloud.com: domain of DBraam@wassenaar.nl designates 52.101.84.74 as permitted sender) receiver=spf.icloud.com; client-ip=52.101.84.74; helo=DB3PR0202CU003.outbound.protection.outlook.com; envelope-from=DBraam@wassenaar.nl
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of DBraam@wassenaar.nl designates 52.101.84.74 as permitted sender) smtp.mailfrom=DBraam@wassenaar.nl
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=c+2ZHZgDl3x/RC9K6oBvkxoEog6yqGUYk97MJN7h/WifkmeirJm8s2oEbtD8B3WeRze30mYCAOUBv3dPQkDDJHfYKTQgus8QUSP67L3sqoGFii/Hlyh9fUIzp0fYC52HrNz1hjPGYkF6XCWYldVKDjv1VqZTwFScAApnJYjG58A2iroizEB2+zQzGzgIYe8qX99H+E5YhKUZo/VT/vtu4ZS1DezDJ+vD4NkELM0Khjggy3yLuUUwnJGBr9EXbiwk6qOOyVr43cfCkKHZWMS/dw+2J7hGr7XI8Bf2WcUh/TMr6nQPuu9vuNUbUrayTDcrsQVCc+4VlaTcxqtYJHsHjQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=64dPJ8zr5fU5J1vXO4cUxSLDf3yeaFsoIM2VPb6TyfY=;
+ b=LhXP3KOGKte/adoYSgWuQJ9vXefAF4PyNqDSmm4cvvI2zvOdpwqKNW/BdFw2Df6gO9SIvqA0O7FqoVaGSJ2lJ5I6kw/uVhJbZc6q0obu5g1QedfbeXtUVhJNMk9H+6SO9LoG0e+gX7gf5EPKX4r5c61LjoLXLUIkkngZE2fkWewk109zOoJF0t9V005t4FIYfvQNoETx4kfDYJJIXS9DE9rX9X07eZyMWoKEPJBxt36ONevVLwlI9yLhZdWEOS/43y8fhU3z6NHPCbGUQySD1sqXIfcHMwCGHGJAPI4OlfNP0Pvn++jFAeaJ8quYhHzupygsmpuQ2M6xr53MEUxAMg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=wassenaar.nl; dmarc=pass action=none header.from=wassenaar.nl;
+ dkim=pass header.d=wassenaar.nl; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wassenaar.nl;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=64dPJ8zr5fU5J1vXO4cUxSLDf3yeaFsoIM2VPb6TyfY=;
+ b=UsmP+vq32UZJUDXfzff7lluMgKkw1jtEz6hga3FcNM6Vv3NbYG2KmhK5DY5BKA11BBHPAj5jF7ax+Zk2g23bcKZkj5V33gsax0AHL66Xk/F5/agnZAm7JR+VUU2NeRKYWzfmVbausDMoejh8St2+FKcEfO2+9B+UHXhTtgJE3us=
+Received: from GVXP193MB2513.EURP193.PROD.OUTLOOK.COM (2603:10a6:150:1d8::20)
+ by PA2P193MB2480.EURP193.PROD.OUTLOOK.COM (2603:10a6:102:41d::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9769.48; Mon, 13 Apr
+ 2026 20:54:29 +0000
+Received: from GVXP193MB2513.EURP193.PROD.OUTLOOK.COM
+ ([fe80::c2e:1383:d935:2a9e]) by GVXP193MB2513.EURP193.PROD.OUTLOOK.COM
+ ([fe80::c2e:1383:d935:2a9e%5]) with mapi id 15.20.9769.046; Mon, 13 Apr 2026
+ 20:54:28 +0000
+From: Dick Braam <DBraam@wassenaar.nl>
+To: Dick Braam <dickbraam@me.com>
+Subject:
+ =?big5?B?Rnc6IEJlbGVpZHNCaWJsaW90aGVlayChWCBMaW5rIGtsb3B0IG5pZXQgKEg3IFZv?=
+ =?big5?B?bGtzZ2V6b25kaGVpZCBlbiBtaWxpZXUgofcgNy40IKFQIE1pbGlldWJlaGVlcikg?=
+ =?big5?B?oVggMjAyNi0wNC0xMyAxNDoyMQ==?=
+Thread-Topic:
+ =?big5?B?QmVsZWlkc0JpYmxpb3RoZWVrIKFYIExpbmsga2xvcHQgbmlldCAoSDcgVm9sa3Nn?=
+ =?big5?B?ZXpvbmRoZWlkIGVuIG1pbGlldSCh9yA3LjQgoVAgTWlsaWV1YmVoZWVyKSChWCAy?=
+ =?big5?Q?026-04-13_14:21?=
+Thread-Index: AdzLQCB8IsD+ByH7QSCLw1qOCNfpAwAR5LN+
+Date: Mon, 13 Apr 2026 20:54:28 +0000
+Message-ID:
+ <GVXP193MB2513C6277BB8D150EC8138DFA0242@GVXP193MB2513.EURP193.PROD.OUTLOOK.COM>
+References:
+ <DB8P193MB0583837444CC2A5528202DBCB8242@DB8P193MB0583.EURP193.PROD.OUTLOOK.COM>
+In-Reply-To:
+ <DB8P193MB0583837444CC2A5528202DBCB8242@DB8P193MB0583.EURP193.PROD.OUTLOOK.COM>
+Accept-Language: nl-NL, en-US
+Content-Language: en-GB
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-reactions: allow
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: GVXP193MB2513:EE_|PA2P193MB2480:EE_
+x-ms-office365-filtering-correlation-id: a39f3a60-2763-4b67-2df2-08de999edadb
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|1800799024|366016|376014|22082099003|8096899003|56012099003|18002099003|38070700021|13003099007;
+x-microsoft-antispam-message-info:
+ fL44tvy/WQIwSrHmGwP9TW+0d5Q33ieW2ZAIedT891Itewum6te+sX3l4k8jDszorsFrjn3jsFNPp37D9WCefZ0o7sDWmpq4ZoMcSLZJr5KCBjlZIsmfg8VunNGcayBHSlkjlqSBtxgGuI+x4DknCQ7rs9/oT/wU8D1K10y7spSTuy99GMdVkz0dLeBQNjHvRrJLkgtEJQm+uPEBnGBEGrkqTPye3OwHafOSbR4fOhpNPEEek/1p5mQJAFOeEbwHdrN8QkUFH/BtN2xjLf90JYXZ87xEpZYFsVfjduMZAQYcPorxeUhQzDY5CNTIF9ts/jgorPCPF375DraYase7nSN3wtVP4rMaY2TCx0oCYfwvl+eT4Yu1ipkAH1bW7xy821Hfu/bHtGTVGJ5P9DDheFqRMcAlszQCBAgIq+hyDzpe2lR9fz5x1oMtUY2rF6f+eTjpPaudfC4tqD+h8FxviiQol0bf1afNnsoB3UiskoFFNU2NNznm9cj8e8s/ML8hprMXz4MNML77Z90nCJ6B9Ff3+JIkb/AZQp3sGauKWgpBHo95OrNmf14QU8+e68x5kKunQv+s3VnjKSJjZESXIQwJiOyj8QhL0+giHkNF7jVG5Paomi5Vq1UqaCUMCJH7aYdIBAt3vaexJBv39Q9t/Pz5pmrCUu54LxUgP85kh7oHtja8FCatvaHaXlTmogDIEnv4LI3tpYojNXesYA6YzuMAbnfesylz/XnP2VuRqKk=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:zh-tw;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:GVXP193MB2513.EURP193.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230040)(1800799024)(366016)(376014)(22082099003)(8096899003)(56012099003)(18002099003)(38070700021)(13003099007);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?big5?B?MnBSU2VJSEZVMkpVeE1IZkdOVWlTbzNUS0F6VFdZeE9sNU13NTd5b3p1THR6RVlr?=
+ =?big5?B?dVpsMjMxK3lTaEUzcDhTMXA1UXhyUExueFNqLzZXbmlMa3VLR3J1UGdQK2RpenhD?=
+ =?big5?B?TmVQdU8zendabS9rRm96NFh5RXBHM3NBakM0QXlRTjFHaWlIalRmV2JwMzVZYS81?=
+ =?big5?B?L2tWblVJaUlGdmx0WnJzZHNJU1k3YXpsNExzU2pzaklBdkJWVTI2ZmVaZ0JrbW9L?=
+ =?big5?B?WjBiaWpreWYvVmJKcGdVbHVJcnRYdHZZQldLOGttc0hZWkNIOUlaU2JZS29hR3gv?=
+ =?big5?B?blhyTnRpd0xCV3J2bWllNitidS9RS0FmaHJkdmlwMnBvWnJjNUVrem96RTRnRHVw?=
+ =?big5?B?eGExN0FGbFNNejJ3UjFkWjhtYmJhWjJtWmpSNzczM1I5WFRKTStDNFU0dlZZeTky?=
+ =?big5?B?aWIyVk4vNkYrNkVWWURYQUlRdkFUOHhBd0l2MzRzZjNtbXdGZE5lTU4zMlhXT01B?=
+ =?big5?B?Smt0SHh4SWdtRkhDcDI5aE1YMTRITVh5TkR5dVFrbHZhaTJlMmk2Q3RIUk1FMDlM?=
+ =?big5?B?RDZVVURjN0IwMVArNEJzOFlrMFUvTkNSTVZsT0JnQ3FOY1lLaGNpRlArdnhWWmZp?=
+ =?big5?B?SUdwSGVhS2ExSlFWaHhYdmJtS2g2WVI1UkNKSFVPR0tGb1F4c2JyUjkvZlhUeFlC?=
+ =?big5?B?UitrSXY0WWdjOUFhZ1J2d2FtZDVZQW1Sb3NaVE04T2Ywekl2NXVoUTN5a0MwcjBY?=
+ =?big5?B?SE9iMVRjUlJrRi9TMzJzdzNWRVRBN3dEUnlrbnhWYkxCRTM4R0VpTlpHekpIaC9C?=
+ =?big5?B?bk5MdGh6clM4TkRoMU1nOW5sZFJCZyt4SVQ2bzIzaGtJWGtjUElMM3lwRWM5N2JW?=
+ =?big5?B?dyticWNzb0drT1Y4dDhFWGlubDFtTFVEK0psN1NOQmlHK25EL1F3T3BZV2NJMjA3?=
+ =?big5?B?L1VWT0E5aWNNTkdjY3h1NXBlMmZtSVZYS3FyWCtvMGhYTGxvei9sL2pGOGtLOWV0?=
+ =?big5?B?V3hEWmRIUlR6dFYzNXdWS3RGaHAybWx3NXdFVWNuVTNYbytXM3Jad0pLZkJwc2Ji?=
+ =?big5?B?cFp5TzN3ckw0bjg4NXJzTlNydWV3TWlzNy9xZ2ZBQVpXb0FRVlNYL05oWmtlZjV4?=
+ =?big5?B?djBEdXJkQzRtQzQxaGNKVUNXUzRjclpYaFVmVklYRXhxVTU0SFE0ejVzcGdJRTZG?=
+ =?big5?B?ZzVoSkpYUmlEaEtJWHhxMVNLTm5GMnhIQndoYWlpZHVkYjNwRmFrL0JaSmJKVlNH?=
+ =?big5?B?akVFYUI1eUhVVzZFaEkydXh2SjRWbHlxZEZqUFFpMHlTdHRzc3Vpb0trMU9OaGhx?=
+ =?big5?B?SmdFWklhcGtONE1xa0VDS0RORDRGY2dxaGZuZ3psTlhSdUQxajJ2d2l2Sm90emt6?=
+ =?big5?B?cVgyNHRWQS9ib0JKbnlwb3BsOHpOQmd6TlZSV0hFM0t2RjVOUzBKUU5JVmdTTkN5?=
+ =?big5?B?TTVuOUpyU0dOUWpQbkpZb2lPUmRIN0xkbHU5eXVwZFBzWGJnNXlvcDdMb2RxcEth?=
+ =?big5?B?WmZydjVxVHRWRWQ2QlkrNkFvdnRyMy9sNGZwWEN1UmpCZm5uVzIwMkFaOXRFR3lE?=
+ =?big5?B?UHdqTnl5T1NnclVCcHdiT2NhMHlqakpJK2NybWJjdml1UjRXQk5MQ0RJYVN3QjBG?=
+ =?big5?B?a3lBV3E3VHdUN2JsRUpCSjF4Ykd4NVBPMEY0V3BTa0Q3bzBsVW4wMlp5YW55ODZr?=
+ =?big5?B?UFhwRDFnMDVmcG1HZWVZcE5wbGdpUlJMb3RhNWtyaHViYnlYK2NxdHdvMlIzSVM3?=
+ =?big5?B?a3JYK2JDQzZMNzV5Ky9xS1hOVFF0OTR1Y1hZd010SlY2WmZzNUdMUjVlb0g1a3hi?=
+ =?big5?B?YmoyN0RRd1JwdVlHNlZZMWJCcHVrL1lEMkFBM1NpMmEvSDZLT0wwVE1nbkFLTG5Q?=
+ =?big5?B?aGlPbGhFYjVIUlJnNytqSXAxWGNId3F4SUtRQms1SkgzbDdqLytzUUdmMUMrNXpT?=
+ =?big5?B?Z1I0QkRmdG5NSlpYN3ZBUmMzUWJVNk1JOXhnNzhkeGZKSEwrSjQ4Ry9CQ2U0MXlv?=
+ =?big5?B?UlI0OCtvWFdXQVoxUlAvSnFaVkNOQnhlNlhDQnBwS1d2NGZnK1VSaWg0N0oyVTFH?=
+ =?big5?B?VWpnZExJTm85RUdGREZiK0lxd1pxaWN4QmVxZStXc1hUVEk1aUpxVkpSdlZyelZJ?=
+ =?big5?B?Smt1VW94ZStKY0VtUWZnZFMrcUJxNWt4VUdidURuNUgxSUxkc3pzWVZzRmc0Uk9Y?=
+ =?big5?B?dXN3bjQvSUQ5Y3ZtdzFxbzl6ZDgzN3FpaVJrSmIvdTh4dExIU1V4Vzk1NGQ2WmQr?=
+ =?big5?Q?PC63DvjRT9imEbPTRg3zRgBqW39SJ/O3ZONU91l+MBo=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_GVXP193MB2513C6277BB8D150EC8138DFA0242GVXP193MB2513EURP_"
+MIME-Version: 1.0
+X-OriginatorOrg: wassenaar.nl
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: GVXP193MB2513.EURP193.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: a39f3a60-2763-4b67-2df2-08de999edadb
+X-MS-Exchange-CrossTenant-originalarrivaltime: 13 Apr 2026 20:54:28.7901
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: a1ad7daf-a971-46c6-aac0-68836b6f290e
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: secM/rjTuhnnl20pSfANWh+/Dhnv6YEIJIJhmD6sCld0zLzrWBz1QMfJspWq6XsAeNMeS29wSPOcFZp6PlpoiQ==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PA2P193MB2480
+X-MANTSH: 1TFkXGxoaHxEKWUQXbWh4bEsTWWJISFkRCllNF25PRkNcT1gRCl9ZFxsdEhEKX00
+ XZEVETxEKWUkXGnEaEBp3BhsfEnEdHhAadwYYGgYaEQpZXhdsbHkRCkNOF297UBIeTlhsSF99a
+ U4YdXt7eh1ZS0N5YV5ifVhQRhheEQpYXBcZBBoEHxIFGxoaBBIYBB4YBBgSEBseGh8aEQpeWRd
+ Cb1xTRREKTVwXBxgTHREKTFoXaGlNTW8RCkxGF29ra2tsTWsRCkNaFx8YBBsaGwQSHgQdHhEKQ
+ l4XGxEKQlwXGxEKXk4XGxEKQksXZEVtRWljfkRrSG8RCkJJF2RFbUVpY35Ea0hvEQpCRRdhR29
+ OSxNkTVJffhEKQk4XZEVtRWljfkRrSG8RCkJMF2tLWmNeElMcTlhiEQpCbBdtTn5aSXoFeXJZY
+ BEKQkAXb18bGFAbQn9dcBwRCkJYF2J6eUFDEmFTbVpsEQpCeBdjcht9a2BQHUZzRBEKTV4XGxE
+ KWlgXHxEKcGcXZH1gaxkcBWdTfHMQGRoRCnBoF2xvEmdtUkdsW0R9EBsbEQpwaBdsHx5bAURQZ
+ mJAeRAYGxEKcGgXbHthR0hFaE9lQRgQGRoRCnBoF3pFcBsdTXsaEkhPEBseEQpwaBdoR2x9bWx
+ iUk9bYxAZGhEKcGgXY2tyeR9sSU9vfWQQGRoRCnBoF2gFS3JgGkdwQn5wEBkaEQpwaBdvb2tDf
+ 05lWl5TXhAZGhEKcH8XbxtCEkVMbxhGWR8QGx8RCnBfF2xpSGJ/fW8TGHIcEBgbEQpwfRdiHGN
+ TE0xcaGRmbBAYGxEKcGcXY28fE2dAAUtdZXsQGRoRCnBnF2Vmf0ETeUl5H2JQEBkaEQpwfxd6Z
+ 0lSRl8YTxJdRxAZGhEKcF8XaFJHeBlba2IFAWYQGRoRCnB9F2QTQB9hThIcWXlsEBkaEQpwfRd
+ iHGNTE0xcaGRmbBAYGxEKcH0XZBNAH2FOEhxZeWwQGRoRCnB9F2QTQB9hThIcWXlsEBkaEQpwb
+ BdpXgFBHhphUFtyWhAZGhEKbX4XGxEKWE0XSxE=
+X-Proofpoint-ORIG-GUID: EQz84drFbuWCd2_QQP7saiSKtHWrzl2t
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNDEzMDIwNiBTYWx0ZWRfX9XWoJKPXprNN
+ nMvpVveMqSj3jQrDabTTcDQ3plxa51MTS6P4UDsNQbyq2HFeRIoYY679kYdsSESAodiSLE793J+
+ VtuNSnpHae8nkDHM6nuc9/0UDrfA6Ha53nEgQ7aNeD7X+rXBA3dbPB0Qo/Fo2Ons7XPBnE6IhU6
+ 1h3/wrJrnZVONllT9Jn98mJ6D3nbmDlhJsHzclyw8iKHgiQmH7o2XSe3uioVkLcp8AJnnsz1QLQ
+ PMymFhaabYW2Y6dYAIsX2V+wdR7c9Nvn0dgGfJdsuy3NPPe7nkat7+KKmj+i2YVHQcAhKM2fetx
+ GSlXpfNodjlNU3MwdPfg1DPBn10EXyCNESwRyXdjw==
+X-Proofpoint-GUID: EQz84drFbuWCd2_QQP7saiSKtHWrzl2t
+X-JNJ: AAAAAAABzLiiolCrWlcwrGZRaeowEyYgGbGnoyD1xYTtj4VTqOeNPz2GxWP/oBsqhyCNbL5J7KuXpUfcuGMZBoUSFmKLf7omp9csrPmvS77h7fOtTUuXro7n4Kbt1A1mdl5CDf6U8yIzlrZ/0hOVQhoAPdKO53LApx1JJFyMPVZILIHVaVvnIYl5KQWnKR/lln88T2G+ZoucnsyLeYxuGUBHLTHzmWu9ZChwEi4pXk4Al1okC4t8ynu0GQBGzAOK1g7LzSsWvPWvR86Rxpq3c0N7oRDVmNlJVnbeRJnmgzsQWPZeNK5/B37VvlAEHPK2QyiXLnLia/g2nrAWoNNs0RI3WaBAFejFADFOotIA0U8G+olYCg1NH3xke/wsW1Fq2I4AyXgBPQmrkUfr+/kErWJOov4F50Pg41JAyo2uG5Z8F0Cbmyonn/TbF80zm9RCk8Vykg3Vk6ibD8CalTuc1c87PcSJjfEIPFEfNDcjiHtzh0n7++tUI/q1RHQU/hAxzZEifvV0mmv9p1XShpIzSBra+QVF/s6VSzetUxRcQwcByk3x6Z6vvJpZZXnhfJ6gy/w0fCq6BykYiKa6fQNxT8rP7wtjwD+ad4YjklI6dA9sOvAFqIAQbY19k5LM4XGbuoFdOsW70QPEo7SwVI9bnfXGAgB3qnE9QfG3k/MTbZXUZcs3scY5NKrcaBZeCWCzvYLdjj7bcamz8cxG1w9Y3PPdz2v/s45tZTCsMQ5aPQqvIYCde1b9T9e96icLZ3lVHgvlYXHgKSDSLg86PEMlJ6d+ur2miemwDCxilX9F/QF2S4+amXwzd2PFFDh5yV7WQ3MtGSGKYRbZf7AIAwJJwescfeP8XjJuW2ZCsgVtRg0kigumYjr0maIgJlCCdbIX+dTMkfQtOCEhuEXvyCfDuVDSO6t97IwBps3TOkJ7zkSGrWReO7MTzd6JAq2O1CXOlRwjCFVUfHobzKICZE6AR5jVPOoYVRa1skjltNxrNXsJtFKkAZRr17DV//5004QsjlHu8LzgGI8N/AMkcyQclAPjPV4NlTM3
+
+--_000_GVXP193MB2513C6277BB8D150EC8138DFA0242GVXP193MB2513EURP_
+Content-Type: text/plain; charset="big5"
+Content-Transfer-Encoding: base64
+
+DQoNClNlbnQgZnJvbSBPdXRsb29rIGZvciBpT1M8aHR0cHM6Ly9ha2EubXMvbzB1a2VmPg0KX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX18NCkZyb206IEphY3F1ZWxpbmUgdmFuIERvb3Jl
+biA8SnZEb29yZW5Ad2Fzc2VuYWFyLm5sPg0KU2VudDogTW9uZGF5LCBBcHJpbCAxMywgMjAyNiAy
+OjM0OjI4IFBNDQpUbzogRXJ3aW4gSGllcCA8RUhpZXBAd2Fzc2VuYWFyLm5sPjsgTWVjaHRlbGQg
+SGVpanRpbmcgPE1oZWlqdGluZ0B3YXNzZW5hYXIubmw+OyBkaWNrYnJhYW1AbWUuY29tIDxkaWNr
+YnJhYW1AbWUuY29tPjsgRGljayBCcmFhbSA8REJyYWFtQHdhc3NlbmFhci5ubD4NClN1YmplY3Q6
+IEJlbGVpZHNCaWJsaW90aGVlayChWCBMaW5rIGtsb3B0IG5pZXQgKEg3IFZvbGtzZ2V6b25kaGVp
+ZCBlbiBtaWxpZXUgofcgNy40IKFQIE1pbGlldWJlaGVlcikgoVggMjAyNi0wNC0xMyAxNDoyMQ0K
+DQoNCk5pZXV3ZSByZWFjdGllIG9wIGRlIEJlbGVpZHNCaWJsaW90aGVlazoNCg0KVmVyem9uZGVu
+OiAyMDI2LTA0LTEzIDE0OjIxIChsb2thbGUgdGlqZCkNClZhbjogSmFjcXVlbGluZSB2YW4gRG9v
+cmVuDQoNClR5cGU6IExpbmsga2xvcHQgbmlldA0KSG9vZmRzdHVrOiBINyBWb2xrc2dlem9uZGhl
+aWQgZW4gbWlsaWV1DQpUYWFrdmVsZDogNy40IKFQIE1pbGlldWJlaGVlcg0KRG9jdW1lbnQ6IGRl
+IG9tc2NocmlqdmluZw0KDQpSVUQvUmVnaW9uYWxlIFVpdHZvZXJpbmdzZGllbnN0ZW4gPSBPbWdl
+dmluZ3NkaWVuc3RlbiAoaGV0IGdhYXQgZHVzIG5pZXQgb20gZWVuIGxpbmsgbWFhciBvbSBkZSBv
+bXNjaHJpanZlbmRlIHRla3N0KQ0KDQqid6J3oncNCldlcmtsaWpzdCByZWFjdGllczoNCmh0dHBz
+Oi8vd2Fzc2VuYWFyLmJlc2x1aXQtd2lqemVyLm5sL3dlcmtsaWpzdC1yZWFjdGllcy5odG1sDQoN
+Cg0KDQpFbiBvb2sgb25kZXJzdGFhbmRlIHB1bnRlbiAoYWxsZXMgaW4gMSBtYWlsIGxlZWsgbWUg
+aGFuZGlnLCBsYWF0IGhldCB3ZXRlbiBhbHMgZGF0IG5pZXQgem8gaXMpOg0KDQpvbmdlZGllcnRl
+YmVzdHJpamRpbmcgKG8uYS4gZWlrZW5wcm9jZXNzaWVydXBzKSBtb2V0IG5hYXIgYmVoZWVyLg0K
+DQpPb2sgb250YnJlZWt0IGhldCB2b2xnZW5kZTogc3RpbHRlLCBvbWdldmluZ3N2ZWlsaWdoZWlk
+L2V4dGVybmUgdmVpbGlnaGVpZCwgb250cGxvZmJhcmUgb29ybG9nc3Jlc3RlbiwgdHJpbGxpbmcs
+IGdldXIsIGJpb2RpdmVyc2l0ZWl0LCBsaWNodC9kb25rZXJ0ZS4NCg0KRW4gaWsgem91IKGndmVy
+cGxhYXRzaW5nIG1pbGlldWhpbmRlcmxpamtlIGJlZHJpanZlbqGoIGhlcmZvcm11bGVyZW4gbmFh
+cjogYmVkcmlqdmVuIGVuIG1pbGlldXpvbmVyaW5nDQo=
+
+--_000_GVXP193MB2513C6277BB8D150EC8138DFA0242GVXP193MB2513EURP_
+Content-Type: text/html; charset="big5"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dbig5">
+</head>
+<body>
+<div dir=3D"ltr" style=3D"font-family: Aptos, Aptos_MSFontService, -apple-s=
+ystem, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0,=
+ 0, 0);">
+<br>
+</div>
+<div id=3D"ms-outlook-mobile-body-separator-line" data-applydefaultfontstyl=
+es=3D"true" style=3D"font-family: Aptos, Aptos_MSFontService, -apple-system=
+, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt;" dir=3D"ltr">
+<div style=3D"font-family: Aptos, Aptos_MSFontService, -apple-system, Robot=
+o, Arial, Helvetica, sans-serif; font-size: 12pt;" dir=3D"ltr">
+<br>
+</div>
+</div>
+<div style=3D"font-family: Aptos, Aptos_MSFontService, -apple-system, Robot=
+o, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" id=
+=3D"ms-outlook-mobile-signature">
+<span style=3D"font-family: Aptos, Aptos_MSFontService, -apple-system, Robo=
+to, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">Se=
+nt from
+</span><span style=3D"font-family: Aptos, Aptos_MSFontService, -apple-syste=
+m, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt;"><a href=3D"https=
+://aka.ms/o0ukef">Outlook for iOS</a></span></div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>From:</b> Jacqueline van Dooren=
+ &lt;JvDooren@wassenaar.nl&gt;<br>
+<b>Sent:</b> Monday, April 13, 2026 2:34:28 PM<br>
+<b>To:</b> Erwin Hiep &lt;EHiep@wassenaar.nl&gt;; Mechteld Heijting &lt;Mhe=
+ijting@wassenaar.nl&gt;; dickbraam@me.com &lt;dickbraam@me.com&gt;; Dick Br=
+aam &lt;DBraam@wassenaar.nl&gt;<br>
+<b>Subject:</b> BeleidsBibliotheek =A1X Link klopt niet (H7 Volksgezondheid=
+ en milieu =A1=F7 7.4 =A1P Milieubeheer) =A1X 2026-04-13 14:21</font>
+<div>&nbsp;</div>
+</div>
+<style>
+<!--
+@font-face
+	{font-family:"Cambria Math"}
+@font-face
+	{font-family:Verdana}
+@font-face
+	{font-family:Aptos}
+@font-face
+	{font-family:"Microsoft JhengHei"}
+a:link, span.x_MsoHyperlink
+	{color:blue;
+	text-decoration:underline}
+span.x_E-mailStijl19
+	{font-family:"Verdana",sans-serif;
+	color:black}
+.x_MsoChpDefault
+	{font-size:10.0pt}
+@page WordSection1
+	{margin:70.85pt 70.85pt 70.85pt 70.85pt}
+div.x_WordSection1
+	{}
+-->
+</style>
+<div lang=3D"NL" link=3D"blue" vlink=3D"purple" style=3D"word-wrap:break-wo=
+rd">
+<div class=3D"x_WordSection1">
+<p><span style=3D"font-size:10.0pt; font-family:&quot;Verdana&quot;,sans-se=
+rif; color:black">Nieuwe reactie op de BeleidsBibliotheek:</span>
+</p>
+<p><span style=3D"font-size:10.0pt; font-family:&quot;Verdana&quot;,sans-se=
+rif; color:black">Verzonden: 2026-04-13 14:21 (lokale tijd)</span>
+<br>
+<span style=3D"font-size:10.0pt; font-family:&quot;Verdana&quot;,sans-serif=
+; color:black">Van: Jacqueline van Dooren</span>
+</p>
+<p><span style=3D"font-size:10.0pt; font-family:&quot;Verdana&quot;,sans-se=
+rif; color:black">Type: Link klopt niet</span>
+<br>
+<span style=3D"font-size:10.0pt; font-family:&quot;Verdana&quot;,sans-serif=
+; color:black">Hoofdstuk: H7 Volksgezondheid en milieu</span>
+<br>
+<span style=3D"font-size:10.0pt; font-family:&quot;Verdana&quot;,sans-serif=
+; color:black">Taakveld: 7.4 =A1P Milieubeheer</span>
+<br>
+<span style=3D"font-size:10.0pt; font-family:&quot;Verdana&quot;,sans-serif=
+; color:black">Document: de omschrijving</span>
+</p>
+<p><span style=3D"font-size:10.0pt; font-family:&quot;Verdana&quot;,sans-se=
+rif; color:black">RUD/Regionale Uitvoeringsdiensten =3D Omgevingsdiensten</=
+span> (het gaat dus niet om een link maar om de omschrijvende tekst)</p>
+<p><span style=3D"font-size:10.0pt; font-family:&quot;Microsoft JhengHei&qu=
+ot;,sans-serif; color:black">=A2w=A2w=A2w</span>
+<br>
+<span style=3D"font-size:10.0pt; font-family:&quot;Verdana&quot;,sans-serif=
+; color:black">Werklijst reacties:</span>
+<br>
+<span style=3D"font-size:10.0pt; font-family:&quot;Verdana&quot;,sans-serif=
+; color:black"><a href=3D"https://wassenaar.besluit-wijzer.nl/werklijst-rea=
+cties.html" originalsrc=3D"https://wassenaar.besluit-wijzer.nl/werklijst-re=
+acties.html">https://wassenaar.besluit-wijzer.nl/werklijst-reacties.html</a=
+></span>
+</p>
+<p>&nbsp;</p>
+<p>En ook onderstaande punten (alles in 1 mail leek me handig, laat het wet=
+en als dat niet zo is):</p>
+<p>ongediertebestrijding (o.a. eikenprocessierups) moet naar beheer.</p>
+<p>Ook ontbreekt het volgende: stilte, omgevingsveiligheid/externe veilighe=
+id, ontplofbare oorlogsresten, trilling, geur, biodiversiteit, licht/donker=
+te.</p>
+<p>En ik zou =A1=A7verplaatsing milieuhinderlijke bedrijven=A1=A8 herformul=
+eren naar: bedrijven en milieuzonering</p>
+</div>
+</div>
+</body>
+</html>
+
+--_000_GVXP193MB2513C6277BB8D150EC8138DFA0242GVXP193MB2513EURP_--

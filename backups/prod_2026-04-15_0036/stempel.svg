@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="340" height="340">
+  <defs>
+    <style>
+      .warn-text { font-family: 'Georgia', 'Times New Roman', serif; fill: #7c2d12; }
+      .warn-small { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #9a3412; }
+    </style>
+  </defs>
+  <!-- Stekelige waarschuwingsrand — 24 gelijkmatige punten -->
+  <path d="
+    M 170 4
+    L 183 44  196 10  209 46  226 18  233 54
+    L 254 32  254 68  278 52  272 88  298 80
+    L 286 114 310 112 292 142 314 150 290 172
+    L 310 188 282 200 300 222 268 226 280 252
+    L 250 248 256 276 226 264 224 292 198 274
+    L 190 298 170 274 150 298 142 274 116 292
+    L 114 264 84 276 90 248 60 252 72 226
+    L 40 222 58 200 30 188 50 172 26 150
+    L 48 142 30 112 54 114 54 88 62 80
+    L 68 52 86 68 86 32 107 54 114 18
+    L 131 46 144 10 157 44 170 4 Z"
+    fill="#fff3e0" stroke="#ea580c" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Binnenste cirkel -->
+  <circle cx="170" cy="152" r="105" fill="#fff8f0" stroke="#ea580c" stroke-width="2.5"/>
+  <!-- Vuist -->
+  <text x="170" y="98" text-anchor="middle" font-size="38" fill="#ea580c">✊</text>
+  <!-- Grote koptekst -->
+  <text x="170" y="130" class="warn-text" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="2">LEES DE</text>
+  <text x="170" y="158" class="warn-text" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="3">VUISTREGELS</text>
+  <!-- Lijn -->
+  <line x1="105" y1="170" x2="235" y2="170" stroke="#ea580c" stroke-width="0.8"/>
+  <!-- Drie korte regels -->
+  <text x="170" y="188" class="warn-small" font-size="8.5" font-weight="600" text-anchor="middle" letter-spacing="0.5">geen persoonsgegevens</text>
+  <text x="170" y="201" class="warn-small" font-size="8.5" font-weight="600" text-anchor="middle" letter-spacing="0.5">menselijke controle</text>
+  <text x="170" y="214" class="warn-small" font-size="8.5" font-weight="600" text-anchor="middle" letter-spacing="0.5">transparant</text>
+</svg>

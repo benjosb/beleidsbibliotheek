@@ -3,337 +3,526 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Belangrijkste issues · Wassenaar 2026</title>
+  <title>Issues · Wassenaar 2026</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <style>
+    .netwerk-container { position: relative; }
+    .netwerk-layout { display: grid; grid-template-columns: 1fr 360px; gap: 1rem; align-items: start; }
+    @media (max-width: 900px) {
+      .netwerk-layout { grid-template-columns: 1fr; }
+      #cy { order: 2; }
+      .netwerk-panel { order: 1; max-height: 35vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    }
+    #cy {
+      width: 100%; height: 72vh; min-height: 460px;
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 40%, #fff 100%);
+      border-radius: 12px; border: 1px solid #fde68a;
+      box-shadow: inset 0 2px 12px rgba(245,158,11,0.06);
+      transition: all 0.3s ease;
+    }
+    .netwerk-panel {
+      background: #fff; border-radius: 12px; padding: 1.25rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07); border: 1px solid #e2e8f0;
+      position: sticky; top: 1rem; transition: all 0.25s ease;
+      max-height: 75vh; overflow-y: auto;
+    }
+    .netwerk-panel.pinned { border-color: #f59e0b; box-shadow: 0 4px 16px rgba(245,158,11,0.18); }
+    .netwerk-panel h3 { margin: 0 0 0.75rem; font-size: 1rem; color: #1e293b; }
+    .panel-status {
+      display: inline-block; font-size: 0.75rem; padding: 2px 8px;
+      border-radius: 10px; margin-left: 0.5rem; font-weight: 500; vertical-align: middle;
+    }
+    .panel-status.hover { background: #fef3c7; color: #92400e; }
+    .panel-status.pinned { background: #fde68a; color: #78350f; }
+    .netwerk-panel .empty { color: #64748b; font-size: 0.9rem; }
+    .netwerk-panel ul { margin: 0; padding-left: 1.25rem; font-size: 0.9rem; line-height: 1.6; }
+    .netwerk-panel li { margin: 0.5rem 0; color: #334155; }
+    .netwerk-panel .link-to-partij { display: inline-block; margin-top: 0.75rem; color: #d97706; font-weight: 500; text-decoration: none; }
+    .netwerk-panel .link-to-partij:hover { text-decoration: underline; }
+    .netwerk-panel .unpin-btn {
+      display: none; float: right; background: #f1f5f9; border: 1px solid #e2e8f0;
+      padding: 0.25rem 0.6rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; color: #64748b;
+    }
+    .netwerk-panel.pinned .unpin-btn { display: inline-block; }
+    .netwerk-panel .unpin-btn:hover { background: #e2e8f0; }
+    .issue-detail-title { font-size: 1.1rem; font-weight: 700; color: #92400e; margin-bottom: 0.25rem; }
+    .issue-detail-context { font-size: 0.85rem; color: #78350f; margin-bottom: 0.75rem; font-style: italic; }
+    .issue-detail-partijen { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .issue-pil { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 500; background: #eef2ff; color: #3730a3; }
+    .netwerk-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+    .netwerk-filter-btn {
+      padding: 0.35rem 0.65rem; font-size: 0.8rem; border-radius: 6px;
+      border: 1px solid #e2e8f0; background: #fff; cursor: pointer; color: #475569;
+      transition: all 0.15s ease;
+    }
+    .netwerk-filter-btn:hover { background: #fffbeb; border-color: #fcd34d; color: #92400e; }
+    .netwerk-filter-btn.active { background: #f59e0b; color: #fff; border-color: #f59e0b; }
+    .netwerk-hint { font-size: 0.85rem; color: #64748b; margin-top: 0.5rem; }
+
+    .popout-btn {
+      position: absolute; top: 0.75rem; right: 0.75rem; z-index: 20;
+      background: rgba(255,255,255,0.92); border: 1px solid #fcd34d;
+      padding: 0.5rem 0.85rem; border-radius: 8px; cursor: pointer;
+      font-size: 0.85rem; color: #d97706; font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.2s ease;
+      backdrop-filter: blur(4px);
+    }
+    .popout-btn:hover { background: #f59e0b; color: #fff; transform: scale(1.05); }
+
+    .fullscreen-overlay {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(15,23,42,0.95); backdrop-filter: blur(8px);
+    }
+    .fullscreen-overlay.active { display: flex; }
+    .fullscreen-overlay .fs-grid {
+      display: grid; grid-template-columns: 1fr 380px; gap: 1rem;
+      width: 100%; height: 100%; padding: 1rem;
+    }
+    @media (max-width: 900px) {
+      .fullscreen-overlay .fs-grid { grid-template-columns: 1fr; }
+    }
+    .fullscreen-overlay #cy-fs {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #0f172a 0%, #1c1917 100%);
+      border-radius: 12px; border: 1px solid #44403c;
+    }
+    .fullscreen-overlay .fs-panel {
+      background: rgba(255,255,255,0.95); border-radius: 12px; padding: 1.5rem;
+      overflow-y: auto; max-height: 100%;
+    }
+    .fullscreen-overlay .fs-panel h3 { margin: 0 0 0.75rem; }
+    .fullscreen-overlay .fs-panel ul { margin: 0; padding-left: 1.25rem; font-size: 0.9rem; line-height: 1.6; }
+    .fullscreen-overlay .fs-panel li { margin: 0.5rem 0; }
+    .fs-close {
+      position: absolute; top: 1rem; right: 1.5rem; z-index: 1001;
+      background: #ef4444; color: #fff; border: none; padding: 0.5rem 1rem;
+      border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 600;
+    }
+    .fs-close:hover { background: #dc2626; }
+
+    .cy-tooltip {
+      position: absolute; z-index: 30; background: #1e293b; color: #fff;
+      padding: 0.5rem 0.85rem; border-radius: 8px; font-size: 0.82rem;
+      max-width: 260px; pointer-events: none; box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      line-height: 1.4; opacity: 0; transition: opacity 0.15s;
+    }
+    .cy-tooltip.visible { opacity: 1; }
+  </style>
 </head>
 <body id="top">
   <a href="#top" class="naar-boven" title="Naar boven">↑ Naar boven</a>
-  <p><a href="/verkiezingen/" style="color:#2c5282;text-decoration:none;">← Terug naar overzicht</a></p>
-    <form class="zoek-form" action="zoek.html" method="get" role="search">
-    <input type="search" name="q" placeholder="Zoek op trefwoord…" class="zoek-input" aria-label="Zoek op trefwoord">
-    <button type="submit" class="zoek-knop">Zoek</button>
-  </form>
-    <nav class="subpage-nav" aria-label="Secties">
-    <a href="index.html" class="subnav-link subnav-overzicht">← Overzicht</a> · <a href="zoek.html" class="subnav-link">Zoeken</a> · <a href="samenvatting.html" class="subnav-link">Samenvatting</a> · <a href="Chat_history_Wassenaar_2026.html" class="subnav-link">Chat history</a> · <span class="subnav-current">Issues</span> · <a href="programmas.html" class="subnav-link">Programma&#x27;s</a> · <a href="themas.html" class="subnav-link">Thema&#x27;s</a> · <a href="raakvlakken.html" class="subnav-link">Raakvlakken</a> · <a href="ambtelijk.html" class="subnav-link">Ambt. organisatie</a> · <a href="taakveld.html" class="subnav-link">Per taakveld</a> · <a href="spectrum.html" class="subnav-link">Spectrum</a> · <a href="partijen.html" class="subnav-link">Volledige programma&#x27;s</a>
+
+  <div class="betrouwbaarheid-banner betrouwbaarheid-banner--oranje">
+    <span class="betrouwbaarheid-banner-icon">&#9679;</span>
+    <div><strong>Gestructureerd</strong> Deze netwerkgrafiek toont welke partijen standpunten innemen over welke gemeentelijke issues. De standpunten zijn afkomstig uit de verkiezingsprogramma's; de selectie van issues en de groepering is geautomatiseerd.</div>
+  </div>
+
+  <nav class="subpage-nav" aria-label="Secties">
+    <a href="index.html" class="subnav-link subnav-overzicht">← Overzicht</a> · <a href="zoek.html" class="subnav-link">Zoeken</a> · <a href="samenvatting.html" class="subnav-link">Samenvatting</a> · <span class="subnav-current">Issues</span> · <a href="themas.html" class="subnav-link">Thema&#x27;s</a> · <a href="netwerk.html" class="subnav-link">Netwerk</a> · <a href="ambtelijk.html" class="subnav-link">Ambt. organisatie</a> · <a href="taakveld.html" class="subnav-link">Per taakveld</a> · <a href="spectrum.html" class="subnav-link">Spectrum</a> · <a href="partijen.html" class="subnav-link">Volledige programma&#x27;s</a>
   </nav>
-    <section class="sectie">
-    <h2>Belangrijkste issues in Wassenaar</h2>
-    <p class="sectie-intro">De 15 thema&#x27;s die het meest spelen: raadsagenda&#x27;s 2023–2026, lokale media en partijprogramma&#x27;s.</p>
-  <p class="issues-uitleg">Per issue: partijen links (progressief) en rechts (conservatief) van het thema. Partijen met vergelijkbare standpunten staan dicht bij elkaar.</p>
-  <div class="issues-disclaimer">
-    <strong>Werkwijze en beperkingen</strong> — Deze lijst is samengesteld op basis van raadsagenda's 2023–2026, lokale media en de verkiezingsprogramma's. De selectie en ordening van thema's en partijen is geautomatiseerd ondersteund. Een issue-lijst kan nooit helemaal neutraal zijn: keuzes in thema's, indeling en positionering zijn onvermijdelijk interpretatief. De bronprogramma's en uw eigen oordeel blijven leidend.
-  </div>
-  <div class="issues-grafisch">
 
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Woningbouw en sociale huur</strong></div>
-      <div class="issue-context">Van Rechterenstraat, 1000 woningen, corporaties, 3100+ zoekenden, 6,5 jaar wachttijd</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <span class="issue-groep">
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-          </span>
+  <section class="sectie sectie-tile">
+    <h2>Issues in Wassenaar</h2>
+    <p class="sectie-intro">Welke partijen zeggen iets over welk issue? Beweeg over een lijn voor context. Klik op een issue om verbonden partijen uit te lichten.</p>
+
+    <div class="netwerk-filters" id="filters">
+      <button type="button" class="netwerk-filter-btn active" data-issue="">Alles</button>
+    </div>
+
+    <div class="netwerk-container">
+      <div class="netwerk-layout">
+        <div style="position:relative;">
+          <div id="cy"></div>
+          <button class="popout-btn" id="popout-btn" title="Volledig scherm">&#x26F6; Volledig scherm</button>
+          <div class="cy-tooltip" id="tooltip"></div>
         </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          <span class="issue-groep">
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          </span>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
+        <aside class="netwerk-panel" id="panel">
+          <button class="unpin-btn" id="unpin-btn" title="Loslaten">&#x2715; loslaten</button>
+          <h3 id="panel-title">Beweeg over een lijn</h3>
+          <div id="panel-body"><p class="empty">Hover over een verbinding tussen partij en issue om context te zien.</p></div>
+        </aside>
       </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Centrum en leegstand</strong></div>
-      <div class="issue-context">Centrumplan, Stadhoudersplein, winkeliers, levendigheid, renovatie</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Verkeer en N44/A44</strong></div>
-      <div class="issue-context">Bereikbaarheid, 30 km/u, parkeren, fietsveiligheid, doorgaand verkeer, geluid</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Groen en natuur</strong></div>
-      <div class="issue-context">Groencompensatie, Duindigt, drinkwatergebied, Voorlinden, bomen</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Duurzaamheid en klimaat</strong></div>
-      <div class="issue-context">Energietransitie, vergroening, circulair</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Gemeentefinanciën</strong></div>
-      <div class="issue-context">Begroting, belastingen, OZB, bezuinigingen</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <span class="issue-groep">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          </span>
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Openbare ruimte en veiligheid</strong></div>
-      <div class="issue-context">Handhaving, boa&#x27;s, fatbikes, onderhoud straten en groen</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Ambtelijke organisatie</strong></div>
-      <div class="issue-context">Dienstverlening, capaciteit, bereikbaarheid gemeente</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <span class="issue-groep">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          </span>
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Economie en ondernemers</strong></div>
-      <div class="issue-context">Maaldrift, centrum, middenstand, bedrijfsruimte</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Sociaal domein en zorg</strong></div>
-      <div class="issue-context">WMO, jeugdzorg, ouderen, mantelzorg</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Sport, cultuur en recreatie</strong></div>
-      <div class="issue-context">Warenar, bibliotheek, evenementen, Paauw feest</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Erfgoed en karakter</strong></div>
-      <div class="issue-context">Erfgoedvisie, aanlichting, behoud dorpskarakter</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <span class="issue-groep">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          </span>
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Participatie en burgerinitiatief</strong></div>
-      <div class="issue-context">Wijkpark Noord, inspraak, referendum</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-groenlinks-pvda" class="issue-partij-pil">GL-PvdA (3)</a>
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <span class="issue-groep">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          </span>
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>Onderwijs</strong></div>
-      <div class="issue-context">Scholen, huisvestingsplan, brede school Huybregste veld</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-volt" class="issue-partij-pil">Volt (0)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-cda" class="issue-partij-pil">CDA (2)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="issue-kaart">
-      <div class="issue-titel"><strong>AZC en asiel</strong></div>
-      <div class="issue-context">Opvang, integratie, status</div>
-      <div class="issue-partijen">
-        <div class="issue-links">
-          <a href="partijen.html#partij-d66" class="issue-partij-pil">D66 (2)</a>
-          <a href="partijen.html#partij-democratische-liberalen-wassenaar" class="issue-partij-pil">DLW (1)</a>
-        </div>
-        <div class="issue-midden"></div>
-        <div class="issue-rechts">
-          <a href="partijen.html#partij-lokaal-wassenaar" class="issue-partij-pil">Lokaal (3)</a>
-          <a href="partijen.html#partij-hart-voor-wassenaar" class="issue-partij-pil">HvW (5)</a>
-          <a href="partijen.html#partij-vvd" class="issue-partij-pil">VVD (5)</a>
-          <a href="partijen.html#partij-forum-voor-democratie" class="issue-partij-pil">FvD (0)</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
+    </div>
+    <p class="netwerk-hint">Hover over lijn = preview | Klik lijn = vastzetten | Klik issue = uitlichten | &#x26F6; = volledig scherm</p>
   </section>
+
+  <div class="fullscreen-overlay" id="fs-overlay">
+    <button class="fs-close" id="fs-close">&#x2715; Sluiten</button>
+    <div class="fs-grid">
+      <div id="cy-fs"></div>
+      <aside class="fs-panel" id="fs-panel">
+        <h3 id="fs-panel-title">Beweeg over een lijn</h3>
+        <div id="fs-panel-body"><p class="empty">Hover over een verbinding om context te zien.</p></div>
+      </aside>
+    </div>
+  </div>
+
   <footer class="disclaimer">
-    <strong>Over deze analyse</strong> — Dit overzicht is geautomatiseerd samengesteld. De bronprogramma's en uw eigen oordeel blijven leidend. AI ondersteunt, maar vervangt geen menselijke beoordeling.
+    <strong>Over deze analyse</strong> — Dit overzicht is geautomatiseerd samengesteld. De bronprogramma's en uw eigen oordeel blijven leidend.
   </footer>
+
+  <script>
+(function() {
+
+  var PARTIJEN = [
+    { id: 'VVD',    label: 'VVD',     zetels: 5 },
+    { id: 'CDA',    label: 'CDA',     zetels: 2 },
+    { id: 'D66',    label: 'D66',     zetels: 2 },
+    { id: 'GL-PvdA',label: 'GL-PvdA', zetels: 3 },
+    { id: 'Lokaal', label: 'Lokaal',  zetels: 3 },
+    { id: 'HvW',    label: 'HvW',     zetels: 5 },
+    { id: 'DLW',    label: 'DLW',     zetels: 1 },
+    { id: 'Volt',   label: 'Volt',    zetels: 0 },
+    { id: 'FvD',    label: 'FvD',     zetels: 0 }
+  ];
+
+  var ISSUES = [
+    { id: 'wonen',        label: 'Wonen',        full: 'Woningbouw en sociale huur',       ctx: 'Van Rechterenstraat, 1000 woningen, corporaties, 3100+ zoekenden' },
+    { id: 'centrum',      label: 'Centrum',      full: 'Centrum en leegstand',             ctx: 'Centrumplan, Stadhoudersplein, winkeliers, levendigheid' },
+    { id: 'verkeer',      label: 'Verkeer',      full: 'Verkeer en N44/A44',               ctx: 'Bereikbaarheid, 30 km/u, parkeren, fietsveiligheid' },
+    { id: 'groen',        label: 'Groen',        full: 'Groen en natuur',                  ctx: 'Groencompensatie, Duindigt, drinkwatergebied, bomen' },
+    { id: 'klimaat',      label: 'Klimaat',      full: 'Duurzaamheid en klimaat',           ctx: 'Energietransitie, vergroening, circulair' },
+    { id: 'financien',    label: 'Financiën',    full: 'Gemeentefinanciën',                ctx: 'Begroting, belastingen, OZB, bezuinigingen' },
+    { id: 'veiligheid',   label: 'Veiligheid',   full: 'Openbare ruimte en veiligheid',     ctx: "Handhaving, boa's, fatbikes, onderhoud straten" },
+    { id: 'ambtelijk',    label: 'Ambtelijk',    full: 'Ambtelijke organisatie',            ctx: 'Dienstverlening, capaciteit, bereikbaarheid gemeente' },
+    { id: 'economie',     label: 'Economie',     full: 'Economie en ondernemers',           ctx: 'Maaldrift, centrum, middenstand, bedrijfsruimte' },
+    { id: 'zorg',         label: 'Zorg',         full: 'Sociaal domein en zorg',            ctx: 'WMO, jeugdzorg, ouderen, mantelzorg' },
+    { id: 'sport',        label: 'Sport/Cult.',  full: 'Sport, cultuur en recreatie',       ctx: 'Warenar, bibliotheek, evenementen, Paauw feest' },
+    { id: 'erfgoed',      label: 'Erfgoed',      full: 'Erfgoed en karakter',              ctx: 'Erfgoedvisie, aanlichting, behoud dorpskarakter' },
+    { id: 'participatie', label: 'Participatie', full: 'Participatie en burgerinitiatief',  ctx: 'Wijkpark Noord, inspraak, referendum' },
+    { id: 'onderwijs',    label: 'Onderwijs',    full: 'Onderwijs',                        ctx: 'Scholen, huisvestingsplan, brede school Huybregste veld' },
+    { id: 'azc',          label: 'AZC/Asiel',    full: 'AZC en asiel',                     ctx: 'Opvang, integratie, statushouders' }
+  ];
+
+  // edges[issueId] = array of partij-ids that have a position on that issue
+  var EDGES = {
+    'wonen':        ['GL-PvdA','Volt','DLW','Lokaal','CDA','HvW','VVD','FvD'],
+    'centrum':      ['GL-PvdA','Volt','D66','DLW','Lokaal','CDA','FvD'],
+    'verkeer':      ['GL-PvdA','Volt','D66','DLW','Lokaal','CDA','HvW','VVD','FvD'],
+    'groen':        ['GL-PvdA','Volt','D66','DLW','Lokaal','HvW','VVD','FvD'],
+    'klimaat':      ['GL-PvdA','DLW','CDA','HvW','VVD','FvD'],
+    'financien':    ['GL-PvdA','Volt','D66','DLW','Lokaal','CDA','HvW','VVD','FvD'],
+    'veiligheid':   ['D66','DLW','Lokaal','HvW','VVD','FvD'],
+    'ambtelijk':    ['GL-PvdA','Volt','D66','DLW','Lokaal','CDA','HvW','VVD','FvD'],
+    'economie':     ['GL-PvdA','Volt','D66','DLW','Lokaal','CDA','FvD'],
+    'zorg':         ['GL-PvdA','Volt','D66','DLW','Lokaal','CDA','VVD','FvD'],
+    'sport':        ['GL-PvdA','Volt','D66','DLW','Lokaal','HvW','VVD','FvD'],
+    'erfgoed':      ['GL-PvdA','Volt','D66','DLW','Lokaal','CDA','HvW','VVD','FvD'],
+    'participatie': ['GL-PvdA','Volt','D66','DLW','Lokaal','CDA','HvW','VVD','FvD'],
+    'onderwijs':    ['Volt','DLW','CDA','VVD'],
+    'azc':          ['D66','DLW','Lokaal','HvW','VVD','FvD']
+  };
+
+  var PARTIJ_SLUGS = {
+    'VVD': 'vvd', 'CDA': 'cda', 'D66': 'd66', 'GL-PvdA': 'groenlinks-pvda',
+    'Lokaal': 'lokaal-wassenaar', 'HvW': 'hart-voor-wassenaar',
+    'DLW': 'democratische-liberalen-wassenaar', 'Volt': 'volt', 'FvD': 'forum-voor-democratie'
+  };
+
+  var PARTIJ_FULL = {
+    'VVD':'VVD','CDA':'CDA','D66':'D66','GL-PvdA':'GroenLinks-PvdA',
+    'Lokaal':'Lokaal Wassenaar','HvW':'Hart voor Wassenaar',
+    'DLW':'Democratische Liberalen','Volt':'Volt','FvD':'Forum voor Democratie'
+  };
+
+  function escapeHtml(s) { var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+  function buildElements() {
+    var els = [];
+    PARTIJEN.forEach(function(p) {
+      els.push({ group:'nodes', data:{ id:p.id, label:p.label, group:1, size: 28 + p.zetels*5 }});
+    });
+    ISSUES.forEach(function(iss) {
+      var count = (EDGES[iss.id]||[]).length;
+      els.push({ group:'nodes', data:{ id:iss.id, label:iss.label, full:iss.full, ctx:iss.ctx, group:2, size: 20 + count*3 }});
+    });
+    var ei = 0;
+    Object.keys(EDGES).forEach(function(issId) {
+      EDGES[issId].forEach(function(pId) {
+        els.push({ group:'edges', data:{ id:'e'+(ei++), source:pId, target:issId, value:1 }});
+      });
+    });
+    return els;
+  }
+
+  var elements = buildElements();
+
+  // Filters
+  var filterEl = document.getElementById('filters');
+  ISSUES.forEach(function(iss) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'netwerk-filter-btn';
+    btn.dataset.issue = iss.id;
+    btn.textContent = iss.label;
+    btn.title = iss.full;
+    filterEl.appendChild(btn);
+  });
+
+  var cyStyle = [
+    {
+      selector: 'node[group=1]',
+      style: {
+        'label':'data(label)', 'background-color':'#4f46e5', 'color':'#fff',
+        'text-valign':'center', 'text-halign':'center', 'font-size':'10px',
+        'width':'data(size)', 'height':'data(size)',
+        'text-max-width':'80px', 'text-wrap':'ellipsis',
+        'border-width':2, 'border-color':'#312e81',
+        'text-outline-width':2, 'text-outline-color':'#312e81',
+        'transition-property':'opacity', 'transition-duration':'200ms'
+      }
+    },
+    {
+      selector: 'node[group=2]',
+      style: {
+        'label':'data(label)', 'background-color':'#d97706', 'color':'#fff',
+        'text-valign':'center', 'text-halign':'center', 'font-size':'9px',
+        'width':'data(size)', 'height':'data(size)', 'shape':'round-rectangle',
+        'text-max-width':'100px', 'text-wrap':'wrap', 'line-height':'1.3',
+        'border-width':2, 'border-color':'#92400e',
+        'text-outline-width':1.5, 'text-outline-color':'#92400e',
+        'transition-property':'opacity,background-color', 'transition-duration':'200ms'
+      }
+    },
+    {
+      selector: 'edge',
+      style: {
+        'width':'mapData(value,1,3,1.5,4)', 'line-color':'#cbd5e1',
+        'curve-style':'bezier', 'opacity':0.5,
+        'transition-property':'line-color,opacity,width', 'transition-duration':'150ms'
+      }
+    },
+    { selector:'edge.hover', style:{ 'line-color':'#f59e0b', 'opacity':1, 'width':4, 'z-index':10 }},
+    { selector:'edge.pinned', style:{ 'line-color':'#d97706', 'opacity':1, 'width':4, 'z-index':10 }},
+    { selector:'node.dimmed', style:{ 'opacity':0.15 }},
+    { selector:'edge.dimmed', style:{ 'opacity':0.08 }},
+    { selector:'node.highlighted', style:{ 'border-width':4, 'border-color':'#fbbf24' }},
+    { selector:'node[group=2].focused', style:{ 'background-color':'#b45309', 'border-color':'#fbbf24', 'border-width':4, 'font-size':'11px' }}
+  ];
+
+  var cyStyleDark = JSON.parse(JSON.stringify(cyStyle));
+  cyStyleDark[0].style['text-outline-color'] = '#1e1b4b';
+  cyStyleDark[1].style['text-outline-color'] = '#78350f';
+  cyStyleDark[2].style['line-color'] = '#475569';
+
+  var layoutOpts = { name:'cose', animate:'end', nodeRepulsion:9000, animationDuration:600, gravity:0.3 };
+
+  function getEdgeInfo(edge, targetCy) {
+    var src = edge.data('source');
+    var tgt = edge.data('target');
+    var srcNode = targetCy.getElementById(src);
+    var isPartij = srcNode.data('group') === 1;
+    var partijId = isPartij ? src : tgt;
+    var issueId  = isPartij ? tgt : src;
+    var issueNode = targetCy.getElementById(issueId);
+    return {
+      partij: partijId,
+      partijFull: PARTIJ_FULL[partijId] || partijId,
+      issue: issueId,
+      issueFull: issueNode.data('full') || issueId,
+      issueCtx: issueNode.data('ctx') || ''
+    };
+  }
+
+  function buildPanelHtml(info) {
+    var title = escapeHtml(info.partijFull) + ' &rarr; ' + escapeHtml(info.issueFull);
+    var body = '<p class="issue-detail-context">' + escapeHtml(info.issueCtx) + '</p>';
+    body += '<a href="partijen.html?zoek=' + encodeURIComponent(info.issueFull.split(' ').slice(0,3).join(' ')) +
+      '#partij-' + (PARTIJ_SLUGS[info.partij]||info.partij) +
+      '" class="link-to-partij">&rarr; Zoek in programma ' + escapeHtml(info.partijFull) + '</a>';
+    return { title: title, body: body };
+  }
+
+  function buildIssuePanelHtml(issueNode, targetCy) {
+    var issId = issueNode.data('id');
+    var full = issueNode.data('full');
+    var ctx = issueNode.data('ctx');
+    var connected = targetCy.edges('[source="'+issId+'"], [target="'+issId+'"]');
+    var partijen = [];
+    connected.forEach(function(e) {
+      var s = e.data('source'), t = e.data('target');
+      var pId = (s === issId) ? t : s;
+      partijen.push(pId);
+    });
+    var title = '<span class="issue-detail-title">' + escapeHtml(full) + '</span>';
+    var body = '<p class="issue-detail-context">' + escapeHtml(ctx) + '</p>';
+    body += '<div class="issue-detail-partijen">';
+    partijen.forEach(function(p) {
+      body += '<span class="issue-pil">' + escapeHtml(PARTIJ_FULL[p]||p) + '</span>';
+    });
+    body += '</div>';
+    body += '<p style="font-size:0.85rem;color:#64748b;">' + partijen.length + ' van 9 partijen nemen een standpunt in over dit issue.</p>';
+    return { title: title, body: body };
+  }
+
+  function updatePanel(content, isPinned, isFullscreen) {
+    var prefix = isFullscreen ? 'fs-' : '';
+    var titleEl = document.getElementById(prefix + 'panel-title');
+    var bodyEl = document.getElementById(prefix + 'panel-body');
+    var panelEl = document.getElementById(isFullscreen ? 'fs-panel' : 'panel');
+    titleEl.innerHTML = content.title;
+    bodyEl.innerHTML = content.body;
+    if (!isFullscreen) {
+      var badge = isPinned ?
+        ' <span class="panel-status pinned">&#x1F4CC; vastgezet</span>' :
+        ' <span class="panel-status hover">&#x1F446; hover</span>';
+      titleEl.innerHTML += badge;
+      panelEl.classList.toggle('pinned', isPinned);
+    }
+  }
+
+  function clearPanel(isFullscreen) {
+    var prefix = isFullscreen ? 'fs-' : '';
+    document.getElementById(prefix + 'panel-title').textContent = 'Beweeg over een lijn';
+    document.getElementById(prefix + 'panel-body').innerHTML = '<p class="empty">Hover over een verbinding om context te zien.</p>';
+    if (!isFullscreen) document.getElementById('panel').classList.remove('pinned');
+  }
+
+  var tooltip = document.getElementById('tooltip');
+
+  function attachEvents(targetCy, isFullscreen) {
+    var localPinned = false;
+    var focusedIssue = null;
+
+    targetCy.on('mouseover', 'edge', function(evt) {
+      if (localPinned) return;
+      targetCy.edges().removeClass('hover');
+      evt.target.addClass('hover');
+      var info = getEdgeInfo(evt.target, targetCy);
+      updatePanel(buildPanelHtml(info), false, isFullscreen);
+    });
+
+    targetCy.on('mouseout', 'edge', function(evt) {
+      if (localPinned) return;
+      evt.target.removeClass('hover');
+      if (!focusedIssue) clearPanel(isFullscreen);
+    });
+
+    targetCy.on('tap', 'edge', function(evt) {
+      targetCy.edges().removeClass('hover pinned');
+      evt.target.addClass('pinned');
+      localPinned = true;
+      var info = getEdgeInfo(evt.target, targetCy);
+      updatePanel(buildPanelHtml(info), true, isFullscreen);
+    });
+
+    targetCy.on('mouseover', 'node[group=2]', function(evt) {
+      if (isFullscreen) return;
+      var node = evt.target;
+      var pos = node.renderedPosition();
+      var container = document.getElementById('cy').getBoundingClientRect();
+      tooltip.innerHTML = '<strong>' + escapeHtml(node.data('full')) + '</strong><br>' + escapeHtml(node.data('ctx'));
+      tooltip.style.left = (pos.x + container.left + 15) + 'px';
+      tooltip.style.top = (pos.y + container.top - 10) + 'px';
+      tooltip.classList.add('visible');
+    });
+
+    targetCy.on('mouseout', 'node[group=2]', function() {
+      tooltip.classList.remove('visible');
+    });
+
+    targetCy.on('tap', 'node[group=2]', function(evt) {
+      var node = evt.target;
+      var issId = node.data('id');
+      tooltip.classList.remove('visible');
+
+      if (focusedIssue === issId) {
+        targetCy.elements().removeClass('dimmed highlighted focused');
+        focusedIssue = null;
+        clearPanel(isFullscreen);
+        return;
+      }
+
+      focusedIssue = issId;
+      targetCy.edges().removeClass('hover pinned');
+      localPinned = false;
+
+      targetCy.elements().addClass('dimmed');
+      node.removeClass('dimmed').addClass('focused');
+      var neighborhood = node.closedNeighborhood();
+      neighborhood.removeClass('dimmed');
+      neighborhood.nodes('[group=1]').addClass('highlighted');
+      neighborhood.edges().addClass('pinned');
+
+      updatePanel(buildIssuePanelHtml(node, targetCy), false, isFullscreen);
+    });
+
+    targetCy.on('tap', 'node[group=1]', function(evt) {
+      var pId = evt.target.data('id');
+      window.location.href = 'partijen.html#partij-' + (PARTIJ_SLUGS[pId]||pId);
+    });
+
+    targetCy.on('tap', function(evt) {
+      if (evt.target === targetCy) {
+        targetCy.edges().removeClass('hover pinned');
+        targetCy.elements().removeClass('dimmed highlighted focused');
+        localPinned = false;
+        focusedIssue = null;
+        clearPanel(isFullscreen);
+      }
+    });
+
+    if (!isFullscreen) {
+      document.getElementById('unpin-btn').onclick = function() {
+        targetCy.edges().removeClass('hover pinned');
+        localPinned = false;
+        clearPanel(false);
+      };
+    }
+  }
+
+  var cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements: elements,
+    style: cyStyle,
+    layout: layoutOpts
+  });
+  attachEvents(cy, false);
+
+  // Filters
+  document.getElementById('filters').addEventListener('click', function(e) {
+    var btn = e.target.closest('.netwerk-filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('.netwerk-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var issId = btn.dataset.issue;
+    cy.elements().removeClass('dimmed highlighted focused');
+    if (!issId) {
+      cy.elements().show();
+    } else {
+      var issNode = cy.getElementById(issId);
+      cy.elements().hide();
+      if (issNode.length) issNode.add(issNode.closedNeighborhood()).show();
+    }
+    cy.layout(layoutOpts).run();
+  });
+
+  // Fullscreen
+  var fsCy = null;
+  document.getElementById('popout-btn').onclick = function() {
+    document.getElementById('fs-overlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (fsCy) fsCy.destroy();
+    fsCy = cytoscape({
+      container: document.getElementById('cy-fs'),
+      elements: JSON.parse(JSON.stringify(elements)),
+      style: cyStyleDark,
+      layout: layoutOpts
+    });
+    attachEvents(fsCy, true);
+  };
+  document.getElementById('fs-close').onclick = function() {
+    document.getElementById('fs-overlay').classList.remove('active');
+    document.body.style.overflow = '';
+    if (fsCy) { fsCy.destroy(); fsCy = null; }
+  };
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('fs-overlay').classList.contains('active'))
+      document.getElementById('fs-close').click();
+  });
+
+})();
+  </script>
 </body>
 </html>

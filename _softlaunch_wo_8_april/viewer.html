@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestand bekijken</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'SF Mono', 'Consolas', 'Monaco', 'Menlo', monospace; font-size: 15px; line-height: 1.7; margin: 0; padding: 1.5rem 2rem; background: #f6f8fa; color: #24292f; }
+    .toolbar { margin-bottom: 1.25rem; display: flex; align-items: center; gap: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #d0d7de; }
+    .toolbar a { color: #0969da; text-decoration: none; font-weight: 500; }
+    .toolbar a:hover { text-decoration: underline; }
+    .filename { color: #57606a; font-size: 0.95em; }
+    .code-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media (min-width: 1400px) { .code-wrap { grid-template-columns: 1fr 1fr 1fr; } }
+    @media (max-width: 768px) { .code-wrap { grid-template-columns: 1fr; } }
+    .code-col { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; overflow-x: auto; padding: 1.25rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+    pre { margin: 0; }
+    code { white-space: pre; font-size: 14px; letter-spacing: 0.02em; }
+    .line { display: block; min-height: 1.5em; }
+    .line-num { display: inline-block; width: 3.5em; color: #8c959f; user-select: none; margin-right: 1.25em; text-align: right; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a href="verbeterpunten-beheer.html">← Verbeterpunten</a>
+    <span class="filename" id="filename">—</span>
+  </div>
+  <div class="code-wrap" id="codeWrap"></div>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const file = params.get('file') || '';
+    const wrap = document.getElementById('codeWrap');
+    const cols = window.innerWidth >= 1400 ? 3 : (window.innerWidth <= 768 ? 1 : 2);
+
+    function render(lines) {
+      const n = lines.length;
+      const perCol = Math.ceil(n / cols);
+      let html = '';
+      for (let c = 0; c < cols; c++) {
+        const start = c * perCol;
+        const end = Math.min(start + perCol, n);
+        const chunk = lines.slice(start, end).map((l, i) =>
+          `<span class="line"><span class="line-num">${start + i + 1}</span>${escapeHtml(l) || ' '}</span>`
+        ).join('');
+        html += `<div class="code-col"><pre><code>${chunk}</code></pre></div>`;
+      }
+      wrap.innerHTML = html;
+    }
+
+    if (!file || /\.\./.test(file)) {
+      wrap.innerHTML = '<div class="code-col"><pre><code>Geen geldig bestand opgegeven.</code></pre></div>';
+    } else {
+      document.getElementById('filename').textContent = file;
+      fetch(file)
+        .then(r => r.text())
+        .then(t => {
+          const lines = t.split('\n');
+          render(lines);
+        })
+        .catch(e => {
+          wrap.innerHTML = '<div class="code-col"><pre><code>Kon bestand niet laden: ' + escapeHtml(e.message) + '</code></pre></div>';
+        });
+    }
+    function escapeHtml(s) {
+      const d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+  </script>
+</body>
+</html>

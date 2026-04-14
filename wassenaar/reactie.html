@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactie · BeleidsBibliotheek Wassenaar</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#55601c">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="pwa-icons/icon-192.png">
+    <style>
+        .reactie-wrap { max-width: 640px; margin: 0 auto; padding: 1.5rem 0 3rem; }
+        .reactie-wrap h2 { font-size: 1.25rem; margin-bottom: 0.25rem; }
+        .reactie-intro { font-size: 0.88rem; color: #555; line-height: 1.6; margin-bottom: 1.5rem; }
+        .rf-veld { margin-bottom: 1.25rem; }
+        .rf-veld label { display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.3rem; color: #222; }
+        .rf-veld .rf-hint { font-size: 0.8rem; color: #777; margin-bottom: 0.35rem; }
+        .rf-veld select,
+        .rf-veld input[type="text"],
+        .rf-veld textarea {
+            width: 100%; padding: 0.6rem 0.75rem; font-size: 0.9rem;
+            border: 1px solid #ccc; border-radius: 6px; font-family: inherit;
+            background: #fff; box-sizing: border-box;
+        }
+        .rf-veld select:focus,
+        .rf-veld input:focus,
+        .rf-veld textarea:focus { outline: none; border-color: #003580; box-shadow: 0 0 0 2px rgba(0,53,128,.15); }
+        .rf-veld textarea { resize: vertical; min-height: 100px; }
+        .rf-type-opties { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
+        .rf-type-optie { display: none; }
+        .rf-type-label {
+            display: inline-block; padding: 0.4rem 0.9rem; border-radius: 20px;
+            font-size: 0.82rem; border: 1px solid #ccc; cursor: pointer;
+            background: #f9f9f9; transition: all 0.15s;
+        }
+        .rf-type-optie:checked + .rf-type-label {
+            background: #003580; color: #fff; border-color: #003580;
+        }
+        .rf-type-label:hover { border-color: #003580; }
+        .rf-acties { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .rf-btn {
+            padding: 0.65rem 1.5rem; font-size: 0.9rem; font-weight: 600;
+            border: none; border-radius: 6px; cursor: pointer; font-family: inherit;
+        }
+        .rf-btn-mail { background: #003580; color: #fff; }
+        .rf-btn-mail:hover { background: #002a66; }
+        .rf-btn-kopie { background: #f0f0f0; color: #333; border: 1px solid #ccc; }
+        .rf-btn-kopie:hover { background: #e4e4e4; }
+        .rf-bevestiging {
+            display: none; padding: 0.75rem 1rem; border-radius: 6px;
+            background: #e8f5e9; color: #2e7d32; font-size: 0.85rem; margin-top: 1rem;
+        }
+        .rf-preview { display: none; margin-top: 1.25rem; padding: 1rem; background: #f7f7f7; border-radius: 6px; font-size: 0.82rem; white-space: pre-wrap; line-height: 1.5; color: #333; border: 1px solid #e0e0e0; }
+    </style>
+</head>
+<body>
+    <script src="disclaimer.js"></script>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link" aria-label="Gemeente Wassenaar">
+                <img src="wassenaar_logo_fc%20kopie.svg" alt="Gemeente Wassenaar" class="site-logo">
+            </a>
+            <div class="header-text">
+                <h1><a href="index.html" class="header-title-link">BeleidsBibliotheek Wassenaar</a></h1>
+                <p class="subtitle">Gemeente Wassenaar · Reactieformulier</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="overzicht-kop">
+            <nav class="overzicht-tabs" aria-label="Pagina's">
+                <a href="index.html" class="overzicht-tab">Beleidsdossiers</a>
+                <span class="overzicht-tab overzicht-tab-actief">Reactie</span>
+            </nav>
+        </div>
+
+        <div class="reactie-wrap">
+            <h2>Wijziging of opmerking doorgeven</h2>
+            <p class="reactie-intro">Ziet u een fout, ontbreekt er een document, of heeft u een andere opmerking over de BeleidsBibliotheek? Gebruik dit formulier om uw reactie gestructureerd door te geven. Er wordt een e-mail aangemaakt die u kunt versturen.</p>
+
+            <form id="reactieForm" onsubmit="return false;">
+
+                <div class="rf-veld">
+                    <label for="rfNaam">Naam of initialen (optioneel)</label>
+                    <p class="rf-hint">Helpt collega’s om reacties te herkennen en te sorteren.</p>
+                    <input type="text" id="rfNaam" maxlength="80" placeholder="Bijv. Jan J. of AB" autocomplete="name">
+                </div>
+
+                <div class="rf-veld">
+                    <label>Type reactie</label>
+                    <div class="rf-type-opties">
+                        <input class="rf-type-optie" type="radio" name="rfType" id="rfTypeLink" value="Link klopt niet" checked>
+                        <label class="rf-type-label" for="rfTypeLink">Link klopt niet</label>
+
+                        <input class="rf-type-optie" type="radio" name="rfType" id="rfTypeOntbreekt" value="Document ontbreekt">
+                        <label class="rf-type-label" for="rfTypeOntbreekt">Document ontbreekt</label>
+
+                        <input class="rf-type-optie" type="radio" name="rfType" id="rfTypeFout" value="Feitelijke fout">
+                        <label class="rf-type-label" for="rfTypeFout">Feitelijke fout</label>
+
+                        <input class="rf-type-optie" type="radio" name="rfType" id="rfTypeVerwijder" value="Document hoort hier niet">
+                        <label class="rf-type-label" for="rfTypeVerwijder">Hoort hier niet</label>
+
+                        <input class="rf-type-optie" type="radio" name="rfType" id="rfTypeAnders" value="Overig">
+                        <label class="rf-type-label" for="rfTypeAnders">Overig</label>
+                    </div>
+                </div>
+
+                <div class="rf-veld">
+                    <label for="rfSectie">Welke tegel / sectie?</label>
+                    <p class="rf-hint">Selecteer het BBV-hoofdstuk waar uw opmerking over gaat.</p>
+                    <select id="rfSectie">
+                        <option value="">— Kies een sectie —</option>
+                        <option value="H0 Bestuur en ondersteuning">H0 · Bestuur en ondersteuning</option>
+                        <option value="H1 Veiligheid">H1 · Veiligheid</option>
+                        <option value="H2 Verkeer, vervoer en waterstaat">H2 · Verkeer, vervoer en waterstaat</option>
+                        <option value="H3 Economie">H3 · Economie</option>
+                        <option value="H4 Onderwijs">H4 · Onderwijs</option>
+                        <option value="H5 Sport, cultuur en recreatie">H5 · Sport, cultuur en recreatie</option>
+                        <option value="H6 Sociaal domein">H6 · Sociaal domein</option>
+                        <option value="H7 Volksgezondheid en milieu">H7 · Volksgezondheid en milieu</option>
+                        <option value="H8 VHROSV">H8 · VHROSV</option>
+                        <option value="Overdrachtsdossier">Overdrachtsdossier</option>
+                        <option value="Algemeen / Overig">Algemeen / Overig</option>
+                    </select>
+                </div>
+
+                <div class="rf-veld">
+                    <label for="rfDocument">Document</label>
+                    <p class="rf-hint">Naam van het document waar het over gaat (indien van toepassing).</p>
+                    <input type="text" id="rfDocument" placeholder="Bijv. Beleidsplan Sociaal Domein">
+                </div>
+
+                <div class="rf-veld">
+                    <label for="rfToelichting">Toelichting</label>
+                    <p class="rf-hint">Beschrijf wat er niet klopt, wat u mist, of wat u anders zou willen zien.</p>
+                    <textarea id="rfToelichting" rows="5" placeholder="Uw opmerking..."></textarea>
+                </div>
+
+                <div class="rf-acties">
+                    <button type="button" class="rf-btn rf-btn-mail" onclick="verstuurMail()">Verstuur via e-mail</button>
+                    <button type="button" class="rf-btn rf-btn-kopie" onclick="kopieerTekst()">Kopieer als tekst</button>
+                </div>
+
+                <div class="rf-bevestiging" id="rfBevestiging"></div>
+                <div class="rf-preview" id="rfPreview"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>BeleidsBibliotheek Wassenaar · <a href="index.html" class="footer-link-btn">Terug naar overzicht</a></p>
+            <p class="footer-contact">Contact: Eenheid Informatie en Datamanagement</p>
+        </div>
+    </footer>
+
+    <script>
+    function bbvReactieNu() {
+        const d = new Date();
+        const p = (n) => (n < 10 ? '0' + n : '' + n);
+        return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
+    }
+    function bbvWassenaarPortaalBasis() {
+        const h = location.hostname;
+        if (h === 'localhost' || h === '127.0.0.1') {
+            return location.origin + location.pathname.replace(/[^/]*$/, '');
+        }
+        return 'https://wassenaar.besluit-wijzer.nl/';
+    }
+    function bbvUrlWerklijstMutaties() { return bbvWassenaarPortaalBasis() + 'werklijst-mutaties.html'; }
+    function bouwTekst() {
+        const naam = document.getElementById('rfNaam').value.trim() || '—';
+        const type = document.querySelector('input[name="rfType"]:checked').value;
+        const sectie = document.getElementById('rfSectie').value || 'Niet opgegeven';
+        const doc = document.getElementById('rfDocument').value.trim() || '—';
+        const toelichting = document.getElementById('rfToelichting').value.trim();
+        const nu = bbvReactieNu();
+
+        return [
+            'REACTIE BELEIDSBIBLIOTHEEK WASSENAAR',
+            '─'.repeat(40),
+            '',
+            'Verzonden:    ' + nu + ' (lokale tijd)',
+            'Van:          ' + naam,
+            'Type:         ' + type,
+            'Sectie:       ' + sectie,
+            'Document:     ' + doc,
+            '',
+            'Toelichting:',
+            toelichting || '(geen toelichting)',
+            '',
+            '─'.repeat(40),
+            'Werklijst mutaties (openbaar, acceptatie):',
+            bbvUrlWerklijstMutaties(),
+            '',
+            'Verstuurd via reactieformulier BeleidsBibliotheek'
+        ].join('\n');
+    }
+
+    function verstuurMail() {
+        const type = document.querySelector('input[name="rfType"]:checked').value;
+        const sectie = document.getElementById('rfSectie').value;
+        const doc = document.getElementById('rfDocument').value.trim();
+        const toelichting = document.getElementById('rfToelichting').value.trim();
+
+        if (!toelichting && !doc) {
+            document.getElementById('rfToelichting').focus();
+            return;
+        }
+
+        const onderwerp = 'BeleidsBibliotheek — ' + type + (sectie ? ' (' + sectie + ')' : '') + ' — ' + bbvReactieNu();
+        const body = bouwTekst();
+
+        window.location.href = 'mailto:dbraam@wassenaar.nl;dickbraam@me.com'
+            + '?subject=' + encodeURIComponent(onderwerp)
+            + '&body=' + encodeURIComponent(body);
+    }
+
+    function kopieerTekst() {
+        const tekst = bouwTekst();
+        const preview = document.getElementById('rfPreview');
+
+        navigator.clipboard.writeText(tekst).then(function() {
+            toonBevestiging('Tekst gekopieerd naar klembord.');
+        }).catch(function() {
+            preview.textContent = tekst;
+            preview.style.display = 'block';
+            toonBevestiging('Selecteer en kopieer onderstaande tekst handmatig.');
+        });
+    }
+
+    function toonBevestiging(msg, isError) {
+        const el = document.getElementById('rfBevestiging');
+        el.textContent = msg;
+        el.style.display = 'block';
+        el.style.background = isError ? '#fde8e8' : '#e8f5e9';
+        el.style.color = isError ? '#c81e1e' : '#2e7d32';
+        setTimeout(function() { el.style.display = 'none'; }, 4000);
+    }
+    </script>
+</body>
+</html>

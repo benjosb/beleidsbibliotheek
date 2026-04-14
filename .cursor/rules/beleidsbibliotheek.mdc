@@ -1,0 +1,86 @@
+---
+description: Altijd laden bij het openen van de Beleidsbibliotheek
+globs:
+alwaysApply: true
+---
+
+# BeleidsBibliotheek Wassenaar — Cursor-sessieregel
+
+## Context
+
+Dick Braam, beleidsadviseur gemeente Wassenaar en ZZP'er via braamenco.nl (WIL / Wes Innovation Lab).
+Bedrijfsgeheugen: `../__2026_ondernemen/CONTEXT.md`
+
+## Dit project
+
+- **Wat:** Zoekbare interface voor vastgesteld gemeentelijk beleid (raad + college), gemeente Wassenaar
+- **Tech:** Statische site (HTML/CSS/JS), geen framework, geen backend, geen build-stap
+- **Status:** Live sinds 7 april 2026
+- **Versie:** zie `VERSION` bestand
+- **Repo:** github.com/benjosb/beleidsbibliotheek
+- **IS_ACCEPTATIE flag:** `app.js` toont "Document voorstellen" alleen op localhost, 127.0.0.1 en wassenaar.besluit-wijzer.nl
+
+## Drie omgevingen — NIET VRAGEN, HIER STAAT HET
+
+| Omgeving | URL | Hosting | Pad/toegang | Deploy-methode |
+|----------|-----|---------|-------------|----------------|
+| **Lokaal** | localhost | MacBook Pro Dick | `wassenaar/` in dit project | Gewoon bestanden bewerken |
+| **Acceptatie (ACC)** | wassenaar.besluit-wijzer.nl | **VPS Hostinger**, IP 187.77.93.148 | `/var/www/wassenaar.besluit-wijzer.nl/` | SSH/SCP via `deploy.sh` |
+| **Productie (PROD)** | beleidsbibliotheekwassenaar.nl | **Argeweb** (APART van de VPS!) | Plesk file manager of FTP | `promote-to-prod.sh` (FTP) of handmatig via Plesk |
+
+**ACC en PROD staan op VERSCHILLENDE servers. ACC = Hostinger VPS. PROD = Argeweb.**
+
+## Deploy-workflow
+
+```
+Dick (lokaal) → ./deploy.sh → ACC (Hostinger VPS)
+                                ↓ Joyce controleert
+                               ./promote-to-prod.sh → PROD (Argeweb via FTP)
+```
+
+- `deploy.sh` — deployt lokaal → ACC, met git backup + deploy-log
+- `promote-to-prod.sh` — deployt ACC → PROD via FTP naar Argeweb
+- FTP-credentials: `.env.prod` (staat in .gitignore, NOOIT committen)
+- `WERKWIJZE.md` — volledige instructies voor Dick, Joyce, Ricardo
+
+## Rollen
+
+- **Dick** — ontwikkelt lokaal, deployt naar ACC
+- **Joyce** — beheert content op ACC via de browser, accordeert wijzigingen
+- **Ricardo** — promoveert ACC naar PROD
+
+## Kernbestanden
+
+| Bestand | Inhoud |
+|---------|--------|
+| `WERKWIJZE.md` | Instructies deploy-workflow voor alle rollen |
+| `BACKLOG.md` | Plannings- en prioriteitsoverzicht |
+| `docs/deploy-log.md` | Logboek van alle deploys |
+| `DRAAIBOEK_BELEIDSWIJZER.md` | Architectuur, pipeline, build |
+| `OVERDRACHTSDOSSIER.md` | Verborgen items (roadmap, verbeterpunten, schrijfwijzer) |
+| `docs/mutatierapport_*.md` | Mutatieketen per release |
+| `TODO.md` | Openstaande technische taken |
+| `dashboard.py` | Lokaal beheerdashboard (python3 dashboard.py → localhost:8800) |
+| `backup-prod.sh` | Download productie van Argeweb via FTP |
+| `backup-daily.py` | Backup + integriteitscheck + e-mailnotificatie |
+| `.env.prod` | FTP-credentials Argeweb (NOOIT committen) |
+| `.env.mail` | SMTP-credentials iCloud (NOOIT committen) |
+
+## Backup-systeem
+
+- Dagelijkse backup via macOS LaunchAgent (07:00): `~/Library/LaunchAgents/nl.beleidsbibliotheek.backup.plist`
+- Backups in `backups/prod_DATUM/`, laatste 10 bewaard
+- Integriteitscheck: 8 kernbestanden, minimale groottes, MD5-checksums
+- E-mail naar dickbraam@me.com bij OK of FOUT
+- Log: `backups/backup-daily.log`
+
+## Regels
+
+- **Bij START sessie:** lees `STATUS.md`. Daar staat waar we gebleven zijn. GEEN vragen stellen die daar of in deze rule beantwoord worden.
+- **Bij EINDE sessie:** werk `STATUS.md` bij met wat er gedaan is, wat de volgende stap is, en eventuele blokkades.
+- Geen wachtwoorden in chat of git. Credentials in `.env.prod`.
+- NOOIT vragen waar omgevingen staan. Lees DEZE regel.
+- Mutatieketen respecteren: wijziging altijd herleidbaar.
+- Vóór deletes: backup-map of git commit.
+- Na elke batch: spotcheck in de site.
+- Inhoudelijke juistheid = opdrachtgever; wij voeren technisch uit.

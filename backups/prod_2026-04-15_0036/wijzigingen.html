@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="BW Wijzigingen">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="pwa-icons/icon-192.png">
+<title>Wijzigingslogboek — BeleidsBibliotheek Wassenaar</title>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root {
+    --wg: #55601c;
+    --wg-light: #6b7a23;
+    --amber: #f59e0b;
+    --amber-dark: #92400e;
+    --amber-bg: #fffbe6;
+    --green: #059669;
+    --green-bg: #d1fae5;
+    --red: #dc2626;
+    --red-bg: #fee2e2;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-300: #d1d5db;
+    --gray-500: #6b7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
+}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--gray-50);color:var(--gray-900);line-height:1.55}
+a{color:#2563eb;text-decoration:none}
+a:hover{text-decoration:underline}
+
+.top-bar{background:var(--wg);color:#fff;padding:.65rem 1.25rem;display:flex;align-items:center;gap:.75rem}
+.top-bar a{color:#fff;text-decoration:none;font-size:.85rem}
+.top-bar a:hover{text-decoration:underline}
+.top-bar .sep{opacity:.4}
+.top-bar .title{font-weight:700;font-size:.95rem}
+
+.container{max-width:760px;margin:0 auto;padding:1rem 1.25rem 3rem}
+
+.page-header{margin-bottom:1.5rem}
+.page-header h1{font-size:1.3rem;margin:0 0 .25rem;color:var(--gray-900)}
+.page-header .subtitle{color:var(--gray-500);font-size:.88rem;margin:0}
+
+.env-badge{display:inline-block;padding:.15rem .5rem;border-radius:4px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--amber-dark);background:var(--amber-bg);border:1px solid var(--amber)}
+
+.stats{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.stat{background:#fff;border:1px solid var(--gray-300);border-radius:8px;padding:.6rem .85rem;flex:1;min-width:120px;text-align:center}
+.stat-num{font-size:1.5rem;font-weight:700;line-height:1}
+.stat-label{font-size:.72rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:.04em;margin-top:.15rem}
+.stat--groen .stat-num{color:var(--green)}
+.stat--amber .stat-num{color:var(--amber)}
+.stat--rood .stat-num{color:var(--red)}
+
+.filter-row{display:flex;gap:.4rem;margin-bottom:1rem;flex-wrap:wrap}
+.filter-row button{padding:.4rem .7rem;border:1px solid var(--gray-300);border-radius:20px;background:#fff;cursor:pointer;font-size:.8rem;color:var(--gray-700);transition:all .15s}
+.filter-row button:hover{border-color:var(--wg);color:var(--wg)}
+.filter-row button.active{background:var(--wg);color:#fff;border-color:var(--wg)}
+.filter-row .badge{font-size:.68rem;background:rgba(0,0,0,.08);padding:.1rem .3rem;border-radius:8px;margin-left:.2rem}
+.filter-row button.active .badge{background:rgba(255,255,255,.3)}
+
+.log-list{list-style:none;padding:0;margin:0}
+.log-entry{background:#fff;border:1px solid var(--gray-300);border-radius:10px;padding:.75rem .85rem;margin-bottom:.5rem;transition:border-color .15s}
+.log-entry:hover{border-color:var(--wg-light)}
+.log-entry-top{display:flex;align-items:flex-start;gap:.5rem}
+.log-entry-icon{font-size:1.1rem;flex-shrink:0;margin-top:.1rem}
+.log-entry-info{flex:1;min-width:0}
+.log-entry-titel{font-weight:600;font-size:.88rem;word-break:break-word}
+.log-entry-titel a{color:#2563eb}
+.log-entry-meta{font-size:.75rem;color:var(--gray-500);margin-top:.15rem}
+.log-entry-scope{font-size:.7rem;color:var(--gray-500);background:var(--gray-100);padding:.12rem .4rem;border-radius:4px;display:inline-block}
+.log-entry-extra{font-size:.82rem;color:var(--gray-700);margin-top:.35rem;padding:.35rem .5rem;background:var(--gray-100);border-radius:6px}
+
+.status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:.3rem;vertical-align:middle}
+.status-dot--goedgekeurd{background:var(--green)}
+.status-dot--afgewezen{background:var(--red)}
+.status-dot--voorstel{background:var(--amber)}
+
+.status-label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.status-label--goedgekeurd{color:#065f46}
+.status-label--afgewezen{color:#991b1b}
+.status-label--voorstel{color:var(--amber-dark)}
+
+.empty-state{text-align:center;padding:3rem 1rem;color:var(--gray-500);font-size:.9rem}
+
+.loading{text-align:center;padding:2rem;color:var(--gray-500);font-size:.9rem}
+
+footer{background:var(--gray-100);border-top:1px solid var(--gray-300);padding:.85rem 1.25rem;text-align:center;font-size:.78rem;color:var(--gray-500);margin-top:2rem}
+footer a{color:var(--wg)}
+</style>
+</head>
+<body>
+<div class="top-bar">
+    <a href="index.html">← BeleidsBibliotheek</a>
+    <span class="sep">|</span>
+    <span class="title">Wijzigingslogboek</span>
+    <span class="env-badge">Acceptatie</span>
+</div>
+<div class="container">
+    <div class="page-header">
+        <h1>Wijzigingslogboek</h1>
+        <p class="subtitle">Overzicht van alle voorgestelde, goedgekeurde en afgewezen mutaties aan de BeleidsBibliotheek. Dit is de acceptatieomgeving — goedgekeurde wijzigingen worden wekelijks doorgezet naar productie.</p>
+    </div>
+
+    <div class="stats" id="statsBar">
+        <div class="stat stat--groen"><div class="stat-num" id="statGoedgekeurd">–</div><div class="stat-label">Goedgekeurd</div></div>
+        <div class="stat stat--amber"><div class="stat-num" id="statVoorstel">–</div><div class="stat-label">In behandeling</div></div>
+        <div class="stat stat--rood"><div class="stat-num" id="statAfgewezen">–</div><div class="stat-label">Afgewezen</div></div>
+    </div>
+
+    <div class="filter-row" id="filterRow"></div>
+
+    <div class="loading" id="loadingState">Logboek laden…</div>
+    <ul class="log-list" id="logList" style="display:none;"></ul>
+    <div class="empty-state" id="emptyState" style="display:none;">Geen wijzigingen gevonden.</div>
+</div>
+
+<footer>
+    <a href="index.html">BeleidsBibliotheek Wassenaar</a> · <a href="beheer.html">Beheer</a> · Acceptatieomgeving: besluit-wijzer.nl
+</footer>
+
+<script>
+const API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+    ? 'http://127.0.0.1:5050/api'
+    : 'https://api.besluit-wijzer.nl/api';
+
+let allEntries = [];
+let currentFilter = 'alle';
+
+function esc(s) { const d = document.createElement('span'); d.textContent = s || ''; return d.innerHTML; }
+
+function formatDatum(iso) {
+    if (!iso) return '';
+    try {
+        return new Date(iso).toLocaleDateString('nl-NL', {day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+    } catch(e) { return iso; }
+}
+
+function scopeLabel(scope) {
+    if (!scope) return '';
+    const parts = ['BBV ' + scope.bbvIndex];
+    if (scope.taakveldCode) parts.push(scope.taakveldCode);
+    return parts.join(' / ');
+}
+
+function statusIcon(status) {
+    if (status === 'goedgekeurd') return '✓';
+    if (status === 'afgewezen') return '✗';
+    return '◌';
+}
+
+function renderStats() {
+    const counts = {goedgekeurd:0, voorstel:0, afgewezen:0};
+    allEntries.forEach(e => { if (counts[e.status] !== undefined) counts[e.status]++; });
+    document.getElementById('statGoedgekeurd').textContent = counts.goedgekeurd;
+    document.getElementById('statVoorstel').textContent = counts.voorstel;
+    document.getElementById('statAfgewezen').textContent = counts.afgewezen;
+}
+
+function renderFilterRow() {
+    const counts = {alle: allEntries.length, goedgekeurd:0, voorstel:0, afgewezen:0};
+    allEntries.forEach(e => { if (counts[e.status] !== undefined) counts[e.status]++; });
+    const bar = document.getElementById('filterRow');
+    bar.innerHTML = ['alle','goedgekeurd','voorstel','afgewezen'].map(f => {
+        const labels = {alle:'Alle', goedgekeurd:'Goedgekeurd', voorstel:'In behandeling', afgewezen:'Afgewezen'};
+        const count = counts[f] || 0;
+        const active = f === currentFilter ? ' active' : '';
+        return `<button class="${active}" data-f="${f}">${labels[f]}<span class="badge">${count}</span></button>`;
+    }).join('');
+}
+
+function renderList() {
+    renderFilterRow();
+    renderStats();
+
+    const filtered = currentFilter === 'alle' ? allEntries : allEntries.filter(e => e.status === currentFilter);
+    const list = document.getElementById('logList');
+    const empty = document.getElementById('emptyState');
+
+    if (!filtered.length) {
+        list.style.display = 'none';
+        empty.style.display = 'block';
+        return;
+    }
+
+    empty.style.display = 'none';
+    list.style.display = 'block';
+
+    list.innerHTML = filtered.map(entry => {
+        const icon = statusIcon(entry.status);
+        const scopeTxt = entry.scope ? scopeLabel(entry.scope) : '';
+        const scopeHtml = scopeTxt ? `<span class="log-entry-scope">${esc(scopeTxt)}</span> ` : '';
+        const linkHtml = entry.link
+            ? `<a href="${esc(entry.link)}" target="_blank" rel="noopener">${esc(entry.titel)}</a>`
+            : esc(entry.titel);
+        const datumIngediend = entry.ingediendOp ? formatDatum(entry.ingediendOp) : '';
+        const datumBeoordeeld = entry.beoordeeldOp ? `Beoordeeld: ${formatDatum(entry.beoordeeldOp)}` : '';
+        const metaParts = [datumIngediend, datumBeoordeeld].filter(Boolean);
+        const naamHtml = entry.naam ? ` · door ${esc(entry.naam)}` : '';
+        const extraHtml = entry.extra ? `<div class="log-entry-extra">${esc(entry.extra)}</div>` : '';
+
+        return `<li class="log-entry">
+            <div class="log-entry-top">
+                <span class="log-entry-icon"><span class="status-dot status-dot--${entry.status}"></span></span>
+                <div class="log-entry-info">
+                    <div class="log-entry-titel">${scopeHtml}${linkHtml}</div>
+                    <div class="log-entry-meta">
+                        <span class="status-label status-label--${entry.status}">${entry.status}</span>${naamHtml}
+                        ${metaParts.length ? ' · ' + metaParts.join(' · ') : ''}
+                    </div>
+                </div>
+            </div>
+            ${extraHtml}
+        </li>`;
+    }).join('');
+}
+
+async function loadLog() {
+    try {
+        const r = await fetch(`${API_BASE}/beleidsbibliotheek/wassenaar/voorstellen`, {
+            headers: { Accept: 'application/json' },
+            cache: 'no-store'
+        });
+        document.getElementById('loadingState').style.display = 'none';
+
+        if (!r.ok) {
+            document.getElementById('emptyState').textContent = 'Kon logboek niet laden.';
+            document.getElementById('emptyState').style.display = 'block';
+            return;
+        }
+
+        const data = await r.json();
+        allEntries = (data.items || []).sort((a, b) => {
+            const da = a.beoordeeldOp || a.ingediendOp || '';
+            const db = b.beoordeeldOp || b.ingediendOp || '';
+            return db.localeCompare(da);
+        });
+        renderList();
+    } catch(e) {
+        document.getElementById('loadingState').style.display = 'none';
+        document.getElementById('emptyState').textContent = 'Geen verbinding met de server.';
+        document.getElementById('emptyState').style.display = 'block';
+    }
+}
+
+document.getElementById('filterRow').addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn || !btn.dataset.f) return;
+    currentFilter = btn.dataset.f;
+    renderList();
+});
+
+loadLog();
+</script>
+</body>
+</html>

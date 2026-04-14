@@ -1,280 +1,61 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="BW Beheer">
-<link rel="icon" href="pwa-icons/icon-192.png">
-<link rel="apple-touch-icon" href="pwa-icons/icon-192.png">
-<title>BeleidsBibliotheek — Beheer</title>
-<style>
-*,*::before,*::after{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8f9fa;color:#1a1a2e;line-height:1.5}
-.top-bar{background:#55601c;color:#fff;padding:.75rem 1.25rem;font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;align-items:center}
-.top-bar .logout{background:none;border:1px solid rgba(255,255,255,.4);color:#fff;padding:.25rem .6rem;border-radius:4px;font-size:.75rem;cursor:pointer}
-.container{max-width:700px;margin:0 auto;padding:1rem}
-h1{font-size:1.2rem;margin:0 0 .25rem}
-.subtitle{color:#666;font-size:.82rem;margin-bottom:1rem}
-.auth-card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.5rem;text-align:center;margin:2rem 0}
-.auth-card input{width:100%;max-width:320px;padding:.6rem .75rem;border:1px solid #d1d5db;border-radius:8px;font-size:1rem;margin-bottom:.75rem}
-.auth-card button{padding:.6rem 1.5rem;border:none;border-radius:8px;background:#55601c;color:#fff;cursor:pointer;font-size:1rem;font-weight:600}
-.auth-card .err{color:#dc2626;font-size:.85rem;margin-top:.5rem}
-.filter-bar{display:flex;gap:.4rem;margin-bottom:1rem;flex-wrap:wrap}
-.filter-bar button{padding:.4rem .7rem;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:.8rem}
-.filter-bar button.active{background:#55601c;color:#fff;border-color:#55601c}
-.count-badge{font-size:.7rem;background:rgba(0,0,0,.1);padding:.1rem .35rem;border-radius:8px;margin-left:.2rem}
-.filter-bar button.active .count-badge{background:rgba(255,255,255,.3)}
-.items-list{list-style:none;padding:0;margin:0}
-.item{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:.85rem;margin-bottom:.6rem}
-.item-top{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
-.item-info{flex:1;min-width:0}
-.item-titel{font-weight:600;font-size:.9rem;word-break:break-word}
-.item-titel a{color:#2563eb;text-decoration:none}
-.item-titel a:hover{text-decoration:underline}
-.item-meta{font-size:.75rem;color:#888;margin-top:.2rem}
-.item-naam{font-size:.8rem;color:#55601c;font-weight:600;margin-top:.15rem}
-.item-extra{font-size:.82rem;color:#555;margin-top:.4rem;padding:.4rem .6rem;background:#f1f5f9;border-radius:6px}
-.item-actions{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.5rem}
-.btn{padding:.5rem .8rem;border:none;border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:600;flex:1;min-width:0;text-align:center}
-.btn-approve{background:#059669;color:#fff}
-.btn-approve:active{background:#047857}
-.btn-reject{background:#dc2626;color:#fff}
-.btn-reject:active{background:#b91c1c}
-.btn-delete{background:#e5e7eb;color:#4b5563}
-.btn-delete:active{background:#d1d5db}
-.btn:disabled{opacity:.5;cursor:not-allowed}
-.badge{display:inline-block;padding:.15rem .45rem;border-radius:10px;font-size:.65rem;font-weight:600;text-transform:uppercase;vertical-align:middle;margin-right:.25rem}
-.badge-voorstel{background:#fef3c7;color:#92400e}
-.badge-goedgekeurd{background:#d1fae5;color:#065f46}
-.badge-afgewezen{background:#fee2e2;color:#991b1b}
-.scope-label{font-size:.7rem;color:#6b7280;background:#f3f4f6;padding:.12rem .4rem;border-radius:4px;display:inline-block;margin-right:.2rem}
-.empty{text-align:center;padding:2.5rem;color:#999;font-size:.9rem}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Beheer · niet meer in gebruik · BeleidsBibliotheek Wassenaar</title>
+    <link rel="stylesheet" href="styles.css?v=20260409b">
+    <style>
+        .beheer-stop-wrap { max-width: 640px; margin: 3rem auto; padding: 0 1.2rem; }
+        .beheer-stop-box {
+            background: #fff; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.1);
+            padding: 1.5rem 1.25rem; border-left: 4px solid var(--primary, #55601c);
+        }
+        .beheer-stop-box h1 { font-size: 1.25rem; margin: 0 0 .75rem; color: var(--primary, #55601c); }
+        .beheer-stop-box p { line-height: 1.55; color: #444; margin: 0 0 .85rem; }
+        .beheer-stop-box ul { margin: 0 0 .85rem; padding-left: 1.2rem; color: #444; line-height: 1.5; }
+        .beheer-stop-actions { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: .6rem; }
+        .beheer-stop-actions a {
+            display: inline-block; padding: .45rem 1rem; border-radius: 4px; text-decoration: none;
+            font-weight: 500; font-size: .9rem;
+        }
+        .beheer-stop-actions a.primary { background: var(--primary, #55601c); color: #fff; }
+        .beheer-stop-actions a.secondary { border: 1px solid #ccc; color: var(--primary, #55601c); background: #fafafa; }
+    </style>
 </head>
 <body>
-<div class="top-bar" id="topBar" style="display:none;">
-    <span>BeleidsBibliotheek — Beheer</span>
-    <button class="logout" id="logoutBtn">Uitloggen</button>
-</div>
-<div class="container">
-    <div class="auth-card" id="authCard">
-        <h1>Beheer BeleidsBibliotheek</h1>
-        <p class="subtitle">Voer het beheertoken in om voorstellen te beoordelen.</p>
-        <input type="password" id="tokenInput" placeholder="Token" autocomplete="off">
-        <br>
-        <button id="loginBtn">Inloggen</button>
-        <div class="err" id="authErr"></div>
-    </div>
-
-    <div id="mainContent" style="display:none;">
-        <div class="filter-bar" id="filterBar"></div>
-        <ul class="items-list" id="itemsList"></ul>
-    </div>
-</div>
-
-<script>
-const API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
-    ? 'http://127.0.0.1:5050/api'
-    : 'https://api.besluit-wijzer.nl/api';
-
-const LS_TOKEN = 'bw_beheer_token';
-let allItems = [];
-let currentFilter = 'voorstel';
-
-function getToken() { return (localStorage.getItem(LS_TOKEN) || '').trim(); }
-function setToken(t) { t ? localStorage.setItem(LS_TOKEN, t.trim()) : localStorage.removeItem(LS_TOKEN); }
-
-function showApp() {
-    document.getElementById('authCard').style.display = 'none';
-    document.getElementById('topBar').style.display = 'flex';
-    document.getElementById('mainContent').style.display = 'block';
-}
-
-function showLogin() {
-    document.getElementById('authCard').style.display = 'block';
-    document.getElementById('topBar').style.display = 'none';
-    document.getElementById('mainContent').style.display = 'none';
-}
-
-function esc(s) { const d = document.createElement('span'); d.textContent = s || ''; return d.innerHTML; }
-
-function badgeHtml(status) {
-    const cls = {voorstel:'badge-voorstel',goedgekeurd:'badge-goedgekeurd',afgewezen:'badge-afgewezen'}[status] || 'badge-voorstel';
-    return `<span class="badge ${cls}">${esc(status)}</span>`;
-}
-
-function scopeLabel(scope) {
-    if (!scope) return '';
-    const parts = [`BBV ${scope.bbvIndex}`];
-    if (scope.taakveldCode) parts.push(scope.taakveldCode);
-    return `<span class="scope-label">${esc(parts.join(' / '))}</span>`;
-}
-
-function formatDatum(iso) {
-    if (!iso) return '';
-    try {
-        const d = new Date(iso);
-        return d.toLocaleDateString('nl-NL', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
-    } catch(e) { return iso; }
-}
-
-function renderFilterBar() {
-    const counts = {voorstel:0,goedgekeurd:0,afgewezen:0};
-    allItems.forEach(i => { if (counts[i.status] !== undefined) counts[i.status]++; });
-    const bar = document.getElementById('filterBar');
-    bar.innerHTML = ['voorstel','goedgekeurd','afgewezen','alle'].map(f => {
-        const label = f === 'alle' ? 'Alle' : f.charAt(0).toUpperCase() + f.slice(1);
-        const count = f === 'alle' ? allItems.length : (counts[f] || 0);
-        const active = f === currentFilter ? ' active' : '';
-        return `<button class="${active}" data-filter="${f}">${label}<span class="count-badge">${count}</span></button>`;
-    }).join('');
-}
-
-function renderItems() {
-    renderFilterBar();
-    const list = document.getElementById('itemsList');
-    const filtered = currentFilter === 'alle' ? allItems : allItems.filter(i => i.status === currentFilter);
-
-    if (!filtered.length) {
-        list.innerHTML = `<li class="empty">Geen ${currentFilter === 'alle' ? 'items' : currentFilter + 'en'}.</li>`;
-        return;
-    }
-
-    list.innerHTML = filtered.map(item => {
-        const reviewBtns = item.status === 'voorstel'
-            ? `<button class="btn btn-approve" onclick="beoordeel('${esc(item.id)}','goedgekeurd',this)">Goedkeuren</button>
-               <button class="btn btn-reject" onclick="beoordeel('${esc(item.id)}','afgewezen',this)">Afwijzen</button>`
-            : '';
-        const naamHtml = item.naam ? `<div class="item-naam">Ingediend door: ${esc(item.naam)}</div>` : '';
-        const extra = item.extra ? `<div class="item-extra">${esc(item.extra)}</div>` : '';
-        const datum = item.ingediendOp ? formatDatum(item.ingediendOp) : '';
-        const beoordeeld = item.beoordeeldOp ? ` · beoordeeld ${formatDatum(item.beoordeeldOp)}` : '';
-        return `<li class="item">
-            <div class="item-top">
-                <div class="item-info">
-                    <div class="item-titel">${scopeLabel(item.scope)}${badgeHtml(item.status)} <a href="${esc(item.link)}" target="_blank" rel="noopener">${esc(item.titel)}</a></div>
-                    ${naamHtml}
-                    <div class="item-meta">${datum}${beoordeeld}</div>
-                </div>
+    <header class="site-header" role="banner">
+        <div class="container header-top">
+            <a href="https://www.wassenaar.nl" class="logo-link" aria-label="Gemeente Wassenaar" target="_blank" rel="noopener">
+                <img src="https://cuatro.sim-cdn.nl/wassenaar/uploads/2023-09/wassenaar_logo_fc.svg" alt="Gemeente Wassenaar" class="site-logo" width="200" height="35">
+            </a>
+            <div class="header-text">
+                <h1><a href="index.html" class="header-title-link">BeleidsBibliotheek Wassenaar</a></h1>
+                <p class="subtitle">Gemeente Wassenaar · Inzicht in beleid en besluitvorming</p>
             </div>
-            ${extra}
-            <div class="item-actions">
-                ${reviewBtns}
-                <button class="btn btn-delete" onclick="verwijder('${esc(item.id)}',this)">Verwijderen</button>
+        </div>
+    </header>
+
+    <main class="beheer-stop-wrap" id="main">
+        <div class="beheer-stop-box">
+            <h1>Deze beheerpagina is niet meer in gebruik</h1>
+            <p>Documenten toevoegen via een apart beheerscherm hoort niet meer bij de huidige werkwijze.</p>
+            <ul>
+                <li><strong>Feedback of mutatievoorstel:</strong> gebruik op de hoofdpagina de knop <em>Foutje gezien? Meld het!</em></li>
+                <li><strong>Openbaar overzicht van reacties en opvolging:</strong> de werklijst mutaties staat op de acceptatieomgeving.</li>
+            </ul>
+            <div class="beheer-stop-actions">
+                <a class="primary" href="index.html">Naar de BeleidsBibliotheek</a>
+                <a class="secondary" href="https://wassenaar.besluit-wijzer.nl/werklijst-mutaties.html" target="_blank" rel="noopener">Werklijst mutaties (acceptatie)</a>
             </div>
-        </li>`;
-    }).join('');
-}
+        </div>
+    </main>
 
-async function loadItems() {
-    const token = getToken();
-    if (!token) { showLogin(); return; }
-    try {
-        const r = await fetch(`${API_BASE}/beleidsbibliotheek/wassenaar/voorstellen/beheer`, {
-            headers: { Authorization: 'Bearer ' + token, Accept: 'application/json' }
-        });
-        if (r.status === 401) {
-            setToken('');
-            showLogin();
-            document.getElementById('authErr').textContent = 'Token ongeldig. Probeer opnieuw.';
-            return;
-        }
-        if (!r.ok) { document.getElementById('authErr').textContent = `Fout: ${r.status}`; return; }
-        const data = await r.json();
-        allItems = data.items || [];
-        showApp();
-        renderItems();
-    } catch(e) {
-        document.getElementById('authErr').textContent = 'Geen verbinding met server.';
-    }
-}
-
-async function beoordeel(id, newStatus, btn) {
-    const token = getToken();
-    if (!token) return;
-    const row = btn.closest('.item-actions');
-    if (row) row.querySelectorAll('button').forEach(b => b.disabled = true);
-    try {
-        const r = await fetch(`${API_BASE}/beleidsbibliotheek/wassenaar/voorstellen/${id}/beoordeel`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
-            body: JSON.stringify({ status: newStatus })
-        });
-        if (r.ok) {
-            const item = allItems.find(i => i.id === id);
-            if (item) { item.status = newStatus; item.beoordeeldOp = new Date().toISOString(); }
-            renderItems();
-        } else {
-            alert(`Beoordeling mislukt (${r.status}).`);
-            if (row) row.querySelectorAll('button').forEach(b => b.disabled = false);
-        }
-    } catch(e) {
-        alert('Geen verbinding.');
-        if (row) row.querySelectorAll('button').forEach(b => b.disabled = false);
-    }
-}
-
-async function verwijder(id, btn) {
-    const token = getToken();
-    if (!token) return;
-    if (!confirm('Verwijderen? Dit kan niet ongedaan worden.')) return;
-    const row = btn.closest('.item-actions');
-    if (row) row.querySelectorAll('button').forEach(b => b.disabled = true);
-    try {
-        const r = await fetch(`${API_BASE}/beleidsbibliotheek/wassenaar/voorstellen/${id}`, {
-            method: 'DELETE',
-            headers: { Authorization: 'Bearer ' + token }
-        });
-        if (r.ok) {
-            allItems = allItems.filter(i => i.id !== id);
-            renderItems();
-        } else {
-            alert(`Verwijderen mislukt (${r.status}).`);
-            if (row) row.querySelectorAll('button').forEach(b => b.disabled = false);
-        }
-    } catch(e) {
-        alert('Geen verbinding.');
-        if (row) row.querySelectorAll('button').forEach(b => b.disabled = false);
-    }
-}
-
-document.getElementById('loginBtn').addEventListener('click', () => {
-    const v = document.getElementById('tokenInput').value.trim();
-    document.getElementById('authErr').textContent = '';
-    if (!v) { document.getElementById('authErr').textContent = 'Voer het token in.'; return; }
-    setToken(v);
-    document.getElementById('tokenInput').value = '';
-    loadItems();
-});
-
-document.getElementById('tokenInput').addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') document.getElementById('loginBtn').click();
-});
-
-document.getElementById('logoutBtn').addEventListener('click', () => {
-    setToken('');
-    allItems = [];
-    showLogin();
-});
-
-document.getElementById('filterBar').addEventListener('click', (e) => {
-    if (e.target.tagName !== 'BUTTON' && !e.target.closest('button')) return;
-    const btn = e.target.closest('button');
-    if (!btn || !btn.dataset.filter) return;
-    currentFilter = btn.dataset.filter;
-    renderItems();
-});
-
-// Token uit URL-fragment lezen (QR-code flow): beheer.html#token=...
-if (location.hash.startsWith('#token=')) {
-    const t = decodeURIComponent(location.hash.slice(7));
-    if (t) setToken(t);
-    history.replaceState(null, '', location.pathname);
-}
-
-if (getToken()) loadItems(); else showLogin();
-</script>
+    <footer class="site-footer">
+        <div class="container">
+            <p>BeleidsBibliotheek Wassenaar</p>
+        </div>
+    </footer>
 </body>
 </html>

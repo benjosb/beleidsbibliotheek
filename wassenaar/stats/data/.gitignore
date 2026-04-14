@@ -1,0 +1,4 @@
+# Runtime: salt + SQLite (op productie na eerste ping)
+*
+!.gitignore
+!.htaccess

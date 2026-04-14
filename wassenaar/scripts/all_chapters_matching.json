@@ -1,0 +1,2025 @@
+{
+  "0": [
+    {
+      "tv": "0.3",
+      "datum": "2020-11-24",
+      "naam": "Raadpleegbrief Wensen en bedenkingen verkoop Molenstraat 22",
+      "type": "4. Operationeel Beslisdocument",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2021-01-26",
+      "naam": "Raadpleegbrief verkoop koffiehuisje (Buurtweg 116)",
+      "type": "4. Operationeel Beslisdocument",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2021-07-13",
+      "naam": "Raadpleegbrief wensen en bedenkingen verkoop Berkheistraat 15",
+      "type": "4. Operationeel Beslisdocument",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2021-09-21",
+      "naam": "RKC onderzoeksrapport informatiebeveiliging",
+      "type": "Rekenkameronderzoek",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/280573e8-fc6e-4084-915c-62db9582fb3e",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2023-03-07",
+      "naam": "Uitbreiding formatie juridische ondersteuning per 1-1-2023",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/250e783e-2f3c-4aad-a880-4964398abf69?agendaItemId=c8d639f4-8eb0-4d7f-a602-44ce0651db18",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.64",
+      "datum": "2025-11-04",
+      "naam": "Verordening precariobelasting Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/944e92a0-f637-4e1b-9da8-f70fae59827d?agendaItemId=b1705ab6-aaaf-43ca-99c1-26cf09496419",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.64",
+      "datum": "2025-11-04",
+      "naam": "Raadsbesluit Verordening hondenbelasting Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6a7b41f7-da3b-4000-8247-437a8af61761?agendaItemId=63f90655-66e9-4f60-833b-b2b7194c4b3c",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.61 en 0.62",
+      "datum": "2025-12-16",
+      "naam": "Raadsbesluit Verordening onroerendezaakbelastingen Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/cac9a825-311d-4997-9f21-7278d8f14b5f?agendaItemId=6e2a1dd2-5477-47f5-ae98-b4971458edb7",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.6",
+      "datum": "2025-12-16",
+      "naam": "Raadsbesluit Legesverordening 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/53fe2e44-b077-4163-8bb5-9a95284a33d0?agendaItemId=6e2a1dd2-5477-47f5-ae98-b4971458edb7",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.64",
+      "datum": "2024-10-15",
+      "naam": "Gewijzigde gemeenschappelijke regeling BSGR",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/10d1d083-a26d-4237-aaaf-1a67fff6390d?agendaItemId=442e7743-69d3-41c4-a838-1dfd18787134",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.64",
+      "datum": "2025-07-08",
+      "naam": "Zienswijze ontwerpbegroting 2026 Belastingsamenwerking Gouwe-Rijnland (BSGR)",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/62fce322-a3c8-4bbb-a814-58bb222fb5e6?agendaItemId=49e2db46-f254-43fc-a249-fca43f3ee87f",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2019-02-19",
+      "naam": "Aanpassing Verordening presidium 2018 en tweede wijziging Reglement van orde gemeenteraad Wassenaar 2018",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f4dfcc53-672e-4d58-aa9e-edaa034c860b?agendaItemId=a46c480a-6a05-4612-87a9-9bef1fc58382",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2019-12-17",
+      "naam": "Verordening rechtspositie raads- en commissieleden Wassenaar 2019",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2020-11-24",
+      "naam": "Klachtenverordening",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2021-03-30",
+      "naam": "Vrijgeven voor inspraak van het ontwerp van de Verordening inwonersparticipatie gemeente Wassenaar 2021",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2021-11-16",
+      "naam": "Vaststelling Verordening inwonersparticipatie gemeente Wassenaar 2021",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/f72bff25-4c77-4eb1-9b1c-2a87d82ee9c3",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2021-12-14",
+      "naam": "Eerste wijziging van de Verordening commissie bezwaarschriften gemeente Wassenaar 2021",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5478727c-a00d-4717-9a9f-9c63cbe6c7aa?agendaItemId=9bf495ac-5f7d-49b5-8726-753783488608",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2022-07-05",
+      "naam": "Verordening op de Vertrouwenscommissie Wassenaar 2019",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/609802c4-42f1-413a-b5a1-aa4ffbb4fcf1?agendaItemId=be06aa16-233b-4f02-8f4f-1359ee2827fc",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2024-04-23",
+      "naam": "Aanpassen Verordening Werkgeverscommissie",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5478727c-a00d-4717-9a9f-4e59c3b44f21?agendaItemId=7dfa7ce6-9c84-4b0b-a4e3-db3b36ae4a95",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2024-04-23",
+      "naam": "Aanpassen Verordening onderzoeksrecht van de raad",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/ec8f9e27-c423-48f4-a144-bc8242ddc1a0?agendaItemId=61ae336f-9c37-453d-a06e-f9c4fe8a1e93",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2024-04-23",
+      "naam": "Aanpassen Verordening ambtelijke bijstand",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/89629cc0-9376-4744-8c78-8fbee469265f?agendaItemId=3f271fa5-9226-479f-a11a-30db2f46d53b",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2024-06-04",
+      "naam": "Aanpassen verordening Fractieondersteuning",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/e10c11a5-13c1-459c-b8ae-8b31e3e4d36b?agendaItemId=aa38e033-e80b-4901-992e-942c8bc3951c",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2019-12-17",
+      "naam": "Reglement van orde gemeenteraad Wassenaar 2018 (wijziging artikel 8 lid 1)",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2020-01-28",
+      "naam": "Delegatiebesluit werkgeverschap raad Wassenaar 2020",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2020-03-03",
+      "naam": "Gedragscode politieke ambtsdragers Wassenaar 2019",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2019-02-07",
+      "naam": "Profielschets nieuwe burgemeester",
+      "type": "4. Operationeel Beslisdocument",
+      "juridisch": "Interne regel / intern organisatiebesluit",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2024-03-26",
+      "naam": "Gemeenschappelijke Regeling Rekenkamer",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5a857881-4cfc-4056-8891-d34eca3d36ef?agendaItemId=ae7657c1-098c-45c9-a6a1-d54aa0ec1d82",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2025-07-08",
+      "naam": "Zienswijze ontwerpbegroting 2026 GR Rekenkamer WVOLV",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/296d7a7e-105b-43b8-964c-697de86efb13?agendaItemId=e415444e-6fac-4422-8dd7-0052e4faafaa",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2019-04-16",
+      "naam": "Brief aan Gedeputeerde Staten over voortgang proces versterken bestuurskracht",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2019-11-19",
+      "naam": "Wervingsprocedure raadsgriffier",
+      "type": "",
+      "juridisch": "Interne regel / intern organisatiebesluit",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2021-04-01",
+      "naam": "Startnotitie deregulering",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2021-07-13",
+      "naam": "Programma van Eisen aanbesteding accountant",
+      "type": "",
+      "juridisch": "Interne regel / intern organisatiebesluit",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2021-12-14",
+      "naam": "Aanwijzen accountant voor het controlejaar 2022 e.v.",
+      "type": "",
+      "juridisch": "Beschikking (gunningsbesluit / aanwijzingsbesluit)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2023-06-13",
+      "naam": "Verbetervoorstel op basis van het rapport 'Onderzoek sociale veiligheid en bestuurscultuur gemeente Wassenaar'",
+      "type": "",
+      "juridisch": "Interne regel / intern organisatiebesluit",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/efea1d17-7698-4053-8c37-ea27873124da?agendaItemId=f612554c-daa6-4b2a-a1f2-f84123a8fcca",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2024-07-02",
+      "naam": "Pilot spreektijden raadsvergaderingen",
+      "type": "",
+      "juridisch": "Interne regel / intern organisatiebesluit",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3af15634-5d11-4316-8f14-ebf4c2c20f2a?agendaItemId=6de3e447-c468-4411-ae1f-66893e67432c",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2025-09-22",
+      "naam": "Verlengen bestaande contract met de huidige accountant voor de verslagjaren 2026 en 2027",
+      "type": "",
+      "juridisch": "Beschikking (gunningsbesluit / aanwijzingsbesluit)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5bded780-06ba-4256-872c-5a23dbcd8be1?agendaItemId=31fb53d1-0cad-418f-aa26-5aa73e835800",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.5",
+      "datum": "2021-11-16",
+      "naam": "Raadpleegbrief Kapitaalversterking Alliander – wensen en bedenkingen",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/f72bff25-4c77-4eb1-9b1c-2a87d82ee9c3",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2023-10-24",
+      "naam": "Beleidsnotitie risicomanagement en weerstandsvermogen",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/a5df0331-fdd7-4ace-9b81-30384b036443?agendaItemId=7d789298-8584-4017-871e-28be03437e51",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2020-06-08",
+      "naam": "Wijziging nota activabeleid",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2023-05-09",
+      "naam": "Rechtmatigheidsverantwoording college",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/473eb016-23bd-4bb0-9c2f-4f5d9ff0fbfe?agendaItemId=aa1154ff-ad24-4240-b904-077034365af1",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2024-06-04",
+      "naam": "Nota waarderen en afschrijven vaste activa versie juni 2024",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/29c19054-bead-476e-ac4e-04e7704bbb15?agendaItemId=94a299db-4d50-46a0-b571-8e25b4b47176",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2024-06-04",
+      "naam": "Nota reserves en voorzieningen versie juni 2024",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f7633982-4464-480a-9ba7-676611fe5ec0?agendaItemId=732e6baa-be53-4253-a275-14c28c298d59",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2023-05-09",
+      "naam": "Verordening onderzoeken doelmatigheid en doeltreffendheid van het gevoerde bestuur in de gemeente Wassenaar 2023",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/2b961cb7-ac7c-4ddb-96ad-0b234996d755?agendaItemId=99c476d1-9e8e-48ba-8eb2-383793ad7bf3",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2023-05-09",
+      "naam": "Controleverordening gemeente Wassenaar 2023",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/e383026a-3569-46c9-8bb4-1419472af03b?agendaItemId=c15a196c-960b-4df2-9764-34588594cf57",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2025-10-14",
+      "naam": "Actualisatie van de financiële verordening 2025",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f771bed8-2066-4bd2-95c3-06287cc72379?agendaItemId=ee1e7028-db90-4250-bc31-f94f8a4459d5",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.1",
+      "datum": "2025-10-14",
+      "naam": "Controleprotocol inclusief normen- en toetsingskader 2025",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4d82bb56-1f5a-404a-9b78-d3f4d8f4c4a2?agendaItemId=18294431-0fb6-4de6-9fea-729545258d24",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2019-10-15",
+      "naam": "Besluit over toekomst van buitenplaats De Paauw",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2020-05-19",
+      "naam": "Vervolgonderzoek Toekomst de Paauw - Vaststellen varianten",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2021-05-18",
+      "naam": "Richtinggevende uitspraken volwaardig bestuurscentrum De Paauw",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/26ecaad3-543f-4253-ad82-a0f4c954a38d",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2021-10-12",
+      "naam": "Scenario’s ontwikkeling locatie Gemeentewerf/-kantoor.",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/ce0a8157-c4ef-480a-ad55-8e29331fadda",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2022-02-01",
+      "naam": "Vaststellen investering en beschikbaar stellen krediet voor de restauratie/ verbouwing van raadhuis De Paauw",
+      "type": "4. Operationeel Beslisdocument",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/80032382-34bb-443e-b7f8-3b1a77eeb76e?agendaItemId=579cc18e-2a16-4624-814b-3ad412c5e04e",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2022-02-22",
+      "naam": "Begrotingswijziging uitvoeringplan huisvesting raadhuis De Paauw",
+      "type": "4. Operationeel Beslisdocument",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/80032382-34bb-443e-b7f8-3b1a77eeb76e?agendaItemId=ef0ed42b-6858-4adc-bc38-9a8635b5bbe9",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2023-09-19",
+      "naam": "Vestiging Wet voorkeursrecht gemeenten Maaldrift/Oude Trambaan",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6b8980be-44dc-43d1-a4ed-20fab5cc7912?agendaItemId=311976b9-124a-49d0-8e0c-75a42ac65bc9",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2023-09-19",
+      "naam": "Vestiging Wet Voorkeursrecht gemeenten Lange Kerkdam 1",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6b8980be-44dc-43d1-a4ed-20fab5cc7912?agendaItemId=311976b9-124a-49d0-8e0c-75a42ac65bc9",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2024-09-17",
+      "naam": "Vaststellen investering en beschikbaar stellen krediet voor de restauratie/ verbouwing van raadhuis De Paauw (dd 1 februari 2022)",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/80032382-34bb-443e-b7f8-3b1a77eeb76e?agendaItemId=e2755c95-6dc0-4cab-a207-2026e00eef51",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2025-06-03",
+      "naam": "Inzetten subsidie-opbrengsten voor optimalisering en verduurzaming De Paauw",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/75ab9609-ac3d-48d4-867d-9e014ab41a85?agendaItemId=7caa0d89-4bc0-450c-b2fa-a760b63d2bc6",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2025-09-23",
+      "naam": "Ontwerpkeuzes voor de renovatie en restauratie van De Paauw",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/7ce67756-9dea-4c1b-9390-68df6d169b35?agendaItemId=48351a64-8b4e-4c43-9c3f-9d6a024abb8a",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.2",
+      "datum": "2020-01-28",
+      "naam": "Starten met een pilot om thuis trouwen mogelijk te maken",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.2",
+      "datum": "2023-06-06",
+      "naam": "Aanwijzen gemeentehuizen (huwelijk en geregistreerd partnerschap) Wassenaar",
+      "type": "",
+      "juridisch": "Concretiserend Besluit van Algemene Strekking (CBAS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5ee5be18-604b-4254-8d20-fcbd7a87a291?agendaItemId=1de51a09-35da-4e51-b66b-c3c904fe0cb1",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2025-07-01",
+      "naam": "Kadernota",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d240e703-1043-49fe-80ca-2da36f006186?agendaItemId=7f9347ff-fc91-49fe-983e-04bb13ba2512",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2025-07-08",
+      "naam": "Jaarstukken 2024",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/7424ae6a-15b2-4e56-b1bc-12a38e77266d?agendaItemId=82626e1c-2301-4c9f-b7c2-847adc7325aa",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2025-07-08",
+      "naam": "Voorjaarsnota 2025",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/ce5b3644-d267-4fd7-a1c2-12084df980ed?agendaItemId=f8054240-3405-4e87-8e13-c80bde3af166",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2025-11-04",
+      "naam": "Begroting 2026",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/964a41c4-2602-4196-8835-c90bb6564133?agendaItemId=c49a5b6e-0050-4064-8850-39b5d7cc1b78",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2025-12-17",
+      "naam": "Najaarsnota 2025",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b0c65dcd-d44c-4e1a-8fda-9276ca0da9a7?agendaItemId=ed3af2b5-d8fc-4650-930c-46682ebc8401",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2020-06-08",
+      "naam": "Subsidieplan Wassenaar 2021-2024",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.4",
+      "datum": "2024-11-26",
+      "naam": "Subsidiebeleid 2025 Gemeente Wassenaar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/eb29a294-7f08-44d2-aab8-e917f88a4c3a?agendaItemId=87e9e940-6bcc-48e7-9c58-40f9e8eba921",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2022-07-05",
+      "naam": "Wensen- en Bedenkingen Procedure Verkoop Schoolstraat 29",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/56194193-fa56-4eef-936e-cb83e4339d99?agendaItemId=3ca3b039-a0e9-4688-89e1-119448b738ac",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2024-01-30",
+      "naam": "Wensen en bedenkingen procedure verkoop Verlengde Kerkeboslaan 42",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/e11077cf-bbfd-4e49-8761-cd745036cd55?agendaItemId=407c92f2-1a79-4a75-96b2-a6975679cc27",
+      "linkType": "document"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2020-01-28",
+      "naam": "Varianten Kerkstraat 75 - Wassenaar (Warenar)",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "0.3",
+      "datum": "2025-09-22",
+      "naam": "Haalbaarheidsonderzoek herbestemming de Warenar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4be4fe40-6256-40a5-856f-2b01bd390144?agendaItemId=2f3a6985-9cfd-4175-aa07-03a3456f139c",
+      "linkType": "document"
+    }
+  ],
+  "1": [
+    {
+      "tv": "1.2",
+      "datum": "2024-10-15",
+      "naam": "Algemene Plaatselijke Verordening 2024",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/49583aaa-9cee-4104-8ca3-5a012adba2f0?agendaItemId=d63bc6bd-fcdc-4b97-a105-ce320d18c782",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.2",
+      "datum": "2023-12-19",
+      "naam": "Actualisering wijk- en buurtindeling",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/94f0f334-f15b-4122-aac1-6b2908eac0d5?agendaItemId=d60cf56f-04a9-4f88-9a31-01857983994b",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.2",
+      "datum": "2022-10-18",
+      "naam": "Zienswijze Regionaal beleidsplan Politie eenheid den Haag 2023-2026",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d1bc5b8a-f33a-472c-9a19-47775b62d6d7?agendaItemId=e0b28d8c-c877-41f1-bdbc-692c083c7208",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.1",
+      "datum": "2022-10-18",
+      "naam": "Zienswijze Regionaal Beleidsplan en Regionaal Risicoprofiel Veiligheidsregio Haaglanden",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/17c1ae11-3f77-4b7c-97e1-da94dd4264d7?agendaItemId=bbda922b-f179-42f1-948a-c25ced4450b7",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.2",
+      "datum": "2024-12-17",
+      "naam": "Beleidsplan: Gemeentelijke aanpak tegen ondermijnende criminaliteit Wassenaar 2025 – 2028",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f72b7f00-4963-4817-bf9a-269c85b21ecd?agendaItemId=471de35e-33ab-41a0-9911-6fdcaa82d461",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.2",
+      "datum": "2025-06-03",
+      "naam": "Bekrachtiging Noodverordening NAVO-top 2025 gemeente Wassenaar",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/554b128e-d10b-4b2c-bace-e2fd2a405e6b?agendaItemId=6ef51e08-d21a-4a49-974e-cad22b0ab0af",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.1",
+      "datum": "2023-07-04",
+      "naam": "Zienswijze op ontwerpbesluit deelname Stichting Risicobeheer Veiligheidsregio’s",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/c377ba70-9ffd-4677-b79b-6af4818db2d1?agendaItemId=22148ff1-d780-4b87-a471-9f8d2c12bc73",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.1",
+      "datum": "2025-07-08",
+      "naam": "Zienswijze ontwerpbegroting 2026-2029 Veiligheidsregio Haaglanden",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/62fce322-a3c8-4bbb-a814-58bb222fb5e6?agendaItemId=49e2db46-f254-43fc-a249-fca43f3ee87f",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.2",
+      "datum": "2023-12-19",
+      "naam": "Integraal veiligheidsbeleid 2024-2027",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/53abdaa2-5ac7-488e-af20-dd7d3a0cc9ac?agendaItemId=4ef91a89-f47a-47a8-a028-759367a3b945",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.1",
+      "datum": "2024-10-15",
+      "naam": "Wensen en bedenkingen deelname Veiligheidsregio Haaglanden aan Stichting Waarborgfonds Veiligheidsregio’s",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/37d1e382-e29f-472b-8eb8-91c820b8bf62?agendaItemId=49ad5877-c9d2-4e62-b43a-8c29bd88fc7d",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.1",
+      "datum": "2025-03-04",
+      "naam": "Toestemming vaststelling Gemeenschappelijke Regeling Veiligheidsregio Haaglanden 2025",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f4436d68-a5e2-4274-99d9-db996f70b408?agendaItemId=eee928f8-6974-4636-a3b1-bd4706f4a441",
+      "linkType": "document"
+    },
+    {
+      "tv": "1.2",
+      "datum": "2026-01-27",
+      "naam": "Suppletieregeling opsporen en opruimen ontplofbare oorlogsresten uit de Tweede Wereldoorlog",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar",
+      "linkType": "calendar"
+    }
+  ],
+  "2": [
+    {
+      "tv": "2.1",
+      "datum": "2023-10-30",
+      "naam": "Rekenkamerrapport Onderzoek naar onderhoud aan wegen, bruggen en onderdoorgangen",
+      "type": "Rekenkameronderzoek",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/7452096e-af56-4d4b-95f3-0f98ce518689?agendaItemId=ce720c7e-abec-448b-9fec-e8ab29a1d62d",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.4",
+      "datum": "2022-12-13",
+      "naam": "Bijstelling investeringsbudget Damwand Havenkade",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9834206c-9c4a-4d4f-ba93-ea9df0e36a5a?agendaItemId=76f73239-fd2a-4507-a26e-0a8ebe7fb48f",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.4",
+      "datum": "2025-11-04",
+      "naam": "Verordening liggeld Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b7d8ee51-1039-46de-85e0-9931986efab7?agendaItemId=8cae7ed0-45d4-4714-8181-c565279f31cd",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.5",
+      "datum": "2023-03-07",
+      "naam": "Zienswijze strategische agenda MRDH 2023-2026",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d2b9e6e2-b259-4b23-b3e2-b3fb1d40526a?agendaItemId=098ec82b-9968-4f29-85e9-ec7d4f4bab26",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.5",
+      "datum": "2025-04-01",
+      "naam": "Zienswijze op het ontwerp Actieplan Evaluatie GR MRDH",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/cba34e72-62b9-4558-8bef-a7a1db7465a2?agendaItemId=ffef6701-4480-4bd5-ae8a-d8f2a86b27db",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.5",
+      "datum": "2025-07-08",
+      "naam": "Zienswijze op de ontwerpbeleidsnota reserves, voorzieningen en fondsen MRDH 2025",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3e1f0e4d-0d89-4e15-9666-32079c6196f8?agendaItemId=caff6731-d4cb-4a0c-8409-115c72a618e1",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.5",
+      "datum": "2025-07-08",
+      "naam": "Zienswijze ontwerpbegroting 2026 MRDH",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/90f694f3-67ec-422c-bd60-012fba4ffa3e?agendaItemId=812e73ea-ada4-4bf4-8cca-55df851fcdd4",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.5",
+      "datum": "2019-09-20",
+      "naam": "Benoeming in bestuur GR MRDH",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "2.5",
+      "datum": "2021-05-18",
+      "naam": "Brandbrief 23 raden OV in MRDH regio – Voortbestaan openbaar vervoer in \nMetropoolregio Rotterdam-Den Haag onder druk",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d1bc5b8a-f33a-472c-9a19-47775b62d6d7?agendaItemId=e0b28d8c-c877-41f1-bdbc-692c083c7208",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.5",
+      "datum": "2024-06-04",
+      "naam": "Wijziging van de Gemeenschappelijke Regeling Metropoolregio Rotterdam Den Haag",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b0e26561-27b6-4759-8230-391657f1d83e?agendaItemId=1a0c84d0-c64d-45d3-a106-08dbc838a988",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.2",
+      "datum": "2022-10-18",
+      "naam": "Startnotitie “Nota parkeerbeleid”",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2022",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "2.1",
+      "datum": "2025-10-14",
+      "naam": "Zienswijze op de concept-ontwerp Mobiliteitsvisie MRDH",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/72097dba-46b1-46ba-8d2f-d9b3d967ac32?agendaItemId=6d3352c2-e61b-4816-b1cf-d5d95f80698b",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.1",
+      "datum": "2024-09-16",
+      "naam": "Zienswijze concept-verordening verstrekking leningen voor bussen en stallingen Vervoersautoriteit MRDH",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/da03b885-ca94-4dad-a86a-ce379be533b5?agendaItemId=14a53f23-49ab-417b-b2c9-22601a75f70c",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.1",
+      "datum": "2020-09-15",
+      "naam": "Denkrichting toekomst N44",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "2.1",
+      "datum": "2021-09-21",
+      "naam": "Verkeersonderzoek wegennet Wassenaar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/280573e8-fc6e-4084-915c-62db9582fb3e",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "2.1",
+      "datum": "2022-12-13",
+      "naam": "Vervangen wegen Rijksdorp",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/860b8251-317d-403e-9a53-e7c2c04b1e22?agendaItemId=49e2db46-f254-43fc-a249-fca43f3ee87f",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.1",
+      "datum": "2023-05-09",
+      "naam": "Verkeersonderzoek wegennet Wassenaar – Herzien Realisatieplan Verkeer Wassenaar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f80da627-fe85-448d-9c28-11fd1298c872?agendaItemId=00e36d4f-dea8-4b16-9640-166ab078f215",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.1",
+      "datum": "2023-06-06",
+      "naam": "Krediet voor Duurzaam Veilig inrichten Storm (zuid) en Schouwweg (noord)",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4c4011dc-185f-4755-81be-9ab364a2160a?agendaItemId=b74ce6d9-bc91-4fc9-8bab-5227c9c67183",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.1",
+      "datum": "2023-12-19",
+      "naam": "Ontwerp-Wegencategoriseringsplan 2023",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/8a4dcaef-d40e-46d5-93fb-16d1bb5a4965?agendaItemId=f028e9a1-5eae-4c15-9818-c740320cebbc",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.1",
+      "datum": "2025-06-03",
+      "naam": "Adviesrapport Burgerberaad Verkeer",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/145d1e63-6437-4003-98d5-33ac91264ac1?agendaItemId=3e394706-6cbd-462c-9e19-9e40465dc3b7",
+      "linkType": "document"
+    },
+    {
+      "tv": "2.1",
+      "datum": "2025-12-17",
+      "naam": "Wegencategoriseringsplan Wassenaar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3a10e3a7-42a0-4d1d-b2d5-4665bcb18442?agendaItemId=cb16c1a3-ae40-40f2-8fcd-c6a5ff9f39f2",
+      "linkType": "document"
+    }
+  ],
+  "3": [
+    {
+      "tv": "3.3",
+      "datum": "2025-11-04",
+      "naam": "Verordening marktgeld Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/2897d6c8-0346-4e89-9391-67edc22cd48a?agendaItemId=ed895ca6-84eb-4502-a75c-686bba2d0ae0",
+      "linkType": "document"
+    },
+    {
+      "tv": "3.4",
+      "datum": "2025-11-04",
+      "naam": "Retributieverordening Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/57b7fa4c-ddc4-45ad-b7f0-60c828f01f9b?agendaItemId=0ed97f25-b533-4c6a-a26f-7b3a4ad97914",
+      "linkType": "document"
+    },
+    {
+      "tv": "3.4",
+      "datum": "2025-11-04",
+      "naam": "Raadsbesluit Verordening toeristenbelasting Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/ef4c4862-3fd3-498b-b412-a43185e58faa?agendaItemId=6e2a1dd2-5477-47f5-ae98-b4971458edb7",
+      "linkType": "document"
+    },
+    {
+      "tv": "3.3",
+      "datum": "2025-12-16",
+      "naam": "Raadsbesluit Verordening ondernemersheffing Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/53fe2e44-b077-4163-8bb5-9a95284a33d0?agendaItemId=6e2a1dd2-5477-47f5-ae98-b4971458edb7",
+      "linkType": "document"
+    },
+    {
+      "tv": "3.3",
+      "datum": "2025-12-16",
+      "naam": "Raadsbesluit Verordening begraafplaatsrechten Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/96ba8376-93a2-4c09-a0ec-1e9318045644?agendaItemId=bc4e73df-a33a-4f19-a803-365af2618cd8",
+      "linkType": "document"
+    },
+    {
+      "tv": "3.1",
+      "datum": "2025-09-22",
+      "naam": "Economische Visie Wassenaar 2025",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/e2777cab-4e5a-4523-a571-5ebd7c191f2f?agendaItemId=6b62ad8a-4072-49a9-b3a2-ef980e3be13d",
+      "linkType": "document"
+    },
+    {
+      "tv": "3.1",
+      "datum": "2025-10-14",
+      "naam": "Zienswijze op de conceptontwerp Visie Economisch Vestigingsklimaat MRDH 2025",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/050aaa0d-3c92-444e-8f8f-31690817632f?agendaItemId=56b75768-2727-41dc-96c2-c2b05c47f7b8",
+      "linkType": "document"
+    },
+    {
+      "tv": "3.3",
+      "datum": "2025-10-14",
+      "naam": "Verordening bedrijveninvesteringszone (BIZ) Maaldrift 2026 – 2030",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5416554c-41d9-4d46-8ccf-29cdf24ed70c?agendaItemId=84b3c7ff-39de-461d-892e-250f7e17c400",
+      "linkType": "document"
+    },
+    {
+      "tv": "3.4",
+      "datum": "2022-11-08",
+      "naam": "Startnotitie evenementenbeleid",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/41bea0f9-90bc-4b22-bf83-872bb713f1f8?agendaItemId=ba853240-d91a-4345-84b9-ebc526f38471",
+      "linkType": "document"
+    }
+  ],
+  "4": [
+    {
+      "tv": "4.1",
+      "datum": "2020-07-14",
+      "naam": "Statutenwijziging en benoeming bestuursleden Stichting Openbaar Primair Onderwijs Wassenaar (Bloemcampschool)",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/acda919d-170c-4b9f-a6e0-1a3b37b1d9f3?agendaItemId=d921f26d-1c70-43cf-b944-53ee1b6f40c1",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.1",
+      "datum": "2025-10-14",
+      "naam": "Jaarrekening 2024 Stichting Openbaar Primair Onderwijs Wassenaar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9b27a575-85e2-4683-8660-5c095a078221?agendaItemId=c91c7ca5-469e-43ec-ac05-51dc2bd28ba5",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2021-09-21",
+      "naam": "Wijziging normbedragen verordening voorzieningen huisvesting onderwijs gemeente Wassenaar",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/280573e8-fc6e-4084-915c-62db9582fb3e",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2022-02-01",
+      "naam": "Rapport Rekenkamercommissie over Onderwijshuisvesting",
+      "type": "Rekenkameronderzoek",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/783506e7-e967-470f-8908-b582dbb98fe6?agendaItemId=85695761-56bd-4cff-ac1c-90eb34292eb6",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2019-07-16",
+      "naam": "Tijdelijke huisvesting Rijnlands Lyceum",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/7cfc4b2c-0d7a-4fa5-a561-4c5373bc45dc",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2019-10-15",
+      "naam": "Rijnlands Lyceum (intrekken besluitpunt 1)",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2020-10-13",
+      "naam": "Afrekening verbouw Herenwegschool",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/b390ea74-6552-4de8-a424-875cf2bb23a4",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2020-11-24",
+      "naam": "Startnotitie woningbouw ontwikkeling Den Deijlschool locatie",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2020-11-24",
+      "naam": "Raadpleegbrief Garantstelling Kievietschool",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2020-12-15",
+      "naam": "Aanvraag bouwvoorbereidingskrediet Kievietschool",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2021-01-26",
+      "naam": "Aanvraag bouwvoorbereidingskrediet Kievietschool",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2021-10-12",
+      "naam": "Verklaring van geen bedenking uitbreiding Rijnlands Lyceum",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/ce0a8157-c4ef-480a-ad55-8e29331fadda",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2021-12-14",
+      "naam": "Programma 2022 voorzieningen onderwijshuisvesting",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2022-07-05",
+      "naam": "Aanvraag bouwkrediet internationale afdeling van het Rijnlands Lyceum Wassenaar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d0417b9c-5c33-4bff-9c12-aacc6ae7c4ec?agendaItemId=41460c19-0f26-41bc-9548-effa10a6f66c",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2023-07-04",
+      "naam": "Startnotitie ruimtelijke procedure school ter vervanging St. Josef en St. Jan Baptistschool",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6bee0407-fd08-40c4-a171-c7993df67878?agendaItemId=1f3a19cc-aa5b-4669-8073-40a83aeffb69",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2024-06-04",
+      "naam": "Vaststellen definitieve locatie SKOW",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/61a87f4f-ba5d-41b9-8081-2672503ceccd?agendaItemId=8531102f-1505-42cb-a0d1-4e66328f1e06",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2024-11-26",
+      "naam": "Startnotitie Uitgangspunten herijking Integraal Huisvestingsplan Onderwijs PO en VO gemeente Wassenaar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/f0bed1b2-43d1-4d1f-a8bd-0850b2497bc1?agendaItemId=00718ff2-0660-4cb2-8557-dbc7c8ea4fec",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2025-04-01",
+      "naam": "Herijking Integraal Huisvestingsplan (IHP) onderwijs (2024-2039)",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/e6f1b8eb-5947-4c6f-aacd-ecec379ebf19?agendaItemId=126c9ef7-1bf2-4c4b-b4fc-237d2a77a14a",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2025-06-03",
+      "naam": "Voorbereidingskrediet nieuwbouw onderwijshuisvesting Sint Baptistschool en Sint Jozefschool",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3326511b-03cb-4342-949f-426100adad59?agendaItemId=b0691e3c-a134-45d9-baf7-22ca2827b7fa",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.2",
+      "datum": "2025-07-08",
+      "naam": "Aanvullend voorbereidingskrediet voor de renovatie en vernieuwbouw van de Kievietschool",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/1f352307-65db-4f04-bddb-b5649ab135ff?agendaItemId=9c2500f1-8906-4dd7-8fd1-865d7ca86061",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.3",
+      "datum": "2023-10-24",
+      "naam": "Beleidsplan voor- en vroegschoolse educatie 2024-2027",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/c8c0f21e-dd33-456b-a182-22934d896f06?agendaItemId=c5b55bf1-d57c-4230-80a4-42822bfd36f4",
+      "linkType": "document"
+    },
+    {
+      "tv": "4.3",
+      "datum": "2025-07-08",
+      "naam": "Intrekken Subsidieregeling kindgebonden financiering peuteropvang gemeente Wassenaar uit 2019",
+      "type": "",
+      "juridisch": "Algemeen Verbindend Voorschrift (AVV)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b1032afc-26fb-4be0-afa1-7f2c57cb15f9?agendaItemId=3bea53dd-8888-4a64-9e48-bd22833d6d74",
+      "linkType": "document"
+    }
+  ],
+  "5": [
+    {
+      "tv": "5.7",
+      "datum": "2023-09-19",
+      "naam": "Beheersvisie Openbare ruimte",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/eacc1bd6-189f-47ee-bbb6-412c644c903e?agendaItemId=67f7fcd0-4f59-4473-98a9-b4c38f703d0a",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2023-01-31",
+      "naam": "Vaststelling beheersverordening diverse locaties",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/8f4ece4c-612a-40f7-8d87-793a58e44d74?agendaItemId=6eb7daae-f24c-426d-965a-7b6b21d684f9",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2021-12-14",
+      "naam": "Update beheerplannen openbare ruimte 2021-2023",
+      "type": "Beheerplan/ uitvoeringsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "5.3 Economie?",
+      "datum": "2019-01-22",
+      "naam": "Beeldkwaliteitsplan centrum Wassenaar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "5.3",
+      "datum": "2020-10-13",
+      "naam": "Definitief Ontwerp Inrichtingsplan Centrum - geamendeerd",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/b390ea74-6552-4de8-a424-875cf2bb23a4",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "5.3",
+      "datum": "2024-01-16",
+      "naam": "Versterking Dorpskern",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/92279d11-faad-464f-a7a4-f8d755eb54a6?agendaItemId=f0539c65-87bd-4b52-b62f-672641a1e350",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.5",
+      "datum": "2023-12-19",
+      "naam": "Eerste technische aanpassing van de Erfgoedverordening Wassenaar 2016",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/8fd0aab1-1373-4620-8893-b0c19136eaed?agendaItemId=ad73767c-b5a2-4c1d-ae8d-9b5c12993e5b",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.5",
+      "datum": "2024-01-30",
+      "naam": "Nota van uitgangspunten Commandopost Clingendael",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d3290c01-d22e-48ee-a454-b3d2c0d69ccf?agendaItemId=149a3c36-bdc8-4a63-bad9-72c255268278",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.3",
+      "datum": "2021-10-12",
+      "naam": "Vaststellen cultuurbeleid",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/ce0a8157-c4ef-480a-ad55-8e29331fadda",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2021-11-16",
+      "naam": "Vereenvoudigd kapvergunningstelsel",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/f72bff25-4c77-4eb1-9b1c-2a87d82ee9c3",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2021-11-17",
+      "naam": "Beperkte gebiedsvisie Groene Zone Wassenaar",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2019-03-26",
+      "naam": "Bestuurlijke afspraken Unmanned Valley Valkenburg",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2020-05-20",
+      "naam": "Nota van Uitgangspunten Groene Zone",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b9b2d652-bf4c-4a16-b8b6-6838a2b25d1c?agendaItemId=1ca2fbbb-5952-4c69-b168-91a6a2a88fa9",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2021-03-02",
+      "naam": "Nota van beantwoording Groene Zone Valkenburg, alsmede de Nota van uitgangspunten Groene Zone Valkenburg",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/ae0436b2-9ddf-4bf4-b30c-d8b6e8f94693?agendaItemId=7212350c-bae3-4194-bdf2-8b1630908331",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2021-07-13",
+      "naam": "Vaststellen van zienswijzen op het bestemmingsplan woongebied Valkenhorst",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2021-07-13",
+      "naam": "Instemmen met realisatie van maximaal 600 woningen extra (tot een totaal van een maximum van 5600 woningen) in woongebied Valkenburg",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2022-12-13",
+      "naam": "Raadpleegbrief Wensen en bedenkingen samenwerkingsovereenkomst met Rijksvastgoedbedrijf",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/23f55f27-7435-4a32-8366-94de483c2e53?agendaItemId=d40d188d-d99e-4eac-9f1f-43e30fc6b66a",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2023-03-07",
+      "naam": "Ontwikkeling Groene Zone / budget 2023 project Valkenburg",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/ae0436b2-9ddf-4bf4-b30c-20b92fadc3ca?agendaItemId=7d7f2c09-0ff1-4c64-9af2-0abc5a2d1f11",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2025-06-23",
+      "naam": "Herstelbesluit bestemmingsplan “Woongebied Valkenhorst”",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/43135686-4970-4f3f-b7a4-b7600ccbe012?agendaItemId=4fb461f3-7cb3-4d3c-a4f2-071f91839464",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.6",
+      "datum": "2025-04-01",
+      "naam": "Vaststellen toetsingscriteria aanwijzingsprocedure lokale publieke omroep",
+      "type": "",
+      "juridisch": "Concretiserend Besluit van Algemene Strekking (CBAS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5234ff00-1696-4278-b305-dd1d0379886f?agendaItemId=d4308415-8215-47d1-b910-a31ba0fe9f1d",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.6",
+      "datum": "2026-01-27",
+      "naam": "Advies aanwijzing lokale omroep",
+      "type": "",
+      "juridisch": "Concretiserend Besluit van Algemene Strekking (CBAS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5234ff00-1696-4278-b305-2a4c4e6fed31?agendaItemId=3b4dd2c4-111a-42e8-80cf-6f4dfd03b10f",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2023-01-31",
+      "naam": "Voorbereidingskrediet skatebaan",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2023",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2024-02-27",
+      "naam": "Vernieuwen van de huidige skatevoorziening gelegen in het Geesbert van Barneveldpark",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/2800317f-d5c1-4d81-9877-a25354ac0c26?agendaItemId=d93fa9fc-f146-4a78-b2f7-0e2411797914",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.1",
+      "datum": "2025-09-23",
+      "naam": "Sportvisie Wassenaar 2025",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/efb69d47-2154-4fc9-ab63-580432c303c2?agendaItemId=fea9db3b-6a30-47e4-8337-629eaeca711b",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.2",
+      "datum": "2019-02-19",
+      "naam": "Duurzame Renovatie Sportcomplex RKSV Blauw-Zwart",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "5.2",
+      "datum": "2019-07-16",
+      "naam": "Voorstel realisatie nieuwe combisporthal Dr. Mansveltkade locatie De Kieviten.",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/7cfc4b2c-0d7a-4fa5-a561-4c5373bc45dc",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "5.2",
+      "datum": "2019-07-16",
+      "naam": "Realisatie van een moderne uitdagende gymzaal aan de Burmanlaan ter vervanging \nvan de reeds gesloopte gymzaal op deze locatie",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/7cfc4b2c-0d7a-4fa5-a561-4c5373bc45dc",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "5.2",
+      "datum": "2021-06-14",
+      "naam": "Raadpleegbrief Aankoop grond sporthal",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/2396fdb4-4afa-4e65-a780-a47524e033d3",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "5.2",
+      "datum": "2021-06-14",
+      "naam": "Grondaankoop sporthal",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/2396fdb4-4afa-4e65-a780-a47524e033d3",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "5.2",
+      "datum": "2023-10-24",
+      "naam": "Aanvullende krediet onvoorziene maatregelen sporthal",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/13a1186b-81dd-45fb-8e4a-e4d9eaf3d6e8?agendaItemId=84230573-06c4-4b61-b3a6-532cc570f4e5",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2024-04-23",
+      "naam": "Startnotitie Strandvisie voor de Wassenaarse Slag",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d680f8e2-7d79-4b21-9b9a-ecfbb4d3a6d2?agendaItemId=2b72e327-82d3-4391-a97a-11c932e09c27",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2025-03-04",
+      "naam": "Visie De Wassenaarse Slag",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/dd8137f8-18b8-4beb-9c2c-2da7f42a6bd1?agendaItemId=6038eaee-e37d-4d6d-a760-a222db95d7a6",
+      "linkType": "document"
+    },
+    {
+      "tv": "5.7",
+      "datum": "2023-04-04",
+      "naam": "Asfaltonderhoud aan de rijbaan van De Wassenaarse Slag combineren met het verbeteren van de veiligheid van de fietsoversteek bij hotel Duinoord",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/af3db0c6-5005-451c-8fd2-9fec60ce6da3?agendaItemId=495e136c-79e4-4519-8263-554f6c7bd75b",
+      "linkType": "document"
+    }
+  ],
+  "6": [
+    {
+      "tv": "6.4",
+      "datum": "2024-11-26",
+      "naam": "Tweede wijziging Gemeenschappelijke Regeling Kust-, Duin- en Bollenstreek",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4b9dd349-6446-4d32-977d-2175bf5dca3a?agendaItemId=dce7fa65-0e8e-4028-a52e-f25317da39ab",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.3",
+      "datum": "2025-11-04",
+      "naam": "Verordening kwijtschelding gemeentelijke belastingen Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/57b7fa4c-ddc4-45ad-b7f0-60c828f01f9b?agendaItemId=0ed97f25-b533-4c6a-a26f-7b3a4ad97914",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.3",
+      "datum": "2023-01-31",
+      "naam": "Toepassen verruimde vermogensnorm bij kwijtschelding lokale belastingen",
+      "type": "2. Verordening",
+      "juridisch": "Algemeen Verbindend Voorschrift (AVV)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3ff6ffa9-d79b-423b-8405-09b4b11dcd4d?agendaItemId=4f48d3b1-62a5-4aa7-b238-6680e8980e37",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2020-05-20",
+      "naam": "Wijziging Verordening op het burgerinitiatief",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2019-12-17",
+      "naam": "Burgerinitiatief ‘Vernieuwing Accommodaties Kerkehout'",
+      "type": "4. Operationeel Beslisdocument",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2020-06-08",
+      "naam": "Burgerinitiatief Kerkehout",
+      "type": "4. Operationeel Beslisdocument",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2024-10-15",
+      "naam": "Reactie op burgerinitiatief wijkpark Wassenaar-noord",
+      "type": "4. Operationeel Beslisdocument",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/a6668165-fbd7-4094-b330-1032af3073c2?agendaItemId=3f5f4c28-5daa-4911-a3b1-2c01ec5c6b89",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2019-11-19",
+      "naam": "Burgerinitiatief ‘Woningbouwproject Twee Stokstaartjes",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2021-03-30",
+      "naam": "Beleidsplan inburgering Wassenaar",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2022-11-08",
+      "naam": "Verordening Inburgering",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/c9694e2e-5b6b-48d3-bc59-10e04fa7da65?agendaItemId=426ad8f5-59f7-456b-a375-744bf77c9685",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2024-10-15",
+      "naam": "Nota Internationals",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/63d57462-b5b2-4b7d-87e7-c39175e246cf?agendaItemId=bc938db7-cafb-45ce-8274-9407c09693c6",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.7-6.9 jeugd",
+      "datum": "2021-10-12",
+      "naam": "Regiovisie jeugdhulp Haaglanden",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/ce0a8157-c4ef-480a-ad55-8e29331fadda",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "6.7-6.9 jeugd",
+      "datum": "2025-11-25",
+      "naam": "Verordening Jeugdhulp gemeente Wassenaar 2025",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/041d458f-7873-4b2a-9db1-88a41773cf24?agendaItemId=fa3bbe2f-569c-4bf4-b213-a5893d4c89d8",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.7-6.9 jeugd",
+      "datum": "2025-07-08",
+      "naam": "Zienswijze ontwerpbegroting 2026 GR SbJH",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/62fce322-a3c8-4bbb-a814-58bb222fb5e6?agendaItemId=49e2db46-f254-43fc-a249-fca43f3ee87f",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.7-6.9 jeugd",
+      "datum": "2021-04-01",
+      "naam": "Kostenbesparende maatregelen Jeugdhulp",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "6.7-6.9 jeugd",
+      "datum": "2024-06-04",
+      "naam": "6e wijziging Gemeenschappelijke Regeling Servicebureau Jeugdhulp Haaglanden",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b0e26561-27b6-4759-8230-391657f1d83e?agendaItemId=1a0c84d0-c64d-45d3-a106-08dbc838a988",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.7-6.9 jeugd",
+      "datum": "2025-06-03",
+      "naam": "Nieuw inkoopkader jeugdhulp GR SbJH",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/d4914c7b-9e25-4b06-be74-d1b345a9aa48?agendaItemId=95316a18-f7b8-483a-a252-3d491f042373",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.7-6.9 jeugd",
+      "datum": "2025-11-25",
+      "naam": "Lokaal Jeugdbeleid Wassenaar 2026",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/126fb722-ec73-4727-a71c-5b849160d084?agendaItemId=b6056161-8751-4a89-852c-5b92234b07ad",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2026-01-27",
+      "naam": "Verordening antidiscriminatievoorziening gemeente Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2022-02-22",
+      "naam": "Startnotitie Lokale Inclusie Agenda Wassenaar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/48be9c24-f7cb-40d3-8629-e90105aedf88?agendaItemId=90b884fc-ce36-485c-be5d-004d65ec0060",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.3",
+      "datum": "2023-12-19",
+      "naam": "Rapport Rekenkamercommissie Minimabeleid",
+      "type": "Rekenkameronderzoek",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/e8a6a7db-b603-4c08-8b34-6a6ec1e97c88?agendaItemId=60c7e8a7-99e3-44d1-8a52-8e7a3c2b1a67",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.3",
+      "datum": "2024-10-15",
+      "naam": "Dynamisch Minimabeleid Wassenaar 2024",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/82a9578e-d672-41c2-ab24-78a317a87ed8?agendaItemId=1a9d9218-8820-4285-9ede-946ad82d86e8",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.6-6.9",
+      "datum": "2025-01-28",
+      "naam": "Beleidsnota Ouderenbeleid 2025",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/79a101d9-552b-49cc-9d34-31f6923cc1a9?agendaItemId=6ac84012-a995-46de-b19f-d58cb5aa952a",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.5",
+      "datum": "2023-12-19",
+      "naam": "Re-integratie en Participatieverordening Participatiewet",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9637b51a-17ae-4509-b272-3a32bcd9009c?agendaItemId=0df627bf-b311-47ad-85a9-dcfd8085792c",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.5",
+      "datum": "2023-09-19",
+      "naam": "Re-integratiebeleid en Participatiebeleid gemeente Wassenaar",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6b69e949-b9d7-4138-85b6-0b428d282738?agendaItemId=851d5e9e-f1fa-41b9-94dc-229cc6bc48a6",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2025-04-01",
+      "naam": "Vaststellen beleidsnota schuldhulpverlening 2025-2028",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3c07326e-7102-4eb3-932c-023cce4d3185?agendaItemId=f537e129-28d2-4cea-8f4c-128ca0037086",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.1",
+      "datum": "2021-01-26",
+      "naam": "Raadsbesluit Verordening Schuldhulpverlening Wassenaar 2021",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "6.6-6.9",
+      "datum": "2021-11-16",
+      "naam": "Regiovisie beschermd Wonen en maatschappelijke opvang 2022-2025 ‘Samen bouwen aan maatschappelijk herstel’",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/f72bff25-4c77-4eb1-9b1c-2a87d82ee9c3",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "6.6-6.9",
+      "datum": "2024-03-26",
+      "naam": "Achtste wijziging Verordening maatschappelijke ondersteuning gemeente Wassenaar 2015",
+      "type": "2. Verordening",
+      "juridisch": "Algemeen Verbindend Voorschrift (AVV)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/5757b8bf-5b63-47cc-a65d-cda4fed90a7a?agendaItemId=b3b6af7b-1019-47db-b91d-662d185ff049",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.6-6.9",
+      "datum": "2025-09-22",
+      "naam": "Verordening leerlingenvervoer 2025 gemeente Wassenaar en bijbehorende beleidsregels",
+      "type": "2. Verordening",
+      "juridisch": "Algemeen Verbindend Voorschrift (AVV)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/agenda/document/1aa85158-78d3-4914-a5b9-ee0d1bf4fc31?documentId=eec09f18-31bb-4477-9559-7a73cad358ee&agendaItemId=fea9db3b-6a30-47e4-8337-629eaeca711b",
+      "linkType": "document"
+    },
+    {
+      "tv": "6.6-6.9",
+      "datum": "2019-02-19",
+      "naam": "Rekenkamercommissie: Rapport onderzoek Toegang tot voorzieningen Wmo",
+      "type": "Rekenkameronderzoek",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "6.6-6.9",
+      "datum": "2021-10-12",
+      "naam": "Kostenbesparende maatregelen Wmo",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/ce0a8157-c4ef-480a-ad55-8e29331fadda",
+      "linkType": "agenda"
+    }
+  ],
+  "7": [
+    {
+      "tv": "7.3",
+      "datum": "2019-07-16",
+      "naam": "Intensiveren bronscheiding",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/7cfc4b2c-0d7a-4fa5-a561-4c5373bc45dc",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "7.3",
+      "datum": "2025-11-04",
+      "naam": "Verordening afvalstoffenheffing Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Algemeen Verbindend Voorschrift (AVV)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/a233dcc0-2664-4dd5-b0e9-5aabc9471711?agendaItemId=2d90c1dc-3074-4fba-8064-89a425d01681",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.3",
+      "datum": "2021-03-11",
+      "naam": "Definitieve keuze verwerking restafval",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "7.3",
+      "datum": "2024-01-30",
+      "naam": "Definitief ontwerp Tweede wijziging GR Avalex 2018",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/186bc699-2d7e-4444-ac94-8012beec4f40?agendaItemId=48bb975b-2971-4a64-90c9-af6568f2454c",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.3",
+      "datum": "2025-07-08",
+      "naam": "Zienswijze ontwerpbegroting 2026 Regionaal Reinigingsbedrijf Avalex",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/62fce322-a3c8-4bbb-a814-58bb222fb5e6?agendaItemId=49e2db46-f254-43fc-a249-fca43f3ee87f",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.3",
+      "datum": "2021-07-13",
+      "naam": "Raadpleegbrief Wensen en bedenkingen te uiten over de te kiezen inzamelvariant",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "7.4",
+      "datum": "2024-06-04",
+      "naam": "Nota bodembeheer 2023",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/22221fe9-4cb2-407d-8a18-f61036d8bd84?agendaItemId=e88332bc-f459-4f74-9ca4-08f6dd490a6e",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.4",
+      "datum": "2021-11-16",
+      "naam": "Vaststellen transitievisie warmte 1.0 Wassenaar",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/f72bff25-4c77-4eb1-9b1c-2a87d82ee9c3",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "7.4",
+      "datum": "2021-06-14",
+      "naam": "Vaststellen Regionale Energiestrategie (RES) 1.0 regio Rotterdam-Den Haag",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/40f3567b-47cf-4bc6-98e3-2d41c385e5b3?agendaItemId=6b0dcd3f-bb60-4832-9fbb-72f44919c036",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.4",
+      "datum": "2023-04-04",
+      "naam": "Lokale Energiestrategie 2023-2026",
+      "type": "2. Beleidsnota/ Beleidsplan",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/65613a66-fbcf-49a9-ad33-e6ce2170bbec?agendaItemId=138edc9f-cf9d-4a71-a0d6-0732dd30b830",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.4",
+      "datum": "2020-07-14",
+      "naam": "Vaststellen Verordening Duurzaamheidsvoucher Wassenaar 2020",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "7.4",
+      "datum": "2021-11-16",
+      "naam": "Vaststelling verordening Energiebesparende maatregelen woningen 2021 (RREW)",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Agenda/Index/f72bff25-4c77-4eb1-9b1c-2a87d82ee9c3",
+      "linkType": "agenda"
+    },
+    {
+      "tv": "7.4",
+      "datum": "2022-12-13",
+      "naam": "Onderzoek Rekenkamercommissie participatie in de RES",
+      "type": "Rekenkameronderzoek",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/9e36ef4c-5594-4182-9c7e-d7af695898bc?agendaItemId=904b8587-f9e3-4781-b600-79038a775705",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.4",
+      "datum": "2020-11-24",
+      "naam": "Rekenkamercommissierapport ‘Onderzoek naar energiebesparingsplicht’",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2020",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "7.4",
+      "datum": "2022-02-22",
+      "naam": "CO2-Prestatieladder",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/fc89cb5c-930b-4d5d-8ef8-093085340941?agendaItemId=e379f414-9b66-4e6c-ad48-cd6f21370481",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.4",
+      "datum": "2024-06-04",
+      "naam": "Beschikbaar stellen van cofinanciering voor het verkrijgen van een gebiedsgerichte \nontheffing natuurvriendelijk isoleren",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/6b7c19b2-16cb-435e-bce4-7e72b37bd7f5?agendaItemId=439cb93b-fffd-4e0b-987a-e16560caa20d",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.2",
+      "datum": "2021-04-01",
+      "naam": "Verordening afvoer hemel- en grondwater Gemeente Wassenaar 2021",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2021",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "7.2",
+      "datum": "2025-12-16",
+      "naam": "Raadsbesluit Verordening riool-en waterzorgheffing Wassenaar 2026",
+      "type": "2. Verordening",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/4f818bf5-d1b2-44de-918c-3266f8c0ab40?agendaItemId=e2a7771f-89c3-4148-a12c-16bd168a1924",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.2",
+      "datum": "2019-01-22",
+      "naam": "Rekenkamerrapport ‘Onderhoud en vervanging rioleringen’",
+      "type": "Rekenkameronderzoek",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Calendar?year=2019",
+      "linkType": "calendar"
+    },
+    {
+      "tv": "7.2",
+      "datum": "2024-03-26",
+      "naam": "Integraal Waterketenplan (IWKp) 2024-2028 vanuit de regionale samenwerking in de waterketen Leidse regio",
+      "type": "",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/fa0ec318-96ec-452f-b614-22ee6e393c73?agendaItemId=8ada5b45-3a51-4648-8e25-bd092cbe6c5c",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.1",
+      "datum": "2025-12-16",
+      "naam": "Regiovisie Aanpak Huiselijk Geweld Haaglanden voor de periode 2026",
+      "type": "1. Strategisch beleidsplan / Visie",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/c349b273-ff0c-4199-a92e-638f051c7953?agendaItemId=994549eb-e2ff-48d7-abb8-c9acd3d9d4d7",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.1",
+      "datum": "2025-04-01",
+      "naam": "Zienswijze uitstel evaluatie GR GGD en Veilig Thuis Haaglanden",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/3a4c63bd-f742-474d-96ac-85510016f2aa?agendaItemId=6c1cc0d6-087d-412a-8c28-d58f18d9b800",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.1",
+      "datum": "2025-11-25",
+      "naam": "Zienswijze op definitieve begroting 2026 en definitieve begrotingswijziging 2025 GR GGD Veilig Thuis Haaglanden",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/ea78754d-6610-4f69-b2fe-562f7c53d191?agendaItemId=32509718-fcdd-4935-9c71-ab0e214d7c93",
+      "linkType": "document"
+    },
+    {
+      "tv": "7.1",
+      "datum": "2024-06-04",
+      "naam": "Wijziging Gemeenschappelijke Regeling GGD en Veilig Thuis Haaglanden",
+      "type": "Gemeenschappelijke Regeling",
+      "juridisch": "Besluit van Algemene Strekking (BaS)",
+      "link": "https://wassenaar.bestuurlijkeinformatie.nl/Document/LoadAgendaItemDocument/b0e26561-27b6-4759-8230-391657f1d83e?agendaItemId=1a0c84d0-c64d-45d3-a106-08dbc838a988",
+      "linkType": "document"
+    }
+  ]
+}

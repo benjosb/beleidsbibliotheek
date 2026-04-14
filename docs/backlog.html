@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Backlog — BeleidsBibliotheek Wassenaar</title>
+    <style>
+        :root {
+            --primary: #55601c;
+            --text: #333;
+            --muted: #666;
+            --border: #ddd;
+            --bg: #f8f9f5;
+            --card: #fff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: Roboto, 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0 1rem 2.5rem;
+        }
+        .wrap { max-width: 960px; margin: 0 auto; }
+        h1 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .lead { color: var(--muted); font-size: 0.95rem; margin: 0 0 1.25rem; max-width: 52rem; }
+        .meta {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+        .meta a { color: var(--primary); }
+        h2 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin: 1.75rem 0 0.6rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            background: var(--card);
+            box-shadow: 0 1px 3px rgba(0,0,0,.06);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td { border: 1px solid var(--border); padding: 0.5rem 0.65rem; text-align: left; vertical-align: top; }
+        th { background: #eef0e8; font-weight: 600; }
+        .diagram-wrap {
+            background: var(--card);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0 1.5rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,.08);
+            overflow-x: auto;
+        }
+        .diagram-wrap .mermaid { display: block; text-align: center; min-height: 120px; }
+        .hint { font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem; }
+        ul.ideas { margin: 0.5rem 0 0; padding-left: 1.2rem; color: var(--muted); font-style: italic; }
+        @media print {
+            body { background: #fff; }
+            .meta a[href^="http"]::after { content: ''; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Backlog — BeleidsBibliotheek Wassenaar</h1>
+        <p class="lead">
+            Plannings- en prioriteitsoverzicht. Vervangt de mutatieketen in <code>docs/</code> en <code>data.js</code> niet;
+            die blijft de bron voor inhoudelijke wijzigingen aan de site.
+        </p>
+        <p class="meta">
+            Markdown-bron: <a href="../BACKLOG.md"><code>BACKLOG.md</code></a> (projectroot) ·
+            Bij aanpassingen: eerst tabellen in Markdown bijwerken, dan dit HTML-bestand en het Mermaid-blok daar gelijk trekken.
+        </p>
+
+        <h2>Legenda</h2>
+        <table>
+            <thead><tr><th>Prioriteit</th><th>Betekenis</th></tr></thead>
+            <tbody>
+                <tr><td><strong>P0</strong></td><td>Nu / blokkerend / afgesproken deadline</td></tr>
+                <tr><td><strong>P1</strong></td><td>Volgende: hoog gewenst</td></tr>
+                <tr><td><strong>P2</strong></td><td>Later / wanneer tijd</td></tr>
+                <tr><td><strong>P3</strong></td><td>Idee / ijsvak — nog niet ingepland</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Status</h2>
+        <table>
+            <thead><tr><th>Status</th><th>Betekenis</th></tr></thead>
+            <tbody>
+                <tr><td><code>idea</code></td><td>Nog niet klaar om op te pakken</td></tr>
+                <tr><td><code>ready</code></td><td>Beschrijving en bron helder genoeg</td></tr>
+                <tr><td><code>doing</code></td><td>In uitvoering</td></tr>
+                <tr><td><code>done</code></td><td>Afgerond (datum in notitie of mutatierapport)</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Grafische weergave</h2>
+        <div class="diagram-wrap">
+            <div class="mermaid">
+flowchart TB
+  subgraph P0["P0 — Nu"]
+    B001["B-001 · Excel controller + OB + Ronald Z."]
+  end
+  subgraph P1["P1 — Volgende"]
+    B010["B-010 · Bezoekteller productie"]
+    B011["B-011 · Roadmap regelengine"]
+  end
+  subgraph P2["P2 — Later"]
+    B020["B-020 · Parser Geldrop-Mierlo"]
+    B021["B-021 · Parser Voorschoten"]
+  end
+  TODOMD["TODO.md — technische uitwerking"]
+  B020 --> TODOMD
+  B021 --> TODOMD
+            </div>
+        </div>
+        <p class="hint">Pijlen naar <code>TODO.md</code>: B-020/B-021 zijn in de backlog samengevat; uitwerking staat in de technische takenlijst.</p>
+
+        <h2>P0 — Nu</h2>
+        <table>
+            <thead><tr><th>ID</th><th>Item</th><th>Status</th><th>Notities / link</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>B-001</td>
+                    <td><strong>Excel controller + OB-verwijzingen</strong> verwerken samen met <strong>feedback Ronald Zoutendijk</strong></td>
+                    <td><code>ready</code></td>
+                    <td><a href="NOTITIE_opvolging_excel_controller_Ronald_Z.md">NOTITIE_opvolging_excel_controller_Ronald_Z.md</a> — inventaris → BBV-koppeling → mutatieketen</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>P1 — Volgende</h2>
+        <table>
+            <thead><tr><th>ID</th><th>Item</th><th>Status</th><th>Notities / link</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>B-010</td>
+                    <td>Bezoekteller <strong>stats/</strong> op productie stabiel (rechten, spotcheck footer)</td>
+                    <td><code>idea</code></td>
+                    <td><code>wassenaar/stats/ping.php</code>, <code>wassenaar/stats/README.txt</code></td>
+                </tr>
+                <tr>
+                    <td>B-011</td>
+                    <td>Interne roadmap <strong>regelengine / ruimtelijke lagen</strong> vervolg (indien gewenst)</td>
+                    <td><code>idea</code></td>
+                    <td><code>wassenaar/roadmap-regelengine.html</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>P2 — Later</h2>
+        <table>
+            <thead><tr><th>ID</th><th>Item</th><th>Status</th><th>Notities / link</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>B-020</td>
+                    <td><strong>Besluit-Wijzer:</strong> zelfde parser/display-aanpassing als Wassenaar voor <strong>Geldrop-Mierlo</strong></td>
+                    <td><code>ready</code></td>
+                    <td>Zie <a href="../TODO.md"><code>TODO.md</code></a></td>
+                </tr>
+                <tr>
+                    <td>B-021</td>
+                    <td><strong>Besluit-Wijzer:</strong> idem voor <strong>Voorschoten</strong></td>
+                    <td><code>ready</code></td>
+                    <td>Zie <a href="../TODO.md"><code>TODO.md</code></a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Technische taken (detail)</h2>
+        <p class="lead" style="margin-bottom:0">Dieper technisch werk blijft in <a href="../TODO.md"><code>TODO.md</code></a> staan.</p>
+
+        <h2>Ijsvak / ideeën</h2>
+        <ul class="ideas">
+            <li>Vul aan: dingen die je wilt onthouden maar nog niet wilt plannen.</li>
+        </ul>
+
+        <h2>Changelog backlog</h2>
+        <table>
+            <thead><tr><th>Datum</th><th>Wijziging</th></tr></thead>
+            <tbody>
+                <tr><td>—</td><td>Eerste HTML-weergave naast <code>BACKLOG.md</code>.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            securityLevel: 'loose',
+            flowchart: { useMaxWidth: true, htmlLabels: true }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Roadmap — Regelengine &amp; ruimtelijke lagen · BeleidsBibliotheek Wassenaar</title>
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=roboto:300,400,500,700|open-sans:300,400,600,700">
+    <link rel="stylesheet" href="styles.css?v=20260409d">
+    <style>
+        .road-wrap { max-width: 820px; margin: 0 auto; padding: 0 1rem 3rem; }
+        .road-wrap h1.page-title { text-align: left; margin-top: 1.75rem; }
+        .road-meta { font-size: .85rem; color: #888; margin-bottom: 1.25rem; }
+        .road-lead {
+            font-size: 1.05rem; line-height: 1.65; color: #333;
+            border-left: 4px solid var(--primary, #55601c); padding-left: 1rem; margin-bottom: 1.75rem;
+        }
+        .road-wrap h2 {
+            color: var(--primary, #55601c); font-size: 1.15rem; margin: 1.75rem 0 .6rem;
+            padding-bottom: .25rem; border-bottom: 1px solid #e0e0e0;
+        }
+        .road-wrap p, .road-wrap li { line-height: 1.6; color: #444; font-size: .95rem; }
+        .road-wrap ul { padding-left: 1.25rem; margin: .5rem 0 1rem; }
+        .road-wrap ol { padding-left: 1.35rem; margin: .5rem 0 1rem; }
+        .bron-tabel { width: 100%; border-collapse: collapse; font-size: .88rem; margin: .75rem 0 1.25rem; }
+        .bron-tabel th, .bron-tabel td { border: 1px solid #ddd; padding: .5rem .6rem; text-align: left; vertical-align: top; }
+        .bron-tabel th { background: #f5f5f5; font-weight: 600; }
+        .road-note {
+            background: #f9f9f6; border-radius: 8px; padding: .9rem 1rem; font-size: .88rem; color: #555;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Ga naar inhoud</a>
+    <header class="site-header" role="banner">
+        <div class="container header-top">
+            <a href="https://www.wassenaar.nl" class="logo-link" aria-label="Gemeente Wassenaar" target="_blank" rel="noopener">
+                <img src="https://cuatro.sim-cdn.nl/wassenaar/uploads/2023-09/wassenaar_logo_fc.svg" alt="Gemeente Wassenaar" class="site-logo" width="200" height="35">
+            </a>
+            <div class="header-text">
+                <h1><a href="index.html" class="header-title-link">BeleidsBibliotheek Wassenaar</a></h1>
+                <p class="subtitle">Gemeente Wassenaar · Inzicht in beleid en besluitvorming</p>
+            </div>
+        </div>
+        <nav class="site-nav-bar" aria-label="BeleidsBibliotheek">
+            <div class="container site-nav-inner">
+                <a href="index.html#dossierOverzicht" class="site-nav-link">BeleidsBibliotheek</a>
+                <a href="overdrachtsdossier.html" class="site-nav-link">Overdrachtsdossier</a>
+                <a href="werklijst-mutaties.html" class="site-nav-link">Werklijst</a>
+                <a href="roadmap-regelengine.html" class="site-nav-link site-nav-actief">Roadmap</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main" class="road-wrap">
+        <h1 class="page-title">Roadmap — Regelengine &amp; ruimtelijke lagen</h1>
+        <p class="road-meta">Concept · interne uitwerking · april 2026</p>
+
+        <p class="road-lead">
+            Bestemmingsplannen, het omgevingsplan / BAL, welstandsnota’s, monumentenlijsten, archeologische waarden,
+            beeldbeschermde dorpsgezichten: dat zijn allemaal <strong>lagen van normen en regels</strong> bovenop dezelfde fysieke ruimte.
+            Die regels zijn in essentie <strong>beslislogica</strong> (voorwaarden, zones, uitzonderingen, drempels) — geen “AI” nodig om het idee te begrijpen:
+            ze zijn te <strong>structureren</strong> en, waar mogelijk, aan het BeleidsWijzer-model te <strong>koppelen</strong> naast de bestaande beleids- en besluitenlaag.
+        </p>
+
+        <h2>Wat we hier “algoritmes” noemen</h2>
+        <p>
+            Geen machine-learning-hype, maar: <strong>regels die je kunt uitdrukken</strong> als data en logica —
+            bijvoorbeeld “in zone X geldt functie Y”, “monument = extra voorwaarden”, “archeologie = vooronderzoek / zone”.
+            Hoe consistenter de bron, hoe beter te automatiseren; hoe discretionairder (welstand), hoe meer menselijke borging nodig is.
+        </p>
+
+        <h2>Typische bronnen (eerste inventaris)</h2>
+        <table class="bron-tabel">
+            <thead>
+                <tr>
+                    <th>Laag</th>
+                    <th>Typische bron</th>
+                    <th>Aandachtspunt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bestemmingsplan / omgevingsplan</td>
+                    <td>DSO / ruimtelijke plannen, gemeente</td>
+                    <td>Juridische leidraad; versiebeheer en mutaties.</td>
+                </tr>
+                <tr>
+                    <td>BAL / omgevingsplanregels</td>
+                    <td>Gemeente, DSO</td>
+                    <td>Vaak de “harde” kant naast het plan.</td>
+                </tr>
+                <tr>
+                    <td>Welstand / beeldkwaliteit</td>
+                    <td>Gemeentelijke nota’s</td>
+                    <td>Vaak meer beoordelingsruimte; criteria ordenen.</td>
+                </tr>
+                <tr>
+                    <td>Monumenten</td>
+                    <td>Registers, gemeentelijke aanvullingen</td>
+                    <td>Koppeling aan object/perceel.</td>
+                </tr>
+                <tr>
+                    <td>Archeologie</td>
+                    <td>Verwachtingskaarten, beleidsregels</td>
+                    <td>Zonering + triggers voor onderzoek.</td>
+                </tr>
+                <tr>
+                    <td>Dorpsgezicht / beeldbescherming</td>
+                    <td>Plan, welstand, soms aparte gebiedsafspraken</td>
+                    <td>Polygonen + aanvullende normen.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Logica van het traject (fasen)</h2>
+        <ol>
+            <li><strong>Scope &amp; doel</strong> — Alleen informatief (“wat geldt hier?”) versus ook ondersteuning bij toetsing; wat blijft menswerk.</li>
+            <li><strong>Bronnenrecht &amp; actualiteit</strong> — Welke bron is leidend; hoe volgen we planmutaties en publicaties.</li>
+            <li><strong>Inventarisatie</strong> — Wat is al machineleesbaar (DSO e.d.), wat staat nog in PDF of alleen in zaaksystemen.</li>
+            <li><strong>Normalisatie</strong> — Eén set concepten: zone, regeltype, object, verwijzing naar juridische grondslag.</li>
+            <li><strong>Pilot</strong> — Eén smalle doorsnede (bijv. monumenten + één deelbestemming) om de keten te bewijzen.</li>
+            <li><strong>Koppeling BeleidsBibliotheek</strong> — Beleid en besluiten blijven de narratieve en bestuurlijke laag; de regelengine is de operationele laag.</li>
+            <li><strong>Beheer &amp; kwaliteit</strong> — Wijzigingsproces, logging, aansluiting op mutatiewerklijst / release.</li>
+        </ol>
+
+        <h2>Rol: regelanalist als beheerder (voorstel)</h2>
+        <p>
+            Een <strong>regelanalist</strong> (zoals in Wassenaar ingevoerd) kan de brug zijn tussen <strong>juridische juistheid</strong>,
+            <strong>bronactualiteit</strong> en <strong>technische invoer</strong> in het model: geen losse “content-editor”, maar iemand die
+            regels herkent, grenzen ziet en wijzigingen kan beproeven tegen de bron. Dat past bij structureel beheer van de BeleidsBibliotheek
+            en bij een eventuele fulltime invulling rond datakwaliteit en omgevingsrecht.
+        </p>
+
+        <div class="road-note">
+            <strong>Borging:</strong> deze pagina staat in de repo als <code>roadmap-regelengine.html</code>.
+            Gebruik bij een volgende sessie: “open roadmap-regelengine” of voeg een korte verwijzing toe in jullie overdrachts- of projectnotities.
+            <span style="display:block;margin-top:.5rem;color:#777;">Technisch: <code>noindex</code> zodat zoekmachines deze conceptpagina niet indexeren.</span>
+        </div>
+
+        <p style="margin-top:2.5rem;padding-top:1rem;border-top:1px solid #e8e8e8;font-size:.82rem;color:#999;">
+            BeleidsBibliotheek Wassenaar · <a href="index.html">Terug naar start</a>
+        </p>
+    </main>
+</body>
+</html>
