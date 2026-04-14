@@ -7,3 +7,4 @@ Elke deploy (ACC of PROD) wordt hier gelogd. Automatisch door `deploy.sh`, handm
 | 2026-04-08 | 8.0.6 | ACC | Dick | Softlaunch |
 | 2026-04-08 | 8.0.6 | PROD | Dick | Softlaunch — eerste productie-deploy |
 | 2026-04-15 01:04 | 8.0.8 | ACC | Dick | — |
+| 2026-04-15 01:05 | 8.0.9 | ACC | Dick | — |
