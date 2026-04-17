@@ -27,7 +27,6 @@ Onderstaand diagram **spiegelt** de backlog-onderdelen hieronder. Bij wijziginge
 ```mermaid
 flowchart TB
     subgraph P0["P0 — Nu"]
-        B002["B-002 · Mobiel menu: link overdrachtsdossier"]
         B003["B-003 · Reacties softlaunch verwerken"]
         B001["B-001 · Excel controller + OB + Ronald Z."]
     end
@@ -60,7 +59,7 @@ flowchart TB
 
 | ID | Item | Status | Notities / link |
 |----|------|--------|-------------------|
-| B-002 | **Mobiel menu:** link naar overdrachtsdossier ontbreekt op mobiel (hamburger-menu) | `ready` | Klein; responsive/menu-issue in `wassenaar/index.html`. Direct zichtbaar als raadsleden op telefoon kijken. |
+| B-002 | **Mobiel menu:** link naar overdrachtsdossier ontbreekt op mobiel (hamburger-menu) | `done` | `2026-04-17`: Oorzaak: hamburger-knop stond op `top: 50%` en bedekte bij open menu het 2e nav-item. Fix: `styles.css` — bij `.nav-open` hamburger naar `top: 0.5rem` i.p.v. verticaal centreren. |
 | B-003 | **Reacties softlaunch verwerken** (8 apr + 13 apr 2026) — 8 feedbackmails + 2 FW-mails | `ready` | `_reacties/` — 3× "Hoort hier niet" (H1 Veiligheid), 1× "Hoort hier niet" (H2 → 2.4), 2× "Link klopt niet" (H0 Fin. beheer + H3 → 3.1), 1× "Overig" (H2 → 2.2 Parkeren), 1× "Link klopt niet" (H7 → 7.4 Milieubeheer, Jacqueline, 13 apr). Verwerken in `app.js` / `data.js`. |
 | B-001 | **Excel controller + OB-verwijzingen** verwerken samen met **feedback Ronald Zoutendijk** | `ready` | [`docs/NOTITIE_opvolging_excel_controller_Ronald_Z.md`](docs/NOTITIE_opvolging_excel_controller_Ronald_Z.md) — inventaris → BBV-koppeling → mutatieketen |
 
@@ -102,5 +101,6 @@ Dieper technisch werk blijft in **`TODO.md`** staan; in deze backlog alleen **é
 
 | Datum | Wijziging |
 |-------|-----------|
+| 2026-04-17 | B-002 afgerond (hamburger overlap mobiel menu, `styles.css`). |
 | 2026-04-13 | B-002 (mobiel menu), B-003 (reacties softlaunch), B-030 (financiën taakvelden) toegevoegd. Mermaid-diagram bijgewerkt. |
 | *(eerder)* | Eerste versie aangemaakt; B-001 t/m B-021 ingevuld vanuit bestaande notities en TODO. |

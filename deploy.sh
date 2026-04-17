@@ -42,7 +42,9 @@ echo "$VERSIE" > "$SCRIPT_DIR/VERSION"
 
 ALL_FILES=(
     index.html
+    scroll-sync-bridge.js
     app.js
+    beleidsnota-per-taakveld-data.js
     styles.css
     data.js
     beleidsnotas.js
@@ -60,6 +62,7 @@ ALL_FILES=(
     manifest.webmanifest
     pwa-register.js
     reactie.html
+    bb42-oefen.html
 )
 
 # Filter excludes

@@ -21,6 +21,7 @@ Thumbs.db
 
 # Credentials (NOOIT committen)
 .env.prod
+agents/bb42/.env
 
 # Bezoekteller (first-party stats op productie-server)
 wassenaar/stats/data/*.sqlite

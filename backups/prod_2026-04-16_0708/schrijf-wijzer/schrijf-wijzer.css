@@ -1,0 +1,209 @@
+/* Schrijf-Wijzer — standalone styling */
+:root {
+    --wassenaar-blue: #0060ac;
+    --wassenaar-donker: #1d1d1b;
+    --gray-light: #f5f5f5;
+    --gray-medium: #6c757d;
+    --border: #dee2e6;
+}
+
+* { box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--wassenaar-donker);
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.sw-header {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-bottom: 4px solid var(--wassenaar-blue);
+    padding: 1rem 1.5rem;
+}
+.sw-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.sw-logo-link {
+    font-size: 0.9rem;
+    color: var(--wassenaar-blue);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.sw-logo-link:hover { text-decoration: underline; }
+.sw-header h1 {
+    font-size: 1.75rem;
+    margin: 0 0 0.2rem;
+    color: var(--wassenaar-donker);
+}
+.sw-subtitle {
+    font-size: 0.9rem;
+    color: var(--gray-medium);
+    margin: 0;
+}
+.sw-formulier-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--wassenaar-blue);
+    font-weight: 500;
+}
+.sw-formulier-link:hover { text-decoration: underline; }
+
+/* Main */
+.sw-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 3rem;
+}
+
+/* Selectie */
+.sw-selectie h2 {
+    font-size: 1.2rem;
+    margin: 0 0 0.2rem;
+    color: var(--wassenaar-donker);
+}
+.sw-hint {
+    font-size: 0.88rem;
+    color: var(--gray-medium);
+    margin: 0 0 1rem;
+}
+
+/* Knoppen */
+.sw-knoppen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.sw-knop {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.sw-knop:hover {
+    border-color: currentColor;
+    transform: translateY(-1px);
+}
+.sw-knop.sw-geselecteerd {
+    border-width: 3px;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+/* Samenvatting */
+.sw-samenvatting-blok {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    background: var(--gray-light);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+.sw-samenvatting-kop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+.sw-samenvatting-kop h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--wassenaar-donker);
+}
+.sw-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--wassenaar-blue);
+    border-radius: 6px;
+    background: var(--wassenaar-blue);
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.sw-btn:hover {
+    background: #004d8c;
+    border-color: #004d8c;
+}
+.sw-btn-kopieer::before { content: '📋 '; }
+
+.sw-samenvatting-inhoud {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.sw-domein-blok {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--border);
+}
+.sw-domein-blok:last-child { margin-bottom: 0; }
+.sw-domein-titel {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    padding-bottom: 0.25rem;
+}
+.sw-thema-item {
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--border);
+}
+.sw-thema-item:last-child { margin-bottom: 0; }
+.sw-thema-naam {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--wassenaar-donker);
+}
+.sw-thema-tekst {
+    font-size: 0.88rem;
+    color: #444;
+    margin: 0.15rem 0 0;
+}
+
+/* Lege staat */
+.sw-lege-staat {
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+    color: var(--gray-medium);
+    font-size: 0.95rem;
+    background: var(--gray-light);
+    border-radius: 10px;
+    border: 1px dashed var(--border);
+}
+
+/* Footer links */
+.sw-footer-links {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+.sw-footer-links a {
+    color: var(--wassenaar-blue);
+    text-decoration: none;
+}
+.sw-footer-links a:hover { text-decoration: underline; }
+.sw-download-link {
+    font-weight: 500;
+}
+
+@media (max-width: 640px) {
+    .sw-knoppen { flex-direction: column; }
+    .sw-knop { justify-content: center; }
+}

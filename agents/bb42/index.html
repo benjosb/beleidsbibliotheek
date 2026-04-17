@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agent BB42 — Onderwijshuisvesting</title>
+  <style>
+    :root {
+      --bb42-ink: #1e293b;
+      --bb42-muted: #64748b;
+      --bb42-accent: #0d9488;
+      --bb42-accent-soft: #ccfbf1;
+      --bb42-panel: #f8fafc;
+      --bb42-border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Work Sans", system-ui, sans-serif;
+      color: var(--bb42-ink);
+      background: linear-gradient(165deg, #f0fdfa 0%, #f8fafc 40%, #fff 100%);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    /* —— “Gezicht” BB42 —— */
+    .face {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1rem;
+      position: relative;
+    }
+    .face svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 8px 24px rgba(13, 148, 136, 0.25));
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 0.25rem;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--bb42-muted);
+      margin: 0;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bb42-accent);
+      background: var(--bb42-accent-soft);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+    }
+    section {
+      background: #fff;
+      border: 1px solid var(--bb42-border);
+      border-radius: 12px;
+      padding: 1.25rem 1.35rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+    section h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--bb42-muted);
+      margin: 0 0 0.65rem;
+      font-weight: 600;
+    }
+    section p, section li { font-size: 0.92rem; margin: 0.4rem 0; }
+    ul { padding-left: 1.2rem; margin: 0.5rem 0 0; }
+    code {
+      font-size: 0.82rem;
+      background: var(--bb42-panel);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+    }
+    .rapport-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    .rapport-tools label {
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .rapport-tools input[type="file"] { font-size: 0.8rem; }
+    textarea#paste-json {
+      width: 100%;
+      min-height: 100px;
+      font-family: ui-monospace, monospace;
+      font-size: 0.78rem;
+      padding: 0.6rem;
+      border: 1px solid var(--bb42-border);
+      border-radius: 8px;
+      resize: vertical;
+    }
+    button {
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--bb42-accent);
+      border: none;
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover { opacity: 0.92; }
+    #rapport-out {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      max-height: 320px;
+      overflow: auto;
+      background: var(--bb42-panel);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    #rapport-out.err { color: #b91c1c; background: #fef2f2; }
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--bb42-muted);
+      margin-top: 2rem;
+    }
+    footer a { color: var(--bb42-accent); }
+  </style>
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link href="https://fonts.bunny.net/css?family=work-sans:400,600,700" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="face" aria-hidden="true">
+        <!-- Mini “robot”-gezicht: BB42 -->
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bb42head" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#14b8a6"/>
+              <stop offset="100%" style="stop-color:#0d9488"/>
+            </linearGradient>
+          </defs>
+          <rect x="14" y="18" width="92" height="88" rx="22" fill="url(#bb42head)"/>
+          <rect x="28" y="38" width="22" height="18" rx="5" fill="#f0fdfa"/>
+          <rect x="70" y="38" width="22" height="18" rx="5" fill="#f0fdfa"/>
+          <circle cx="39" cy="47" r="4" fill="#134e4a"/>
+          <circle cx="81" cy="47" r="4" fill="#134e4a"/>
+          <rect x="42" y="72" width="36" height="10" rx="5" fill="#ccfbf1" opacity="0.9"/>
+          <text x="60" y="104" text-anchor="middle" fill="#99f6e4" font-size="11" font-family="system-ui,sans-serif" font-weight="700">BB42</text>
+        </svg>
+      </div>
+      <h1>Agent BB42</h1>
+      <p class="subtitle">BeleidsBibliotheek Wassenaar · BBV-taakveld 4.2 — Onderwijshuisvesting</p>
+      <span class="badge">Publieke bronnen · human in the loop</span>
+    </header>
+
+    <section>
+      <h2>Wat doet BB42?</h2>
+      <p>
+        Agent BB42 is het geautomatiseerde <strong>zoek- en rapportagedeel</strong> van jullie keten:
+        periodiek trefwoorden uitzetten tegen openbare registers (o.a. KOOP / lokale regelgeving), output als JSON.
+        <strong>Geen</strong> automatische wijziging van de site — review, GO Yvonne, daarna handmatig in de data en deploy.
+      </p>
+    </section>
+
+    <section>
+      <h2>Werkwijze</h2>
+      <ul>
+        <li><code>python run.py</code> op de VPS (zie <code>README.md</code>)</li>
+        <li>Rapport bekijken (hieronder of bestand <code>bb42-last.json</code>)</li>
+        <li>GO Yvonne → opname in <code>beleidsnota-per-taakveld-data.js</code> → ACC → Ricardo → PROD</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Laatste rapport bekijken</h2>
+      <p style="font-size:0.88rem;color:var(--bb42-muted);margin-top:0;">
+        Kies het JSON-bestand van een run, of plak de JSON-output en klik <em>Toon</em>.
+      </p>
+      <div class="rapport-tools">
+        <label>Bestand: <input type="file" id="file-json" accept=".json,application/json" /></label>
+        <button type="button" id="btn-paste">Toon geplakte JSON</button>
+      </div>
+      <textarea id="paste-json" placeholder='Plak hier JSON van Agent BB42 (stdout of bb42-last.json)...' spellcheck="false"></textarea>
+      <div id="rapport-out" hidden></div>
+    </section>
+
+    <footer>
+      Technische map: <code>agents/bb42/</code> ·
+      <a href="README.md">README.md</a> (in repo)
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var out = document.getElementById('rapport-out');
+      function showObj(obj) {
+        out.hidden = false;
+        out.classList.remove('err');
+        out.textContent = JSON.stringify(obj, null, 2);
+      }
+      function showErr(msg) {
+        out.hidden = false;
+        out.classList.add('err');
+        out.textContent = msg;
+      }
+      document.getElementById('file-json').addEventListener('change', function (e) {
+        var f = e.target.files && e.target.files[0];
+        if (!f) return;
+        var r = new FileReader();
+        r.onload = function () {
+          try {
+            showObj(JSON.parse(r.result));
+          } catch (err) {
+            showErr('Geen geldige JSON: ' + err.message);
+          }
+        };
+        r.readAsText(f);
+      });
+      document.getElementById('btn-paste').addEventListener('click', function () {
+        var raw = document.getElementById('paste-json').value.trim();
+        if (!raw) {
+          showErr('Geen inhoud om te tonen.');
+          return;
+        }
+        try {
+          showObj(JSON.parse(raw));
+        } catch (err) {
+          showErr('Geen geldige JSON: ' + err.message);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -8,3 +8,6 @@ Elke deploy (ACC of PROD) wordt hier gelogd. Automatisch door `deploy.sh`, handm
 | 2026-04-08 | 8.0.6 | PROD | Dick | Softlaunch — eerste productie-deploy |
 | 2026-04-15 01:04 | 8.0.8 | ACC | Dick | — |
 | 2026-04-15 01:05 | 8.0.9 | ACC | Dick | — |
+| 2026-04-15 01:05 | 8.0.10 | ACC | Dick | Erwin-correcties: nota reserves, fin. verordening, parkeerverordening, taakveld 2.4, mandaat naar 0.1 |
+| 2026-04-15 01:23 | 8.0.10 | PROD | dickbraam | wijzigingen Erwin oa parkeerverordening dubbel |
+| 2026-04-15 13:14 | 8.0.10 | PROD | dickbraam | db  |

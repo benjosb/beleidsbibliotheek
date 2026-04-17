@@ -80,6 +80,7 @@
         <div class="reactie-wrap">
             <h2>Wijziging of opmerking doorgeven</h2>
             <p class="reactie-intro">Ziet u een fout, ontbreekt er een document, of heeft u een andere opmerking over de BeleidsBibliotheek? Gebruik dit formulier om uw reactie gestructureerd door te geven. Er wordt een e-mail aangemaakt die u kunt versturen.</p>
+            <p class="reactie-intro" style="margin-top:-0.5rem;">Oefenen met <strong>taakveld 4.2</strong> (Agent BB42)? Zie <a href="bb42-oefen.html">bb42-oefen.html</a> — het algemene reactieformulier blijft hier.</p>
 
             <form id="reactieForm" onsubmit="return false;">
 
@@ -159,6 +160,17 @@
     </footer>
 
     <script>
+    (function () {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('tv') === '4.2' || params.get('sectie') === 'H4') {
+            var sel = document.getElementById('rfSectie');
+            if (sel) sel.value = 'H4 Onderwijs';
+            var t = document.getElementById('rfToelichting');
+            if (t && !t.value.trim()) {
+                t.placeholder = 'Bijv. taakveld 4.2 Onderwijshuisvesting — uw opmerking…';
+            }
+        }
+    })();
     function bbvReactieNu() {
         const d = new Date();
         const p = (n) => (n < 10 ? '0' + n : '' + n);
@@ -242,5 +254,6 @@
         setTimeout(function() { el.style.display = 'none'; }, 4000);
     }
     </script>
+    <script src="scroll-sync-bridge.js" defer></script>
 </body>
 </html>

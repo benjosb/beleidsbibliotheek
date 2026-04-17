@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vergelijk ACC ↔ PROD — BeleidsBibliotheek</title>
+<title>Vergelijk omgevingen — BeleidsBibliotheek</title>
 <style>
   :root {
     --oranje: #ea580c;
@@ -21,64 +21,101 @@
   }
 
   .toolbar {
-    display: flex; align-items: center; justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: 0.5rem;
     padding: 0.5rem 1rem; background: var(--wit);
-    border-bottom: 1px solid var(--border); height: 48px;
+    border-bottom: 1px solid var(--border);
+    min-height: 48px;
   }
-  .toolbar h1 { font-size: 0.95rem; font-weight: 700; }
-  .toolbar .controls { display: flex; gap: 0.5rem; align-items: center; }
-  .toolbar select, .toolbar button {
+  .toolbar h1 { font-size: 0.95rem; font-weight: 700; max-width: 42%; }
+  .toolbar .controls { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; justify-content: flex-end; }
+  .toolbar select, .toolbar button, .toolbar input[type="url"] {
     padding: 0.3rem 0.6rem; border: 1px solid var(--border);
     border-radius: 6px; font-size: 0.8rem; font-family: inherit;
     background: var(--wit); cursor: pointer;
   }
+  .toolbar input[type="url"] { cursor: text; min-width: 11rem; max-width: 100%; }
   .toolbar button:hover { background: #f1f5f9; }
   .toolbar .sync-label { font-size: 0.75rem; color: var(--grijs); }
   .toolbar input[type="checkbox"] { margin-right: 0.25rem; }
+  .file-protocol-warn {
+    display: none;
+    padding: 0.35rem 1rem;
+    font-size: 0.75rem;
+    background: #fef3c7;
+    color: #92400e;
+    border-bottom: 1px solid #fcd34d;
+  }
+  .file-protocol-warn.visible { display: block; }
+  .file-protocol-warn a { color: #b45309; font-weight: 600; }
+  .toolbar .local-wrap {
+    display: none; align-items: center; gap: 0.35rem;
+    font-size: 0.75rem; color: var(--grijs);
+  }
+  .toolbar .local-wrap.visible { display: flex; }
+  .toolbar .local-wrap label { white-space: nowrap; }
 
   .panels {
-    display: grid; grid-template-columns: 1fr 1fr;
+    display: grid;
     height: calc(100vh - 48px);
   }
+  .panels.cols-2 { grid-template-columns: 1fr 1fr; }
+  .panels.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
 
   .panel {
     display: flex; flex-direction: column;
     border-right: 1px solid var(--border);
+    min-width: 0;
   }
   .panel:last-child { border-right: none; }
+  .panel.hidden { display: none !important; }
 
   .panel-header {
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0.4rem 0.75rem;
-    font-size: 0.75rem; font-weight: 600;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.68rem; font-weight: 600;
     border-bottom: 1px solid var(--border);
+    flex-wrap: wrap; gap: 0.25rem;
   }
+  .panel.local .panel-header { background: #f0fdf4; color: #15803d; }
   .panel.acc .panel-header { background: #fff7ed; color: var(--oranje); }
   .panel.prod .panel-header { background: #ecfdf5; color: var(--groen); }
 
   .panel-header a {
-    font-size: 0.7rem; color: inherit; text-decoration: none;
-    padding: 0.15rem 0.4rem; border: 1px solid; border-radius: 4px;
+    font-size: 0.65rem; color: inherit; text-decoration: none;
+    padding: 0.12rem 0.35rem; border: 1px solid; border-radius: 4px;
   }
   .panel-header a:hover { text-decoration: underline; }
 
   .panel iframe {
-    flex: 1; border: none; width: 100%;
+    flex: 1; border: none; width: 100%; min-height: 0;
   }
-
-  .divider {
-    width: 4px; background: var(--border); cursor: col-resize;
-    position: relative; z-index: 10;
-  }
-  .divider:hover { background: #94a3b8; }
 </style>
 </head>
 <body>
 
+<p class="file-protocol-warn" id="file-warn">
+  Je opent dit bestand direct vanaf schijf. Start het <strong>dashboard</strong> (<code>python3 dashboard.py</code>) en ga naar
+  <a href="http://127.0.0.1:8800/vergelijk.html">http://127.0.0.1:8800/vergelijk.html</a> — dan werkt het lokale paneel betrouwbaar.
+</p>
+
 <div class="toolbar">
-  <h1>Vergelijk: Acceptatie ↔ Productie</h1>
+  <h1 id="toolbar-title">Vergelijk omgevingen</h1>
   <div class="controls">
-    <label class="sync-label">
+    <label style="font-size:0.75rem;color:var(--grijs);">Weergave
+      <select id="compare-mode" onchange="onModeChange()">
+        <option value="triple">Lokaal · Acceptatie · Productie (3 kolommen)</option>
+        <option value="acc-prod">Alleen Acceptatie ↔ Productie (2)</option>
+        <option value="local-acc">Alleen Lokaal ↔ Acceptatie (2)</option>
+        <option value="local-prod">Alleen Lokaal ↔ Productie (2)</option>
+      </select>
+    </label>
+    <span class="local-wrap" id="local-wrap">
+      <label for="local-base">Lokaal</label>
+      <input type="url" id="local-base" placeholder="http://127.0.0.1:8800/local-site"
+        title="Standaard: wassenaar/ via python3 dashboard.py (poort 8800). Alleen aanpassen als je een eigen server gebruikt.">
+    </span>
+    <label class="sync-label" title="Scroll volgen tussen de zichtbare panelen (scroll-sync-bridge.js op de pagina’s).">
       <input type="checkbox" id="sync-scroll" checked> Sync scroll
     </label>
     <select id="page-select" onchange="navigateTo(this.value)">
@@ -89,40 +126,168 @@
       <option value="/reactie.html">Reactieformulier</option>
       <option value="/voorstel.html">Document voorstellen</option>
     </select>
-    <button onclick="reloadBoth()">Herlaad beide</button>
+    <button type="button" onclick="reloadFrames()">Herlaad pane(len)</button>
   </div>
 </div>
 
-<div class="panels">
-  <div class="panel acc">
+<div class="panels cols-3" id="panels">
+  <div class="panel local" id="panel-local">
     <div class="panel-header">
-      <span>ACCEPTATIE — wassenaar.besluit-wijzer.nl</span>
-      <a href="https://wassenaar.besluit-wijzer.nl" target="_blank">open apart</a>
+      <span>ONTWIKKEL (lokaal)</span>
+      <a id="link-local" href="#" target="_blank">open</a>
     </div>
-    <iframe id="frame-acc" src="https://wassenaar.besluit-wijzer.nl"></iframe>
+    <iframe id="frame-local" title="Lokaal"></iframe>
   </div>
-  <div class="panel prod">
+  <div class="panel acc" id="panel-acc">
     <div class="panel-header">
-      <span>PRODUCTIE — beleidsbibliotheekwassenaar.nl</span>
-      <a href="https://beleidsbibliotheekwassenaar.nl" target="_blank">open apart</a>
+      <span>ACCEPTATIE</span>
+      <a href="https://wassenaar.besluit-wijzer.nl" target="_blank" rel="noopener">open</a>
     </div>
-    <iframe id="frame-prod" src="https://beleidsbibliotheekwassenaar.nl"></iframe>
+    <iframe id="frame-acc" title="Acceptatie"></iframe>
+  </div>
+  <div class="panel prod" id="panel-prod">
+    <div class="panel-header">
+      <span>PRODUCTIE</span>
+      <a href="https://beleidsbibliotheekwassenaar.nl" target="_blank" rel="noopener">open</a>
+    </div>
+    <iframe id="frame-prod" title="Productie"></iframe>
   </div>
 </div>
 
 <script>
-const accFrame = document.getElementById('frame-acc');
-const prodFrame = document.getElementById('frame-prod');
+(function () {
+  var ACC = 'https://wassenaar.besluit-wijzer.nl';
+  var PROD = 'https://beleidsbibliotheekwassenaar.nl';
+  var LOCAL_KEY = 'bb-vergelijk-local-base';
 
-function navigateTo(path) {
-  accFrame.src = 'https://wassenaar.besluit-wijzer.nl' + path;
-  prodFrame.src = 'https://beleidsbibliotheekwassenaar.nl' + path;
-}
+  var panelsEl = document.getElementById('panels');
+  var frameLocal = document.getElementById('frame-local');
+  var frameAcc = document.getElementById('frame-acc');
+  var frameProd = document.getElementById('frame-prod');
+  var panelLocal = document.getElementById('panel-local');
+  var panelAcc = document.getElementById('panel-acc');
+  var panelProd = document.getElementById('panel-prod');
+  var syncScrollEl = document.getElementById('sync-scroll');
+  var modeEl = document.getElementById('compare-mode');
+  var localBaseEl = document.getElementById('local-base');
+  var localWrap = document.getElementById('local-wrap');
+  var linkLocal = document.getElementById('link-local');
 
-function reloadBoth() {
-  accFrame.contentWindow.location.reload();
-  prodFrame.contentWindow.location.reload();
-}
+  var frames = [frameLocal, frameAcc, frameProd];
+
+  function defaultLocalBase() {
+    var h = window.location.hostname;
+    var po = window.location.port;
+    if ((h === 'localhost' || h === '127.0.0.1') && po === '8800') {
+      return window.location.origin.replace(/\/$/, '') + '/local-site';
+    }
+    return 'http://127.0.0.1:8800/local-site';
+  }
+
+  var OLD_WRONG = /^https?:\/\/(127\.0\.0\.1|localhost):8765\/?$/i;
+
+  try {
+    var saved = localStorage.getItem(LOCAL_KEY);
+    if (saved && OLD_WRONG.test(saved.trim())) {
+      saved = defaultLocalBase();
+      localStorage.setItem(LOCAL_KEY, saved);
+    }
+    if (saved) {
+      localBaseEl.value = saved;
+    } else {
+      localBaseEl.value = defaultLocalBase();
+      try { localStorage.setItem(LOCAL_KEY, localBaseEl.value); } catch (e2) {}
+    }
+  } catch (e) {
+    localBaseEl.value = defaultLocalBase();
+  }
+
+  localBaseEl.addEventListener('change', function () {
+    try { localStorage.setItem(LOCAL_KEY, localBaseEl.value.trim()); } catch (e) {}
+    applyFrames(document.getElementById('page-select').value);
+  });
+
+  function localBase() {
+    var u = (localBaseEl.value || defaultLocalBase()).trim().replace(/\/$/, '');
+    return u || defaultLocalBase();
+  }
+
+  function onModeChange() {
+    var m = modeEl.value;
+    localWrap.classList.toggle('visible', m !== 'acc-prod');
+
+    if (m === 'triple') {
+      panelsEl.className = 'panels cols-3';
+      panelLocal.classList.remove('hidden');
+      panelAcc.classList.remove('hidden');
+      panelProd.classList.remove('hidden');
+      document.getElementById('toolbar-title').textContent = 'Lokaal · Acceptatie · Productie';
+    } else if (m === 'acc-prod') {
+      panelsEl.className = 'panels cols-2';
+      panelLocal.classList.add('hidden');
+      panelAcc.classList.remove('hidden');
+      panelProd.classList.remove('hidden');
+      document.getElementById('toolbar-title').textContent = 'Acceptatie ↔ Productie';
+    } else if (m === 'local-acc') {
+      panelsEl.className = 'panels cols-2';
+      panelLocal.classList.remove('hidden');
+      panelAcc.classList.remove('hidden');
+      panelProd.classList.add('hidden');
+      document.getElementById('toolbar-title').textContent = 'Lokaal ↔ Acceptatie';
+    } else {
+      panelsEl.className = 'panels cols-2';
+      panelLocal.classList.remove('hidden');
+      panelAcc.classList.add('hidden');
+      panelProd.classList.remove('hidden');
+      document.getElementById('toolbar-title').textContent = 'Lokaal ↔ Productie';
+    }
+    applyFrames(document.getElementById('page-select').value);
+  }
+
+  function applyFrames(path) {
+    var loc = localBase() + path;
+    var acc = ACC + path;
+    var prod = PROD + path;
+    frameLocal.src = loc;
+    frameAcc.src = acc;
+    frameProd.src = prod;
+    linkLocal.href = localBase() + '/';
+  }
+
+  window.navigateTo = function (path) {
+    applyFrames(path);
+  };
+
+  window.reloadFrames = function () {
+    frames.forEach(function (f) {
+      if (f.closest('.panel').classList.contains('hidden')) return;
+      try { f.contentWindow.location.reload(); } catch (e) {}
+    });
+  };
+
+  window.onModeChange = onModeChange;
+
+  window.addEventListener('message', function (e) {
+    if (!syncScrollEl || !syncScrollEl.checked) return;
+    var d = e.data;
+    if (!d || d.type !== 'bb-scroll-sync' || typeof d.ratio !== 'number') return;
+    var src = e.source;
+    frames.forEach(function (f) {
+      if (f.contentWindow === src) return;
+      if (f.closest('.panel').classList.contains('hidden')) return;
+      try {
+        f.contentWindow.postMessage({ type: 'bb-scroll-sync-apply', ratio: d.ratio }, '*');
+      } catch (err) {}
+    });
+  });
+
+  if (window.location.protocol === 'file:') {
+    var fw = document.getElementById('file-warn');
+    if (fw) fw.classList.add('visible');
+  }
+
+  onModeChange();
+})();
 </script>
 
 </body>

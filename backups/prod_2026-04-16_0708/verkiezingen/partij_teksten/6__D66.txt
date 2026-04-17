@@ -1,0 +1,772 @@
+BRONNEN EN VERIFICATIE (alles traceerbaar)
+================================================================================
+
+PDF (origineel, lokaal): Verkiezingsprogramma6D66.pdf
+PDF (online): https://media.d66.nl/uploads/sites/235/2026/01/Verkiezingsprogramma-D66-Wassenaar-Het-gezondste-dorp-definitief.pdf
+
+Website: https://d66.nl/wassenaar/verkiezingsprogramma-d66-wassenaar/
+English summary: https://media.d66.nl/uploads/sites/235/2026/01/Election-program-D66-Wassenaar-The-Healthiest-Town-summary-1.pdf
+
+Geëxtraheerd met pdf_naar_txt.py uit: Verkiezingsprogramma6D66.pdf (lokaal)
+Gedownload/geëxtraheerd op: 12 maart 2026
+
+================================================================================
+
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0H e t  g e z o n d s t e  d o r p
+S a m e n  w e r k e n  a a n  m o r g e n
+Maakt ruimt e v oor v oorui t gang
+V er kie zingspr ogr amma 2026 - 2030H e t  g e z o n d s t e  d o r p
+S a m e n  w e r k e n  a a n  m o r g e n
+Maakt ruimt e v oor v oorui t gang
+V oor w oor d
+Met trots presenteren wij het verkiezingsprogramma van D66 Wassenaar, met als
+thema: ‘Het gezondste dorp’. Wij geloven dat gezondheid méér omvat dan onze
+lichamelijke en geestelijke gesteldheid: het gaat ook over prettig wonen, contact
+hebben met anderen, bewegen in het groen en je thuis voelen in een gemeenschap
+waar iedereen meetelt.
+Daarom zetten we ons in voor een gezonde en duurzame leefomgeving. We maken
+bewuste keuzes voor het milieu: minder afval, meer biodiversiteit, en schone lucht.
+We willen een dorp waar fietsen en wandelen vanzelfsprekend en veilig zijn, en
+waar verkeer geen overlast veroorzaakt. Waar voorzieningen dichtbij zijn en goed
+bereikbaar.
+We willen toe naar een dorp waar we nog meer naar elkaar omzien en op elkaar
+kunnen rekenen. Waar we dicht bij huis terecht kunnen voor onze zorg als dat
+nodig is en waar alle ruimte is voor initiatieven vanuit de buurt.
+Morgen komt met uitdagingen: we worden ouder, technologische ontwikkelingen
+gaan grote gevolgen krijgen. De landelijke overheid zal wellicht haar geld anders
+gaan inzetten zodat er minder voor de gemeenten overblijft.
+Bij alle beslissingen die we nemen zal D66 Wassenaar steeds de vraag stellen: hoe
+draagt dit besluit bij aan Wassenaar, het gezondste dorp? Welke kleine stappen
+kunnen we nemen? Hoe worden de mensen in deze wijk hier beter van? Welk
+verschil gaat het maken voor onszelf, voor onze kinderen en voor onze
+kleinkinderen?
+Wij nodigen u uit om samen met ons te werken aan het Wassenaar van morgen.
+Die uitdaging begint vandaag. Met jou, met u, met ons.
+Het kan wél.
+Paut Struik, Lijsttrekker
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0
+Maakt ruimt e v oor v oorui t gang
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0Inleiding
+Dit verkiezingsprogramma is voor alle optimisten in ons dorp. Voor iedereen die
+ziet hoe het beter kan en moet. Door niet te roepen wat niet kan, maar door ons
+elke dag opnieuw de vraag te stellen: hoe kan het dan wél?
+Wassenaar is een uniek dorp. We liggen midden in de Randstad. Alles is zo dichtbij
+maar ook zo ver weg. We beschikken over grote stukken groen, een diverse
+samenleving met veel internationale inwoners en een grote groep vrijwilligers.
+Ons dorp staat voor grote uitdagingen. Jonge gezinnen kunnen geen huis vinden,
+ouderen hebben meer behoefte aan zorg, en mensen kijken naar de politiek voor
+sturing. We kunnen ons niet veroorloven om ons tegen elkaar uit te laten spelen.
+Daarom laten we ons inspireren door de mensen die ondanks alles hun idealen
+najagen. Want progressieve politiek inspireert en verbindt.
+Stel je een Wassenaar voor waar iedereen een fijne plek heeft om te wonen. Waar
+we de gezondste generatie ooit hebben en waar jong en oud zich thuis voelen.
+Stel je een Wassenaar voor waar ondernemers ruimte hebben om te groeien, waar
+ouderen gemakkelijker en betaalbaar kunnen doorstromen naar een passende
+woning, en waar de politiek dienstbaar en betrouwbaar is. Een dorp waar je fijn kan
+leven.
+De ideeën zijn er al. Nu is het aan ons om ze uit te voeren. D66 Wassenaar kiest
+voor oplossingen die mensen de ruimte geven om vooruit te komen. We geven alle
+ruimte aan alle Wassenaarders die willen bouwen aan een betere toekomst. Waar
+drempels in de weg staan, zorgen wij dat de gemeente die wegneemt. Voor het
+gezondste dorp ooit.
+Het is aan ons. Doe mee. Want als we het willen, dan kan het wél.
+Maakt ruimt e v oor v oorui t gang
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0Inhoudsopga v e
+6
+7
+9
+1 2
+1 3
+1 5
+1 7
+1 8
+1 9
+2 0
+2 1
+2 2
+2 5
+2 6
+2 7
+2 9
+3 0
+3 1
+3 31 .  W o n e n  e n  M o b i l i t e i t :   P r e t t i g  l e v e n  e n  v e i l i g  b e w e g e n
+1 . 1 .  A m b i t i e u s  b o u w e n  e n  f i j n  w o n e n
+1 . 2 .  R u i m t e  o m  t e  b e w e g e n
+2 .  N a t u u r  e n  k l i m a a t :  Z o r g e n  v o o r  w a t  o n s  g e z o n d  h o u d t
+2 . 1 .  E e n  d a a d k r a c h t i g e  e n  g r o e n e  g e m e e n t e
+2 . 2 .  E e n  g r o e n e  e n  p r e t t i g e  o m g e v i n g
+3 .  G e z o n d h e i d  e n  w e l z i j n :  Z o r g e n  v o o r  e n  m e t  e l k a a r
+3 . 1 .  E e n  d o r p  w a a r  i e d e r e e n  g e h o l p e n  w o r d t
+3 . 2 .  E e n  b u u r t  d i e  b e t r o k k e n  i s
+3 . 3 .  E e n  k a n s r i j k  d o r p  v o o r  i e d e r e e n
+4 .  E c o n o m i e  e n  w e r k :  S t e r k e  b e d r i j v e n  d i e  v e r b i n d e n
+4 . 1 .  P r e t t i g  e n  l o k a a l  o n d e r n e m e n
+5 .  O n d e r w i j s  e n  v e i l i g h e i d :  E e n  k a n s r i j k e  e n  v e i l i g e  o m g e v i n g
+5 . 1 .  K a n s e n  v o o r  i e d e r e  i n w o n e r
+5 . 1 .  Z o n d e r  z o r g e n  o v e r  s t r a a t
+6 .  B e s t u u r  e n  f i n a n c i ë n :  B e t r o u w b a a r  e n  r o b u u s t
+6 . 1 .  L o k a a l  b e s t u u r  m e t  h a r t  v o o r  i n w o n e r s
+6 . 2 .  V e r a n t w o o r d  o m g a a n  m e t  g e l d
+7 .  V e r a n t w o o r d i n g
+Maakt ruimt e v oor v oorui t gang
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0P r e t t i g  l e v e n
+e n  v e i l i g  b e w e g e nH o o f d s t u k  1
+6W o n e n  e n  M o b i l i t e i t
+Maakt ruimt e v oor w onen
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 7
+Onderzoek naar woningbouw op de Hoge Klei
+D66 Wassenaar wil starten met een onderzoek naar de Hoge Klei als mogelijke
+nieuwe woningbouwlocatie. We willen in kaart brengen welke kansen deze
+plek biedt voor het realiseren van betaalbare en duurzame woningen, en welke
+voorwaarden nodig zijn om hier verantwoord te bouwen, zodat er sneller meer
+betaalbare en passende woningen kunnen worden gerealiseerd.Ambi tieus bouw en en f ijn w onen
+D66 Wassenaar kiest voor een gemeente waar woningzoekenden een passende
+woning kunnen vinden. Tot 2030 komen er duizend nieuwe woningen bij, met de
+ANWB-locatie als belangrijkste toevoeging. De tuinen van Den Deijl en de
+planvorming voor Kerkehout zijn ook belangrijke ontwikkelingen. Daarnaast willen
+we per jaar 50 woningen toevoegen. D66 Wassenaar wil actief op zoek naar
+nieuwe bouwlocaties, eventueel ook buiten de bebouwde kom en naar
+mogelijkheden voor woningsplitsen en het plaatsen van extra verdiepingen op
+bestaande woningen of woningcomplexen.
+Betaalbare nieuwbouw
+D66 Wassenaar wil het makkelijker maken voor mensen met een laag of
+gemiddeld inkomen om een huis te vinden en hecht daarom aan de regionale
+realisatieafspraken rond woningbouw: van nieuw te bouwen woningen moet
+tweederde betaalbaar zijn, waarvan de helft sociale huurwoningen.
+Doorstroming voor echte beweging op de woningmarkt
+D66 Wassenaar zet in op het bouwen van passende appartementen voor ouderen
+zodat zij in het dorp kunnen blijven én hun grotere (huur-)woningen vrijkomen.
+Deze vrijgekomen woningen worden via KoopGarant of een vergelijkbare regeling
+beschikbaar gesteld voor starters. Zo benutten we de bestaande voorraad
+optimaal en vergroten we de woonmogelijkheden voor iedereen.
+Heldere bestemming voor de vrijkomende schoollocaties
+D66 Wassenaar wil dat de vrijkomende locaties van de St. Jan Baptist en St.
+Jozef basisscholen snel een nieuwe maatschappelijke of woonbestemming
+krijgen. We zetten in op woningbouw, zodat leegstand wordt voorkomen en de
+ruimte snel weer waarde heeft voor het dorp.
+Maakt ruimt e v oor w onen
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 8Sneller verduurzamen woningen
+D66 Wassenaar wil vaart maken met de verduurzaming van ons woningbestand.
+Inwoners krijgen gerichte ondersteuning via VvE-begeleiding en inzet van
+energiecoaches. Deze aanpak begint bij de slechtst geïsoleerde tien procent
+woningen zodat energiearmoede wordt teruggedrongen en woonlasten dalen.
+Nieuwbouw in Wassenaar wordt standaard natuurinclusief en klimaatadaptief, met
+groene daken, wateropvang en meer biodiversiteit.
+Hoger bouwen waar het kan
+Voor D66 Wassenaar is bouwen hoger dan drie lagen bespreekbaar. Dit geldt
+zowel voor bestaande bouw als voor nieuwbouw. Creatieve oplossingen van
+ontwikkelaars worden toegejuicht.
+De gemeente pakt de regie op wonen en verduurzaming
+D66 Wassenaar kiest voor een actieve grondpolitiek. Dit betekent dat er scherpe
+financiële regie nodig is. Als gemeente moet de maatschappelijke waarde van de
+bestemming altijd voorop staan, vindt D66 Wassenaar. Elk jaar verschijnt een
+woonmonitor die inzicht biedt in de voortgang op het gebied van nieuwbouw,
+verduurzaming en doorstroming. De gemeente werkt hecht samen met
+corporaties, buurgemeenten en netbeheerders.
+D66 Wassenaar is trots op de manier waarop we in Wassenaar momenteel
+asielzoekers opvangen. Dankzij talloze vrijwilligers en betrokken organisaties
+krijgen deze mensen hier niet alleen opvang, maar ook een kans om mee te
+doen. Duidelijke afspraken tussen gemeente, COA en woonruimte verstrekker
+zijn nodig, zodat we een gastvrij dorp kunnen blijven. D66 Wassenaar wil dat
+men al tijdens de asielprocedure zo vroeg mogelijk kan starten met taallessen,
+een opleiding en werk. Zo vinden deze medebewoners snel hun weg in onze
+gemeenschap. D66 Wassenaar zet zich in om de achterstand op de
+huisvesting van statushouders in onze gemeente weg te werken.
+Ruimte voor vernieuwende woonvormen
+Diversiteit aan woonvormen bepalen de kwaliteit van een buurt. Door ruimte te
+geven aan nieuwe manieren van samen wonen, zoals meergeneratie wonen,
+levensloopbestendige woningen en wooncoöperaties, ontstaat er een omgeving
+waarin mensen elkaar ondersteunen, langer zelfstandig kunnen blijven wonen en
+waarin  verschillende  generaties  elkaar   versterken.   De  bouw   van   mantelzorg-
+Maakt ruimt e v oor v eilig v er k eer
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 9
+Stimuleringsfonds wooninitiatieven
+D66 Wassenaar wil een stimuleringsfonds voor wooninitiatieven instellen en
+bewonersgroepen actief begeleiden wanneer zij samen willen bouwen of
+wonen. Door goede ondersteuning kunnen waardevolle ideeën sneller tot
+ontwikkeling komen.
+woningen wordt eenvoudiger zodat families sneller passende zorg kunnen
+organiseren. D66 Wassenaar wil ook onderzoeken waar flexwoningen gebouwd
+kunnen worden. D66 Wassenaar wil zo bouwen aan buurten die
+toekomstbestendig, inclusief en sociaal verbonden zijn.
+Heldere procedures en stevige samenwerkingen
+D66 Wassenaar wil dat de procedures rond wooninitiatieven duidelijk en
+toegankelijk worden en dat er concrete afspraken worden gemaakt met
+woningcorporaties en marktpartijen. Zo kunnen nieuwe woonprojecten snel en
+zorgvuldig worden gerealiseerd.
+R u i m t e  o m  t e  b e w e g e n
+Met gemiddeld 33,6 fietsongevallen per 10.000 inwoners staat onze gemeente op
+de tweede plaats van minst fietsveilige gemeenten in Nederland. Het burgerberaad
+over verkeer, georganiseerd op initiatief van D66 Wassenaar, maakte  duidelijk  dat
+inwoners meer ruimte willen voor fietsers en voetgangers en minder doorgaand
+autoverkeer. D66 Wassenaar ziet dit als kans en uitgangspunt om samen met
+bewoners te werken aan een verkeersveilig en leefbaar Wassenaar voor iedereen.
+Veilige schoolroutes voor kinderen
+D66 Wassenaar wil dat kinderen veilig en zelfstandig naar school kunnen fietsen
+en lopen. D66 Wassenaar staat voor de inrichting van schoolstraten, waarbij auto’s
+tijdens de breng- en haalmomenten geweerd worden. Samen met scholen wordt
+een actieplan beweegvriendelijke schoolomgeving opgesteld met aanvullende
+maatregelen die ouders stimuleren hun kinderen met de fiets of te voet naar
+school te brengen, zodat de verkeerssituatie rondom scholen veiliger wordt.
+Betere doorstroming rondom het Rozenplein
+D66 Wassenaar wil dat de gemeente tijdens de gesprekken met Defensie
+actief inzet op een nieuwe afrit bij Maaldrift. Deze aansluiting  kan  de  druk  op
+Veilige en comfortabele fietspaden
+D66 Wassenaar wil dat fietspaden in het dorp breed, duidelijk en veilig zijn voor
+iedereen. Waar mogelijk worden fietspaden verbreed, beleid ontwikkeld voor
+snelfietsers en wordt de zichtbaarheid van voetgangers en fietsers verbeterd met
+veilige oversteekplaatsen. Daarnaast vindt D66 Wassenaar het belangrijk dat fiets-
+en voetpaden goed worden onderhouden: onkruid, losse tegels en andere
+obstakels moeten snel worden aangepakt. Zo kan iedereen met vertrouwen en
+comfort op de fiets of te voet door Wassenaar bewegen.
+Autoluwe en leefbare woonwijken
+D66 Wassenaar zet in op woongebieden die autoluw zijn en zo veel mogelijk als
+woonerf worden ingericht. Met een maximumsnelheid van 15 km/u voor auto’s en
+een vriendelijke inrichting voor spelende kinderen, fietsers en wandelaars wordt de
+leefomgeving veiliger en aangenamer voor iedereen.
+Meer veilige oversteekplaatsen over de N44
+D66 Wassenaar wil meerdere nieuwe oversteekbruggen, waar mogelijk
+gecombineerd met ecoducten over de N44 zodat de verbindingen tussen  oost  en
+west beter worden voor fietsers en wandelaars. Zo verbeteren we zowel de
+verkeersveiligheid als de natuurverbindingen.
+Slimme technieken voor een leefbare en veilige dorpskern
+D66 Wassenaar wil doorgaand verkeer zoveel mogelijk buiten het gemeentelijke
+wegennet van het dorp houden. Daarom zetten we in op doseerinstallaties die
+tijdens de spits, aan de randen van de gemeente het verkeer reguleren, zodat
+automobilisten Wassenaar minder snel als sluiproute gebruiken. Ook willen we
+vooroplopen met innovatieve oplossingen om ongewenst verkeer en onveilig
+gedrag te verminderen, zoals aansluiten bij landelijke proeven waarbij navigatie-
+apps automobilisten waarschuwen bij scholen.
+Maakt ruimt e v oor v eilig v er k eer
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 10
+het Rozenplein verminderen en de doorstroming in het dorp verbeteren. Door
+slim mee te liften op de uitbreidingsplannen van Defensie benutten we een
+kans om het verkeer in Wassenaar structureel te ontlasten.
+Veilige oversteekplaatsen voor bewoners
+D66 Wassenaar wil dat bewoners in drukke straten veilig kunnen oversteken.
+Daarom pleit D66 Wassenaar voor een goede oversteekplaats bij de Hazelaan,
+halverwege  de  Jagerslaan,  zodat  inwoners  tijdens  de  spits  veilig  naar  het
+Maakt ruimt e v oor v eilig v er k eer
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 11
+Sterk en betrouwbaar openbaar vervoer
+D66 Wassenaar vindt goed openbaar vervoer essentieel voor een betere
+doorstroming en leefbaarheid in het dorp. Het haalt de druk van de wegen en
+maakt het aantrekkelijker om de auto te laten staan. D66 Wassenaar wil dat
+Wassenaar zich stevig opstelt in regionaal verband voor een goede frequentie van
+bussen en betrouwbare lijndiensten. Ook wil D66 Wassenaar laten onderzoeken of
+een nachtbus tussen Den Haag en Leiden haalbaar is, zodat mensen ook ‘s avonds
+en ‘s nachts duurzaam kunnen reizen.
+Slimme en toegankelijke fiets- en parkeerfaciliteiten
+D66 Wassenaar wil dat fietsen nog makkelijker en veiliger gestald kunnen worden.
+Daarom zet D66 Wassenaar in op meer fietsenstallingen, inclusief laadpalen voor
+elektrische fietsen, op belangrijke locaties, zoals bij OV-knooppunten zoals de Van
+Oldenbarneveltweg, dorpscentrum, Meijendel, het strand en sport- en
+recreatieterreinen en nabij horeca. Ook wil D66 Wassenaar dat de handhaving op
+kort parkeren voor auto’s op parkeerterreinen en in garages in het centrum wordt
+versterkt.fietspad aan de overkant kunnen komen. Ook wil D66 Wassenaar kijken naar
+overige locaties waar goede oversteekplaatsen gerealiseerd moeten worden.
+Z o r g e n  v o o r  w a t
+o n s  g e z o n d  h o u d tMaakt ruimt e v oor v oorui t gang
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0H o o f d s t u k  2
+12N a t u u r  e n  K l i m a a t
+Maakt ruimt e v oor gr oene ini tiatie v en
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0Een daadkr achtige en gr oene gemeent e
+13
+Een sterke rol voor Wassenaar in het beschermen van Meijendel
+Wassenaar draagt een grote verantwoordelijkheid voor het behoud van de
+bijzondere natuur in het Natura 2000‑gebied Meijendel & Berkheide, dat maar
+liefst dertig procent van het oppervlak van onze gemeente beslaat. D66
+Wassenaar wil dat de gemeente een actievere en meer betrokken rol speelt in
+het beschermen en versterken van deze unieke duinen. Als partner van
+Nationaal Park Hollandse Duinen en aandeelhouder van Dunea moet de
+gemeente inzetten op nauwere samenwerking en zal het moeten onderzoeken
+hoe ook natuurbeschermingsorganisaties nog beter kunnen worden betrokken
+bij het beheer. Zo kunnen we samenwerken aan een toekomstbestendig en
+veerkrachtig Meijendel.
+Wassenaar is omringd door natuur die ons dorp kwaliteit en ontspanning biedt.
+D66 Wassenaar gelooft dat deze waardevolle omgeving beschermd moet worden,
+zowel in omvang als in kwaliteit. Inwoners, ondernemers en maatschappelijke
+organisaties nemen al veel duurzame initiatieven. De gemeente heeft hierin een
+verbindende rol om te zorgen dat natuur, recreatie en leefomgeving elkaar
+versterken.
+Samen werken aan groen Wassenaar
+D66 Wassenaar vindt dat initiatieven van inwoners en maatschappelijke
+organisaties  voor  groen  en  biodiversiteit  actief  ondersteund  en  waar  mogelijk
+Lokaal burgerberaad Klimaat
+D66 Wassenaar wil in navolging van het burgerberaad over verkeer een
+burgerberaad over klimaat en duurzaamheid, omdat inwoners zelf scherp zien
+wat lokaal werkt en wat niet. Zo krijgt Wassenaar een gedragen koers voor
+klimaatmaatregelen en groeit tegelijk de betrokkenheid en bewustwording in
+het dorp.
+Sterke gemeentelijke regierol
+D66 Wassenaar wil dat de gemeente duidelijk leiding neemt bij duurzame
+initiatieven. De gemeente moet overzicht houden, partijen verbinden en samen met
+hen een uitvoeringsprogramma opstellen met heldere prioriteiten, zodat projecten
+sneller, consistent en doelgericht worden uitgevoerd.
+Maakt ruimt e v oor gr oene ini tiatie v en
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 14
+Wassenaar heeft de kans om natuur en recreatie hand in hand te laten gaan,
+waarbij inwoners optimaal kunnen genieten van groene en toegankelijke
+plekken. Het terrein van Duindigt biedt een unieke mogelijkheid om dit te
+realiseren.
+Duindigt als groen en recreatief gebied
+D66 Wassenaar wil dat de gemeente samenwerkt met Den Haag aan de
+plannen voor een groene bufferzone tussen het Haagse Bos en de
+Waalsdorpervlakte, waarbij ook het terrein van de renbaan Duindigt wordt
+betrokken. Duindigt kan zo worden ontwikkeld tot een aantrekkelijk natuur- en
+recreatiegebied met goede ontsluiting, dat biodiversiteit versterkt en volop
+ruimte biedt voor ontspanning en buitenactiviteiten voor alle inwoners.gefaciliteerd moeten worden. Wassenaar kent veel mensen met een groen hart;
+door hen de ruimte te geven, versterken we samen onze natuur en leefomgeving.
+Duurzaamheid en energietransitie zijn essentieel voor een toekomstbestendig
+Wassenaar. D66 Wassenaar ziet volop kansen om grondstoffen slimmer te
+gebruiken, afval te verminderen en de overstap naar schone energie te versnellen.
+Naar schoon en slim afvalbeheer
+Wassenaar kan veel slimmer omgaan met grondstoffen en D66 ziet dat dit wél
+haalbaar is. De huidige 205 kilo restafval per inwoner per jaar laat vooral zien
+hoeveel winst er nog te pakken valt richting het landelijke doel van 30 kilo. Daarom
+wil D66 dat inwoners inzicht krijgen in hun afvalproductie. D66 steunt de plannen
+voor het terugbrengen van het aantal afhaalmomenten voor het restafval en de
+invoering van de tariefdifferentiatie waarmee inwoners die weinig afval
+overhouden worden beloont.
+Wassenaar versnelt naar schone energie
+D66 Wassenaar wil een energieneutraal Wassenaar in 2040. D66 Wassenaar
+stimuleert energiebesparende maatregelen en het plaatsen van zonnepanelen op
+woningen, gemeentelijke gebouwen en grote daken. De gemeente voert hierin een
+‘Ja, tenzij’ beleid. Ook draagt D66 Wassenaar actief bij aan de realisatie van een
+solar carport bij de Dr. Mansveltkade, zodat ons dorp sneller overstapt op schone
+energie.
+Maakt ruimt e v oor ge z onde natuur
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 15Een gr oene en pr et tige omge ving
+Groen en een gezonde leefomgeving zijn onmisbaar voor een aantrekkelijk en
+leefbaar Wassenaar. D66 Wassenaar wil kinderen de ruimte geven om in het groen
+te spelen, inwoners laten genieten van natuur en recreatie dichtbij huis, en
+biodiversiteit versterken. De gemeente Wassenaar maakt, wat D66 Wassenaar
+betreft, ook werk van maatregelen om de gevolgen van het veranderende klimaat
+met fikse regenbuien en hete perioden op te vangen.
+Groen spelen en ontdekken voor kinderen
+D66 Wassenaar wil dat kinderen volop kunnen spelen in het groen. Daarom zet
+D66 Wassenaar in op meer groene speeltuinen, met mogelijke nieuwe locaties
+nabij het centrum waar ook lokale horeca van kan profiteren. Een centrale groene
+speeltuin met parkeervoorziening kan bovendien dienen als toegangspoort tot
+Meijendel, zodat gezinnen het gebied op een prettige manier kunnen bezoeken te
+voet of met leenfietsen.
+Gezonde leefomgeving
+D66 Wassenaar vindt een gezonde leefomgeving een topprioriteit. D66 Wassenaar
+zet zich in voor schoon drinkwater, minder gifgebruik en betere luchtkwaliteit. De
+gemeente moet hiervoor in de Omgevingsvisie heldere kaders stellen en zich
+aansluiten bij het Schone Lucht Akkoord.
+Groene recreatiezones rond Meijendel & Berkheide
+D66 Wassenaar wil langs de randen van het Natura 2000-gebied Meijendel &
+Berkheide groene zones ontwikkelen, waar inwoners op een prettige en
+laagdrempelige manier kunnen genieten van recreatie en buitensportactiviteiten.
+Deze zones maken het mogelijk dat mensen dichtbij huis actief zijn in de natuur,
+terwijl de druk op Meijendel zelf afneemt en de kwetsbare natuur beter wordt
+beschermd.
+Een rustiger en natuurlijker Meijendel
+D66 Wassenaar wil de bijzondere natuur van Meijendel beter beschermen. Het
+hart van het gebied raakt steeds voller door auto’s die richting de Boerderij, het
+Monkeybos en sportactiviteiten rijden. Daardoor komt de natuur onder druk te
+staan. Wij kiezen voor een rustige, schone en veilige duinomgeving waar
+wandelen en fietsen centraal staan.  D66 wil bezoekers daarom  meer  aan  de
+Maakt ruimt e v oor ge z onde natuur
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 16Natuur en biodiversiteit
+D66 Wassenaar wil meer ruimte voor natuur en biodiversiteit in ons dorp. D66
+Wassenaar zet in op het omvormen van landbouwgrond en gebieden zoals rond
+Duindigt tot nieuw natuur- en recreatiegebied. Een stadsecoloog ontwikkelt een
+plan en onderzoekt ook hoe bebouwde en bewoonde delen van Wassenaar
+vergroend kunnen worden, met aandacht voor bloemrijke bermen, halfverharde
+parkeerterreinen, nestkasten en ecologische verbindingen.
+randen van het gebied opvangen en de gratis parkeerplaatsen bij de Boerderij
+sluiten. Zo blijft het hart van Meijendel echt natuurgebied. Vanaf het
+Kievietsduin kan Dunea, net als in het verleden, schoon elektrisch vervoer en
+deelfietsen aanbieden voor wie minder goed ter been is. Op deze manier blijft
+het hart van Meijendel voor iedereen toegankelijk, terwijl de natuur de ruimte
+krijgt die zij nodig heeft.
+Z o r g e n  v o o r
+e n  m e t  e l k a a rMaakt ruimt e v oor v oorui t gang
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0H o o f d s t u k  3
+17G e z o n d h e i d  e n  W e l z i j n
+Maakt ruimt e v oor hulp aan ander en
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0Een dor p w aar ieder een geholpen w or d t
+18D66 wil dat iedere inwoner zo dichtbij mogelijk terecht kan voor hulp, advies of
+gewoon een luisterend oor. Dat begint met kijken naar wat er al is. Zorgzame
+buurten versterken de sociale samenhang, vergroten de veiligheid en voorkomen
+dat mensen er alleen voor staan. D66 Wassenaar wil buurten ontwerpen en
+stimuleren waar mensen elkaar makkelijk leren kennen, elkaar helpen en waar
+ondersteuning dichtbij en overzichtelijk is georganiseerd. Daarom zetten wij in op
+sterke structuren in de wijk, moderne hulpmiddelen en een sociaal netwerk dat
+iedereen bereikt.
+Voorzorgcirkels en verbonden buurtinitiatieven
+D66 Wassenaar wil het opzetten van voorzorgcirkels stimuleren en ondersteunen.
+Dit zijn kleine netwerken van inwoners die elkaar ondersteunen met allerlei zaken,
+van het ophangen van een schilderij tot meegaan naar een doktersbezoek.
+Daarnaast wil D66 Wassenaar bestaande buurtinitiatieven in kaart brengen,
+zichtbaar maken en actief met elkaar verbinden. Zo ontstaat een overzichtelijk
+netwerk waarin inwoners elkaar sneller vinden en waarin de kracht van de wijk
+optimaal wordt benut.
+Een laagdrempelig aanspreekpunt in elke buurt
+D66 Wassenaar stimuleert initiatieven in de buurten die bijdragen aan het
+vergroten van de onderlinge steun en het welzijn van inwoners. Ook wil D66
+Wassenaar dat er in elke wijk een laagdrempelig aanspreekpunt komt waar
+inwoners terecht kunnen voor vragen, ondersteuning of doorverwijzing. Zo wordt
+de weg naar hulp korter en duidelijker voor iedereen.
+Doorontwikkeling Sociaal Team Wassenaar
+D66 Wassenaar wil dat het Sociaal Team Wassenaar zich kan doorontwikkelen
+naar Stevige Sociale Teams. Met vaste contactpersonen in de buurten vormt die
+zichtbaar en aanwezig zijn én direct kunnen handelen. De gemeente sluit aan op
+initiatieven en ideeën van mensen zelf. Zo wordt zorg en ondersteuning iets van
+mensen onderling, en daarbovenop persoonlijker, sneller en dichter bij huis
+georganiseerd.
+Een sterke buurt heeft baat bij een plek waar mensen elkaar kunnen ontmoeten.
+Een huis voor de  wijk  waar  activiteiten  plaatsvinden,  waar  ruimte  is  voor  eigen
+Maakt ruimt e v oor betr okk en inw oners
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 19initiatieven, zorg en ondersteuning dichtbij beschikbaar zijn en waar bewoners zich
+welkom en verbonden voelen. D66 Wassenaar wil deze ontmoetingsplekken
+mogelijk maken waar daar behoefte aan is, omdat zij de sociale samenhang
+versterken en zorgen voor een levendige buurt waarin jong en oud elkaar vanzelf
+weten te vinden.
+Slim gebruik van bestaande gebouwen
+D66 Wassenaar wil dat bestaande gebouwen zoals scholen, sportclubs en andere
+voorzieningen worden benut als tijdelijke of permanente buurtcentra. Hierdoor
+kunnen ontmoetingsplekken snel worden gerealiseerd zonder onnodig te
+investeren in nieuwe gebouwen.
+Buurtcentra in samenwerking met de inwoners
+D66 Wassenaar wil dat de invulling van wijkcentra tot stand komt in nauwe
+samenwerking met lokale partners en vrijwilligers. Door samen te bepalen welke
+activiteiten en voorzieningen nodig zijn, ontstaat een aanbod dat past bij de
+wensen en behoeften van de mensen in de wijk.
+Een buurt die betrokken is
+Een buurt waar bewoners invloed hebben op hun leefomgeving wordt sterker,
+creatiever en hechter. Buurtgericht werken zorgt ervoor dat goede ideeën sneller
+worden opgepakt, oplossingen beter aansluiten bij wat er speelt en het vertrouwen
+tussen inwoners en gemeente groeit. D66 Wassenaar vindt dat de gemeente
+samen mét inwoners moet werken, in plaats van over hen te beslissen.
+Buurtteams
+D66 Wassenaar stimuleert dat er buurtteams zijn waarin bewoners, ondernemers
+en professionals samenwerken aan de vraagstukken in hun omgeving. Zo ontstaat
+er een vaste plek waar kennis, betrokkenheid en verantwoordelijkheid
+samenkomen. Iedere buurt heeft een vaste contactpersoon op het
+gemeentekantoor en een wijkwethouder.
+Buurtgesprekken en digitale ideeënkaart
+D66 Wassenaar wil dat de gemeente regelmatig gaat luisteren in de buurt en een
+digitale ideeënkaart beschikbaar maakt. Daarmee kan iedereen laagdrempelig
+meedenken, ideeën inbrengen en initiatief nemen voor verbeteringen in de wijk.
+Maakt ruimt e v oor een kansr ijk e t oek oms t
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 20Snelle terugkoppeling en uitvoering
+D66 Wassenaar wil dat goede ideeën uit de wijk snel worden teruggekoppeld en
+ook écht worden uitgevoerd. Zo worden de initiatieven van de inwoners leidend.
+Samen maken we Wassenaar sterker is geen loze belofte, maar dagelijkse praktijk.
+Een kansr ijk dor p v oor ieder een
+Een sterke verbinding tussen inwoners en het gemeentebestuur begint in de wijk
+zelf. Een wijkwethouder die zichtbaar aanwezig is en de buurt goed kent, zorgt
+ervoor dat ideeën sneller worden opgepakt, problemen eerder worden gezien en
+inwoners merken dat hun stem telt. Zo versterken we vertrouwen en maken we de
+gemeente echt bereikbaar.
+Zorg waar nodig
+D66 Wassenaar wil werk maken van voldoende ondersteuning van mantelzorgers
+door het stimuleren van inclusieve wijkcentra, waar ook ruimte is voor dagopvang.
+Ook willen we een passend aanbod voor respijtzorg bevorderen. Ontlasting van
+mantelzorgers vinden wij van groot belang. Alleen dan kunnen die hun belangrijke
+taak goed blijven volhouden.
+Jongeren zijn onze toekomst
+Jongeren zijn de toekomst van onze gemeente. D66 zet zich ervoor in dat zij de
+ruimte krijgen om te groeien, hun talenten te ontwikkelen en mee te beslissen over
+hun leefomgeving. Uit gesprekken met jongeren blijkt dat zij behoefte hebben aan
+toegankelijke en betaalbare woningen, goede onderwijsvoorzieningen, een
+bruisend cultureel aanbod en veilige plekken om samen te komen.
+Toegankelijke sport, cultuur en gelijke kansen voor jongeren
+D66 Wassenaar wil dat sport- en cultuurclubs betaalbaar en bereikbaar blijven voor
+iedereen. We ondersteunen initiatieven zoals het jongerenrestaurant en stimuleren
+samenwerking tussen gemeente en lokale organisaties, bijvoorbeeld via
+workshops en gezamenlijke activiteiten. Daarnaast zetten we ons in voor het
+voortzetten van het OKO‑programma, zodat alle kinderen in Wassenaar kunnen
+opgroeien in een kansrijke en gezonde omgeving.
+S t e r k e  b e d r i j v e n
+d i e  v e r b i n d e n
+Maakt ruimt e v oor v oorui t gang
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0H o o f d s t u k  4
+21E c o n o m i e  e n  W e r k
+Maakt ruimt e v oor lokaal onder nemen
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0P r et tig en lokaal onder nemen
+22Wassenaar leeft dankzij haar ondernemingen, die werkgelegenheid, levendigheid
+en verbinding brengen. D66 Wassenaar vindt dat deze ondernemers zich gesteund
+moeten voelen en dat inwoners vaker kiezen voor lokaal. De gemeente heeft een
+actieve rol als partner en facilitator, zodat het ondernemerschap in Wassenaar kan
+floreren.
+Lokaal besteden versterkt Wassenaar
+D66 Wassenaar wil de lokale economie stimuleren met een gemeentelijk
+Lokaal Kooptegoed. Inwoners ontvangen jaarlijks een digitaal of fysiek tegoed
+dat zij kunnen besteden bij deelnemende lokale ondernemers. De gemeente
+betaalt de korting, ondernemers krijgen de volledige verkoopprijs. Zo
+stimuleren we inwoners om lokaal te kopen en versterken we onze
+ondernemers.
+Betere gemeentelijke dienstverlening voor ondernemers
+D66 Wassenaar vindt dat ondernemers moeten kunnen rekenen op snelle
+vergunningprocedures, duidelijke kaders en lage regeldruk. De gemeente begeleidt
+actief bij complexe aanvragen, met één vast aanspreekpunt per ondernemer.
+Digitale processen worden verbeterd zodat aanvragen overzichtelijker, eenvoudiger
+en sneller verlopen.
+Levendige winkelgebieden voor iedereen
+D66 Wassenaar pakt leegstand aan met flexibele huurcontracten en ondersteuning
+voor pop-up winkels. We stimuleren een divers winkelaanbod dat past bij de
+wensen van inwoners en bezoekers. Investeringen in openbare ruimte, groen en
+lokale evenementen maken winkelstraten aantrekkelijker en toekomstbestendig.
+Voor een duurzame en circulaire economie
+D66 Wassenaar stimuleert duurzaam en circulair ondernemen, zodat economie en
+groen hand in hand gaan. De gemeente ondersteunt bedrijven via subsidies, advies
+en het Circulaire Loket, en maakt circulariteit de standaard bij gemeentelijke
+inkoop en aanbestedingen. Bij een eventuele verplaatsing van de milieustraat wil
+D66 deze omvormen tot een Circulair Ambachtscentrum, waar kringloopwinkels,
+repaircafés en andere initiatieven samenwerken om afval te verminderen en
+materialen langer te gebruiken.
+Maakt ruimt e v oor lokaal onder nemen
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 23Consulent Kleine Zelfstandigen biedt directe ondersteuning
+D66 Wassenaar wil dat de gemeente een consulent aanstelt die kleine
+ondernemers helpt bij praktische vragen, vergunningen, verduurzaming en
+bedrijfsontwikkeling. Zo krijgen zelfstandigen laagdrempelige en professionele
+ondersteuning op maat.
+D66 Wassenaar gelooft in een economie die dichtbij de mensen staat:
+ondernemend, duurzaam en inclusief. We zien werkgelegenheid en lokaal
+ondernemerschap als motoren van leefbaarheid, verbinding en welvaart in ons
+dorp.
+Werkgelegenheid en een inclusieve arbeidsmarkt voor iedereen
+D66 Wassenaar wil samen met lokale ondernemers, scholen en maatschappelijke
+organisaties meer kansen creëren voor werk en persoonlijke ontwikkeling. We
+moedigen als gemeente stages en leerwerkplekken bij onze ondernemers aan
+zodat jongeren en zij-instromers makkelijker de arbeidsmarkt bereiken. Daarnaast
+ondersteunt de gemeente actief mensen met een afstand tot de arbeidsmarkt bij
+het vinden van passend werk of dagbesteding.
+Ruimte voor toekomstbestendige bedrijvigheid
+D66 Wassenaar wil werklocaties slimmer en duurzamer benutten. We onderzoeken
+hoe bedrijventerreinen beter kunnen worden ingericht, hoe verouderd vastgoed kan
+worden verduurzaamd en hoe bedrijven die niet goed passen op een
+bedrijventerrein kunnen verhuizen naar een geschikte en betaalbare locatie.
+Toekomst van de Van Hallstraat
+D66 ziet de Van Hallstraat als een kansrijke plek voor vernieuwing. Ons
+voorstel is om te onderzoeken hoe verouderde bedrijfsruimten kunnen worden
+verplaatst, zodat de straat kan worden herontwikkeld met moderne
+bedrijfsunits en passende woningen erboven.
+D66 Wassenaar ziet toerisme en vrijwilligerswerk als belangrijke versterkers van
+de leefbaarheid en identiteit van ons dorp. Toerisme moet bijdragen aan de
+schoonheid, rust en cultuur van Wassenaar, terwijl vrijwilligers de spil vormen van
+sport, cultuur, zorg en lokale initiatieven.
+Kwaliteitstoerisme dat past bij Wassenaar
+D66 Wassenaar wil toerisme dat bijdraagt  aan  rust,  natuur,  cultuur  en  de  lokale
+economie, zonder massatoerisme. Bezoekers worden uitgenodigd te genieten van
+Maakt ruimt e v oor lokaal onder nemen
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 2 4onze duinen, dorpskern, horeca en evenementen. De gemeente investeert in goede
+wandel- en fietsroutes en een sterke verbinding tussen natuur en centrum, zodat
+de economie profiteert terwijl de leefbaarheid behouden blijft.
+Vrijwilligerswerk verdient waardering
+D66 Wassenaar erkent dat vrijwilligers onmisbaar zijn voor sport, cultuur, zorg en
+buurtinitiatieven. Hun inzet verdient erkenning en waardering. Daarom wil D66 dat
+de gemeente vrijwilligers jaarlijks in het zonnetje zet, bijvoorbeeld met een
+vrijwilligersprijs of een persoonlijk bedankje. D66 Wassenaar wil hierin ook lokale
+partners betrekken.
+E e n  k a n s r i j k e  e n
+v e i l i g e  o m g e v i n gMaakt ruimt e v oor v oorui t gang
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0H o o f d s t u k  5
+25O n d e r w i j s  e n  V e i l i g h e i d
+Maakt ruimt e v oor onder wijs
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0Kansen v oor ieder e inw oner
+26In een vooruitstrevend Wassenaar staat onderwijs centraal. D66 Wassenaar wil dat
+ieder kind toegang heeft tot sterk en toekomstbestendig onderwijs, met de
+gemeente als actieve partner en verbinder. We investeren in moderne en gezonde
+schoolgebouwen, bevorderen kansengelijkheid en zetten ons in om het
+lerarentekort terug te dringen. Door de samenwerking tussen gemeente, scholen
+en KansLokaal te versterken, werken we aan een gezamenlijke visie richting 2030
+waarin ieder kind de ruimte krijgt om zich optimaal te ontwikkelen.
+Een rijke schooldag voor ieder kind
+D66 wil dat alle kinderen toegang hebben tot sport, cultuur, natuur- en
+techniekactiviteiten na school. Scholen werken samen met verenigingen en
+instellingen via subsidies en de Wassenaarpas; zo blijft deelname voor iedereen
+mogelijk.
+Snelle realisatie van het nieuwe IKC
+D66 Wassenaar wil dat de bouw en verhuizing van het nieuwe Integraal
+Kindcentrum voor de St. Jan Baptist en St. Jozef scholen zo snel mogelijk van
+start gaat. Zo hoeven leerlingen en leraren niet langer dan strikt noodzakelijk te
+wachten op een modern en passend schoolgebouw.
+Taalondersteuning voor een stevige start
+D66 Wassenaar wil dat nieuwkomers vanaf jonge leeftijd toegang krijgen tot goed
+taalonderwijs. We zorgen voor structurele middelen en expertise, ook voor
+kleuters, zodat ieder kind de taalvaardigheid opbouwt die nodig is om met
+vertrouwen te starten op de basisschool en volwaardig mee te doen in de klas.
+Sterke en toekomstbestendige basisscholen
+D66 Wassenaar investeert in gezonde, duurzame en toegankelijke
+schoolgebouwen. Door het Integraal Huisvestingsplan voortvarend uit te voeren
+zorgen we voor moderne scholen die klaar zijn voor de toekomst, bij voorkeur in
+multifunctionele gebouwen waar onderwijs, opvang, zorg en de wijk samenkomen.
+Een rijke en betrokken leeromgeving
+De gemeente ondersteunt scholen bij burgerschapsonderwijs en organiseert
+activiteiten zoals jeugddebatten, gastlessen en schaduwverkiezingen. We verbind-
+Maakt ruimt e v oor v eiligheid
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 27en scholen actief met sport, cultuur en lokale bedrijven om stages en
+praktijkervaring mogelijk te maken.
+Zwemvaardigheid voor ieder kind
+D66 Wassenaar wil de vangnetregeling voor zwemlessen behouden, zodat ieder
+kind aan het einde van de basisschool ten minste één zwemdiploma kan behalen.
+Zo zorgen we dat alle kinderen veilig kunnen zwemmen in het water in en rondom
+Wassenaar.
+Zonder z or gen o v er s tr aat
+D66 Wassenaar zet zich in voor een dorp waar iedereen zich veilig voelt. Thuis, op
+school en op straat. Dat doen we door schadelijke normen aan te pakken,
+professionals beter toe te rusten om signalen te herkennen en gericht te investeren
+in de plekken en situaties waar onveiligheid ontstaat.
+Veiligheid en weerbaarheid vergroten op school
+D66 Wassenaar wil investeren in gemeentelijke lespakketten (of een geschikte
+partner vinden) die scholen ondersteunen bij het bespreekbaar maken van
+gezonde relaties, consent, online veiligheid en het herkennen van signalen van
+grensoverschrijdend gedrag. Door onderwijsprofessionals te helpen met goede
+materialen en training, versterken we preventie en dragen we bij aan een veiligere,
+gelijkwaardige samenleving voor iedereen.
+Krachtige aanpak van geweld tegen vrouwen
+D66 Wassenaar wil een stevige en herkenbare aanpak van gendergerelateerd
+geweld, femicide en eergerelateerd geweld. Wijkagenten, huisartsen, jeugdzorg en
+andere professionals worden extra getraind om signalen vroeg te herkennen en
+altijd serieus te nemen. Slachtoffers moeten 24/7 toegang hebben tot anonieme
+hulp en passende opvang binnen de regio. De gemeente werkt nauw samen met
+politie, Veilig Thuis en omliggende gemeenten, zodat waarschuwingstekenen
+eerder worden herkend.
+Een lokaal actieplan voor veilige straten
+D66 Wassenaar wil een lokaal actieplan voor veiligheid op straat. We onderzoeken
+waar mensen zich onveilig voelen en pakken deze plekken gericht aan, met
+maatregelen die de sociale veiligheid en leefbaarheid in heel Wassenaar vergroten.
+Maakt ruimt e v oor v eiligheid
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 28Geweld achter de voordeur is een ingrijpend en vaak verborgen probleem dat
+levens ontwricht. D66 Wassenaar vindt dat de gemeente een actieve rol moet
+spelen in het doorbreken van deze stilte. Daarom zetten we in op een
+samenhangende aanpak waarin vroeg signaleren, toegankelijke hulp en sterke
+preventie centraal staan, zodat inwoners sneller worden beschermd en
+ondersteund. De gemeente Den Haag spreekt sinds kort expliciet over ‘geweld
+achter de voordeur’ in plaats van huiselijk geweld. D66 Wassenaar neemt dit
+voorbeeld graag over, omdat echte oplossingen beginnen met het helder
+benoemen van het probleem.
+Eerder signaleren door betere voorlichting
+De gemeente investeert in gerichte voorlichting voor scholen, zorgprofessionals,
+buurtteams en wijkagenten, zodat signalen van geweld achter de voordeur sneller
+worden herkend en opgepakt.
+Aanpak van dierenmishandeling als alarmsignaal
+De gemeente werkt samen met dierenartsen, politie en hulporganisaties om
+signalen van dierenmishandeling serieus te nemen. Ook omdat dit vaak een
+belangrijke waarschuwing is voor problemen binnen het huishouden.
+Maakt ruimt e v oor v oorui t gang
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0
+B e t r o u w b a a r
+e n  r o b u u s tH o o f d s t u k  6
+29B e s t u u r  e n  f i n a n c i ë n
+Maakt ruimt e v oor goed bes tuur
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0Lokaal bes tuur met har t v oor inw oners
+Wassenaar is een gemeente met betrokken en mondige inwoners. Een groot goed
+waar de gemeente zich voor moet blijven inzetten. Er zijn ook uitdagingen. Of het
+nu gaat om contact met inwoners of het behouden van de goede financiële positie
+als het Rijk kortingen doorvoert. Wassenaar is een dorp dat deze uitdagingen
+aankan. D66 Wassenaar komt met een ambitieuze agenda om onze gemeente nog
+daadkrachtiger en betrouwbaarder te maken.
+Inwoner centraal bij besluitvorming
+D66 Wassenaar zet inwoners centraal in alle gemeentelijke besluitvorming. De
+gemeente investeert in sterke burgerinitiatieven en actieve participatie, onder meer
+door burgerberaden. D66 wil jongeren structureel betrekken bij beleid: in plaats van
+een pilot wordt een vaste jongerenraad opgericht die gevraagd en ongevraagd
+advies geeft over onderwerpen die voor jongeren belangrijk zijn. Daarnaast ziet
+D66 Wassenaar een kinderburgemeester als waardevolle toevoeging om de
+jongste inwoners te betrekken.
+Raadsbreed akkoord voor constructief bestuur
+D66 Wassenaar wil op zoek naar overeenkomsten tussen partijen en inzetten op
+samenwerking op hoofdlijnen. Door overeenstemming voor een raadsbreed
+coalitieakkoord te zoeken krijgt de raad meer regie, ontstaat er ruimte voor
+inhoudelijk debat over deelonderwerpen en wordt de traditionele coalitie- en
+oppositierol doorbroken.
+Onze gemeente kent een geschiedenis van fusies en veranderingen in de
+ambtelijke organisatie. D66 Wassenaar wil bouwen op wat we nu hebben, en
+gemeentelijke processen gladstrijken om zo de beste service aan te bieden.
+Een raad die duidelijk en toegankelijk werkt
+D66 Wassenaar wil dat de gemeenteraad beter en begrijpelijker werkt voor alle
+inwoners. Daarom zetten we in op vergaderingen in begrijpelijke taal en op
+procedures die helder zijn en goed worden nageleefd.
+30
+Investeren in een modern reglement van orde
+D66 Wassenaar wil dat de nieuwe gemeenteraad aan de slag gaat met een
+eigentijds reglement van orde dat past bij de manier waarop we nu werken.
+Maakt ruimt e v oor goed bes tuur
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0Toegankelijke digitale gemeentelijke informatie
+D66 Wassenaar wil dat alle inwoners makkelijk bij gemeentelijke informatie, het
+archief en digitale diensten kunnen. De website moet duidelijk en toegankelijk zijn
+en wordt samen met inwoners getest, zodat iedereen begrijpt waar hij of zij terecht
+kan. Ook gebruikt de gemeente lokale pers om zo ook inwoners te bereiken die
+geen gebruik maken van online platforms.
+Een gemeente die betrouwbaar handelt
+D66 Wassenaar wil een betrouwbare overheid. Dat begint bij duidelijk en
+persoonlijk contact. Inwoners moeten altijd een ambtenaar kunnen spreken die
+meedenkt en niet alleen doorverwijst, waar nodig ook buiten kantoortijden. Wie
+een foutje maakt, verliest niet gelijk het vertrouwen van de gemeente en krijgt eerst
+de kans om te corrigeren. Zo bouwen we stap voor stap aan een toegankelijke en
+betrouwbare gemeente.
+Begrijpelijke communicatie voor iedereen
+D66 Wassenaar wil dat iedere inwoner precies weet waar hij of zij aan toe is.
+Daarom kiest de gemeente voor duidelijke en eenvoudige taal op B1-niveau in het
+Nederlands en waar nodig Engels in de communicatie. Zo blijft informatie voor
+iedereen toegankelijk en kunnen inwoners goed meedoen in onze samenleving.
+Verantwoord omgaan met geld
+Gemeenten zijn voor het merendeel van hun inkomsten afhankelijk van uitkeringen
+vanuit de rijksoverheid. Dat brengt onzekerheden met zich mee. Die kunnen
+jaarlijks fluctueren en kunnen niet altijd via eigeninkomsten worden opgevangen.
+Een sluitende meerjarenbegroting is immers het streven. Daarvoor zullen
+verantwoorde keuzen moeten worden gemaakt. Waarbij een afweging tussen
+bezuinigen en (extra) belastingen onvermijdelijk is. Voor gewenste en
+noodzakelijke investeringen mag de gemeente lenen. Investeringen kunnen over
+een lange periode worden afgeschreven en gefinancierd. De lasten van externe
+financiering blijven daardoor overzichtelijk en worden in de begroting verwerkt.
+31
+Heldere en strakke vergaderprocedures helpen om efficiënter te vergaderen,
+discussies overzichtelijk te houden en de aandacht te richten op de inhoud. Zo
+wordt het voor inwoners makkelijker om de raad te volgen en kunnen we
+samenwerken aan een transparante en toekomstbestendige bestuurscultuur.
+Maakt ruimt e v oor s t er k e f inanciën
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0Stresstesten voor de begroting
+D66 Wassenaar vindt een gebalanceerde en eerlijke begroting belangrijk. Daarom
+kiezen we voor een kritische 'stresstest' op iedere gemeentelijke begroting om zo
+de houdbaarheid en kracht van onze begroting kritisch tegen het licht aan te
+houden. Zo houden we onze financiën op orde.
+32
+Veel Wassenaarse verenigingen draaien op vrijwilligers die hun tijd liever
+besteden aan activiteiten dan aan papierwerk. Toch lopen zij vaak vast in
+ingewikkelde regels en procedures. Dat is zonde, want sterke verenigingen
+vormen het hart van ons dorp.
+Regeldruk voor verenigingen en stichting
+Verschillende verenigingen in Wassenaar ervaren geregeld regeldruk vanwege
+aanvragen voor subsidies, verbouwingen of andere vergunningen. D66
+Wassenaar wil gemeentelijke regelingen en procedures tegen het licht houden
+om te kijken of deze vereenvoudigd kunnen worden. Daarnaast wil D66
+Wassenaar een loket vanuit de gemeente om deze organisaties ondersteuning
+te bieden bij het indienen van hun verzoek.
+Start met buurtbudgetten
+D66 Wassenaar wil dat inwoners direct meebeslissen over hun leefomgeving.
+Daarom stellen we 0,5% van de gemeentebegroting beschikbaar voor
+buurtbudgetten. Dat betekent ongeveer € 23.000 per buurt afhankelijk van het
+aantal huishoudens en oppervlakte, waarmee inwoners samen kunnen
+bepalen hoe hun buurt groener, socialer en beter onderhouden wordt.
+Maakt ruimt e v oor v oorui t gang
+V e r k i e z i n g s p r o g r a m m a  2 0 2 6  -  2 0 3 0 33V er ant w oor ding
+Aan dit verkiezingsprogramma werkten mee (op persoonlijke titel):
+De Verkiezingsprogrammacommissie
+Bink Ido Heemskerk (voorzitter)
+Lieke van Schouwenburg
+Marianne Wuite
+Paut Struik
+René Salemink
+Dit programma is tot stand gekomen onder verantwoordelijkheid van het bestuur
+van D66 Wassenaar. Bij het opstellen ervan hebben we dankbaar gebruikgemaakt
+van de input van onze leden, de thema-afdelingen en de landelijke fractie. Hun
+bijdrage heeft ons geïnspireerd en richting gegeven. Daarnaast hebben vele
+organisaties en instellingen ons voorzien van waardevolle inzichten. Ook de vele
+e‑mails die we ontvingen hebben ons geholpen om weloverwogen keuzes te
+maken.
+Bij de voorbereiding van dit verkiezingsprogramma hebben we gebruikgemaakt
+van AI‑toepassingen voor redactionele suggesties en om snel overzicht te krijgen
+in de belangrijkste punten uit onze conceptteksten. Dit hebben we zo veel mogelijk
+geanonimiseerd gedaan, waarbij de data niet zijn gedeeld om modellen te trainen.
+Tenslotte willen we alle meelezers en leden van de redactie hartelijk bedanken
+voor hun inzet tijdens het voortraject, voor het kritisch meelezen van de concepten
+en voor hun scherpte in de verschillende redactierondes. Zonder hen had dit
+programma er niet kunnen komen.

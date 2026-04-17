@@ -1,60 +1,45 @@
 # Status — BeleidsBibliotheek Wassenaar
 
-**Laatste sessie:** 2026-04-15 (dinsdag, nacht)
+**Laatste sessie:** 2026-04-18 (zaterdag)
 
 ## Waar we mee bezig waren
 
-Operationele infrastructuur opzetten: dashboard, backups, scheduling, integriteitscheck.
+P0-backlog afwerken; mobiel menu (B-002) was nog open.
 
-## Wat er gedaan is (deze sessie + vorige)
+## Wat er gedaan is (deze sessie)
 
-### Beheer-dashboard (lokaal, `python3 dashboard.py`)
-- `dashboard.py` — lokale server op poort 8800, serveert dashboard + API
-- `docs/werkwijze-dashboard.html` — werkend dashboard met:
-  - Drie actieknoppen: Backup, Deploy ACC, Promoveer PROD
-  - Ingebouwde terminal met live streaming (SSE)
-  - Productie-beveiliging: "PRODUCTIE" typen vereist
-  - Status: versie, lokale wijzigingen, deploy-log, backups, backlog
-  - Dagelijkse-backup status + log-weergave
+### Reactie H5 OD-samenvatting (e-mail 18 apr 2026)
+- Bron: `_reacties/BeleidsBibliotheek — Document ontbreekt (H5 Sport, cultuur en recreatie) — 2026-04-18 01_07.eml`
+- `wassenaar/app.js`: OD-samenvatting BBV-hoofdstuk 5 uitgebreid (Sportvisie 2025, Fit in Wassenaar, Sportakkoord II, GALA, sport- en beweegcoaches, verenigingen, jeugdledensubsidie).
+- `wassenaar/werklijst-mutaties.html`: mutatie **M2026-008** toegevoegd, status verwerkt + gepubliceerde reactie.
+- `wassenaar/index.html`: `app.js` cache-query `?v=20260418a`.
 
-### Backup-systeem
-- `backup-prod.sh` — download productie-site van Argeweb via FTP naar `backups/prod_DATUM/`
-- `backup-daily.py` — backup + integriteitscheck (8 kernbestanden, groottes, checksums, vergelijking) + e-mail
-- `.env.prod` — FTP-credentials Argeweb (INGEVULD, werkt)
-- `.env.mail` — SMTP-credentials iCloud (INGEVULD, werkt)
-- LaunchAgent `~/Library/LaunchAgents/nl.beleidsbibliotheek.backup.plist` — draait dagelijks 07:00
-- Backup getest en werkt: 39 bestanden, 6.0 MB, integriteitscheck OK
-- Bewaart laatste 10 backups, ruimt oudere op
+### Vergelijker dashboard — drie omgevingen in één venster
+- `docs/vergelijk.html`: standaard **drie kolommen** (lokaal · ACC · PROD); dropdown voor alleen 2 kolommen (pairwise). Scroll-sync stuurt naar alle **zichtbare** iframes. Knop “Herlaad” alleen zichtbare panelen.
+- **Lokaal zonder gedoe:** `dashboard.py` serveert `wassenaar/` onder **`http://127.0.0.1:8800/local-site/`**; de vergelijker vult dat automatisch in (oude opgeslagen `http://127.0.0.1:8765` zonder pad wordt gemigreerd). Open de vergelijker via **http://127.0.0.1:8800/vergelijk.html**, niet als `file://`.
 
-### Werkwijze-documentatie
-- `docs/werkwijze-visueel.html` — visueel overzicht voor Joyce en Ricardo (printbaar)
-- `WERKWIJZE.md` — instructies voor alle drie de rollen
-- `docs/cursor-rules-uitleg.md` — uitleg Cursor rules voor Dick
+### B-002 — Mobiel menu Overdrachtsdossier
+- **Oorzaak:** De hamburger-knop gebruikte `position: absolute; top: 50%; transform: translateY(-50%)`. Bij een geopend menu wordt de groene nav-balk veel hoger; het icoon bleef dan visueel in het **midden** van de balk en bedekte het **tweede** navigatie-item (Overdrachtsdossier).
+- **Fix:** In `wassenaar/styles.css` (media `max-width: 768px`): bij `.site-nav-bar.nav-open .nav-hamburger` de knop naar `top: 0.5rem` en `transform: none` zodat die bovenin blijft en beide links zichtbaar en klikbaar zijn.
+- `BACKLOG.md`: B-002 op `done`, Mermaid P0 bijgewerkt, changelogregel toegevoegd.
 
-### Cursor rules
-- Home rule (`~/.cursor/rules/dick-projecten.mdc`) — project-router
-- Project rule `chat-continuiteit.mdc` — sessie-continuïteit via STATUS.md
-- Alle project rules up-to-date
-
-### Eerdere sessies
-- Release-workflow: `deploy.sh` (lokaal→ACC), `promote-to-prod.sh` (ACC→PROD via FTP)
-- BACKLOG.md bijgewerkt met B-002, B-003, B-030
+### Eerdere sessies (samenvatting)
+- Dashboard, backups, LaunchAgent, `WERKWIJZE.md`, deploy-workflow; zie eerdere STATUS-regels.
 
 ## Volgende stap
 
-1. **Subdomein `accept.beleidsbibliotheekwassenaar.nl` aanmaken** bij Argeweb — beide omgevingen op één server, simpeler
-2. **Omgevingen in sync brengen** — lokaal heeft wijzigingen t.o.v. 8.0.6 die nog niet op ACC/PROD staan
-3. **Eerste inhoudelijke wijziging** gecontroleerd deployen (één kleine, niet alles tegelijk)
+1. **Deploy** — wijziging naar ACC testen (smalle viewport / echte telefoon): hamburger open → beide links + zoek zichtbaar.
+2. **B-003** — Reacties softlaunch verwerken (`_reacties/`, `app.js` / `data.js`).
+3. **Subdomein / sync** — `accept.beleidsbibliotheekwassenaar.nl` bij Argeweb; lokaal vs ACC/PROD sync (zie vorige STATUS).
 
 ## Blokkades
 
-- Lokaal, ACC en PROD zijn uit sync (wijzigingen sinds softlaunch 8 april)
-- Subdomein bij Argeweb nog niet aangemaakt
+- Geen nieuwe; subdomein Argeweb en omgeving-sync blijven planning/operatie.
 
 ## Openstaande backlog (top 3)
 
-1. **B-002** — Mobiel menu: link overdrachtsdossier ontbreekt (P0, klein)
-2. **B-003** — Reacties softlaunch verwerken, 8 meldingen (P0, medium)
-3. **B-001** — Excel controller + feedback Ronald Zoutendijk (P0, groot)
+1. **B-003** — Reacties softlaunch verwerken, 8 meldingen (P0, medium)
+2. **B-001** — Excel controller + feedback Ronald Zoutendijk (P0, groot)
+3. **B-010** — Bezoekteller productie (P1)
 
 Zie `BACKLOG.md` voor de volledige lijst.

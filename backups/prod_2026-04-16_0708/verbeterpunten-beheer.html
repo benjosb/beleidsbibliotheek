@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verbeterpunten Beheer · BeleidsWijzer</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#55601c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="application-name" content="BeleidsBibl.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="pwa-icons/icon-192.png">
+  <script src="pwa-register.js" defer data-pwa-register></script>
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --card: #fff;
+      --border: #dee2e6;
+      --text: #212529;
+      --muted: #6c757d;
+      --success: #198754;
+      --success-bg: #d1e7dd;
+      --warning: #ffc107;
+      --danger: #dc3545;
+      --primary: #0d6efd;
+      --shadow: 0 1px 3px rgba(0,0,0,.08);
+    }
+    * { box-sizing: border-box; }
+    .verbeterpunten-inhoud { font-family: system-ui, -apple-system, sans-serif; padding: 1.5rem 0; background: var(--bg); color: var(--text); line-height: 1.5; }
+    h1 { font-size: 1.5rem; margin: 0 0 0.5rem; }
+    .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .btn { padding: 0.5rem 1rem; border: 1px solid var(--border); background: var(--card); border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+    .btn:hover { background: #e9ecef; }
+    .btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .btn-primary:hover { background: #0b5ed7; }
+    .btn-success { background: var(--success); color: #fff; border-color: var(--success); }
+    .card { background: var(--card); border-radius: 8px; box-shadow: var(--shadow); padding: 1rem 1.25rem; margin-bottom: 1rem; }
+    .task-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .task-table th { text-align: left; padding: 0.5rem 0.75rem; background: #e9ecef; border-bottom: 2px solid var(--border); font-weight: 600; white-space: nowrap; }
+    .task-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .task-table tr:hover { background: #f8f9fa; }
+    .task-table .col-status { width: 1%; white-space: nowrap; }
+    .task-table .col-id { width: 2em; color: var(--muted); }
+    .task-table .col-thema { width: 12%; min-width: 100px; }
+    .task-table .col-subtegel { width: 10%; min-width: 90px; }
+    .task-table .col-beschrijving { min-width: 180px; }
+    .task-table .col-doc { width: 18%; min-width: 140px; font-size: 0.85rem; color: var(--success); }
+    .task-done td { background: var(--success-bg); }
+    .task-documentatie a { color: var(--primary); }
+    .status-btn { padding: 0.25rem 0.4rem; min-width: 2rem; font-size: 0.85rem; }
+    .status-btn.done { background: var(--success-bg); color: var(--success); border-color: var(--success); }
+    .status-btn.open { background: #fff3cd; color: #856404; border-color: var(--warning); }
+    .filter-bar { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .filter-bar label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+    .filter-bar select { padding: 0.35rem 0.5rem; border-radius: 4px; border: 1px solid var(--border); }
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 100; align-items: center; justify-content: center; padding: 1rem; }
+    .modal.open { display: flex; }
+    .modal-content { background: var(--card); border-radius: 8px; max-width: 480px; width: 100%; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,.15); }
+    .modal h2 { margin: 0 0 1rem; font-size: 1.1rem; }
+    .modal label { display: block; margin-top: 0.75rem; font-size: 0.9rem; font-weight: 500; }
+    .modal input, .modal textarea { width: 100%; padding: 0.5rem; margin-top: 0.25rem; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; }
+    .modal textarea { min-height: 80px; resize: vertical; }
+    .modal-actions { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1.25rem; }
+    .changelog { font-size: 0.85rem; max-height: 300px; overflow-y: auto; }
+    .changelog-item { padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+    .changelog-item:last-child { border-bottom: none; }
+    .changelog-time { color: var(--muted); font-size: 0.8rem; }
+    .changelog-user { font-weight: 500; }
+    .form-row { margin-bottom: 0.75rem; }
+    .form-row label { display: block; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.25rem; }
+    .form-row input, .form-row select, .form-row textarea { width: 100%; padding: 0.5rem; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; }
+    .form-row textarea { min-height: 60px; resize: vertical; }
+    .form-hint { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+    .stats { display: flex; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.9rem; }
+    .stats span { color: var(--muted); }
+    .stats strong { color: var(--text); }
+    .empty { color: var(--muted); font-style: italic; padding: 1rem 0; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    #importFile { display: none; }
+    .back-link { font-size: 0.9rem; color: var(--muted); text-decoration: none; }
+    .back-link:hover { color: var(--primary); text-decoration: underline; }
+    /* Mobiel */
+    @media (max-width: 640px) {
+      .verbeterpunten-inhoud { padding: 0.75rem 0; }
+      h1 { font-size: 1.25rem; }
+      .subtitle { font-size: 0.8rem; }
+      .toolbar { flex-direction: column; align-items: stretch; }
+      .toolbar .btn { width: 100%; }
+      .filter-bar { flex-direction: column; gap: 0.5rem; }
+      .filter-bar label { flex-wrap: wrap; }
+      .stats { flex-wrap: wrap; gap: 0.5rem; font-size: 0.85rem; }
+      .card { padding: 0.75rem; margin: 0 -0.5rem; border-radius: 0; }
+      .task-table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -0.5rem; }
+      .task-table { font-size: 0.8rem; min-width: 520px; }
+      .task-table th, .task-table td { padding: 0.4rem 0.5rem; }
+      .task-table .col-thema { min-width: 80px; }
+      .task-table .col-beschrijving { min-width: 120px; }
+      .status-btn { padding: 0.35rem 0.5rem; min-width: 2.2rem; }
+      .modal-content { margin: 0.5rem; max-height: calc(100vh - 2rem); overflow-y: auto; }
+    }
+  </style>
+</head>
+<body>
+    <script src="disclaimer.js"></script>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link" aria-label="Gemeente Wassenaar">
+                <img src="wassenaar_logo_fc%20kopie.svg" alt="Gemeente Wassenaar" class="site-logo">
+            </a>
+            <div class="header-text">
+                <h1><a href="index.html" class="header-title-link">BeleidsBibliotheek Wassenaar</a></h1>
+                <p class="subtitle">Gemeente Wassenaar · Inzicht in beleid en besluitvorming</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dossier-overzicht">
+            <div class="overzicht-kop">
+                <nav class="overzicht-tabs" aria-label="Pagina's">
+                    <a href="index.html" class="overzicht-tab">Beleidsdossiers</a>
+                    <a href="verkiezingen/" class="overzicht-tab">Verkiezingsprogramma's 2026</a>
+                    <span class="overzicht-tab overzicht-tab-actief">Verbeterpunten</span>
+                </nav>
+            </div>
+            <div class="verbeterpunten-inhoud">
+  <h1>Verbeterpunten Beheer</h1>
+  <p class="subtitle">Beleidsbibliotheek · Uit check beleidsbibliotheek_6maar2026.xlsx · Status bijhouden, documenteren en uitrollen</p>
+
+  <div class="stats">
+    <span>Totaal: <strong id="statTotal">0</strong></span>
+    <span>Gedaan: <strong id="statDone">0</strong></span>
+    <span>Open: <strong id="statOpen">0</strong></span>
+  </div>
+
+  <div class="toolbar">
+    <button type="button" class="btn btn-primary" id="btnAddTask">+ Nieuwe taak</button>
+    <button type="button" class="btn" id="btnExport">Exporteer (uitrol)</button>
+    <button type="button" class="btn" id="btnImport">Importeer</button>
+    <input type="file" id="importFile" accept=".json,application/json">
+    <button type="button" class="btn" id="btnChangelog">Wijzigingenlog</button>
+  </div>
+
+  <div class="filter-bar">
+    <label><input type="radio" name="filterStatus" value="all" checked> Alles</label>
+    <label><input type="radio" name="filterStatus" value="open"> Open</label>
+    <label><input type="radio" name="filterStatus" value="done"> Gedaan</label>
+    <label>Thema: <select id="filterThema"><option value="">Alle thema's</option></select></label>
+    <label>Sorteer: <select id="sortOrder">
+      <option value="default">Standaard (nr.)</option>
+      <option value="open-first">Open eerst</option>
+      <option value="done-first">Gedaan eerst</option>
+    </select></label>
+  </div>
+
+  <div class="card">
+    <div class="task-table-wrapper">
+    <table class="task-table" id="taskTable">
+      <thead>
+        <tr><th class="col-status">Status</th><th class="col-id">#</th><th class="col-thema">Thema</th><th class="col-subtegel">Subtegel</th><th class="col-beschrijving">Beschrijving</th><th class="col-doc">Documentatie</th></tr>
+      </thead>
+      <tbody id="taskList">
+        <tr id="emptyState"><td colspan="6" class="empty">Geen taken. Klik op + Nieuwe taak of importeer data.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>BeleidsBibliotheek Wassenaar · <a href="index.html">Beleidsdossiers</a> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a> · <button type="button" id="disclaimerLink" class="footer-link-btn">Disclaimer</button></p>
+        </div>
+    </footer>
+
+  <!-- Modal: Status wijzigen + documentatie -->
+  <div class="modal" id="modalStatus" role="dialog" aria-labelledby="modalStatusTitle" aria-modal="true">
+    <div class="modal-content">
+      <h2 id="modalStatusTitle">Taak afronden</h2>
+      <p class="task-beschrijving" id="modalTaskDesc"></p>
+      <label for="modalDoc">Documentatie <em>(verplicht bij afronden)</em></label>
+      <textarea id="modalDoc" placeholder="Wat is er gedaan? Welke bestanden aangepast? Korte opmerking voor uitrol..."></textarea>
+      <label for="modalLink">Link naar gewijzigde content <em>(optioneel)</em></label>
+      <input type="url" id="modalLink" placeholder="https://... of pad naar bestand, commit, PR">
+      <label for="modalUser">Gebruiker <em>(optioneel)</em></label>
+      <input type="text" id="modalUser" placeholder="Naam of initialen">
+      <div class="modal-actions">
+        <button type="button" class="btn" id="modalCancel">Annuleren</button>
+        <button type="button" class="btn btn-success" id="modalConfirm">Afronden</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Nieuwe taak -->
+  <div class="modal" id="modalAdd" role="dialog" aria-labelledby="modalAddTitle" aria-modal="true">
+    <div class="modal-content">
+      <h2 id="modalAddTitle">Nieuwe taak toevoegen</h2>
+      <div class="form-row">
+        <label for="addThema">Thema</label>
+        <select id="addThema">
+          <option value="Cultuur en Welzijn">Cultuur en Welzijn</option>
+          <option value="Sociaal Domein, Wonen & Onderwijs">Sociaal Domein, Wonen & Onderwijs</option>
+          <option value="Financiën, Economie en Sport">Financiën, Economie en Sport</option>
+          <option value="Bestuur en Veiligheid">Bestuur en Veiligheid</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="addSubtegel">Subtegel</label>
+        <input type="text" id="addSubtegel" placeholder="bijv. Sport, Onderwijs">
+      </div>
+      <div class="form-row">
+        <label for="addBeschrijving">Beschrijving / opmerking</label>
+        <textarea id="addBeschrijving" placeholder="Wat moet er gebeuren?"></textarea>
+      </div>
+      <div class="form-row">
+        <label for="addUser">Gebruiker <em>(optioneel)</em></label>
+        <input type="text" id="addUser" placeholder="Naam of initialen">
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn" id="addCancel">Annuleren</button>
+        <button type="button" class="btn btn-primary" id="addConfirm">Toevoegen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Wijzigingenlog -->
+  <div class="modal" id="modalChangelog" role="dialog" aria-labelledby="modalChangelogTitle" aria-modal="true">
+    <div class="modal-content" style="max-width: 560px;">
+      <h2 id="modalChangelogTitle">Wijzigingenlog</h2>
+      <div class="changelog" id="changelogList"></div>
+      <div class="modal-actions" style="margin-top: 1rem;">
+        <button type="button" class="btn" id="changelogClose">Sluiten</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    const STORAGE_KEY = 'verbeterpunten_taken_data';
+    const CHANGELOG_KEY = 'verbeterpunten_changelog';
+
+    const INITIAL_TASKS = [
+      { id: '1', thema: 'Cultuur en Welzijn', subtegel: 'Warenar', beschrijving: 'Tekst verwijst niet naar juiste beslispunt. Beantwoording 101 schriftelijke vragen ex art. 37 RvO: gaat over bestuurscultuuronderzoek – heeft met gemeentelijk bestuur te maken.', status: 'done', documentatie: 'Keywords bestuurscultuur, bestuurscultuuronderzoek toegevoegd aan Bestuur & Veiligheid in domeinclustering.py (vóór cultuur-regel, eerste match wint). Besluit nu correct geclassificeerd als Bestuur.', link: 'scripts/domeinclustering.py', toegevoegd: '2026-02-26', gewijzigd: '2026-02-25' },
+      { id: '2', thema: 'Cultuur en Welzijn', subtegel: 'Overig', beschrijving: 'Tegel geeft geen nadere info.', status: 'open', documentatie: '', toegevoegd: '2026-02-26', gewijzigd: '2026-02-26' },
+      { id: '3', thema: 'Sociaal Domein, Wonen & Onderwijs', subtegel: 'Jeugd', beschrijving: 'Verordening antidiscriminatievoorziening gemeente Wassenaar 2026.', status: 'done', documentatie: 'Keyword antidiscriminatie toegevoegd aan Jeugdzorg (app.js).', toegevoegd: '2026-02-26', gewijzigd: '2026-03-07' },
+      { id: '4', thema: 'Sociaal Domein, Wonen & Onderwijs', subtegel: 'Onderwijs', beschrijving: 'Kredietvoorstellen/herontwikkeling naar Fysiek; subtegel leerlingenvervoer, vve, oab, rmc, schooladvies.', status: 'done', documentatie: 'Keywords leerlingenvervoer, vve, oab, rmc, schooladvies toegevoegd. Stedenbouwkundig kader → Ruimte.', toegevoegd: '2026-02-26', gewijzigd: '2026-03-07' },
+      { id: '5', thema: 'Sociaal Domein, Wonen & Onderwijs', subtegel: 'Schuldhulpverlening', beschrijving: 'Beleidsplan Inburgering. Tegel inburgering.', status: 'done', documentatie: 'Subtegel Inburgering toegevoegd (keywords + vaste kind in boom).', toegevoegd: '2026-02-26', gewijzigd: '2026-03-07' },
+      { id: '6', thema: 'Sociaal Domein, Wonen & Onderwijs', subtegel: 'Sociaal domein', beschrijving: 'Werk en Inkomen vraagt eigen tegel.', status: 'done', documentatie: 'Subtegel Werk en Inkomen toegevoegd (keywords + vaste kind in boom).', toegevoegd: '2026-02-26', gewijzigd: '2026-03-07' },
+      { id: '7', thema: 'Sociaal Domein, Wonen & Onderwijs', subtegel: 'Overig', beschrijving: 'Tegel klikt niet door (werk en inkomen).', status: 'done', documentatie: 'Werk en Inkomen nu eigen tegel; klik zou moeten werken.', toegevoegd: '2026-02-26', gewijzigd: '2026-03-07' },
+      { id: '8', thema: 'Financiën, Economie en Sport', subtegel: 'Economie', beschrijving: 'Lege collegepunten, BIZ alleen actueel, Meicirculaire/GR KDB.', status: 'open', documentatie: '', toegevoegd: '2026-02-26', gewijzigd: '2026-02-26' },
+      { id: '9', thema: 'Financiën, Economie en Sport', subtegel: 'Gemeentelijke huisvesting', beschrijving: 'Schooladviesdienst hoort bij Onderwijs.', status: 'done', documentatie: 'Keyword schooladvies in Onderwijs; domeinclustering: schooladvies → Sociaal.', toegevoegd: '2026-02-26', gewijzigd: '2026-03-07' },
+      { id: '10', thema: 'Financiën, Economie en Sport', subtegel: 'Financiën', beschrijving: 'Stedenbouwkundig kader→Fysiek; P&C strikter; sub belastingen/gemeentefonds.', status: 'done', documentatie: 'Stedenbouwkundig kader → Ruimte. P&C-cyclus keywords verengd.', toegevoegd: '2026-02-26', gewijzigd: '2026-03-07' },
+      { id: '11', thema: 'Financiën, Economie en Sport', subtegel: 'P&C cyclus', beschrijving: 'Alleen Voorjaarsnota, najaarsnota, kadernota, begroting, jaarrekening (gemeente zelf).', status: 'done', documentatie: 'P&C-cyclus keywords aangescherpt.', toegevoegd: '2026-02-26', gewijzigd: '2026-03-07' },
+      { id: '12', thema: 'Financiën, Economie en Sport', subtegel: 'Sport', beschrijving: 'Duindigt eruit; sport/sportaccommodaties splitsen; lege collegebesluiten.', status: 'done', documentatie: 'Duindigt → Ruimte. Sportaccommodaties aparte subtegel.', link: 'scripts/domeinclustering.py', toegevoegd: '2026-02-26', gewijzigd: '2026-03-07' },
+      { id: '13', thema: 'Bestuur en Veiligheid', subtegel: 'Bestuur', beschrijving: 'Te veel inhoudelijke punten horen hier niet thuis.', status: 'open', documentatie: '', toegevoegd: '2026-02-26', gewijzigd: '2026-02-26' },
+      { id: '14', thema: 'Bestuur en Veiligheid', subtegel: 'Veiligheid', beschrijving: 'Te veel inhoudelijke punten; omgevingsvergunningen.', status: 'open', documentatie: '', toegevoegd: '2026-02-26', gewijzigd: '2026-02-26' },
+      { id: '15', thema: 'Bestuur en Veiligheid', subtegel: 'Lokale omroep', beschrijving: 'Te veel inhoudelijke punten horen hier niet thuis.', status: 'open', documentatie: '', toegevoegd: '2026-02-26', gewijzigd: '2026-02-26' }
+    ];
+
+    let tasks = [];
+    let changelog = [];
+
+    function load() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          tasks = Array.isArray(parsed.tasks) ? parsed.tasks : INITIAL_TASKS.slice();
+        } else {
+          tasks = INITIAL_TASKS.map(t => ({ ...t }));
+        }
+      } catch (e) {
+        tasks = INITIAL_TASKS.map(t => ({ ...t }));
+      }
+      try {
+        const cl = localStorage.getItem(CHANGELOG_KEY);
+        changelog = cl ? JSON.parse(cl) : [];
+      } catch (e) {
+        changelog = [];
+      }
+    }
+
+    function save() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ tasks, versie: '1.0', laatst: new Date().toISOString().slice(0,10) }));
+      localStorage.setItem(CHANGELOG_KEY, JSON.stringify(changelog));
+    }
+
+    function logChangelog(actie, taskId, details, gebruiker) {
+      changelog.unshift({
+        timestamp: new Date().toISOString(),
+        gebruiker: (gebruiker || '').trim() || null,
+        actie,
+        task_id: taskId,
+        details: (details || '').trim() || null
+      });
+      save();
+    }
+
+    function escapeHtml(s) {
+      if (!s) return '';
+      const div = document.createElement('div');
+      div.textContent = s;
+      return div.innerHTML;
+    }
+
+    function formatDate(iso) {
+      if (!iso) return '';
+      const d = new Date(iso);
+      return isNaN(d.getTime()) ? iso : d.toLocaleDateString('nl-NL', { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
+    function nextId() {
+      const nums = tasks.map(t => parseInt(t.id, 10)).filter(n => !isNaN(n));
+      return String((nums.length ? Math.max(...nums) : 0) + 1);
+    }
+
+    function renderTasks() {
+      const filterStatus = document.querySelector('input[name="filterStatus"]:checked')?.value || 'all';
+      const filterThema = document.getElementById('filterThema').value;
+      const sortOrder = document.getElementById('sortOrder')?.value || 'default';
+
+      let filtered = tasks;
+      if (filterStatus === 'open') filtered = filtered.filter(t => t.status !== 'done');
+      if (filterStatus === 'done') filtered = filtered.filter(t => t.status === 'done');
+      if (filterThema) filtered = filtered.filter(t => t.thema === filterThema);
+
+      if (sortOrder === 'open-first') {
+        filtered = [...filtered].sort((a, b) => (a.status === 'done' ? 1 : 0) - (b.status === 'done' ? 1 : 0));
+      } else if (sortOrder === 'done-first') {
+        filtered = [...filtered].sort((a, b) => (b.status === 'done' ? 1 : 0) - (a.status === 'done' ? 1 : 0));
+      } else {
+        filtered = [...filtered].sort((a, b) => parseInt(a.id, 10) - parseInt(b.id, 10));
+      }
+
+      const tbody = document.getElementById('taskList');
+      const emptyRow = document.getElementById('emptyState');
+      emptyRow.style.display = filtered.length ? 'none' : 'table-row';
+
+      tbody.querySelectorAll('tr.task-row').forEach(el => el.remove());
+
+      filtered.forEach(task => {
+        const statusLabel = task.status === 'done' ? '✓' : '○';
+        const statusClass = task.status === 'done' ? 'done' : 'open';
+        const statusTitle = task.status === 'done' ? 'Klik om terug te zetten naar open' : 'Klik om af te ronden (documentatie verplicht)';
+        const linkHref = task.link && !/^javascript:/i.test(task.link) && !/^data:/i.test(task.link)
+          ? (/^https?:\/\//i.test(task.link) ? escapeHtml(task.link) : 'viewer.html?file=' + encodeURIComponent(task.link))
+          : '';
+        const docHtml = task.documentatie || linkHref
+          ? (escapeHtml(task.documentatie || '') + (linkHref ? (task.documentatie ? ' · ' : '') + `<a href="${linkHref}" target="_blank" rel="noopener noreferrer">→</a>` : ''))
+          : '—';
+
+        const tr = document.createElement('tr');
+        tr.className = 'task-row' + (task.status === 'done' ? ' task-done' : '');
+        tr.dataset.id = task.id;
+        tr.innerHTML = `
+          <td class="col-status"><button type="button" class="btn status-btn ${statusClass}" title="${escapeHtml(statusTitle)}" aria-label="${statusLabel}">${statusLabel}</button></td>
+          <td class="col-id">${escapeHtml(task.id)}</td>
+          <td class="col-thema">${escapeHtml(task.thema)}</td>
+          <td class="col-subtegel">${escapeHtml(task.subtegel)}</td>
+          <td class="col-beschrijving">${escapeHtml(task.beschrijving)}</td>
+          <td class="col-doc">${docHtml}</td>
+        `;
+
+        tbody.insertBefore(tr, emptyRow);
+        tr.querySelector('.status-btn').addEventListener('click', () => handleStatusClick(task));
+      });
+
+      document.getElementById('statTotal').textContent = tasks.length;
+      document.getElementById('statDone').textContent = tasks.filter(t => t.status === 'done').length;
+      document.getElementById('statOpen').textContent = tasks.filter(t => t.status !== 'done').length;
+    }
+
+    function handleStatusClick(task) {
+      if (task.status === 'done') {
+        if (!confirm('Terugzetten naar open? De documentatie en link blijven bewaard, zodat je later opnieuw als gedaan kunt markeren.')) return;
+        task.status = 'open';
+        task.gewijzigd = new Date().toISOString().slice(0, 10);
+        logChangelog('status_open', task.id, 'Teruggezet naar open (documentatie bewaard)', null);
+        save();
+        renderTasks();
+        return;
+      }
+
+      document.getElementById('modalTaskDesc').textContent = task.beschrijving;
+      document.getElementById('modalDoc').value = task.documentatie || '';
+      document.getElementById('modalLink').value = task.link || '';
+      document.getElementById('modalUser').value = '';
+      document.getElementById('modalStatus').classList.add('open');
+      document.getElementById('modalStatus').dataset.taskId = task.id;
+
+      document.getElementById('modalDoc').focus();
+    }
+
+    function confirmStatus() {
+      const id = document.getElementById('modalStatus').dataset.taskId;
+      const doc = document.getElementById('modalDoc').value.trim();
+      const link = document.getElementById('modalLink').value.trim();
+      const user = document.getElementById('modalUser').value.trim();
+
+      if (!doc) {
+        alert('Documentatie is verplicht bij afronden. Beschrijf wat er is gedaan.');
+        document.getElementById('modalDoc').focus();
+        return;
+      }
+
+      const task = tasks.find(t => t.id === id);
+      if (!task) return;
+
+      task.status = 'done';
+      task.documentatie = doc;
+      task.link = link || null;
+      task.gewijzigd = new Date().toISOString().slice(0, 10);
+
+      logChangelog('status_done', task.id, doc, user || undefined);
+      save();
+      renderTasks();
+
+      document.getElementById('modalStatus').classList.remove('open');
+    }
+
+    function openAddModal() {
+      document.getElementById('addThema').value = 'Cultuur en Welzijn';
+      document.getElementById('addSubtegel').value = '';
+      document.getElementById('addBeschrijving').value = '';
+      document.getElementById('addUser').value = '';
+      document.getElementById('modalAdd').classList.add('open');
+      document.getElementById('addSubtegel').focus();
+    }
+
+    function confirmAdd() {
+      const thema = document.getElementById('addThema').value.trim();
+      const subtegel = document.getElementById('addSubtegel').value.trim();
+      const beschrijving = document.getElementById('addBeschrijving').value.trim();
+      const user = document.getElementById('addUser').value.trim();
+
+      if (!subtegel || !beschrijving) {
+        alert('Subtegel en beschrijving zijn verplicht.');
+        return;
+      }
+
+      const task = {
+        id: nextId(),
+        thema,
+        subtegel,
+        beschrijving,
+        status: 'open',
+        documentatie: '',
+        toegevoegd: new Date().toISOString().slice(0, 10),
+        gewijzigd: new Date().toISOString().slice(0, 10)
+      };
+
+      tasks.push(task);
+      logChangelog('taak_toegevoegd', task.id, `Thema: ${thema}, Subtegel: ${subtegel}`, user || undefined);
+      save();
+      renderTasks();
+      updateThemaFilter();
+
+      document.getElementById('modalAdd').classList.remove('open');
+    }
+
+    function updateThemaFilter() {
+      const sel = document.getElementById('filterThema');
+      const themas = [...new Set(tasks.map(t => t.thema))].sort();
+      const current = sel.value;
+      sel.innerHTML = '<option value="">Alle thema\'s</option>' + themas.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
+      if (themas.includes(current)) sel.value = current;
+    }
+
+    function exportData() {
+      const blob = new Blob([JSON.stringify({
+        tasks,
+        changelog,
+        versie: '1.0',
+        export_datum: new Date().toISOString(),
+        bron: 'Verbeterpunten Beheer · BeleidsWijzer'
+      }, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `verbeterpunten-export-${new Date().toISOString().slice(0,10)}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    function importData() {
+      document.getElementById('importFile').click();
+    }
+
+    function handleImport(e) {
+      const file = e.target.files?.[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const data = JSON.parse(reader.result);
+          const imported = Array.isArray(data.tasks) ? data.tasks : [];
+          if (imported.length) {
+            tasks = imported;
+            if (Array.isArray(data.changelog)) changelog = data.changelog;
+            save();
+            renderTasks();
+            updateThemaFilter();
+            alert(`${imported.length} taken geïmporteerd.`);
+          } else {
+            alert('Geen geldige taken in het bestand.');
+          }
+        } catch (err) {
+          alert('Ongeldig JSON-bestand: ' + err.message);
+        }
+      };
+      reader.readAsText(file, 'UTF-8');
+      e.target.value = '';
+    }
+
+    function showChangelog() {
+      const list = document.getElementById('changelogList');
+      if (changelog.length === 0) {
+        list.innerHTML = '<div class="empty">Geen wijzigingen geregistreerd.</div>';
+      } else {
+        list.innerHTML = changelog.map(entry => {
+          const time = new Date(entry.timestamp).toLocaleString('nl-NL');
+          const user = entry.gebruiker ? ` · ${escapeHtml(entry.gebruiker)}` : '';
+          const actie = { status_done: 'Afronden', status_open: 'Teruggezet', taak_toegevoegd: 'Nieuwe taak' }[entry.actie] || entry.actie;
+          const details = entry.details ? ` — ${escapeHtml(entry.details.slice(0, 80))}${entry.details.length > 80 ? '…' : ''}` : '';
+          return `<div class="changelog-item"><span class="changelog-time">${escapeHtml(time)}</span>${user} · ${escapeHtml(actie)} #${escapeHtml(entry.task_id || '-')}${details}</div>`;
+        }).join('');
+      }
+      document.getElementById('modalChangelog').classList.add('open');
+    }
+
+    function init() {
+      load();
+      renderTasks();
+      updateThemaFilter();
+
+      document.getElementById('btnAddTask').addEventListener('click', openAddModal);
+      document.getElementById('btnExport').addEventListener('click', exportData);
+      document.getElementById('btnImport').addEventListener('click', importData);
+      document.getElementById('importFile').addEventListener('change', handleImport);
+      document.getElementById('btnChangelog').addEventListener('click', showChangelog);
+
+      document.querySelectorAll('input[name="filterStatus"]').forEach(r => r.addEventListener('change', renderTasks));
+      document.getElementById('filterThema').addEventListener('change', renderTasks);
+      document.getElementById('sortOrder').addEventListener('change', renderTasks);
+
+      document.getElementById('modalCancel').addEventListener('click', () => document.getElementById('modalStatus').classList.remove('open'));
+      document.getElementById('modalConfirm').addEventListener('click', confirmStatus);
+
+      document.getElementById('addCancel').addEventListener('click', () => document.getElementById('modalAdd').classList.remove('open'));
+      document.getElementById('addConfirm').addEventListener('click', confirmAdd);
+
+      document.getElementById('changelogClose').addEventListener('click', () => document.getElementById('modalChangelog').classList.remove('open'));
+
+      document.getElementById('modalStatus').addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('modalStatus').classList.remove('open'); });
+      document.getElementById('modalAdd').addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('modalAdd').classList.remove('open'); });
+      document.getElementById('modalChangelog').addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('modalChangelog').classList.remove('open'); });
+    }
+
+    init();
+  })();
+  </script>
+</body>
+</html>

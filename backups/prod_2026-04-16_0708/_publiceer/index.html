@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeleidsBibliotheek — Publiceer</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f4f5f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,.1);
+    padding: 48px 40px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+  }
+  .logo { color: #55601c; font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .sub { color: #888; font-size: 14px; margin-bottom: 32px; }
+  label { display: block; text-align: left; font-size: 13px; color: #666; margin-bottom: 6px; }
+  input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 24px;
+    transition: border-color .2s;
+  }
+  input:focus { outline: none; border-color: #55601c; }
+  button {
+    width: 100%;
+    padding: 14px;
+    background: #55601c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  button:hover { background: #6b7a24; }
+  button:disabled { background: #bbb; cursor: wait; }
+  .result {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+    display: none;
+  }
+  .result.ok { background: #eef6e6; border: 1px solid #b5d89a; color: #3a5a1c; }
+  .result.fout { background: #fdecea; border: 1px solid #f5c6cb; color: #721c24; }
+  .voortgang {
+    margin-top: 16px;
+    display: none;
+  }
+  .voortgang-balk {
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .voortgang-vul {
+    height: 100%;
+    background: #55601c;
+    border-radius: 4px;
+    width: 0%;
+    transition: width .2s;
+  }
+  .voortgang-tekst {
+    font-size: 12px;
+    color: #888;
+    margin-top: 6px;
+  }
+  .info {
+    margin-top: 24px;
+    padding: 16px;
+    background: #f0f4e8;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #555;
+    text-align: left;
+    line-height: 1.6;
+  }
+  .info strong { color: #55601c; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">BeleidsBibliotheek</div>
+  <div class="sub">Download productie-pakket</div>
+
+  <label for="ww">Wachtwoord</label>
+  <input type="password" id="ww" placeholder="Voer het wachtwoord in" autofocus
+         onkeydown="if(event.key==='Enter') publiceer()">
+
+  <button id="btn" onclick="publiceer()">Download zip voor productie</button>
+
+  <div class="voortgang" id="voortgang">
+    <div class="voortgang-balk"><div class="voortgang-vul" id="voortgangVul"></div></div>
+    <div class="voortgang-tekst" id="voortgangTekst">Voorbereiden...</div>
+  </div>
+
+  <div class="result" id="result"></div>
+
+  <div class="info">
+    <strong>Instructie:</strong><br>
+    1. Voer het wachtwoord in<br>
+    2. Klik op de knop — er wordt een zip gedownload<br>
+    3. Pak de zip uit<br>
+    4. Upload alle bestanden naar beleidsbibliotheekwassenaar.nl
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3/dist/jszip.min.js"></script>
+<script>
+const WW_HASH = 'fe5969ecca6d5d6716b6a8b9a8f176cd3b2c5e09c961a8c6fb1be1053b5e84f3';
+
+const BESTANDEN = [
+  'index.html', 'app.js', 'data.js', 'styles.css', 'disclaimer.js',
+  'taakvelden_iv3.js', 'stempel.svg', 'wassenaar_logo_fc kopie.svg',
+  'reactie.html', 'werklijst-reacties.html', 'werklijst-sociaal-domein.html',
+  'beleidsnotas.html', 'beleidsnotas.js',
+  'overdrachtsdossier.html', 'overdrachtsdossier.js',
+  'roadmap.html', 'verbeterpunten-beheer.html', 'wijzigingen.html',
+  'beheer.html', 'viewer.html',
+  'manifest.webmanifest', 'sw.js', 'pwa-register.js',
+  'favicon.ico', 'favicon.svg', 'favicon-32.png',
+  'od-cover.png',
+];
+
+const ICON_BESTANDEN = [
+  'pwa-icons/icon-192.png', 'pwa-icons/icon-512.png', 'pwa-icons/icon-maskable-512.png',
+];
+
+const SCHRIJFWIJZER = [
+  'schrijf-wijzer/schrijf-wijzer.html',
+  'schrijf-wijzer/schrijf-wijzer-formulier.html',
+];
+
+async function sha256(tekst) {
+  const buf = await crypto.subtle.digest('SHA-256',
+    new TextEncoder().encode(tekst));
+  return Array.from(new Uint8Array(buf))
+    .map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function toonVoortgang(pct, tekst) {
+  document.getElementById('voortgang').style.display = 'block';
+  document.getElementById('voortgangVul').style.width = pct + '%';
+  document.getElementById('voortgangTekst').textContent = tekst;
+}
+
+function toonResultaat(ok, bericht) {
+  const el = document.getElementById('result');
+  el.style.display = 'block';
+  el.className = 'result ' + (ok ? 'ok' : 'fout');
+  el.innerHTML = bericht;
+}
+
+async function publiceer() {
+  const btn = document.getElementById('btn');
+  const ww = document.getElementById('ww').value;
+  if (!ww) { alert('Vul het wachtwoord in.'); return; }
+
+  const hash = await sha256(ww);
+  if (hash !== WW_HASH) {
+    toonResultaat(false, 'Onjuist wachtwoord.');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Bezig met downloaden...';
+  document.getElementById('result').style.display = 'none';
+
+  const basis = window.location.origin + '/';
+  const alleBestanden = [...BESTANDEN, ...ICON_BESTANDEN, ...SCHRIJFWIJZER];
+  const zip = new JSZip();
+  let geladen = 0;
+  let mislukt = [];
+
+  for (const f of alleBestanden) {
+    toonVoortgang(Math.round((geladen / alleBestanden.length) * 100),
+      `${geladen + 1} / ${alleBestanden.length}: ${f}`);
+    try {
+      const r = await fetch(basis + f, { cache: 'no-store' });
+      if (r.ok) {
+        const blob = await r.blob();
+        zip.file(f, blob);
+      } else {
+        mislukt.push(f);
+      }
+    } catch (e) {
+      mislukt.push(f);
+    }
+    geladen++;
+  }
+
+  toonVoortgang(100, 'Zip aanmaken...');
+
+  try {
+    const blob = await zip.generateAsync({ type: 'blob' });
+    const datum = new Date().toISOString().slice(0, 16).replace(/[T:]/g, '-');
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `beleidsbibliotheek_productie_${datum}.zip`;
+    a.click();
+    URL.revokeObjectURL(url);
+
+    let msg = `<strong>${geladen - mislukt.length}</strong> bestanden in zip.`;
+    if (mislukt.length > 0) {
+      msg += `<br><br>Niet gevonden (${mislukt.length}): ${mislukt.join(', ')}`;
+    }
+    msg += `<br><br>De download is gestart. Upload het zipbestand naar beleidsbibliotheekwassenaar.nl.`;
+    toonResultaat(true, msg);
+  } catch (e) {
+    toonResultaat(false, 'Fout bij aanmaken zip: ' + e.message);
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Download zip voor productie';
+}
+</script>
+</body>
+</html>

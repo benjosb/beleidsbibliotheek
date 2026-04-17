@@ -1,0 +1,108 @@
+/* Zwevende document-preview bij hover (bbv-lijst + bbv-3d) */
+
+#bbv-doc-preview-floater {
+  position: fixed;
+  z-index: 100000;
+  width: min(440px, calc(100vw - 24px));
+  max-width: 440px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s ease, visibility 0.18s ease;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #faf9f6;
+  border: 1px solid rgba(44, 44, 44, 0.12);
+}
+
+#bbv-doc-preview-floater.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#bbv-doc-preview-floater .bbv-dp-frame {
+  position: relative;
+  line-height: 0;
+  background: linear-gradient(180deg, #ece8e0 0%, #faf9f6 40%);
+  min-height: 120px;
+}
+
+#bbv-doc-preview-floater .bbv-dp-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Work Sans', system-ui, sans-serif;
+  font-size: 0.78rem;
+  color: #7a7a7a;
+  font-weight: 400;
+}
+
+#bbv-doc-preview-floater .bbv-dp-img {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  vertical-align: top;
+}
+
+#bbv-doc-preview-floater .bbv-dp-fallback {
+  padding: 1rem 1rem 0.75rem;
+  font-family: 'Work Sans', system-ui, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #2c2c2c;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+#bbv-doc-preview-floater .bbv-dp-rich {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+#bbv-doc-preview-floater .bbv-dp-favicon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  object-fit: contain;
+}
+
+#bbv-doc-preview-floater .bbv-dp-rich-text {
+  min-width: 0;
+  flex: 1;
+}
+
+#bbv-doc-preview-floater .bbv-dp-rich-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #1f1f1f;
+  margin-bottom: 0.25rem;
+}
+
+#bbv-doc-preview-floater .bbv-dp-rich-host {
+  font-size: 0.72rem;
+  color: #6a6a6a;
+  word-break: break-all;
+}
+
+#bbv-doc-preview-floater .bbv-dp-caption {
+  margin: 0;
+  padding: 0.45rem 0.65rem 0.55rem;
+  font-family: 'Work Sans', system-ui, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7a7a7a;
+  background: rgba(196, 163, 90, 0.12);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}

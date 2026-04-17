@@ -166,6 +166,35 @@
     color: var(--grijs);
   }
 
+  /* ── Principe productie ── */
+  .principe-prod {
+    background: var(--blauw-licht);
+    border: 1px solid rgba(26, 86, 219, 0.25);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .principe-prod h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: var(--blauw);
+    margin-bottom: 0.6rem;
+  }
+
+  .principe-prod ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .principe-prod li {
+    margin: 0.35rem 0;
+  }
+
   /* ── Flow ── */
   h2 {
     font-size: 1.25rem;
@@ -437,6 +466,15 @@
         <li>Controleren op productie</li>
       </ul>
     </div>
+  </div>
+
+  <div class="principe-prod">
+    <h3>Productie is read-only</h3>
+    <ul>
+      <li>Live is een <strong>alleen-lezen weergave</strong> — geen inhoud bewerken op de server; wijzigingen via git → ACC → promote.</li>
+      <li>In de praktiek <strong>wekelijks of bij een release</strong> — niet ad hoc op de productieserver.</li>
+      <li>De <strong>mutatielijst</strong> (opvolging reacties): aanpassen in het bronbestand in de repo en mee deployen; op productie geen beheer-knop.</li>
+    </ul>
   </div>
 
   <!-- Flow -->

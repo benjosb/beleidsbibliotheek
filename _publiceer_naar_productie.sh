@@ -26,6 +26,7 @@ mkdir -p "$DOEL/pwa-icons" "$DOEL/schrijf-wijzer"
 BESTANDEN=(
     index.html
     app.js
+    beleidsnota-per-taakveld-data.js
     data.js
     styles.css
     disclaimer.js

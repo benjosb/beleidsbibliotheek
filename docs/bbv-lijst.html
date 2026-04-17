@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeleidsBibliotheek — BBV lijst</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bbv-doc-preview.css">
+<style>
+:root {
+  --bg: #f4f1eb;
+  --text: #2c2c2c;
+  --text-light: #7a7a7a;
+  --accent: #c4a35a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  font-family: 'Work Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.site-header {
+  padding: 1.5rem 1.25rem 1rem;
+  border-bottom: 1px solid rgba(44,44,44,0.08);
+  background: rgba(255,255,255,0.35);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(10px);
+}
+.site-header h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.65rem;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+.site-header .subtitle {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  font-weight: 300;
+  margin-top: 0.2rem;
+}
+.nav-alt {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  font-size: 0.78rem;
+}
+.nav-alt a {
+  color: var(--text-light);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.nav-alt a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.toc {
+  padding: 0.75rem 1.25rem 0.25rem;
+  font-size: 0.72rem;
+  color: var(--text-light);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+.toc span { margin-right: 0.25rem; }
+.toc a {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  border: 1px solid rgba(44,44,44,0.12);
+  border-radius: 3px;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255,255,255,0.5);
+  font-weight: 500;
+}
+.toc a:hover { border-color: var(--accent); color: var(--accent); }
+
+main {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+}
+
+.chapter {
+  margin-bottom: 2.25rem;
+  scroll-margin-top: 5.5rem;
+}
+.chapter-head {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+.chapter-bar {
+  width: 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.chapter-titles h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.chapter-titles .ondertitel {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  font-weight: 300;
+  margin-top: 0.15rem;
+}
+
+.chapter-intro-details {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+.chapter-intro-details summary {
+  cursor: pointer;
+  color: var(--text-light);
+  list-style: none;
+}
+.chapter-intro-details summary::-webkit-details-marker { display: none; }
+.chapter-intro-details .intro-preview { color: var(--text); }
+.chapter-intro-details[open] summary { margin-bottom: 0.5rem; }
+.chapter-intro-body {
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 0.84rem;
+}
+
+.tv-count {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.45rem;
+}
+
+.tv-li {
+  border: 1px solid rgba(44,44,44,0.08);
+  border-radius: 5px;
+  margin-bottom: 0.45rem;
+  background: rgba(255,255,255,0.45);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  position: relative;
+}
+.tv-li:hover,
+.tv-li:focus-within {
+  border-color: rgba(196,163,90,0.45);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.75);
+}
+.tv-li-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  cursor: default;
+}
+.tv-li-code {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.95rem;
+  opacity: 0.55;
+  min-width: 3.2rem;
+}
+.tv-li-name {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+.tv-li-cue {
+  margin-left: auto;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.tv-li:hover .tv-li-cue,
+.tv-li:focus-within .tv-li-cue,
+.tv-li.is-open .tv-li-cue { opacity: 1; }
+
+.tv-li-detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+@media (hover: hover) {
+  .tv-li:hover .tv-li-detail,
+  .tv-li:focus-within .tv-li-detail {
+    max-height: 3200px;
+  }
+}
+@media (hover: none) {
+  .tv-li.is-open .tv-li-detail {
+    max-height: 3200px;
+  }
+}
+
+.tv-li-inner {
+  padding: 0 0.85rem 0.85rem 0.85rem;
+  padding-left: 4.1rem;
+  border-top: 1px dashed rgba(0,0,0,0.08);
+  margin: 0 0.5rem;
+}
+.tv-omschrijving {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--text);
+  margin-top: 0.5rem;
+}
+.tv-niet {
+  font-size: 0.76rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 0.45rem;
+  padding-left: 0.6rem;
+  border-left: 2px solid rgba(196,163,90,0.35);
+}
+.tv-niet strong { font-style: normal; font-weight: 500; color: var(--text); }
+.tv-toelichting {
+  font-size: 0.76rem;
+  color: var(--text-light);
+  margin-top: 0.45rem;
+}
+.tv-toelichting strong { color: var(--accent); }
+
+.tv-docs {
+  margin-top: 0.65rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(0,0,0,0.07);
+}
+.tv-docs-title {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.35rem;
+}
+.tv-docs-list { list-style: none; }
+.tv-doc-row {
+  font-size: 0.78rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.tv-doc-row:last-child { border-bottom: none; }
+.tv-doc-link {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 2px;
+}
+.tv-doc-link:hover { color: var(--accent); }
+.tv-doc-meta {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-light);
+  margin-top: 0.12rem;
+}
+.tv-doc-toel {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 0.1rem;
+}
+
+.hint-touch {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+  display: none;
+}
+@media (hover: none) {
+  .hint-touch { display: block; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>BeleidsBibliotheek</h1>
+  <p class="subtitle">BBV &middot; platte lijst &middot; 9 hoofdstukken &middot; Iv3-taakvelden &middot; beleidsdocumenten</p>
+  <nav class="nav-alt" aria-label="Weergave">
+    <a href="bbv-3d.html">Atomium-weergave (3D)</a>
+    <span style="color:var(--text-light)">·</span>
+    <a href="../wassenaar/index.html">BeleidsBibliotheek Wassenaar</a>
+  </nav>
+</header>
+
+<p class="hint-touch">Tip: op een touchscreen tik je op een taakveld om details en documenten te openen.</p>
+
+<nav class="toc" aria-label="Spring naar hoofdstuk">
+  <span>Hoofdstuk:</span>
+  <span id="tocLinks"></span>
+</nav>
+
+<main id="main"></main>
+
+<script src="bbv-hoofdstukken-data.js"></script>
+<script src="../wassenaar/beleidsnota-per-taakveld-data.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function escapeAttr(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function normalizeTaakveldCode(code) {
+    return String(code || '').replace(/\u2013/g, '-').replace(/\u2014/g, '-');
+  }
+
+  function docsForTaakveldCode(tvCode) {
+    var m = window.BELEIDSNOTA_PER_TAAKVELD;
+    if (!m || !tvCode) return [];
+    if (Array.isArray(m[tvCode])) return m[tvCode];
+    var norm = normalizeTaakveldCode(tvCode);
+    if (Array.isArray(m[norm])) return m[norm];
+    return [];
+  }
+
+  function renderDocsHtml(tvCode) {
+    var items = docsForTaakveldCode(tvCode);
+    if (!items.length) return '';
+    var rows = items.map(function (n) {
+      var parts = [];
+      if (n.type) parts.push(escapeHtml(n.type));
+      if (n.datum) parts.push(escapeHtml(n.datum));
+      var meta = parts.length ? '<span class="tv-doc-meta">' + parts.join(' · ') + '</span>' : '';
+      var toel = n.toelichting ? '<div class="tv-doc-toel">' + escapeHtml(n.toelichting) + '</div>' : '';
+      var title = escapeHtml(n.naam || '');
+      var previewAttr = n.preview ? ' data-preview-image="' + escapeAttr(n.preview) + '"' : '';
+      var link = n.link
+        ? '<a class="tv-doc-link" href="' + escapeHtml(n.link) + '" target="_blank" rel="noopener" data-doc-title="' + escapeAttr(n.naam || '') + '"' + previewAttr + '>' + title + '</a>'
+        : '<span>' + title + '</span>';
+      return '<li class="tv-doc-row">' + link + meta + toel + '</li>';
+    }).join('');
+    return '<div class="tv-docs"><div class="tv-docs-title">Beleidsnota\u2019s en beleidsdocumenten</div><ul class="tv-docs-list">' + rows + '</ul></div>';
+  }
+
+  var HOOFDSTUKKEN = window.BBV_HOOFDSTUKKEN_DATA || [];
+  var main = document.getElementById('main');
+
+  var toc = document.getElementById('tocLinks');
+  toc.innerHTML = HOOFDSTUKKEN.map(function (h) {
+    return '<a href="#h' + h.code + '">' + h.code + '</a>';
+  }).join('');
+
+  main.innerHTML = HOOFDSTUKKEN.map(function (h) {
+    var introHtml = escapeHtml(h.intro || '').replace(/\n/g, '<br>');
+    var introBlock = (h.intro && h.intro.length > 200)
+      ? '<details class="chapter-intro-details"><summary><span class="intro-preview">Inleiding</span> — klik om te lezen</summary><div class="chapter-intro-body">' + introHtml + '</div></details>'
+      : (h.intro ? '<div class="chapter-intro-body" style="margin-bottom:0.75rem;font-size:0.84rem;line-height:1.65">' + introHtml + '</div>' : '');
+
+    var tvs = (h.taakvelden || []).map(function (tv) {
+      var niet = tv.niet ? '<div class="tv-niet"><strong>Niet hier:</strong> ' + escapeHtml(tv.niet) + '</div>' : '';
+      var toel = tv.toelichting ? '<div class="tv-toelichting"><strong>Waarom zo gegroepeerd</strong> — ' + escapeHtml(tv.toelichting) + '</div>' : '';
+      var docs = renderDocsHtml(tv.code);
+      return (
+        '<article class="tv-li" tabindex="0">' +
+        '<div class="tv-li-head">' +
+        '<span class="tv-li-code">' + escapeHtml(tv.code) + '</span>' +
+        '<span class="tv-li-name">' + escapeHtml(tv.naam) + '</span>' +
+        '<span class="tv-li-cue">Details</span>' +
+        '</div>' +
+        '<div class="tv-li-detail"><div class="tv-li-inner">' +
+        '<div class="tv-omschrijving">' + escapeHtml(tv.omschrijving) + '</div>' +
+        toel + niet + docs +
+        '</div></div></article>'
+      );
+    }).join('');
+
+    return (
+      '<section class="chapter" id="h' + h.code + '">' +
+      '<div class="chapter-head">' +
+      '<div class="chapter-bar" style="background:' + h.hex + '"></div>' +
+      '<div class="chapter-titles">' +
+      '<h2>' + h.code + '. ' + escapeHtml(h.naam) + '</h2>' +
+      '<p class="ondertitel">' + escapeHtml(h.ondertitel) + '</p>' +
+      '</div></div>' +
+      introBlock +
+      '<div class="tv-count">Taakvelden (' + (h.taakvelden || []).length + ')</div>' +
+      '<div class="tv-list">' + tvs + '</div>' +
+      '</section>'
+    );
+  }).join('');
+
+  if (window.matchMedia('(hover: none)').matches) {
+    document.querySelectorAll('.tv-li').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        if (e.target.closest('a')) return;
+        el.classList.toggle('is-open');
+      });
+    });
+  }
+})();
+</script>
+<script src="bbv-doc-preview.js"></script>
+</body>
+</html>

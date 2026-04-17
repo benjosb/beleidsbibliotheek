@@ -2808,6 +2808,16 @@ span.zoek-item-naam-zonder-link {
     font-style: italic;
     line-height: 1.4;
 }
+/* Documentlaag in de keten (visie / IHP / verordening …) — bewust klein */
+.beleidsnota-structuur {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #64748b;
+    margin: 0 0 0.2rem;
+    line-height: 1.35;
+}
 
 /* Bijdrage badge — goedgekeurd voorstel van een bezoeker */
 .beleidsnota-item--bijdrage {
@@ -4210,6 +4220,12 @@ body.review-mode .review-mode-toggle {
     .site-nav-bar.nav-open .site-nav-inner {
         flex-direction: column;
         align-items: stretch;
+    }
+    /* Hamburger op 50% midden van de balk: bij open menu wordt de balk hoog en bedekt
+       het icoon dan het tweede nav-item (Overdrachtsdossier). Boven vastzetten. */
+    .site-nav-bar.nav-open .nav-hamburger {
+        top: 0.5rem;
+        transform: none;
     }
     .nav-zoek-wrap {
         margin-left: 0;

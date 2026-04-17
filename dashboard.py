@@ -11,6 +11,7 @@ Geen dependencies nodig — alleen Python 3.
 
 import http.server
 import json
+import mimetypes
 import os
 import re
 import subprocess
@@ -20,6 +21,8 @@ import urllib.parse
 
 PORT = 8800
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+# Lokale BeleidsBibliotheek voor de vergelijker (zelfde map als ACC/PROD-deploy): geen aparte http.server nodig.
+LOCAL_SITE_PREFIX = "/local-site"
 
 
 def read_version():
@@ -174,9 +177,57 @@ def stream_script(handler, script_name, notitie=""):
 
 class DashboardHandler(http.server.SimpleHTTPRequestHandler):
 
+    def _send_local_site_file(self, parsed):
+        """Serve files from wassenaar/ under LOCAL_SITE_PREFIX (voor docs/vergelijk.html)."""
+        raw = parsed.path
+        if not (raw == LOCAL_SITE_PREFIX or raw.startswith(LOCAL_SITE_PREFIX + "/")):
+            return False
+        rel = raw[len(LOCAL_SITE_PREFIX):].lstrip("/")
+        rel = os.path.normpath(rel) if rel else ""
+        if rel.startswith(".."):
+            self.send_error(403)
+            return True
+        base = os.path.abspath(os.path.join(PROJECT_DIR, "wassenaar"))
+        full = os.path.join(base, rel) if rel else base
+        if os.path.isdir(full):
+            full = os.path.join(full, "index.html")
+        if not os.path.isfile(full):
+            self.send_error(404)
+            return True
+        abs_full = os.path.abspath(full)
+        try:
+            if os.path.commonpath([base, abs_full]) != base:
+                self.send_error(403)
+                return True
+        except ValueError:
+            self.send_error(403)
+            return True
+        ctype, enc = mimetypes.guess_type(full)
+        if ctype is None:
+            ctype = "application/octet-stream"
+        if ctype.startswith("text/") or ctype in (
+            "application/javascript", "application/json", "application/manifest+json",
+        ):
+            ctype = ctype + "; charset=utf-8"
+        try:
+            with open(full, "rb") as f:
+                body = f.read()
+        except OSError:
+            self.send_error(500)
+            return True
+        self.send_response(200)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        self.wfile.write(body)
+        return True
+
     def do_GET(self):
         parsed = urllib.parse.urlparse(self.path)
         params = urllib.parse.parse_qs(parsed.query)
+
+        if self._send_local_site_file(parsed):
+            return
 
         if parsed.path == "/":
             self.send_response(200)
@@ -260,6 +311,7 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
 if __name__ == "__main__":
     server = http.server.HTTPServer(("127.0.0.1", PORT), DashboardHandler)
     print(f"Dashboard draait op http://localhost:{PORT}")
+    print(f"  Lokale site (voor Omgevingen vergelijken): http://127.0.0.1:{PORT}{LOCAL_SITE_PREFIX}/")
     print("Ctrl+C om te stoppen.\n")
     threading.Timer(0.5, lambda: webbrowser.open(f"http://localhost:{PORT}")).start()
     try:

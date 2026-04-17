@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roadmap · BeleidsWijzer</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#55601c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="application-name" content="BeleidsBibl.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="pwa-icons/icon-192.png">
+  <script src="pwa-register.js" defer data-pwa-register></script>
+  <style>
+    .roadmap-page { max-width: 680px; margin: 0 auto; padding: 1rem 0; }
+    .roadmap-page .subtitle { color: var(--gray-medium); font-size: 0.82rem; margin-bottom: 1.25rem; }
+    .roadmap-sporen { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 520px) { .roadmap-sporen { grid-template-columns: 1fr; } }
+    .spoor { background: #fff; border-radius: 10px; border: 1px solid var(--gray-light); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+    .spoor-header { padding: 0.85rem 1rem; display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 0.95rem; }
+    .spoor-1 .spoor-header { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); color: #0d47a1; }
+    .spoor-2 .spoor-header { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); color: #1b5e20; }
+    .spoor-nr { width: 1.4rem; height: 1.4rem; border-radius: 50%; background: rgba(255,255,255,.9); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+    .spoor-body { padding: 0.6rem 1rem 1rem; }
+    .roadmap-item { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; font-size: 0.85rem; }
+    .roadmap-item:last-child { border-bottom: none; }
+    .roadmap-item .dot { flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; margin-top: 0.45rem; }
+    .roadmap-item.nu .dot { background: var(--wassenaar-blue); }
+    .roadmap-item.gepland .dot { background: #ffc107; }
+    .roadmap-item.later .dot { background: #adb5bd; }
+    .roadmap-item .content { flex: 1; min-width: 0; }
+    .roadmap-item .title { font-weight: 500; color: var(--wassenaar-donker); }
+    .roadmap-item .meta { font-size: 0.7rem; color: var(--gray-medium); margin-top: 0.15rem; }
+  </style>
+</head>
+<body>
+    <script src="disclaimer.js"></script>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link" aria-label="Gemeente Wassenaar">
+                <img src="wassenaar_logo_fc%20kopie.svg" alt="Gemeente Wassenaar" class="site-logo">
+            </a>
+            <div class="header-text">
+                <h1><a href="index.html" class="header-title-link">BeleidsBibliotheek Wassenaar</a></h1>
+                <p class="subtitle">Gemeente Wassenaar · Inzicht in beleid en besluitvorming</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dossier-overzicht">
+            <div class="overzicht-kop">
+                <nav class="overzicht-tabs" aria-label="Pagina's">
+                    <a href="index.html" class="overzicht-tab">Beleidsdossiers</a>
+                    <a href="verkiezingen/" class="overzicht-tab">Verkiezingsprogramma's 2026</a>
+                    <span class="overzicht-tab overzicht-tab-actief">Roadmap</span>
+                </nav>
+            </div>
+            <div class="roadmap-page">
+    <p class="subtitle">Leidend · Verbeterpunten dragen bij aan roadmap-items</p>
+
+    <div class="roadmap-sporen">
+      <section class="spoor spoor-1">
+        <div class="spoor-header"><span class="spoor-nr">1</span> Briefingsinstrument</div>
+        <div class="spoor-body">
+          <div class="roadmap-item nu">
+            <span class="dot"></span>
+            <div class="content">
+              <div class="title">Dossiers & briefings per portefeuille</div>
+              <div class="meta">In uitvoering · Pilot Wassenaar</div>
+            </div>
+          </div>
+          <div class="roadmap-item gepland">
+            <span class="dot"></span>
+            <div class="content">
+              <div class="title">Categorien consequent (alle portefeuilles)</div>
+              <div class="meta">Gepland · Overig/Volksgezondheid/Warenar herstructureren</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="spoor spoor-2">
+        <div class="spoor-header"><span class="spoor-nr">2</span> Schrijf-Wijzer</div>
+        <div class="spoor-body">
+          <div class="roadmap-item gepland">
+            <span class="dot"></span>
+            <div class="content">
+              <div class="title">BeleidsBibliotheek + collegevoorstel-sjabloon</div>
+              <div class="meta">Gepland · Beleidsterrein direct bij schrijven</div>
+            </div>
+          </div>
+          <div class="roadmap-item later">
+            <span class="dot"></span>
+            <div class="content">
+              <div class="title">Volledige collegevoorstellen als content</div>
+              <div class="meta">Lange termijn · achter firewall</div>
+            </div>
+          </div>
+          <div class="roadmap-item later">
+            <span class="dot"></span>
+            <div class="content">
+              <div class="title">Standaard voor beleidsschrijvers</div>
+              <div class="meta">Doel · heel jaar door</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>BeleidsBibliotheek Wassenaar · <a href="index.html">Beleidsdossiers</a> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a> · <button type="button" id="disclaimerLink" class="footer-link-btn">Disclaimer</button></p>
+        </div>
+    </footer>
+</body>
+</html>

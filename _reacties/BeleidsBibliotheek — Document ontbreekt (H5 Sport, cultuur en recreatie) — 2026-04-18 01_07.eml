@@ -1,0 +1,78 @@
+Return-path: <dickbraam@me.com>
+Original-recipient: rfc822;dickbraam@me.com
+Received: from p00-icloudmta-asmtp-us-east-1a-20-percent-2 by p175-mailgateway-smtp-76d5fd66d4-wjshh (mailgateway 2614B88)
+	with SMTP id 647b5fec-c7f8-4fb8-b2d6-5747e49a1e58 
+	for <dickbraam@me.com>; Fri, 17 Apr 2026 23:07:33 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 647b5fec-c7f8-4fb8-b2d6-5747e49a1e58
+Received: from outbound.st.icloud.com (unknown [127.0.0.2])
+	by p00-icloudmta-asmtp-us-east-1a-20-percent-2 (Postfix) with ESMTPS id 331831800127;
+	Fri, 17 Apr 2026 23:07:32 +0000 (UTC)
+Dkim-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=me.com; s=1a1hai; t=1776467252; x=1779059252; bh=lKemiPQU7kiCwGamRyvr6VVWhGLZRCN0lpuLZf6X+JI=; h=From:Content-Type:Mime-Version:Subject:Message-Id:Date:To:x-icloud-hme; b=bBVubtE3Nbhz+vVAmjd+DD7Dl0duHfnnJVY42YJi0bi83yiCQ5Ln3aJ6Yts2/c7swWXE5Qbn3BMR9UsEAWQyYnqCnYcxZWTe8OnZc6PyVCXdPyLvQBUE8dIYwcH5xGiKzwlThC0MO6DHwOgu2G7zM7pUqYxnhyZT+CXAQNJaBjVW8LzjNgcdLbBYrkG4TR4yjieDEfKjTRESa8tFTHMkmKHv0OFPg/22BoGep1YbKkHsCtPP+Ajtp3n6UTXXvDYUERv/q1SznGGOWbB5nqX6Cjz54wlMJR8yOf/F4DgO86okOkoApH1uyyaOWk1GueSB/4tRNqLgSdMQT/6lpcoj/Q==
+Received: from smtpclient.apple (unknown [17.42.251.67])
+	by p00-icloudmta-asmtp-us-east-1a-20-percent-2 (Postfix) with ESMTPSA id 648A418000A1;
+	Fri, 17 Apr 2026 23:07:31 +0000 (UTC)
+From: Dick Braam <dickbraam@me.com>
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3864.500.181\))
+Subject: =?utf-8?Q?BeleidsBibliotheek_=E2=80=94_Document_ontbreekt_=28H5_S?=
+ =?utf-8?Q?port=2C_cultuur_en_recreatie=29_=E2=80=94_2026-04-18_01=3A07?=
+Message-Id: <18919580-3BB7-464D-901A-54406F3CAA24@me.com>
+Date: Sat, 18 Apr 2026 01:07:19 +0200
+To: ehiep@wassenaar.nl,
+ mheijting@wassenaar.nl,
+ dickbraam@me.com,
+ dbraam@wassenaar.nl
+X-Mailer: Apple Mail (2.3864.500.181)
+X-Proofpoint-GUID: 581wenzpuLgFVHIUVfoQyLp85cOSHekc
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNDE3MDIzMiBTYWx0ZWRfX5ZFK8u3DtueH
+ b6ZmLOdU8xkHC2lN5mXrENoMJGTj9e9iiJAZZPVoeNdNcsxIXprcAy0NG1DhOWqZySgYe86pGgU
+ S775QDZYF+WVEed1SdEh39NfY9MjGkcIAGruQrmMjzi0sL73heoTs4zYdNNHZBqQt/qEW7jhcZv
+ KrPb9HJVCOVpUEwEeZvh/zQmDkVh8ofwlXLeSi4g2jTv66KrnWodQHu5y4IlpvXoZSFChdAIdVv
+ 2eWBu9dOv1b8uhSJj+kjLqLG+vpFLz+jE38kAga03T/Z8o6w2tck5+plj2ndcTmNr4yNmfSUFQ5
+ 4UQkhOVxmmow3SrC+5JyADsJ5IwxEp0P/5MjATf5BpGLX+/iMWteCCjuVb/a0U=
+X-Proofpoint-ORIG-GUID: 581wenzpuLgFVHIUVfoQyLp85cOSHekc
+X-Authority-Info-Out: v=2.4 cv=JKk2csKb c=1 sm=1 tr=0 ts=69e2bd34
+ cx=c_apl:c_pps:t_out a=YrL12D//S6tul8v/L+6tKg==:117
+ a=YrL12D//S6tul8v/L+6tKg==:17 a=IkcTkHD0fZMA:10 a=A5OVakUREuEA:10
+ a=5KLPUuaC_9wA:10 a=x7bEGLp0ZPQA:10 a=InIu3HzlW58A:10
+ a=VkNPw1HP01LnGYTKEx00:22 a=2avdWaRTAAAA:8 a=8SugWkdaj9UIMvv2bVoA:9
+ a=cinZsnhz8T_QBfNC:21 a=QEXdDO2ut3YA:10 a=E3k6NogFdRW3DJyROczM:22
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1143,Hydra:6.1.51,FMLib:17.12.100.49
+ definitions=2026-04-17_02,2026-04-17_04,2025-10-01_01
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0
+ mlxscore=0 malwarescore=0 bulkscore=0 mlxlogscore=432 clxscore=1015
+ spamscore=0 lowpriorityscore=0 phishscore=0 adultscore=0 classifier=spam
+ authscore=0 adjust=0 reason=mlx scancount=1 engine=8.22.0-2601150000
+ definitions=main-2604170232
+X-JNJ: AAAAAAAB/09BCMxp6D2iGlqiQplRCbbppVtbZCxBh8aBV1JPc+vH61wzjy0Fp+H40qOH5AJ+Gmj4Vs178RizMQLm2btTbLnPRK8xckjltd1iQ0sbz99msaMoZDP1MaZPEROFlR8vQ9ueab4MdMlUXjSr2b3UBw2S8gXgINKUR0+fSovnyyAyNBTAY8Cgj2cHjJe34az+Hz8x/UKLsBjHaHDELPGlcww3s2Tyq+YJdgy1T8GpUOAkP+fZf5196pRzTJe41+EtFL56PwZMJUfxodiPriB0dHlIEe8LXTFxm4sruVOitYkzHMCo2ovQzjdxNrpTAbA25XQ985T4rdf4XsvXAsN2MNk+vv7icBh68lzB6+eGVjgrCLhey2sdRMGNupku8zWu48Q/9C54L4xOVnVRpxMh5+jp0hwLzUCSKaOnDBjGP+TTgSWecv/o7k0J8e1UJ/lUUaiqItAp3HTCsegJSrVGG0m0AOsI6ATR6nXYiy5brT4165DhMqIn01ELJiFRM5KsQtLyuMbuH2ydUYUsuvrI3OyG7Fl4VpDkUyAhVGrVuAEOsnrSgSseaGKWkKq66Cjh20sj8Tbje/B+BhpKDjhWJ5Itf8yeYeJYICVyefImucu+ZsGWyDXVqJutEr/30RB66nCvBgGWo3scWEixOPaj/4v+p00rfApmDmUYOII65l9/q5M0lF6xzpMJmFUzeBAcfSTYpGt5yKcPU8hscaStgUuu3e+cq5o3lCddb8bopx1mrJuv1oEP+ZU6/OzG8MuvRwlEZFsiGwAES6WDy2U+0+UfgRKJ+kjXkQq+CeFknt600uj3WQWgvPfR3lXWupcSnwonRh0zOfz5L2fF0Eou3o63WvrHzqrOCY++GvCGSLOKaIqpwLzh4dbAbqLZyJVB08mA29ZigWTGMjl6W63+B0NVwrP2ddh25lqRbHMQCNzsoNs3sHkQbyHz5OBc3OKJsaZxWaxn51SDoxNvvq0hWlMLDXy/bmITpXNosKTxy2VkKokHELLc3X4jyzERyAOGOBPolyiPpoM2lNuVxDTR/eST4QWyczKXfwmrScQdzIvRL3Zj5Mdj4nYJTcB0CWqi47QC3l8wYll3YQy4N1btR2YfRejLuUM9kk+XYmyB4eqo/TCSqHcfz3bP+UavrG6B/BtsemdAgw8wIiI8PExxEL0sJEXpFCY0hA==
+
+Nieuwe reactie op de BeleidsBibliotheek:
+
+Verzonden: 2026-04-18 01:07 (lokale tijd)
+Van: db namens ddw
+
+Type: Document ontbreekt
+Hoofdstuk: H5 Sport, cultuur en recreatie
+Taakveld: =E2=80=94
+Document: samenvatting Overdrachtsdossier
+
+deze tekst aanvullen:=20
+"De Sportvisie 2025 is vastgesteld met vier pijlers: versterken =
+sportaanbieders, verhogen sportdeelname, beweegvriendelijke omgeving en =
+toekomstbestendige accommodaties. Fit in Wassenaar zorgt voor de =
+uitvoering van het Sportakkoord II en het Gezond en Actief Leven Akkoord =
+(GALA) in Wassenaar. De sport- en beweegcoaches stimuleren mensen met =
+bewegen, sport en gezondheid. Met als doel dat iedereen in Wassenaar =
+gezond en gelukkig kan leven. Daarnaast ondersteunen zij =
+sportverenigingen. Zodat zij beter in staat zijn hun =
+verenigingsactiviteiten uit te voeren. Sportverenigingen met jeugdleden =
+en scouting De Paauw en Van Woesikgroep ontvangen jeugdledensubsidie."
+
+=E2=94=80=E2=94=80=E2=94=80
+Werklijst mutaties (acceptatie, openbaar):
+https://wassenaar.besluit-wijzer.nl/werklijst-mutaties.html=

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chord – beleidsoverlap Wassenaar 2026</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h1 { font-size: 1.2rem; margin-bottom: 1rem; }
+    .theme-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      justify-content: center;
+    }
+    .theme-btn {
+      padding: 0.4rem 0.9rem;
+      border: 1px solid #94a3b8;
+      background: #fff;
+      color: #334155;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .theme-btn:hover { background: #f1f5f9; }
+    .theme-btn.active {
+      background: #1e293b;
+      color: #fff;
+      border-color: #1e293b;
+    }
+    .canvas-wrap { margin: 0 auto; }
+    #chord-canvas { display: block; cursor: default; }
+    .detail-panel {
+      margin-top: 1rem;
+      padding: 0.75rem 1.25rem;
+      min-height: 52px;
+      max-width: 600px;
+      background: #e2e8f0;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #475569;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .detail-panel strong { color: #1e293b; }
+    .legenda {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+      font-size: 12px;
+      color: #64748b;
+    }
+    .legenda-item { display: flex; align-items: center; gap: 0.5rem; }
+    .legenda-bar {
+      display: inline-block;
+      height: 6px;
+      border-radius: 3px;
+      background: #94a3b8;
+    }
+    .legenda-sterk { width: 32px; background: #475569; }
+    .legenda-matig { width: 20px; background: #94a3b8; }
+    .legenda-zwak { width: 10px; background: #cbd5e1; }
+    .top-bar { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 0 1rem; margin: 0 -2rem 1rem -2rem; border-bottom: 1px solid #e2e8f0; background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%); padding-left: 2rem; padding-right: 2rem; padding-top: 0.85rem; padding-bottom: 0.85rem; align-self: stretch; }
+    .top-bar-badge { font-size: 0.8rem; font-weight: 600; color: #64748b; letter-spacing: 0.03em; }
+    .top-bar-link { color: #2c5282; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+    .top-bar-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="top-bar" role="banner">
+    <span class="top-bar-badge">Wassenaar 2026</span>
+    <a href="index.html" class="top-bar-link">← Terug naar overzicht</a>
+  </header>
+  <h1>Beleidsoverlap Wassenaar 2026</h1>
+  <div class="theme-buttons" id="theme-buttons"></div>
+  <div class="canvas-wrap">
+    <canvas id="chord-canvas" width="600" height="600"></canvas>
+  </div>
+  <div class="legenda">
+    <span class="legenda-item"><span class="legenda-bar legenda-sterk"></span> Sterke band (&gt;70%)</span>
+    <span class="legenda-item"><span class="legenda-bar legenda-matig"></span> Matige band (45–70%)</span>
+    <span class="legenda-item"><span class="legenda-bar legenda-zwak"></span> Zwakke band (&lt;45%)</span>
+  </div>
+  <div class="detail-panel" id="detail">Hover over een partij of verbinding voor details.</div>
+
+  <script>
+(function() {
+  const PARTIES = [
+    { name: 'FvD', color: '#8B0000' },
+    { name: 'VVD', color: '#FF7700' },
+    { name: 'DLW', color: '#B8860B' },
+    { name: 'CDA', color: '#6ABF4B' },
+    { name: 'Hart voor Was.', color: '#003580' },
+    { name: 'Lokaal Was.', color: '#00875A' },
+    { name: 'D66', color: '#00A8E8' },
+    { name: 'Volt', color: '#502379' },
+    { name: 'GroenLinks-PvdA', color: '#C0392B' }
+  ];
+
+  const THEME_LABELS = ['Totaal', 'Bestuur', 'Veiligheid', 'Verkeer', 'Economie', 'Onderwijs', 'Sport & Cultuur', 'Sociaal', 'Milieu', 'Volkshuisvesting'];
+
+  const MATRICES = {
+    'Totaal': [[0,49,67,66,59,52,36,61,59],[49,0,59,56,59,52,57,55,60],[67,59,0,56,77,70,48,46,41],[66,56,56,0,56,53,45,72,66],[59,59,77,56,0,93,57,55,60],[52,52,70,53,93,0,73,67,62],[36,57,48,45,57,73,0,55,45],[61,55,46,72,55,67,55,0,64],[59,60,41,66,60,62,45,64,0]],
+    'Bestuur en ondersteuning': [[0,40,56,53,49,47,30,47,46],[40,0,70,52,49,47,50,47,51],[56,70,0,53,70,73,45,42,39],[53,52,53,0,52,55,40,58,54],[49,49,70,52,0,86,50,47,51],[47,47,73,55,86,0,65,60,57],[30,50,45,40,50,65,0,44,38],[47,47,42,58,47,60,44,0,50],[46,51,39,54,51,57,38,50,0]],
+    'Veiligheid': [[0,57,68,46,56,54,41,43,41],[57,0,57,39,56,54,53,38,42],[68,57,0,39,72,70,53,32,29],[46,39,39,0,39,37,32,50,46],[56,56,72,39,0,80,53,38,42],[54,54,70,37,80,0,67,47,43],[41,53,53,32,53,67,0,38,32],[43,38,32,50,38,47,38,0,45],[41,42,29,46,42,43,32,45,0]],
+    'Verkeer': [[0,52,56,52,50,55,49,51,60],[52,0,52,42,50,55,51,42,50],[56,52,0,42,58,57,45,36,37],[52,42,42,0,42,43,39,53,52],[50,50,58,42,0,74,51,42,50],[55,55,57,43,74,0,74,55,61],[49,51,45,39,51,74,0,49,55],[51,42,36,53,42,55,49,0,53],[60,50,37,52,50,61,55,53,0]],
+    'Economie': [[0,34,47,46,41,36,25,43,41],[34,0,41,39,41,36,40,38,42],[47,41,0,46,54,55,43,39,37],[46,39,46,0,39,43,41,57,54],[41,41,54,39,0,65,40,38,42],[36,36,55,43,65,0,60,53,50],[25,40,43,41,40,60,0,47,42],[43,38,39,57,41,54,56,0,72],[41,42,37,54,42,50,47,72,0]],
+    'Onderwijs': [[0,34,67,67,41,36,25,59,41],[34,0,41,39,41,36,40,38,42],[67,41,0,53,54,49,51,44,29],[67,39,53,0,39,37,32,62,46],[41,41,54,39,0,65,40,38,42],[36,36,49,37,65,0,51,47,43],[25,40,51,32,40,51,0,38,32],[59,38,44,62,38,47,38,0,45],[41,42,29,46,42,43,32,45,0]],
+    'Sport, cultuur en recreatie': [[0,50,61,46,56,55,39,55,50],[50,0,50,39,56,55,58,54,54],[61,50,0,39,72,72,51,47,40],[46,39,39,0,39,37,32,50,46],[56,56,72,39,0,89,58,54,54],[55,55,72,37,89,0,74,67,58],[39,58,51,32,58,74,0,53,43],[55,54,47,50,54,67,53,0,54],[50,54,40,46,54,58,43,54,0]],
+    'Sociaal domein': [[0,42,51,53,41,42,32,50,47],[42,0,41,39,41,42,40,38,42],[51,41,0,50,54,58,46,45,39],[53,39,50,0,39,53,53,72,64],[41,41,54,39,0,65,40,38,42],[42,42,58,53,65,0,69,64,58],[32,40,46,53,40,69,0,62,52],[50,38,45,72,38,64,62,0,79],[47,42,39,64,42,58,52,79,0]],
+    'Volksgezondheid en milieu': [[0,63,67,68,50,36,25,43,62],[63,0,50,46,50,36,40,38,48],[67,50,0,55,60,49,51,32,44],[68,46,55,0,46,37,32,50,62],[50,50,60,46,0,65,40,38,48],[36,36,49,37,65,0,51,47,43],[25,40,51,32,40,51,0,38,32],[43,38,32,50,38,47,38,0,77],[62,48,44,62,48,43,32,77,0]],
+    'Volkshuisvesting': [[0,61,61,66,65,63,25,63,69],[61,0,61,57,65,63,40,58,67],[61,61,0,50,67,64,34,44,45],[66,57,50,0,57,58,32,66,67],[65,65,67,57,0,90,40,58,67],[63,63,64,58,90,0,51,44,73],[25,40,34,32,40,51,0,38,32],[63,58,44,66,58,44,36,0,85],[69,67,45,67,67,73,32,85,0]]
+  };
+
+  const THEME_KEYS = ['Totaal', 'Bestuur en ondersteuning', 'Veiligheid', 'Verkeer', 'Economie', 'Onderwijs', 'Sport, cultuur en recreatie', 'Sociaal domein', 'Volksgezondheid en milieu', 'Volkshuisvesting'];
+
+  const GAP = 0.028;
+  const ARC_WIDTH = 22;
+  const PI = Math.PI;
+  const SIZE = 600;
+  const CX = SIZE / 2;
+  const CY = SIZE / 2;
+  const INNER_R = 220;
+  const LABEL_OFFSET = 18;
+
+  let themeIndex = 0;
+  let hoveredArc = -1;
+  let hoveredChord = null;
+
+  function getMatrix() { return MATRICES[THEME_KEYS[themeIndex]]; }
+
+  function pt(angle, r) {
+    return { x: CX + r * Math.cos(angle), y: CY + r * Math.sin(angle) };
+  }
+
+  function alpha(val) {
+    if (val < 15) return 0;
+    const t = Math.pow(Math.max(0, (val - 10) / 90), 3.0);
+    return t * 0.35;
+  }
+
+  function arcAlpha(val) {
+    if (val < 15) return 0;
+    const t = Math.pow(Math.max(0, (val - 10) / 90), 3.0);
+    return Math.max(0.55, t * 0.65);
+  }
+
+  function setupCanvas() {
+    const canvas = document.getElementById('chord-canvas');
+    canvas.width = SIZE;
+    canvas.height = SIZE;
+    return canvas.getContext('2d');
+  }
+
+  function getArcLayout(matrix) {
+    const n = matrix.length;
+    const rowSums = matrix.map(row => row.reduce((s, v) => s + v, 0));
+    const totalRowSum = rowSums.reduce((s, v) => s + v, 0) || 1;
+    const totalArc = 2 * PI - n * GAP;
+    const arcSpans = rowSums.map(s => (s / totalRowSum) * totalArc);
+    const arcStarts = [];
+    let acc = -PI / 2;
+    for (let i = 0; i < n; i++) {
+      arcStarts.push(acc);
+      acc += arcSpans[i] + GAP;
+    }
+    const arcMids = arcSpans.map((span, i) => arcStarts[i] + span / 2);
+    return { arcSpans, arcStarts, arcMids, rowSums };
+  }
+
+  const CHORD_WIDTH_FACTOR = 4;
+
+  function getChordPath(i, j, val, matrix, layout) {
+    const { arcSpans, arcMids, rowSums } = layout;
+    let si = (val / (rowSums[i] || 1)) * arcSpans[i] * CHORD_WIDTH_FACTOR;
+    let sj = (val / (rowSums[j] || 1)) * arcSpans[j] * CHORD_WIDTH_FACTOR;
+    si = Math.min(arcSpans[i] * 0.95, si);
+    sj = Math.min(arcSpans[j] * 0.95, sj);
+    const a1start = arcMids[i] - si / 2;
+    const a1end = arcMids[i] + si / 2;
+    const a2start = arcMids[j] - sj / 2;
+    const a2end = arcMids[j] + sj / 2;
+
+    const path = new Path2D();
+    const p1s = pt(a1start, INNER_R);
+    path.moveTo(p1s.x, p1s.y);
+    path.arc(CX, CY, INNER_R, a1start, a1end, false);
+    const p2e = pt(a2end, INNER_R);
+    path.quadraticCurveTo(CX, CY, p2e.x, p2e.y);
+    path.arc(CX, CY, INNER_R, a2end, a2start, true);
+    path.quadraticCurveTo(CX, CY, p1s.x, p1s.y);
+    path.closePath();
+    return path;
+  }
+
+  function getChords(matrix, layout) {
+    const chords = [];
+    for (let i = 0; i < matrix.length; i++) {
+      for (let j = i + 1; j < matrix.length; j++) {
+        const val = matrix[i][j];
+        if (val >= 15) {
+          chords.push({ i, j, val, path: getChordPath(i, j, val, matrix, layout) });
+        }
+      }
+    }
+    chords.sort((a, b) => a.val - b.val);
+    return chords;
+  }
+
+  function getArcPath(i, layout) {
+    const { arcSpans, arcStarts } = layout;
+    const start = arcStarts[i];
+    const end = start + arcSpans[i];
+    const path = new Path2D();
+    path.arc(CX, CY, INNER_R + ARC_WIDTH, start, end, false);
+    path.arc(CX, CY, INNER_R, end, start, true);
+    path.closePath();
+    return path;
+  }
+
+  function hitTestArc(x, y, layout) {
+    const n = layout.arcMids.length;
+    for (let i = 0; i < n; i++) {
+      if (ctx.isPointInPath(getArcPath(i, layout), x, y)) return i;
+    }
+    return -1;
+  }
+
+  function draw(ctx) {
+    ctx.clearRect(0, 0, SIZE, SIZE);
+    const matrix = getMatrix();
+    const layout = getArcLayout(matrix);
+    const chords = getChords(matrix, layout);
+    const n = matrix.length;
+
+    for (const c of chords) {
+      const isHovered = hoveredChord && hoveredChord.i === c.i && hoveredChord.j === c.j;
+      const isArcHovered = hoveredArc >= 0 && (hoveredArc === c.i || hoveredArc === c.j);
+      let a;
+      if (isHovered) a = 0.85;
+      else if (hoveredArc >= 0) a = isArcHovered ? arcAlpha(c.val) : 0.06;
+      else a = alpha(c.val);
+      if (a <= 0) continue;
+
+      ctx.globalAlpha = a;
+      ctx.fillStyle = PARTIES[Math.min(c.i, c.j)].color;
+      ctx.fill(c.path);
+      ctx.globalAlpha = 1;
+    }
+
+    for (let i = 0; i < n; i++) {
+      const ap = getArcPath(i, layout);
+      ctx.fillStyle = PARTIES[i].color + 'cc';
+      ctx.fill(ap);
+      ctx.strokeStyle = hoveredArc === i ? '#1e293b' : 'rgba(0,0,0,0.2)';
+      ctx.lineWidth = hoveredArc === i ? 2 : 1;
+      ctx.stroke(ap);
+    }
+
+    ctx.fillStyle = '#1e293b';
+    ctx.font = '11px system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    const labelR = INNER_R + ARC_WIDTH + LABEL_OFFSET;
+    for (let i = 0; i < n; i++) {
+      const mid = layout.arcMids[i];
+      const lx = CX + labelR * Math.cos(mid);
+      const ly = CY + labelR * Math.sin(mid);
+      const deg = (mid * 180 / PI + 360) % 360;
+      const flip = deg > 95 && deg < 265;
+      ctx.save();
+      ctx.translate(lx, ly);
+      ctx.rotate(mid + (flip ? PI : 0));
+      ctx.fillText(PARTIES[i].name, 0, 0);
+      ctx.restore();
+    }
+  }
+
+  function hitTestChords(matrix, layout, x, y) {
+    const chords = getChords(matrix, layout);
+    for (let k = chords.length - 1; k >= 0; k--) {
+      const c = chords[k];
+      if (ctx.isPointInPath(c.path, x, y)) return c;
+    }
+    return null;
+  }
+
+  let ctx;
+
+  function onMouseMove(e) {
+    const canvas = document.getElementById('chord-canvas');
+    const rect = canvas.getBoundingClientRect();
+    const x = (e.clientX - rect.left) * (SIZE / rect.width);
+    const y = (e.clientY - rect.top) * (SIZE / rect.height);
+
+    const matrix = getMatrix();
+    const layout = getArcLayout(matrix);
+    const chord = hitTestChords(matrix, layout, x, y);
+    const arc = chord ? -1 : hitTestArc(x, y, layout);
+
+    if (chord) {
+      hoveredChord = chord;
+      hoveredArc = -1;
+      detail.innerHTML = `<strong>${PARTIES[chord.i].name}</strong> ↔ <strong>${PARTIES[chord.j].name}</strong>: ${chord.val}% overlap — ${chord.val >= 70 ? 'Sterke overeenkomst' : chord.val >= 40 ? 'Matige overeenkomst' : 'Beperkte overeenkomst'} op dit thema.`;
+    } else if (arc >= 0) {
+      hoveredArc = arc;
+      hoveredChord = null;
+      const row = matrix[arc];
+      const bonds = row.map((v, j) => ({ j, val: v })).filter(b => b.j !== arc && b.val >= 15);
+      bonds.sort((a, b) => b.val - a.val);
+      const sterkste = bonds.slice(0, 4).map(b => `${PARTIES[b.j].name} ${b.val}%`).join(' · ');
+      const zwakste = bonds.slice(-4).reverse().map(b => `${PARTIES[b.j].name} ${b.val}%`).join(' · ');
+      const themaNaam = THEME_LABELS[themeIndex];
+      detail.innerHTML = `<strong>${PARTIES[arc].name}</strong> op <strong>${themaNaam}</strong><br>` +
+        (sterkste ? `<span style="color:#334155">Sterkste band:</span> ${sterkste}<br>` : '') +
+        (zwakste ? `<span style="color:#64748b">Zwakste band:</span> ${zwakste}` : '');
+    } else {
+      hoveredArc = -1;
+      hoveredChord = null;
+      detail.innerHTML = 'Hover over een partij of verbinding voor details.';
+    }
+    draw(ctx);
+  }
+
+  function onMouseLeave() {
+    hoveredArc = -1;
+    hoveredChord = null;
+    detail.innerHTML = 'Hover over een partij of verbinding voor details.';
+    draw(ctx);
+  }
+
+  function setTheme(i) {
+    themeIndex = i;
+    document.querySelectorAll('.theme-btn').forEach((b, k) => b.classList.toggle('active', k === i));
+    hoveredArc = -1;
+    hoveredChord = null;
+    detail.innerHTML = `${THEME_LABELS[i]} — Hover voor details.`;
+    draw(ctx);
+  }
+
+  const canvas = document.getElementById('chord-canvas');
+  const detail = document.getElementById('detail');
+  if (!canvas || !detail) throw new Error('Canvas of detail-panel niet gevonden');
+  ctx = setupCanvas();
+
+  THEME_LABELS.forEach((label, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'theme-btn' + (i === 0 ? ' active' : '');
+    btn.textContent = label;
+    btn.addEventListener('click', () => setTheme(i));
+    document.getElementById('theme-buttons').appendChild(btn);
+  });
+
+  canvas.addEventListener('mousemove', onMouseMove);
+  canvas.addEventListener('mouseleave', onMouseLeave);
+
+  draw(ctx);
+})();
+  </script>
+</body>
+</html>

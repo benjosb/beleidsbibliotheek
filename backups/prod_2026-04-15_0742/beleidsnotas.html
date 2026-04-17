@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleidsnota's · BeleidsBibliotheek Wassenaar</title>
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=roboto:300,400,500,700|open-sans:300,400,600,700">
+    <link rel="stylesheet" href="styles.css?v=20260411a">
+    <meta name="theme-color" content="#55601c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="application-name" content="BeleidsBibl.">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="pwa-icons/icon-192.png">
+    <script src="pwa-register.js" defer data-pwa-register></script>
+    <style>
+        .beleidsnotas-sectie { margin: 2rem 0; }
+        .beleidsnotas-intro { margin-bottom: 1.5rem; color: var(--gray-medium); }
+        .beleidsnotas-tabel { width: 100%; border-collapse: collapse; background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .beleidsnotas-tabel th, .beleidsnotas-tabel td { padding: 0.6rem 0.8rem; text-align: left; border-bottom: 1px solid var(--gray-light); }
+        .beleidsnotas-tabel th { background: var(--gray-lighter); font-weight: 600; font-size: 0.85rem; }
+        .beleidsnotas-tabel tr:hover td { background: rgba(85,96,28,0.04); }
+        .beleidsnotas-tabel input[type="text"], .beleidsnotas-tabel input[type="url"], .beleidsnotas-tabel select { width: 100%; padding: 0.4rem; border: 1px solid var(--gray-light); border-radius: 3px; font-size: 0.9rem; }
+        .beleidsnotas-tabel input:focus, .beleidsnotas-tabel select:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
+        .beleidsnotas-tabel .col-doc { min-width: 200px; }
+        .beleidsnotas-tabel .col-toel { min-width: 180px; }
+        .beleidsnotas-tabel .col-link { min-width: 220px; }
+        .beleidsnotas-tabel .col-bbv { min-width: 220px; }
+        .beleidsnotas-tabel .col-od { min-width: 180px; font-size: 0.85rem; }
+        .beleidsnotas-tabel .col-od .beleidsnotas-od-link { color: var(--wassenaar-blue); text-decoration: none; }
+        .beleidsnotas-tabel .col-od .beleidsnotas-od-link:hover { text-decoration: underline; }
+        .beleidsnotas-tabel .col-verif { width: 4rem; text-align: center; }
+        .beleidsnotas-tabel .col-init { width: 5rem; }
+        .beleidsnotas-vink { display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; cursor: pointer; border: 2px solid var(--gray-medium); border-radius: 4px; background: #fff; }
+        .beleidsnotas-vink.checked { background: var(--primary); border-color: var(--primary); color: #fff; }
+        .beleidsnotas-vink.checked::after { content: '✓'; font-size: 0.9rem; font-weight: bold; }
+        .beleidsnotas-link-cell { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
+        .beleidsnotas-link-cell input { flex: 1; min-width: 120px; }
+        .beleidsnotas-open-link { font-size: 0.8rem; white-space: nowrap; color: var(--wassenaar-blue); text-decoration: none; }
+        .beleidsnotas-open-link:hover { text-decoration: underline; }
+        .beleidsnotas-filter { margin-bottom: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+        .beleidsnotas-filter label { font-weight: 500; }
+        .beleidsnotas-filter select { padding: 0.4rem 0.6rem; border: 1px solid var(--gray-light); border-radius: 3px; min-width: 200px; }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Ga naar inhoud</a>
+    <script src="disclaimer.js"></script>
+    <header class="site-header" role="banner">
+        <div class="container header-top">
+            <a href="https://www.wassenaar.nl" class="logo-link" aria-label="Gemeente Wassenaar" target="_blank" rel="noopener">
+                <img src="https://cuatro.sim-cdn.nl/wassenaar/uploads/2023-09/wassenaar_logo_fc.svg" alt="Gemeente Wassenaar" class="site-logo" width="200" height="35">
+            </a>
+            <div class="header-text">
+                <h1><a href="index.html" class="header-title-link">BeleidsBibliotheek Wassenaar</a></h1>
+                <p class="subtitle">Gemeente Wassenaar · Inzicht in beleid en besluitvorming</p>
+            </div>
+        </div>
+        <nav class="site-nav-bar" aria-label="BeleidsBibliotheek">
+            <div class="container site-nav-inner">
+                <a href="index.html" class="site-nav-link">BeleidsBibliotheek</a>
+                <a href="overdrachtsdossier.html" class="site-nav-link">Overdrachtsdossier</a>
+            </div>
+            <button type="button" class="nav-hamburger" id="navHamburger" aria-label="Menu openen" aria-expanded="false">
+                <span class="nav-hamburger-bar"></span>
+                <span class="nav-hamburger-bar"></span>
+                <span class="nav-hamburger-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container" id="main" role="main">
+        <section class="beleidsnotas-sectie" aria-labelledby="beleidsnotas-titel">
+            <h2 id="beleidsnotas-titel" class="overdrachtsdossier-pagina-titel">Beleidsnota's en beleidsdocumenten</h2>
+            <p class="beleidsnotas-intro">Overzicht van beleidsdocumenten uit het Overdrachtsdossier. Koppel elk document aan een BBV-hoofdstuk/taakveld, voeg links toe en markeer na verificatie. Velden worden automatisch opgeslagen. Bij links: klik op <strong>Open</strong> om in een nieuw tabblad te openen. De BBV-keuzes zijn voorstellen; pas aan waar nodig.</p>
+
+            <div class="beleidsnotas-filter">
+                <label for="filterBbv">Filter op BBV-taakveld:</label>
+                <select id="filterBbv" aria-label="Filter op BBV-taakveld">
+                    <option value="">— Alle —</option>
+                </select>
+            </div>
+
+            <div class="table-responsive">
+                <table class="beleidsnotas-tabel" id="beleidsnotasTabel">
+                    <thead>
+                        <tr>
+                            <th class="col-doc">Document</th>
+                            <th class="col-toel">Toelichting</th>
+                            <th class="col-link">Link</th>
+                            <th class="col-bbv">BBV-hoofdstuk / taakveld</th>
+                            <th class="col-od">OD</th>
+                            <th class="col-verif" title="Geverifieerd">✓</th>
+                            <th class="col-init">Initialen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="beleidsnotasBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>BeleidsBibliotheek Wassenaar · Versie <span id="appVersion">7.0.0 (maart 2026)</span> · <a href="https://www.wassenaar.nl" target="_blank" rel="noopener">wassenaar.nl</a> · <a href="index.html#compliance" class="footer-link-btn">Compliance</a> · <button type="button" id="disclaimerLink" class="footer-link-btn">Disclaimer</button></p>
+        </div>
+    </footer>
+    <script src="beleidsnotas.js"></script>
+    <script>
+    (function() {
+        var btn = document.getElementById('navHamburger');
+        var bar = btn && btn.closest('.site-nav-bar');
+        if (!btn || !bar) return;
+        btn.addEventListener('click', function() {
+            var open = bar.classList.toggle('nav-open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+        });
+        document.querySelectorAll('.site-nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                bar.classList.remove('nav-open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Menu openen');
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

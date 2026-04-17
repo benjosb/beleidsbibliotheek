@@ -25,7 +25,7 @@ echo "=== Deploy wassenaar.besluit-wijzer.nl ==="
 echo ""
 
 echo "1. Besluiten, Schrijf-Wijzer, Overdrachtsdossier, Roadmap, PWA-lite..."
-scp $SSH_OPTS index.html data.js app.js taakvelden_iv3.js app_v5.js app_v6.js disclaimer.js overdrachtsdossier.html overdrachtsdossier.js beleidsnotas.html beleidsnotas.js roadmap.html verbeterpunten-beheer.html viewer.html wijzigingen.html beheer.html reactie.html werklijst-sociaal-domein.html werklijst-reacties.html styles.css stempel.svg "wassenaar_logo_fc kopie.svg" manifest.webmanifest sw.js pwa-register.js "${REMOTE}:${REMOTE_PATH}/"
+scp $SSH_OPTS index.html data.js app.js scroll-sync-bridge.js beleidsnota-per-taakveld-data.js taakvelden_iv3.js app_v5.js app_v6.js disclaimer.js overdrachtsdossier.html overdrachtsdossier.js beleidsnotas.html beleidsnotas.js roadmap.html verbeterpunten-beheer.html viewer.html wijzigingen.html beheer.html reactie.html werklijst-sociaal-domein.html werklijst-reacties.html styles.css stempel.svg "wassenaar_logo_fc kopie.svg" manifest.webmanifest sw.js pwa-register.js "${REMOTE}:${REMOTE_PATH}/"
 ssh $SSH_OPTS "${REMOTE}" "mkdir -p ${REMOTE_PATH}/pwa-icons"
 scp $SSH_OPTS pwa-icons/*.png "${REMOTE}:${REMOTE_PATH}/pwa-icons/"
 ssh $SSH_OPTS "${REMOTE}" "mkdir -p ${REMOTE_PATH}/scripts ${REMOTE_PATH}/schrijf-wijzer"

@@ -1,0 +1,24 @@
+{
+  "taakveld": "4.2",
+  "naam": "Onderwijshuisvesting",
+  "gemeente": "Wassenaar",
+  "notities": "Kopieer naar keywords-4.2.json en breid uit. Geen secrets in dit bestand.",
+  "zoektermen": [
+    "onderwijshuisvesting",
+    "integraal huisvestingsplan",
+    "IHP onderwijs",
+    "schoolgebouw",
+    "nieuwbouw school",
+    "huisvesting onderwijs",
+    "verordening voorzieningen huisvesting onderwijs",
+    "Den Deylschool",
+    "Kievietschool",
+    "Sint Jozefschool",
+    "Sint Jan Baptistschool",
+    "SKOW",
+    "voorbereidingskrediet",
+    "American School Wassenaar",
+    "gymnastieklokaal gemeente"
+  ],
+  "uitsluitingen_optioneel": []
+}

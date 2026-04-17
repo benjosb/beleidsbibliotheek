@@ -1,0 +1,4505 @@
+═══════════════════════════════════════════════════════════════
+
+SYSTEEMPROMPT
+
+═══════════════════════════════════════════════════════════════
+
+Je bent een beleidsanalist van de gemeente Wassenaar. Je taak is het opstellen van een
+geconsolideerde beleidsbriefing voor een nieuw aangetreden wethouder.
+
+═══════════════════════════════════════════════════════════════
+DOEL
+═══════════════════════════════════════════════════════════════
+
+Schrijf een beknopte, feitelijke synthese van het vigerende gemeentelijk beleid
+binnen het opgegeven beleidsdomein. De briefing stelt een nieuwe wethouder in staat
+om binnen 15 minuten te begrijpen:
+  1. Welke beleidskeuzes er zijn gemaakt
+  2. Wat de actuele stand van zaken is
+  3. Welke besluiten aan die keuzes ten grondslag liggen
+
+═══════════════════════════════════════════════════════════════
+BRONREGELS — NIET-ONDERHANDELBAAR
+═══════════════════════════════════════════════════════════════
+
+1. ELKE feitelijke bewering MOET eindigen met een bronverwijzing in dit formaat:
+   [Besluit: «naam besluit», «datum»]
+
+2. Als een bewering op MEERDERE besluiten steunt, vermeld ze allemaal:
+   [Besluit: «naam 1», «datum 1»; «naam 2», «datum 2»]
+
+3. Je mag UITSLUITEND informatie gebruiken die LETTERLIJK in de aangeleverde
+   besluitteksten staat. Je mag NIET:
+   - Informatie toevoegen uit je eigen kennis
+   - Aannames doen over beleid dat niet in de besluiten staat
+   - Gevolgtrekkingen maken die niet expliciet in een besluit staan
+   - Termen of beleidsdoelen noemen die niet in de bronteksten voorkomen
+
+4. Als je iets NIET kunt vaststellen op basis van de bronnen, schrijf dan
+   expliciet: "Op basis van de beschikbare besluiten is niet vast te stellen of…"
+
+5. Als de besluittekst ONDUIDELIJK of ONVOLLEDIG is, meld dit:
+   "⚠ De besluittekst van [naam, datum] is onvolledig; verificatie bij de bron-PDF
+   wordt aanbevolen."
+
+═══════════════════════════════════════════════════════════════
+STRUCTUUR VAN DE BRIEFING
+═══════════════════════════════════════════════════════════════
+
+Gebruik exact deze opbouw:
+
+### 1. SAMENVATTING BELEIDSDOMEIN
+- Maximaal 5 zinnen die het domein in hoofdlijnen beschrijven
+- Elke zin met bronverwijzing
+
+### 2. BELEIDSCLUSTERS
+Groepeer de besluiten in inhoudelijke thema's (bijv. "Jeugdzorg", "Wmo",
+"Schuldhulpverlening" binnen Sociaal Domein). Per cluster:
+
+#### 2.x «Naam thema»
+
+**Actueel beleid:**
+- Beschrijf in 2–5 zinnen wat het huidige beleid is op dit thema
+- Elke zin met bronverwijzing(en)
+
+**Chronologie:**
+- Geef een tijdlijn van relevante besluiten (oudste eerst)
+- Markeer waar een besluit een eerder besluit WIJZIGT of VERVANGT
+
+**Aandachtspunten:**
+- Eventuele tegenstrijdigheden tussen besluiten
+- Besluiten met een einddatum of evaluatiemoment
+- Zaken die nog in uitvoering zijn (als dat uit de tekst blijkt)
+
+### 3. BELEIDSWIJZIGINGEN EN OPVOLGING
+- Overzicht van besluiten die eerdere besluiten wijzigen of vervangen
+- Expliciet benoemen welk besluit welk eerder besluit raakt
+
+### 4. LACUNES EN KANTTEKENINGEN
+- Onderwerpen die je op basis van gangbaar gemeentelijk beleid zou verwachten
+  maar die NIET in de besluiten voorkomen → benoem dit als observatie,
+  NIET als feit
+- Besluiten waarvan de tekst onvolledig of onduidelijk was
+- Besluiten die niet eenduidig in één cluster passen
+
+### 5. BRONNENLIJST
+- Volledige lijst van alle besluiten die in de briefing zijn gebruikt
+- Formaat: «datum» | «naam besluit» | «type (raad/college)» | «PDF-bron»
+
+═══════════════════════════════════════════════════════════════
+STIJL EN TAAL
+═══════════════════════════════════════════════════════════════
+
+- Schrijf in het Nederlands
+- Formeel maar toegankelijk — geschikt voor een bestuurder, niet voor een jurist
+- Gebruik actieve zinnen: "De raad heeft besloten…", niet "Er is besloten…"
+- Vermijd jargon dat niet in de bronteksten voorkomt
+- Wees precies: "verlenging met één jaar" is iets anders dan "structurele voortzetting"
+- Wees kort: de briefing moet in 15 minuten leesbaar zijn
+
+═══════════════════════════════════════════════════════════════
+ZELFVERIFICATIE — VOER DIT UIT VOOR JE ANTWOORDT
+═══════════════════════════════════════════════════════════════
+
+Voordat je de briefing oplevert, controleer:
+
+☐ Heeft ELKE feitelijke zin een bronverwijzing?
+☐ Komt ELKE genoemde bronverwijzing voor in de aangeleverde data?
+☐ Heb ik NERGENS informatie toegevoegd die niet in de besluitteksten staat?
+☐ Heb ik tegenstrijdigheden of opvolging van besluiten gesignaleerd?
+☐ Heb ik lacunes en onduidelijkheden expliciet benoemd?
+☐ Is de bronnenlijst compleet?
+
+Als je op een van deze punten twijfelt, meld dit aan het einde van de briefing
+onder het kopje "⚠ Opmerkingen bij deze synthese".
+
+
+═══════════════════════════════════════════════════════════════
+
+GEBRUIKERSPROMPT
+
+═══════════════════════════════════════════════════════════════
+
+
+Hieronder vind je alle besluiten van de gemeente Wassenaar binnen het portefeuille-thema
+"Financiën, Economie & Sport". De besluiten omvatten zowel raadsbesluiten (2019–2025) als 
+collegebesluiten (2022–2025) uit de volledige huidige collegeperiode.
+
+Aanvullend is het coalitieakkoord 2022–2026 "Samen voor Wassenaar" bijgevoegd 
+als referentiekader.
+
+Stel een beleidsbriefing op volgens de instructies in de systeemprompt.
+
+
+═══════════════════════════════════════════════════════════════
+
+COALITIEAKKOORD 2022–2026 — SAMEN VOOR WASSENAAR
+
+═══════════════════════════════════════════════════════════════
+
+SAMEN VOOR WASSENAAR
+KOERSVAST, OPEN EN BETROKKEN
+
+2
+SAMEN VOOR WASSENAAR
+KOERSVAST, OPEN EN BETROKKEN
+INHOUDSOPGAVE
+Woord vooraf 3
+Bestuur en Middelen 4
+Mens en Maatschappij 7
+Fysieke Leefomgeving 9
+Portefeuilleverdeling college b&w 14
+
+Woord vooraf
+We staan voor grote maatschappelijke Wassenaar wil een inclusieve, groene en
+opgaven, onder meer op het gebied van financieel gezonde gemeente zijn waar
+klimaat en duurzaamheid, voldoende iedereen prettig kan leven, wonen en
+betaalbare woningen, vergrijzing, werken. Een plek waar onze kinderen
+toegang tot zorg en (verkeers)veiligheid. gezond en veilig kunnen opgroeien en
+Op lokaal niveau verlangen inwoners en waar onze ouderen langer vitaal kunnen
+ondernemers antwoorden op hun blijven.
+vragen, ondersteuning bij maatschappe­
+lijke initiatieven en hulp bij problemen. De coalitie streeft naar rust en even­
+Zij vragen om een betrokken gemeente wicht in het bestuur. Zorgvuldige en
+die luistert, duidelijk en betrouwbaar is. transparante besluitvorming vormt het
+Een gemeente die koers houdt in uitgangspunt van ons handelen. Het
+onstuimige tijden. politieke debat en de gesprekken met
+inwoners, ondernemers en maat­
+Wij werken samen vanuit onze idealen schappelijke organisaties worden
+en ambities; we vinden elkaar in onze gevoerd op basis van wederzijds respect.
+overtuiging van wat goed is voor We gaan in gesprek over dit coalitie­
+Wassenaar. De partijen VVD, CDA, D66, akkoord en de keuzes die we hierin
+DLW en PvdA presenteren een coalitie­ hebben gemaakt. Het nieuwe college
+akkoord waarin we zoveel mogelijk treedt verbindend op; we doen het
+rekening houden met de behoeften van immers samen voor Wassenaar.
+alle Wassenaarders.
+3
+
+Bestuur en Middelen
+Financiën en belastingen We sparen voldoende voor de toekomst
+De gemeente houdt de financiën op door afschrijvingen op te nemen in de
+orde met een structureel sluitende begroting. Ook de opbrengsten van de
+begroting. verkoop van gemeentelijke onroerende
+zaken worden toegevoegd aan de
+In 2024 en 2025 komt er in beginsel geen algemene reserve. Bestemmingsreserves
+extra verhoging van de onroerendezaak­ worden beperkt.
+belasting (ozb) bovenop de inflatie­
+correctie, tenzij dit echt nodig is voor Economie
+het voorzieningenniveau voor inwoners. We werken aan een economische visie
+De toeristenbelasting wordt deze in samenspraak met ondernemers die in
+raads periode niet verhoogd; na een jaar 2024 gereed moet zijn. Hierin wordt
+evalueren we de effectieve inzet van onder meer opgenomen het behoud en
+deze belasting. toekomstbestendig maken van de
+bestaande bedrijventerreinen en
+In de Kadernota 2024 volgt de uitwer­ aansluiting gezocht bij de regionale
+king voor wat betreft ons ambitie­ strategie werklocaties van de Metro­
+niveau. Op basis hiervan maken we poolregio Rotterdam Den Haag (MRDH).
+keuzes binnen het beschikbare
+financiële kader. Ambtelijke organisatie
+De ingeslagen weg na de ontvlechting
+We overwegen het lenen van geld alleen van de Werkorganisatie Duivenvoorde
+als dit noodzakelijk is voor (project­) (de voormalige ambtelijke samen wer­
+investeringen. De gemeente gaat niet king tussen Voorschoten en Wassenaar)
+lenen om lopende uitgaven te dekken. wordt voortgezet. We werken aan de
+We gaan daarnaast actief op zoek naar verdere ontwikkeling van de jonge
+44 subsidies, fondsen en mogelijkheden ambtelijke organisatie, zodat maat ­
+voor cofinanciering van projecten, zoals schappelijke vraagstukken effectief
+de restauratie van De Paauw en het kunnen worden aangepakt. Daarbij is
+revitaliseren van onze dorpskern. het van belang voldoende deskundig
+
+personeel in dienst te hebben en een Gemeenschappelijke regelingen
+aantrekkelijke werkgever te zijn. De Veel maatschappelijke uitdagingen
+coalitiepartners zullen de voortgang vragen om samenwerking met partners
+binnen de ambtelijke organisatie in de regio. Dat vraagt een open
+jaarlijks evalueren. houding om gezamenlijk deze uitda­
+gingen aan te kunnen gaan. Onze
+Servicegerichtheid en gemeente is een actieve, betrouwbare 5
+dienstbaarheid partner in de regio.
+De gemeente behartigt het algemeen
+belang en heeft oog voor het individu. In We zorgen voor een kundige, construc­
+Wassenaar voelen inwoners en onder­ tieve vertegenwoordiging van het
+nemers zich geholpen en gesteund door Wassenaarse belang. We willen hier
+de gemeente dankzij toegankelijke en maximale impact behalen en stellen
+efficiënte dienstverlening. De communi­ hiervoor voldoende ambtelijke capaciteit
+catie tussen gemeente, inwoners en beschikbaar.
+ondernemers is transparant, duidelijk en
+getuigt van wederzijds respect. Openbare orde en veiligheid
+De veiligheidsprioriteiten krijgen een
+Gemeentewinkel plaats in het nieuw op te stellen
+We realiseren een toegankelijke, laag­ integraal veiligheidsbeleid.
+drempelige locatie voor de Gemeente­
+winkel, waar inwoners en ondernemers De openbare orde wordt gehandhaafd
+terecht kunnen voor gemeentelijke door de politie, inspecteurs openbare
+dienstverlening, zoals een paspoort. Ook ruimte en buitengewoon opsporings­
+zijn ze hier welkom met vragen, bijvoor­ ambtenaren (boa’s). Zij houden toezicht
+beeld over mogelijkheden om te en treden waar nodig op tegen mis­
+verduurz amen. standen en overtredingen.
+
+Om in te spelen op de thema’s als Evenementen en vergunningen
+‘omgaan met onbegrepen gedrag’ en Wassenaar is een dorp waar veel
+meervoudige sociale problematiek is het evenementen worden georganiseerd.
+belangrijk om zorg en veiligheid in een Evenementen zorgen voor verbinding en
+lokale kamer samen te brengen. Dit samenhang. We werken aan een nieuw
+geeft de mogelijkheid om naargelang de evenementenbeleid om duidelijke kaders
+situatie snel te schakelen en mensen te bieden. We denken mee om
+persoonsgericht te helpen. evenementen mogelijk te maken.
+Om de gemeentelijke handhaving goed Inwonersparticipatie
+te organiseren, stellen we duidelijke In Wassenaar doet iedereen mee, van
+66 prioriteiten en ontwikkelen we een visie jong tot oud. We schetsen heldere
+en een aanpak. Ook bezien we de kaders voor inwonersparticipatie langs
+benodigde handhavingscapaciteit. de lijnen van de verordening en het
+participatiekompas.
+Politiebureau
+We willen het politiebureau behouden Vergrijzing wordt een groot thema in
+voor het dorp. Wassenaar. We zullen dit oppakken
+samen met de ouderen en met hen
+Ondermijning komen tot een plan voor ouderen­
+De inzet op ondermijning is de participatie.
+afgelopen jaren geïntensiveerd: zo is er
+inmiddels een vaste formatieplaats voor Er wonen veel internationals in
+een onder mijningsregisseur in het team. Wassenaar. Dit is een flinke groep
+De regisseur houdt zich bezig met inwoners die ook kan meedraaien in het
+signalen rond thema’s als (vastgoed) verenigings leven of zich kan inzetten als
+fraude, drugs en mensenhandel. De vrijwilliger. In oktober 2021 is de start­
+regisseur zet de komende jaren vooral in notitie ‘Internationale Wassenaarders’
+op bewust wording onder inwoners en besproken en vastgesteld.
+ondernemers en hoe zij vormen van
+ondermijning kunnen melden.
+
+Mens en Maatschappij
+Sociaal domein mering van activiteiten. We koesteren
+In Wassenaar behouden we goede en ondersteunen een sterk verenigings­
+welzijns­ en zorgvoorzieningen. We leven en de vrijwilligers. We zorgen voor
+geven uitvoering aan bestaand beleid. een gerichte spreiding van sociale
+De gemeente, inwoners en maat­ activiteiten en vaste ontmoetings centra
+schappel ijke instellingen onders teunen in verschillende buurten van Wassenaar.
+elkaar. Een nauwe en efficiënte samen­
+werking is daarvoor een voor waarde. In 2023 herijken we het bestaand beleid
+en stellen we de kaders op voor de
+Om de kwaliteit en toegankelijkheid van komende jaren. Verder leggen we
+zorg te garanderen, dient deze in accenten op preventie, het wegwerken
+financieel en maatschappelijk opzicht en van wachtlijsten, aandacht voor mantel­
+qua personele bezetting houdbaar te zorg en respijtzorg (bijvoorbeeld met
+zijn. Dit vraagt om scherpe keuzes in het Odensecafé), dementie vriendelijke
+prioritering, waarbij de mens centraal gemeente en armoede bestrijding. Ten
+staat. Daarbij wordt goed gekeken naar aanzien van ons armoedebeleid
+de hulpvraag en situatie per individu. evalueren we het maatwerkfonds en bij
+We handelen vanuit vertrouwen en gebleken toegevoegde waarde, zien we
+respect, normaliseren zorg volgens toe op een meer permanent karakter.
+landelijke richtlijnen en maken waar
+mogelijk gebruik van landelijke finan­ Sociaal Team Wassenaar
+ciering en fondsen. Het Sociaal Team Wassenaar heeft een
+spilfunctie als het gaat om samen­
+We zetten in op het versterken en werking in het sociaal domein. We
+verbinden van het maatschappelijk streven naar een sterk team, waarin
+middenveld. Dit doen we onder meer via voor alle betrokkenen een duidelijke rol
+een breed scala aan bestaande en is weggelegd. We beginnen zo snel 7
+nieuwe activiteiten; door multifunctio­ mogelijk aan het vergroten van de
+neel gebruik van accommodaties en het bekendheid en bereikbaarheid van het
+gezamenlijk optrekken in de program­ team (1 loket, 1 telefoonnummer).
+
+Er is aandacht voor centrale huisvesting meerjarige contracten. We kijken altijd
+van het Sociaal Team Wassenaar. Samen naar de beste financieringsvorm voor
+met andere partijen inventariseren we zowel de ketenpartners als de
+wat nodig is en maken een realistische gemeente.
+begroting van kosten die nodig zijn voor
+het versterken van het preventief veld. Inclusie
+De inclusieagenda wordt opgesteld, in
+Jeugd- en jongerenbeleid 2023 starten we met de uitvoering van
+Er wordt gewerkt aan jeugd­ en concrete acties.
+jongeren beleid, daarbij gebruiken we de
+inbreng die wordt opgehaald in sessies Sport
+met jongeren en hun ouders. Sporten is belangrijk voor de lichame­
+lijke en geestelijke gezondheid van alle
+We onderzoeken de mogelijkheden voor inwoners en is daarnaast een sterk
+een Jeugd­ of Jongerenraad en andere wapen in de strijd tegen eenzaamheid.
+vormen van betrokkenheid van de jeugd. We focussen op verbinding en samen­
+Samen met de jongeren in ons dorp hang door het stimuleren van sport­ en
+komen we tot een plan voor Jeugd­ cultuurparticipatie en waar nodig extra
+participatie. te investeren in activiteiten.
+Naast het bestaande ambulante jeugd­ Er wordt een sportvisie opgesteld en we
+en jongerenwerk gaan we op zoek naar herzien het subsidiebeleid. We voeren
+ontmoetingsplekken waar de jeugd het Sport­ en Preventieakkoord uit. We
+naartoe kan om tijd met elkaar door te geven sport een stevige plaats in de
+brengen. inclusieagenda en het preventiebeleid.
+88 We zetten in op betere voorlichting over Gezondheidszorg
+alcohol en drugs, mentale gezondheid, De gemeente onderkent het maat­
+seksualiteit, voeding en sport; scholen schappelijk belang van gezondheid en
+zijn hierin een belangrijke partner. zet in op voldoende beschikbare huis­
+artsenzorg in Wassenaar. Het initiatief
+Subsidie- en inkoopbeleid van de Wassenaarse huisartsen om een
+We zorgen voor een zuivere lijn in het gezondheidscentrum te vestigen in de
+toekennen van subsidies dan wel inkoop voormalige Sint Jozefkerk bezien we
+en onderzoeken mogelijkheden om vanuit een positieve grondhouding.
+aanvragers meer zekerheid te bieden via
+
+Fysieke Leefomgeving
+schaps tafel Duin, Horst en Weide en het
+Openbare ruimte Nationaal Park Hollandse Duinen,
+In de bebouwde omgeving gaan we benutten we als middel om onze
+komende jaren naar onderhouds­ ruimtelijke ambities te bereiken.
+niveau B. Dit betekent dat de openbare
+ruimte schoon, heel en veilig is met Beschermd dorpsgezicht
+minimale oneffenheden. Per gebied We koesteren ons beschermd dorps­
+doen we wat nodig is; dit vraagt om gezicht. Het huidige beleid is afdoende
+maatwerk, prioritering en fasering. We om enerzijds ons dorpsgezicht te
+maken een inhaalslag waar het gaat om behouden en anderzijds ons erfgoed 9
+bestrating in de openbare ruimte. verantwoord te verduurzamen.
+We stellen een beheervisie op, waaruit Woningbouw en bouwlocaties
+instandhoudingsplannen volgen. Hierin We maken vanuit de huidige Woonvisie
+wordt ook aandacht besteed aan het tempo met de uitvoering van vier
+onderhoudsniveau van de landgoederen. projecten Den Deijl, Gemeentewerf,
+De beheervisie wordt in 2023 voorgelegd Kerkehout en ANWB. In de Woonzorg­
+aan de raad. visie (gereed in 2024) worden de
+ontwikkelingen van deze bouwplannen
+Natuur en groen meegenomen.
+Wassenaar wil het groene en landelijke
+karakter van de gebieden behouden. Er We realiseren 30% sociale huur op de
+komt een integrale visie op hoe we de toekomstige bouwlocaties om te
+meest kwetsbare natuurgebieden, zoals voldoen aan de landelijke streefwaarde.
+Meijendel, gaan ontlasten. Daarbij Er is daarnaast voldoende aandacht voor
+bezien we deze gebieden in onderlinge koopwoningen in het middensegment
+verbinding met elkaar. We zetten in op en het stimuleren van doorstroming. De
+spreiding van recreatie binnen de gemeente staat positief tegenover
+verschil lende natuurgebieden en we flexwoningen, mits inpasbaar in de
+beheersen de recreatiedruk. De samen­ omgeving.
+werkingsverbanden, zoals de land­
+
+Bij het project Gemeentewerf, inclusief voordeel bestaat om een gebouw te
+het voor woningbouw geschikt te behouden voor de toekomst. De
+maken gemeentekantoor, gaan we uit opbrengsten van de verkoop worden
+van minimaal 30% sociale huur, toegevoegd aan de algemene reserve.
+40% middenhuur en ­koop en voor het
+overige het hogere segment. Eerst Monumenten en cultureel
+wordt de huidige gemeentewerf erfgoed
+verplaatst naar een nieuwe locatie We doen er alles aan om ons cultureel
+1100 (in het eerste kwartaal van 2024). De erfgoed te behouden en toekomst­
+vervuilde bodem wordt gesaneerd. bestendig te maken door adequaat
+onderhoud en toezicht. We helpen
+Het burgerinitiatief tot zelfstandige eigenaren bij de verduurzaming van
+seniorenwoningen met zorgfaciliteiten monumenten door te informeren,
+wordt zo snel mogelijk gerealiseerd. stimuleren en faciliteren. Wij bevorderen
+Over andere zorgfaciliteiten maakt de passende herbestemmingen, die
+gemeente prestatieafspraken met de aansluiten bij de mogelijkheden die het
+woningbouwcorporaties. monument biedt.
+Door de samenvoeging van de Sint Integraal Huisvestingsplan
+Jozefschool en Sint Jan Baptistschool Onderwijs
+komen beide locaties vrij. Op deze Het Integraal Huisvestingsplan wordt
+locaties worden appartementen herijkt (2023). De huidige norm voor
+gebouwd, met een evenwichtige schoolgebouwen is bijna energie­
+verde ling in sociale huur en middenhuur neutraal (BENG). We onderzoeken wat
+en ­koop. de meerkosten zijn om bij nieuwbouw
+energieneutraal (ENG) te zijn en zullen
+Gemeentelijk vastgoed hierin per project een keuze maken. We
+De gemeente maakt tempo met het gaan in gesprek met scholen over
+verkopen van onroerende zaken, tenzij duurzaamheid en ventilatie.
+er een duidelijk maatschappelijk
+
+We zoeken naar een geschikte locatie De Warenar blijft eigendom van de
+voor de gezamenlijke nieuwbouw voor gemeente, omdat is gebleken dat
+de Sint Jozefschool en Sint Jan Baptist­ verkoop niet reëel is. We investeren
+school in een Integraal Kindcentrum. alleen in de Warenar als de langdurige
+erfpacht kan worden verlengd.
+De Paauw
+Raadhuis De Paauw krijgt de functie van We onderzoeken of het haalbaar is
+gemeentelijk bestuurscentrum. Daar­ verschillende functies te combineren,
+voor wordt het rijksmonument zo snel zoals een cultuurhuis met een buurt­
+mogelijk op passende wijze gerestau­ functie en museum (bijvoorbeeld een
+reerd en ingericht. We proberen dorpsmuseum en/of het brand­
+hiervoor financiering te verkrijgen via weermuseum). Het doel is de theater­
+subsidies, fondsen en/of crowdfunding. functie te behouden.
+We gaan uit van het financiële kader
+zoals eerder door de gemeenteraad is Duurzaamheid
+vastgesteld en maken de kosten voor dit We gaan inwoners actief informeren,
+project zo inzichtelijk mogelijk. faciliteren en stimuleren om zelf te
+verduurzamen.
+Op korte termijn moet er een integraal
+plan liggen voor de locatiekeuze van de De gemeente geeft zelf het goede
+huisvesting van de overige ambtenaren voorbeeld en neemt daarom maat­
+en de gemeentewinkel. In 2023 hakken regelen om te verduurzamen. Deze
+we knopen door. maatregelen moeten zich binnen
+twintig jaar terugverdienen. Onze
+De Warenar duurzaamheidsdoelstellingen moeten
+De Warenar zorgt voor verbinding. Wij ook meetbaar zijn; hiervoor wordt de
+vinden het daarom belangrijk dat de CO2­ladder gebruikt. 11
+culturele en sociale functie van de
+Warenar behouden blijft voor de
+Wassenaarders.
+
+Avalex en milieustraat ten niet worden toegestaan. Bij het
+We onderzoeken welke mogelijkheden opstellen van de visie betrekken we
+er zijn om het afvalbrengstation op ondern emers.
+termijn te verplaatsen. Uiteraard De toegankelijkheid van het strand
+behouden we de service voor de wordt geoptimaliseerd; denk aan
+inwoners van Wassenaar. Er komt een leuningen bij de trappen en verharding
+concreet plan om restafval te reduceren. van het pad naar zee. Er komen meer
+faciliteiten, zoals een rolstoelvriendelijke
+Levendige dorpskern openbare wc en een bewaakte fietsen­
+Een levendige dorpskern draagt bij aan stalling met elektrische laadpalen. We
+economische activiteit en sociale zetten in op een OV­verbinding naar het
+verbinding. De gemeente draagt bij aan strand.
+een gezellig dorpshart met mooie
+winkels en goede voorzieningen. Verkeer
+1122 Verkeersveiligheid en leefbaarheid zijn
+De dorpskern moet voor iedereen belangrijke uitgangspunten. We hebben
+toegankelijk zijn (inclusief); we zorgen de ambitie om bijna overal in de
+voor een rolstoeltoegankelijke openbare bebouwde kom de snelheid van 30 km/u
+wc. We zorgen voor een smaakvolle te behouden of in te voeren. Daarbij zijn
+inrichting van de openbare ruimte met we pragmatisch met betrekking tot de
+aandacht voor het beschermd inrichting op korte termijn. Bij groot
+dorpsgezicht. onderhoud gaan we herinrichten,
+daarbij zijn de richtlijnen van CROW van
+We beginnen in 2023 met de vernieu­ belang. Een aantal gebiedsontsluitende
+wing van de dorpskern gebaseerd op het wegen (bijvoorbeeld Stoeplaan, Groot
+beeldkwaliteitsplan, brancheringsp lan Haesebroekseweg tot aan Papegaaien­
+en stedenbouwkundig plan. De planning laan, de Wittenburgerweg) blijft
+dient realistisch te zijn qua uitvoering 50 km/u; hier kan verkeer (inclusief
+en financiering. Mogelijkheden tot openbaar vervoer en hulpdiensten)
+co­financiering en fondsenwerving doorstromen zonder dat dit gevolgen
+moeten worden onderzocht. heeft voor de leefbaarheid en verkeers­
+veiligheid.
+Strand
+We ontwikkelen een strandvisie gericht We stimuleren fietsverkeer en bevor­
+op behoud van het huidige karakter als deren fietsveiligheid bij scholen en
+familiestrand, waarin jaarrond­activitei­ sport verenigingen, bijvoorbeeld d.m.v.
+
+schoolzones of schoolstraten. Op De verkeerssituatie op het Rozenplein is
+gebiedsontsluitende wegen worden moeilijk oplosbaar. Naast onvoldoende
+vrijliggende fietspaden behouden of doorstroming is ook de veilig heids­
+neergelegd. Waar vrijliggende fiets­ situatie voor verbetering vat baar. We
+paden liggen, blijven die gehandhaafd. wachten het lopende onder zoek af.
+We gaan in gesprek met de provincie Geluidshinder vliegverkeer
+over de afwaardering van de N441 naar
+overal 60 km/u. We blijven in gesprek Wassenaar monitort geluidoverlast
+over de snelle realisatie van een samen met de Omgevingsdienst West­
+verkeers doseerlicht om sluipverkeer Holland (ODWH), door het inrichten van
+tegen te gaan. Ook de N44 wordt op gezamenlijke metingen. We agenderen
+termijn afgewaardeerd, zodat er een de toenemende overlast van laag­
+groenverbinding ontstaat van het strand vliegend verkeer bij de relevante over­
+tot aan het Groene Hart. Hiervoor moet leggen en belanghebbenden.
+wel een oplossing worden gevonden
+voor het verkeer, door middel van een Ruimte voor zweefvliegen
+tunnel en/of hoogfrequent, hoog­ De gemeente zoekt uit wat de mogelijk­
+waardig openbaar vervoer. heden in Wassenaar zijn voor zweef­
+vliegen zonder belasting van natuur en
+milieu.
+13
+
+Portefeuilleverdeling college b&w
+Burgemeester
+• Veiligheid
+• Handhaving
+• Communicatie
+• Internationale Wassenaarders
+• Regio
+• Ambtelijke organisatie
+• Burgerzaken/KCC/Dienstverlening
+• Ambassadeur Wassenaar
+• Inburgering, statushouders, asielzoekers
+Wethouder Financiën, Economie en Sport
+FINANCIËN
+• Gemeentelijk vastgoed
+• Belastingen
+• ICT
+• Avalex (bestuur)
+• Gemeenschappelijke regelingen (bestuur)
+• Projectmanagement
+• Project De Paauw
+• Project Gemeentewerf (bouwrijp maken)
+• Project gemeentelijke sporthal
+• Project Schulpwei
+1144 ECONOMISCHE ZAKEN
+• Project dorpskern
+• Metropoolregio Rotterdam Den Haag (economisch vestigingsklimaat)
+SPORT
+Wethouder Ruimte, Duurzaamheid en Mobiliteit
+RUIMTELIJKE ORDENING
+• Strand en toerisme
+• Omgevingswet
+• Structuur­ en omgevingsvisie
+• Visie Duindigt
+• Project Duindigt
+• Duin, Horst en Weide
+• Groene Zone/Valkenhorst
+
+DUURZAAMHEID
+• Klimaat en duurzaamheid
+• Agrarische Zaken
+• Dierenwelzijn
+• Riolering
+• Afval
+• Energietransitie
+MOBILITEIT
+• Verkeer en wegen
+• Openbaar vervoer
+• Metropoolregio Rotterdam Den Haag (vervoersautoriteit)
+• Project N44
+Wethouder Sociaal, Wonen en Onderwijs
+SOCIAAL DOMEIN
+• Jeugdzorg
+• Wet maatschappelijke ondersteuning (Wmo)
+• Ouderenbeleid
+• Werk en inkomen (Participatiewet)
+WONEN
+• Bouwen en wonen, inclusief:
+• Den Deijl
+• Gemeentewerf 15
+• ANWB
+• Kerkehout
+• Volkshuisvesting
+• Woonzorgvisie
+• Onderwijs
+• Wassenaars onderwijs en Schooladviesdienst (SAD)
+• Integraal Huisvestingsplan (IHP)
+Wethouder Cultuur en Welzijn
+CULTUUR
+• Erfgoedbeleid/cultureel erfgoed
+• Project de Warenar
+WELZIJN
+• Subsidiebeleid
+• Vrijwilligerswerk
+• Welzijn en wijken
+• Inwonersparticipatie
+• Volksgezondheid (GGD)
+• Inclusie en anti­discriminatie
+
+COLOFON
+Publicatiedatum:
+11 maart 2023
+www.wassenaar.nl
+
+
+═══════════════════════════════════════════════════════════════
+
+RAADSBESLUITEN — FINANCIËN, ECONOMIE & SPORT (28 besluiten)
+
+═══════════════════════════════════════════════════════════════
+
+---
+Besluit: Inzetten subsidie-opbrengsten voor optimalisering en verduurzaming De Paauw
+Datum: 2025-06-03
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Gemeentelijke huisvesting
+
+Besluittekst (kort):
+zie link raadsbesluit
+---
+
+---
+Besluit: Kadernota
+Datum: 2025-07-01
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: P&C-cyclus
+
+Besluittekst (kort):
+De Kadernota 2026 geamendeerd vast te stellen en als uitgangspunt te gebruiken bij het opstellen van de Begroting 2026 en meerjarenraming 2027-2029.
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2026 GR GGD Veilig Thuis Haaglanden
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+
+Besluittekst (kort):
+1. Een zienswijze naar voren te brengen op de ontwerpbegroting 2026 bij het dagelijks bestuur van de Gemeentelijke Gezondheidsdienst en Veilig Thuis Haaglanden, zoals verwoord in de bij dit besluit behorende brief.
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2026 Belastingsamenwerking Gouwe-Rijnland (BSGR)
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+1. Een zienswijze naar voren te brengen op de ontwerpbegroting 2026 bij het dagelijks bestuur van de Belastingsamenwerking Gouwe-Rijnland, zoals verwoord in de bij dit besluit behorende brief.
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2026 Regionaal Reinigingsbedrijf Avalex
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Afval
+
+Besluittekst (kort):
+1. Een zienswijze naar voren te brengen op de ontwerpbegroting 2026 bij het dagelijks bestuur van het Regionaal Reinigingsbedrijf Avalex, zoals verwoord in de bij dit besluit behorende brief.
+---
+
+---
+Besluit: Jaarstukken 2024
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: P&C-cyclus
+
+Besluittekst (kort):
+jaarstukken vast te stellen.
+---
+
+---
+Besluit: Voorjaarsnota 2025
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: P&C-cyclus
+
+Besluittekst (kort):
+Voorjaarsnota vast te stellen.
+---
+
+---
+Besluit: Economische Visie Wassenaar 2025
+Datum: 2025-09-22
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Economie
+
+Besluittekst (kort):
+1. De Economische Visie Wassenaar 2025 met daarin zes benoemde ambities vast te stellen zodat alle ondernemers in Wassenaar duidelijkheid en perspectief hebben.
+---
+
+---
+Besluit: Ontwerpkeuzes voor de renovatie en restauratie van De Paauw
+Datum: 2025-09-23
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Gemeentelijke huisvesting
+
+Besluittekst (kort):
+1. Vast te stellen dat het project Renovatie & Restauratie De Paauw zonder extra kredietaanvraag wordt uitgevoerd.
+---
+
+---
+Besluit: Sportvisie Wassenaar 2025
+Datum: 2025-09-23
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Sport
+
+Besluittekst (kort):
+1. De raad voor te stellen de bijgevoegde Sportvisie Wassenaar 2025 vast te stellen, met 
+daarin de volgende vier pijlers:
+1. Versterken sportaanbieders;
+2. Verhogen sportdeelname;
+3. Beweegvriendelijke openbare ruimte;
+4. Toekomstbestendige en verduurzaamde sportaccommodaties.
+2. Een onderhoudsvoorziening ”gemeentelijke sportvelden” in te stellen;
+3. De bestemmingsreserve Investeringen sport voor maatregelen uitvoering sportaccommodatiebeleid voor (niet-)gemeentelijke sportaccommodaties ter grootte van 
+129.000 euro op te heffen en dit bedrag te storten in de nieuw gevormde onderhoudsvoorziening “gemeentelijke sportvelden”;
+
+4. Binnen het financiële kader zoals verwerkt in de Kadernota 2026 treedt de gemeente in overleg met de sportverenigingen om nader uitwerking te geven aan het benodigde beheer en onderhoud aan gemeentelijke sportvelden voor de buitensport en voor het 
+aanstellen van specialist coördinator beheer & onderhoud buitensport.
+---
+
+---
+Besluit: Verordening bedrijveninvesteringszone (BIZ) Maaldrift 2026 – 2030
+Datum: 2025-10-14
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Economie
+
+Besluittekst (kort):
+1. De Verordening Bedrijveninvesteringszone Maaldrift 2026 – 2030 vast te stellen
+---
+
+---
+Besluit: Controleprotocol inclusief normen- en toetsingskader 2025
+Datum: 2025-10-14
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Financiën
+
+Besluittekst (kort):
+1. Het controleprotocol gemeente Wassenaar 2024, inclusief normen-/ toetsingskader 2024 in te trekken. 2. Het controleprotocol gemeente Wassenaar 2025, inclusief normen-/ toetsingskader 2025 vast te stellen
+---
+
+---
+Besluit: Actualisatie van de financiële verordening 2025
+Datum: 2025-10-14
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Financiën
+
+Besluittekst (kort):
+1. De Financiële verordening gemeente Wassenaar 2025 inclusief bijlage 1 vast te stellen; 2. De op 24 oktober 2023 vastgestelde Financiële verordening gemeente Wassenaar 2023 in te trekken.
+---
+
+---
+Besluit: Zienswijze op de conceptontwerp Visie Economisch Vestigingsklimaat MRDH 2025
+Datum: 2025-10-14
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Economie
+
+Besluittekst (kort):
+1. Een zienswijze op de conceptontwerp Visie Economisch Vestigingsklimaat (VEV) bij het Algemeen Bestuur van de Metropoolregio Rotterdam Den Haag (MRDH) naar voren te 
+brengen, zoals verwoord in de bij dit besluit behorende zienswijzebrief.
+---
+
+---
+Besluit: Begroting 2026
+Datum: 2025-11-04
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: P&C-cyclus
+
+Besluittekst (kort):
+1. De Begroting 2026 vast te stellen en daarmee 
+a) kredieten voor de investeringen in 2026, zoals vermeld in de 5 programma’s, beschikbaar te stellen voor een bedrag van € 2.743.000;
+b) goedkeuring te geven voor onttrekkingen uit de reserves voor een bedrag van € 451.900 voor 2026;
+c) goedkeuring te geven voor het structureel verlagen van de dotatie aan de voorziening vastgoed voor een bedrag van € 30.000;
+2. Kennis te nemen van de financiële ontwikkelingen na de Kadernota 2026 en de Meerjarenraming 2027-2029.
+---
+
+---
+Besluit: Verordening kwijtschelding gemeentelijke belastingen Wassenaar 2026
+Datum: 2025-11-04
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+De verordening kwijtschelding gemeentelijke belastingen Wassenaar 2026 vast te stellen.
+---
+
+---
+Besluit: Verordening marktgeld Wassenaar 2026
+Datum: 2025-11-04
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+De verordening marktgeld Wassenaar 2026 vast te stellen.
+---
+
+---
+Besluit: Verordening liggeld Wassenaar 2026
+Datum: 2025-11-04
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+De verordening liggeld Wassenaar 2026 vast te stellen.
+---
+
+---
+Besluit: Verordening afvalstoffenheffing Wassenaar 2026
+Datum: 2025-11-04
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Afval
+
+Besluittekst (kort):
+De verordening afvalstoffenheffing Wassenaar 2026 vast te stellen
+---
+
+---
+Besluit: Verordening precariobelasting Wassenaar 2026
+Datum: 2025-11-04
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+De verordening precariobelasting Wassenaar 2026 vast te stellen.
+---
+
+---
+Besluit: Retributieverordening Wassenaar 2026
+Datum: 2025-11-04
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+De retributieverordening Wassenaar 2026 vast te stellen.
+---
+
+---
+Besluit: Raadsbesluit Verordening toeristenbelasting Wassenaar 2026
+Datum: 2025-11-04
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+De verordening toeristenbelasting Wassenaar 2026 vast te stellen.
+---
+
+---
+Besluit: Raadsbesluit Verordening hondenbelasting Wassenaar 2026
+Datum: 2025-11-04
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+De verordening hondenbelasting Wassenaar 2026 vast te stellen.
+---
+
+---
+Besluit: Raadsbesluit Verordening onroerendezaakbelastingen Wassenaar 2026
+Datum: 2025-12-16
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+1. Verordening op de heffing en de invoering van onroerendezaakbelastingen Wassenaar 2026 vast te stellen
+---
+
+---
+Besluit: Raadsbesluit Verordening ondernemersheffing Wassenaar 2026
+Datum: 2025-12-16
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+1. Verordening op de heffing en de invordering van ondernemersheffing Wassenaar 2026 vast te stellen
+---
+
+---
+Besluit: Raadsbesluit Legesverordening 2026
+Datum: 2025-12-16
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+1. Verordening op de heffing en de invordering van leges Wassenaar 2026 en de bijbehorende tarieventabel vast te stellen
+---
+
+---
+Besluit: Raadsbesluit Verordening begraafplaatsrechten Wassenaar 2026
+Datum: 2025-12-16
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: Belastingen
+
+Besluittekst (kort):
+1. Verordening op de heffing en de invordering van rechten voor de algemene begraafplaats Persijnhof gemeente Wassenaar 2026 (Verordening rechten algemene begraafplaats Persijnhof Wassenaar 2026) en de bijbehorende tarieventabel vast te stellen
+---
+
+---
+Besluit: Najaarsnota 2025
+Datum: 2025-12-17
+Type: raadsbesluit
+Domein: Financiën, Economie & Sport
+Onderwerp: P&C-cyclus
+
+Besluittekst (kort):
+1. kennis te nemen van de Najaarsnota 2025 met een positief saldo van € 5.243 voor 2025; 2. de bij de Najaarsnota 2025 behorende begrotingswijzigingen vast te stellen; 3. de volgende bijbehorende reservemutaties vast te stellen voor het jaar 2025: • een toevoeging van € 109.719 aan de Algemene reserve vanwege de verkoop van het Koffiehuisje; • een toevoeging van € 155.000 aan de reserve Ommedijk; • een onttrekking van € 310.000 aan de reserve Egalisatie omgevingsvergunningen; • een toevoeging van € 260.000 vanuit de Algemene reserve aan de reserve Egalisatie omgevingsvergunningen; • een toevoeging van € 500.000 aan de reserve Sociaal Domein; • een onttrekking van € 828.000 aan de reserve Grote projecten; 4. een bedrag van € 560.780 te onttrekken uit de reserve reorganisatie voor het jaar 2026 ten behoeve van de flexibele schil ambtelijke organisatie; 5. aanvullende budgetten beschikbaar te stellen van € 560.000 voor 2026, voor een pilot Bibob en extra inzet juridische zaken; 6. de gevolgen vanuit de tabel (bijlage 1 van de Najaarsnota) voor krediet Dorpskern, waarbij per saldo een voordeel van € 36.000 wordt voorzien, te verwerken aan de lasten en batenkant van het investeringskrediet voor de realisatie van de Dorpskern en de kapitaallasten in de meerjarenbegroting te laten afnemen; 7. de voorgestelde budgetten over te hevelen per saldo € 2.966.402 naar 2026, waarvan € 2.146.000 met dekking uit verschillende reserves en € 584.402 met dekking uit Rijksbijdragen, subsidies of verkoopopbrengsten; 8. te doteren aan de voorziening pensioenen (voormalig) wethouders voor een bedrag van € 215.000.
+---
+
+
+═══════════════════════════════════════════════════════════════
+
+COLLEGEBESLUITEN — FINANCIËN, ECONOMIE & SPORT (241 besluiten)
+
+═══════════════════════════════════════════════════════════════
+
+---
+Besluit: Zienswijze op de ontwerpbegroting 2023 en meerjarenraming 2024-
+Datum: 2022-05-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_mei_2022.pdf
+
+Volledige tekst:
+Zienswijze op de ontwerpbegroting 2023 en meerjarenraming 2024-
+---
+
+---
+Besluit: 2. De raad voor te stellen kennis te nemen van de ontwerpbegroting 2023,
+Datum: 2022-05-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_mei_2022.pdf
+
+Besluittekst (kort):
+meerjarenraming 2024-2026 van de Omgevingsdienst Haaglanden.
+
+Volledige tekst:
+2. De raad voor te stellen kennis te nemen van de ontwerpbegroting 2023,
+meerjarenraming 2024-2026 van de Omgevingsdienst Haaglanden.
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2022 en meerjarenraming 2023-2025 GR
+Datum: 2022-05-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_mei_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+Aangepaste Zienswijze ontwerpbegroting 2022 en meerjarenraming 2023-
+
+Volledige tekst:
+Zienswijze ontwerpbegroting 2022 en meerjarenraming 2023-2025 GR
+Avalex
+Besluit:
+Aangepaste Zienswijze ontwerpbegroting 2022 en meerjarenraming 2023-
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2023 GR GGD en VT Haaglanden
+Datum: 2022-05-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_mei_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+Aangepaste Zienswijze ontwerpbegroting 2023 GR GGD en VT Haaglanden
+vast te stellen.
+
+Volledige tekst:
+Zienswijze ontwerpbegroting 2023 GR GGD en VT Haaglanden
+Besluit:
+Aangepaste Zienswijze ontwerpbegroting 2023 GR GGD en VT Haaglanden
+vast te stellen.
+---
+
+---
+Besluit: Voortgang de bouw van de nieuwe sportaccommodatie
+Datum: 2022-06-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_juni_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+Informeren van de Raad over de voortgang de bouw van de nieuwe
+sportaccommodatie met een raadsinformatiebrief
+
+Volledige tekst:
+Voortgang de bouw van de nieuwe sportaccommodatie
+Besluit:
+Informeren van de Raad over de voortgang de bouw van de nieuwe
+sportaccommodatie met een raadsinformatiebrief
+---
+
+---
+Besluit: Bestuursverslag 2021 Stichting Openbaar Primair Onderwijs
+Datum: 2022-08-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_augustus_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen het bestuursverslag en de jaarrekening over 2021 van
+de Bloemcampschool goed te keuren.
+
+Volledige tekst:
+Bestuursverslag 2021 Stichting Openbaar Primair Onderwijs
+Wassenaar
+Besluit:
+De raad voor te stellen het bestuursverslag en de jaarrekening over 2021 van
+de Bloemcampschool goed te keuren.
+---
+
+---
+Besluit: Voor de uitvoering van het onderwijs aan ontheemden de garantie te
+Datum: 2022-09-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_september_2022.pdf
+
+Besluittekst (kort):
+geven voor de aanloopkosten en frictiekosten en zo nodig dit voor te
+financieren.
+Pagina 2
+
+Volledige tekst:
+Voor de uitvoering van het onderwijs aan ontheemden de garantie te
+geven voor de aanloopkosten en frictiekosten en zo nodig dit voor te
+financieren.
+Pagina 2
+---
+
+---
+Besluit: Begroting 2023-2026
+Datum: 2022-09-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_september_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Begroting 2023-2026
+Besluit:
+---
+
+---
+Besluit: Begroting inleiding
+Datum: 2022-10-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_oktober_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+Collegeleden reageren op definitieve persbericht later in de middag per mail.
+
+Volledige tekst:
+Begroting inleiding
+Besluit:
+Collegeleden reageren op definitieve persbericht later in de middag per mail.
+---
+
+---
+Besluit: In te stemmen met de kaderbrief begroting 2024 voor gemeenschappelijke
+Datum: 2022-10-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_oktober_2022.pdf
+
+Besluittekst (kort):
+regelingen.
+
+Volledige tekst:
+In te stemmen met de kaderbrief begroting 2024 voor gemeenschappelijke
+regelingen.
+---
+
+---
+Besluit: 5 Bevestiging inkooprelatie met Stichting Wassenaar-Voorschoten en
+Datum: 2022-10-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_oktober_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De bijgevoegde brief waarin de gemeente Wassenaar de inkoop van
+toeristische en recreatieve goederen en diensten bevestigd, vast te stellen en
+te ondertekenen.
+
+Volledige tekst:
+5 Bevestiging inkooprelatie met Stichting Wassenaar-Voorschoten en
+Stichting Bibliotheek Voorschoten-Wassenaar.
+Besluit:
+De bijgevoegde brief waarin de gemeente Wassenaar de inkoop van
+toeristische en recreatieve goederen en diensten bevestigd, vast te stellen en
+te ondertekenen.
+---
+
+---
+Besluit: Kredietbesluit behorend bij de Programmabegroting 2023-2026
+Datum: 2022-12-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_december_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen om voor het jaar 2023 voor een bedrag van
+€ 1.896.500,- aan kredieten beschikbaar te stellen;
+
+Volledige tekst:
+Kredietbesluit behorend bij de Programmabegroting 2023-2026
+Besluit:
+De raad voor te stellen om voor het jaar 2023 voor een bedrag van
+€ 1.896.500,- aan kredieten beschikbaar te stellen;
+---
+
+---
+Besluit: In 2023 een voorstel te doen voor een stabiele meerjaren begroting
+Datum: 2023-01-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_januari_2023.pdf
+
+Besluittekst (kort):
+passend bij de beleidsambities en beleidsdoelen van het preventief veld en
+deze in het eerste half jaar van 2023 via de reguliere P&C cyclus aan de
+gemeenteraad voor te leggen.
+
+Volledige tekst:
+In 2023 een voorstel te doen voor een stabiele meerjaren begroting
+passend bij de beleidsambities en beleidsdoelen van het preventief veld en
+deze in het eerste half jaar van 2023 via de reguliere P&C cyclus aan de
+gemeenteraad voor te leggen.
+---
+
+---
+Besluit: Begrotingswijziging vast te stellen.
+Datum: 2023-01-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_januari_2023.pdf
+
+Besluittekst (kort):
+Pagina 2
+
+Volledige tekst:
+Begrotingswijziging vast te stellen.
+Pagina 2
+---
+
+---
+Besluit: De begrotingswijziging voor vaststelling voor te leggen aan de
+Datum: 2023-01-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf
+
+Besluittekst (kort):
+gemeenteraad waarmee €65.000,- ten laste wordt gebracht van de vrije
+bestedingsruimte van de algemene reserve.
+
+Volledige tekst:
+De begrotingswijziging voor vaststelling voor te leggen aan de
+gemeenteraad waarmee €65.000,- ten laste wordt gebracht van de vrije
+bestedingsruimte van de algemene reserve.
+---
+
+---
+Besluit: Bijgevoegde begrotingswijziging vast te stellen.
+Datum: 2023-01-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf
+
+Volledige tekst:
+Bijgevoegde begrotingswijziging vast te stellen.
+---
+
+---
+Besluit: Schriftelijke vragen ex artikel 36 RvO mbt gebruik sportveld bij
+Datum: 2023-01-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Lokaal Wassenaar!
+d.d. 5 januari 2023 met betrekking tot het gebruik van het sportveld bij het
+zwembad door het Rijnlands Lyceum Wassenaar vast te stellen.
+Toelichting:
+Besloten met tekstuele toevoeging dat het bord inmiddels is geplaatst en het
+sportveld voor een ieder toegankelijk is.
+
+Volledige tekst:
+Schriftelijke vragen ex artikel 36 RvO mbt gebruik sportveld bij
+zwembad, Prinsenweg door Rijnlands Lyceum Wassenaar
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Lokaal Wassenaar!
+d.d. 5 januari 2023 met betrekking tot het gebruik van het sportveld bij het
+zwembad door het Rijnlands Lyceum Wassenaar vast te stellen.
+Toelichting:
+Besloten met tekstuele toevoeging dat het bord inmiddels is geplaatst en het
+sportveld voor een ieder toegankelijk is.
+---
+
+---
+Besluit: 1 Stand van zaken bouw sporthal
+Datum: 2023-01-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+1 Stand van zaken bouw sporthal
+Ambtelijk opdrachtgever praat college bij over de stand van zaken, voortgang
+van de bouw en knelpunten van de sporthal en de Kievieten.
+Besluit:
+---
+
+---
+Besluit: Actualisatie Convenant Financiering Schooladviesdienst Wassenaar
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Actualisatie Convenant Financiering Schooladviesdienst Wassenaar
+2024-2027
+Besluit:
+---
+
+---
+Besluit: Begroting 2023 Stichting Openbaar Primair Onderwijs Wassenaar
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Aan de gemeenteraad de begroting van de Stichting Openbaar Primair
+Onderwijs Wassenaar ter goedkeuring voor te leggen.
+
+Volledige tekst:
+Begroting 2023 Stichting Openbaar Primair Onderwijs Wassenaar
+Besluit:
+Aan de gemeenteraad de begroting van de Stichting Openbaar Primair
+Onderwijs Wassenaar ter goedkeuring voor te leggen.
+---
+
+---
+Besluit: Raadsinformatiebrief voortgang bouw nieuwe sportaccommodatie
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De informatiebrief Sporthal aan de raad te verzenden (zie bijlage 1);
+
+Volledige tekst:
+Raadsinformatiebrief voortgang bouw nieuwe sportaccommodatie
+Besluit:
+De informatiebrief Sporthal aan de raad te verzenden (zie bijlage 1);
+---
+
+---
+Besluit: Stand van zaken en brief sporthal aan de Kieviten
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Vaststellen van de brief aan de Kieviten.
+
+Volledige tekst:
+Stand van zaken en brief sporthal aan de Kieviten
+Besluit:
+Vaststellen van de brief aan de Kieviten.
+---
+
+---
+Besluit: Stand van zaken en brief sporthal aan de Kieviten
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023_0.pdf
+
+Besluittekst (kort):
+Besluit:
+Vaststellen van de brief aan de Kieviten.
+
+Volledige tekst:
+Stand van zaken en brief sporthal aan de Kieviten
+Besluit:
+Vaststellen van de brief aan de Kieviten.
+---
+
+---
+Besluit: Financiën, Economie en Sport (tijdelijke waarneming door bm De
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Besluittekst (kort):
+Lange)
+
+Volledige tekst:
+Financiën, Economie en Sport (tijdelijke waarneming door bm De
+Lange)
+---
+
+---
+Besluit: Financiën, Economie en Sport (tijdelijke waarneming door bm De
+Datum: 2023-03-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf
+
+Besluittekst (kort):
+Lange)
+
+Volledige tekst:
+Financiën, Economie en Sport (tijdelijke waarneming door bm De
+Lange)
+---
+
+---
+Besluit: De gemeenteraad bij de voorjaarsnota 2023 hiervoor aanvullend budget
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Besluittekst (kort):
+beschikbaar te laten stellen ten laste van het begrotingssaldo 2023.
+
+Volledige tekst:
+De gemeenteraad bij de voorjaarsnota 2023 hiervoor aanvullend budget
+beschikbaar te laten stellen ten laste van het begrotingssaldo 2023.
+---
+
+---
+Besluit: Financiën, Economie en Sport (tijdelijke waarneming door bm De
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Besluittekst (kort):
+Lange)
+
+Volledige tekst:
+Financiën, Economie en Sport (tijdelijke waarneming door bm De
+Lange)
+---
+
+---
+Besluit: Zienswijze Conceptjaarrekening 2022, de herziene begroting 2023 en
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen om een zienswijze naar voren te brengen op de
+ontwerpbegroting 2024 van de Gemeenschappelijke regeling werkbedrijven
+Kust-, Duin en Bollenstreek (GR KDB), zoals verwoord in de bij dit besluit
+behorende brief.
+
+Volledige tekst:
+Zienswijze Conceptjaarrekening 2022, de herziene begroting 2023 en
+ontwerpbegroting 2024 GR KDB
+Pagina 3
+
+Besluit:
+De raad voor te stellen om een zienswijze naar voren te brengen op de
+ontwerpbegroting 2024 van de Gemeenschappelijke regeling werkbedrijven
+Kust-, Duin en Bollenstreek (GR KDB), zoals verwoord in de bij dit besluit
+behorende brief.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-04-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_april_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-04-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_april_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Procesafspraken ontwikkeling Renbaan Duindigt
+Datum: 2023-04-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Instemming met bijgevoegde brieven waarin aan de Vereniging Nederlandse
+Draf- en Rensport (VNDR) en Het Bosch Beheer wordt medegedeeld dat er
+geen gesprekken over Renbaan Duindigt worden gevoerd zolang het conflict
+binnen en met de Stichting Beheer Renbaan Duindigt niet is opgelost.
+
+Volledige tekst:
+Procesafspraken ontwikkeling Renbaan Duindigt
+Besluit:
+Instemming met bijgevoegde brieven waarin aan de Vereniging Nederlandse
+Draf- en Rensport (VNDR) en Het Bosch Beheer wordt medegedeeld dat er
+geen gesprekken over Renbaan Duindigt worden gevoerd zolang het conflict
+binnen en met de Stichting Beheer Renbaan Duindigt niet is opgelost.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-04-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Raadsinformatiebrief n.a.v. motie over afval gerelateerde zaken
+Datum: 2023-04-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad door middel van bijgevoegde informatiebrief te informeren over de
+volgende afval gerelateerde zaken:
+• Bovengrondse mini milieupark Hofcampweg
+• Evaluatie GFT hoogbouw
+• Ontwikkelingen brede nascheiding
+
+Volledige tekst:
+Raadsinformatiebrief n.a.v. motie over afval gerelateerde zaken
+
+Besluit:
+De raad door middel van bijgevoegde informatiebrief te informeren over de
+volgende afval gerelateerde zaken:
+• Bovengrondse mini milieupark Hofcampweg
+• Evaluatie GFT hoogbouw
+• Ontwikkelingen brede nascheiding
+---
+
+---
+Besluit: Opening
+Datum: 2023-05-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_mei_2023.pdf
+
+Besluittekst (kort):
+Komende weken staan in het teken van de financiële stukken Kadernota,
+Jaarrekening en Voorjaarsnota.
+
+Volledige tekst:
+Opening
+Komende weken staan in het teken van de financiële stukken Kadernota,
+Jaarrekening en Voorjaarsnota.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-05-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_mei_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Stand van zaken planning P&C-cyclusproducten
+Datum: 2023-05-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Collegeleden nemen kennis van de planning.
+
+Volledige tekst:
+Stand van zaken planning P&C-cyclusproducten
+Besluit:
+Collegeleden nemen kennis van de planning.
+---
+
+---
+Besluit: Zienswijze op conceptbegrotingswijziging 2023 en conceptbegroting
+Datum: 2023-05-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_mei_2023.pdf
+
+Volledige tekst:
+Zienswijze op conceptbegrotingswijziging 2023 en conceptbegroting
+---
+
+---
+Besluit: van Servicebureau jeugdhulp Haaglanden
+Datum: 2023-05-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen een zienswijze op de conceptbegrotingswijziging 2023
+en de conceptbegroting 2024 bij het dagelijks bestuur van Servicebureau
+Jeugdhulp Haaglanden naar voren te brengen, zoals verwoord in de bij dit
+voorstel behorende conceptbrief.
+
+Volledige tekst:
+van Servicebureau jeugdhulp Haaglanden
+Besluit:
+De raad voor te stellen een zienswijze op de conceptbegrotingswijziging 2023
+en de conceptbegroting 2024 bij het dagelijks bestuur van Servicebureau
+Jeugdhulp Haaglanden naar voren te brengen, zoals verwoord in de bij dit
+voorstel behorende conceptbrief.
+---
+
+---
+Besluit: Jaarrekening 2022 voor eerste bespreking
+Datum: 2023-05-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_mei_2023.pdf
+
+Volledige tekst:
+Jaarrekening 2022 voor eerste bespreking
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2024 Omgevingsdienst Haaglanden
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen om op de ontwerp jaarstukken 2022 en de
+ontwerpbegroting 2024 bij het dagelijks bestuur van de Omgevingsdienst
+Haaglanden een zienswijze naar voren te brengen, zoals verwoord in de bij dit
+voorstel behorende zienswijzebrief.
+
+Volledige tekst:
+Zienswijze ontwerpbegroting 2024 Omgevingsdienst Haaglanden
+(ODH)
+Besluit:
+De raad voor te stellen om op de ontwerp jaarstukken 2022 en de
+ontwerpbegroting 2024 bij het dagelijks bestuur van de Omgevingsdienst
+Haaglanden een zienswijze naar voren te brengen, zoals verwoord in de bij dit
+voorstel behorende zienswijzebrief.
+---
+
+---
+Besluit: Jaarrekening 2022
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Eerste bespreking van de resultaatbestemming door college. Agendapunt
+B&W-vergadering d.d. 30 mei.
+
+Volledige tekst:
+Jaarrekening 2022
+Besluit:
+Eerste bespreking van de resultaatbestemming door college. Agendapunt
+B&W-vergadering d.d. 30 mei.
+---
+
+---
+Besluit: Zienswijze Avalex op Jaarstukken 2022, Begrotingswijziging 2023, en
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen om op de ontwerpbegrotingswijziging 2023 en de
+ontwerpbegroting 2024 bij het dagelijks bestuur van de gemeenschappelijke
+regeling Avalex een zienswijze naar voren te brengen, zoals verwoord in de bij
+dit voorstel behorende brief.
+
+Volledige tekst:
+Zienswijze Avalex op Jaarstukken 2022, Begrotingswijziging 2023, en
+Ontwerpbegroting 2024
+Besluit:
+De raad voor te stellen om op de ontwerpbegrotingswijziging 2023 en de
+ontwerpbegroting 2024 bij het dagelijks bestuur van de gemeenschappelijke
+regeling Avalex een zienswijze naar voren te brengen, zoals verwoord in de bij
+dit voorstel behorende brief.
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2024 GR GGD en Veilig Thuis Haaglanden
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen zijn zienswijze over de ontwerpbegroting 2024 en de
+ontwerpbegrotingswijziging 2023 van GGD en Veilig Thuis Haaglanden uiterlijk
+
+Volledige tekst:
+Zienswijze ontwerpbegroting 2024 GR GGD en Veilig Thuis Haaglanden
+Besluit:
+De raad voor te stellen zijn zienswijze over de ontwerpbegroting 2024 en de
+ontwerpbegrotingswijziging 2023 van GGD en Veilig Thuis Haaglanden uiterlijk
+---
+
+---
+Besluit: Zienswijze op de ontwerpbegroting 2024 van de Metropoolregio
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Pagina 2
+
+De raad voor te stellen om op de ontwerpbegroting 2024 bij het dagelijks
+bestuur van de Metropoolregio Rotterdam Den Haag (MRDH) een zienswijze
+naar voren te brengen, zoals verwoord in de bij dit voorstel behorende brief.
+
+Volledige tekst:
+Zienswijze op de ontwerpbegroting 2024 van de Metropoolregio
+Rotterdam Den Haag (MRDH)
+Besluit:
+Pagina 2
+
+De raad voor te stellen om op de ontwerpbegroting 2024 bij het dagelijks
+bestuur van de Metropoolregio Rotterdam Den Haag (MRDH) een zienswijze
+naar voren te brengen, zoals verwoord in de bij dit voorstel behorende brief.
+---
+
+---
+Besluit: Zienswijze BSGR op de (concept)jaarrekening 2022 , de kadernota
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+2024, de begrotingswijziging 2023 maart 2023 en de begroting 2024 –
+
+Volledige tekst:
+Zienswijze BSGR op de (concept)jaarrekening 2022 , de kadernota
+2024, de begrotingswijziging 2023 maart 2023 en de begroting 2024 –
+---
+
+---
+Besluit: Besluit:
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Een zienswijze op de (concept)jaarstukken 2022, de begrotingswijziging 2023
+maart 2023, de kadernota 2024, en de meerjarenbegroting 2024 – 2027 van
+de Belastingsamenwerking Gouwe-Rijnland naar voren te brengen, zoals
+verwoord in de bij dit voorstel behorende brief.
+---
+
+---
+Besluit: Zienswijze op het (concept) financieel jaarbericht 2022 met
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Zienswijze op het (concept) financieel jaarbericht 2022 met
+accountantsverslag en de ontwerpbegroting 2024 – 2027 van de
+Veiligheidsregio Haaglanden (VRH).
+Besluit:
+---
+
+---
+Besluit: De procedures omtrent de bestaande padelbanen van tennisvereniging ‘de
+Datum: 2023-05-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_mei_2023.pdf
+
+Besluittekst (kort):
+Oude Eik” als eigenstandig dossier verder af te handelen.
+
+Volledige tekst:
+De procedures omtrent de bestaande padelbanen van tennisvereniging ‘de
+Oude Eik” als eigenstandig dossier verder af te handelen.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-05-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_mei_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-06-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_juni_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Raad:
+Datum: 2023-06-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Aangepaste zienswijzebrief op ontwerpbegroting MRDH 2024 vast te stellen.
+
+Volledige tekst:
+Raad:
+Terugblik cie B&M d.d. 12 juni:
+College blikt terug op de zienswijzenavond van de raad van 12 juni jl.
+Vooruitblik op de raad van 13 juni
+College bespreekt de aanstaande raads- en commissievergaderingen.
+Besluit:
+Aangepaste zienswijzebrief op ontwerpbegroting MRDH 2024 vast te stellen.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-06-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Lokaal Sportakkoord II “Sport versterkt”
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Lokaal Sportakkoord II “Sport versterkt”
+Besluit:
+---
+
+---
+Besluit: Meicirculaire
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad middels bijgevoegde raadsinformatiebrief te informeren over de
+gevolgen van de meicirculaire 2023 en de wijze waarop dit in de najaarsnota
+over 2023 en de begroting voor 2024 e.v. verwerkt zal worden.
+Pagina 3
+
+Volledige tekst:
+Meicirculaire
+Besluit:
+De raad middels bijgevoegde raadsinformatiebrief te informeren over de
+gevolgen van de meicirculaire 2023 en de wijze waarop dit in de najaarsnota
+over 2023 en de begroting voor 2024 e.v. verwerkt zal worden.
+Pagina 3
+---
+
+---
+Besluit: Mandatering Wassenaar financieel beheer SPUK IZA middelen.
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Mandatering Wassenaar financieel beheer SPUK IZA middelen.
+Besluit:
+---
+
+---
+Besluit: Beantwoording vragen over Zienswijze ontwerpbegroting 2024
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording technische vraag uit de commissie Bestuur & Middelen van 12
+juni 2023, over steun van de Omgevingsdienst Haaglanden (ODH) aan
+ondernemers voor energiebesparing.
+
+Volledige tekst:
+Beantwoording vragen over Zienswijze ontwerpbegroting 2024
+Omgevingsdienst Haaglanden (ODH)
+Besluit:
+Beantwoording technische vraag uit de commissie Bestuur & Middelen van 12
+juni 2023, over steun van de Omgevingsdienst Haaglanden (ODH) aan
+ondernemers voor energiebesparing.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-07-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_juli_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen elektriciteitsvoorziening Sporthal
+Datum: 2023-07-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_juli_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Beantwoording schriftelijke vragen elektriciteitsvoorziening Sporthal
+De Kieviten van 26 mei 2023
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Eerste wijziging van de Verordening afvalstoffenheffing 2023
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad voor te stellen om de Eerste wijziging van de Verordening
+op de heffing en invordering van afvalstoffenheffing Wassenaar 2023 vast te
+stellen
+
+Volledige tekst:
+Eerste wijziging van de Verordening afvalstoffenheffing 2023
+Besluit:
+De gemeenteraad voor te stellen om de Eerste wijziging van de Verordening
+op de heffing en invordering van afvalstoffenheffing Wassenaar 2023 vast te
+stellen
+---
+
+---
+Besluit: Raadsinformatiebrief Periodieke rapportage afvalinzameling
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de inhoud van de jaarrapportage (2022)
+van Avalex middels bijgevoegde raadsinformatiebrief.
+
+Volledige tekst:
+Raadsinformatiebrief Periodieke rapportage afvalinzameling
+Besluit:
+De gemeenteraad te informeren over de inhoud van de jaarrapportage (2022)
+van Avalex middels bijgevoegde raadsinformatiebrief.
+---
+
+---
+Besluit: Raadsinformatiebrief PvE Gemeentewinkel
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief PvE Gemeentewinkel
+Besluit:
+---
+
+---
+Besluit: De voorkeur uit te spreken om de gemeentewinkel onder te brengen in het
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Besluittekst (kort):
+pand Lange Kerkdam 1;
+
+Volledige tekst:
+De voorkeur uit te spreken om de gemeentewinkel onder te brengen in het
+pand Lange Kerkdam 1;
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-08-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_augustus_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Daartoe de Eerste wijziging van het Uitvoeringsbesluit
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Besluittekst (kort):
+Afvalstoffenverordening gemeente Wassenaar vast te stellen.
+
+Volledige tekst:
+Daartoe de Eerste wijziging van het Uitvoeringsbesluit
+Afvalstoffenverordening gemeente Wassenaar vast te stellen.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Vaststellen bestuursverslag en jaarrekening 2022 Bloemcampschool
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen bestuursverslag en jaarrekening 2022 Bloemcampschool
+Besluit:
+---
+
+---
+Besluit: Invoeren zijbelading legen minicontainers huishoudelijk afval
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Invoeren zijbelading legen minicontainers huishoudelijk afval
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-09-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Stand van zaken Sporthal
+Datum: 2023-09-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Stand van zaken Sporthal
+Besluit:
+---
+
+---
+Besluit: genoemde krediet, te weten jaarlijkse kapitaallasten van € 43.000 bij
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Besluittekst (kort):
+een afschrijftermijn van 15 jaar met ingang van 2025, te betrekken bij het
+opstellen van de meerjarenbegroting 2025-2028;
+
+Volledige tekst:
+genoemde krediet, te weten jaarlijkse kapitaallasten van € 43.000 bij
+
+een afschrijftermijn van 15 jaar met ingang van 2025, te betrekken bij het
+opstellen van de meerjarenbegroting 2025-2028;
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Aanvullende krediet onvoorziene maatregelen sporthal
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Besluittekst (kort):
+Onder voorbehoud van besluitvorming in het college, zijn de raadsstukken op
+
+Volledige tekst:
+Aanvullende krediet onvoorziene maatregelen sporthal
+Onder voorbehoud van besluitvorming in het college, zijn de raadsstukken op
+---
+
+---
+Besluit: Eerste wijziging van de Verordening op de heffing en invordering van
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raadsinformatiebrief "Eerste wijziging van de Verordening op de heffing en
+invordering van afvalstoffenheffing Wassenaar 2023" aan de raad te versturen.
+
+Volledige tekst:
+Eerste wijziging van de Verordening op de heffing en invordering van
+afvalstoffenheffing Wassenaar 2023
+Besluit:
+De raadsinformatiebrief "Eerste wijziging van de Verordening op de heffing en
+invordering van afvalstoffenheffing Wassenaar 2023" aan de raad te versturen.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-09-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_september_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Voorstel verordeningen begroting 2024-2027
+Datum: 2023-09-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Voorstel verordeningen begroting 2024-2027
+Besluit:
+---
+
+---
+Besluit: De Begroting 2024 vast te stellen en kennis te nemen van de
+Datum: 2023-09-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_september_2023.pdf
+
+Besluittekst (kort):
+Meerjarenraming 2025-2027.
+
+Volledige tekst:
+De Begroting 2024 vast te stellen en kennis te nemen van de
+Meerjarenraming 2025-2027.
+---
+
+---
+Besluit: Goedkeuring te geven voor uitbreiding van de formatie van de ambtelijke
+Datum: 2023-09-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_september_2023.pdf
+
+Besluittekst (kort):
+organisatie, zoals beschreven in de Paragraaf Bedrijfsvoering in de
+Begroting 2024.
+
+Volledige tekst:
+Goedkeuring te geven voor uitbreiding van de formatie van de ambtelijke
+organisatie, zoals beschreven in de Paragraaf Bedrijfsvoering in de
+Begroting 2024.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-10-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_oktober_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-10-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-10-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_oktober_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Cofinanciering - Versterking Dorpskern
+Datum: 2023-10-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_oktober_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Cofinanciering - Versterking Dorpskern
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-10-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_oktober_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Raad: voorbereiding Begrotingsraad (moties/amendementen) met
+Datum: 2023-10-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_oktober_2023.pdf
+
+Besluittekst (kort):
+strategen
+
+Volledige tekst:
+Raad: voorbereiding Begrotingsraad (moties/amendementen) met
+strategen
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-11-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_november_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Belastingverordeningen programmabegroting 2024-2027
+Datum: 2023-11-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen de bijgevoegde belastingverordeningen vast te stellen
+m.u.v. rioolheffing.
+
+Volledige tekst:
+Belastingverordeningen programmabegroting 2024-2027
+Besluit:
+De raad voor te stellen de bijgevoegde belastingverordeningen vast te stellen
+m.u.v. rioolheffing.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-11-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_november_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Belastingverordeningen programmabegroting 2024-2027
+Datum: 2023-11-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsbesluit verordening riool en waterzorgheffing Wassenaar 2024 vast te
+stellen.
+
+Volledige tekst:
+Belastingverordeningen programmabegroting 2024-2027
+Besluit:
+Raadsbesluit verordening riool en waterzorgheffing Wassenaar 2024 vast te
+stellen.
+---
+
+---
+Besluit: De Samenhangende aanpak Versterking Dorpskern Wassenaar in vier
+Datum: 2023-11-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_november_2023.pdf
+
+Besluittekst (kort):
+pilaren (bijlage 1) vast te stellen en daarmee besluiten tot:
+a. uitvoering geven aan een aantrekkelijke, inclusieve en klimaatbestendige
+openbare ruimte (incl. terrassen) door herinrichting;
+b. het onderzoek van de Brancheringvisie als basis gebruiken voor de
+samenhangende aanpak op leegstand, zoals uiteengezet in het voorstel
+Samenhangende aanpak versterking dorpskern;
+c. in het nog op te stellen Omgevingsplan de planologische ruimte verankeren
+voor de transformatie van winkels naar wonen. Tot die tijd een positieve
+grondhouding aannemen op basis van de mogelijkheden die de
+Kruimelgevallenregeling hierbij biedt;
+d. voor nieuwe woningen in het centrum de parkeernorm voor parkeren op
+eigen terrein laten vervallen;
+e. onderzoeken hoe de parkeerbescherming van bewoners in en rond het
+centrum te optimaliseren, met als instrumenten de omvang van en de
+maximale parkeerduur in de blauwe zone, ontheffingen in de blauwe zone en
+de parkeerverwijzing voor bezoekers;
+f. een uitvoeringsprogramma o
+
+Volledige tekst:
+De Samenhangende aanpak Versterking Dorpskern Wassenaar in vier
+pilaren (bijlage 1) vast te stellen en daarmee besluiten tot:
+a. uitvoering geven aan een aantrekkelijke, inclusieve en klimaatbestendige
+openbare ruimte (incl. terrassen) door herinrichting;
+b. het onderzoek van de Brancheringvisie als basis gebruiken voor de
+samenhangende aanpak op leegstand, zoals uiteengezet in het voorstel
+Samenhangende aanpak versterking dorpskern;
+c. in het nog op te stellen Omgevingsplan de planologische ruimte verankeren
+voor de transformatie van winkels naar wonen. Tot die tijd een positieve
+grondhouding aannemen op basis van de mogelijkheden die de
+Kruimelgevallenregeling hierbij biedt;
+d. voor nieuwe woningen in het centrum de parkeernorm voor parkeren op
+eigen terrein laten vervallen;
+e. onderzoeken hoe de parkeerbescherming van bewoners in en rond het
+centrum te optimaliseren, met als instrumenten de omvang van en de
+maximale parkeerduur in de blauwe zone, ontheffingen in de blauwe zone en
+de parkeerverwijzing voor bezoekers;
+f. een uitvoeringsprogramma opstellen samen met Nationaal Park Hollandse
+Duinen om recreatiedruk te spreiden en het centrum aan te wijzen als Poort
+naar het Park Hollandse Duinen.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-11-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_november_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: De kaderbrief begroting 2025 voor Gemeenschappelijke Regelingen vast te
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Besluittekst (kort):
+stellen.
+
+Volledige tekst:
+De kaderbrief begroting 2025 voor Gemeenschappelijke Regelingen vast te
+stellen.
+---
+
+---
+Besluit: De definitieve kaderbrief begroting 2025 ter kennisname naar de
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Besluittekst (kort):
+gemeenteraad te sturen.
+
+Volledige tekst:
+De definitieve kaderbrief begroting 2025 ter kennisname naar de
+gemeenteraad te sturen.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Ondertekening kaderbrief begroting 2025 gemeenschappelijke
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Ondertekening kaderbrief begroting 2025 gemeenschappelijke
+regelingen regio Haaglanden
+Besluit:
+---
+
+---
+Besluit: Samenwerkingsovereenkomst Inclusief Sporten & Bewegen
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+In te stemmen met de ondertekening van de Samenwerkingsovereenkomst
+Inclusief Sporten & Bewegen Haaglanden 2023 t/m 2026.
+
+Volledige tekst:
+Samenwerkingsovereenkomst Inclusief Sporten & Bewegen
+Haaglanden 2023 t/m 2026
+Besluit:
+In te stemmen met de ondertekening van de Samenwerkingsovereenkomst
+Inclusief Sporten & Bewegen Haaglanden 2023 t/m 2026.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-12-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_december_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Periodieke Rapportage Afvalinzameling jan-aug 2023
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Periodieke Rapportage Afvalinzameling jan-aug 2023
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Vaststellen Financieel besluit maatschappelijke ondersteuning 2024
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen Financieel besluit maatschappelijke ondersteuning 2024
+Wassenaar.
+Besluit:
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen inzake LED-verlichting Sporthal
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Beantwoording schriftelijke vragen inzake LED-verlichting Sporthal
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-01-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_januari_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-02-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_februari_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-02-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_februari_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Afvalstoffenverordening gemeente Wassenaar 2024 en
+Datum: 2024-02-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_februari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Afvalstoffenverordening gemeente Wassenaar 2024 en
+Uitvoeringsbesluit Afvalstoffenverordening gemeente Wassenaar 2024
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-03-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_maart_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: 1 Aangepaste was-wordtlijst afvalstoffenheffing
+Datum: 2024-03-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Aangepaste was-wordtlijst afvalstoffenheffing vast te stellen.
+
+Volledige tekst:
+1 Aangepaste was-wordtlijst afvalstoffenheffing
+Besluit:
+Aangepaste was-wordtlijst afvalstoffenheffing vast te stellen.
+---
+
+---
+Besluit: In de ontwerp-opgave uit te gaan van openbare horeca in De Paauw en
+Datum: 2024-03-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_maart_2024.pdf
+
+Besluittekst (kort):
+deze te combineren met horeca voor eigen gebruik.
+
+Volledige tekst:
+In de ontwerp-opgave uit te gaan van openbare horeca in De Paauw en
+deze te combineren met horeca voor eigen gebruik.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-03-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_maart_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-04-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_april_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-04-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_april_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-04-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_april_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Overeenkomsten strandexploitanten
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Overeenkomsten strandexploitanten
+Besluit:
+---
+
+---
+Besluit: Startnotitie Sportvisie Wassenaar
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Startnotitie Sportvisie Wassenaar
+Besluit:
+---
+
+---
+Besluit: Zienswijze Begroting en conceptJaarrekening 2025 GR KDB
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Zienswijze Begroting en conceptJaarrekening 2025 GR KDB
+Besluit:
+---
+
+---
+Besluit: De kosten voor de uitbreiding te dekken uit de reeds opgenomen post
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Besluittekst (kort):
+jeugd- en jongerenwerk in de begroting;
+Pagina 2 van 4
+
+Volledige tekst:
+De kosten voor de uitbreiding te dekken uit de reeds opgenomen post
+jeugd- en jongerenwerk in de begroting;
+Pagina 2 van 4
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Raadsinformatiebrief Periodieke Rapportage Afvalinzameling 2023
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Periodieke Rapportage Afvalinzameling 2023
+Besluit:
+---
+
+---
+Besluit: Zienswijze op de begroting 2025 van de Omgevingsdienst Haaglanden
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Zienswijze op de begroting 2025 van de Omgevingsdienst Haaglanden
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-05-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_mei_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: De raad voor te stellen om op de ontwerpbegroting 2025 bij het dagelijks
+Datum: 2024-05-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_mei_2024.pdf
+
+Besluittekst (kort):
+bestuur van de Metropoolregio Rotterdam Den Haag (MRDH) een zienswijze
+naar voren te brengen, zoals verwoord in de bij dit voorstel behorende
+aanbiedingsbrief.
+
+Volledige tekst:
+De raad voor te stellen om op de ontwerpbegroting 2025 bij het dagelijks
+bestuur van de Metropoolregio Rotterdam Den Haag (MRDH) een zienswijze
+naar voren te brengen, zoals verwoord in de bij dit voorstel behorende
+aanbiedingsbrief.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-05-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_mei_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Zienswijze Ontwerpbegroting 2025 Belastingdienst Gouwe- Rijnland
+Datum: 2024-05-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_mei_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Zienswijze Ontwerpbegroting 2025 Belastingdienst Gouwe- Rijnland
+(BSGR)
+Besluit:
+---
+
+---
+Besluit: Overhevelen restanten investeringskredieten 2023
+Datum: 2024-05-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_mei_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Onder voorbehoud van de definitieve cijfers en de uitkomsten van de
+accountantscontrole de gemeenteraad bij de behandeling van de jaarrekening
+over 2023 voor te stellen:
+
+Volledige tekst:
+Overhevelen restanten investeringskredieten 2023
+
+Besluit:
+Onder voorbehoud van de definitieve cijfers en de uitkomsten van de
+accountantscontrole de gemeenteraad bij de behandeling van de jaarrekening
+over 2023 voor te stellen:
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2025 GR Servicebureau Jeugdhulp
+Datum: 2024-05-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_mei_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Zienswijze ontwerpbegroting 2025 GR Servicebureau Jeugdhulp
+Haaglanden
+Besluit:
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2025 Metropoolregio Rotterdam Den
+Datum: 2024-05-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_mei_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Zienswijze ontwerpbegroting 2025 Metropoolregio Rotterdam Den
+Haag (MRDH)
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Raadsinformatiebrief afhandeling van de Motie Begroting
+Datum: 2024-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief afhandeling van de Motie Begroting
+Toekomstbestendig en Meerjarig in Evenwicht, ingediend door de
+fractie van D66
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-06-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_juni_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Raadsinformatiebrief Evaluatie verhoging toeristenbelasting
+Datum: 2024-06-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Evaluatie verhoging toeristenbelasting
+Besluit:
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor Thema sport en bewegen vast te stellen
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+op € 153.376.
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor Thema sport en bewegen vast te stellen
+op € 153.376.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Meicirculaire gemeentefonds 2024
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad middels bijgevoegde raadsinformatiebrief te informeren over de
+gevolgen van de meicirculaire 2024 en de wijze waarop dit in de begroting
+voor 2025 e.v. verwerkt zal worden.
+
+Volledige tekst:
+Meicirculaire gemeentefonds 2024
+Besluit:
+De raad middels bijgevoegde raadsinformatiebrief te informeren over de
+gevolgen van de meicirculaire 2024 en de wijze waarop dit in de begroting
+voor 2025 e.v. verwerkt zal worden.
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor het organiseren van sportbijeenkomsten
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+vast te stellen op € 2.128.
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor het organiseren van sportbijeenkomsten
+vast te stellen op € 2.128.
+---
+
+---
+Besluit: Onder het voorbehoud van de vaststelling van deze bedragen door de
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+gemeenteraad in de Begroting 2025.
+
+Volledige tekst:
+Onder het voorbehoud van de vaststelling van deze bedragen door de
+gemeenteraad in de Begroting 2025.
+---
+
+---
+Besluit: Raadsinformatiebrief toezegging 659 zienswijze ontwerpbegroting
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Conform besloten.
+
+Volledige tekst:
+Raadsinformatiebrief toezegging 659 zienswijze ontwerpbegroting
+ODH 2025
+Besluit:
+Conform besloten.
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor Thema sport en bewegen vast te stellen
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+op € 153.376.
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor Thema sport en bewegen vast te stellen
+op € 153.376.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Meicirculaire gemeentefonds 2024
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad middels bijgevoegde raadsinformatiebrief te informeren over de
+gevolgen van de meicirculaire 2024 en de wijze waarop dit in de begroting
+voor 2025 e.v. verwerkt zal worden.
+
+Volledige tekst:
+Meicirculaire gemeentefonds 2024
+Besluit:
+De raad middels bijgevoegde raadsinformatiebrief te informeren over de
+gevolgen van de meicirculaire 2024 en de wijze waarop dit in de begroting
+voor 2025 e.v. verwerkt zal worden.
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor het organiseren van sportbijeenkomsten
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+vast te stellen op € 2.128.
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor het organiseren van sportbijeenkomsten
+vast te stellen op € 2.128.
+---
+
+---
+Besluit: Onder het voorbehoud van de vaststelling van deze bedragen door de
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+gemeenteraad in de Begroting 2025.
+
+Volledige tekst:
+Onder het voorbehoud van de vaststelling van deze bedragen door de
+gemeenteraad in de Begroting 2025.
+---
+
+---
+Besluit: Raadsinformatiebrief toezegging 659 zienswijze ontwerpbegroting
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+Besluit:
+Conform besloten.
+
+Volledige tekst:
+Raadsinformatiebrief toezegging 659 zienswijze ontwerpbegroting
+ODH 2025
+Besluit:
+Conform besloten.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen Kadernota en toeristenbelasting
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording schriftelijke vragen Kadernota en toeristenbelasting (114 en
+
+Volledige tekst:
+Beantwoording schriftelijke vragen Kadernota en toeristenbelasting
+(114 en 115)
+Pagina 3 van 5
+
+Besluit:
+Beantwoording schriftelijke vragen Kadernota en toeristenbelasting (114 en
+---
+
+---
+Besluit: Woo-verzoek met betrekking tot de aanschaf van de accu voor de
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Het Woo-verzoek om openbaarmaking van informatie met betrekking tot de
+aanschaf van de accu voor de sporthal aan de Dr. Mansveltkade gedeeltelijk
+toe te wijzen.
+
+Volledige tekst:
+Woo-verzoek met betrekking tot de aanschaf van de accu voor de
+sporthal aan de Dr. Mansveltkade
+Besluit:
+Het Woo-verzoek om openbaarmaking van informatie met betrekking tot de
+aanschaf van de accu voor de sporthal aan de Dr. Mansveltkade gedeeltelijk
+toe te wijzen.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Afdoening toezeggingen Sport van juni 2024
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Afdoening toezeggingen Sport van juni 2024
+Besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief begroting 2024 Bloemcampschool
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief begroting 2024 Bloemcampschool
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-08-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_augustus_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-08-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-08-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024_0.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: De gemeenteraad te informeren over reactie zienswijzen begroting VRH
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Besluittekst (kort):
+2025-2028 via bijgevoegde bijlage.
+
+Volledige tekst:
+De gemeenteraad te informeren over reactie zienswijzen begroting VRH
+2025-2028 via bijgevoegde bijlage.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Raadsinformatiebrief reactie zienswijzen begroting VRH 2025-2028
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief reactie zienswijzen begroting VRH 2025-2028
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Raadsinformatiebrief Periodieke Rapportage Afvalinzameling januari-
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de inhoud van de
+opdrachtgeversrapportage Wassenaar januari-april 2024 met bijgevoegde
+raadsinformatiebrief en de rapportage als bijlage.
+
+Volledige tekst:
+Raadsinformatiebrief Periodieke Rapportage Afvalinzameling januari-
+april 2024
+Besluit:
+De gemeenteraad te informeren over de inhoud van de
+opdrachtgeversrapportage Wassenaar januari-april 2024 met bijgevoegde
+raadsinformatiebrief en de rapportage als bijlage.
+---
+
+---
+Besluit: Jaarrekening 2023 Bloemcampschool
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Het bestuursverslag 2023 van de Stichting Openbaar Primair Onderwijs
+Wassenaar, inclusief jaarrekening 2023 en accountantsverklaring, ter
+goedkeuring voor te leggen aan de Raad.
+
+Volledige tekst:
+Jaarrekening 2023 Bloemcampschool
+Besluit:
+Het bestuursverslag 2023 van de Stichting Openbaar Primair Onderwijs
+Wassenaar, inclusief jaarrekening 2023 en accountantsverklaring, ter
+goedkeuring voor te leggen aan de Raad.
+---
+
+---
+Besluit: Raadsinformatiebrief Herstel paardensportfaciliteiten Draf- en
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Herstel paardensportfaciliteiten Draf- en
+Renbaan Duindigt
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-09-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_september_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-09-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_september_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: AANGEPAST Jaarrekening 2023 Stichting Openbaar Primair Onderwijs
+Datum: 2024-09-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+AANGEPAST Jaarrekening 2023 Stichting Openbaar Primair Onderwijs
+Wassenaar
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-09-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_september_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Begroting 2025 en meerjarenramingen
+Datum: 2024-09-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Begroting 2025 en meerjarenramingen
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-10-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_oktober_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Begroting 2025 en meerjarenraming 2026-2028
+Datum: 2024-10-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_oktober_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Raad voor te stellen:
+
+Volledige tekst:
+Begroting 2025 en meerjarenraming 2026-2028
+Besluit:
+Raad voor te stellen:
+---
+
+---
+Besluit: Persbericht begroting 2025
+Datum: 2024-10-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_oktober_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Persbericht begroting 2025 vast te stellen.
+
+Volledige tekst:
+Persbericht begroting 2025
+Besluit:
+Persbericht begroting 2025 vast te stellen.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-10-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_oktober_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-10-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_oktober_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Raadsinformatiebrief financiën sporthal de Duinpan
+Datum: 2024-10-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_oktober_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief financiën sporthal de Duinpan
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-10-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_oktober_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport / Onderwerpen i.c.m. Begroting
+Datum: 2024-11-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_november_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport / Onderwerpen i.c.m. Begroting
+---
+
+---
+Besluit: als lastenbudget aan de uitgavenkant en het resterende deel te laten
+Datum: 2024-11-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_november_2024.pdf
+
+Besluittekst (kort):
+vrijvallen in het begrotingssaldo;
+
+Volledige tekst:
+als lastenbudget aan de uitgavenkant en het resterende deel te laten
+vrijvallen in het begrotingssaldo;
+---
+
+---
+Besluit: Maatwerkbesluit geluidbelasting Beatrixkazerne – ANWB complex
+Datum: 2024-11-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Het college besluit tot het instellen van beroep tegen de weigering d.d. 5
+september 2024 van de minister van Infrastructuur en Waterstaat tot het
+treffen van een maatwerkvoorschrift geluidbelasting ten aanzien van de
+Beatrixkazerne in Den Haag in verband met de woningbouw op het ANWB
+complex.
+
+Volledige tekst:
+Maatwerkbesluit geluidbelasting Beatrixkazerne – ANWB complex
+Besluit:
+Het college besluit tot het instellen van beroep tegen de weigering d.d. 5
+september 2024 van de minister van Infrastructuur en Waterstaat tot het
+treffen van een maatwerkvoorschrift geluidbelasting ten aanzien van de
+Beatrixkazerne in Den Haag in verband met de woningbouw op het ANWB
+complex.
+---
+
+---
+Besluit: De definitieve kaderbrief begroting 2026 ter kennisname naar de
+Datum: 2024-11-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_november_2024.pdf
+
+Besluittekst (kort):
+gemeenteraad te sturen.
+
+Volledige tekst:
+De definitieve kaderbrief begroting 2026 ter kennisname naar de
+gemeenteraad te sturen.
+---
+
+---
+Besluit: 2 Belastingverordeningen 2025
+Datum: 2024-11-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+2 Belastingverordeningen 2025
+Besluit:
+---
+
+---
+Besluit: 5.a Financiën, Economie en Sport
+Datum: 2024-11-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_november_2024.pdf
+
+Volledige tekst:
+5.a Financiën, Economie en Sport
+---
+
+---
+Besluit: Kaderbrief begroting 2026 Gemeenschappelijke Regelingen regio
+Datum: 2024-11-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Kaderbrief begroting 2026 Gemeenschappelijke Regelingen regio
+Haaglanden
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-11-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_november_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Raadsinformatiebrief toekomst Dr. Mansveltkade 1 Sporthal Schulpwei
+Datum: 2024-11-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief toekomst Dr. Mansveltkade 1 Sporthal Schulpwei
+Besluit:
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-11-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_november_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-12-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_december_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Financieel besluit maatschappelijke ondersteuning gemeente
+Datum: 2024-12-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_december_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Financieel besluit maatschappelijke ondersteuning gemeente
+Wassenaar 2025
+Besluit:
+---
+
+---
+Besluit: De raad te informeren over de toepassing van de hardheidsclausule in de
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Besluittekst (kort):
+jaarrekening 2025.
+
+Volledige tekst:
+De raad te informeren over de toepassing van de hardheidsclausule in de
+jaarrekening 2025.
+---
+
+---
+Besluit: Financiën, Economie en Sport
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Volledige tekst:
+Financiën, Economie en Sport
+---
+
+---
+Besluit: Eerste wijziging afvalstoffenverordening gemeente Wassenaar 2024
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Eerste wijziging afvalstoffenverordening gemeente Wassenaar 2024 n.a.v.
+motie Ja-Ja-sticker vast te stellen.
+
+Volledige tekst:
+Eerste wijziging afvalstoffenverordening gemeente Wassenaar 2024
+n.a.v. motie Ja-Ja-sticker
+Besluit:
+Eerste wijziging afvalstoffenverordening gemeente Wassenaar 2024 n.a.v.
+motie Ja-Ja-sticker vast te stellen.
+---
+
+---
+Besluit: Beantwoording 135 Schriftelijke vragen art. 37 RvO raadslid Paulides
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 135 Schriftelijke vragen art. 37 RvO raadslid Paulides DLW
+inzake vragen m.b.t. gebruik accupakket in relatie tot de Vintis-berekening
+sporthal vast te stellen.
+
+Volledige tekst:
+Beantwoording 135 Schriftelijke vragen art. 37 RvO raadslid Paulides
+DLW inzake vragen m.b.t. gebruik accupakket in relatie tot de Vintis-
+berekening sporthal
+Besluit:
+Beantwoording 135 Schriftelijke vragen art. 37 RvO raadslid Paulides DLW
+inzake vragen m.b.t. gebruik accupakket in relatie tot de Vintis-berekening
+sporthal vast te stellen.
+---
+
+---
+Besluit: 4 Advies maatschappelijk initiatief aanpassing Rozenweg/Rozenplein
+Datum: 2025-01-21
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_januari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Initiatief wordt door college afgedaan en een bestuurlijk gesprek met
+initiatiefnemer ingepland.
+
+Volledige tekst:
+4 Advies maatschappelijk initiatief aanpassing Rozenweg/Rozenplein
+Besluit:
+Initiatief wordt door college afgedaan en een bestuurlijk gesprek met
+initiatiefnemer ingepland.
+---
+
+---
+Besluit: Vergoeding kosten zeewaartse verplaatsing zeil- en surfvereniging
+Datum: 2025-02-11
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_februari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Akkoord gaan met eenmalige, incidentele vergoeding van een deel van de
+kosten van de verplichte zeewaartse verplaatsing van de zeil- en
+surfverenigingen op het strand, onder de voorwaarde dat de beide
+verenigingen ieder € 3.500 zelf betalen.
+
+Volledige tekst:
+Vergoeding kosten zeewaartse verplaatsing zeil- en surfvereniging
+Besluit:
+Akkoord gaan met eenmalige, incidentele vergoeding van een deel van de
+kosten van de verplichte zeewaartse verplaatsing van de zeil- en
+surfverenigingen op het strand, onder de voorwaarde dat de beide
+verenigingen ieder € 3.500 zelf betalen.
+---
+
+---
+Besluit: 5.a Financiën, Economie en Sport
+Datum: 2025-02-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_februari_2025.pdf
+
+Volledige tekst:
+5.a Financiën, Economie en Sport
+---
+
+---
+Besluit: College ondersteunt de financiële weerslag van deze wijze in bijlage 1
+Datum: 2025-03-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_maart_2025.pdf
+
+Besluittekst (kort):
+(m.u.v. bezuiniging op jeugdledensubsidies voor sport en scouting en check op
+besproken punt Economie).
+
+Volledige tekst:
+College ondersteunt de financiële weerslag van deze wijze in bijlage 1
+(m.u.v. bezuiniging op jeugdledensubsidies voor sport en scouting en check op
+besproken punt Economie).
+---
+
+---
+Besluit: De gevolgen voor de exploitatiebegroting te verwerken in de kadernota
+Datum: 2025-03-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_maart_2025.pdf
+
+Volledige tekst:
+De gevolgen voor de exploitatiebegroting te verwerken in de kadernota
+---
+
+---
+Besluit: op te nemen in de begroting.
+Datum: 2025-03-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_maart_2025.pdf
+
+Volledige tekst:
+op te nemen in de begroting.
+---
+
+---
+Besluit: De volgende aanvullende toetsingscriteria vast te stellen:
+Datum: 2025-03-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_maart_2025.pdf
+
+Besluittekst (kort):
+A. Programma beleidsbepalend orgaan (PBO): Heeft de aanvrager een
+representatief PBO met Wassenaarse vertegenwoordiging?
+B. Professionaliteit van de organisatie: Heeft de aanvrager een transparante
+organisatiecultuur en redactionele onafhankelijkheid?
+C. Samenwerking: Werkt de aanvrager samen met lokale en regionale
+organisaties in Wassenaar, zoals het onderwijs, bibliotheken, sportinstellingen,
+culturele organisaties en de internationale gemeenschap?
+D. Aansluiting op informatiebehoefte inwoners: In hoeverre richt het media-
+aanbod zich op de leefomgeving van de inwoners van Wassenaar?
+E. Toegankelijkheid voor blinden en doven: Is de omroep toegankelijk voor
+doven/slechthorenden en blinden/slechtzienden? Bijvoorbeeld door de inzet
+van ondertiteling, audiodescriptie en gesproken ondertiteling.
+F. Democratische controle: In hoeverre volgt en verslaat de omroep het
+democratisch proces in de gemeente Wassenaar, waaronder de
+gemeenteraad?
+
+Volledige tekst:
+De volgende aanvullende toetsingscriteria vast te stellen:
+A. Programma beleidsbepalend orgaan (PBO): Heeft de aanvrager een
+representatief PBO met Wassenaarse vertegenwoordiging?
+B. Professionaliteit van de organisatie: Heeft de aanvrager een transparante
+organisatiecultuur en redactionele onafhankelijkheid?
+C. Samenwerking: Werkt de aanvrager samen met lokale en regionale
+organisaties in Wassenaar, zoals het onderwijs, bibliotheken, sportinstellingen,
+culturele organisaties en de internationale gemeenschap?
+D. Aansluiting op informatiebehoefte inwoners: In hoeverre richt het media-
+aanbod zich op de leefomgeving van de inwoners van Wassenaar?
+E. Toegankelijkheid voor blinden en doven: Is de omroep toegankelijk voor
+doven/slechthorenden en blinden/slechtzienden? Bijvoorbeeld door de inzet
+van ondertiteling, audiodescriptie en gesproken ondertiteling.
+F. Democratische controle: In hoeverre volgt en verslaat de omroep het
+democratisch proces in de gemeente Wassenaar, waaronder de
+gemeenteraad?
+---
+
+---
+Besluit: Eerste recht van koop Marineweg 16
+Datum: 2025-04-01
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Het college besluit om:
+
+Volledige tekst:
+Eerste recht van koop Marineweg 16
+Besluit:
+Het college besluit om:
+---
+
+---
+Besluit: Afsluiten en openhouden investeringskredieten ultimo 2024
+Datum: 2025-04-29
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Onder voorbehoud van de definitieve cijfers en de uitkomsten van de
+accountantscontrole de gemeenteraad bij de behandeling van de jaarrekening
+van 2024 voor te stellen:
+
+Volledige tekst:
+Afsluiten en openhouden investeringskredieten ultimo 2024
+Besluit:
+Onder voorbehoud van de definitieve cijfers en de uitkomsten van de
+accountantscontrole de gemeenteraad bij de behandeling van de jaarrekening
+van 2024 voor te stellen:
+---
+
+---
+Besluit: en 2025
+Datum: 2025-04-29
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 153 Schriftelijke vragen ex art. 37 RvO van raadslid Hendrickx
+(HvW) inzake onderverdeling in drie categorieën lasten 2024 en 2025 vast te
+stellen.
+
+Volledige tekst:
+en 2025
+Besluit:
+Beantwoording 153 Schriftelijke vragen ex art. 37 RvO van raadslid Hendrickx
+(HvW) inzake onderverdeling in drie categorieën lasten 2024 en 2025 vast te
+stellen.
+---
+
+---
+Besluit: Afsluiten en openhouden investeringskredieten ultimo 2024
+Datum: 2025-04-29
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025_0.pdf
+
+Besluittekst (kort):
+Besluit:
+Onder voorbehoud van de definitieve cijfers en de uitkomsten van de
+accountantscontrole de gemeenteraad bij de behandeling van de jaarrekening
+van 2024 voor te stellen:
+
+Volledige tekst:
+Afsluiten en openhouden investeringskredieten ultimo 2024
+Besluit:
+Onder voorbehoud van de definitieve cijfers en de uitkomsten van de
+accountantscontrole de gemeenteraad bij de behandeling van de jaarrekening
+van 2024 voor te stellen:
+---
+
+---
+Besluit: en 2025
+Datum: 2025-04-29
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025_0.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 153 Schriftelijke vragen ex art. 37 RvO van raadslid Hendrickx
+(HvW) inzake onderverdeling in drie categorieën lasten 2024 en 2025 vast te
+stellen.
+
+Volledige tekst:
+en 2025
+Besluit:
+Beantwoording 153 Schriftelijke vragen ex art. 37 RvO van raadslid Hendrickx
+(HvW) inzake onderverdeling in drie categorieën lasten 2024 en 2025 vast te
+stellen.
+---
+
+---
+Besluit: Subsidieregeling Sport en scouting gemeente Wassenaar 2025
+Datum: 2025-05-13
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_mei_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregeling Sport en scouting gemeente Wassenaar 2025
+Besluit:
+---
+
+---
+Besluit: 1 Verlengen bestaande contract met de huidige accountant voor de
+Datum: 2025-06-10
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+1 Verlengen bestaande contract met de huidige accountant voor de
+verslagjaren 2026 en 2027
+Besluit:
+---
+
+---
+Besluit: 380 Schriftelijke vragen ex art. 36 RvO raadslid Hendrickx (HvW)
+Datum: 2025-06-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Hart voor
+Wassenaar raadslid Hendrickx d.d. 27 mei 2025 met betrekking tot
+kruimelvergunningen panden winkelgebied vast te stellen.
+
+Volledige tekst:
+380 Schriftelijke vragen ex art. 36 RvO raadslid Hendrickx (HvW)
+inzake kruimelvergunningen panden winkelgebied
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Hart voor
+Wassenaar raadslid Hendrickx d.d. 27 mei 2025 met betrekking tot
+kruimelvergunningen panden winkelgebied vast te stellen.
+---
+
+---
+Besluit: De bestemmingsreserve Investeringen sport voor maatregelen uitvoering
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Besluittekst (kort):
+sportaccommodatiebeleid voor (niet-)gemeentelijke sportaccommodaties ter
+grootte van 129.000 euro op te heffen en dit bedrag te storten in de nieuw
+gevormde onderhoudsvoorziening “gemeentelijke sportvelden”;
+
+Volledige tekst:
+De bestemmingsreserve Investeringen sport voor maatregelen uitvoering
+sportaccommodatiebeleid voor (niet-)gemeentelijke sportaccommodaties ter
+grootte van 129.000 euro op te heffen en dit bedrag te storten in de nieuw
+gevormde onderhoudsvoorziening “gemeentelijke sportvelden”;
+---
+
+---
+Besluit: 1 Sportvisie Wassenaar 2025
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+1 Sportvisie Wassenaar 2025
+Besluit:
+---
+
+---
+Besluit: Binnen het financiële kader zoals verwerkt in de Kadernota 2026 treedt de
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Besluittekst (kort):
+gemeente in overleg met de sportverenigingen om nader uitwerking te geven
+aan het benodigde beheer en onderhoud aan gemeentelijke sportvelden voor
+
+de buitensport en voor het aanstellen van specialist coördinator beheer &
+onderhoud buitensport.
+
+Volledige tekst:
+Binnen het financiële kader zoals verwerkt in de Kadernota 2026 treedt de
+gemeente in overleg met de sportverenigingen om nader uitwerking te geven
+aan het benodigde beheer en onderhoud aan gemeentelijke sportvelden voor
+
+de buitensport en voor het aanstellen van specialist coördinator beheer &
+onderhoud buitensport.
+---
+
+---
+Besluit: Meicirculaire gemeentefonds 2025
+Datum: 2025-06-24
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Meicirculaire gemeentefonds 2025
+Besluit:
+---
+
+---
+Besluit: Beantwoording vragen Hart voor Wassenaar-fractie m.b.t. de
+Datum: 2025-07-01
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording van vragen Hart voor Wassenaar-fractie m.b.t. de jaarstukken
+
+Volledige tekst:
+Beantwoording vragen Hart voor Wassenaar-fractie m.b.t. de
+jaarstukken 2024
+Besluit:
+Beantwoording van vragen Hart voor Wassenaar-fractie m.b.t. de jaarstukken
+---
+
+---
+Besluit: Met de zienswijze het Wassenaarse Bod te doen om gezamenlijk het MOB
+Datum: 2025-07-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juli_2025.pdf
+
+Besluittekst (kort):
+Maaldrift naar een opleidingscentrum van de Koninklijke Marechaussee te
+ontwikkelen, onder de volgende absolute randvoorwaarden:
+a. het verkeersknelpunt aan het Rozenplein/de Rozenweg samen met de
+gemeente op te lossen voorafgaand aan start van de ontwikkeling van
+MOB Maaldrift;
+b. samen met de gemeente invulling te geven aan een opimale irichting
+van bedrijventerrein Maaldrift en de naastgelegen sportvelden, waarbij
+rekening gehouden wordt met uitbreidingswensen van Wassenmaarse
+ondernemers en het uitplaatsen van bedrijven uit de Noordrand van
+Wassenaar;
+c. een goede inpassing van de herontwikkeling door:
+- rekening te houden met de belangen van omwonenden en bedrijven;
+- rekening te houden met de aanwezige landschappelijke,
+cultuurhistorische en natuurwaarden. Deze waarden zijn door de
+gemeenteraad vastgesteld in bestaand beleid en Omgevingsplan
+(bestemmingsplan Ammonslaantje Maaldrift) en dienen ook meegenomen
+te worden in de effectbeschrijving en beoordeling in het
+Milieueffectrapp
+
+Volledige tekst:
+Met de zienswijze het Wassenaarse Bod te doen om gezamenlijk het MOB
+Maaldrift naar een opleidingscentrum van de Koninklijke Marechaussee te
+ontwikkelen, onder de volgende absolute randvoorwaarden:
+a. het verkeersknelpunt aan het Rozenplein/de Rozenweg samen met de
+gemeente op te lossen voorafgaand aan start van de ontwikkeling van
+MOB Maaldrift;
+b. samen met de gemeente invulling te geven aan een opimale irichting
+van bedrijventerrein Maaldrift en de naastgelegen sportvelden, waarbij
+rekening gehouden wordt met uitbreidingswensen van Wassenmaarse
+ondernemers en het uitplaatsen van bedrijven uit de Noordrand van
+Wassenaar;
+c. een goede inpassing van de herontwikkeling door:
+- rekening te houden met de belangen van omwonenden en bedrijven;
+- rekening te houden met de aanwezige landschappelijke,
+cultuurhistorische en natuurwaarden. Deze waarden zijn door de
+gemeenteraad vastgesteld in bestaand beleid en Omgevingsplan
+(bestemmingsplan Ammonslaantje Maaldrift) en dienen ook meegenomen
+te worden in de effectbeschrijving en beoordeling in het
+Milieueffectrapportage (PlanMER).
+Pagina 1 van 2
+---
+
+---
+Besluit: Deze kosten en hieruit voortkomende werkzaamheden te dekken uit de
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+lopende begroting van de Lokale Energiestrategie 2023-2026;
+
+Volledige tekst:
+Deze kosten en hieruit voortkomende werkzaamheden te dekken uit de
+lopende begroting van de Lokale Energiestrategie 2023-2026;
+---
+
+---
+Besluit: Plan reductie restafval
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Plan reductie restafval
+Besluit:
+---
+
+---
+Besluit: 386 Schriftelijke vragen ex art. 36 RvO raadslid Bellekom-Vogels
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 386 Schriftelijke vragen ex art. 36 RvO raadslid Bellekom-
+Vogels (LW!) inzake uitspraak Raad van State padelbanen tennispark De Oude
+Eik vast te stellen.
+
+Volledige tekst:
+386 Schriftelijke vragen ex art. 36 RvO raadslid Bellekom-Vogels
+(LW!) inzake uitspraak Raad van State padelbanen tennispark De
+Oude Eik
+Pagina 2 van 4
+
+Besluit:
+Beantwoording 386 Schriftelijke vragen ex art. 36 RvO raadslid Bellekom-
+Vogels (LW!) inzake uitspraak Raad van State padelbanen tennispark De Oude
+Eik vast te stellen.
+---
+
+---
+Besluit: Eerste wijziging van het Financieel besluit maatschappelijke
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Eerste wijziging van het Financieel besluit maatschappelijke
+ondersteuning Wassenaar 2025
+Besluit:
+---
+
+---
+Besluit: WL33 1 Restafval
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Volledige tekst:
+WL33 1 Restafval
+---
+
+---
+Besluit: VC78 1 Restafval
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Volledige tekst:
+VC78 1 Restafval
+---
+
+---
+Besluit: NX9a 1 Restafval
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Besluittekst (kort):
+t 9a
+Restafval, glas
+Van Limburg
+(2x) en oud
+
+Volledige tekst:
+NX9a 1 Restafval
+t 9a
+Restafval, glas
+Van Limburg
+(2x) en oud
+---
+
+---
+Besluit: 4 WM46 Strandwal 46 1 Restafval
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Besluittekst (kort):
+Ter Weerlaan
+
+Volledige tekst:
+4 WM46 Strandwal 46 1 Restafval
+Ter Weerlaan
+---
+
+---
+Besluit: karton
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Besluittekst (kort):
+Oostdorperweg Restafval en
+
+Volledige tekst:
+karton
+Oostdorperweg Restafval en
+---
+
+---
+Besluit: textiel
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Besluittekst (kort):
+Rozeveldlaan
+Restafval (2x)
+
+Volledige tekst:
+textiel
+Rozeveldlaan
+Restafval (2x)
+---
+
+---
+Besluit: VE190 1 Restafval
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Volledige tekst:
+VE190 1 Restafval
+---
+
+---
+Besluit: 2. De ondergrondse restafvalcontainers aan te wijzen als inzamelvoorziening
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Besluittekst (kort):
+voor de in de ontwerp aanwijzingsbesluiten vermelde adressen;
+
+Volledige tekst:
+2. De ondergrondse restafvalcontainers aan te wijzen als inzamelvoorziening
+voor de in de ontwerp aanwijzingsbesluiten vermelde adressen;
+---
+
+---
+Besluit: 4 Ontwerpkeuzes voor de renovatie en restauratie van De Paauw
+Datum: 2025-08-19
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_augustus_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+4 Ontwerpkeuzes voor de renovatie en restauratie van De Paauw
+Besluit:
+---
+
+---
+Besluit: Centraal tellen Tweede Kamerverkiezingen 2025 en
+Datum: 2025-08-19
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_augustus_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Centraal tellen Tweede Kamerverkiezingen 2025 en
+Gemeenteraadsverkiezingen 2026
+Besluit:
+---
+
+---
+Besluit: 6 Jaarrekening 2024 Stichting Openbaar Primair Onderwijs Wassenaar
+Datum: 2025-09-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+6 Jaarrekening 2024 Stichting Openbaar Primair Onderwijs Wassenaar
+Besluit:
+---
+
+---
+Besluit: 4 Toezegging 830 Sportvisie Wassenaar 2025 Commissie Mens &
+Datum: 2025-09-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+4 Toezegging 830 Sportvisie Wassenaar 2025 Commissie Mens &
+Maatschappij d.d. 10 september 2025
+Besluit:
+---
+
+---
+Besluit: Belastingverordeningen begroting 2026
+Datum: 2025-09-23
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Belastingverordeningen begroting 2026
+Besluit:
+---
+
+---
+Besluit: Begroting 2026
+Datum: 2025-09-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Begroting 2026
+Besluit:
+---
+
+---
+Besluit: 3 Zienswijze op definitieve begroting 2026 en definitieve
+Datum: 2025-10-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_oktober_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+3 Zienswijze op definitieve begroting 2026 en definitieve
+begrotingswijziging 2025 GR GGD en Veilig Thuis Haaglanden
+Besluit:
+---
+
+---
+Besluit: Liquiditeitsprognose oktober 2025
+Datum: 2025-10-28
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_oktober_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Liquiditeitsprognose oktober 2025
+Besluit:
+---
+
+---
+Besluit: 5 Regiovisie Aanpak Huiselijk Geweld Haaglanden voor de periode 2026
+Datum: 2025-11-03
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_november_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+5 Regiovisie Aanpak Huiselijk Geweld Haaglanden voor de periode 2026
+e.v.
+Besluit:
+---
+
+---
+Besluit: De Gedragscode Soortenbescherming gemeenten 2025 t/m 31 maart 2030
+Datum: 2025-11-11
+Type: collegebesluit
+Domein: Financiën
+Portefeuille: Financiën, Economie en Sport
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_november_2025.pdf
+
+Besluittekst (kort):
+toe te passen bij de beschreven maatregelen in Openbare ruimte (bestendig
+beheer/onderhoud en inrichting activiteiten RO) uit de Maatregelencatalogus
+
+Volledige tekst:
+De Gedragscode Soortenbescherming gemeenten 2025 t/m 31 maart 2030
+toe te passen bij de beschreven maatregelen in Openbare ruimte (bestendig
+beheer/onderhoud en inrichting activiteiten RO) uit de Maatregelencatalogus
+---
+
+---
+Besluit: 1 Zienswijze op definitieve begroting 2026 en definitieve
+Datum: 2025-11-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_november_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Aangepaste zienswijzebrief op definitieve begroting 2026 en definitieve
+begrotingswijziging 2025 GR GGD Veilig Thuis Haaglanden vast te stellen.
+
+Volledige tekst:
+1 Zienswijze op definitieve begroting 2026 en definitieve
+begrotingswijziging 2025 GR GGD Veilig Thuis Haaglanden
+Besluit:
+Aangepaste zienswijzebrief op definitieve begroting 2026 en definitieve
+begrotingswijziging 2025 GR GGD Veilig Thuis Haaglanden vast te stellen.
+---
+
+---
+Besluit: De bij dit voorstel behorende begrotingswijziging 2026 ter vaststelling aan
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Besluittekst (kort):
+de raad voor te leggen (bijlage 3).
+
+Volledige tekst:
+De bij dit voorstel behorende begrotingswijziging 2026 ter vaststelling aan
+de raad voor te leggen (bijlage 3).
+---
+
+---
+Besluit: ;
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Besluittekst (kort):
+· In te stemmen met hetgeprognosticeerd financieel resultaat (bijlage 2, d.d.
+
+Volledige tekst:
+;
+· In te stemmen met hetgeprognosticeerd financieel resultaat (bijlage 2, d.d.
+---
+
+---
+Besluit: Geheimhouding op te leggen op bijlage 2 Geprognosticeerd financieel
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Besluittekst (kort):
+resultaat Gemeentewerf totdat alle ontbindende voorwaarden in de
+overeenkomst(en) die gesloten worden na de gunningsfase van de tender voor
+fase 1 zijn uitgewerkt.
+Pagina 1 van 4
+
+Volledige tekst:
+Geheimhouding op te leggen op bijlage 2 Geprognosticeerd financieel
+resultaat Gemeentewerf totdat alle ontbindende voorwaarden in de
+overeenkomst(en) die gesloten worden na de gunningsfase van de tender voor
+fase 1 zijn uitgewerkt.
+Pagina 1 van 4
+---
+
+---
+Besluit: Subsidieregeling Sport en scouting gemeente Wassenaar 2026
+Datum: 2025-12-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregeling Sport en scouting gemeente Wassenaar 2026
+Besluit:
+---
+
+---
+Besluit: Kaderbrief begroting 2027 Gemeenschappelijke Regelingen regio
+Datum: 2025-12-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Kaderbrief begroting 2027 Gemeenschappelijke Regelingen regio
+Haaglanden
+Besluit:
+---

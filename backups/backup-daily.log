@@ -1,0 +1,102 @@
+[2026-04-15 07:42] Dagelijkse backup gestart...
+Backup gemaakt: prod_2026-04-15_0742
+Integriteitscheck...
+BeleidsBibliotheek — Dagelijkse backup
+============================================
+
+Datum:     2026-04-15 07:43
+Backup:    prod_2026-04-15_0742
+Status:    OK
+Bestanden: 496
+Grootte:   49.8 MB
+Vergelijk: +456 bestanden t.o.v. prod_2026-04-15_0042
+
+Integriteitscheck:
+  OK         index.html (37,767 bytes)
+  OK         app.js (243,067 bytes)
+  OK         data.js (4,977,635 bytes)
+  OK         styles.css (99,235 bytes)
+  OK         beleidsnotas.js (36,273 bytes)
+  OK         overdrachtsdossier.html (277,532 bytes)
+  OK         overdrachtsdossier.js (8,389 bytes)
+  OK         disclaimer.js (6,244 bytes)
+
+Checksums (MD5, eerste 12 tekens):
+  index.html: f05b85be5f0c
+  app.js: 8122d743db4a
+  data.js: 854194d84d52
+  styles.css: 5058f725a54d
+  beleidsnotas.js: a0b6803ee410
+  overdrachtsdossier.html: 444e1e4fb721
+  overdrachtsdossier.js: 17f33515c3e6
+  disclaimer.js: 582675c99fa5
+
+E-mail: E-mail verzonden
+[2026-04-16 07:08] Dagelijkse backup gestart...
+Backup gemaakt: prod_2026-04-16_0708
+Integriteitscheck...
+BeleidsBibliotheek — Dagelijkse backup
+============================================
+
+Datum:     2026-04-16 07:24
+Backup:    prod_2026-04-16_0708
+Status:    OK
+Bestanden: 496
+Grootte:   49.8 MB
+Vergelijk: Ongewijzigd t.o.v. prod_2026-04-15_0742
+
+Integriteitscheck:
+  OK         index.html (37,767 bytes)
+  OK         app.js (243,067 bytes)
+  OK         data.js (4,977,635 bytes)
+  OK         styles.css (99,235 bytes)
+  OK         beleidsnotas.js (36,273 bytes)
+  OK         overdrachtsdossier.html (277,532 bytes)
+  OK         overdrachtsdossier.js (8,389 bytes)
+  OK         disclaimer.js (6,244 bytes)
+
+Checksums (MD5, eerste 12 tekens):
+  index.html: f05b85be5f0c
+  app.js: 8122d743db4a
+  data.js: 854194d84d52
+  styles.css: 5058f725a54d
+  beleidsnotas.js: a0b6803ee410
+  overdrachtsdossier.html: 444e1e4fb721
+  overdrachtsdossier.js: 17f33515c3e6
+  disclaimer.js: 582675c99fa5
+
+E-mail: E-mail verzonden
+[2026-04-17 07:00] Dagelijkse backup gestart...
+Backup gemaakt: prod_2026-04-17_0700
+Integriteitscheck...
+BeleidsBibliotheek — Dagelijkse backup
+============================================
+
+Datum:     2026-04-17 07:17
+Backup:    prod_2026-04-17_0700
+Status:    OK
+Bestanden: 495
+Grootte:   49.8 MB
+Vergelijk: -1 bestanden t.o.v. prod_2026-04-16_0708
+
+Integriteitscheck:
+  OK         index.html (37,767 bytes)
+  OK         app.js (243,067 bytes)
+  OK         data.js (4,977,635 bytes)
+  OK         styles.css (99,235 bytes)
+  OK         beleidsnotas.js (36,273 bytes)
+  OK         overdrachtsdossier.html (277,532 bytes)
+  OK         overdrachtsdossier.js (8,389 bytes)
+  OK         disclaimer.js (6,244 bytes)
+
+Checksums (MD5, eerste 12 tekens):
+  index.html: f05b85be5f0c
+  app.js: 8122d743db4a
+  data.js: 854194d84d52
+  styles.css: 5058f725a54d
+  beleidsnotas.js: a0b6803ee410
+  overdrachtsdossier.html: 444e1e4fb721
+  overdrachtsdossier.js: 17f33515c3e6
+  disclaimer.js: 582675c99fa5
+
+E-mail: E-mail verzonden

@@ -1,0 +1,5488 @@
+═══════════════════════════════════════════════════════════════
+
+SYSTEEMPROMPT
+
+═══════════════════════════════════════════════════════════════
+
+Je bent een beleidsanalist van de gemeente Wassenaar. Je taak is het opstellen van een
+geconsolideerde beleidsbriefing voor een nieuw aangetreden wethouder.
+
+═══════════════════════════════════════════════════════════════
+DOEL
+═══════════════════════════════════════════════════════════════
+
+Schrijf een beknopte, feitelijke synthese van het vigerende gemeentelijk beleid
+binnen het opgegeven beleidsdomein. De briefing stelt een nieuwe wethouder in staat
+om binnen 15 minuten te begrijpen:
+  1. Welke beleidskeuzes er zijn gemaakt
+  2. Wat de actuele stand van zaken is
+  3. Welke besluiten aan die keuzes ten grondslag liggen
+
+═══════════════════════════════════════════════════════════════
+BRONREGELS — NIET-ONDERHANDELBAAR
+═══════════════════════════════════════════════════════════════
+
+1. ELKE feitelijke bewering MOET eindigen met een bronverwijzing in dit formaat:
+   [Besluit: «naam besluit», «datum»]
+
+2. Als een bewering op MEERDERE besluiten steunt, vermeld ze allemaal:
+   [Besluit: «naam 1», «datum 1»; «naam 2», «datum 2»]
+
+3. Je mag UITSLUITEND informatie gebruiken die LETTERLIJK in de aangeleverde
+   besluitteksten staat. Je mag NIET:
+   - Informatie toevoegen uit je eigen kennis
+   - Aannames doen over beleid dat niet in de besluiten staat
+   - Gevolgtrekkingen maken die niet expliciet in een besluit staan
+   - Termen of beleidsdoelen noemen die niet in de bronteksten voorkomen
+
+4. Als je iets NIET kunt vaststellen op basis van de bronnen, schrijf dan
+   expliciet: "Op basis van de beschikbare besluiten is niet vast te stellen of…"
+
+5. Als de besluittekst ONDUIDELIJK of ONVOLLEDIG is, meld dit:
+   "⚠ De besluittekst van [naam, datum] is onvolledig; verificatie bij de bron-PDF
+   wordt aanbevolen."
+
+═══════════════════════════════════════════════════════════════
+STRUCTUUR VAN DE BRIEFING
+═══════════════════════════════════════════════════════════════
+
+Gebruik exact deze opbouw:
+
+### 1. SAMENVATTING BELEIDSDOMEIN
+- Maximaal 5 zinnen die het domein in hoofdlijnen beschrijven
+- Elke zin met bronverwijzing
+
+### 2. BELEIDSCLUSTERS
+Groepeer de besluiten in inhoudelijke thema's (bijv. "Jeugdzorg", "Wmo",
+"Schuldhulpverlening" binnen Sociaal Domein). Per cluster:
+
+#### 2.x «Naam thema»
+
+**Actueel beleid:**
+- Beschrijf in 2–5 zinnen wat het huidige beleid is op dit thema
+- Elke zin met bronverwijzing(en)
+
+**Chronologie:**
+- Geef een tijdlijn van relevante besluiten (oudste eerst)
+- Markeer waar een besluit een eerder besluit WIJZIGT of VERVANGT
+
+**Aandachtspunten:**
+- Eventuele tegenstrijdigheden tussen besluiten
+- Besluiten met een einddatum of evaluatiemoment
+- Zaken die nog in uitvoering zijn (als dat uit de tekst blijkt)
+
+### 3. BELEIDSWIJZIGINGEN EN OPVOLGING
+- Overzicht van besluiten die eerdere besluiten wijzigen of vervangen
+- Expliciet benoemen welk besluit welk eerder besluit raakt
+
+### 4. LACUNES EN KANTTEKENINGEN
+- Onderwerpen die je op basis van gangbaar gemeentelijk beleid zou verwachten
+  maar die NIET in de besluiten voorkomen → benoem dit als observatie,
+  NIET als feit
+- Besluiten waarvan de tekst onvolledig of onduidelijk was
+- Besluiten die niet eenduidig in één cluster passen
+
+### 5. BRONNENLIJST
+- Volledige lijst van alle besluiten die in de briefing zijn gebruikt
+- Formaat: «datum» | «naam besluit» | «type (raad/college)» | «PDF-bron»
+
+═══════════════════════════════════════════════════════════════
+STIJL EN TAAL
+═══════════════════════════════════════════════════════════════
+
+- Schrijf in het Nederlands
+- Formeel maar toegankelijk — geschikt voor een bestuurder, niet voor een jurist
+- Gebruik actieve zinnen: "De raad heeft besloten…", niet "Er is besloten…"
+- Vermijd jargon dat niet in de bronteksten voorkomt
+- Wees precies: "verlenging met één jaar" is iets anders dan "structurele voortzetting"
+- Wees kort: de briefing moet in 15 minuten leesbaar zijn
+
+═══════════════════════════════════════════════════════════════
+ZELFVERIFICATIE — VOER DIT UIT VOOR JE ANTWOORDT
+═══════════════════════════════════════════════════════════════
+
+Voordat je de briefing oplevert, controleer:
+
+☐ Heeft ELKE feitelijke zin een bronverwijzing?
+☐ Komt ELKE genoemde bronverwijzing voor in de aangeleverde data?
+☐ Heb ik NERGENS informatie toegevoegd die niet in de besluitteksten staat?
+☐ Heb ik tegenstrijdigheden of opvolging van besluiten gesignaleerd?
+☐ Heb ik lacunes en onduidelijkheden expliciet benoemd?
+☐ Is de bronnenlijst compleet?
+
+Als je op een van deze punten twijfelt, meld dit aan het einde van de briefing
+onder het kopje "⚠ Opmerkingen bij deze synthese".
+
+
+═══════════════════════════════════════════════════════════════
+
+GEBRUIKERSPROMPT
+
+═══════════════════════════════════════════════════════════════
+
+
+Hieronder vind je alle besluiten van de gemeente Wassenaar binnen het portefeuille-thema
+"Ruimte, Duurzaamheid & Mobiliteit". De besluiten omvatten zowel raadsbesluiten (2019–2025) als 
+collegebesluiten (2022–2025) uit de volledige huidige collegeperiode.
+
+Aanvullend is het coalitieakkoord 2022–2026 "Samen voor Wassenaar" bijgevoegd 
+als referentiekader.
+
+Stel een beleidsbriefing op volgens de instructies in de systeemprompt.
+
+
+═══════════════════════════════════════════════════════════════
+
+COALITIEAKKOORD 2022–2026 — SAMEN VOOR WASSENAAR
+
+═══════════════════════════════════════════════════════════════
+
+SAMEN VOOR WASSENAAR
+KOERSVAST, OPEN EN BETROKKEN
+
+2
+SAMEN VOOR WASSENAAR
+KOERSVAST, OPEN EN BETROKKEN
+INHOUDSOPGAVE
+Woord vooraf 3
+Bestuur en Middelen 4
+Mens en Maatschappij 7
+Fysieke Leefomgeving 9
+Portefeuilleverdeling college b&w 14
+
+Woord vooraf
+We staan voor grote maatschappelijke Wassenaar wil een inclusieve, groene en
+opgaven, onder meer op het gebied van financieel gezonde gemeente zijn waar
+klimaat en duurzaamheid, voldoende iedereen prettig kan leven, wonen en
+betaalbare woningen, vergrijzing, werken. Een plek waar onze kinderen
+toegang tot zorg en (verkeers)veiligheid. gezond en veilig kunnen opgroeien en
+Op lokaal niveau verlangen inwoners en waar onze ouderen langer vitaal kunnen
+ondernemers antwoorden op hun blijven.
+vragen, ondersteuning bij maatschappe­
+lijke initiatieven en hulp bij problemen. De coalitie streeft naar rust en even­
+Zij vragen om een betrokken gemeente wicht in het bestuur. Zorgvuldige en
+die luistert, duidelijk en betrouwbaar is. transparante besluitvorming vormt het
+Een gemeente die koers houdt in uitgangspunt van ons handelen. Het
+onstuimige tijden. politieke debat en de gesprekken met
+inwoners, ondernemers en maat­
+Wij werken samen vanuit onze idealen schappelijke organisaties worden
+en ambities; we vinden elkaar in onze gevoerd op basis van wederzijds respect.
+overtuiging van wat goed is voor We gaan in gesprek over dit coalitie­
+Wassenaar. De partijen VVD, CDA, D66, akkoord en de keuzes die we hierin
+DLW en PvdA presenteren een coalitie­ hebben gemaakt. Het nieuwe college
+akkoord waarin we zoveel mogelijk treedt verbindend op; we doen het
+rekening houden met de behoeften van immers samen voor Wassenaar.
+alle Wassenaarders.
+3
+
+Bestuur en Middelen
+Financiën en belastingen We sparen voldoende voor de toekomst
+De gemeente houdt de financiën op door afschrijvingen op te nemen in de
+orde met een structureel sluitende begroting. Ook de opbrengsten van de
+begroting. verkoop van gemeentelijke onroerende
+zaken worden toegevoegd aan de
+In 2024 en 2025 komt er in beginsel geen algemene reserve. Bestemmingsreserves
+extra verhoging van de onroerendezaak­ worden beperkt.
+belasting (ozb) bovenop de inflatie­
+correctie, tenzij dit echt nodig is voor Economie
+het voorzieningenniveau voor inwoners. We werken aan een economische visie
+De toeristenbelasting wordt deze in samenspraak met ondernemers die in
+raads periode niet verhoogd; na een jaar 2024 gereed moet zijn. Hierin wordt
+evalueren we de effectieve inzet van onder meer opgenomen het behoud en
+deze belasting. toekomstbestendig maken van de
+bestaande bedrijventerreinen en
+In de Kadernota 2024 volgt de uitwer­ aansluiting gezocht bij de regionale
+king voor wat betreft ons ambitie­ strategie werklocaties van de Metro­
+niveau. Op basis hiervan maken we poolregio Rotterdam Den Haag (MRDH).
+keuzes binnen het beschikbare
+financiële kader. Ambtelijke organisatie
+De ingeslagen weg na de ontvlechting
+We overwegen het lenen van geld alleen van de Werkorganisatie Duivenvoorde
+als dit noodzakelijk is voor (project­) (de voormalige ambtelijke samen wer­
+investeringen. De gemeente gaat niet king tussen Voorschoten en Wassenaar)
+lenen om lopende uitgaven te dekken. wordt voortgezet. We werken aan de
+We gaan daarnaast actief op zoek naar verdere ontwikkeling van de jonge
+44 subsidies, fondsen en mogelijkheden ambtelijke organisatie, zodat maat ­
+voor cofinanciering van projecten, zoals schappelijke vraagstukken effectief
+de restauratie van De Paauw en het kunnen worden aangepakt. Daarbij is
+revitaliseren van onze dorpskern. het van belang voldoende deskundig
+
+personeel in dienst te hebben en een Gemeenschappelijke regelingen
+aantrekkelijke werkgever te zijn. De Veel maatschappelijke uitdagingen
+coalitiepartners zullen de voortgang vragen om samenwerking met partners
+binnen de ambtelijke organisatie in de regio. Dat vraagt een open
+jaarlijks evalueren. houding om gezamenlijk deze uitda­
+gingen aan te kunnen gaan. Onze
+Servicegerichtheid en gemeente is een actieve, betrouwbare 5
+dienstbaarheid partner in de regio.
+De gemeente behartigt het algemeen
+belang en heeft oog voor het individu. In We zorgen voor een kundige, construc­
+Wassenaar voelen inwoners en onder­ tieve vertegenwoordiging van het
+nemers zich geholpen en gesteund door Wassenaarse belang. We willen hier
+de gemeente dankzij toegankelijke en maximale impact behalen en stellen
+efficiënte dienstverlening. De communi­ hiervoor voldoende ambtelijke capaciteit
+catie tussen gemeente, inwoners en beschikbaar.
+ondernemers is transparant, duidelijk en
+getuigt van wederzijds respect. Openbare orde en veiligheid
+De veiligheidsprioriteiten krijgen een
+Gemeentewinkel plaats in het nieuw op te stellen
+We realiseren een toegankelijke, laag­ integraal veiligheidsbeleid.
+drempelige locatie voor de Gemeente­
+winkel, waar inwoners en ondernemers De openbare orde wordt gehandhaafd
+terecht kunnen voor gemeentelijke door de politie, inspecteurs openbare
+dienstverlening, zoals een paspoort. Ook ruimte en buitengewoon opsporings­
+zijn ze hier welkom met vragen, bijvoor­ ambtenaren (boa’s). Zij houden toezicht
+beeld over mogelijkheden om te en treden waar nodig op tegen mis­
+verduurz amen. standen en overtredingen.
+
+Om in te spelen op de thema’s als Evenementen en vergunningen
+‘omgaan met onbegrepen gedrag’ en Wassenaar is een dorp waar veel
+meervoudige sociale problematiek is het evenementen worden georganiseerd.
+belangrijk om zorg en veiligheid in een Evenementen zorgen voor verbinding en
+lokale kamer samen te brengen. Dit samenhang. We werken aan een nieuw
+geeft de mogelijkheid om naargelang de evenementenbeleid om duidelijke kaders
+situatie snel te schakelen en mensen te bieden. We denken mee om
+persoonsgericht te helpen. evenementen mogelijk te maken.
+Om de gemeentelijke handhaving goed Inwonersparticipatie
+te organiseren, stellen we duidelijke In Wassenaar doet iedereen mee, van
+66 prioriteiten en ontwikkelen we een visie jong tot oud. We schetsen heldere
+en een aanpak. Ook bezien we de kaders voor inwonersparticipatie langs
+benodigde handhavingscapaciteit. de lijnen van de verordening en het
+participatiekompas.
+Politiebureau
+We willen het politiebureau behouden Vergrijzing wordt een groot thema in
+voor het dorp. Wassenaar. We zullen dit oppakken
+samen met de ouderen en met hen
+Ondermijning komen tot een plan voor ouderen­
+De inzet op ondermijning is de participatie.
+afgelopen jaren geïntensiveerd: zo is er
+inmiddels een vaste formatieplaats voor Er wonen veel internationals in
+een onder mijningsregisseur in het team. Wassenaar. Dit is een flinke groep
+De regisseur houdt zich bezig met inwoners die ook kan meedraaien in het
+signalen rond thema’s als (vastgoed) verenigings leven of zich kan inzetten als
+fraude, drugs en mensenhandel. De vrijwilliger. In oktober 2021 is de start­
+regisseur zet de komende jaren vooral in notitie ‘Internationale Wassenaarders’
+op bewust wording onder inwoners en besproken en vastgesteld.
+ondernemers en hoe zij vormen van
+ondermijning kunnen melden.
+
+Mens en Maatschappij
+Sociaal domein mering van activiteiten. We koesteren
+In Wassenaar behouden we goede en ondersteunen een sterk verenigings­
+welzijns­ en zorgvoorzieningen. We leven en de vrijwilligers. We zorgen voor
+geven uitvoering aan bestaand beleid. een gerichte spreiding van sociale
+De gemeente, inwoners en maat­ activiteiten en vaste ontmoetings centra
+schappel ijke instellingen onders teunen in verschillende buurten van Wassenaar.
+elkaar. Een nauwe en efficiënte samen­
+werking is daarvoor een voor waarde. In 2023 herijken we het bestaand beleid
+en stellen we de kaders op voor de
+Om de kwaliteit en toegankelijkheid van komende jaren. Verder leggen we
+zorg te garanderen, dient deze in accenten op preventie, het wegwerken
+financieel en maatschappelijk opzicht en van wachtlijsten, aandacht voor mantel­
+qua personele bezetting houdbaar te zorg en respijtzorg (bijvoorbeeld met
+zijn. Dit vraagt om scherpe keuzes in het Odensecafé), dementie vriendelijke
+prioritering, waarbij de mens centraal gemeente en armoede bestrijding. Ten
+staat. Daarbij wordt goed gekeken naar aanzien van ons armoedebeleid
+de hulpvraag en situatie per individu. evalueren we het maatwerkfonds en bij
+We handelen vanuit vertrouwen en gebleken toegevoegde waarde, zien we
+respect, normaliseren zorg volgens toe op een meer permanent karakter.
+landelijke richtlijnen en maken waar
+mogelijk gebruik van landelijke finan­ Sociaal Team Wassenaar
+ciering en fondsen. Het Sociaal Team Wassenaar heeft een
+spilfunctie als het gaat om samen­
+We zetten in op het versterken en werking in het sociaal domein. We
+verbinden van het maatschappelijk streven naar een sterk team, waarin
+middenveld. Dit doen we onder meer via voor alle betrokkenen een duidelijke rol
+een breed scala aan bestaande en is weggelegd. We beginnen zo snel 7
+nieuwe activiteiten; door multifunctio­ mogelijk aan het vergroten van de
+neel gebruik van accommodaties en het bekendheid en bereikbaarheid van het
+gezamenlijk optrekken in de program­ team (1 loket, 1 telefoonnummer).
+
+Er is aandacht voor centrale huisvesting meerjarige contracten. We kijken altijd
+van het Sociaal Team Wassenaar. Samen naar de beste financieringsvorm voor
+met andere partijen inventariseren we zowel de ketenpartners als de
+wat nodig is en maken een realistische gemeente.
+begroting van kosten die nodig zijn voor
+het versterken van het preventief veld. Inclusie
+De inclusieagenda wordt opgesteld, in
+Jeugd- en jongerenbeleid 2023 starten we met de uitvoering van
+Er wordt gewerkt aan jeugd­ en concrete acties.
+jongeren beleid, daarbij gebruiken we de
+inbreng die wordt opgehaald in sessies Sport
+met jongeren en hun ouders. Sporten is belangrijk voor de lichame­
+lijke en geestelijke gezondheid van alle
+We onderzoeken de mogelijkheden voor inwoners en is daarnaast een sterk
+een Jeugd­ of Jongerenraad en andere wapen in de strijd tegen eenzaamheid.
+vormen van betrokkenheid van de jeugd. We focussen op verbinding en samen­
+Samen met de jongeren in ons dorp hang door het stimuleren van sport­ en
+komen we tot een plan voor Jeugd­ cultuurparticipatie en waar nodig extra
+participatie. te investeren in activiteiten.
+Naast het bestaande ambulante jeugd­ Er wordt een sportvisie opgesteld en we
+en jongerenwerk gaan we op zoek naar herzien het subsidiebeleid. We voeren
+ontmoetingsplekken waar de jeugd het Sport­ en Preventieakkoord uit. We
+naartoe kan om tijd met elkaar door te geven sport een stevige plaats in de
+brengen. inclusieagenda en het preventiebeleid.
+88 We zetten in op betere voorlichting over Gezondheidszorg
+alcohol en drugs, mentale gezondheid, De gemeente onderkent het maat­
+seksualiteit, voeding en sport; scholen schappelijk belang van gezondheid en
+zijn hierin een belangrijke partner. zet in op voldoende beschikbare huis­
+artsenzorg in Wassenaar. Het initiatief
+Subsidie- en inkoopbeleid van de Wassenaarse huisartsen om een
+We zorgen voor een zuivere lijn in het gezondheidscentrum te vestigen in de
+toekennen van subsidies dan wel inkoop voormalige Sint Jozefkerk bezien we
+en onderzoeken mogelijkheden om vanuit een positieve grondhouding.
+aanvragers meer zekerheid te bieden via
+
+Fysieke Leefomgeving
+schaps tafel Duin, Horst en Weide en het
+Openbare ruimte Nationaal Park Hollandse Duinen,
+In de bebouwde omgeving gaan we benutten we als middel om onze
+komende jaren naar onderhouds­ ruimtelijke ambities te bereiken.
+niveau B. Dit betekent dat de openbare
+ruimte schoon, heel en veilig is met Beschermd dorpsgezicht
+minimale oneffenheden. Per gebied We koesteren ons beschermd dorps­
+doen we wat nodig is; dit vraagt om gezicht. Het huidige beleid is afdoende
+maatwerk, prioritering en fasering. We om enerzijds ons dorpsgezicht te
+maken een inhaalslag waar het gaat om behouden en anderzijds ons erfgoed 9
+bestrating in de openbare ruimte. verantwoord te verduurzamen.
+We stellen een beheervisie op, waaruit Woningbouw en bouwlocaties
+instandhoudingsplannen volgen. Hierin We maken vanuit de huidige Woonvisie
+wordt ook aandacht besteed aan het tempo met de uitvoering van vier
+onderhoudsniveau van de landgoederen. projecten Den Deijl, Gemeentewerf,
+De beheervisie wordt in 2023 voorgelegd Kerkehout en ANWB. In de Woonzorg­
+aan de raad. visie (gereed in 2024) worden de
+ontwikkelingen van deze bouwplannen
+Natuur en groen meegenomen.
+Wassenaar wil het groene en landelijke
+karakter van de gebieden behouden. Er We realiseren 30% sociale huur op de
+komt een integrale visie op hoe we de toekomstige bouwlocaties om te
+meest kwetsbare natuurgebieden, zoals voldoen aan de landelijke streefwaarde.
+Meijendel, gaan ontlasten. Daarbij Er is daarnaast voldoende aandacht voor
+bezien we deze gebieden in onderlinge koopwoningen in het middensegment
+verbinding met elkaar. We zetten in op en het stimuleren van doorstroming. De
+spreiding van recreatie binnen de gemeente staat positief tegenover
+verschil lende natuurgebieden en we flexwoningen, mits inpasbaar in de
+beheersen de recreatiedruk. De samen­ omgeving.
+werkingsverbanden, zoals de land­
+
+Bij het project Gemeentewerf, inclusief voordeel bestaat om een gebouw te
+het voor woningbouw geschikt te behouden voor de toekomst. De
+maken gemeentekantoor, gaan we uit opbrengsten van de verkoop worden
+van minimaal 30% sociale huur, toegevoegd aan de algemene reserve.
+40% middenhuur en ­koop en voor het
+overige het hogere segment. Eerst Monumenten en cultureel
+wordt de huidige gemeentewerf erfgoed
+verplaatst naar een nieuwe locatie We doen er alles aan om ons cultureel
+1100 (in het eerste kwartaal van 2024). De erfgoed te behouden en toekomst­
+vervuilde bodem wordt gesaneerd. bestendig te maken door adequaat
+onderhoud en toezicht. We helpen
+Het burgerinitiatief tot zelfstandige eigenaren bij de verduurzaming van
+seniorenwoningen met zorgfaciliteiten monumenten door te informeren,
+wordt zo snel mogelijk gerealiseerd. stimuleren en faciliteren. Wij bevorderen
+Over andere zorgfaciliteiten maakt de passende herbestemmingen, die
+gemeente prestatieafspraken met de aansluiten bij de mogelijkheden die het
+woningbouwcorporaties. monument biedt.
+Door de samenvoeging van de Sint Integraal Huisvestingsplan
+Jozefschool en Sint Jan Baptistschool Onderwijs
+komen beide locaties vrij. Op deze Het Integraal Huisvestingsplan wordt
+locaties worden appartementen herijkt (2023). De huidige norm voor
+gebouwd, met een evenwichtige schoolgebouwen is bijna energie­
+verde ling in sociale huur en middenhuur neutraal (BENG). We onderzoeken wat
+en ­koop. de meerkosten zijn om bij nieuwbouw
+energieneutraal (ENG) te zijn en zullen
+Gemeentelijk vastgoed hierin per project een keuze maken. We
+De gemeente maakt tempo met het gaan in gesprek met scholen over
+verkopen van onroerende zaken, tenzij duurzaamheid en ventilatie.
+er een duidelijk maatschappelijk
+
+We zoeken naar een geschikte locatie De Warenar blijft eigendom van de
+voor de gezamenlijke nieuwbouw voor gemeente, omdat is gebleken dat
+de Sint Jozefschool en Sint Jan Baptist­ verkoop niet reëel is. We investeren
+school in een Integraal Kindcentrum. alleen in de Warenar als de langdurige
+erfpacht kan worden verlengd.
+De Paauw
+Raadhuis De Paauw krijgt de functie van We onderzoeken of het haalbaar is
+gemeentelijk bestuurscentrum. Daar­ verschillende functies te combineren,
+voor wordt het rijksmonument zo snel zoals een cultuurhuis met een buurt­
+mogelijk op passende wijze gerestau­ functie en museum (bijvoorbeeld een
+reerd en ingericht. We proberen dorpsmuseum en/of het brand­
+hiervoor financiering te verkrijgen via weermuseum). Het doel is de theater­
+subsidies, fondsen en/of crowdfunding. functie te behouden.
+We gaan uit van het financiële kader
+zoals eerder door de gemeenteraad is Duurzaamheid
+vastgesteld en maken de kosten voor dit We gaan inwoners actief informeren,
+project zo inzichtelijk mogelijk. faciliteren en stimuleren om zelf te
+verduurzamen.
+Op korte termijn moet er een integraal
+plan liggen voor de locatiekeuze van de De gemeente geeft zelf het goede
+huisvesting van de overige ambtenaren voorbeeld en neemt daarom maat­
+en de gemeentewinkel. In 2023 hakken regelen om te verduurzamen. Deze
+we knopen door. maatregelen moeten zich binnen
+twintig jaar terugverdienen. Onze
+De Warenar duurzaamheidsdoelstellingen moeten
+De Warenar zorgt voor verbinding. Wij ook meetbaar zijn; hiervoor wordt de
+vinden het daarom belangrijk dat de CO2­ladder gebruikt. 11
+culturele en sociale functie van de
+Warenar behouden blijft voor de
+Wassenaarders.
+
+Avalex en milieustraat ten niet worden toegestaan. Bij het
+We onderzoeken welke mogelijkheden opstellen van de visie betrekken we
+er zijn om het afvalbrengstation op ondern emers.
+termijn te verplaatsen. Uiteraard De toegankelijkheid van het strand
+behouden we de service voor de wordt geoptimaliseerd; denk aan
+inwoners van Wassenaar. Er komt een leuningen bij de trappen en verharding
+concreet plan om restafval te reduceren. van het pad naar zee. Er komen meer
+faciliteiten, zoals een rolstoelvriendelijke
+Levendige dorpskern openbare wc en een bewaakte fietsen­
+Een levendige dorpskern draagt bij aan stalling met elektrische laadpalen. We
+economische activiteit en sociale zetten in op een OV­verbinding naar het
+verbinding. De gemeente draagt bij aan strand.
+een gezellig dorpshart met mooie
+winkels en goede voorzieningen. Verkeer
+1122 Verkeersveiligheid en leefbaarheid zijn
+De dorpskern moet voor iedereen belangrijke uitgangspunten. We hebben
+toegankelijk zijn (inclusief); we zorgen de ambitie om bijna overal in de
+voor een rolstoeltoegankelijke openbare bebouwde kom de snelheid van 30 km/u
+wc. We zorgen voor een smaakvolle te behouden of in te voeren. Daarbij zijn
+inrichting van de openbare ruimte met we pragmatisch met betrekking tot de
+aandacht voor het beschermd inrichting op korte termijn. Bij groot
+dorpsgezicht. onderhoud gaan we herinrichten,
+daarbij zijn de richtlijnen van CROW van
+We beginnen in 2023 met de vernieu­ belang. Een aantal gebiedsontsluitende
+wing van de dorpskern gebaseerd op het wegen (bijvoorbeeld Stoeplaan, Groot
+beeldkwaliteitsplan, brancheringsp lan Haesebroekseweg tot aan Papegaaien­
+en stedenbouwkundig plan. De planning laan, de Wittenburgerweg) blijft
+dient realistisch te zijn qua uitvoering 50 km/u; hier kan verkeer (inclusief
+en financiering. Mogelijkheden tot openbaar vervoer en hulpdiensten)
+co­financiering en fondsenwerving doorstromen zonder dat dit gevolgen
+moeten worden onderzocht. heeft voor de leefbaarheid en verkeers­
+veiligheid.
+Strand
+We ontwikkelen een strandvisie gericht We stimuleren fietsverkeer en bevor­
+op behoud van het huidige karakter als deren fietsveiligheid bij scholen en
+familiestrand, waarin jaarrond­activitei­ sport verenigingen, bijvoorbeeld d.m.v.
+
+schoolzones of schoolstraten. Op De verkeerssituatie op het Rozenplein is
+gebiedsontsluitende wegen worden moeilijk oplosbaar. Naast onvoldoende
+vrijliggende fietspaden behouden of doorstroming is ook de veilig heids­
+neergelegd. Waar vrijliggende fiets­ situatie voor verbetering vat baar. We
+paden liggen, blijven die gehandhaafd. wachten het lopende onder zoek af.
+We gaan in gesprek met de provincie Geluidshinder vliegverkeer
+over de afwaardering van de N441 naar
+overal 60 km/u. We blijven in gesprek Wassenaar monitort geluidoverlast
+over de snelle realisatie van een samen met de Omgevingsdienst West­
+verkeers doseerlicht om sluipverkeer Holland (ODWH), door het inrichten van
+tegen te gaan. Ook de N44 wordt op gezamenlijke metingen. We agenderen
+termijn afgewaardeerd, zodat er een de toenemende overlast van laag­
+groenverbinding ontstaat van het strand vliegend verkeer bij de relevante over­
+tot aan het Groene Hart. Hiervoor moet leggen en belanghebbenden.
+wel een oplossing worden gevonden
+voor het verkeer, door middel van een Ruimte voor zweefvliegen
+tunnel en/of hoogfrequent, hoog­ De gemeente zoekt uit wat de mogelijk­
+waardig openbaar vervoer. heden in Wassenaar zijn voor zweef­
+vliegen zonder belasting van natuur en
+milieu.
+13
+
+Portefeuilleverdeling college b&w
+Burgemeester
+• Veiligheid
+• Handhaving
+• Communicatie
+• Internationale Wassenaarders
+• Regio
+• Ambtelijke organisatie
+• Burgerzaken/KCC/Dienstverlening
+• Ambassadeur Wassenaar
+• Inburgering, statushouders, asielzoekers
+Wethouder Financiën, Economie en Sport
+FINANCIËN
+• Gemeentelijk vastgoed
+• Belastingen
+• ICT
+• Avalex (bestuur)
+• Gemeenschappelijke regelingen (bestuur)
+• Projectmanagement
+• Project De Paauw
+• Project Gemeentewerf (bouwrijp maken)
+• Project gemeentelijke sporthal
+• Project Schulpwei
+1144 ECONOMISCHE ZAKEN
+• Project dorpskern
+• Metropoolregio Rotterdam Den Haag (economisch vestigingsklimaat)
+SPORT
+Wethouder Ruimte, Duurzaamheid en Mobiliteit
+RUIMTELIJKE ORDENING
+• Strand en toerisme
+• Omgevingswet
+• Structuur­ en omgevingsvisie
+• Visie Duindigt
+• Project Duindigt
+• Duin, Horst en Weide
+• Groene Zone/Valkenhorst
+
+DUURZAAMHEID
+• Klimaat en duurzaamheid
+• Agrarische Zaken
+• Dierenwelzijn
+• Riolering
+• Afval
+• Energietransitie
+MOBILITEIT
+• Verkeer en wegen
+• Openbaar vervoer
+• Metropoolregio Rotterdam Den Haag (vervoersautoriteit)
+• Project N44
+Wethouder Sociaal, Wonen en Onderwijs
+SOCIAAL DOMEIN
+• Jeugdzorg
+• Wet maatschappelijke ondersteuning (Wmo)
+• Ouderenbeleid
+• Werk en inkomen (Participatiewet)
+WONEN
+• Bouwen en wonen, inclusief:
+• Den Deijl
+• Gemeentewerf 15
+• ANWB
+• Kerkehout
+• Volkshuisvesting
+• Woonzorgvisie
+• Onderwijs
+• Wassenaars onderwijs en Schooladviesdienst (SAD)
+• Integraal Huisvestingsplan (IHP)
+Wethouder Cultuur en Welzijn
+CULTUUR
+• Erfgoedbeleid/cultureel erfgoed
+• Project de Warenar
+WELZIJN
+• Subsidiebeleid
+• Vrijwilligerswerk
+• Welzijn en wijken
+• Inwonersparticipatie
+• Volksgezondheid (GGD)
+• Inclusie en anti­discriminatie
+
+COLOFON
+Publicatiedatum:
+11 maart 2023
+www.wassenaar.nl
+
+
+═══════════════════════════════════════════════════════════════
+
+RAADSBESLUITEN — RUIMTE, DUURZAAMHEID & MOBILITEIT (22 besluiten)
+
+═══════════════════════════════════════════════════════════════
+
+---
+Besluit: Definitieve weigering aanvraag omgevingsvergunning Rijksstraatweg 785
+Datum: 2025-03-04
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Bestemmingsplannen
+
+Besluittekst (kort):
+Een Verklaring Van Geen Bedenkingen (VVGB) te weigeren voor de ontwikkeling van een nieuwe woning achterop het perceel van Rijksstraatweg 785 wegens strijdigheid met de Wassenaarse Structuurvisie en de goede ruimtelijke ordening.
+---
+
+---
+Besluit: Visie De Wassenaarse Slag
+Datum: 2025-03-04
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Strandvisie
+
+Besluittekst (kort):
+1. Het vaststellen van de ‘Visie voor De Wassenaarse Slag’ (bijlage 1) met dien verstande dat de volgende wijzigingen worden doorgevoerd
+---
+
+---
+Besluit: Rekenkamer Rapportage onderzoek effectiviteit woonbeleid
+Datum: 2025-03-04
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Wonen
+
+Besluittekst (kort):
+Het college te verzoeken om: 1. te zorgen dat de woonvisie actueel is en in lijn is met de regionale doelstellingen; 2. te anticiperen op de Wet versterking regie op de volkshuisvesting; 3. een woningbouwprogrammering op te stellen dat uitgaat van de landelijk geadviseerde planvoorraad van 130 procent; 4. de werkprocessen te actualiseren; 5. een woonmonitor te ontwikkelen dat voor raadsleden toegankelijk is; 6. in de woonmonitor aan te geven in hoeverre de realisatie in lijn is met de doelen; 7. ons te informeren over de planning en voortgang van de uitvoering van deze aanbevelingen.
+---
+
+---
+Besluit: Verzwaard adviesrecht voor de herontwikkeling van de voormalige Den Deylschool naar woningbouw
+Datum: 2025-03-04
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Wonen
+
+Besluittekst (kort):
+Het college een positief advies te geven op de herontwikkeling van de voormalige Den Deylschool naar woningbouw op basis van het voorliggende voorontwerp (VO).
+---
+
+---
+Besluit: Zienswijze op het ontwerp Actieplan Evaluatie GR MRDH
+Datum: 2025-04-01
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: MRDH
+
+Besluittekst (kort):
+Een zienswijze naar voren te brengen op het ontwerp Actieplan Evaluatie GR MRDH bij 
+het Algemeen Bestuur van de MRDH zoals verwoord in de bijbehorende brief, waarbij de 
+volgende zin op pagina 2:
+Met de toekomstige financiële ontwikkelingen bij gemeenten in gedachten willen wij 
+echter benadrukken dat de versterking van de MRDH-organisatie op zo’n wijze moet 
+worden ingevuld, dat dit geen negatieve invloed heeft op de gemeentelijke bijdrage aan 
+het Economisch Vestigingsklimaat.
+Wordt aangevuld met:
+en de ombuigingstaakstelling van 6,2% in 2026 gehandhaafd blijft.
+---
+
+---
+Besluit: Wensen en bedenkingen Concept-Programma Noordrand
+Datum: 2025-06-03
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Duurzaamheid
+
+Besluittekst (kort):
+De “Bijlage 1. Concept-Programma Noordrand 2025” te wijzigen
+---
+
+---
+Besluit: Adviesrapport Burgerberaad Verkeer
+Datum: 2025-06-03
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: verkeer
+
+Besluittekst (kort):
+zie link raadsbesluit
+---
+
+---
+Besluit: Herstelbesluit bestemmingsplan “Woongebied Valkenhorst”
+Datum: 2025-06-23
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Groene Zone
+
+Besluittekst (kort):
+1. De beroepsprocedure tegen het bestemmingsplan “Woongebied Valkenhorst” te beëindigen en de Afdeling bestuursrechtspraak van de Raad van State hiervan op de hoogte te stellen met bijgevoegde zienswijzebrief waarmee het beroep wordt ingetrokken.
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2026 Omgevingsdienst Haaglanden
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: ODH
+
+Besluittekst (kort):
+1. Een zienswijze naar voren te brengen op de ontwerpbegroting 2026 bij het dagelijks bestuur van de Omgevingsdienst Haaglanden, zoals verwoord in de bij dit besluit behorende brief.
+---
+
+---
+Besluit: Zienswijze ontwerpbegroting 2026 MRDH
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: MRDH
+
+Besluittekst (kort):
+1. Een zienswijze naar voren te brengen op de ontwerpbegroting 2026 bij het dagelijks bestuur van de Metropoolregio Rotterdam Den Haag, zoals verwoord in de bij dit besluit behorende brief.
+---
+
+---
+Besluit: Zienswijze op de ontwerpbeleidsnota reserves, voorzieningen en fondsen MRDH 2025
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: MRDH
+
+Besluittekst (kort):
+1. Een zienswijze naar voren te brengen op de ontwerpbeleidsnota reserves, voorzieningen en fondsen MRDH 2025 bij het Dagelijks Bestuur van de Metropoolregio Rotterdam Den Haag, zoals verwoord in de bij dit voorstel behorende brief.
+---
+
+---
+Besluit: Weigering Verklaring Van Geen Bedenkingen voor het legaliseren van een paddock/buitenstallen op de Katwijkseweg 22a
+Datum: 2025-07-08
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Bestemmingsplannen
+
+Besluittekst (kort):
+1. Een ontwerpbesluit weigering Verklaring Van Geen Bedenkingen af te geven voor het legaliseren van een paddock/buitenstallen op het perceel Katwijkseweg 22a; 2. Indien geen zienswijzen tegen het ontwerpbesluit weigering Verklaring Van Geen Bedenkingen zijn ingediend, het ontwerpbesluit weigering Verklaring Van Geen Bedenkingen als definitief te beschouwen.
+---
+
+---
+Besluit: Vestiging vervroegd voorkeursrecht Draf- en Renbaan Duindig
+Datum: 2025-09-22
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Herontwikkeling Duindigt
+
+Besluittekst (kort):
+1. Bij voorkeursrechtbeschikking een vervroegd voorkeursrecht te vestigen op grond van artikel 9.1 lid 1 sub c Omgevingswet, op de percelen zoals vermeld in de als bijlage 1 aangehechte lijst met vermelding van de kadastrale gemeenten, secties, nummers, adressen en groottes overeenkomstig de bij dit besluit behorende en als zodanig gewaarmerkte kadastrale tekening met nummer Z/25/101450/458886, waarop zijn vermeld de in de voorkeursrechtbeschikking betrokken percelen, hun groottes, alsmede de namen van de eigenaars en de beperkt gerechtigden, één en ander naar de stand van de openbare registers van het kadaster per 26 augustus 2025; 2. Te concluderen dat er zienswijzen zijn ingediend en dat naar aanleiding van één zienswijze en ambtshalve een aantal wijzigingen is doorgevoerd ten opzichte van het ter inzage gelegde raadsvoorstel; 3. De reacties (bijlagen 8 en 9) op de ontvangen zienswijzen te versturen. 4. Dit besluit te nemen zodat de rechtsgevolgen in stand blijven van het besluit van het college d.d. 1 juli 2025, welk besluit van rechtswege vervalt, zodra dit raadsbesluit ingaat; 5. Burgemeester en wethouders op te dragen de uitvoering en bekendmaking van dit besluit op de in de Omgevingswet (en het Omgevingsbesluit) voorgeschreven wijze zorg te dragen door: a. de voorkeursrechtbeschikking bekend te maken door toezending of uitreiking aan de in het besluit vermelde eigenaren en beperkt gerechtigden; en: b. de voorkeursrechtbeschikking op de gebruikelijke wijze ter inzage te leggen op het gemeentekantoor en digitaal via www.officielebekendmakingen.nl en van deze digitale terinzagelegging kennis te geven door publicatie in het Gemeenteblad; en: c. de voorkeursrechtbeschikking binnen vier dagen na bekendmaking ter inschrijving aan te bieden bij de openbare registers van het Kadaster.
+---
+
+---
+Besluit: Verklaring van geen bedenkingen Ruigelaan 1a
+Datum: 2025-10-14
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Bestemmingsplannen
+
+Besluittekst (kort):
+1. Een ontwerpbesluit Verklaring Van Geen Bedenkingen af te geven voor het afwijken van 
+het gebruik op het perceel Ruigelaan 1a ten behoeve van een paardenfokkerij.
+2. Het ontwerpbesluit Verklaring Van Geen Bedenkingen voor een periode van zes weken 
+ter inzage te leggen voor zienswijzen.
+3. Indien geen zienswijzen tegen het ontwerpbesluit zijn ingediend, dit ontwerpbesluit 
+Verklaring Van Geen Bedenkingen als definitief te beschouwen.
+---
+
+---
+Besluit: Zienswijze op de concept-ontwerp Mobiliteitsvisie MRDH
+Datum: 2025-10-14
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Verkeer
+
+Besluittekst (kort):
+1. Een zienswijze naar voren te brengen op de conceptontwerp Mobiliteitsvisie MRDH bij het Algemeen Bestuur van de Metropoolregio Rotterdam Den Haag, zoals verwoord in de bij 
+dit besluit behorende zienswijzebrief.
+---
+
+---
+Besluit: Nota Woonbeleid gemeente Wassenaar 2025
+Datum: 2025-10-14
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Wonen
+
+Besluittekst (kort):
+De nota Woonbeleid gemeente Wassenaar 2025 vast te stellen, met dien verstande dat in paragraaf 4.3 ‘Beleidsregel zelfbewoning en anti-speculatiebeding gemeente Wassenaar 2025’ de volgende wijziging wordt aangebracht:
+de passage ‘De maatregelen gelden voor nieuwbouwkoopwoningen tot de betaalbaarheidsgrens van € 405.000,- (prijspeil 2025)’ wordt vervangen door:
+‘De maatregelen gelden voor nieuwbouwkoopwoningen tot de NHG-grens van €450.000,- of €477.000,- in geval van energiebesparende maatregelen (prijspeil 2025)’.
+---
+
+---
+Besluit: Vijfde Wijziging GR Omgevingsdienst Haaglanden
+Datum: 2025-12-16
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: ODH
+
+Besluittekst (kort):
+1. Het college toestemming te verlenen voor vaststelling van de vijfde wijziging van de Gemeenschappelijke regeling Omgevingsdienst Haaglanden.
+---
+
+---
+Besluit: Raadsbesluit Verordening riool-en waterzorgheffing Wassenaar 2026
+Datum: 2025-12-16
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Riolering
+
+Besluittekst (kort):
+1. Verordening op heffing en de invordering van riool- en waterzorgheffing gemeente Wassenaar 2026 vast te stellen
+---
+
+---
+Besluit: Beslissing op bezwaar voorkeursrecht Renbaan Duindigt
+Datum: 2025-12-16
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Herontwikkeling Duindigt
+
+Besluittekst (kort):
+Conform het advies van de commissie bezwaarschiften van 1 december 2025: - de bezwaren van de Stichting Villa Betty, Stichting Duindigt, een particuliere grondbezitter en Polo Club Wassenaar niet-ontvankelijk te verklaren; - de bezwaren van Stichting Beheer Renbaan Duindigt ontvankelijk en ongegrond te verklaren; - het bestreden besluit in stand te laten en het verzoek om vergoeding van de kosten van rechtsbijstand in bezwaar af te wijzen.
+---
+
+---
+Besluit: Tweede wijziging Huisvestingsverordening Wassenaar 2023
+Datum: 2025-12-16
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Wonen
+
+Besluittekst (kort):
+- Vast te stellen de Tweede Wijziging Huisvestingsverordening Wassenaar 2023 - Het college de bevoegdheid te geven nadere regels op te stellen ten aanzien van toewijzing van woonwagenplaatsen volgens het familiaire afstammingsbeginsel.
+---
+
+---
+Besluit: Wegencategoriseringsplan Wassenaar
+Datum: 2025-12-17
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Verkeer
+
+Besluittekst (kort):
+Per 27 februari 2026 het wegencategoriseringsplan (bijlage 1: tabel wegencategorisering Wassenaar 2025) in te voeren. Met een categorie als gebiedsontsluitingsweg (GOW) met een maximumsnelheid van 30 km/u binnen de bebouwde kom op de volgende wegen: zie link naar docoment.
+---
+
+---
+Besluit: Startnotitie Participatie Omgevingsvisie
+Datum: 2025-12-17
+Type: raadsbesluit
+Domein: Ruimte, Duurzaamheid & Mobiliteit
+Onderwerp: Omgevingswet
+
+Besluittekst (kort):
+1. De Startnotitie Participatie Omgevingsvisie vast te stellen; 2. Bij de uitvoering van de Startnotitie Participatie Omgevingsvisie heeft de kwaliteit, zorgvuldigheid en inclusiviteit van de participatie prioriteit, binnen de geldende wettelijke kaders, boven het strikt vasthouden aan de in de startnotitie opgenomen planning. Voor het bereiken van moeilijker bereikbare doelgroepen wordt de tijd genomen die daarvoor noodzakelijk is. Indien dit nodig blijkt, kan dit leiden tot een gemotiveerde bijstelling van de planning. De raad hanteert 1 april 2027 als streefdatum voor de vaststelling van de Omgevingsvisie, waarbij wordt benadrukt dat deze datum is gekozen om zorgvuldige participatie mogelijk te maken en niet om het participatieproces onder tijdsdruk af te ronden. Voorafgaand aan vaststelling zal het College eind 2026, cfm. wettelijke kaders, de Raad haar uitgangspunten voor de definitieve Omgevingsvisie Wassenaar voorleggen. Daarmee wordt richting gegeven om tot een gedragen finalisering van de Omgevingsvisie te komen.
+---
+
+
+═══════════════════════════════════════════════════════════════
+
+COLLEGEBESLUITEN — RUIMTE, DUURZAAMHEID & MOBILITEIT (334 besluiten)
+
+═══════════════════════════════════════════════════════════════
+
+---
+Besluit: Informatiebrief Financiën Invoering Omgevingswet
+Datum: 2022-05-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_mei_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad door middel van bijgevoegde informatiebrief te informeren over de
+financiële aspecten van de Omgevingswet.
+
+Volledige tekst:
+Informatiebrief Financiën Invoering Omgevingswet
+Besluit:
+De raad door middel van bijgevoegde informatiebrief te informeren over de
+financiële aspecten van de Omgevingswet.
+---
+
+---
+Besluit: Aanpassing Raadsbesluit -en voorstel zienswijze Kust, Duin en
+Datum: 2022-05-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_mei_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+Aangepast raadsbesluit -en voorstel zienswijze KDB vast te stellen.
+
+Volledige tekst:
+Aanpassing Raadsbesluit -en voorstel zienswijze Kust, Duin en
+Bollestreek
+Besluit:
+Aangepast raadsbesluit -en voorstel zienswijze KDB vast te stellen.
+---
+
+---
+Besluit: Het subsidieplafond voor Milieu voor 2022 te verhogen van € 0 naar €
+Datum: 2022-06-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_juni_2022.pdf
+
+Volledige tekst:
+Het subsidieplafond voor Milieu voor 2022 te verhogen van € 0 naar €
+---
+
+---
+Besluit: Duurzaamheidsbijdrage via addendum bij convenant met Fonds
+Datum: 2022-06-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_juni_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Duurzaamheidsbijdrage via addendum bij convenant met Fonds
+Wassenaar
+Besluit:
+---
+
+---
+Besluit: Het subsidieplafond voor Milieu voor 2022 te verhogen van € 0 naar €
+Datum: 2022-06-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_juni_2022_0.pdf
+
+Volledige tekst:
+Het subsidieplafond voor Milieu voor 2022 te verhogen van € 0 naar €
+---
+
+---
+Besluit: Duurzaamheidsbijdrage via addendum bij convenant met Fonds
+Datum: 2022-06-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_juni_2022_0.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Duurzaamheidsbijdrage via addendum bij convenant met Fonds
+Wassenaar
+Besluit:
+---
+
+---
+Besluit: Schriftelijke vragen Verkeersproblematiek Vrachtverkeer van
+Datum: 2022-06-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_juni_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Lokaal Wassenaar
+d.d. 31 mei 2022 met betrekking tot Verkeersproblematiek Vrachtverkeer van
+Cranenburchlaan/ Violierenweg vast te stellen.
+
+Volledige tekst:
+Schriftelijke vragen Verkeersproblematiek Vrachtverkeer van
+Cranenburchlaan/ Violierenweg
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Lokaal Wassenaar
+d.d. 31 mei 2022 met betrekking tot Verkeersproblematiek Vrachtverkeer van
+Cranenburchlaan/ Violierenweg vast te stellen.
+---
+
+---
+Besluit: de gemeenteraad te informeren aan de hand van de bijgevoegde
+Datum: 2022-06-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_juni_2022.pdf
+
+Besluittekst (kort):
+informatiebrief over de terinzagelegging van het ontwerpbestemmingsplan
+“Laan van Pluymestein 11 en Het Kerkehout 64”.
+
+Volledige tekst:
+de gemeenteraad te informeren aan de hand van de bijgevoegde
+informatiebrief over de terinzagelegging van het ontwerpbestemmingsplan
+“Laan van Pluymestein 11 en Het Kerkehout 64”.
+---
+
+---
+Besluit: Ontwerpbestemmingsplan Laan van Pluymestein 11 en Het Kerkehout
+Datum: 2022-06-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_juni_2022.pdf
+
+Volledige tekst:
+Ontwerpbestemmingsplan Laan van Pluymestein 11 en Het Kerkehout
+---
+
+---
+Besluit: De ontwerpomgevingsvergunning voor het Rijnlands Lyceum aan de
+Datum: 2022-08-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_augustus_2022.pdf
+
+Besluittekst (kort):
+Backershagenlaan 3-5 ter inzage te leggen;
+
+Volledige tekst:
+De ontwerpomgevingsvergunning voor het Rijnlands Lyceum aan de
+Backershagenlaan 3-5 ter inzage te leggen;
+---
+
+---
+Besluit: De omgevingsvergunning te verlenen als blijkt dat er geen zienswijzen zijn
+Datum: 2022-08-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_augustus_2022.pdf
+
+Besluittekst (kort):
+ingediend;
+
+Volledige tekst:
+De omgevingsvergunning te verlenen als blijkt dat er geen zienswijzen zijn
+ingediend;
+---
+
+---
+Besluit: Akkoord te gaan met de conclusie uit de ruimtelijke onderbouwing dat het
+Datum: 2022-08-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_augustus_2022.pdf
+
+Besluittekst (kort):
+opstellen van een milieueffectrapportage (m.e.r.) niet noodzakelijk is;
+
+Volledige tekst:
+Akkoord te gaan met de conclusie uit de ruimtelijke onderbouwing dat het
+opstellen van een milieueffectrapportage (m.e.r.) niet noodzakelijk is;
+---
+
+---
+Besluit: Vaststellen Eerste wijziging van de Beleidsregels Eenmalige
+Datum: 2022-08-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_augustus_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De eerste wijziging van de Beleidsregels Eenmalige energietoeslag gemeente
+Wassenaar conform bijgaande was-wordt-lijst vast te stellen.
+
+Volledige tekst:
+Vaststellen Eerste wijziging van de Beleidsregels Eenmalige
+energietoeslag gemeente Wassenaar 2022
+Besluit:
+De eerste wijziging van de Beleidsregels Eenmalige energietoeslag gemeente
+Wassenaar conform bijgaande was-wordt-lijst vast te stellen.
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2022-09-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_september_2022.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2022-10-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_oktober_2022.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2022-10-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_oktober_2022.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2022-12-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_december_2022.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: Vaststelling beheersverordening diverse locaties
+Datum: 2022-12-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_december_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen:
+“De beheersverordening diverse locaties, inclusief bijlagen, met
+planidentificatienummer NL.IMRO.0629.BVdiverseloc-VG01 vast te stellen.”
+
+Volledige tekst:
+Vaststelling beheersverordening diverse locaties
+Besluit:
+De raad voor te stellen:
+“De beheersverordening diverse locaties, inclusief bijlagen, met
+planidentificatienummer NL.IMRO.0629.BVdiverseloc-VG01 vast te stellen.”
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2022-12-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_december_2022.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: Informatiebrief betreffende het plan van aanpak bestrijding
+Datum: 2022-12-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_december_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De raadsinformatiebrief d.d. 13 december 2022 over het plan van aanpak
+energiearmoede vast te stellen en aan te bieden aan de raad.
+
+Volledige tekst:
+Informatiebrief betreffende het plan van aanpak bestrijding
+energiearmoede Wassenaar
+Besluit:
+De raadsinformatiebrief d.d. 13 december 2022 over het plan van aanpak
+energiearmoede vast te stellen en aan te bieden aan de raad.
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2022-12-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_december_2022.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: Wijziging beleidsregels eenmalige energietoeslag
+Datum: 2022-12-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_december_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Wijziging beleidsregels eenmalige energietoeslag
+Besluit:
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2023-01-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_januari_2023.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: In te stemmen met het principeplan voor de vervanging en verduurzaming
+Datum: 2023-01-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_januari_2023.pdf
+
+Besluittekst (kort):
+van het paviljoen van Camping Duinhorst volgens de rapportage
+vooroverleg d.d. 8-11-2022 (bijlage I).
+
+Volledige tekst:
+In te stemmen met het principeplan voor de vervanging en verduurzaming
+van het paviljoen van Camping Duinhorst volgens de rapportage
+vooroverleg d.d. 8-11-2022 (bijlage I).
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2023-01-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_januari_2023.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: 6 Raadsinformatiebrief ontwikkelingen Regionale Energiestrategie
+Datum: 2023-01-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_januari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de ontwikkelingen rond de Regionale
+Energiestrategie door de raadsinformatiebrief vanuit bijlage 1 van dit voorstel
+aan te bieden.
+Pagina 3
+
+Volledige tekst:
+6 Raadsinformatiebrief ontwikkelingen Regionale Energiestrategie
+Besluit:
+De gemeenteraad te informeren over de ontwikkelingen rond de Regionale
+Energiestrategie door de raadsinformatiebrief vanuit bijlage 1 van dit voorstel
+aan te bieden.
+Pagina 3
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2023-01-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: Lokale Energiestrategie 2023-2026
+Datum: 2023-01-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Lokale Energiestrategie 2023-2026
+Besluit:
+---
+
+---
+Besluit: Planschadeverzoek Maaldrift 7B
+Datum: 2023-01-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Planschadeverzoek Maaldrift 7B
+Besluit:
+---
+
+---
+Besluit: De raad voor te stellen om de rapportagegrens vast te stellen op een
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+bedrag van € 50.000 en de afwijkingen boven dit bedrag in de paragraaf
+bedrijfsvoering toe te lichten, inclusief de oorzaken en de te nemen
+beheersmaatregelen om herhaling in de toekomst te voorkomen
+
+Volledige tekst:
+De raad voor te stellen om de rapportagegrens vast te stellen op een
+bedrag van € 50.000 en de afwijkingen boven dit bedrag in de paragraaf
+bedrijfsvoering toe te lichten, inclusief de oorzaken en de te nemen
+beheersmaatregelen om herhaling in de toekomst te voorkomen
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: Krediet voor plaatsen verkeersdoseerinstallatie Kokshornlaan
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Krediet voor plaatsen verkeersdoseerinstallatie Kokshornlaan
+Besluit:
+---
+
+---
+Besluit: Krediet voor Duurzaam Veilig inrichten Storm (zuid) en Schouwweg
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen een investeringskrediet beschikbaar te stellen van €
+
+Volledige tekst:
+Krediet voor Duurzaam Veilig inrichten Storm (zuid) en Schouwweg
+(noord)
+Besluit:
+De raad voor te stellen een investeringskrediet beschikbaar te stellen van €
+---
+
+---
+Besluit: 000,-- om de Storm van ’s Gravesandeweg (zuid) en Schouwweg (noord)
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+Duurzaam Veilig in te richten.
+
+Volledige tekst:
+000,-- om de Storm van ’s Gravesandeweg (zuid) en Schouwweg (noord)
+Duurzaam Veilig in te richten.
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: Tweede nabetaling van € 500 op de energietoeslag 2022
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+a. De energietoeslag 2022 te verhogen naar € 1.800.
+b. Hiervoor een ambtshalve € 500 uit te betalen aan alle ontvangers van de
+energietoeslag 2022.
+c. Hiertoe de Tweede wijziging Beleidsregels eenmalige energietoeslag
+gemeente Wassenaar vast te stellen.
+d. De raadsbrief “Tweede nabetaling van € 500 op de energietoeslag 2022”
+vast te stellen.
+
+Volledige tekst:
+Tweede nabetaling van € 500 op de energietoeslag 2022
+Besluit:
+a. De energietoeslag 2022 te verhogen naar € 1.800.
+b. Hiervoor een ambtshalve € 500 uit te betalen aan alle ontvangers van de
+energietoeslag 2022.
+c. Hiertoe de Tweede wijziging Beleidsregels eenmalige energietoeslag
+gemeente Wassenaar vast te stellen.
+d. De raadsbrief “Tweede nabetaling van € 500 op de energietoeslag 2022”
+vast te stellen.
+---
+
+---
+Besluit: Natuur, Klimaat en mobiliteit
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023_0.pdf
+
+Volledige tekst:
+Natuur, Klimaat en mobiliteit
+---
+
+---
+Besluit: Tweede nabetaling van € 500 op de energietoeslag 2022
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023_0.pdf
+
+Besluittekst (kort):
+Besluit:
+a. De energietoeslag 2022 te verhogen naar € 1.800.
+b. Hiervoor een ambtshalve € 500 uit te betalen aan alle ontvangers van de
+energietoeslag 2022.
+c. Hiertoe de Tweede wijziging Beleidsregels eenmalige energietoeslag
+gemeente Wassenaar vast te stellen.
+d. De raadsbrief “Tweede nabetaling van € 500 op de energietoeslag 2022”
+vast te stellen.
+
+Volledige tekst:
+Tweede nabetaling van € 500 op de energietoeslag 2022
+Besluit:
+a. De energietoeslag 2022 te verhogen naar € 1.800.
+b. Hiervoor een ambtshalve € 500 uit te betalen aan alle ontvangers van de
+energietoeslag 2022.
+c. Hiertoe de Tweede wijziging Beleidsregels eenmalige energietoeslag
+gemeente Wassenaar vast te stellen.
+d. De raadsbrief “Tweede nabetaling van € 500 op de energietoeslag 2022”
+vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Memo parkeerplaats Westgeest Wassenaarse Slag
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+College bespreekt stand van zaken van de parkeerplaats van pachters
+gebroeders Westgeest.
+
+Volledige tekst:
+Memo parkeerplaats Westgeest Wassenaarse Slag
+Besluit:
+College bespreekt stand van zaken van de parkeerplaats van pachters
+gebroeders Westgeest.
+---
+
+---
+Besluit: Krediet voor plaatsen verkeersdoseerinstallatie Kokshornlaan
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Krediet voor het plaatsen verkeersdoseerinstallatie Kokshornlaan blijft in
+routing.
+
+Volledige tekst:
+Krediet voor plaatsen verkeersdoseerinstallatie Kokshornlaan
+Besluit:
+Krediet voor het plaatsen verkeersdoseerinstallatie Kokshornlaan blijft in
+routing.
+---
+
+---
+Besluit: Herziene Realisatieplan Verkeer
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Realisatieplan Verkeer wordt geagendeerd voor de raadscyclus van 9 mei.
+
+Volledige tekst:
+Herziene Realisatieplan Verkeer
+Besluit:
+Realisatieplan Verkeer wordt geagendeerd voor de raadscyclus van 9 mei.
+---
+
+---
+Besluit: Regionale samenwerking
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Brief VNO / NCW West inzake afwaardering N44 is akkoord en kan worden
+getekend en verstuurd.
+
+Volledige tekst:
+Regionale samenwerking
+Alle collegeleden koppelen terug wat er de afgelopen week is besproken in
+regionale overleggen en/of wat er op de agenda staat van regionale
+overleggen van de komende week.
+Besluit:
+Brief VNO / NCW West inzake afwaardering N44 is akkoord en kan worden
+getekend en verstuurd.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-03-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen raadslid Paulides inzake uitval
+Datum: 2023-03-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Paulides
+(DLW) d.d. 8 maart 2023 met betrekking tot uitval bussen openbaar vervoer
+vast te stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen raadslid Paulides inzake uitval
+bussen openbaar vervoer (nr. 258)
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Paulides
+(DLW) d.d. 8 maart 2023 met betrekking tot uitval bussen openbaar vervoer
+vast te stellen.
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen raadslid Paulides inzake
+Datum: 2023-03-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Paulides
+van de DLW-fractie d.d. 8 maart 2023 met betrekking tot inzake
+verkeersongevallen op kruising Zijdeweg/Rijksstraatweg vast te stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen raadslid Paulides inzake
+verkeersongevallen op kruising Zijdeweg/Rijksstraatweg (nr. 259)
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Paulides
+van de DLW-fractie d.d. 8 maart 2023 met betrekking tot inzake
+verkeersongevallen op kruising Zijdeweg/Rijksstraatweg vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-04-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_april_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De Locatie in het park De Paauw tussen fietspad en watergang ter hoogte
+Datum: 2023-04-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_april_2023.pdf
+
+Besluittekst (kort):
+van het theehuis aan te wijzen als toekomstige locatie voor het beeld.
+
+Volledige tekst:
+De Locatie in het park De Paauw tussen fietspad en watergang ter hoogte
+van het theehuis aan te wijzen als toekomstige locatie voor het beeld.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-04-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_april_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Stand van zaken energie armoede
+Datum: 2023-04-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+College neemt kennis van de memo over energiearmoede.
+
+Volledige tekst:
+Stand van zaken energie armoede
+Besluit:
+College neemt kennis van de memo over energiearmoede.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-04-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Startdocument Bestemmingsplan Oostdorperweg 199b
+Datum: 2023-04-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen ‘Het startdocument Oostdorperweg 199B vast te
+stellen’ met dien verstande dat de procedure aanvangt met de
+terinzagelegging van het ontwerpbestemmingsplan.
+
+Volledige tekst:
+Startdocument Bestemmingsplan Oostdorperweg 199b
+Besluit:
+De raad voor te stellen ‘Het startdocument Oostdorperweg 199B vast te
+stellen’ met dien verstande dat de procedure aanvangt met de
+terinzagelegging van het ontwerpbestemmingsplan.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-05-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_mei_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De raad voor te stellen om Technische aanpassing aan de Omgevingswet
+Datum: 2023-05-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_mei_2023.pdf
+
+Besluittekst (kort):
+van de Algemene plaatselijke verordening Wassenaar 2022 vast te stellen.
+
+Volledige tekst:
+De raad voor te stellen om Technische aanpassing aan de Omgevingswet
+van de Algemene plaatselijke verordening Wassenaar 2022 vast te stellen.
+---
+
+---
+Besluit: Compensatie energiekosten maatschappelijke organisaties Wassenaar
+Datum: 2023-05-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Compensatie energiekosten maatschappelijke organisaties Wassenaar
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-05-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_mei_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Plan van Aanpak Omgevingsvisie 2023
+Datum: 2023-05-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Plan van Aanpak Omgevingsvisie 2023
+Besluit:
+---
+
+---
+Besluit: 263 Beantwoording schriftelijke vragen raadslid Van Eps-Habibe
+Datum: 2023-05-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Van Eps-Habibe van
+de GroenLinks-fractie d.d. 14 april 2023 met betrekking tot het NK
+Tegelwippen vast te stellen.
+
+Volledige tekst:
+263 Beantwoording schriftelijke vragen raadslid Van Eps-Habibe
+inzake NK Tegelwippen
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Van Eps-Habibe van
+de GroenLinks-fractie d.d. 14 april 2023 met betrekking tot het NK
+Tegelwippen vast te stellen.
+---
+
+---
+Besluit: Dat afgeweken wordt van de structuurvisie Wassenaar: Landgoed aan Zee,
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+voor wat betreft het tegengaan van verstening.
+
+Volledige tekst:
+Dat afgeweken wordt van de structuurvisie Wassenaar: Landgoed aan Zee,
+voor wat betreft het tegengaan van verstening.
+---
+
+---
+Besluit: Compensatie energiekosten maatschappelijke organisaties Wassenaar
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Compensatie energiekosten maatschappelijke organisaties Wassenaar
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Startdocument bestemmingsplan Klein Stoephout (voorheen
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Startdocument bestemmingsplan Klein Stoephout (voorheen
+Stoeplaan 7a)
+Besluit:
+---
+
+---
+Besluit: 266 Beantwoording schriftelijke vragen raadslid Hofman - De Raad
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vraag, gesteld door Annemarie Hofman
+van Lokaal Wassenaar d.d. 9 mei 2023 met betrekking tot het beroep tegen
+bestemmingsplan Valkenhorst, vast te stellen
+
+Volledige tekst:
+266 Beantwoording schriftelijke vragen raadslid Hofman - De Raad
+inzake Beroep op het Bestemmingsplan Woningbouw Valkenhorst
+Besluit:
+De beantwoording van de schriftelijke vraag, gesteld door Annemarie Hofman
+van Lokaal Wassenaar d.d. 9 mei 2023 met betrekking tot het beroep tegen
+bestemmingsplan Valkenhorst, vast te stellen
+---
+
+---
+Besluit: Zienswijze op ontwerpbesluit deelname Stichting Risicobeheer
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Zienswijze op ontwerpbesluit deelname Stichting Risicobeheer
+Veiligheidsregio’s
+Besluit:
+---
+
+---
+Besluit: Conform het ambtelijk advies beleidsregels op te stellen voor het verlenen
+Datum: 2023-05-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_mei_2023.pdf
+
+Besluittekst (kort):
+van omgevingsvergunningen voor nieuwe padelbanen gericht op het
+voorkomen van onevenredige geluidshinder met de Handreiking Padel en
+Geluid januari 2023 als uitgangspunt;
+
+Volledige tekst:
+Conform het ambtelijk advies beleidsregels op te stellen voor het verlenen
+van omgevingsvergunningen voor nieuwe padelbanen gericht op het
+voorkomen van onevenredige geluidshinder met de Handreiking Padel en
+Geluid januari 2023 als uitgangspunt;
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-05-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_mei_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Vooruitlopend op de vaststelling van de beleidsregels lopende en nieuwe
+Datum: 2023-05-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_mei_2023.pdf
+
+Besluittekst (kort):
+aanvragen omgevingsvergunningen voor padelbanen te toetsen aan de
+Handreiking Padel en Geluid januari 2023
+
+Volledige tekst:
+Vooruitlopend op de vaststelling van de beleidsregels lopende en nieuwe
+aanvragen omgevingsvergunningen voor padelbanen te toetsen aan de
+Handreiking Padel en Geluid januari 2023
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Raadsinformatiebrief Beheervisie fysieke leefomgeving
+Datum: 2023-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Met bijgevoegde raadsinformatiebrief de raad te informeren over de stand van
+zaken van de Beheervisie openbare ruimte.
+
+Volledige tekst:
+Raadsinformatiebrief Beheervisie fysieke leefomgeving
+Besluit:
+Met bijgevoegde raadsinformatiebrief de raad te informeren over de stand van
+zaken van de Beheervisie openbare ruimte.
+---
+
+---
+Besluit: 267 Beantwoording schriftelijke vragen raadslid Van Eps-Habibe
+Datum: 2023-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid van Eps-
+Habibe van de fractie GroenLinks d.d. 19 mei 2023 met betrekking tot de
+Fixteams vast te stellen.
+
+Volledige tekst:
+267 Beantwoording schriftelijke vragen raadslid Van Eps-Habibe
+inzake Fixteams
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid van Eps-
+Habibe van de fractie GroenLinks d.d. 19 mei 2023 met betrekking tot de
+Fixteams vast te stellen.
+---
+
+---
+Besluit: Het ontwerpbestemmingsplan “Buurtweg 113a” vrij te geven voor inzage;
+Datum: 2023-06-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_juni_2023.pdf
+
+Volledige tekst:
+Het ontwerpbestemmingsplan “Buurtweg 113a” vrij te geven voor inzage;
+---
+
+---
+Besluit: De gemeenteraad te informeren middels de bijgevoegde
+Datum: 2023-06-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_juni_2023.pdf
+
+Besluittekst (kort):
+raadsinformatiebrief over de terinzagelegging van het
+ontwerpbestemmingsplan “Buurtweg 113a”
+
+Volledige tekst:
+De gemeenteraad te informeren middels de bijgevoegde
+raadsinformatiebrief over de terinzagelegging van het
+ontwerpbestemmingsplan “Buurtweg 113a”
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-06-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_juni_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Gebruik Berkheiveld voor Tinafestival
+Datum: 2023-06-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Duinrell toestemming te geven om tijdens het Tinafestival op 16 en 17
+september 2023 het Berkheiveld als “ventiel” (overloop)parkeerterrein te
+gebruiken.
+
+Volledige tekst:
+Gebruik Berkheiveld voor Tinafestival
+Besluit:
+Duinrell toestemming te geven om tijdens het Tinafestival op 16 en 17
+september 2023 het Berkheiveld als “ventiel” (overloop)parkeerterrein te
+gebruiken.
+---
+
+---
+Besluit: In te stemmen met het verzoek van het COA om de opvang van
+Datum: 2023-06-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf
+
+Besluittekst (kort):
+asielzoekers op Duinrell te verlengen tot en met 12 maart 2028 zoals
+vastgelegd in de bijgesloten concept bestuursovereenkomst;
+
+Volledige tekst:
+In te stemmen met het verzoek van het COA om de opvang van
+asielzoekers op Duinrell te verlengen tot en met 12 maart 2028 zoals
+vastgelegd in de bijgesloten concept bestuursovereenkomst;
+---
+
+---
+Besluit: In te stemmen met bijgaande informatiebrief waarbij de raad wordt
+Datum: 2023-06-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf
+
+Besluittekst (kort):
+geïnformeerd over de verlenging van de opvang asielzoekers Landgoed
+Duinrell tot en met 12 maart 2028
+
+Volledige tekst:
+In te stemmen met bijgaande informatiebrief waarbij de raad wordt
+geïnformeerd over de verlenging van de opvang asielzoekers Landgoed
+Duinrell tot en met 12 maart 2028
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-06-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Raadsinformatiebrief Ontwikkelingen verkeerslichten N44
+Datum: 2023-06-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de Ontwikkelingen verkeerslichten N44
+door de raadsinformatiebrief vanuit bijlage 1 van dit voorstel aan te bieden.
+
+Volledige tekst:
+Raadsinformatiebrief Ontwikkelingen verkeerslichten N44
+Besluit:
+De gemeenteraad te informeren over de Ontwikkelingen verkeerslichten N44
+door de raadsinformatiebrief vanuit bijlage 1 van dit voorstel aan te bieden.
+---
+
+---
+Besluit: Vaststelling Plan van Aanpak 2022 - 2026 energieregio Rotterdam Den
+Datum: 2023-06-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststelling Plan van Aanpak 2022 - 2026 energieregio Rotterdam Den
+Haag (RES)
+Besluit:
+---
+
+---
+Besluit: Vaststelling Voortgangsrapportage 2023 energieregio Rotterdam Den
+Datum: 2023-06-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststelling Voortgangsrapportage 2023 energieregio Rotterdam Den
+Haag
+Besluit:
+---
+
+---
+Besluit: Uitbreiding periode opvang asielzoekers op landgoed Duinrell 2024-
+Datum: 2023-06-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf
+
+Volledige tekst:
+Uitbreiding periode opvang asielzoekers op landgoed Duinrell 2024-
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De gemeenteraad te informeren aan de hand van bijgevoegde
+Datum: 2023-07-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_juli_2023.pdf
+
+Besluittekst (kort):
+informatiebrief over de terinzagelegging van het ontwerpbestemmingsplan
+Oostdorperweg 199B.
+
+Volledige tekst:
+De gemeenteraad te informeren aan de hand van bijgevoegde
+informatiebrief over de terinzagelegging van het ontwerpbestemmingsplan
+Oostdorperweg 199B.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-07-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_juli_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording Schriftelijke vragen 264 ex art. 36 RvO raadslid
+Datum: 2023-07-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_juli_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording Schriftelijke vragen 264 ex art. 36 RvO raadslid Hofman – De
+Raad inzake openbare ruimte en de groen Paauw vast te stellen.
+
+Volledige tekst:
+Beantwoording Schriftelijke vragen 264 ex art. 36 RvO raadslid
+Hofman – De Raad inzake openbare ruimte en de groene Paauw
+Besluit:
+Beantwoording Schriftelijke vragen 264 ex art. 36 RvO raadslid Hofman – De
+Raad inzake openbare ruimte en de groen Paauw vast te stellen.
+---
+
+---
+Besluit: Opzegging gereserveerde huurgraven op de Algemene Begraafplaats
+Datum: 2023-07-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_juli_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Opzegging gereserveerde huurgraven op de Algemene Begraafplaats
+Persijnhof
+Besluit:
+---
+
+---
+Besluit: Ontwerpbestemmingsplan Oostdorperweg 199B
+Datum: 2023-07-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_juli_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Ontwerpbestemmingsplan Oostdorperweg 199B
+Besluit:
+---
+
+---
+Besluit: De raad met bijgevoegde informatiebrief te informeren over de uitspraak
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Besluittekst (kort):
+van de rechtbank Den Haag inzake de natuurvergunning voor de legalisering
+van de parkeerplaats van het museum Voorlinden.
+Pagina 3 van 4
+
+Volledige tekst:
+De raad met bijgevoegde informatiebrief te informeren over de uitspraak
+van de rechtbank Den Haag inzake de natuurvergunning voor de legalisering
+van de parkeerplaats van het museum Voorlinden.
+Pagina 3 van 4
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beheervisie openbare ruimte 2024-2028
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Beheervisie openbare ruimte 2024-2028
+Besluit:
+---
+
+---
+Besluit: 270 Beantwoording schriftelijke vragen raadslid Paulides inzake
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Paulides van
+Democratische Liberalen Wassenaar d.d. 15 juli 2023 met betrekking tot de
+ontwikkeling Groene Zone.
+
+Volledige tekst:
+270 Beantwoording schriftelijke vragen raadslid Paulides inzake
+Groene Zone
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door Paulides van
+Democratische Liberalen Wassenaar d.d. 15 juli 2023 met betrekking tot de
+ontwikkeling Groene Zone.
+---
+
+---
+Besluit: Raadsinformatiebrief uitspraak natuurvergunning Voorlinden.
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief uitspraak natuurvergunning Voorlinden.
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-08-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_augustus_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Daartoe de Afzonderlijke aanwijsbesluiten voor inzamelplaatsen en
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Besluittekst (kort):
+eventueel noodzakelijke samenhangende verkeersbesluiten per gebied
+openbaar voor te bereiden.
+
+Volledige tekst:
+Daartoe de Afzonderlijke aanwijsbesluiten voor inzamelplaatsen en
+eventueel noodzakelijke samenhangende verkeersbesluiten per gebied
+openbaar voor te bereiden.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beheervisie Openbare Ruimte
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Aangepaste Beheervisie Openbare Ruimte vaststellen.
+
+Volledige tekst:
+Beheervisie Openbare Ruimte
+Besluit:
+Aangepaste Beheervisie Openbare Ruimte vaststellen.
+---
+
+---
+Besluit: Beantwoording Schriftelijke vragen 272 inzake groene zone
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording Schriftelijke vragen 272 inzake groene zone vaststellen.
+
+Volledige tekst:
+Beantwoording Schriftelijke vragen 272 inzake groene zone
+Besluit:
+Beantwoording Schriftelijke vragen 272 inzake groene zone vaststellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-09-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Raadsinformatiebrief Beheervisie Openbare Ruimte
+Datum: 2023-09-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de aanvullende vragen bij het
+behandelen van de Beheervisie openbare ruimte 2024-2028 door de
+raadsinformatiebrief vanuit bijlage 1 van dit voorstel aan te bieden.
+
+Volledige tekst:
+Raadsinformatiebrief Beheervisie Openbare Ruimte
+Besluit:
+De gemeenteraad te informeren over de aanvullende vragen bij het
+behandelen van de Beheervisie openbare ruimte 2024-2028 door de
+raadsinformatiebrief vanuit bijlage 1 van dit voorstel aan te bieden.
+---
+
+---
+Besluit: Natuurtoetsen die nodig zijn vanuit de Provincie worden door het Museum
+Datum: 2023-09-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf
+
+Besluittekst (kort):
+Voorlinden zelf zijn aangevraagd;
+
+Volledige tekst:
+Natuurtoetsen die nodig zijn vanuit de Provincie worden door het Museum
+Voorlinden zelf zijn aangevraagd;
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 276 inzake parkeerplaatsen
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door dhr. Gankema van
+de fractie Lokaal Wassenaar d.d. 24 augustus 2023 met betrekking tot
+parkeerplaatsen binnen het ontwerp Stadhoudersplein/Hofcampweg vast te
+stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 276 inzake parkeerplaatsen
+Stadhoudersplein
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door dhr. Gankema van
+de fractie Lokaal Wassenaar d.d. 24 augustus 2023 met betrekking tot
+parkeerplaatsen binnen het ontwerp Stadhoudersplein/Hofcampweg vast te
+stellen.
+---
+
+---
+Besluit: Beantwoording toezegging 532 mobiliteitsbeleid VRH
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Beantwoording toezegging 532 mobiliteitsbeleid VRH
+Besluit:
+---
+
+---
+Besluit: Vergunning Langstraat 123
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Akkoord te gaan met de zienswijzebeantwoording, en de
+omgevingsvergunning voor het bouwplan Langstraat 123 te verlenen.
+
+Volledige tekst:
+Vergunning Langstraat 123
+Besluit:
+Akkoord te gaan met de zienswijzebeantwoording, en de
+omgevingsvergunning voor het bouwplan Langstraat 123 te verlenen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-09-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_september_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-10-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_oktober_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Nota bodembeheer 2023
+Datum: 2023-10-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_oktober_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Nota bodembeheer 2023
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-10-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 275 inzake fietspad langs de
+Datum: 2023-10-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording schriftelijke vragen 275 inzake fietspad langs de Rijksstraatweg
+vast te stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 275 inzake fietspad langs de
+Rijksstraatweg
+Besluit:
+Beantwoording schriftelijke vragen 275 inzake fietspad langs de Rijksstraatweg
+vast te stellen.
+---
+
+---
+Besluit: Vaststellen bestemmingsplan Oostdorperweg 199B
+Datum: 2023-10-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen bestemmingsplan Oostdorperweg 199B
+Besluit:
+---
+
+---
+Besluit: Vaststellen bestemmingsplan Buurtweg 113A
+Datum: 2023-10-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen bestemmingsplan Buurtweg 113A
+Besluit:
+---
+
+---
+Besluit: De probleemanalyse en prioriteiten milieutoezicht 2021-2024 vast te
+Datum: 2023-10-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_oktober_2023.pdf
+
+Besluittekst (kort):
+stellen;
+
+Volledige tekst:
+De probleemanalyse en prioriteiten milieutoezicht 2021-2024 vast te
+stellen;
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-10-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_oktober_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Een verzamelverkeersbesluit te nemen om parkeerplaatsen aan te wijzen
+Datum: 2023-10-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_oktober_2023.pdf
+
+Besluittekst (kort):
+als oplaadplaatsen voor elektrische voertuigen voor uitvoering in de
+periode 2023-2029;
+
+Volledige tekst:
+Een verzamelverkeersbesluit te nemen om parkeerplaatsen aan te wijzen
+als oplaadplaatsen voor elektrische voertuigen voor uitvoering in de
+periode 2023-2029;
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-10-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_oktober_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Vaststelling plan- en prognosekaart 2029 voor verkeer en
+Datum: 2023-10-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_oktober_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststelling plan- en prognosekaart 2029 voor verkeer en
+verzamelverkeersbesluit
+Besluit:
+---
+
+---
+Besluit: 000 uit de spaarvoorziening riolering en dit bedrag te doteren aan de
+Datum: 2023-11-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_november_2023.pdf
+
+Besluittekst (kort):
+voorziening waterwegen.
+
+Volledige tekst:
+000 uit de spaarvoorziening riolering en dit bedrag te doteren aan de
+voorziening waterwegen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-11-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_november_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Gezondheidscentrum Parklaan 28 Omgevingsvergunning
+Datum: 2023-11-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Gezondheidscentrum Parklaan 28 Omgevingsvergunning
+Besluit:
+---
+
+---
+Besluit: Eenmalige Energietoeslag 2023
+Datum: 2023-11-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Eenmalige Energietoeslag 2023
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-11-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_november_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-11-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_november_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Vaststellen bestemmingsplan “Residentie Parkzicht te Wassenaar” en
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen bestemmingsplan “Residentie Parkzicht te Wassenaar” en
+beeldkwaliteitsplan
+Beantwoording van de paraferingsvragen is toegevoegd.
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Raadsinformatiebrief Omgevingswet verordeningen
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Omgevingswet verordeningen
+Besluit:
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 271 inzake vliegverkeer
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording artikel 36 RvO raadslid Paulides DLW inzake vliegverkeer en
+voorkeursbeslissing luchtruimherziening vast te stellen
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 271 inzake vliegverkeer
+Besluit:
+Beantwoording artikel 36 RvO raadslid Paulides DLW inzake vliegverkeer en
+voorkeursbeslissing luchtruimherziening vast te stellen
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 282 inzake parkeerplaatsen nabij
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording Schriftelijke vragen 282 inzake parkeren Hofcampweg nabij
+Albert Heijn vast te stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 282 inzake parkeerplaatsen nabij
+Albert Heijn
+Besluit:
+Beantwoording Schriftelijke vragen 282 inzake parkeren Hofcampweg nabij
+Albert Heijn vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-12-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_december_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Schriftelijke beantwoording van actualiteitsvragen HvW over
+Datum: 2023-12-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Schriftelijke beantwoording van actualiteitsvragen over wateroverlast en
+Valkenhorst vast te stellen.
+
+Volledige tekst:
+Schriftelijke beantwoording van actualiteitsvragen HvW over
+wateroverlast en Valkenhorst
+Besluit:
+Schriftelijke beantwoording van actualiteitsvragen over wateroverlast en
+Valkenhorst vast te stellen.
+---
+
+---
+Besluit: De gemeenteraad te informeren aan de hand van de bijgevoegde
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+informatiebrief over de terinzagelegging van het ontwerpbestemmingsplan
+Oostdorperweg 199 en 199a.
+
+Volledige tekst:
+De gemeenteraad te informeren aan de hand van de bijgevoegde
+informatiebrief over de terinzagelegging van het ontwerpbestemmingsplan
+Oostdorperweg 199 en 199a.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ontwerpbestemmingsplan Oostdorperweg 199 en 199a ter inzage
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Ontwerpbestemmingsplan Oostdorperweg 199 en 199a ter inzage
+leggen
+Besluit:
+---
+
+---
+Besluit: Ontwerpbestemmingsplan “Klein Stoephout”
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Ontwerpbestemmingsplan “Klein Stoephout”
+Besluit:
+---
+
+---
+Besluit: Afdoening toezegging Cie FL 4 december en beantwoording
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over Afdoening toezegging Cie FL 4 december
+en beantwoording schriftelijke vragen inzake Vaststellen bestemmingsplan
+Oostdorperweg 199B via bijgevoegde bijlage.
+
+Volledige tekst:
+Afdoening toezegging Cie FL 4 december en beantwoording
+schriftelijke vragen inzake Vaststellen bestemmingsplan
+Oostdorperweg 199B
+Besluit:
+De gemeenteraad te informeren over Afdoening toezegging Cie FL 4 december
+en beantwoording schriftelijke vragen inzake Vaststellen bestemmingsplan
+Oostdorperweg 199B via bijgevoegde bijlage.
+---
+
+---
+Besluit: Informatiebrief betreffende status aanpak bestrijding energiearmoede
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raadsinformatiebrief d.d. 12 december 2023 over de status van de aanpak
+bestrijding energiearmoede vast te stellen en aan te bieden aan de raad.
+
+Volledige tekst:
+Informatiebrief betreffende status aanpak bestrijding energiearmoede
+Wassenaar
+Besluit:
+De raadsinformatiebrief d.d. 12 december 2023 over de status van de aanpak
+bestrijding energiearmoede vast te stellen en aan te bieden aan de raad.
+---
+
+---
+Besluit: met betrekking tot parkeergarage bij Albert Heijn vast te stellen.
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Volledige tekst:
+met betrekking tot parkeergarage bij Albert Heijn vast te stellen.
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 288 Eenmalige energietoeslag
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 288 Eenmalige energietoeslag
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De beantwoording van de schriftelijke vragen gesteld door raadslid Paulides
+Datum: 2024-01-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_januari_2024.pdf
+
+Besluittekst (kort):
+(DLW) en raadslid Stekelenburg (VVD) d.d. 6 november 2023 met betrekking
+tot de Noordrand (Groene Zone).
+
+Volledige tekst:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Paulides
+(DLW) en raadslid Stekelenburg (VVD) d.d. 6 november 2023 met betrekking
+tot de Noordrand (Groene Zone).
+---
+
+---
+Besluit: Bij de door de bewoners van ‘De Admiraal’ nog op te richten VvE voor
+Datum: 2024-01-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_januari_2024.pdf
+
+Besluittekst (kort):
+exploitatie en beheer van de steiger, jaarlijks de in de overeenkomst
+beschreven retributie in rekening te brengen;
+
+Volledige tekst:
+Bij de door de bewoners van ‘De Admiraal’ nog op te richten VvE voor
+exploitatie en beheer van de steiger, jaarlijks de in de overeenkomst
+beschreven retributie in rekening te brengen;
+---
+
+---
+Besluit: In te stemmen met de verkrijgingsovereenkomst inzake het overnemen
+Datum: 2024-01-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_januari_2024.pdf
+
+Besluittekst (kort):
+van een nieuw aan te leggen trottoir en parkeerstrook ter hoogte van ‘De
+Admiraal’.
+
+Volledige tekst:
+In te stemmen met de verkrijgingsovereenkomst inzake het overnemen
+van een nieuw aan te leggen trottoir en parkeerstrook ter hoogte van ‘De
+Admiraal’.
+---
+
+---
+Besluit: Collegebrief Rijkswaterstaat
+Datum: 2024-01-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_januari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De 4 verkeerslichten op de N44 aan de Provincie te koppelen i.p.v. RWS en dit
+in een brief aan RWS te bevestigen.
+
+Volledige tekst:
+Collegebrief Rijkswaterstaat
+Besluit:
+De 4 verkeerslichten op de N44 aan de Provincie te koppelen i.p.v. RWS en dit
+in een brief aan RWS te bevestigen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-01-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_januari_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De beantwoording van de schriftelijke vragen gesteld door raadslid
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Besluittekst (kort):
+Bellekom-Vogels van de fractie Lokaal Wassenaar! d.d. 5 december 2023 met
+betrekking tot vervolgvragen afhandeling motie d.d. 6 juli 2021:
+Inwonerparticipatie onderhoud openbare ruimte vast te stellen.
+
+Volledige tekst:
+De beantwoording van de schriftelijke vragen gesteld door raadslid
+Bellekom-Vogels van de fractie Lokaal Wassenaar! d.d. 5 december 2023 met
+betrekking tot vervolgvragen afhandeling motie d.d. 6 juli 2021:
+Inwonerparticipatie onderhoud openbare ruimte vast te stellen.
+---
+
+---
+Besluit: Het verzoek om proceskostenvergoeding af te wijzen omdat het
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Besluittekst (kort):
+bezwaarschrift geen reden is om de omgevingsververgunning in
+heroverweging te weigeren of te herzien.
+
+Volledige tekst:
+Het verzoek om proceskostenvergoeding af te wijzen omdat het
+bezwaarschrift geen reden is om de omgevingsververgunning in
+heroverweging te weigeren of te herzien.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beslissing op bezwaar omgevingsvergunning Hugo de Grootstraat 47
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Beslissing op bezwaar omgevingsvergunning Hugo de Grootstraat 47
+te Wassenaar
+Besluit:
+---
+
+---
+Besluit: Nota Hogere Waarden Verkeerslawaai Wassenaar 2023
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Nota Hogere Waarden Verkeerslawaai Wassenaar 2023
+Besluit:
+---
+
+---
+Besluit: Beleidsregels Milieuzonering Richtafstanden Wassenaar 2024
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Beleidsregels Milieuzonering Richtafstanden Wassenaar 2024
+Besluit:
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 295 DLW inzake Maaldrift
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door het raadslid de heer
+B. Paulides van de DLW-fractie zijn op donderdag 21 december 2023 met
+betrekking tot de Groene Zone/Uitbreiding Militair Complex Maaldrift vast te
+stellen.
+Pagina 2
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 295 DLW inzake Maaldrift
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door het raadslid de heer
+B. Paulides van de DLW-fractie zijn op donderdag 21 december 2023 met
+betrekking tot de Groene Zone/Uitbreiding Militair Complex Maaldrift vast te
+stellen.
+Pagina 2
+---
+
+---
+Besluit: met betrekking tot de uitbreiding van het MOC-terrein Maaldrift vast te
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Besluittekst (kort):
+stellen.
+
+Volledige tekst:
+met betrekking tot de uitbreiding van het MOC-terrein Maaldrift vast te
+stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-02-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_februari_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Raadsinformatiebrief Beeld opvang asielzoekers op Duinrell 2023 en
+Datum: 2024-02-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_februari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Beeld opvang asielzoekers op Duinrell 2023 en
+Spreidingswet
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-02-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_februari_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: MOC Maaldrift | Notitie reikwijdte en detail Nationaal Programma
+Datum: 2024-02-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_februari_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+MOC Maaldrift | Notitie reikwijdte en detail Nationaal Programma
+Ruimte voor Defensie
+Besluit:
+---
+
+---
+Besluit: De gemeenteraad te informeren over de motie vrijliggend fietspad
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Besluittekst (kort):
+Schouwweg via bijgevoegde bijlage.
+
+Volledige tekst:
+De gemeenteraad te informeren over de motie vrijliggend fietspad
+Schouwweg via bijgevoegde bijlage.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Bestemmingsplan "Klein Stoephout (herstel bouwtitel Villawijken
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Volledige tekst:
+Bestemmingsplan "Klein Stoephout (herstel bouwtitel Villawijken
+---
+
+---
+Besluit: Bestemmingsplan Oostdorperweg 199 en 199a 2015 (herstel
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen:
+
+Volledige tekst:
+Bestemmingsplan Oostdorperweg 199 en 199a 2015 (herstel
+woonbestemming bestemmingsplan Landelijk Gebied 2015)
+vaststellen
+Besluit:
+De raad voor te stellen:
+---
+
+---
+Besluit: Beantwoording schriftelijke vervolgvragen bouwplannen
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording schriftelijke vragen 300 A. Hofman - De Raad – Lokaal
+Wassenaar! - bouwplannen Rijksstraatweg 785
+
+Volledige tekst:
+Beantwoording schriftelijke vervolgvragen bouwplannen
+Rijksstraatweg 785
+Besluit:
+Beantwoording schriftelijke vragen 300 A. Hofman - De Raad – Lokaal
+Wassenaar! - bouwplannen Rijksstraatweg 785
+---
+
+---
+Besluit: Raadsinformatiebrief Motie Vrijliggend fietspad Schouwweg
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Motie Vrijliggend fietspad Schouwweg
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-03-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_maart_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording 306 schriftelijke vragen ex art. 36 RvO van raadslid
+Datum: 2024-03-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 306 schriftelijke vragen ex art. 36 RvO van raadslid van der
+Marel HartvoorWassenaar inzake opvang Duinrell vast te stellen.
+
+Volledige tekst:
+Beantwoording 306 schriftelijke vragen ex art. 36 RvO van raadslid
+van der Marel HartvoorWassenaar inzake opvang Duinrell
+Besluit:
+Beantwoording 306 schriftelijke vragen ex art. 36 RvO van raadslid van der
+Marel HartvoorWassenaar inzake opvang Duinrell vast te stellen.
+---
+
+---
+Besluit: De beantwoording van toezegging 629 gesteld door P. van Vliet-van
+Datum: 2024-03-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_maart_2024.pdf
+
+Besluittekst (kort):
+Dijk/Hart voor Wassenaar in de commissievergadering Fysieke Leefomgeving
+d.d. 11-03-2024 met betrekking tot Uitwerking Omgevingswet: Beleidsregels
+Hogere Waarden Wassenaar 2024 vast te stellen.
+
+Volledige tekst:
+De beantwoording van toezegging 629 gesteld door P. van Vliet-van
+Dijk/Hart voor Wassenaar in de commissievergadering Fysieke Leefomgeving
+d.d. 11-03-2024 met betrekking tot Uitwerking Omgevingswet: Beleidsregels
+Hogere Waarden Wassenaar 2024 vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-03-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_maart_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De beheer- en onderhoudsovereenkomst van kunstwerken en areaal
+Datum: 2024-03-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+De beheer- en onderhoudsovereenkomst van kunstwerken en areaal
+rondom knooppunt Ommedijk aangaan
+Besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief Toezegging 629 hogere waarden verkeerslawaai
+Datum: 2024-03-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Toezegging 629 hogere waarden verkeerslawaai
+Wassenaar
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-04-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_april_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-04-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_april_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording 103 Schriftelijke vragen ex art. 37 RvO van raadslid
+Datum: 2024-04-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid
+Pesman/Hart van Wassenaar d.d. 4 april 2024 met betrekking tot het fietspad
+Katwijkseweg vast te stellen.
+
+Volledige tekst:
+Beantwoording 103 Schriftelijke vragen ex art. 37 RvO van raadslid
+Pesman HvW inzake fietspad Katwijkseweg
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid
+Pesman/Hart van Wassenaar d.d. 4 april 2024 met betrekking tot het fietspad
+Katwijkseweg vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-04-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_april_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De raad voor te stellen dit bedrag voor circa 75% (€ 147.697) te dekken uit
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Besluittekst (kort):
+van de provincie Zuid-Holland te verkrijgen Groen subsidie;
+
+Volledige tekst:
+De raad voor te stellen dit bedrag voor circa 75% (€ 147.697) te dekken uit
+van de provincie Zuid-Holland te verkrijgen Groen subsidie;
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Natuurvriendelijk isoleren
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Natuurvriendelijk isoleren
+Besluit:
+---
+
+---
+Besluit: Nota bodembeheer 2023
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Nota bodembeheer 2023
+Besluit:
+---
+
+---
+Besluit: Afdoening toezegging 641 inzake Vaststellen bestemmingsplan "Klein
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Afdoening toezegging 641 inzake Vaststellen bestemmingsplan "Klein
+Stoephout (herstel bouwtitel Villawijken 2010)" vast te stellen.
+
+Volledige tekst:
+Afdoening toezegging 641 inzake Vaststellen bestemmingsplan "Klein
+Stoephout (herstel bouwtitel Villawijken 2010)"
+Besluit:
+Afdoening toezegging 641 inzake Vaststellen bestemmingsplan "Klein
+Stoephout (herstel bouwtitel Villawijken 2010)" vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Opdrachtverlening aan de Stichting Beheer Warenar (SBW) ter
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Opdrachtverlening aan de Stichting Beheer Warenar (SBW) ter
+versterking van de theaterprogrammering.
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-05-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_mei_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-05-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_mei_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Raadsinformatiebrief status aanpak bestrijding energiearmoede
+Datum: 2024-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De raadsinformatiebrief d.d. 28 mei 2024 over het resultaat en de
+vervolgaanpak energiehulp vast te stellen.
+
+Volledige tekst:
+Raadsinformatiebrief status aanpak bestrijding energiearmoede
+
+Besluit:
+De raadsinformatiebrief d.d. 28 mei 2024 over het resultaat en de
+vervolgaanpak energiehulp vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Opheffen geheimhouding processtukken beroep Valkenhorst
+Datum: 2024-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Opheffen geheimhouding processtukken beroep Valkenhorst
+Besluit:
+---
+
+---
+Besluit: Zienswijze Tweede wijziging GR werkbedrijven Kust-, Duin- en
+Datum: 2024-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Zienswijze Tweede wijziging GR werkbedrijven Kust-, Duin- en
+Bollenstreek
+Besluit:
+---
+
+---
+Besluit: Raadsinformatiebrief zitting bestemmingsplan Valkenhorst (zie 5.c.1)
+Datum: 2024-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief zitting bestemmingsplan Valkenhorst vast te stellen.
+
+Volledige tekst:
+Raadsinformatiebrief zitting bestemmingsplan Valkenhorst (zie 5.c.1)
+Besluit:
+Raadsinformatiebrief zitting bestemmingsplan Valkenhorst vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-06-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_juni_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: 1.b Zienswijze Tweede wijziging GR werkbedrijven Kust-, Duin- en Bollenstreek
+Datum: 2024-06-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_juni_2024.pdf
+
+Volledige tekst:
+1.b Zienswijze Tweede wijziging GR werkbedrijven Kust-, Duin- en Bollenstreek
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor Milieubeheer vast te stellen op € 21.280.
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor Milieubeheer vast te stellen op € 21.280.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor Milieubeheer vast te stellen op € 21.280.
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor Milieubeheer vast te stellen op € 21.280.
+---
+
+---
+Besluit: Het ontwerpbesluit weigering aanvraag omgevingsvergunning voor een
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+periode van zes weken ter inzage te leggen met mogelijkheid voor een ieder
+om een zienswijze in te dienen
+
+Volledige tekst:
+Het ontwerpbesluit weigering aanvraag omgevingsvergunning voor een
+periode van zes weken ter inzage te leggen met mogelijkheid voor een ieder
+om een zienswijze in te dienen
+---
+
+---
+Besluit: Raadsinformatiebrief voortgang inzake MOC Maaldrift
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief voortgang inzake MOC Maaldrift
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: 321 Schriftelijke vragen ex art. 36 RvO raadslid Bellekom-Vogels LW!
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Bellekom-
+Vogels Lokaal Wassenaar d.d. 10 juni 2024 met betrekking tot overlast
+verwaarloosde fietsen Van Oldenbarneveltweg vast te stellen.
+
+Volledige tekst:
+321 Schriftelijke vragen ex art. 36 RvO raadslid Bellekom-Vogels LW!
+inzake overlast verwaarloosde fietsen van Oldenbarneveltweg
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Bellekom-
+Vogels Lokaal Wassenaar d.d. 10 juni 2024 met betrekking tot overlast
+verwaarloosde fietsen Van Oldenbarneveltweg vast te stellen.
+---
+
+---
+Besluit: Ontwerpbesluit weigering aanvraag omgevingsvergunning
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Ontwerpbesluit weigering aanvraag omgevingsvergunning
+Rijksstraatweg 785
+Besluit:
+---
+
+---
+Besluit: De Raad voor te stellen de beleidsregels Milieuzonering Richtafstanden
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Wassenaar 2024 vast te stellen.
+
+Volledige tekst:
+De Raad voor te stellen de beleidsregels Milieuzonering Richtafstanden
+Wassenaar 2024 vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Uitwerking Omgevingswet: Nota Hogere Waarden Verkeerslawaai
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Uitwerking Omgevingswet: Nota Hogere Waarden Verkeerslawaai
+Wassenaar 2023 vaststellen
+Besluit:
+---
+
+---
+Besluit: Herontwikkeling renbaan Duindigt
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Herontwikkeling renbaan Duindigt
+Besluit:
+---
+
+---
+Besluit: Uitwerking Omgevingswet: Beleidsregels Milieuzonering
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Uitwerking Omgevingswet: Beleidsregels Milieuzonering
+Richtafstanden Wassenaar 2024 vaststellen
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-08-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_augustus_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-08-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-08-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024_0.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Presentatie themasessie raad op 2 sept inzake Omgevingsvisie
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+College neemt de presentatie voor kennisgeving aan.
+
+Volledige tekst:
+Presentatie themasessie raad op 2 sept inzake Omgevingsvisie
+Besluit:
+College neemt de presentatie voor kennisgeving aan.
+---
+
+---
+Besluit: Raadsinformatiebrief Opvolging klachten Beheervisie (toezegging
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Volledige tekst:
+Raadsinformatiebrief Opvolging klachten Beheervisie (toezegging
+---
+
+---
+Besluit: Besluit:
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief Opvolging klachten Beheervisie (toezegging 566) vast te
+stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Raadsinformatiebrief regionale en lokale aanpak kostenbeheersing
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de regionale en lokale aanpak
+kostenbeheersing jeugdhulp via bijgevoegde raadsinformatiebrief en de bijlage
+‘Aanpak kostenbeheersing jeugdhulpregio Haaglanden’.
+
+Volledige tekst:
+Raadsinformatiebrief regionale en lokale aanpak kostenbeheersing
+Jeugdhulp
+Besluit:
+De gemeenteraad te informeren over de regionale en lokale aanpak
+kostenbeheersing jeugdhulp via bijgevoegde raadsinformatiebrief en de bijlage
+‘Aanpak kostenbeheersing jeugdhulpregio Haaglanden’.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-09-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_september_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Reactie brief Stichting Beheer Renbaan Duindigt
+Datum: 2024-09-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Reactie brief Stichting Beheer Renbaan Duindigt
+Besluit:
+---
+
+---
+Besluit: Beantwoording 322 Schriftelijke vragen raadslid Krabbendam D66
+Datum: 2024-09-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 322 Schriftelijke vragen raadslid Krabbendam D66 inzake
+oversteekplaats fietsers Storm van 's-Gravesandeweg (noord) richting
+Jagerslaan en Storm van 's-Gravesandeweg (zuid) vast te stellen.
+
+Volledige tekst:
+Beantwoording 322 Schriftelijke vragen raadslid Krabbendam D66
+inzake oversteekplaats fietsers Storm van 's-Gravesandeweg Noord
+richting Jagerslaan en Storm van 's-Gravesandeweg Zuid
+Besluit:
+Beantwoording 322 Schriftelijke vragen raadslid Krabbendam D66 inzake
+oversteekplaats fietsers Storm van 's-Gravesandeweg (noord) richting
+Jagerslaan en Storm van 's-Gravesandeweg (zuid) vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-09-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_september_2024.pdf
+
+Besluittekst (kort):
+Pagina 1 van 3
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+Pagina 1 van 3
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-09-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_september_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 124 ex art. 37 RvO van raadslid
+Datum: 2024-09-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording schriftelijke vragen 124 ex art. 37 RvO van raadslid Hendrickx
+HvW! inzake wie betaalt de verkeersregelaars tijdens Tinafestival vast te
+stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 124 ex art. 37 RvO van raadslid
+Hendrickx HvW! inzake wie betaalt de verkeersregelaars tijdens
+Tinafestival
+Besluit:
+Beantwoording schriftelijke vragen 124 ex art. 37 RvO van raadslid Hendrickx
+HvW! inzake wie betaalt de verkeersregelaars tijdens Tinafestival vast te
+stellen.
+---
+
+---
+Besluit: De Notitie Reikwijdte en Detailniveau (NRD) van de mer-procedure over de
+Datum: 2024-10-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_oktober_2024.pdf
+
+Besluittekst (kort):
+Regionale Energiestrategie (RES) 1.0 vrij te geven voor terinzagelegging.
+
+Volledige tekst:
+De Notitie Reikwijdte en Detailniveau (NRD) van de mer-procedure over de
+Regionale Energiestrategie (RES) 1.0 vrij te geven voor terinzagelegging.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-10-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_oktober_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-10-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_oktober_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen art. 36 RvO 338 raadslid Tirion
+Datum: 2024-10-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_oktober_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording schriftelijke vragen art 36 RvO 338 Raadslid Tirion over
+groenonderhoud vast te stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen art. 36 RvO 338 raadslid Tirion
+over groenonderhoud
+Pagina 1 van 3
+
+Besluit:
+Beantwoording schriftelijke vragen art 36 RvO 338 Raadslid Tirion over
+groenonderhoud vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-10-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_oktober_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Principeverzoek van de Stichting Beheer Renbaan Duindigt en
+Datum: 2024-10-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_oktober_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Principeverzoek van de Stichting Beheer Renbaan Duindigt en
+Raadsinformatiebrief
+Besluit:
+---
+
+---
+Besluit: De beantwoording van de schriftelijke vragen gesteld door raadslid Paulides
+Datum: 2024-10-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_oktober_2024.pdf
+
+Besluittekst (kort):
+van DLW d.d. 4 oktober 2024 inzake schadeclaims in de openbare ruimte vast
+te stellen.
+Pagina 2
+
+Volledige tekst:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Paulides
+van DLW d.d. 4 oktober 2024 inzake schadeclaims in de openbare ruimte vast
+te stellen.
+Pagina 2
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-10-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_oktober_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Herstelbesluit omgevingsvergunning St. Jozefkerk
+Datum: 2024-10-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_oktober_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Herstelbesluit omgevingsvergunning St. Jozefkerk
+Besluit:
+---
+
+---
+Besluit: Beantwoording 128 Schriftelijke vragen ex art. 37 raadslid Hendrickx,
+Datum: 2024-10-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_oktober_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 128 Schriftelijke vragen ex art. 37 raadslid Hendrickx, HvW
+inzake bestuurlijke overeenkomst asielopvang Duinrell vast te stellen.
+
+Volledige tekst:
+Beantwoording 128 Schriftelijke vragen ex art. 37 raadslid Hendrickx,
+HvW inzake bestuurlijke overeenkomst asielopvang Duinrell
+Besluit:
+Beantwoording 128 Schriftelijke vragen ex art. 37 raadslid Hendrickx, HvW
+inzake bestuurlijke overeenkomst asielopvang Duinrell vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-11-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_november_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-11-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_november_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Raadsinformatiebrief uitstel RvS uitspraak Valkenhorst
+Datum: 2024-11-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief uitstel RvS-uitspraak Valkenhorst vast te stellen.
+
+Volledige tekst:
+Raadsinformatiebrief uitstel RvS uitspraak Valkenhorst
+Besluit:
+Raadsinformatiebrief uitstel RvS-uitspraak Valkenhorst vast te stellen.
+---
+
+---
+Besluit: Raadsstukken 19 nov 2024 inzake Duindigt
+Datum: 2024-11-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsstukken 19 nov 2024 inzake Duindigt
+Besluit:
+---
+
+---
+Besluit: De beantwoording van de schriftelijke vragen ex art. 36 RvO gesteld door
+Datum: 2024-11-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_november_2024.pdf
+
+Besluittekst (kort):
+raadslid Hofman-de Raad LW! d.d. 7 november 2024 met betrekking tot
+Duindigt vast te stellen
+
+Volledige tekst:
+De beantwoording van de schriftelijke vragen ex art. 36 RvO gesteld door
+raadslid Hofman-de Raad LW! d.d. 7 november 2024 met betrekking tot
+Duindigt vast te stellen
+---
+
+---
+Besluit: Raadsinformatiebrief Afronding project energiearmoede
+Datum: 2024-11-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Afronding project energiearmoede
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-11-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_november_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Brief over vervolgstappen maatschappelijk initiatief verkeersinrichting
+Datum: 2024-11-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Brief over vervolgstappen maatschappelijk initiatief verkeersinrichting
+Rozenweg-Rozenplein
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-11-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_november_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Samenwerkingsovereenkomst Landschapstafel Duin Horst & Weide
+Datum: 2024-11-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Samenwerkingsovereenkomst Landschapstafel Duin Horst & Weide
+2024-2028
+Besluit:
+---
+
+---
+Besluit: Het beschikbaar stellen van een investeringskrediet van € 2.201.250 voor
+Datum: 2024-12-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_december_2024.pdf
+
+Besluittekst (kort):
+vervanging van het asfalt op de parkeerterreinen en het laatste deel van de
+rijbaan van De Wassenaarse Slag, waarbij dit bedrag is opgebouwd uit een
+investering van € 2.451.250 en een bijdrage van € 250.000 die vrijvalt op het
+investeringskrediet ‘Asfalt rijbaan Wassenaarse Slag’.
+Beslispunt B, de volgende nieuwe overeenkomsten aan te gaan (bevoegdheid
+college):
+
+Volledige tekst:
+Het beschikbaar stellen van een investeringskrediet van € 2.201.250 voor
+vervanging van het asfalt op de parkeerterreinen en het laatste deel van de
+rijbaan van De Wassenaarse Slag, waarbij dit bedrag is opgebouwd uit een
+investering van € 2.451.250 en een bijdrage van € 250.000 die vrijvalt op het
+investeringskrediet ‘Asfalt rijbaan Wassenaarse Slag’.
+Beslispunt B, de volgende nieuwe overeenkomsten aan te gaan (bevoegdheid
+college):
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-12-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_december_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De beantwoording van de schriftelijke vragen gesteld door Democratische
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Besluittekst (kort):
+Liberalen Wassenaar B. Paulides d.d. 6 december 2024 met betrekking tot
+Duindigt vast te stellen.
+
+Volledige tekst:
+De beantwoording van de schriftelijke vragen gesteld door Democratische
+Liberalen Wassenaar B. Paulides d.d. 6 december 2024 met betrekking tot
+Duindigt vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Verkeersbesluit verplaatsen bushalte Ter Weerlaan
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Verkeersbesluit verplaatsen bushalte Ter Weerlaan
+Besluit:
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen ex art. 36 RvO raadslid Paulides DLW
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Besluittekst (kort):
+inzake renbaan Duindigt vast te stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen ex art. 36 RvO raadslid Paulides DLW
+inzake renbaan Duindigt vast te stellen.
+---
+
+---
+Besluit: Uitspraak Beroepsprocedure Valkenhorst
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief en persbericht over Afdeling Bestuursrechtspraak Raad
+van State-uitspraak Valkenhorst vast te stellen.
+
+Volledige tekst:
+Uitspraak Beroepsprocedure Valkenhorst
+Besluit:
+Raadsinformatiebrief en persbericht over Afdeling Bestuursrechtspraak Raad
+van State-uitspraak Valkenhorst vast te stellen.
+---
+
+---
+Besluit: Raadsinformatiebrief Regionale aanpak kostenbeheersing jeugdhulp
+Datum: 2025-01-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_januari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Regionale aanpak kostenbeheersing jeugdhulp
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-01-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_januari_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording actualiteitsvraag raad d.d. 17 dec 2024 LW!-fractie
+Datum: 2025-01-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_januari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording actualiteitsvraag raad d.d. 17 dec 2024 LW!-fractie inzake het
+Burgerberaad Verkeer.
+
+Volledige tekst:
+Beantwoording actualiteitsvraag raad d.d. 17 dec 2024 LW!-fractie
+inzake het Burgerberaad Verkeer
+Besluit:
+Beantwoording actualiteitsvraag raad d.d. 17 dec 2024 LW!-fractie inzake het
+Burgerberaad Verkeer.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-01-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_januari_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: 1 Raadsthemasessie d.d. 15 jan.: Regionale aanpak kostenbeheersing
+Datum: 2025-01-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_januari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+1 Raadsthemasessie d.d. 15 jan.: Regionale aanpak kostenbeheersing
+jeugdhulp door Servicebureau Jeugdzorg
+Besluit:
+---
+
+---
+Besluit: Het definitieve besluit weigering aanvraag om omgevingsvergunning voor
+Datum: 2025-01-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_januari_2025.pdf
+
+Besluittekst (kort):
+het bouwen van een nieuwe woning achterop het perceel Rijksstraatweg 785
+af te geven (uitgaande van de definitieve weigering van de VVGB door de
+gemeenteraad op 4 maart 2025);
+
+Volledige tekst:
+Het definitieve besluit weigering aanvraag om omgevingsvergunning voor
+het bouwen van een nieuwe woning achterop het perceel Rijksstraatweg 785
+af te geven (uitgaande van de definitieve weigering van de VVGB door de
+gemeenteraad op 4 maart 2025);
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-01-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_januari_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: 2 Thema raadssessie Omgevingsvisie: bijpraten over participatie door
+Datum: 2025-01-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_januari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+College neemt kennis van de thema raadssessie Omgevingsvisie: bijpraten
+over participatie door BRO.
+
+Volledige tekst:
+2 Thema raadssessie Omgevingsvisie: bijpraten over participatie door
+BRO
+Besluit:
+College neemt kennis van de thema raadssessie Omgevingsvisie: bijpraten
+over participatie door BRO.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-01-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_januari_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Besluit:
+Datum: 2025-01-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_januari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Definitieve weigering aanvraag omgevingsvergunning Rijksstraatweg 785 vast
+te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-02-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_februari_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-02-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_februari_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-02-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_februari_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-03-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_maart_2025.pdf
+
+Besluittekst (kort):
+Pagina 1 van 4
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+Pagina 1 van 4
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-03-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_maart_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-03-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_maart_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-04-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_april_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-04-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_april_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Voortgang plan-MER Regionale Energie Strategie
+Datum: 2025-04-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Voortgang plan-MER Regionale Energie Strategie
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-04-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_april_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Overdracht Katwijkseweg (N441) van de Provincie Zuid-Holland naar
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Overdracht Katwijkseweg (N441) van de Provincie Zuid-Holland naar
+de gemeente Wassenaar
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025.pdf
+
+Besluittekst (kort):
+Pagina 3 van 6
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+Pagina 3 van 6
+---
+
+---
+Besluit: Overdracht Katwijkseweg (N441) van de Provincie Zuid-Holland naar
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025_0.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Overdracht Katwijkseweg (N441) van de Provincie Zuid-Holland naar
+de gemeente Wassenaar
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025_0.pdf
+
+Besluittekst (kort):
+Pagina 3 van 6
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+Pagina 3 van 6
+---
+
+---
+Besluit: Inkomensafhankelijke toeslag inzake toezeggingen 767 en 768
+Datum: 2025-05-06
+Type: collegebesluit
+Domein: Fysiek Domein
+Portefeuille: Ruimte, Duurzaamheid en Mobiliteit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_mei_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Inkomensafhankelijke toeslag inzake toezeggingen 767 en 768
+commissie M&M d.d. 16 april 2025
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-05-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_mei_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De gemeenteraad informeren over de Voorstudie concept Omgevingsvisie
+Datum: 2025-05-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_mei_2025.pdf
+
+Besluittekst (kort):
+eerst proeve, en de rapportage Toets beleidsneutrale overgang basisdocument
+– eerste proeve Omgevingsvisie, via bijgevoegde raadsinformatiebrief.
+
+Volledige tekst:
+De gemeenteraad informeren over de Voorstudie concept Omgevingsvisie
+eerst proeve, en de rapportage Toets beleidsneutrale overgang basisdocument
+– eerste proeve Omgevingsvisie, via bijgevoegde raadsinformatiebrief.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-05-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_mei_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Raadsinformatiebrief Voorstudie Omgevingsvisie, eerste proeve
+Datum: 2025-05-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_mei_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief Voorstudie Omgevingsvisie, eerste proeve
+Besluit:
+---
+
+---
+Besluit: De raad te informeren over het Uitvoeringsprogramma Openbare Ruimte
+Datum: 2025-05-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_mei_2025.pdf
+
+Besluittekst (kort):
+middels bijgevoegde raadsinformatiebrief.
+
+Volledige tekst:
+De raad te informeren over het Uitvoeringsprogramma Openbare Ruimte
+middels bijgevoegde raadsinformatiebrief.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-05-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_mei_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Uitvoeringsprogramma Openbare Ruimte 2024-2028
+Datum: 2025-05-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_mei_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Uitvoeringsprogramma Openbare Ruimte 2024-2028
+Besluit:
+---
+
+---
+Besluit: Akkoord gaan met de samenwerkingsovereenkomst “Verkeerssituatie
+Datum: 2025-05-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_mei_2025.pdf
+
+Besluittekst (kort):
+N44/A44 Rozenplein en Rozenweg” (bijlage 7).
+
+Volledige tekst:
+Akkoord gaan met de samenwerkingsovereenkomst “Verkeerssituatie
+N44/A44 Rozenplein en Rozenweg” (bijlage 7).
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-05-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_mei_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: 1 Herstelbesluit bestemmingsplan “Woongebied Valkenhorst”
+Datum: 2025-05-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_mei_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+1 Herstelbesluit bestemmingsplan “Woongebied Valkenhorst”
+Besluit:
+---
+
+---
+Besluit: Kennis te nemen van het gewijzigde Tweede herstelbesluit voor het
+Datum: 2025-06-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juni_2025.pdf
+
+Besluittekst (kort):
+bestemmingsplan “Woongebied Valkenhorst” (bijlage 2 t/m 5) en de juridische
+appreciatie (bijlage 6) hierop.
+
+Volledige tekst:
+Kennis te nemen van het gewijzigde Tweede herstelbesluit voor het
+bestemmingsplan “Woongebied Valkenhorst” (bijlage 2 t/m 5) en de juridische
+appreciatie (bijlage 6) hierop.
+---
+
+---
+Besluit: In te stemmen met dotaties aan de volgende voorzieningen:
+Datum: 2025-06-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juni_2025.pdf
+
+Besluittekst (kort):
+- In het kader van de actualisering van het Onderhoudsprogramma Openbare
+Ruimte 2024-2028:
+· Dotatie voorziening wegen: € 55.971
+· Dotatie voorziening bruggen: € 47.000
+- Dotatie spaarvoorziening riolering: € 66.638
+
+Volledige tekst:
+In te stemmen met dotaties aan de volgende voorzieningen:
+- In het kader van de actualisering van het Onderhoudsprogramma Openbare
+Ruimte 2024-2028:
+· Dotatie voorziening wegen: € 55.971
+· Dotatie voorziening bruggen: € 47.000
+- Dotatie spaarvoorziening riolering: € 66.638
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-06-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juni_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Omgevingsvergunning camping Duinhorst
+Datum: 2025-06-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Omgevingsvergunning camping Duinhorst
+Besluit:
+---
+
+---
+Besluit: Herstelbesluit bestemmingsplan “Woongebied Valkenhorst
+Datum: 2025-06-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Herstelbesluit bestemmingsplan “Woongebied Valkenhorst
+Besluit:
+---
+
+---
+Besluit: Responsiviteit ambtelijke organisatie
+Datum: 2025-06-10
+Type: collegebesluit
+Domein: Fysiek Domein
+Portefeuille: Ruimte, Duurzaamheid en Mobiliteit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Responsiviteit ambtelijke organisatie
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-06-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Vaststelling Voortgangsrapportage 2025 Energieregio Rotterdam Den
+Datum: 2025-06-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststelling Voortgangsrapportage 2025 Energieregio Rotterdam Den
+Haag (RES)
+Besluit:
+---
+
+---
+Besluit: Bestemmingsplan Valkenhorst
+Datum: 2025-06-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Bestemmingsplan Valkenhorst
+Besluit:
+---
+
+---
+Besluit: 4 Herstelbesluit bestemmingsplan “Woongebied Valkenhorst”
+Datum: 2025-06-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+4 Herstelbesluit bestemmingsplan “Woongebied Valkenhorst”
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-06-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_juni_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Raadsinformatiebrief beantwoording vragen executieverkoop Duindigt
+Datum: 2025-06-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief beantwoording vragen executieverkoop Duindigt
+Besluit:
+---
+
+---
+Besluit: De beantwoording van de schriftelijke vragen gesteld door raadslid Van
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Besluittekst (kort):
+Leeuwen van de fractie Hart voor Wassenaar d.d. 3 juni 2025 met betrekking
+tot schriftelijke vragen ex art. 36 RvO inzake parkeerdruk en overlast voor
+bewoners in het centrum van Wassenaar vast te stellen.
+
+Volledige tekst:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Van
+Leeuwen van de fractie Hart voor Wassenaar d.d. 3 juni 2025 met betrekking
+tot schriftelijke vragen ex art. 36 RvO inzake parkeerdruk en overlast voor
+bewoners in het centrum van Wassenaar vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 375 ex art. 36 RvO raadslid
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording schriftelijke vragen 375 ex art. 36 RvO raadslid Bellekom-
+Vogels inzake uitreiking Groene Paauw vast te stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 375 ex art. 36 RvO raadslid
+Bellekom-Vogels inzake uitreiking Groene Paauw
+Besluit:
+Beantwoording schriftelijke vragen 375 ex art. 36 RvO raadslid Bellekom-
+Vogels inzake uitreiking Groene Paauw vast te stellen.
+---
+
+---
+Besluit: Raadsinformatiebrief Verkeerstellingen november 2024 + effect N434
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief Verkeerstellingen november 2024 + effect N434 i.c.m.
+beantwoording 157 schriftelijke vragen art. 37 HvW inzake Verkeerstellingen
+vast te stellen.
+
+Volledige tekst:
+Raadsinformatiebrief Verkeerstellingen november 2024 + effect N434
+i.c.m. beantwoording 157 schriftelijke vragen art. 37 HvW inzake
+Verkeerstellingen
+Besluit:
+Raadsinformatiebrief Verkeerstellingen november 2024 + effect N434 i.c.m.
+beantwoording 157 schriftelijke vragen art. 37 HvW inzake Verkeerstellingen
+vast te stellen.
+---
+
+---
+Besluit: Raadsinformatiebrief beantwoording vragen executieverkoop Duindigt
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief beantwoording vragen executieverkoop Duindigt raadslid
+Krabbendam vast te stellen.
+
+Volledige tekst:
+Raadsinformatiebrief beantwoording vragen executieverkoop Duindigt
+raadslid Krabbendam
+Besluit:
+Raadsinformatiebrief beantwoording vragen executieverkoop Duindigt raadslid
+Krabbendam vast te stellen.
+---
+
+---
+Besluit: Schriftelijke vragen ex art. 36 RvO raadslid Paulides inzake de
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Besluittekst (kort):
+Landschapstafel, de Position Papers en de executieveiling Duindigt vast te
+stellen.
+
+Volledige tekst:
+Schriftelijke vragen ex art. 36 RvO raadslid Paulides inzake de
+Landschapstafel, de Position Papers en de executieveiling Duindigt vast te
+stellen.
+---
+
+---
+Besluit: 1 lid 2 sub b Wet open overheid, geheimhouding op te leggen
+Datum: 2025-07-01
+Type: collegebesluit
+Domein: Fysiek Domein
+Portefeuille: Ruimte, Duurzaamheid en Mobiliteit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_juli_2025.pdf
+
+Besluittekst (kort):
+betreffende dit voorstel en alle bijlagen 1 tot en met 7 zoals aan het einde
+van dit voorstel vermeld, om de financiële en economische belangen van
+de gemeente veilig te stellen, tot en met de dag na inschrijving van deze
+voorlopige voorkeursrechtbeschikking in de openbare registers van het
+kadaster, vanaf welk moment het voorkeursrecht ingaat;
+
+Volledige tekst:
+1 lid 2 sub b Wet open overheid, geheimhouding op te leggen
+betreffende dit voorstel en alle bijlagen 1 tot en met 7 zoals aan het einde
+van dit voorstel vermeld, om de financiële en economische belangen van
+de gemeente veilig te stellen, tot en met de dag na inschrijving van deze
+voorlopige voorkeursrechtbeschikking in de openbare registers van het
+kadaster, vanaf welk moment het voorkeursrecht ingaat;
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-07-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_juli_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Door middel van een zienswijze te reageren op de herontwikkeling van
+Datum: 2025-07-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juli_2025.pdf
+
+Besluittekst (kort):
+MOB Maaldrift in de Ontwerp- Nationale Beleidsvisie Nationaal Programma
+Ruimte voor Defensie en het PlanMER;
+
+Volledige tekst:
+Door middel van een zienswijze te reageren op de herontwikkeling van
+MOB Maaldrift in de Ontwerp- Nationale Beleidsvisie Nationaal Programma
+Ruimte voor Defensie en het PlanMER;
+---
+
+---
+Besluit: Voortgang dossier "Investeren in Kerkehout"
+Datum: 2025-07-08
+Type: collegebesluit
+Domein: Fysiek Domein
+Portefeuille: Ruimte, Duurzaamheid en Mobiliteit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Voortgang dossier "Investeren in Kerkehout"
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: 162 Schriftelijke vragen ex art. 37 RvO van raadslid Hendrickx (HvW)
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording schriftelijke vragen 162 raadslid Hendrickx inzake
+verkeersovereenkomst vast te stellen.
+
+Volledige tekst:
+162 Schriftelijke vragen ex art. 37 RvO van raadslid Hendrickx (HvW)
+inzake verkeersovereenkomst
+Besluit:
+Beantwoording schriftelijke vragen 162 raadslid Hendrickx inzake
+verkeersovereenkomst vast te stellen.
+---
+
+---
+Besluit: 1.1 Ontwikkelingen Duindigt
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Raadsinformatiebrief Ontwikkelingen Duindigt vast te stellen.
+
+Volledige tekst:
+1.1 Ontwikkelingen Duindigt
+Besluit:
+Raadsinformatiebrief Ontwikkelingen Duindigt vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-08-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_augustus_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Technische raadssessie Duindigt op 19 aug
+Datum: 2025-08-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_augustus_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+College neemt kennis van de informatie voor de themasessie.
+
+Volledige tekst:
+Technische raadssessie Duindigt op 19 aug
+Besluit:
+College neemt kennis van de informatie voor de themasessie.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-08-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_augustus_2025.pdf
+
+Besluittekst (kort):
+Pagina 1 van 3
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+Pagina 1 van 3
+---
+
+---
+Besluit: Organisatie
+Datum: 2025-08-26
+Type: collegebesluit
+Domein: Fysiek Domein
+Portefeuille: Ruimte, Duurzaamheid en Mobiliteit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_augustus_2025.pdf
+
+Volledige tekst:
+Organisatie
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-09-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_september_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-09-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_september_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-09-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_september_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Beantwoording 171 ex art. 37 RvO raadsvragen over Duindigt
+Datum: 2025-09-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 171 ex art. 37 RvO raadsvragen over Duindigt wordt
+vastgesteld.
+
+Volledige tekst:
+Beantwoording 171 ex art. 37 RvO raadsvragen over Duindigt
+Besluit:
+Beantwoording 171 ex art. 37 RvO raadsvragen over Duindigt wordt
+vastgesteld.
+---
+
+---
+Besluit: Antwoordbrief college aan convenantpartners
+Datum: 2025-09-23
+Type: collegebesluit
+Domein: Fysiek Domein
+Portefeuille: Ruimte, Duurzaamheid en Mobiliteit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_september_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Antwoordbrief college aan convenantpartners vast te stellen.
+
+Volledige tekst:
+Antwoordbrief college aan convenantpartners
+Besluit:
+Antwoordbrief college aan convenantpartners vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-09-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_september_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-09-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_september_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De in de overeenkomst opgenomen kosten voor inrichting en beheer van de
+Datum: 2025-10-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf
+
+Besluittekst (kort):
+compensatiekavel, in rekening te brengen bij Stichting Voorlinden.
+
+Volledige tekst:
+De in de overeenkomst opgenomen kosten voor inrichting en beheer van de
+compensatiekavel, in rekening te brengen bij Stichting Voorlinden.
+---
+
+---
+Besluit: Stand van zaken renovatie Kievietschool
+Datum: 2025-10-07
+Type: collegebesluit
+Domein: Fysiek Domein
+Portefeuille: Ruimte, Duurzaamheid en Mobiliteit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Stand van zaken renovatie Kievietschool
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-10-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Overeenkomst realisatie parkeerterrein Voorlinden en inrichting
+Datum: 2025-10-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Overeenkomst realisatie parkeerterrein Voorlinden en inrichting
+compensatiekavel Ruigelaan
+Besluit:
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-10-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_oktober_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-10-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_oktober_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-11-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_november_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De Gedragscode Soortenbescherming natuurbeheer (versie van 13 februari
+Datum: 2025-11-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_november_2025.pdf
+
+Besluittekst (kort):
+Pagina 3 van 4
+
+Volledige tekst:
+De Gedragscode Soortenbescherming natuurbeheer (versie van 13 februari
+Pagina 3 van 4
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-11-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_november_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: t/m 31 maart 2030 toe te passen bij de beschreven beheermaatregelen
+Datum: 2025-11-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_november_2025.pdf
+
+Besluittekst (kort):
+in Natuurgebieden.
+
+Volledige tekst:
+t/m 31 maart 2030 toe te passen bij de beschreven beheermaatregelen
+in Natuurgebieden.
+---
+
+---
+Besluit: 405 Schriftelijke vragen ex art. 36 RvO raadslid Van Leeuwen (HvW)
+Datum: 2025-11-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_november_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Van
+Leeuwen van de HW-fractie d.d. 27 oktober 2025 met betrekking tot
+afhandeling zwaar verkeer n.a.v. toezegging 402 vast te stellen.
+
+Volledige tekst:
+405 Schriftelijke vragen ex art. 36 RvO raadslid Van Leeuwen (HvW)
+inzake afhandeling zwaar verkeer n.a.v. toezegging 402
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Van
+Leeuwen van de HW-fractie d.d. 27 oktober 2025 met betrekking tot
+afhandeling zwaar verkeer n.a.v. toezegging 402 vast te stellen.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-11-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_november_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-11-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_november_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-12-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_december_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: De raad met bijgaande raadsinformatiebrief te informeren over de
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Besluittekst (kort):
+fietsongevallen in de gemeente Wassenaar in 2024.
+
+Volledige tekst:
+De raad met bijgaande raadsinformatiebrief te informeren over de
+fietsongevallen in de gemeente Wassenaar in 2024.
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Ruimte, Duurzaamheid en Mobiliteit
+Datum: 2025-12-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Volledige tekst:
+Ruimte, Duurzaamheid en Mobiliteit
+---
+
+---
+Besluit: Rectificatie Wegencategoriseringsplan
+Datum: 2025-12-16
+Type: collegebesluit
+Domein: Fysiek Domein
+Portefeuille: Ruimte, Duurzaamheid en Mobiliteit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Bijgevoegde raadsinformatiebrief "Rectificatie Wegencategoriseringsplan" aan
+de raad te versturen met aangepast raadsvoorstel -en besluit:
+
+Volledige tekst:
+Rectificatie Wegencategoriseringsplan
+Besluit:
+Bijgevoegde raadsinformatiebrief "Rectificatie Wegencategoriseringsplan" aan
+de raad te versturen met aangepast raadsvoorstel -en besluit:
+---

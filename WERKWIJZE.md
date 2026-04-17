@@ -18,6 +18,15 @@
 
 ---
 
+## Productie: read-only (wekelijks of bij release)
+
+- **Productie** (`beleidsbibliotheekwassenaar.nl`) is een **alleen-lezen weergave** voor bezoekers: er is **geen** inhoud beheren op de server (geen CMS), en **geen** interactieve “Beheer”-functie op pagina’s zoals de **mutatielijst** — dat zou bovendien geen echte beveiliging zijn als de pagina bereikbaar is.
+- **Alle wijzigingen** lopen via: **lokaal / git → deploy naar ACC → na akkoord `promote-to-prod.sh` naar productie**. Zo is er één bron van waarheid en blijven ACC en PROD synchroon.
+- In de praktijk wordt productie **wekelijks of bij een release** bijgewerkt; het is geen omgeving voor **ad hoc** live bewerken.
+- **Mutatielijst:** status en reacties voor collega’s horen in het **HTML-bronbestand** in de repo (`wassenaar/werklijst-mutaties.html`, evt. later hernoemen naar `mutatielijst.html`) en gaan **mee met deploy** — niet alleen in de browser op ACC opslaan zonder deploy.
+
+---
+
 ## Dick: wijziging doorvoeren
 
 ### 1. Wijzig lokaal
@@ -146,3 +155,4 @@ Dick (MBP)           Joyce (browser)       Ricardo (SSH)
 | `VERSION` | Versienummer | Projectroot |
 | `docs/deploy-log.md` | Logboek van alle deploys | `docs/` |
 | `BACKLOG.md` | Wat moet er nog gebeuren | Projectroot |
+| `wassenaar/werklijst-mutaties.html` | Mutatielijst (opvolging collega-reacties) | In repo bewerken, mee deployen; op productie geen beheer-UI |
