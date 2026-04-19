@@ -4,6 +4,11 @@
 
 Een zoekbare interface voor vastgesteld gemeentelijk beleid (raadsbesluiten en collegebesluiten).
 
+## Voortgang & samenwerking (Cursor)
+
+- **Vaste resume:** [`STATUS.md`](./STATUS.md) in de **repo-root** — daar staat wat er speelt en wat de volgende stap is.
+- **Nieuwe chat:** begin met `@STATUS.md` of de korte instructie **bovenaan** `STATUS.md` (kop *Start instructie*). Het model heeft geen geheugen tussen chats; dat bestand is het enige afgesproken checkpoint.
+
 ## Opzet
 
 Deze applicatie combineert:

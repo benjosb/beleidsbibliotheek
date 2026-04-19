@@ -60,7 +60,7 @@ Dick (lokaal) → ./deploy.sh → ACC (Hostinger VPS)
 | `OVERDRACHTSDOSSIER.md` | Verborgen items (roadmap, verbeterpunten, schrijfwijzer) |
 | `docs/mutatierapport_*.md` | Mutatieketen per release |
 | `TODO.md` | Openstaande technische taken |
-| `dashboard.py` | Lokaal beheerdashboard (python3 dashboard.py → localhost:8800) |
+| `dashboard.py` | **Beheerpagina** (zo noemt Dick dit): lokaal Deploy Dashboard — `python3 dashboard.py` → http://localhost:8800/ — o.a. deploy-log, backlog, `/local-site/` voor `wassenaar/`. Niet `wassenaar/beheer.html`. |
 | `backup-prod.sh` | Download productie van Argeweb via FTP |
 | `backup-daily.py` | Backup + integriteitscheck + e-mailnotificatie |
 | `.env.prod` | FTP-credentials Argeweb (NOOIT committen) |
@@ -76,8 +76,8 @@ Dick (lokaal) → ./deploy.sh → ACC (Hostinger VPS)
 
 ## Regels
 
-- **Bij START sessie:** lees `STATUS.md`. Daar staat waar we gebleven zijn. GEEN vragen stellen die daar of in deze rule beantwoord worden.
-- **Bij EINDE sessie:** werk `STATUS.md` bij met wat er gedaan is, wat de volgende stap is, en eventuele blokkades.
+- **Sessiestart, STATUS.md, einde sessie:** volledige afspraak staat in **`.cursor/rules/chat-continuiteit.mdc`** (één plek, geen dubbele tekst hier).
+- **Kort samengevat:** begin met `STATUS.md` in de projectroot; einde sessie = `STATUS.md` bijwerken. GEEN apart parallel handoff-bestand; GEEN vragen die `STATUS.md` of deze rules al beantwoorden.
 - Geen wachtwoorden in chat of git. Credentials in `.env.prod`.
 - NOOIT vragen waar omgevingen staan. Lees DEZE regel.
 - Mutatieketen respecteren: wijziging altijd herleidbaar.

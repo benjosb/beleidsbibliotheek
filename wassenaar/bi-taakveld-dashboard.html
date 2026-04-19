@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taakveld — begroting (BI)</title>
+    <style>
+        :root {
+            --ink: #1a1d21;
+            --muted: #5c6570;
+            --panel: #fff;
+            --page: #f0f2f5;
+            --border: #e2e6ec;
+            --radius: 12px;
+            --p1: #2563eb;
+            --p2: #16a34a;
+            --p3: #ea580c;
+            --p4: #9333ea;
+            --p5: #0d9488;
+            --lasten: #dc2626;
+            --baten: #16a34a;
+            --saldo-neg: #dc2626;
+            --saldo-pos: #16a34a;
+            --aandeel: #2563eb;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: var(--page);
+            color: var(--ink);
+            line-height: 1.45;
+            min-height: 100vh;
+            padding: 1rem 1rem 2rem;
+        }
+        .wrap { max-width: 56rem; margin: 0 auto; }
+        .topbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem 1rem;
+            margin-bottom: 1rem;
+        }
+        .taakveld-select label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--muted);
+            margin-bottom: 0.2rem;
+        }
+        .taakveld-select select {
+            min-width: min(100%, 22rem);
+            max-width: 100%;
+            padding: 0.45rem 0.65rem;
+            font-size: 0.88rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--panel);
+            color: var(--ink);
+        }
+        .programma-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .programma-pills button {
+            border: none;
+            padding: 0.35rem 0.65rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: default;
+            color: #fff;
+            opacity: 0.35;
+        }
+        .programma-pills button.actief { opacity: 1; box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+        .programma-pills .p1 { background: var(--p1); }
+        .programma-pills .p2 { background: var(--p2); }
+        .programma-pills .p3 { background: var(--p3); }
+        .programma-pills .p4 { background: var(--p4); }
+        .programma-pills .p5 { background: var(--p5); }
+        .page-head { margin-bottom: 1rem; }
+        .page-head h1 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin: 0 0 0.25rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .badge-programma {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .badge-programma.p1 { background: var(--p1); }
+        .badge-programma.p2 { background: var(--p2); }
+        .badge-programma.p3 { background: var(--p3); }
+        .badge-programma.p4 { background: var(--p4); }
+        .badge-programma.p5 { background: var(--p5); }
+        .page-head .sub { margin: 0; font-size: 0.88rem; color: var(--muted); }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.65rem;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 52rem) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 26rem) { .kpi-grid { grid-template-columns: 1fr; } }
+        .kpi {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.85rem 1rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,.04);
+        }
+        .kpi-label {
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--muted);
+            margin-bottom: 0.35rem;
+        }
+        .kpi-value {
+            font-size: 1.35rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: -0.02em;
+        }
+        .kpi-value.lasten { color: var(--lasten); }
+        .kpi-value.baten { color: var(--baten); }
+        .kpi-value.saldo-neg { color: var(--saldo-neg); }
+        .kpi-value.saldo-pos { color: var(--saldo-pos); }
+        .kpi-value.aandeel { color: var(--aandeel); }
+        .kpi-note { font-size: 0.72rem; color: var(--muted); margin-top: 0.25rem; }
+        .viz-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            align-items: stretch;
+        }
+        @media (max-width: 44rem) { .viz-row { grid-template-columns: 1fr; } }
+        .viz-panel {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem 1.1rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,.04);
+        }
+        .viz-panel h2 {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--muted);
+            margin: 0 0 0.65rem;
+        }
+        .line-stats { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; margin-bottom: 0.5rem; font-size: 0.8rem; }
+        .line-stats .groei { color: var(--p2); font-weight: 600; }
+        .line-chart-svg { width: 100%; height: auto; display: block; }
+        .line-placeholder {
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px dashed var(--border);
+        }
+        .donut-wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; }
+        .donut-wrap svg { flex-shrink: 0; }
+        .bron { margin-top: 1rem; font-size: 0.72rem; color: var(--muted); }
+        .bron code { font-size: 0.68rem; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="topbar">
+            <div class="taakveld-select">
+                <label for="tvSelect">Taakveld (Iv3)</label>
+                <select id="tvSelect" aria-label="Kies taakveld"></select>
+            </div>
+            <div class="programma-pills" id="programmaPills" role="group" aria-label="Programma (Wassenaar)">
+                <button type="button" class="p1" data-p="P1" title="P1 Veiligheid en Handhaving">P1</button>
+                <button type="button" class="p2" data-p="P2" title="P2 Mens en Maatschappij">P2</button>
+                <button type="button" class="p3" data-p="P3" title="P3 Bestuur en Middelen">P3</button>
+                <button type="button" class="p4" data-p="P4" title="P4 Fysieke Leefomgeving">P4</button>
+                <button type="button" class="p5" data-p="P5" title="P5 Natuur, Klimaat en Mobiliteit">P5</button>
+            </div>
+        </div>
+
+        <header class="page-head">
+            <h1>
+                <span id="headTitle">—</span>
+                <span class="badge-programma p2" id="headBadge">P2</span>
+            </h1>
+            <p class="sub" id="headSub">Begroting 2026 · BBV-taakveld</p>
+        </header>
+
+        <div class="kpi-grid">
+            <div class="kpi">
+                <div class="kpi-label">Lasten <span id="kpiJaar">2026</span></div>
+                <div class="kpi-value lasten" id="kpiLasten">—</div>
+                <div class="kpi-note">geraamd</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-label">Baten <span id="kpiJaar2">2026</span></div>
+                <div class="kpi-value baten" id="kpiBaten">—</div>
+                <div class="kpi-note">geraamd</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-label">Saldo</div>
+                <div class="kpi-value saldo-neg" id="kpiSaldo">—</div>
+                <div class="kpi-note" id="kpiSaldoNote">—</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-label">Aandeel begroting</div>
+                <div class="kpi-value aandeel" id="kpiAandeel">—</div>
+                <div class="kpi-note">van totale lasten</div>
+            </div>
+        </div>
+
+        <div class="viz-row">
+            <div class="viz-panel">
+                <h2 id="lineTitle">Ontwikkeling lasten</h2>
+                <div class="line-stats" id="lineStats"></div>
+                <div id="lineChartHost"></div>
+            </div>
+            <div class="viz-panel">
+                <h2>Aandeel in totale begroting (lasten)</h2>
+                <div class="donut-wrap" id="donutWrap"></div>
+            </div>
+        </div>
+
+        <p class="bron">Data KPI: <code>financieel-bbv-begroting-2026.js</code>. Meerjaren: <code>financieel-taakveld-dashboard-meta.js</code> (uitbreidbaar). Namen: <code>taakvelden_iv3.js</code>.</p>
+    </div>
+
+    <script src="financieel-bbv-begroting-2026.js"></script>
+    <script src="taakvelden_iv3.js"></script>
+    <script src="financieel-taakveld-dashboard-meta.js"></script>
+    <script>
+(function () {
+    var JAAR = typeof FINANCIEEL_DASHBOARD_BEGROTING_JAAR !== 'undefined' ? FINANCIEEL_DASHBOARD_BEGROTING_JAAR : 2026;
+
+    function iv3Naam(code) {
+        if (typeof BBV_TAAKVELDEN_IV3 === 'undefined') return code;
+        for (var k in BBV_TAAKVELDEN_IV3) {
+            var arr = BBV_TAAKVELDEN_IV3[k];
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].code === code) return arr[i].naam || code;
+            }
+        }
+        return code;
+    }
+
+    function fmtM(n) {
+        if (n === 0) return '€\u00a00';
+        var m = Math.abs(n) / 1e6;
+        var s = m.toFixed(2).replace('.', ',');
+        return (n < 0 ? '−' : '') + '€\u00a0' + s + 'M';
+    }
+
+    function fmtKDelta(n) {
+        var a = Math.round(Math.abs(n));
+        return (n >= 0 ? '+' : '−') + '€\u00a0' + a.toLocaleString('nl-NL') + 'k';
+    }
+
+    var ns = 'http://www.w3.org/2000/svg';
+    function el(name, attrs) {
+        var e = document.createElementNS(ns, name);
+        if (attrs) Object.keys(attrs).forEach(function (k) { e.setAttribute(k, attrs[k]); });
+        return e;
+    }
+
+    function parseTvFromQuery() {
+        var q = new URLSearchParams(window.location.search).get('tv');
+        return q || null;
+    }
+
+    function setPillsActive(programma) {
+        var pills = document.querySelectorAll('#programmaPills button');
+        pills.forEach(function (btn) {
+            btn.classList.toggle('actief', btn.getAttribute('data-p') === programma);
+        });
+    }
+
+    function renderLineChart(jaren, lastenMap) {
+        var host = document.getElementById('lineChartHost');
+        host.innerHTML = '';
+        if (!jaren || jaren.length < 2) {
+            var ph = document.createElement('div');
+            ph.className = 'line-placeholder';
+            ph.innerHTML = jaren && jaren.length === 1
+                ? 'Voor deze grafiek is nog maar één jaargang beschikbaar; voor een trend zijn meerdere jaren nodig.'
+                : 'Voor deze grafiek ontbreken de meerjarengegevens.';
+            host.appendChild(ph);
+            return;
+        }
+
+        var W = 440, H = 200, padL = 48, padR = 16, padT = 12, padB = 36;
+        var chartW = W - padL - padR;
+        var chartH = H - padT - padB;
+        var vals = jaren.map(function (j) { return lastenMap[j]; });
+        var vmin = Math.min.apply(null, vals);
+        var vmax = Math.max.apply(null, vals);
+        var vpad = (vmax - vmin) * 0.12 || vmax * 0.05;
+        var y0 = vmin - vpad;
+        var y1 = vmax + vpad;
+
+        function xScale(i) {
+            return padL + (i / (jaren.length - 1)) * chartW;
+        }
+        function yScale(v) {
+            return padT + chartH - ((v - y0) / (y1 - y0)) * chartH;
+        }
+
+        var svg = el('svg', { class: 'line-chart-svg', viewBox: '0 0 ' + W + ' ' + H, role: 'img' });
+        var pathD = jaren.map(function (j, i) {
+            return (i === 0 ? 'M' : 'L') + xScale(i) + ' ' + yScale(lastenMap[j]);
+        }).join(' ');
+        var areaD = pathD + ' L' + xScale(jaren.length - 1) + ' ' + (padT + chartH) + ' L' + padL + ' ' + (padT + chartH) + ' Z';
+
+        var defs = el('defs', {});
+        var grad = el('linearGradient', { id: 'areaGradDash', x1: '0', y1: '0', x2: '0', y2: '1' });
+        grad.appendChild(el('stop', { offset: '0%', 'stop-color': '#fecaca', 'stop-opacity': '0.9' }));
+        grad.appendChild(el('stop', { offset: '100%', 'stop-color': '#fecaca', 'stop-opacity': '0.05' }));
+        defs.appendChild(grad);
+        svg.appendChild(defs);
+
+        svg.appendChild(el('path', { d: areaD, fill: 'url(#areaGradDash)', stroke: 'none' }));
+        svg.appendChild(el('path', { d: pathD, fill: 'none', stroke: '#dc2626', 'stroke-width': '2.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
+
+        jaren.forEach(function (j, i) {
+            svg.appendChild(el('circle', { cx: xScale(i), cy: yScale(lastenMap[j]), r: '5', fill: '#fff', stroke: '#dc2626', 'stroke-width': '2' }));
+        });
+
+        var yTicks = 4;
+        for (var t = 0; t <= yTicks; t++) {
+            var vy = y0 + (t / yTicks) * (y1 - y0);
+            var yy = yScale(vy);
+            svg.appendChild(el('line', { x1: padL, y1: yy, x2: W - padR, y2: yy, stroke: '#eef0f3', 'stroke-width': '1' }));
+            var lbl = el('text', { x: padL - 6, y: yy + 4, fill: '#7a8490', 'font-size': '10', 'text-anchor': 'end' });
+            lbl.textContent = '€\u00a0' + (vy / 1e6).toFixed(2).replace('.', ',') + 'M';
+            svg.appendChild(lbl);
+        }
+
+        jaren.forEach(function (j, i) {
+            var tx = el('text', { x: xScale(i), y: H - 10, fill: '#5c6570', 'font-size': '11', 'font-weight': '600', 'text-anchor': 'middle' });
+            tx.textContent = String(j);
+            svg.appendChild(tx);
+        });
+
+        host.appendChild(svg);
+    }
+
+    function renderDonut(deelAbs, totGemAbs, code, pct) {
+        var wrap = document.getElementById('donutWrap');
+        wrap.innerHTML = '';
+        var size = 200;
+        var cx = size / 2, cy = size / 2, r = size * 0.38;
+        function piePath(startRad, endRad) {
+            var x1 = cx + r * Math.cos(startRad);
+            var y1 = cy + r * Math.sin(startRad);
+            var x2 = cx + r * Math.cos(endRad);
+            var y2 = cy + r * Math.sin(endRad);
+            var large = (endRad - startRad) > Math.PI ? 1 : 0;
+            return ['M', cx, cy, 'L', x1, y1, 'A', r, r, 0, large, 1, x2, y2, 'Z'].join(' ');
+        }
+        var start = -Math.PI / 2;
+        var frac = deelAbs / totGemAbs;
+        var end = start + frac * 2 * Math.PI;
+        var dsvg = el('svg', { width: size, height: size, viewBox: '0 0 ' + size + ' ' + size, role: 'img' });
+        dsvg.appendChild(el('path', { d: piePath(start, end), fill: '#16a34a', stroke: '#fff', 'stroke-width': '2' }));
+        dsvg.appendChild(el('path', { d: piePath(end, start + 2 * Math.PI), fill: '#e8ecf2', stroke: '#fff', 'stroke-width': '2' }));
+        dsvg.appendChild(el('circle', { cx: cx, cy: cy, r: r * 0.55, fill: '#fff' }));
+        var t1 = el('text', { x: cx, y: cy - 2, 'text-anchor': 'middle', fill: '#2563eb', 'font-size': '22', 'font-weight': '800' });
+        t1.textContent = pct.toFixed(1).replace('.', ',') + '%';
+        dsvg.appendChild(t1);
+        var t2 = el('text', { x: cx, y: cy + 16, 'text-anchor': 'middle', fill: '#5c6570', 'font-size': '12', 'font-weight': '700' });
+        t2.textContent = code;
+        dsvg.appendChild(t2);
+        wrap.appendChild(dsvg);
+    }
+
+    function renderDashboard(tv) {
+        var row = FINANCIEEL_BEGROTING_2026_TAAKVELD[tv];
+        if (!row) return;
+
+        var naam = iv3Naam(tv);
+        var prog = financieelProgrammaVoorIv3(tv);
+        document.getElementById('headTitle').textContent = tv + ' ' + naam;
+        var badge = document.getElementById('headBadge');
+        badge.textContent = prog;
+        badge.className = 'badge-programma ' + prog.toLowerCase();
+        setPillsActive(prog);
+
+        document.getElementById('headSub').textContent = 'Begroting ' + JAAR + ' · BBV-taakveld';
+        document.getElementById('kpiJaar').textContent = String(JAAR);
+        document.getElementById('kpiJaar2').textContent = String(JAAR);
+
+        var L = row.lasten;
+        var B = row.baten;
+        var S = row.saldo;
+        var gemAbs = FINANCIEEL_GEMEENTE_LASTEN_ABS_JAAR[JAAR];
+        var pctGem = gemAbs ? (Math.abs(L) / gemAbs) * 100 : 0;
+
+        document.getElementById('kpiLasten').textContent = fmtM(L);
+        document.getElementById('kpiBaten').textContent = fmtM(B);
+        var saldoEl = document.getElementById('kpiSaldo');
+        saldoEl.textContent = fmtM(S);
+        saldoEl.className = 'kpi-value ' + (S < 0 ? 'saldo-neg' : (S > 0 ? 'saldo-pos' : ''));
+        saldoEl.style.color = '';
+        document.getElementById('kpiSaldoNote').textContent = S < 0 ? 'nadelig' : (S > 0 ? 'gunstig' : 'break-even');
+        document.getElementById('kpiAandeel').textContent = pctGem.toFixed(1).replace('.', ',') + '%';
+
+        document.title = tv + ' — ' + naam + ' (begroting)';
+
+        var meer = FINANCIEEL_MEERJAREN_LASTEN_ABS[tv];
+        var statsEl = document.getElementById('lineStats');
+        var lineTitle = document.getElementById('lineTitle');
+
+        if (meer && Object.keys(meer).length >= 2) {
+            var jaren = Object.keys(meer).map(Number).sort(function (a, b) { return a - b; });
+            var lastenMap = {};
+            jaren.forEach(function (j) { lastenMap[j] = meer[j]; });
+            lineTitle.textContent = 'Ontwikkeling lasten ' + jaren[0] + '–' + jaren[jaren.length - 1];
+            var firstL = lastenMap[jaren[0]];
+            var lastL = lastenMap[jaren[jaren.length - 1]];
+            var groeiPct = ((lastL - firstL) / firstL) * 100;
+            var groeiAbs = lastL - firstL;
+            statsEl.innerHTML =
+                '<span class="groei">Groei: ' + (groeiPct >= 0 ? '+' : '') + groeiPct.toFixed(1).replace('.', ',') + '%</span>' +
+                '<span class="groei">Bedrag: ' + fmtKDelta(groeiAbs) + '</span>';
+            statsEl.style.display = '';
+            renderLineChart(jaren, lastenMap);
+        } else {
+            lineTitle.textContent = 'Ontwikkeling lasten';
+            statsEl.innerHTML = '';
+            statsEl.style.display = 'none';
+            renderLineChart(null, null);
+        }
+
+        renderDonut(Math.abs(L), gemAbs, tv, pctGem);
+    }
+
+    function init() {
+        /* Zelfde volgorde als in financieel-bbv-begroting-2026.js (Iv3-logica) */
+        var codes = Object.keys(FINANCIEEL_BEGROTING_2026_TAAKVELD);
+        var sel = document.getElementById('tvSelect');
+        sel.innerHTML = '';
+        codes.forEach(function (c) {
+            var opt = document.createElement('option');
+            opt.value = c;
+            opt.textContent = c + ' — ' + iv3Naam(c);
+            sel.appendChild(opt);
+        });
+
+        var fromQ = parseTvFromQuery();
+        var initial = fromQ && FINANCIEEL_BEGROTING_2026_TAAKVELD[fromQ] ? fromQ : '4.2';
+        sel.value = initial;
+
+        sel.addEventListener('change', function () {
+            var v = sel.value;
+            try {
+                var u = new URL(window.location.href);
+                u.searchParams.set('tv', v);
+                history.replaceState(null, '', u.pathname + u.search + u.hash);
+            } catch (e) { /* file:// */ }
+            renderDashboard(v);
+        });
+
+        renderDashboard(initial);
+    }
+
+    init();
+})();
+    </script>
+</body>
+</html>

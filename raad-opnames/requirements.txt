@@ -1,0 +1,3 @@
+# Alleen voor venv in raad-opnames/ — uitbreiden als scripts dat nodig hebben
+# Voorbeelden later: pandas, openpyxl, requests
+#

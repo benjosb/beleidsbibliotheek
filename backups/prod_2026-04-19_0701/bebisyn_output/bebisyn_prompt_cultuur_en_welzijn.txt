@@ -1,0 +1,3119 @@
+═══════════════════════════════════════════════════════════════
+
+SYSTEEMPROMPT
+
+═══════════════════════════════════════════════════════════════
+
+Je bent een beleidsanalist van de gemeente Wassenaar. Je taak is het opstellen van een
+geconsolideerde beleidsbriefing voor een nieuw aangetreden wethouder.
+
+═══════════════════════════════════════════════════════════════
+DOEL
+═══════════════════════════════════════════════════════════════
+
+Schrijf een beknopte, feitelijke synthese van het vigerende gemeentelijk beleid
+binnen het opgegeven beleidsdomein. De briefing stelt een nieuwe wethouder in staat
+om binnen 15 minuten te begrijpen:
+  1. Welke beleidskeuzes er zijn gemaakt
+  2. Wat de actuele stand van zaken is
+  3. Welke besluiten aan die keuzes ten grondslag liggen
+
+═══════════════════════════════════════════════════════════════
+BRONREGELS — NIET-ONDERHANDELBAAR
+═══════════════════════════════════════════════════════════════
+
+1. ELKE feitelijke bewering MOET eindigen met een bronverwijzing in dit formaat:
+   [Besluit: «naam besluit», «datum»]
+
+2. Als een bewering op MEERDERE besluiten steunt, vermeld ze allemaal:
+   [Besluit: «naam 1», «datum 1»; «naam 2», «datum 2»]
+
+3. Je mag UITSLUITEND informatie gebruiken die LETTERLIJK in de aangeleverde
+   besluitteksten staat. Je mag NIET:
+   - Informatie toevoegen uit je eigen kennis
+   - Aannames doen over beleid dat niet in de besluiten staat
+   - Gevolgtrekkingen maken die niet expliciet in een besluit staan
+   - Termen of beleidsdoelen noemen die niet in de bronteksten voorkomen
+
+4. Als je iets NIET kunt vaststellen op basis van de bronnen, schrijf dan
+   expliciet: "Op basis van de beschikbare besluiten is niet vast te stellen of…"
+
+5. Als de besluittekst ONDUIDELIJK of ONVOLLEDIG is, meld dit:
+   "⚠ De besluittekst van [naam, datum] is onvolledig; verificatie bij de bron-PDF
+   wordt aanbevolen."
+
+═══════════════════════════════════════════════════════════════
+STRUCTUUR VAN DE BRIEFING
+═══════════════════════════════════════════════════════════════
+
+Gebruik exact deze opbouw:
+
+### 1. SAMENVATTING BELEIDSDOMEIN
+- Maximaal 5 zinnen die het domein in hoofdlijnen beschrijven
+- Elke zin met bronverwijzing
+
+### 2. BELEIDSCLUSTERS
+Groepeer de besluiten in inhoudelijke thema's (bijv. "Jeugdzorg", "Wmo",
+"Schuldhulpverlening" binnen Sociaal Domein). Per cluster:
+
+#### 2.x «Naam thema»
+
+**Actueel beleid:**
+- Beschrijf in 2–5 zinnen wat het huidige beleid is op dit thema
+- Elke zin met bronverwijzing(en)
+
+**Chronologie:**
+- Geef een tijdlijn van relevante besluiten (oudste eerst)
+- Markeer waar een besluit een eerder besluit WIJZIGT of VERVANGT
+
+**Aandachtspunten:**
+- Eventuele tegenstrijdigheden tussen besluiten
+- Besluiten met een einddatum of evaluatiemoment
+- Zaken die nog in uitvoering zijn (als dat uit de tekst blijkt)
+
+### 3. BELEIDSWIJZIGINGEN EN OPVOLGING
+- Overzicht van besluiten die eerdere besluiten wijzigen of vervangen
+- Expliciet benoemen welk besluit welk eerder besluit raakt
+
+### 4. LACUNES EN KANTTEKENINGEN
+- Onderwerpen die je op basis van gangbaar gemeentelijk beleid zou verwachten
+  maar die NIET in de besluiten voorkomen → benoem dit als observatie,
+  NIET als feit
+- Besluiten waarvan de tekst onvolledig of onduidelijk was
+- Besluiten die niet eenduidig in één cluster passen
+
+### 5. BRONNENLIJST
+- Volledige lijst van alle besluiten die in de briefing zijn gebruikt
+- Formaat: «datum» | «naam besluit» | «type (raad/college)» | «PDF-bron»
+
+═══════════════════════════════════════════════════════════════
+STIJL EN TAAL
+═══════════════════════════════════════════════════════════════
+
+- Schrijf in het Nederlands
+- Formeel maar toegankelijk — geschikt voor een bestuurder, niet voor een jurist
+- Gebruik actieve zinnen: "De raad heeft besloten…", niet "Er is besloten…"
+- Vermijd jargon dat niet in de bronteksten voorkomt
+- Wees precies: "verlenging met één jaar" is iets anders dan "structurele voortzetting"
+- Wees kort: de briefing moet in 15 minuten leesbaar zijn
+
+═══════════════════════════════════════════════════════════════
+ZELFVERIFICATIE — VOER DIT UIT VOOR JE ANTWOORDT
+═══════════════════════════════════════════════════════════════
+
+Voordat je de briefing oplevert, controleer:
+
+☐ Heeft ELKE feitelijke zin een bronverwijzing?
+☐ Komt ELKE genoemde bronverwijzing voor in de aangeleverde data?
+☐ Heb ik NERGENS informatie toegevoegd die niet in de besluitteksten staat?
+☐ Heb ik tegenstrijdigheden of opvolging van besluiten gesignaleerd?
+☐ Heb ik lacunes en onduidelijkheden expliciet benoemd?
+☐ Is de bronnenlijst compleet?
+
+Als je op een van deze punten twijfelt, meld dit aan het einde van de briefing
+onder het kopje "⚠ Opmerkingen bij deze synthese".
+
+
+═══════════════════════════════════════════════════════════════
+
+GEBRUIKERSPROMPT
+
+═══════════════════════════════════════════════════════════════
+
+
+Hieronder vind je alle besluiten van de gemeente Wassenaar binnen het portefeuille-thema
+"Cultuur & Welzijn". De besluiten omvatten zowel raadsbesluiten (2019–2025) als 
+collegebesluiten (2022–2025) uit de volledige huidige collegeperiode.
+
+Aanvullend is het coalitieakkoord 2022–2026 "Samen voor Wassenaar" bijgevoegd 
+als referentiekader.
+
+Stel een beleidsbriefing op volgens de instructies in de systeemprompt.
+
+
+═══════════════════════════════════════════════════════════════
+
+COALITIEAKKOORD 2022–2026 — SAMEN VOOR WASSENAAR
+
+═══════════════════════════════════════════════════════════════
+
+SAMEN VOOR WASSENAAR
+KOERSVAST, OPEN EN BETROKKEN
+
+2
+SAMEN VOOR WASSENAAR
+KOERSVAST, OPEN EN BETROKKEN
+INHOUDSOPGAVE
+Woord vooraf 3
+Bestuur en Middelen 4
+Mens en Maatschappij 7
+Fysieke Leefomgeving 9
+Portefeuilleverdeling college b&w 14
+
+Woord vooraf
+We staan voor grote maatschappelijke Wassenaar wil een inclusieve, groene en
+opgaven, onder meer op het gebied van financieel gezonde gemeente zijn waar
+klimaat en duurzaamheid, voldoende iedereen prettig kan leven, wonen en
+betaalbare woningen, vergrijzing, werken. Een plek waar onze kinderen
+toegang tot zorg en (verkeers)veiligheid. gezond en veilig kunnen opgroeien en
+Op lokaal niveau verlangen inwoners en waar onze ouderen langer vitaal kunnen
+ondernemers antwoorden op hun blijven.
+vragen, ondersteuning bij maatschappe­
+lijke initiatieven en hulp bij problemen. De coalitie streeft naar rust en even­
+Zij vragen om een betrokken gemeente wicht in het bestuur. Zorgvuldige en
+die luistert, duidelijk en betrouwbaar is. transparante besluitvorming vormt het
+Een gemeente die koers houdt in uitgangspunt van ons handelen. Het
+onstuimige tijden. politieke debat en de gesprekken met
+inwoners, ondernemers en maat­
+Wij werken samen vanuit onze idealen schappelijke organisaties worden
+en ambities; we vinden elkaar in onze gevoerd op basis van wederzijds respect.
+overtuiging van wat goed is voor We gaan in gesprek over dit coalitie­
+Wassenaar. De partijen VVD, CDA, D66, akkoord en de keuzes die we hierin
+DLW en PvdA presenteren een coalitie­ hebben gemaakt. Het nieuwe college
+akkoord waarin we zoveel mogelijk treedt verbindend op; we doen het
+rekening houden met de behoeften van immers samen voor Wassenaar.
+alle Wassenaarders.
+3
+
+Bestuur en Middelen
+Financiën en belastingen We sparen voldoende voor de toekomst
+De gemeente houdt de financiën op door afschrijvingen op te nemen in de
+orde met een structureel sluitende begroting. Ook de opbrengsten van de
+begroting. verkoop van gemeentelijke onroerende
+zaken worden toegevoegd aan de
+In 2024 en 2025 komt er in beginsel geen algemene reserve. Bestemmingsreserves
+extra verhoging van de onroerendezaak­ worden beperkt.
+belasting (ozb) bovenop de inflatie­
+correctie, tenzij dit echt nodig is voor Economie
+het voorzieningenniveau voor inwoners. We werken aan een economische visie
+De toeristenbelasting wordt deze in samenspraak met ondernemers die in
+raads periode niet verhoogd; na een jaar 2024 gereed moet zijn. Hierin wordt
+evalueren we de effectieve inzet van onder meer opgenomen het behoud en
+deze belasting. toekomstbestendig maken van de
+bestaande bedrijventerreinen en
+In de Kadernota 2024 volgt de uitwer­ aansluiting gezocht bij de regionale
+king voor wat betreft ons ambitie­ strategie werklocaties van de Metro­
+niveau. Op basis hiervan maken we poolregio Rotterdam Den Haag (MRDH).
+keuzes binnen het beschikbare
+financiële kader. Ambtelijke organisatie
+De ingeslagen weg na de ontvlechting
+We overwegen het lenen van geld alleen van de Werkorganisatie Duivenvoorde
+als dit noodzakelijk is voor (project­) (de voormalige ambtelijke samen wer­
+investeringen. De gemeente gaat niet king tussen Voorschoten en Wassenaar)
+lenen om lopende uitgaven te dekken. wordt voortgezet. We werken aan de
+We gaan daarnaast actief op zoek naar verdere ontwikkeling van de jonge
+44 subsidies, fondsen en mogelijkheden ambtelijke organisatie, zodat maat ­
+voor cofinanciering van projecten, zoals schappelijke vraagstukken effectief
+de restauratie van De Paauw en het kunnen worden aangepakt. Daarbij is
+revitaliseren van onze dorpskern. het van belang voldoende deskundig
+
+personeel in dienst te hebben en een Gemeenschappelijke regelingen
+aantrekkelijke werkgever te zijn. De Veel maatschappelijke uitdagingen
+coalitiepartners zullen de voortgang vragen om samenwerking met partners
+binnen de ambtelijke organisatie in de regio. Dat vraagt een open
+jaarlijks evalueren. houding om gezamenlijk deze uitda­
+gingen aan te kunnen gaan. Onze
+Servicegerichtheid en gemeente is een actieve, betrouwbare 5
+dienstbaarheid partner in de regio.
+De gemeente behartigt het algemeen
+belang en heeft oog voor het individu. In We zorgen voor een kundige, construc­
+Wassenaar voelen inwoners en onder­ tieve vertegenwoordiging van het
+nemers zich geholpen en gesteund door Wassenaarse belang. We willen hier
+de gemeente dankzij toegankelijke en maximale impact behalen en stellen
+efficiënte dienstverlening. De communi­ hiervoor voldoende ambtelijke capaciteit
+catie tussen gemeente, inwoners en beschikbaar.
+ondernemers is transparant, duidelijk en
+getuigt van wederzijds respect. Openbare orde en veiligheid
+De veiligheidsprioriteiten krijgen een
+Gemeentewinkel plaats in het nieuw op te stellen
+We realiseren een toegankelijke, laag­ integraal veiligheidsbeleid.
+drempelige locatie voor de Gemeente­
+winkel, waar inwoners en ondernemers De openbare orde wordt gehandhaafd
+terecht kunnen voor gemeentelijke door de politie, inspecteurs openbare
+dienstverlening, zoals een paspoort. Ook ruimte en buitengewoon opsporings­
+zijn ze hier welkom met vragen, bijvoor­ ambtenaren (boa’s). Zij houden toezicht
+beeld over mogelijkheden om te en treden waar nodig op tegen mis­
+verduurz amen. standen en overtredingen.
+
+Om in te spelen op de thema’s als Evenementen en vergunningen
+‘omgaan met onbegrepen gedrag’ en Wassenaar is een dorp waar veel
+meervoudige sociale problematiek is het evenementen worden georganiseerd.
+belangrijk om zorg en veiligheid in een Evenementen zorgen voor verbinding en
+lokale kamer samen te brengen. Dit samenhang. We werken aan een nieuw
+geeft de mogelijkheid om naargelang de evenementenbeleid om duidelijke kaders
+situatie snel te schakelen en mensen te bieden. We denken mee om
+persoonsgericht te helpen. evenementen mogelijk te maken.
+Om de gemeentelijke handhaving goed Inwonersparticipatie
+te organiseren, stellen we duidelijke In Wassenaar doet iedereen mee, van
+66 prioriteiten en ontwikkelen we een visie jong tot oud. We schetsen heldere
+en een aanpak. Ook bezien we de kaders voor inwonersparticipatie langs
+benodigde handhavingscapaciteit. de lijnen van de verordening en het
+participatiekompas.
+Politiebureau
+We willen het politiebureau behouden Vergrijzing wordt een groot thema in
+voor het dorp. Wassenaar. We zullen dit oppakken
+samen met de ouderen en met hen
+Ondermijning komen tot een plan voor ouderen­
+De inzet op ondermijning is de participatie.
+afgelopen jaren geïntensiveerd: zo is er
+inmiddels een vaste formatieplaats voor Er wonen veel internationals in
+een onder mijningsregisseur in het team. Wassenaar. Dit is een flinke groep
+De regisseur houdt zich bezig met inwoners die ook kan meedraaien in het
+signalen rond thema’s als (vastgoed) verenigings leven of zich kan inzetten als
+fraude, drugs en mensenhandel. De vrijwilliger. In oktober 2021 is de start­
+regisseur zet de komende jaren vooral in notitie ‘Internationale Wassenaarders’
+op bewust wording onder inwoners en besproken en vastgesteld.
+ondernemers en hoe zij vormen van
+ondermijning kunnen melden.
+
+Mens en Maatschappij
+Sociaal domein mering van activiteiten. We koesteren
+In Wassenaar behouden we goede en ondersteunen een sterk verenigings­
+welzijns­ en zorgvoorzieningen. We leven en de vrijwilligers. We zorgen voor
+geven uitvoering aan bestaand beleid. een gerichte spreiding van sociale
+De gemeente, inwoners en maat­ activiteiten en vaste ontmoetings centra
+schappel ijke instellingen onders teunen in verschillende buurten van Wassenaar.
+elkaar. Een nauwe en efficiënte samen­
+werking is daarvoor een voor waarde. In 2023 herijken we het bestaand beleid
+en stellen we de kaders op voor de
+Om de kwaliteit en toegankelijkheid van komende jaren. Verder leggen we
+zorg te garanderen, dient deze in accenten op preventie, het wegwerken
+financieel en maatschappelijk opzicht en van wachtlijsten, aandacht voor mantel­
+qua personele bezetting houdbaar te zorg en respijtzorg (bijvoorbeeld met
+zijn. Dit vraagt om scherpe keuzes in het Odensecafé), dementie vriendelijke
+prioritering, waarbij de mens centraal gemeente en armoede bestrijding. Ten
+staat. Daarbij wordt goed gekeken naar aanzien van ons armoedebeleid
+de hulpvraag en situatie per individu. evalueren we het maatwerkfonds en bij
+We handelen vanuit vertrouwen en gebleken toegevoegde waarde, zien we
+respect, normaliseren zorg volgens toe op een meer permanent karakter.
+landelijke richtlijnen en maken waar
+mogelijk gebruik van landelijke finan­ Sociaal Team Wassenaar
+ciering en fondsen. Het Sociaal Team Wassenaar heeft een
+spilfunctie als het gaat om samen­
+We zetten in op het versterken en werking in het sociaal domein. We
+verbinden van het maatschappelijk streven naar een sterk team, waarin
+middenveld. Dit doen we onder meer via voor alle betrokkenen een duidelijke rol
+een breed scala aan bestaande en is weggelegd. We beginnen zo snel 7
+nieuwe activiteiten; door multifunctio­ mogelijk aan het vergroten van de
+neel gebruik van accommodaties en het bekendheid en bereikbaarheid van het
+gezamenlijk optrekken in de program­ team (1 loket, 1 telefoonnummer).
+
+Er is aandacht voor centrale huisvesting meerjarige contracten. We kijken altijd
+van het Sociaal Team Wassenaar. Samen naar de beste financieringsvorm voor
+met andere partijen inventariseren we zowel de ketenpartners als de
+wat nodig is en maken een realistische gemeente.
+begroting van kosten die nodig zijn voor
+het versterken van het preventief veld. Inclusie
+De inclusieagenda wordt opgesteld, in
+Jeugd- en jongerenbeleid 2023 starten we met de uitvoering van
+Er wordt gewerkt aan jeugd­ en concrete acties.
+jongeren beleid, daarbij gebruiken we de
+inbreng die wordt opgehaald in sessies Sport
+met jongeren en hun ouders. Sporten is belangrijk voor de lichame­
+lijke en geestelijke gezondheid van alle
+We onderzoeken de mogelijkheden voor inwoners en is daarnaast een sterk
+een Jeugd­ of Jongerenraad en andere wapen in de strijd tegen eenzaamheid.
+vormen van betrokkenheid van de jeugd. We focussen op verbinding en samen­
+Samen met de jongeren in ons dorp hang door het stimuleren van sport­ en
+komen we tot een plan voor Jeugd­ cultuurparticipatie en waar nodig extra
+participatie. te investeren in activiteiten.
+Naast het bestaande ambulante jeugd­ Er wordt een sportvisie opgesteld en we
+en jongerenwerk gaan we op zoek naar herzien het subsidiebeleid. We voeren
+ontmoetingsplekken waar de jeugd het Sport­ en Preventieakkoord uit. We
+naartoe kan om tijd met elkaar door te geven sport een stevige plaats in de
+brengen. inclusieagenda en het preventiebeleid.
+88 We zetten in op betere voorlichting over Gezondheidszorg
+alcohol en drugs, mentale gezondheid, De gemeente onderkent het maat­
+seksualiteit, voeding en sport; scholen schappelijk belang van gezondheid en
+zijn hierin een belangrijke partner. zet in op voldoende beschikbare huis­
+artsenzorg in Wassenaar. Het initiatief
+Subsidie- en inkoopbeleid van de Wassenaarse huisartsen om een
+We zorgen voor een zuivere lijn in het gezondheidscentrum te vestigen in de
+toekennen van subsidies dan wel inkoop voormalige Sint Jozefkerk bezien we
+en onderzoeken mogelijkheden om vanuit een positieve grondhouding.
+aanvragers meer zekerheid te bieden via
+
+Fysieke Leefomgeving
+schaps tafel Duin, Horst en Weide en het
+Openbare ruimte Nationaal Park Hollandse Duinen,
+In de bebouwde omgeving gaan we benutten we als middel om onze
+komende jaren naar onderhouds­ ruimtelijke ambities te bereiken.
+niveau B. Dit betekent dat de openbare
+ruimte schoon, heel en veilig is met Beschermd dorpsgezicht
+minimale oneffenheden. Per gebied We koesteren ons beschermd dorps­
+doen we wat nodig is; dit vraagt om gezicht. Het huidige beleid is afdoende
+maatwerk, prioritering en fasering. We om enerzijds ons dorpsgezicht te
+maken een inhaalslag waar het gaat om behouden en anderzijds ons erfgoed 9
+bestrating in de openbare ruimte. verantwoord te verduurzamen.
+We stellen een beheervisie op, waaruit Woningbouw en bouwlocaties
+instandhoudingsplannen volgen. Hierin We maken vanuit de huidige Woonvisie
+wordt ook aandacht besteed aan het tempo met de uitvoering van vier
+onderhoudsniveau van de landgoederen. projecten Den Deijl, Gemeentewerf,
+De beheervisie wordt in 2023 voorgelegd Kerkehout en ANWB. In de Woonzorg­
+aan de raad. visie (gereed in 2024) worden de
+ontwikkelingen van deze bouwplannen
+Natuur en groen meegenomen.
+Wassenaar wil het groene en landelijke
+karakter van de gebieden behouden. Er We realiseren 30% sociale huur op de
+komt een integrale visie op hoe we de toekomstige bouwlocaties om te
+meest kwetsbare natuurgebieden, zoals voldoen aan de landelijke streefwaarde.
+Meijendel, gaan ontlasten. Daarbij Er is daarnaast voldoende aandacht voor
+bezien we deze gebieden in onderlinge koopwoningen in het middensegment
+verbinding met elkaar. We zetten in op en het stimuleren van doorstroming. De
+spreiding van recreatie binnen de gemeente staat positief tegenover
+verschil lende natuurgebieden en we flexwoningen, mits inpasbaar in de
+beheersen de recreatiedruk. De samen­ omgeving.
+werkingsverbanden, zoals de land­
+
+Bij het project Gemeentewerf, inclusief voordeel bestaat om een gebouw te
+het voor woningbouw geschikt te behouden voor de toekomst. De
+maken gemeentekantoor, gaan we uit opbrengsten van de verkoop worden
+van minimaal 30% sociale huur, toegevoegd aan de algemene reserve.
+40% middenhuur en ­koop en voor het
+overige het hogere segment. Eerst Monumenten en cultureel
+wordt de huidige gemeentewerf erfgoed
+verplaatst naar een nieuwe locatie We doen er alles aan om ons cultureel
+1100 (in het eerste kwartaal van 2024). De erfgoed te behouden en toekomst­
+vervuilde bodem wordt gesaneerd. bestendig te maken door adequaat
+onderhoud en toezicht. We helpen
+Het burgerinitiatief tot zelfstandige eigenaren bij de verduurzaming van
+seniorenwoningen met zorgfaciliteiten monumenten door te informeren,
+wordt zo snel mogelijk gerealiseerd. stimuleren en faciliteren. Wij bevorderen
+Over andere zorgfaciliteiten maakt de passende herbestemmingen, die
+gemeente prestatieafspraken met de aansluiten bij de mogelijkheden die het
+woningbouwcorporaties. monument biedt.
+Door de samenvoeging van de Sint Integraal Huisvestingsplan
+Jozefschool en Sint Jan Baptistschool Onderwijs
+komen beide locaties vrij. Op deze Het Integraal Huisvestingsplan wordt
+locaties worden appartementen herijkt (2023). De huidige norm voor
+gebouwd, met een evenwichtige schoolgebouwen is bijna energie­
+verde ling in sociale huur en middenhuur neutraal (BENG). We onderzoeken wat
+en ­koop. de meerkosten zijn om bij nieuwbouw
+energieneutraal (ENG) te zijn en zullen
+Gemeentelijk vastgoed hierin per project een keuze maken. We
+De gemeente maakt tempo met het gaan in gesprek met scholen over
+verkopen van onroerende zaken, tenzij duurzaamheid en ventilatie.
+er een duidelijk maatschappelijk
+
+We zoeken naar een geschikte locatie De Warenar blijft eigendom van de
+voor de gezamenlijke nieuwbouw voor gemeente, omdat is gebleken dat
+de Sint Jozefschool en Sint Jan Baptist­ verkoop niet reëel is. We investeren
+school in een Integraal Kindcentrum. alleen in de Warenar als de langdurige
+erfpacht kan worden verlengd.
+De Paauw
+Raadhuis De Paauw krijgt de functie van We onderzoeken of het haalbaar is
+gemeentelijk bestuurscentrum. Daar­ verschillende functies te combineren,
+voor wordt het rijksmonument zo snel zoals een cultuurhuis met een buurt­
+mogelijk op passende wijze gerestau­ functie en museum (bijvoorbeeld een
+reerd en ingericht. We proberen dorpsmuseum en/of het brand­
+hiervoor financiering te verkrijgen via weermuseum). Het doel is de theater­
+subsidies, fondsen en/of crowdfunding. functie te behouden.
+We gaan uit van het financiële kader
+zoals eerder door de gemeenteraad is Duurzaamheid
+vastgesteld en maken de kosten voor dit We gaan inwoners actief informeren,
+project zo inzichtelijk mogelijk. faciliteren en stimuleren om zelf te
+verduurzamen.
+Op korte termijn moet er een integraal
+plan liggen voor de locatiekeuze van de De gemeente geeft zelf het goede
+huisvesting van de overige ambtenaren voorbeeld en neemt daarom maat­
+en de gemeentewinkel. In 2023 hakken regelen om te verduurzamen. Deze
+we knopen door. maatregelen moeten zich binnen
+twintig jaar terugverdienen. Onze
+De Warenar duurzaamheidsdoelstellingen moeten
+De Warenar zorgt voor verbinding. Wij ook meetbaar zijn; hiervoor wordt de
+vinden het daarom belangrijk dat de CO2­ladder gebruikt. 11
+culturele en sociale functie van de
+Warenar behouden blijft voor de
+Wassenaarders.
+
+Avalex en milieustraat ten niet worden toegestaan. Bij het
+We onderzoeken welke mogelijkheden opstellen van de visie betrekken we
+er zijn om het afvalbrengstation op ondern emers.
+termijn te verplaatsen. Uiteraard De toegankelijkheid van het strand
+behouden we de service voor de wordt geoptimaliseerd; denk aan
+inwoners van Wassenaar. Er komt een leuningen bij de trappen en verharding
+concreet plan om restafval te reduceren. van het pad naar zee. Er komen meer
+faciliteiten, zoals een rolstoelvriendelijke
+Levendige dorpskern openbare wc en een bewaakte fietsen­
+Een levendige dorpskern draagt bij aan stalling met elektrische laadpalen. We
+economische activiteit en sociale zetten in op een OV­verbinding naar het
+verbinding. De gemeente draagt bij aan strand.
+een gezellig dorpshart met mooie
+winkels en goede voorzieningen. Verkeer
+1122 Verkeersveiligheid en leefbaarheid zijn
+De dorpskern moet voor iedereen belangrijke uitgangspunten. We hebben
+toegankelijk zijn (inclusief); we zorgen de ambitie om bijna overal in de
+voor een rolstoeltoegankelijke openbare bebouwde kom de snelheid van 30 km/u
+wc. We zorgen voor een smaakvolle te behouden of in te voeren. Daarbij zijn
+inrichting van de openbare ruimte met we pragmatisch met betrekking tot de
+aandacht voor het beschermd inrichting op korte termijn. Bij groot
+dorpsgezicht. onderhoud gaan we herinrichten,
+daarbij zijn de richtlijnen van CROW van
+We beginnen in 2023 met de vernieu­ belang. Een aantal gebiedsontsluitende
+wing van de dorpskern gebaseerd op het wegen (bijvoorbeeld Stoeplaan, Groot
+beeldkwaliteitsplan, brancheringsp lan Haesebroekseweg tot aan Papegaaien­
+en stedenbouwkundig plan. De planning laan, de Wittenburgerweg) blijft
+dient realistisch te zijn qua uitvoering 50 km/u; hier kan verkeer (inclusief
+en financiering. Mogelijkheden tot openbaar vervoer en hulpdiensten)
+co­financiering en fondsenwerving doorstromen zonder dat dit gevolgen
+moeten worden onderzocht. heeft voor de leefbaarheid en verkeers­
+veiligheid.
+Strand
+We ontwikkelen een strandvisie gericht We stimuleren fietsverkeer en bevor­
+op behoud van het huidige karakter als deren fietsveiligheid bij scholen en
+familiestrand, waarin jaarrond­activitei­ sport verenigingen, bijvoorbeeld d.m.v.
+
+schoolzones of schoolstraten. Op De verkeerssituatie op het Rozenplein is
+gebiedsontsluitende wegen worden moeilijk oplosbaar. Naast onvoldoende
+vrijliggende fietspaden behouden of doorstroming is ook de veilig heids­
+neergelegd. Waar vrijliggende fiets­ situatie voor verbetering vat baar. We
+paden liggen, blijven die gehandhaafd. wachten het lopende onder zoek af.
+We gaan in gesprek met de provincie Geluidshinder vliegverkeer
+over de afwaardering van de N441 naar
+overal 60 km/u. We blijven in gesprek Wassenaar monitort geluidoverlast
+over de snelle realisatie van een samen met de Omgevingsdienst West­
+verkeers doseerlicht om sluipverkeer Holland (ODWH), door het inrichten van
+tegen te gaan. Ook de N44 wordt op gezamenlijke metingen. We agenderen
+termijn afgewaardeerd, zodat er een de toenemende overlast van laag­
+groenverbinding ontstaat van het strand vliegend verkeer bij de relevante over­
+tot aan het Groene Hart. Hiervoor moet leggen en belanghebbenden.
+wel een oplossing worden gevonden
+voor het verkeer, door middel van een Ruimte voor zweefvliegen
+tunnel en/of hoogfrequent, hoog­ De gemeente zoekt uit wat de mogelijk­
+waardig openbaar vervoer. heden in Wassenaar zijn voor zweef­
+vliegen zonder belasting van natuur en
+milieu.
+13
+
+Portefeuilleverdeling college b&w
+Burgemeester
+• Veiligheid
+• Handhaving
+• Communicatie
+• Internationale Wassenaarders
+• Regio
+• Ambtelijke organisatie
+• Burgerzaken/KCC/Dienstverlening
+• Ambassadeur Wassenaar
+• Inburgering, statushouders, asielzoekers
+Wethouder Financiën, Economie en Sport
+FINANCIËN
+• Gemeentelijk vastgoed
+• Belastingen
+• ICT
+• Avalex (bestuur)
+• Gemeenschappelijke regelingen (bestuur)
+• Projectmanagement
+• Project De Paauw
+• Project Gemeentewerf (bouwrijp maken)
+• Project gemeentelijke sporthal
+• Project Schulpwei
+1144 ECONOMISCHE ZAKEN
+• Project dorpskern
+• Metropoolregio Rotterdam Den Haag (economisch vestigingsklimaat)
+SPORT
+Wethouder Ruimte, Duurzaamheid en Mobiliteit
+RUIMTELIJKE ORDENING
+• Strand en toerisme
+• Omgevingswet
+• Structuur­ en omgevingsvisie
+• Visie Duindigt
+• Project Duindigt
+• Duin, Horst en Weide
+• Groene Zone/Valkenhorst
+
+DUURZAAMHEID
+• Klimaat en duurzaamheid
+• Agrarische Zaken
+• Dierenwelzijn
+• Riolering
+• Afval
+• Energietransitie
+MOBILITEIT
+• Verkeer en wegen
+• Openbaar vervoer
+• Metropoolregio Rotterdam Den Haag (vervoersautoriteit)
+• Project N44
+Wethouder Sociaal, Wonen en Onderwijs
+SOCIAAL DOMEIN
+• Jeugdzorg
+• Wet maatschappelijke ondersteuning (Wmo)
+• Ouderenbeleid
+• Werk en inkomen (Participatiewet)
+WONEN
+• Bouwen en wonen, inclusief:
+• Den Deijl
+• Gemeentewerf 15
+• ANWB
+• Kerkehout
+• Volkshuisvesting
+• Woonzorgvisie
+• Onderwijs
+• Wassenaars onderwijs en Schooladviesdienst (SAD)
+• Integraal Huisvestingsplan (IHP)
+Wethouder Cultuur en Welzijn
+CULTUUR
+• Erfgoedbeleid/cultureel erfgoed
+• Project de Warenar
+WELZIJN
+• Subsidiebeleid
+• Vrijwilligerswerk
+• Welzijn en wijken
+• Inwonersparticipatie
+• Volksgezondheid (GGD)
+• Inclusie en anti­discriminatie
+
+COLOFON
+Publicatiedatum:
+11 maart 2023
+www.wassenaar.nl
+
+
+═══════════════════════════════════════════════════════════════
+
+RAADSBESLUITEN — CULTUUR & WELZIJN (4 besluiten)
+
+═══════════════════════════════════════════════════════════════
+
+---
+Besluit: Zienswijze uitstel evaluatie GR GGD en Veilig Thuis Haaglanden
+Datum: 2025-04-01
+Type: raadsbesluit
+Domein: Cultuur & Welzijn
+Onderwerp: Volksgezondheid
+
+Besluittekst (kort):
+Een zienswijze in te dienen over het voorstel tot uitstel van evaluatie van de Gemeenschappelijke Regeling GGD en Veilig Thuis Haaglanden, bij het bestuur van GGD en Veilig Thuis Haaglanden, zoals verwoord in de bij dit voorstel behorende brief.
+---
+
+---
+Besluit: Haalbaarheidsonderzoek herbestemming de Warenar
+Datum: 2025-09-22
+Type: raadsbesluit
+Domein: Cultuur & Welzijn
+Onderwerp: Warenar
+
+Besluittekst (kort):
+1. Te kiezen voor herbestemming, onderhoud, renovatie en verduurzaming van de Warenar conform voorkeursvariant 2, om te komen tot de meest optimale en toekomstbestendige herontwikkeling van de Warenar. 2. Hiertoe een investeringskrediet beschikbaar te stellen van totaal € 5.000.000 voor de herbestemming, onderhoud, renovatie en verduurzaming van de Warenar op basis van de uitkomsten van het haalbaarheidsonderzoek. 3. De totale extra exploitatielasten voor variant 2 worden vanaf 2028, geraamd op € 22.000 per jaar (prijspeil 2024), inclusief € 17.700 aan vervroegde erfpachtcanon, op te nemen in de meerjarenbegroting 2026-2029.
+---
+
+---
+Besluit: Zienswijze op definitieve begroting 2026 en definitieve begrotingswijziging 2025 GR GGD Veilig Thuis Haaglanden
+Datum: 2025-11-25
+Type: raadsbesluit
+Domein: Cultuur & Welzijn
+Onderwerp: Volksgezondheid
+
+Besluittekst (kort):
+1. Een zienswijze naar voren te brengen op de definitieve begroting 2026 en definitieve begrotingswijziging 2025 bij het dagelijks bestuur van de GR GGD en Veilig Thuis Haaglanden, zoals verwoord in de bij dit besluit behorende brief, met dien verstande dat in de zienswijzebrief de zin op bladzijde 2, onder het kopje ‘GGD’, 
+luidende:
+“Wij begrijpen de risico’s voor de bedrijfsvoering, gezien het belang van een solide publieke gezondheid in Haaglanden, maar betreuren dat er niet is besloten tot verdere bezuinigingen.”
+Wordt vervangen door:
+“Wij begrijpen de gemaakte keuzes gezien het belang van een solide publieke gezondheid in Haaglanden.”
+---
+
+---
+Besluit: Regiovisie Aanpak Huiselijk Geweld Haaglanden voor de periode 2026
+Datum: 2025-12-16
+Type: raadsbesluit
+Domein: Cultuur & Welzijn
+Onderwerp: Volksgezondheid
+
+Besluittekst (kort):
+1. De Regiovisie Aanpak Huiselijk Geweld Haaglanden voor de periode 2026 en verder vast te stellen, en daarmee in te stemmen met de drie regionale prioriteiten: a. Preventie en vroegsignalering (geweld zo vroeg mogelijk herkennen en voorkomen) b. Duurzaam herstel (met als doel de onveiligheid te stoppen in de gezinnen of huishoudens waar dit voorkomt) c. Sterkere samenwerking (tussen zorg- en strafpartners en gemeenten).
+---
+
+
+═══════════════════════════════════════════════════════════════
+
+COLLEGEBESLUITEN — CULTUUR & WELZIJN (198 besluiten)
+
+═══════════════════════════════════════════════════════════════
+
+---
+Besluit: De hardheidsclausule in artikel 15 van de Algemene subsidieverordening
+Datum: 2022-06-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_juni_2022.pdf
+
+Besluittekst (kort):
+Wassenaar 2020 (ASV) van toepassing te verklaren op de
+subsidieaanvraag van het Fonds;
+
+Volledige tekst:
+De hardheidsclausule in artikel 15 van de Algemene subsidieverordening
+Wassenaar 2020 (ASV) van toepassing te verklaren op de
+subsidieaanvraag van het Fonds;
+---
+
+---
+Besluit: Vaststellen subsidieplafonds 2023 Wassenaar
+Datum: 2022-06-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_juni_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen subsidieplafonds 2023 Wassenaar
+Besluit:
+---
+
+---
+Besluit: De hardheidsclausule in artikel 15 van de Algemene subsidieverordening
+Datum: 2022-06-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_juni_2022_0.pdf
+
+Besluittekst (kort):
+Wassenaar 2020 (ASV) van toepassing te verklaren op de
+subsidieaanvraag van het Fonds;
+
+Volledige tekst:
+De hardheidsclausule in artikel 15 van de Algemene subsidieverordening
+Wassenaar 2020 (ASV) van toepassing te verklaren op de
+subsidieaanvraag van het Fonds;
+---
+
+---
+Besluit: Vaststellen subsidieplafonds 2023 Wassenaar
+Datum: 2022-06-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_juni_2022_0.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen subsidieplafonds 2023 Wassenaar
+Besluit:
+---
+
+---
+Besluit: Voortgang Warenar
+Datum: 2022-06-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_juni_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+Kennis te nemen van bijgevoegde voortgangsrapportage project Warenar
+
+Volledige tekst:
+Voortgang Warenar
+Besluit:
+Kennis te nemen van bijgevoegde voortgangsrapportage project Warenar
+---
+
+---
+Besluit: Subsidieaanvraag update NGE-risicokaart 2022
+Datum: 2022-10-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_oktober_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen om vast te stellen dat € 13.950,00 aan kosten zijn
+gemaakt voor een update aan de NGE-risicokaart
+
+Volledige tekst:
+Subsidieaanvraag update NGE-risicokaart 2022
+Besluit:
+De raad voor te stellen om vast te stellen dat € 13.950,00 aan kosten zijn
+gemaakt voor een update aan de NGE-risicokaart
+---
+
+---
+Besluit: Vaststellen subsidies preventief veld
+Datum: 2022-12-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_december_2022.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen subsidies preventief veld
+Besluit:
+---
+
+---
+Besluit: Het investeringskrediet voor de ecologische verbindingszone te verhogen
+Datum: 2023-01-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_januari_2023.pdf
+
+Besluittekst (kort):
+met de beschikte subsidie van de provincie Zuid-Holland van € 569.020;
+
+Volledige tekst:
+Het investeringskrediet voor de ecologische verbindingszone te verhogen
+met de beschikte subsidie van de provincie Zuid-Holland van € 569.020;
+---
+
+---
+Besluit: Subsidieaanvraag NGE-onderzoeken 2022
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieaanvraag NGE-onderzoeken 2022
+Besluit:
+---
+
+---
+Besluit: Benoeming van een lid van de commissie WCE met als deskundigheid
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad voor te stellen:
+De heer ir. F.A. van der Vecht te benoemen tot lid van de commissie Welstand
+en Cultureel Erfgoed (WCE), met ingang van 15 april 2023, voor een periode
+van drie jaar.
+
+Volledige tekst:
+Benoeming van een lid van de commissie WCE met als deskundigheid
+architectuur en stedenbouw
+Besluit:
+De gemeenteraad voor te stellen:
+De heer ir. F.A. van der Vecht te benoemen tot lid van de commissie Welstand
+en Cultureel Erfgoed (WCE), met ingang van 15 april 2023, voor een periode
+van drie jaar.
+---
+
+---
+Besluit: Raadsinformatiebrief Warenar
+Datum: 2023-02-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_februari_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren middels bijgevoegde informatiebrief over het
+calamiteitenonderhoud van de Warenar.
+
+Volledige tekst:
+Raadsinformatiebrief Warenar
+Besluit:
+De gemeenteraad te informeren middels bijgevoegde informatiebrief over het
+calamiteitenonderhoud van de Warenar.
+---
+
+---
+Besluit: Benoeming burgerlid WCE commissie
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad voor te stellen:
+Mevrouw drs. C. F. J. Vooren te benoemen tot lid van de commissie Welstand
+en Cultureel Erfgoed (WCE), met ingang van 15 april 2023, voor een periode
+van drie jaar.
+
+Volledige tekst:
+Benoeming burgerlid WCE commissie
+Besluit:
+De gemeenteraad voor te stellen:
+Mevrouw drs. C. F. J. Vooren te benoemen tot lid van de commissie Welstand
+en Cultureel Erfgoed (WCE), met ingang van 15 april 2023, voor een periode
+van drie jaar.
+---
+
+---
+Besluit: Benoeming burgerlid WCE commissie
+Datum: 2023-03-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_maart_2023_0.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad voor te stellen:
+Mevrouw drs. C. F. J. Vooren te benoemen tot lid van de commissie Welstand
+en Cultureel Erfgoed (WCE), met ingang van 15 april 2023, voor een periode
+van drie jaar.
+
+Volledige tekst:
+Benoeming burgerlid WCE commissie
+Besluit:
+De gemeenteraad voor te stellen:
+Mevrouw drs. C. F. J. Vooren te benoemen tot lid van de commissie Welstand
+en Cultureel Erfgoed (WCE), met ingang van 15 april 2023, voor een periode
+van drie jaar.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-03-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_maart_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Benoeming van een burgerlid van de commissie WCE
+Datum: 2023-03-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad voor te stellen:
+Mevrouw ir. M. van der Scheer te benoemen tot lid van de commissie
+Welstand en Cultureel Erfgoed (WCE), met ingang van 9 mei 2023, voor een
+periode van drie jaar.
+
+Volledige tekst:
+Benoeming van een burgerlid van de commissie WCE
+Besluit:
+De gemeenteraad voor te stellen:
+Mevrouw ir. M. van der Scheer te benoemen tot lid van de commissie
+Welstand en Cultureel Erfgoed (WCE), met ingang van 9 mei 2023, voor een
+periode van drie jaar.
+---
+
+---
+Besluit: Benoeming van een lid van de commissie WCE met als deskundigheid
+Datum: 2023-03-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad voor te stellen:
+Mevrouw drs. M.U. Stallenberg te benoemen tot lid van de commissie
+Welstand en Cultureel Erfgoed (WCE), met ingang van 9 mei 2023, voor een
+periode van drie jaar.
+
+Volledige tekst:
+Benoeming van een lid van de commissie WCE met als deskundigheid
+architectuurhistorie
+Besluit:
+De gemeenteraad voor te stellen:
+Mevrouw drs. M.U. Stallenberg te benoemen tot lid van de commissie
+Welstand en Cultureel Erfgoed (WCE), met ingang van 9 mei 2023, voor een
+periode van drie jaar.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-03-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_maart_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Huidige afwijzing van de subsidieaanvraag van Groot Deijleroord te
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Besluittekst (kort):
+heroverwegen en een subsidie van € 3.040 per jaar toe te kennen voor
+
+Volledige tekst:
+Huidige afwijzing van de subsidieaanvraag van Groot Deijleroord te
+heroverwegen en een subsidie van € 3.040 per jaar toe te kennen voor
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Bezwaar subsidiebeschikking Groot Deijleroord
+Datum: 2023-04-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_april_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Bezwaar subsidiebeschikking Groot Deijleroord
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-04-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_april_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-04-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_april_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-04-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_april_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-05-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_mei_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Raadsinformatiebrief Inventarisatie (on)mogelijkheden binnen het
+Datum: 2023-05-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_mei_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De gemeenteraad te informeren over de inventarisatie (on)mogelijkheden
+binnen het huidige subsidiebudget op taakveld 6.1 en 6.5, plus de nieuw
+aangevraagde, niet-toegekende subsidies, door de raadsinformatiebrief vanuit
+bijlage 1 van dit voorstel aan te bieden.
+
+Volledige tekst:
+Raadsinformatiebrief Inventarisatie (on)mogelijkheden binnen het
+huidige subsidiebudget op taakveld 6.1 en 6.5, plus de nieuw
+aangevraagde, niet toegekende subsidies (ter afdoening van
+toezegging 482, 483 en 485)
+Besluit:
+De gemeenteraad te informeren over de inventarisatie (on)mogelijkheden
+binnen het huidige subsidiebudget op taakveld 6.1 en 6.5, plus de nieuw
+aangevraagde, niet-toegekende subsidies, door de raadsinformatiebrief vanuit
+bijlage 1 van dit voorstel aan te bieden.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-05-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_mei_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: juli 2023 te doen toekomen aan het bestuur van GR GGD en veilig Thuis
+Datum: 2023-05-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_mei_2023.pdf
+
+Besluittekst (kort):
+Haaglanden.
+
+Volledige tekst:
+juli 2023 te doen toekomen aan het bestuur van GR GGD en veilig Thuis
+Haaglanden.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-05-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_mei_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-06-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_juni_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-06-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_juni_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Vaststellen subsidieplafonds 2024 Wassenaar
+Datum: 2023-06-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_juni_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen subsidieplafonds 2024 Wassenaar
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-07-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_juli_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-08-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_augustus_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-08-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_augustus_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-09-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_september_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-09-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Voornemen van museum Voorlinden tot het plaatsen van een
+Datum: 2023-09-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_september_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Voornemen van museum Voorlinden tot het plaatsen van een
+kunstwerk van de kunstenaar Anselm Kiefer
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-09-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_september_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-09-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_september_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-10-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_oktober_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-10-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Eerste technische aanpassing Erfgoedverordening Wassenaar 2016
+Datum: 2023-10-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_oktober_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+De raad voor te stellen de eerste technische aanpassing van de
+Erfgoedverordening Wassenaar 2016 vast te stellen.
+
+Volledige tekst:
+Eerste technische aanpassing Erfgoedverordening Wassenaar 2016
+Besluit:
+De raad voor te stellen de eerste technische aanpassing van de
+Erfgoedverordening Wassenaar 2016 vast te stellen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-10-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_oktober_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-10-31
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_31_oktober_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-11-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_november_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Subsidie te verstrekken conform het Subsidieplan Wassenaar 2021 - 2024,
+Datum: 2023-11-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_november_2023.pdf
+
+Besluittekst (kort):
+totdat het voor de betrokken subsidie aangepaste subsidieplafond is
+bereikt.
+
+Volledige tekst:
+Subsidie te verstrekken conform het Subsidieplan Wassenaar 2021 - 2024,
+totdat het voor de betrokken subsidie aangepaste subsidieplafond is
+bereikt.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-11-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_november_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Vaststellen aangepaste subsidieplafonds 2023 Wassenaar
+Datum: 2023-11-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen aangepaste subsidieplafonds 2023 Wassenaar
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-11-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_november_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Eerste technische aanpassing van de Erfgoedverordening Wassenaar
+Datum: 2023-11-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_november_2023.pdf
+
+Volledige tekst:
+Eerste technische aanpassing van de Erfgoedverordening Wassenaar
+---
+
+---
+Besluit: Besluit:
+Datum: 2023-11-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_november_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Eerste technische aanpassing van de Erfgoedverordening Wassenaar 2016 vast
+te stellen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-11-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_november_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-12-05
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_5_december_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Zienswijze op aanpassingen van gemeenschappelijke regeling GGD en
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+Pagina 3
+
+Volledige tekst:
+Zienswijze op aanpassingen van gemeenschappelijke regeling GGD en
+VT Haaglanden
+Besluit:
+Pagina 3
+---
+
+---
+Besluit: Vaststellen aangepaste subsidieplafonds 2024 Wassenaar
+Datum: 2023-12-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Vaststellen aangepaste subsidieplafonds 2024 Wassenaar
+Besluit:
+---
+
+---
+Besluit: Ondermandaatbesluit subsidieregeling IPS-trajecten
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Ondermandaatbesluit subsidieregeling IPS-trajecten
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Subsidieregeling SPUK GALA gemeente Wassenaar
+Datum: 2023-12-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_december_2023.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregeling SPUK GALA gemeente Wassenaar
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-01-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_januari_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-01-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_januari_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-02-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_februari_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-02-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_februari_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Raadsinformatiebrief - Haalbaarheidsonderzoek naar de
+Datum: 2024-03-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Pagina 2
+
+De gemeenteraad met bijgevoegde raadsinformatiebrief te informeren over de
+voortgang van het haalbaarheidsonderzoek naar de herbestemming van
+cultureel centrum de Warenar.
+
+Volledige tekst:
+Raadsinformatiebrief - Haalbaarheidsonderzoek naar de
+herbestemming van de Warenar
+Besluit:
+Pagina 2
+
+De gemeenteraad met bijgevoegde raadsinformatiebrief te informeren over de
+voortgang van het haalbaarheidsonderzoek naar de herbestemming van
+cultureel centrum de Warenar.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-03-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_maart_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Beantwoording schriftelijke vragen 304 ex artikel 36 Rvo raadslid
+Datum: 2024-03-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_maart_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording schriftelijke vragen 304 ex artikel 36 Rvo raadslid Paulides
+DLW inzake de Klankbordgroep Erfgoed vast te stellen.
+
+Volledige tekst:
+Beantwoording schriftelijke vragen 304 ex artikel 36 Rvo raadslid
+Paulides DLW inzake Klankbordgroep Erfgoed
+Besluit:
+Beantwoording schriftelijke vragen 304 ex artikel 36 Rvo raadslid Paulides
+DLW inzake de Klankbordgroep Erfgoed vast te stellen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-03-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_maart_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-04-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_april_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Raadsinformatiebrief Rapport GGD - luchtverontreiniging Haaglanden
+Datum: 2024-04-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+De raadsinformatiebrief Rapport GGD - luchtverontreiniging Haaglanden vast
+te stellen en aan de raad te sturen.
+
+Volledige tekst:
+Raadsinformatiebrief Rapport GGD - luchtverontreiniging Haaglanden
+Besluit:
+De raadsinformatiebrief Rapport GGD - luchtverontreiniging Haaglanden vast
+te stellen en aan de raad te sturen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-04-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_april_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Beantwoording 101 schriftelijke vragen ex art. 37 RvO van raadslid
+Datum: 2024-04-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Beantwoording 101 schriftelijke vragen ex art. 37 RvO van raadslid Hendrickx
+HartvoorWassenaar inzake bestuurscultuuronderzoek vast te stellen.
+
+Volledige tekst:
+Beantwoording 101 schriftelijke vragen ex art. 37 RvO van raadslid
+Hendrickx HartvoorWassenaar inzake bestuurscultuuronderzoek
+Besluit:
+Beantwoording 101 schriftelijke vragen ex art. 37 RvO van raadslid Hendrickx
+HartvoorWassenaar inzake bestuurscultuuronderzoek vast te stellen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-04-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_april_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Wijziging Gemeenschappelijke Regeling GGD en Veilig Thuis
+Datum: 2024-04-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Wijziging Gemeenschappelijke Regeling GGD en Veilig Thuis
+Haaglanden
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Subsidieregeling ondersteuning structurele activiteiten voor de
+Datum: 2024-04-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_april_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregeling ondersteuning structurele activiteiten voor de
+reguliere opvang op Duinrell
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: De overeenkomst tot ingebruikneming van het pand met Gro-Up
+Datum: 2024-04-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_april_2024.pdf
+
+Besluittekst (kort):
+Buurtwerk stilzwijgend te laten doorlopen tot en met 17 juni 2025 en
+alsdan te bezien of, in hoeverre en per wanneer de uitvoering van het
+project kostendekkende huur moet leiden tot een huur- of
+gebruiksovereenkomst per 18 juni 2025 met Gro-Up Buurtwerk in
+combinatie met flankerend beleid, zoals een aanpassing van de
+inkoopvoorwaarden of de toekenning van subsidie ter compensatie van
+accommodatiegebonden kosten.
+
+Volledige tekst:
+De overeenkomst tot ingebruikneming van het pand met Gro-Up
+Buurtwerk stilzwijgend te laten doorlopen tot en met 17 juni 2025 en
+alsdan te bezien of, in hoeverre en per wanneer de uitvoering van het
+project kostendekkende huur moet leiden tot een huur- of
+gebruiksovereenkomst per 18 juni 2025 met Gro-Up Buurtwerk in
+combinatie met flankerend beleid, zoals een aanpassing van de
+inkoopvoorwaarden of de toekenning van subsidie ter compensatie van
+accommodatiegebonden kosten.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-05-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_mei_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-05-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_mei_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-06-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_juni_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-06-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_juni_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor activiteiten ter bevordering van economie
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+en bedrijvigheid vast te stellen op € 35.960.
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor activiteiten ter bevordering van economie
+en bedrijvigheid vast te stellen op € 35.960.
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor SAD vast te stellen op € 478.969.
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor SAD vast te stellen op € 478.969.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Subsidieplafonds 2025
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieplafonds 2025
+Besluit:
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor Volksgezondheid vast te stellen op
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+€ 34.228.
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor Volksgezondheid vast te stellen op
+€ 34.228.
+---
+
+---
+Besluit: Voor zover het subsidieplan niet voorziet in verdeelregels, vast te stellen
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024.pdf
+
+Besluittekst (kort):
+dat het college een rangschikking aanbrengt in de aanvragen op basis van de
+mate waarin deze voldoen aan de in het subsidieplan genoemde criteria.
+
+Volledige tekst:
+Voor zover het subsidieplan niet voorziet in verdeelregels, vast te stellen
+dat het college een rangschikking aanbrengt in de aanvragen op basis van de
+mate waarin deze voldoen aan de in het subsidieplan genoemde criteria.
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor activiteiten ter bevordering van economie
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+en bedrijvigheid vast te stellen op € 35.960.
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor activiteiten ter bevordering van economie
+en bedrijvigheid vast te stellen op € 35.960.
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor SAD vast te stellen op € 478.969.
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor SAD vast te stellen op € 478.969.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Subsidieplafonds 2025
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieplafonds 2025
+Besluit:
+---
+
+---
+Besluit: Het subsidieplafond in 2025 voor Volksgezondheid vast te stellen op
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+€ 34.228.
+
+Volledige tekst:
+Het subsidieplafond in 2025 voor Volksgezondheid vast te stellen op
+€ 34.228.
+---
+
+---
+Besluit: Voor zover het subsidieplan niet voorziet in verdeelregels, vast te stellen
+Datum: 2024-06-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_juni_2024_0.pdf
+
+Besluittekst (kort):
+dat het college een rangschikking aanbrengt in de aanvragen op basis van de
+mate waarin deze voldoen aan de in het subsidieplan genoemde criteria.
+
+Volledige tekst:
+Voor zover het subsidieplan niet voorziet in verdeelregels, vast te stellen
+dat het college een rangschikking aanbrengt in de aanvragen op basis van de
+mate waarin deze voldoen aan de in het subsidieplan genoemde criteria.
+---
+
+---
+Besluit: Subsidiebeschikking project "Ecologische verbindingszone
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Wijzigingsverzoek subsidiebeschikking project “Ecologische verbindingszone
+Lentevreugd–De Horsten”.
+
+Volledige tekst:
+Subsidiebeschikking project "Ecologische verbindingszone
+Lentevreugd-De Horsten"
+Besluit:
+Wijzigingsverzoek subsidiebeschikking project “Ecologische verbindingszone
+Lentevreugd–De Horsten”.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: RVO-subsidieaanvraag voor de Dorpskern
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+RVO-subsidieaanvraag voor de Dorpskern
+Besluit:
+---
+
+---
+Besluit: 3. Het uitspreken van de intentie tot het inrichten van een bezoekerscentrum
+Datum: 2024-07-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_juli_2024.pdf
+
+Besluittekst (kort):
+en dit na toekenning van de RVO-subsidie voor te leggen aan de raad. Pagina
+
+Volledige tekst:
+3. Het uitspreken van de intentie tot het inrichten van een bezoekerscentrum
+en dit na toekenning van de RVO-subsidie voor te leggen aan de raad. Pagina
+---
+
+---
+Besluit: Deze financiële bijdrage uit het Cultuurbudget (taakveld 5.6) te
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+bekostigen.
+
+Volledige tekst:
+Deze financiële bijdrage uit het Cultuurbudget (taakveld 5.6) te
+bekostigen.
+---
+
+---
+Besluit: De subsidie aan de SKOW en de SAD per 1 augustus 2024 voor de rest
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+van het kalenderjaar 2024 uit te keren op basis van artikel 4:23 van de
+Algemene wet bestuursrecht.
+
+Volledige tekst:
+De subsidie aan de SKOW en de SAD per 1 augustus 2024 voor de rest
+van het kalenderjaar 2024 uit te keren op basis van artikel 4:23 van de
+Algemene wet bestuursrecht.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Onderhandelingsruimte erfpachtovereenkomst de Warenar
+Datum: 2024-07-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_juli_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Onderhandelingsruimte erfpachtovereenkomst de Warenar
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-08-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_augustus_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-08-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-08-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_augustus_2024_0.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-08-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_augustus_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Informatiebijeenkomsten subsidiebeleid
+Datum: 2024-09-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_september_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+Kennis te nemen van bijgaande presentatie voor de informatiebijeenkomsten
+t.b.v. het subsidiebeleid.
+
+Volledige tekst:
+Informatiebijeenkomsten subsidiebeleid
+Besluit:
+Kennis te nemen van bijgaande presentatie voor de informatiebijeenkomsten
+t.b.v. het subsidiebeleid.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-09-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_september_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-09-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_september_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-09-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_september_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-10-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_oktober_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-10-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_oktober_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: 4 Subsidiebeleid 2025 gemeente Wassenaar
+Datum: 2024-10-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_oktober_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+4 Subsidiebeleid 2025 gemeente Wassenaar
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-10-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_oktober_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-10-22
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_22_oktober_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-11-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_november_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: AANGEPAST Subsidiebeleid 2025 gemeente Wassenaar
+Datum: 2024-11-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+AANGEPAST Subsidiebeleid 2025 gemeente Wassenaar vast te stellen.
+
+Volledige tekst:
+AANGEPAST Subsidiebeleid 2025 gemeente Wassenaar
+Besluit:
+AANGEPAST Subsidiebeleid 2025 gemeente Wassenaar vast te stellen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-11-12
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_12_november_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-11-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_november_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: In te stemmen met de ‘Samenwerkingsafspraken i.h.k.v. de Versterking
+Datum: 2024-11-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_november_2024.pdf
+
+Besluittekst (kort):
+Pandemische Paraatheid Gemeente Wassenaar en GGD Haaglanden’.
+
+Volledige tekst:
+In te stemmen met de ‘Samenwerkingsafspraken i.h.k.v. de Versterking
+Pandemische Paraatheid Gemeente Wassenaar en GGD Haaglanden’.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-11-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_november_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Afspraken versterken pandemische paraatheid GGD en gemeente
+Datum: 2024-11-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_november_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Afspraken versterken pandemische paraatheid GGD en gemeente
+Wassenaar
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-12-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_december_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Definitieve subsidieplafonds 2025
+Datum: 2024-12-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_december_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Definitieve subsidieplafonds 2025
+Besluit:
+---
+
+---
+Besluit: Subsidieregeling 'Lokale Aanpak Isolatie Wassenaar'
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregeling 'Lokale Aanpak Isolatie Wassenaar'
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Toepassen hardheidsclausule op subsidieaanvraag 2025 Vereniging
+Datum: 2024-12-17
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_17_december_2024.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Toepassen hardheidsclausule op subsidieaanvraag 2025 Vereniging
+Wassenaarse Reddingsbrigade
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-01-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_januari_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Raadsinformatiebrief benoeming leden van de Klankbordgroep Erfgoed
+Datum: 2025-01-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_januari_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+Te benoemen voor een periode van vier jaren als lid van de Klankbordgroep
+Cultureel Erfgoed Wassenaar
+- De heer N.W. Conijn
+- De heer M. Doornbos
+- De heer L. Dubbelaar
+- Mevrouw M. van Rossem
+- Mevrouw M. Vrijenhoek-Zant
+
+Volledige tekst:
+Raadsinformatiebrief benoeming leden van de Klankbordgroep Erfgoed
+Wassenaar
+Besluit:
+Te benoemen voor een periode van vier jaren als lid van de Klankbordgroep
+Cultureel Erfgoed Wassenaar
+- De heer N.W. Conijn
+- De heer M. Doornbos
+- De heer L. Dubbelaar
+- Mevrouw M. van Rossem
+- Mevrouw M. Vrijenhoek-Zant
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-01-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_januari_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-01-21
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_21_januari_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Wethouder Koetsier te machtigen om ondergeschikte wijzigingen in de
+Datum: 2025-01-28
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Cultuur en Welzijn
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_januari_2025.pdf
+
+Besluittekst (kort):
+intentieovereenkomst aan te brengen.
+
+Volledige tekst:
+Wethouder Koetsier te machtigen om ondergeschikte wijzigingen in de
+intentieovereenkomst aan te brengen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-01-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_januari_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-02-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_februari_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-02-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_februari_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-02-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_februari_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-03-04
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_4_maart_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Top 5 punten in de openbare ruimte per wijk/buurt
+Datum: 2025-03-11
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Cultuur en Welzijn
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_maart_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+College neemt kennis van de top 5 per wijk in de openbare ruimte.
+
+Volledige tekst:
+Top 5 punten in de openbare ruimte per wijk/buurt
+Besluit:
+College neemt kennis van de top 5 per wijk in de openbare ruimte.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-03-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_maart_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Besparingen op subsidies vanaf 2026
+Datum: 2025-03-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_maart_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Besparingen op subsidies vanaf 2026
+Besluit:
+---
+
+---
+Besluit: Beantwoording 145 Schriftelijke vragen ex art. artikel 37 RvO van
+Datum: 2025-03-25
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Cultuur en Welzijn
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_maart_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Gankema
+van Lokaal Wassenaar d.d. 13 maart 2025 m.b.t. erfpachtcontracten op De
+Wassenaarse Slag vast te stellen
+
+Volledige tekst:
+Beantwoording 145 Schriftelijke vragen ex art. artikel 37 RvO van
+raadslid Gankema inzake pachtovereenkomsten tussen gemeente en
+Staatsbosbeheer inzake het strand en de Wassenaarse Slag
+Besluit:
+De beantwoording van de schriftelijke vragen gesteld door raadslid Gankema
+van Lokaal Wassenaar d.d. 13 maart 2025 m.b.t. erfpachtcontracten op De
+Wassenaarse Slag vast te stellen
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-03-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_maart_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Overdracht eigendom van de collectie Brandweermuseum Wassenaar
+Datum: 2025-03-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_maart_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Overdracht eigendom van de collectie Brandweermuseum Wassenaar
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-04-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_april_2025.pdf
+
+Besluittekst (kort):
+Pagina 1 van 3
+
+Volledige tekst:
+Cultuur en Welzijn
+Pagina 1 van 3
+---
+
+---
+Besluit: Raadsinformatiebrief toezeggingen inzake Inzetten subsidie-
+Datum: 2025-04-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Raadsinformatiebrief toezeggingen inzake Inzetten subsidie-
+opbrengsten voor optimalisering en verduurzaming De Paauw
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-04-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_april_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-04-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_april_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: De subsidieregeling Toeleiding naar werk en vrijwilligerswerk gemeente
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025.pdf
+
+Besluittekst (kort):
+Wassenaar 2025 en het bijbehorende subsidieplafond vast te stellen.
+
+Volledige tekst:
+De subsidieregeling Toeleiding naar werk en vrijwilligerswerk gemeente
+Wassenaar 2025 en het bijbehorende subsidieplafond vast te stellen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Subsidieregelingen 2026
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregelingen 2026
+Besluit:
+---
+
+---
+Besluit: De subsidieregeling Toeleiding naar werk en vrijwilligerswerk gemeente
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025_0.pdf
+
+Besluittekst (kort):
+Wassenaar 2025 en het bijbehorende subsidieplafond vast te stellen.
+
+Volledige tekst:
+De subsidieregeling Toeleiding naar werk en vrijwilligerswerk gemeente
+Wassenaar 2025 en het bijbehorende subsidieplafond vast te stellen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025_0.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Subsidieregelingen 2026
+Datum: 2025-04-29
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_29_april_2025_0.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregelingen 2026
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-05-06
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_6_mei_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-05-13
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_13_mei_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: GR GGD Veilig Thuis Haaglanden
+Datum: 2025-05-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_mei_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+GR GGD Veilig Thuis Haaglanden
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-05-20
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_20_mei_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-05-27
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_27_mei_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-06-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_juni_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Wethouder Zoutendijk als portefeuillehouder van cultuur en welzijn te
+Datum: 2025-06-10
+Type: collegebesluit
+Portefeuille: Wethouder Zoutendijk als portefeuillehouder van cultuur en welzijn te
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Besluittekst (kort):
+mandateren wijzigingen van ondergeschikt belang aan te brengen in de
+overeenkomst.
+
+Volledige tekst:
+Wethouder Zoutendijk als portefeuillehouder van cultuur en welzijn te
+mandateren wijzigingen van ondergeschikt belang aan te brengen in de
+overeenkomst.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-06-10
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_10_juni_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-06-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_juni_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Instemmen met het aangaan van de samenwerking met de bibliotheek
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Besluittekst (kort):
+Voorschoten-Wassenaar in het kader van het lokale Werkcentrum in
+Wassenaar.
+
+Volledige tekst:
+Instemmen met het aangaan van de samenwerking met de bibliotheek
+Voorschoten-Wassenaar in het kader van het lokale Werkcentrum in
+Wassenaar.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-06-24
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_24_juni_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Opdrachtgeversrapportage afvalinzameling 2024
+Datum: 2025-07-01
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Cultuur en Welzijn
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_juli_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+De opdrachtgeversrapportage afvalinzameling 2024 middels een
+raadsinformatiebrief te delen met de gemeenteraad.
+
+Volledige tekst:
+Opdrachtgeversrapportage afvalinzameling 2024
+Besluit:
+De opdrachtgeversrapportage afvalinzameling 2024 middels een
+raadsinformatiebrief te delen met de gemeenteraad.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-07-01
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_1_juli_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Wethouder Koetsier te machtigen om ondergeschikte wijzigingen in de
+Datum: 2025-07-08
+Type: collegebesluit
+Domein: Sociaal Domein
+Portefeuille: Cultuur en Welzijn
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Besluittekst (kort):
+samenwerkingsovereenkomst aan te brengen.
+
+Volledige tekst:
+Wethouder Koetsier te machtigen om ondergeschikte wijzigingen in de
+samenwerkingsovereenkomst aan te brengen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-07-08
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_8_juli_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-07-15
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_15_juli_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-08-19
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_19_augustus_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-08-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_augustus_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Bezwaar op overdracht brandweermuseumcollectie
+Datum: 2025-08-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_augustus_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Bezwaar op overdracht brandweermuseumcollectie
+Besluit:
+---
+
+---
+Besluit: Reactie ongevraagd advies Klankbordgroep Cultureel Erfgoed
+Datum: 2025-08-26
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_26_augustus_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Reactie ongevraagd advies Klankbordgroep Cultureel Erfgoed
+Wassenaar
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-09-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_september_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: De wethouder van Cultuur en Welzijn, wethouder Zoutendijk te mandateren
+Datum: 2025-09-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_september_2025.pdf
+
+Besluittekst (kort):
+veranderingen van ondergeschikt belang in de overeenkomst aan te brengen.
+
+Volledige tekst:
+De wethouder van Cultuur en Welzijn, wethouder Zoutendijk te mandateren
+veranderingen van ondergeschikt belang in de overeenkomst aan te brengen.
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-09-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_september_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-09-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_september_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-09-23
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_23_september_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-09-30
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_30_september_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-10-07
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_7_oktober_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Het subsidieplafond voor de regeling Welzijn 18+ gemeente Wassenaar
+Datum: 2025-10-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_oktober_2025.pdf
+
+Volledige tekst:
+Het subsidieplafond voor de regeling Welzijn 18+ gemeente Wassenaar
+---
+
+---
+Besluit: Het subsidieplafond voor de regeling Kunst en Cultuur gemeente Wassenaar
+Datum: 2025-10-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_oktober_2025.pdf
+
+Volledige tekst:
+Het subsidieplafond voor de regeling Kunst en Cultuur gemeente Wassenaar
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-10-14
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_14_oktober_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-10-28
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_28_oktober_2025.pdf
+
+Besluittekst (kort):
+Pagina 1 van 3
+
+Volledige tekst:
+Cultuur en Welzijn
+Pagina 1 van 3
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-11-03
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_3_november_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-11-11
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_11_november_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-11-18
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_18_november_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-11-25
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_25_november_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-12-02
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_2_december_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Subsidieregeling Burgervoogdij gemeente Wassenaar 2026
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregeling Burgervoogdij gemeente Wassenaar 2026
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---
+
+---
+Besluit: Subsidieregeling vergoeding kosten verklaring omtrent gedrag (VOG)
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Subsidieregeling vergoeding kosten verklaring omtrent gedrag (VOG)
+voor kandidaat-raadsleden gemeente Wassenaar 2026
+Besluit:
+---
+
+---
+Besluit: Samenwerkingsovereenkomst Bibliotheek inzake VVVTIP 2026
+Datum: 2025-12-09
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_9_december_2025.pdf
+
+Besluittekst (kort):
+Besluit:
+
+Volledige tekst:
+Samenwerkingsovereenkomst Bibliotheek inzake VVVTIP 2026
+Besluit:
+---
+
+---
+Besluit: Cultuur en Welzijn
+Datum: 2025-12-16
+Type: collegebesluit
+Bron-PDF: https://cuatro.sim-cdn.nl/wassenaar/uploads/besluitenlijst_bw_vergadering_16_december_2025.pdf
+
+Volledige tekst:
+Cultuur en Welzijn
+---

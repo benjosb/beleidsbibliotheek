@@ -1,0 +1,476 @@
+[
+  {
+    "naam": "Bedrijfsvoering",
+    "kinderen": [
+      {
+        "naam": "Accommodaties",
+        "aantal": 3,
+        "raad": 3,
+        "college": 0
+      },
+      {
+        "naam": "Bedrijfsvoering",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Belastingen",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Bestuur",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Gemeentelijke huisvesting",
+        "aantal": 11,
+        "raad": 11,
+        "college": 0
+      },
+      {
+        "naam": "P&C-cyclus",
+        "aantal": 5,
+        "raad": 5,
+        "college": 0
+      }
+    ],
+    "aantal": 24
+  },
+  {
+    "naam": "Dienstverlening",
+    "kinderen": [
+      {
+        "naam": "Huwelijken",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      }
+    ],
+    "aantal": 2
+  },
+  {
+    "naam": "Financiën",
+    "kinderen": [
+      {
+        "naam": "Afval",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Belastingen",
+        "aantal": 11,
+        "raad": 11,
+        "college": 0
+      },
+      {
+        "naam": "Financiën",
+        "aantal": 9,
+        "raad": 9,
+        "college": 0
+      },
+      {
+        "naam": "Financiën, Economie en Sport",
+        "aantal": 26,
+        "raad": 0,
+        "college": 26
+      }
+    ],
+    "aantal": 48
+  },
+  {
+    "naam": "Fysiek Domein",
+    "kinderen": [
+      {
+        "naam": "Bestemmingsplannen",
+        "aantal": 25,
+        "raad": 25,
+        "college": 0
+      },
+      {
+        "naam": "Burgerinitiatief",
+        "aantal": 4,
+        "raad": 4,
+        "college": 0
+      },
+      {
+        "naam": "Centrum Wassenaar",
+        "aantal": 3,
+        "raad": 3,
+        "college": 0
+      },
+      {
+        "naam": "Cultureel erfgoed",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Duurzaamheid",
+        "aantal": 11,
+        "raad": 11,
+        "college": 0
+      },
+      {
+        "naam": "Economie",
+        "aantal": 4,
+        "raad": 4,
+        "college": 0
+      },
+      {
+        "naam": "Groene Zone",
+        "aantal": 9,
+        "raad": 9,
+        "college": 0
+      },
+      {
+        "naam": "Herontwikkeling Duindigt",
+        "aantal": 4,
+        "raad": 4,
+        "college": 0
+      },
+      {
+        "naam": "MRDH",
+        "aantal": 6,
+        "raad": 6,
+        "college": 0
+      },
+      {
+        "naam": "Maaldrift",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "ODH",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Omgevingswet",
+        "aantal": 14,
+        "raad": 14,
+        "college": 0
+      },
+      {
+        "naam": "Parkeren",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Ruimte, Duurzaamheid en Mobiliteit",
+        "aantal": 16,
+        "raad": 0,
+        "college": 16
+      },
+      {
+        "naam": "Strandvisie",
+        "aantal": 3,
+        "raad": 3,
+        "college": 0
+      },
+      {
+        "naam": "Vastgoed",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Veiligheid",
+        "aantal": 3,
+        "raad": 3,
+        "college": 0
+      },
+      {
+        "naam": "Verkeer",
+        "aantal": 8,
+        "raad": 8,
+        "college": 0
+      },
+      {
+        "naam": "Warenar",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Wonen",
+        "aantal": 12,
+        "raad": 12,
+        "college": 0
+      },
+      {
+        "naam": "speeltoestellen",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "verkeer",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      }
+    ],
+    "aantal": 136
+  },
+  {
+    "naam": "Niet geclassificeerd",
+    "kinderen": [
+      {
+        "naam": "Internationals",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Lokale Inclusie",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Lokale Media",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Lokale inclusie",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Lokale media",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Overig",
+        "aantal": 46,
+        "raad": 0,
+        "college": 46
+      },
+      {
+        "naam": "Sportaccommodaties",
+        "aantal": 6,
+        "raad": 6,
+        "college": 0
+      }
+    ],
+    "aantal": 57
+  },
+  {
+    "naam": "Openbare orde en Veiligheid",
+    "kinderen": [
+      {
+        "naam": "Portefeuille Burgemeester",
+        "aantal": 142,
+        "raad": 0,
+        "college": 142
+      },
+      {
+        "naam": "Veiligheid",
+        "aantal": 7,
+        "raad": 7,
+        "college": 0
+      }
+    ],
+    "aantal": 149
+  },
+  {
+    "naam": "Openbare ruimte",
+    "kinderen": [
+      {
+        "naam": "APV",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Afval",
+        "aantal": 4,
+        "raad": 4,
+        "college": 0
+      },
+      {
+        "naam": "Beheer openbare ruimte",
+        "aantal": 6,
+        "raad": 6,
+        "college": 0
+      },
+      {
+        "naam": "Groen",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Riolering",
+        "aantal": 4,
+        "raad": 4,
+        "college": 0
+      }
+    ],
+    "aantal": 17
+  },
+  {
+    "naam": "Raad",
+    "kinderen": [
+      {
+        "naam": "Bestuur",
+        "aantal": 23,
+        "raad": 23,
+        "college": 0
+      },
+      {
+        "naam": "Burgerinitiatief",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "MRDH",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      }
+    ],
+    "aantal": 25
+  },
+  {
+    "naam": "Sociaal Domein",
+    "kinderen": [
+      {
+        "naam": "Begeleid werken",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Belastingen",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Cultuur en Welzijn",
+        "aantal": 6,
+        "raad": 0,
+        "college": 6
+      },
+      {
+        "naam": "Cultuurbeleid",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Inburgering",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Jeugd",
+        "aantal": 7,
+        "raad": 7,
+        "college": 0
+      },
+      {
+        "naam": "Minimabeleid",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Onderwijs",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Onderwijshuisvesting",
+        "aantal": 18,
+        "raad": 18,
+        "college": 0
+      },
+      {
+        "naam": "Ouderenbeleid",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Re-integratiebeleid en Participatiebeleid",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Schuldhulpverlening",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Sociaal Domein",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Sociaal Domein, Wonen en Onderwijs",
+        "aantal": 13,
+        "raad": 0,
+        "college": 13
+      },
+      {
+        "naam": "Sport",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      },
+      {
+        "naam": "Subsidies",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Volksgezondheid",
+        "aantal": 4,
+        "raad": 4,
+        "college": 0
+      },
+      {
+        "naam": "Voor- en vroegschoolse educatie",
+        "aantal": 2,
+        "raad": 2,
+        "college": 0
+      },
+      {
+        "naam": "Wmo",
+        "aantal": 5,
+        "raad": 5,
+        "college": 0
+      },
+      {
+        "naam": "Woonzorgvisie",
+        "aantal": 1,
+        "raad": 1,
+        "college": 0
+      }
+    ],
+    "aantal": 76
+  }
+]

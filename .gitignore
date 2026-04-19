@@ -6,6 +6,11 @@ __pycache__/
 venv/
 ENV/
 
+# Raad-opnames: eigen venv + lokale datasets (niet committen)
+raad-opnames/.venv/
+raad-opnames/data/**
+!raad-opnames/data/README.md
+
 # Data (optioneel - kan ook gecommit worden)
 pdfs/*.pdf
 

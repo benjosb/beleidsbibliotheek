@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beleidsanalyse · Wassenaar 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body id="top">
+  <a href="#top" class="naar-boven" title="Naar boven">↑ Naar boven</a>
+  <header class="top-bar" role="banner">
+    <span class="top-bar-badge">Wassenaar 2026</span>
+    <a href="index.html" class="top-bar-link">← Terug naar overzicht</a>
+  </header>
+  <nav class="subpage-nav" aria-label="Secties">
+    <a href="index.html" class="subnav-link">← Overzicht</a> · <span class="subnav-current">Beleidsanalyse</span>
+  </nav>
+
+  <section class="sectie">
+    <h1>Beleidsanalyse</h1>
+    <p class="sectie-intro">Drie visualisaties van de 9 Wassenaarse partijen: semantische beleidsruimte (UMAP), radar per BBV-thema, en topic heatmap. Zie ook <a href="raakvlakken.html">Raakvlakken</a> voor het <a href="chord.html">Chord-diagram</a> en <a href="scatter.html">raakvlakken in beeld</a> (Kieskompas met overlap).</p>
+
+    <div id="fout" class="intro" style="display:none; background:#fed7d7; color:#c53030;">
+      <strong>Data niet gevonden.</strong> Voer eerst uit: <code>python3 run_alle_analyses.py</code>. Zorg dat de map <code>analyses/</code> (of <code>analyses_output/</code>) met radar_scores.json, topic_heatmap.json en umap_coordinaten.json naast deze pagina staat. Open via een webserver: <code>python3 -m http.server 8000</code> in de projectmap.
+    </div>
+
+    <h2>1. Semantische beleidsruimte (UMAP)</h2>
+    <p>Standpunten geprojecteerd op 2D: hoe dichter punten bij elkaar, hoe inhoudelijk vergelijkbaarder. <em>De assen hebben geen vaste betekenis; het gaat om de onderlinge afstand.</em></p>
+    <div id="umap-chart" style="width:100%; height:500px;"></div>
+
+    <h2>2. Radar – focus per BBV-thema</h2>
+    <p>Relatieve aandacht per partij per taakveld (0–100, genormaliseerd).</p>
+    <div id="radar-chart" style="width:100%; height:500px;"></div>
+
+    <h2>3. Topic heatmap</h2>
+    <p>Gemiddelde topic-scores per partij (LDA op standpunten).</p>
+    <div id="topic-chart" style="width:100%; height:450px;"></div>
+  </section>
+
+  <script>
+(function() {
+  const PARTIJ_KLEUREN = {
+    'Forum voor Democratie': '#8B0000', 'VVD': '#FF7700', 'Democratische Liberalen Wassenaar': '#D4A017',
+    'CDA': '#6ABF4B', 'Hart voor Wassenaar': '#8B4513', 'Lokaal Wassenaar': '#2A9D8F',
+    'D66': '#00A8E8', 'Volt': '#502379', 'GroenLinks-PvdA': '#4CAF50'
+  };
+  const fallback = '#64748b';
+
+  async function load(url) {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(url);
+    return r.json();
+  }
+
+  async function init() {
+    let radar, topic, umap;
+    const urls = [
+      ['analyses/radar_scores.json', 'analyses_output/radar_scores.json'],
+      ['analyses/topic_heatmap.json', 'analyses_output/topic_heatmap.json'],
+      ['analyses/umap_coordinaten.json', 'analyses_output/umap_coordinaten.json']
+    ];
+    try {
+      const loads = urls.map(async ([a, b]) => {
+        try { return await load(a); } catch (_) { return await load(b); }
+      });
+      [radar, topic, umap] = await Promise.all(loads);
+    } catch (e) {
+      document.getElementById('fout').style.display = 'block';
+      return;
+    }
+
+    // UMAP scatter: centroïde per partij (niet alle 5000+ punten – dat werd pointillistisch)
+    const byPartij = {};
+    umap.points.forEach(p => {
+      if (!byPartij[p.partij]) byPartij[p.partij] = { x: [], y: [] };
+      byPartij[p.partij].x.push(p.x);
+      byPartij[p.partij].y.push(p.y);
+    });
+    const partijen = umap.partijen || Object.keys(byPartij);
+    const traces = partijen.filter(p => byPartij[p]).map(partij => {
+      const d = byPartij[partij];
+      const n = d.x.length;
+      const cx = d.x.reduce((a,b)=>a+b,0) / n;
+      const cy = d.y.reduce((a,b)=>a+b,0) / n;
+      return {
+        x: [cx], y: [cy], text: [partij],
+        mode: 'markers+text', type: 'scatter', name: partij,
+        marker: { size: 28, color: PARTIJ_KLEUREN[partij] || fallback, opacity: 0.9, line: { width: 1.5, color: '#fff' } },
+        textposition: 'top center', textfont: { size: 11 }
+      };
+    });
+    Plotly.newPlot('umap-chart', traces, {
+      margin: { t: 40, r: 20, b: 40, l: 40 },
+      xaxis: { title: '', showgrid: true },
+      yaxis: { title: '', showgrid: true },
+      showlegend: false,
+      hovermode: 'closest'
+    }, { responsive: true });
+
+    // Radar
+    const radarTraces = radar.partijen.map(p => ({
+      r: radar.scores[p] || [],
+      theta: radar.thema_labels,
+      name: p, type: 'scatterpolar', fill: 'toself',
+      line: { color: PARTIJ_KLEUREN[p] || fallback }
+    }));
+    Plotly.newPlot('radar-chart', radarTraces, {
+      polar: { radialaxis: { visible: true, range: [0, 100] } },
+      showlegend: true, legend: { x: 1.1, y: 0.5 },
+      margin: { t: 20, r: 180 }
+    }, { responsive: true });
+
+    // Topic heatmap
+    const z = topic.partijen.map(p => topic.heatmap[p] || []);
+    const trace = {
+      z: z,
+      x: topic.topic_labels,
+      y: topic.partijen,
+      type: 'heatmap',
+      colorscale: 'Blues',
+      hovertemplate: '%{y} · %{x}: %{z:.2f}<extra></extra>'
+    };
+    Plotly.newPlot('topic-chart', [trace], {
+      margin: { t: 20, r: 20, b: 120, l: 180 },
+      xaxis: { tickangle: -45 }
+    }, { responsive: true });
+  }
+  init();
+})();
+  </script>
+</body>
+</html>

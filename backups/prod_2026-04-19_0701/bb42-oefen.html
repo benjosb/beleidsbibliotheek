@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent BB42 · Oefen · Taakveld 4.2</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#0d9488" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <style>
+    .bb42-wrap { max-width: 980px; margin: 0 auto; padding: 1rem 0 2.5rem; }
+    .bb42-kop { margin-bottom: 1.25rem; }
+    .bb42-kop h2 { font-size: 1.35rem; color: #0d9488; margin: 0 0 0.35rem; }
+    .bb42-kop p { font-size: 0.9rem; color: #555; margin: 0; line-height: 1.55; }
+    .bb42-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: stretch;
+      min-height: 420px;
+    }
+    @media (max-width: 780px) {
+      .bb42-split { grid-template-columns: 1fr; }
+    }
+    .bb42-pane {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    }
+    .bb42-pane-h {
+      padding: 0.65rem 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .bb42-pane-h.agent { background: #f0fdfa; color: #0f766e; border-bottom: 1px solid #ccfbf1; }
+    .bb42-pane-h.chat { background: #eff6ff; color: #1d4ed8; border-bottom: 1px solid #dbeafe; }
+    .bb42-pane-body { flex: 1; padding: 0.75rem 1rem 1rem; overflow: auto; font-size: 0.88rem; line-height: 1.5; }
+    .bb42-agent-dump {
+      font-family: ui-monospace, monospace;
+      font-size: 0.72rem;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 0.65rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 280px;
+      overflow: auto;
+    }
+    .bb42-chat-log {
+      min-height: 220px;
+      max-height: 340px;
+      overflow-y: auto;
+      margin-bottom: 0.65rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .bb42-msg.bot {
+      align-self: flex-start;
+      max-width: 92%;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 0.5rem 0.7rem;
+      border-radius: 10px 10px 10px 4px;
+    }
+    .bb42-msg.user {
+      align-self: flex-end;
+      max-width: 88%;
+      background: #003580;
+      color: #fff;
+      padding: 0.45rem 0.65rem;
+      border-radius: 10px 10px 4px 10px;
+      font-size: 0.85rem;
+    }
+    .bb42-quick { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.35rem 0 0.5rem; }
+    .bb42-chip {
+      font-family: inherit;
+      font-size: 0.76rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid #003580;
+      background: #fff;
+      color: #003580;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .bb42-chip:hover { background: #e8eef5; }
+    .bb42-input-row { display: flex; gap: 0.4rem; margin-top: 0.35rem; clear: both; }
+    .bb42-input-row input {
+      flex: 1;
+      padding: 0.45rem 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 0.88rem;
+    }
+    .bb42-input-row button {
+      padding: 0.45rem 0.85rem;
+      background: #003580;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .bb42-foot {
+      margin-top: 1.25rem;
+      font-size: 0.82rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+    .bb42-foot a { color: #0d9488; font-weight: 600; }
+    .bb42-naar-bib {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      background: #fff;
+      padding: 1rem 1.15rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    }
+    .bb42-naar-bib-lead {
+      margin: 0 0 0.65rem;
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.5;
+    }
+    .bb42-naar-bib-btn {
+      display: inline-block;
+      padding: 0.55rem 1rem;
+      background: var(--primary, #55601c);
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      border-radius: 8px;
+    }
+    .bb42-naar-bib-btn:hover { filter: brightness(1.06); text-decoration: none; }
+    .bb42-naar-bib-hint {
+      margin: 0.75rem 0 0;
+      font-size: 0.78rem;
+      color: #64748b;
+      line-height: 1.45;
+    }
+    .bb42-naar-bib-kop {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <script src="disclaimer.js"></script>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link" aria-label="Gemeente Wassenaar">
+        <img src="wassenaar_logo_fc%20kopie.svg" alt="Gemeente Wassenaar" class="site-logo" />
+      </a>
+      <div class="header-text">
+        <h1><a href="index.html" class="header-title-link">BeleidsBibliotheek Wassenaar</a></h1>
+        <p class="subtitle">Oefenomgeving · Taakveld 4.2 · Agent BB42</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="overzicht-kop">
+      <nav class="overzicht-tabs" aria-label="Pagina's">
+        <a href="index.html" class="overzicht-tab">Beleidsdossiers</a>
+        <a href="reactie.html" class="overzicht-tab">Reactie</a>
+        <span class="overzicht-tab overzicht-tab-actief">BB42 · 4.2</span>
+      </nav>
+    </div>
+
+    <div class="bb42-wrap">
+      <div class="bb42-kop">
+        <h2>Agent ↔ Chatbot (pilot)</h2>
+        <p>
+          <strong>Taakveld 4.2 — Onderwijshuisvesting.</strong> Links het <em>Agent</em>-paneel: wat de achtergrondjob straks vindt (JSON van <code>run.py</code>).
+          Rechts <em>BB42</em> als chatbot: uitleg en snelle acties. Dit is een <strong>oefenpagina</strong> — nog geen live AI-koppeling.
+          Het <a href="reactie.html">gewone reactieformulier</a> blijft voor alle formele meldingen bestaan.
+        </p>
+      </div>
+
+      <section class="bb42-naar-bib" aria-labelledby="bb42-naar-bib-h">
+        <h2 id="bb42-naar-bib-h" class="bb42-naar-bib-kop">Naar de BeleidsBibliotheek</h2>
+        <p class="bb42-naar-bib-lead">
+          Alle beleidsdocumenten en de <strong>zoekfunctie</strong> (inclusief iBabs-teksten) staan in de gewone BeleidsBibliotheek.
+          Deze pagina is alleen de pilot voor Agent/BB42.
+        </p>
+        <p style="margin:0;">
+          <a class="bb42-naar-bib-btn" href="index.html?tv=4.2">Open taakveld 4.2 — Onderwijshuisvesting</a>
+        </p>
+        <p class="bb42-naar-bib-hint">
+          Je komt direct in hoofdstuk 4 met taakveld 4.2 geselecteerd; scroll zo nodig naar de lijst met beleidsdocumenten.
+          Bovenaan die pagina blijft de zoekbalk beschikbaar.
+        </p>
+      </section>
+
+      <div class="bb42-split">
+        <section class="bb42-pane" aria-labelledby="bb42-agent-t">
+          <div id="bb42-agent-t" class="bb42-pane-h agent">Agent BB42 · achtergrond</div>
+          <div class="bb42-pane-body">
+            <p style="margin-top:0;font-size:0.86rem;color:#64748b;">
+              Periodieke scan van publieke bronnen (o.a. data.overheid.nl / KOOP — nog te koppelen). Leg hier
+              <code>bb42-last.json</code> naast deze pagina op de server om live output te zien, of gebruik het voorbeeld hieronder.
+            </p>
+            <p style="font-size:0.82rem;"><button type="button" class="bb42-chip" id="bb42ReloadAgent">Opnieuw laden</button></p>
+            <div id="bb42AgentDump" class="bb42-agent-dump" role="region" aria-live="polite">Laden…</div>
+          </div>
+        </section>
+
+        <section class="bb42-pane" aria-labelledby="bb42-chat-t">
+          <div id="bb42-chat-t" class="bb42-pane-h chat">Chatbot BB42 · voorkant</div>
+          <div class="bb42-pane-body">
+            <div id="bb42ChatLog" class="bb42-chat-log"></div>
+            <div class="bb42-quick" id="bb42Quick"></div>
+            <div class="bb42-input-row">
+              <input type="text" id="bb42Input" maxlength="500" placeholder="Typ een korte vraag over 4.2…" autocomplete="off" />
+              <button type="button" id="bb42Send">Stuur</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="bb42-foot">
+        <strong>Formeel doorgeven?</strong>
+        <a href="reactie.html?tv=4.2">Reactieformulier met H4 vooringevuld</a>
+        ·
+        <a href="https://data.overheid.nl/datasets?q=lokale+regelingen" target="_blank" rel="noopener">data.overheid.nl (lokale regelingen)</a>
+        ·
+        Technische map: <code>agents/bb42/</code>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>BeleidsBibliotheek Wassenaar · <a href="index.html" class="footer-link-btn">Terug naar overzicht</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    var SAMPLE = {
+      agent: 'BB42',
+      taakveld: '4.2',
+      run_id: '(voorbeeld — nog geen echte run)',
+      gemeente: 'Wassenaar',
+      aantal_termen: 3,
+      hits: [
+        { bron: 'voorbeeld', zoekterm: 'integraal huisvestingsplan onderwijs', titel: '(placeholder)', url: null, notitie: 'Koppel run.py op de VPS' }
+      ],
+      volgende_stap: 'Review door Yvonne; daarna data in beleidsnota-per-taakveld-data.js en deploy ACC.'
+    };
+
+    function dumpEl() { return document.getElementById('bb42AgentDump'); }
+
+    function loadAgentDump() {
+      dumpEl().textContent = 'Laden…';
+      fetch('bb42-last.json', { cache: 'no-store' })
+        .then(function (r) { if (!r.ok) throw new Error('no file'); return r.json(); })
+        .then(function (j) {
+          dumpEl().textContent = JSON.stringify(j, null, 2);
+        })
+        .catch(function () {
+          dumpEl().textContent = JSON.stringify(SAMPLE, null, 2) + '\n\n/* Geen bb42-last.json in deze map — toont voorbeeld. Kopieer output van run.py naar bb42-last.json na een run. */';
+        });
+    }
+    document.getElementById('bb42ReloadAgent').addEventListener('click', loadAgentDump);
+    loadAgentDump();
+
+    var log = document.getElementById('bb42ChatLog');
+    var quick = document.getElementById('bb42Quick');
+    function addBot(html) {
+      var d = document.createElement('div');
+      d.className = 'bb42-msg bot';
+      d.innerHTML = html;
+      log.appendChild(d);
+      log.scrollTop = log.scrollHeight;
+    }
+    function addUser(text) {
+      var d = document.createElement('div');
+      d.className = 'bb42-msg user';
+      d.textContent = text;
+      log.appendChild(d);
+      log.scrollTop = log.scrollHeight;
+    }
+
+    function antwoord(userText) {
+      var t = userText.toLowerCase();
+      if (/help|wat doe|uitleg/.test(t)) {
+        return 'Ik ben <strong>BB42</strong> (chatbot-voorkant) voor taakveld <strong>4.2 Onderwijshuisvesting</strong>. Links zie je wat de <strong>Agent</strong> op de achtergrond vindt zodra die gekoppeld is. Jij oefent hier met vragen; voor officiële meldingen gebruik je het <a href="reactie.html?tv=4.2">reactieformulier</a>.';
+      }
+      if (/data\.overheid|dataset|koop|cvdr|lokale regel/i.test(t)) {
+        return 'Op <a href="https://data.overheid.nl/datasets?q=lokale+regelingen" target="_blank" rel="noopener">data.overheid.nl</a> kun je datasets en regelteksten opzoeken. Dat is een goede check vóór je een link in de bibliotheek meldt.';
+      }
+      if (/ihp|school|huisvest|4\.2|onderwijs/.test(t)) {
+        return 'Onder <strong>4.2</strong> vallen o.a. schoolgebouwen, het integraal huisvestingsplan onderwijs, nieuwbouw — zie de BBV-beschrijving in de app. Concrete documenten staan bij het dossier <strong>H4 Onderwijs</strong> → taakveld 4.2.';
+      }
+      return 'Dank! Ik noteer het idee (oefenmodus). Voor een formele melding: <a href="reactie.html?tv=4.2">reactieformulier</a>. Technische koppeling met een echte taalmodel-API volgt later.';
+    }
+
+    function onUserMessage(text) {
+      if (!text.trim()) return;
+      addUser(text);
+      addBot(antwoord(text));
+    }
+
+    document.getElementById('bb42Send').addEventListener('click', function () {
+      var inp = document.getElementById('bb42Input');
+      onUserMessage(inp.value.trim());
+      inp.value = '';
+    });
+    document.getElementById('bb42Input').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); document.getElementById('bb42Send').click(); }
+    });
+
+    function chips() {
+      var opts = [
+        { l: 'Wat doet de agent?', t: 'Wat doet de agent precies?' },
+        { l: 'data.overheid.nl', t: 'Vertel over data.overheid.nl en CVDR' },
+        { l: 'Huisvesting / 4.2', t: 'Wat valt onder taakveld 4.2 en het integraal huisvestingsplan onderwijs?' }
+      ];
+      opts.forEach(function (o) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'bb42-chip';
+        b.textContent = o.l;
+        b.onclick = function () { onUserMessage(o.t); };
+        quick.appendChild(b);
+      });
+    }
+
+    addBot('Hoi! Ik ben <strong>BB42</strong> — de chatbot-kant van deze pilot. Links zie je straks het <strong>Agent</strong>-rapport (JSON). Is er iets dat volgens jou niet klopt bij <strong>onderwijshuisvesting</strong>? Typ het hieronder, of kies een snelle vraag.');
+    chips();
+  })();
+  </script>
+  <script src="scroll-sync-bridge.js" defer></script>
+</body>
+</html>

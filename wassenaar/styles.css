@@ -2301,6 +2301,195 @@ span.zoek-item-naam-zonder-link {
     text-decoration: underline;
 }
 
+/* Begroting — taakveld (zelfde kaartniveau als OD-samenvatting); inklapbaar via <details> */
+.bbv-begroting-details {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.bbv-begroting-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.bbv-begroting-summary::-webkit-details-marker {
+    display: none;
+}
+
+.bbv-begroting-summary::before {
+    content: '▸';
+    display: inline-block;
+    font-size: 0.72em;
+    font-weight: 700;
+    color: var(--bbv-accent, var(--wassenaar-blue));
+    transform: rotate(0deg);
+    transition: transform 0.18s ease;
+    line-height: 1;
+}
+
+.bbv-begroting-details[open] > .bbv-begroting-summary::before {
+    transform: rotate(90deg);
+}
+
+.bbv-taakveld-begroting-panel .bbv-taakveld-begroting-inner {
+    margin-top: 0.35rem;
+}
+
+.bbv-embed-root {
+    font-size: 0.85rem;
+}
+
+.bbv-embed-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 0.65rem;
+}
+
+.bbv-embed-pill {
+    display: inline-block;
+    padding: 0.2rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #fff;
+    opacity: 0.35;
+}
+
+.bbv-embed-pill--actief { opacity: 1; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.bbv-embed-pill--p1 { background: #2563eb; }
+.bbv-embed-pill--p2 { background: #16a34a; }
+.bbv-embed-pill--p3 { background: #ea580c; }
+.bbv-embed-pill--p4 { background: #9333ea; }
+.bbv-embed-pill--p5 { background: #0d9488; }
+
+.bbv-embed-cluster-noot {
+    font-size: 0.78rem;
+    color: var(--gray-medium);
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+}
+
+.bbv-embed-kpi {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.45rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 640px) {
+    .bbv-embed-kpi { grid-template-columns: repeat(2, 1fr); }
+}
+
+.bbv-embed-kpi-card {
+    background: #fafbfc;
+    border: 1px solid var(--bbv-light, #e0e0e0);
+    border-radius: 8px;
+    padding: 0.45rem 0.5rem;
+}
+
+.bbv-embed-kpi-label {
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--gray-medium);
+}
+
+.bbv-embed-kpi-val {
+    font-size: 1rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    margin-top: 0.15rem;
+}
+
+.bbv-embed-kpi-note {
+    font-size: 0.65rem;
+    color: var(--gray-medium);
+    margin-top: 0.1rem;
+}
+
+.bbv-embed-lasten { color: #dc2626; }
+.bbv-embed-baten { color: #16a34a; }
+.bbv-embed-saldo-neg { color: #dc2626; }
+.bbv-embed-saldo-pos { color: #16a34a; }
+.bbv-embed-aandeel { color: #2563eb; }
+
+.bbv-embed-viz {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    align-items: start;
+}
+
+@media (max-width: 520px) {
+    .bbv-embed-viz { grid-template-columns: 1fr; }
+}
+
+.bbv-embed-viz-panel {
+    background: #fff;
+    border: 1px solid var(--bbv-light, #e0e0e0);
+    border-radius: 8px;
+    padding: 0.5rem 0.55rem;
+}
+
+.bbv-embed-viz-titel {
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-medium);
+    margin: 0 0 0.4rem;
+}
+
+.bbv-embed-line-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #16a34a;
+    margin-bottom: 0.35rem;
+}
+
+.bbv-embed-line-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bbv-embed-placeholder {
+    font-size: 0.75rem;
+    color: var(--gray-medium);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.bbv-embed-donut-host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bbv-embed-voet {
+    font-size: 0.68rem;
+    color: var(--gray-medium);
+    margin: 0.6rem 0 0;
+    line-height: 1.4;
+}
+
+.bbv-embed-geen-data {
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+    margin: 0;
+}
+
 /* Geselecteerd taakveld — subtiel accent */
 .bbv-taakveld-context {
     margin: 0 0 1rem;
@@ -2330,6 +2519,92 @@ span.zoek-item-naam-zonder-link {
     font-size: 0.75rem;
     color: var(--gray-medium);
     font-style: italic;
+}
+
+/* Begroting per taakveld (easter egg: dubbelklik versienummer) */
+.bbv-taakveld-financieel {
+    margin: 0.5rem 0 0.35rem;
+    padding: 0.5rem 0.55rem;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 6px;
+    border: 1px dashed var(--bbv-light, #cfd8e6);
+    font-size: 0.78rem;
+    line-height: 1.4;
+}
+
+.bbv-taakveld-financieel[hidden] {
+    display: none !important;
+}
+
+.bbv-fin-kop {
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--bbv-accent, #1e3a5f);
+    margin-bottom: 0.35rem;
+}
+
+.bbv-fin-rij {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem 0.5rem;
+    margin: 0;
+}
+
+.bbv-fin-rij > div {
+    margin: 0;
+}
+
+.bbv-fin-rij dt {
+    margin: 0;
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--gray-medium);
+}
+
+.bbv-fin-rij dd {
+    margin: 0.1rem 0 0;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--gray-dark);
+}
+
+.bbv-fin-deel {
+    margin: 0.4rem 0 0;
+    font-size: 0.72rem;
+    color: var(--gray-dark);
+}
+
+.bbv-fin-bron {
+    margin: 0.35rem 0 0;
+    font-size: 0.68rem;
+    color: var(--gray-medium);
+    word-break: break-word;
+}
+
+.bbv-fin-cluster-hint {
+    font-style: italic;
+}
+
+.bbv-fin-warn {
+    color: #b06000;
+}
+
+.bbv-fin-geen-regel {
+    margin: 0.25rem 0 0;
+    color: var(--gray-dark);
+}
+
+.bbv-fin-noot {
+    margin: 0.4rem 0 0;
+    font-size: 0.68rem;
+    color: var(--gray-medium);
+}
+
+.dossier-kaart-begroting--bbv .begroting-label {
+    white-space: normal;
+    line-height: 1.25;
 }
 
 /* ─── Responsive: mobiel ─── */
@@ -2366,6 +2641,9 @@ span.zoek-item-naam-zonder-link {
     }
     .bbv-tv-item:hover {
         border-bottom-color: var(--bbv-accent, var(--wassenaar-blue));
+    }
+    .bbv-fin-rij {
+        grid-template-columns: 1fr;
     }
 }
 

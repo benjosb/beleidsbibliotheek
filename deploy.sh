@@ -44,6 +44,12 @@ ALL_FILES=(
     index.html
     scroll-sync-bridge.js
     app.js
+    financieel-bbv-begroting-2026.js
+    financieel-taakveld-dashboard-meta.js
+    financieel-taakveld-dashboard-embed.js
+    taakvelden_iv3.js
+    bi-taakveld-dashboard.html
+    analyse-begrotingen/bi-voorbeeld-4.2.html
     beleidsnota-per-taakveld-data.js
     styles.css
     data.js

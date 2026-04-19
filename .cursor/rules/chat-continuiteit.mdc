@@ -6,11 +6,13 @@ alwaysApply: true
 
 # Sessie-continuïteit
 
+**Enige bron van waarheid voor “waar stonden we?”:** `STATUS.md` in de projectroot. Geen parallel handoff-bestand in `docs/` aanmaken.
+
 ## Bij START van elke sessie
 
-1. Lees `STATUS.md` in de projectroot
-2. Vat kort samen waar we gebleven zijn
-3. Ga door — GEEN vragen stellen die in STATUS.md staan
+1. Gebruik het **read_file**-hulpmiddel op **`STATUS.md`** (projectroot) voordat je inhoudelijke plannen maakt of code voorstelt — tenzij de gebruiker een strikt lokale micro-vraag stelt die nergens aan hangt.
+2. Als de gebruiker **`@STATUS.md`** koppelt: dat bestand is leidend; lees het volledig.
+3. Vat kort samen waar we gebleven zijn en pak indien passend het **eerste concrete punt** onder **"Volgende stap"** op — GEEN vragen stellen die al in `STATUS.md` beantwoord worden.
 
 ## Bij EINDE van elke sessie
 
@@ -21,9 +23,12 @@ Werk `STATUS.md` bij met:
 - **Blokkades** (als die er zijn)
 - **Openstaande backlog** (top 3 uit BACKLOG.md)
 
-## Bij "verder" of "doorgaan"
+## Bij "verder", "doorgaan" of vergelijkbaar
 
-Lees STATUS.md → vat samen → werk door. Geen transcripten doorlezen tenzij STATUS.md ontbreekt of verouderd is.
+1. Lees eerst `STATUS.md` (tool), dan vat samen en werk door.
+2. Geen chattranscripten doorlezen tenzij `STATUS.md` ontbreekt, leeg is of duidelijk verouderd t.o.v. de vraag.
+
+**Let op:** regels zijn geen 100% garantie dat elk model ze toepast; de gebruiker kan altijd **`@STATUS.md`** koppelen (zie ook kop “Start instructie” bovenaan `STATUS.md`).
 
 ## Eerdere chats zoeken (alleen als Dick erom vraagt)
 

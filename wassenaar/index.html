@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeleidsBibliotheek Wassenaar · Gemeente Wassenaar</title>
     <link rel="stylesheet" href="https://fonts.bunny.net/css?family=roboto:300,400,500,700|open-sans:300,400,600,700">
-    <link rel="stylesheet" href="styles.css?v=20260417b">
+    <link rel="stylesheet" href="styles.css?v=20260420">
     <meta name="theme-color" content="#55601c">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -137,7 +137,7 @@
         <section class="dossier-overzicht" id="dossierOverzicht">
             <p class="dossier-intro">In de beleidsbibliotheek van de gemeente Wassenaar vindt u alle beleidsdocumenten die door de gemeenteraad zijn vastgesteld vanaf 2021. De bibliotheek is nog in ontwikkeling en wordt stap voor stap aangevuld met actuele documenten. Aan de informatie op deze website kunnen geen rechten worden ontleend. De beleidsbibliotheek is ingericht volgens de begrotingsregels (BBV), zodat documenten logisch en overzichtelijk zijn geordend. Naast deze bibliotheek heeft Wassenaar ook <a href="https://www.wassenaar.nl/bestuur" target="_blank" rel="noopener">een aparte webpagina waar u alle bestuurlijke stukken kunt vinden</a>.</p>
             <div id="dossierKaarten" class="dossier-kaarten"></div>
-            <p class="begroting-voetnoot" hidden>Begrotingsbedragen: Programmabegroting 2026. * = programma gedeeld met ander dossier.</p>
+            <p class="begroting-voetnoot" hidden>Dubbelklik op het versienummer hieronder: toont begrotingscijfers. Portefeuilles: programmabegroting 2026 (programma). BBV: begrote lasten per hoofdstuk + detail per taakveld rechts in het dossier. * = programma gedeeld met ander dossier. <strong>Verantwoorden</strong> (realisatie): niet in deze webweergave — zie jaarstukken.</p>
         </section>
 
         <section class="dossier-detail" id="dossierDetail" style="display: none;">
@@ -156,8 +156,15 @@
                     <div id="bbvTaakveldContext" class="bbv-taakveld-context" style="display:none">
                         <h4 class="bbv-taakveld-context-kop">Geselecteerd taakveld</h4>
                         <p id="bbvTaakveldContextTekst" class="bbv-taakveld-context-tekst"></p>
+                        <div id="bbvTaakveldFinancieel" class="bbv-taakveld-financieel" hidden></div>
                         <p class="bbv-taakveld-context-hint">Beleidsnota’s en besluiten voor dit onderwerp staan verderop op deze pagina.</p>
                     </div>
+                    <section id="bbvTaakveldBegroting" class="bbv-hoofdstuk-samenvatting bbv-taakveld-begroting-panel" style="display:none" hidden aria-labelledby="bbvTaakveldBegrotingKop">
+                        <details id="bbvTaakveldBegrotingDetails" class="bbv-begroting-details" open>
+                            <summary id="bbvTaakveldBegrotingKop" class="bbv-panel-titel bbv-begroting-summary">Begroting — taakveld</summary>
+                            <div id="bbvTaakveldBegrotingInner" class="bbv-taakveld-begroting-inner"></div>
+                        </details>
+                    </section>
                     <details id="overdrachtsdossierBlok" class="overdrachtsdossier-blok overdrachtsdossier-blok--diep" style="display:none;" open>
                         <summary class="overdrachtsdossier-kop" id="overdrachtsdossierKop">Verdieping — <a href="overdrachtsdossier.html" id="overdrachtsdossierLink" class="overdrachtsdossier-deeplink">Overdrachtsdossier</a></summary>
                         <p class="overdrachtsdossier-bron" id="overdrachtsdossierBron">Bron: Overdrachtsdossier raadsverkiezingen 2026 (papier aan raadsleden).</p>
@@ -575,8 +582,11 @@
     <script src="briefings.js?v=20260318b"></script>
     <script src="coalitieakkoord.js"></script>
     <script src="taakvelden_iv3.js?v=20260407"></script>
+    <script src="financieel-bbv-begroting-2026.js?v=20260418"></script>
+    <script src="financieel-taakveld-dashboard-meta.js?v=20260420"></script>
+    <script src="financieel-taakveld-dashboard-embed.js?v=20260420"></script>
     <script src="beleidsnota-per-taakveld-data.js?v=20260417c"></script>
-    <script src="app.js?v=20260418a"></script>
+    <script src="app.js?v=20260420"></script>
     <script>
     (function() {
         var btn = document.getElementById('navHamburger');

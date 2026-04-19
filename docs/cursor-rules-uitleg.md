@@ -10,7 +10,7 @@ Zonder rules moet je elke keer opnieuw vertellen:
 - Hoe je deployt
 - Waar je gebleven was
 
-Met rules is dat verleden tijd.
+Met rules **verminder** je herhaling; het is geen 100% garantie dat elk model ze elke keer toepast. Daarom is **`STATUS.md` + expliciet `@STATUS.md` in een nieuwe chat** de betrouwbaarste combinatie.
 
 ## Waar staan ze?
 
@@ -99,7 +99,7 @@ Voor jouw situatie is `alwaysApply: true` bijna altijd de juiste keuze.
 - **Eén onderwerp per bestand**: niet alles in één mega-bestand proppen.
 - **Feiten, geen verhalen**: "ACC staat op 187.77.93.148" is beter dan "De acceptatie-omgeving, die we in maart hebben opgezet..."
 - **Gebruik HOOFDLETTERS voor cruciale dingen**: "NOOIT vragen waar de VPS staat" werkt beter dan "vraag niet waar de VPS staat"
-- **Test het**: open een nieuwe chat, zeg "verder" of "wat weet je over dit project?" en kijk of de agent het snapt.
+- **Test het**: open een nieuwe chat, koppel **`@STATUS.md`**, en vraag om een korte samenvatting + volgende stap. Alleen “verder” zeggen is vaag; liever expliciet `STATUS.md` koppelen.
 
 ## STATUS.md — het dagboek
 
@@ -111,4 +111,4 @@ Naast rules heb je ook `STATUS.md` in de projectroot. Dit is anders:
 | **Wie schrijft** | Jij of de agent (eenmalig) | De agent (aan het einde van elke sessie) |
 | **Voorbeeld** | "ACC staat op Hostinger" | "Gisteren B-003 verwerkt, volgende stap: deploy naar ACC" |
 
-De agent leest `STATUS.md` aan het begin van elke sessie (dat staat in de rules) en werkt het bij aan het eind. Zo weet de volgende chat precies waar je gebleven bent.
+In de **projectregels** staat dat de agent `STATUS.md` moet lezen en aan het einde bijwerkt — dat **helpt**, maar is niet waterdicht. **Jij** vergroot de kans door in een nieuwe chat **`@STATUS.md`** te koppelen (zie ook de kop *Start instructie* bovenaan `STATUS.md`).

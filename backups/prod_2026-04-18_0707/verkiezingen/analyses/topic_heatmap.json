@@ -1,0 +1,115 @@
+{
+  "topic_labels": [
+    "Topic 1: wij, lokale, economie",
+    "Topic 2: van, wij, het",
+    "Topic 3: van, wassenaar, veiligheid",
+    "Topic 4: van, het, voor",
+    "Topic 5: voor, wonen, bouwen",
+    "Topic 6: voor, een, met",
+    "Topic 7: wassenaar, een, bestuur",
+    "Topic 8: natuur, groen, klimaat"
+  ],
+  "partijen": [
+    "VVD",
+    "Hart voor Wassenaar",
+    "Lokaal Wassenaar",
+    "GroenLinks-PvdA",
+    "CDA",
+    "D66",
+    "Democratische Liberalen Wassenaar",
+    "Forum voor Democratie",
+    "Volt"
+  ],
+  "heatmap": {
+    "VVD": [
+      0.0425,
+      0.0919,
+      0.2149,
+      0.2842,
+      0.0991,
+      0.1235,
+      0.1023,
+      0.0417
+    ],
+    "Hart voor Wassenaar": [
+      0.0941,
+      0.0823,
+      0.0873,
+      0.0594,
+      0.1963,
+      0.1093,
+      0.2831,
+      0.0883
+    ],
+    "Lokaal Wassenaar": [
+      0.0882,
+      0.0872,
+      0.2019,
+      0.0995,
+      0.0864,
+      0.0601,
+      0.2865,
+      0.0902
+    ],
+    "GroenLinks-PvdA": [
+      0.2773,
+      0.2075,
+      0.1605,
+      0.0521,
+      0.0524,
+      0.1757,
+      0.0352,
+      0.0393
+    ],
+    "CDA": [
+      0.0545,
+      0.1936,
+      0.0668,
+      0.1802,
+      0.1441,
+      0.072,
+      0.2439,
+      0.045
+    ],
+    "D66": [
+      0.056,
+      0.033,
+      0.1863,
+      0.0504,
+      0.0292,
+      0.0496,
+      0.5384,
+      0.0571
+    ],
+    "Democratische Liberalen Wassenaar": [
+      0.0775,
+      0.1481,
+      0.1281,
+      0.1148,
+      0.1035,
+      0.1961,
+      0.1868,
+      0.0451
+    ],
+    "Forum voor Democratie": [
+      0.2334,
+      0.2679,
+      0.1075,
+      0.0975,
+      0.0932,
+      0.0815,
+      0.075,
+      0.0439
+    ],
+    "Volt": [
+      0.0436,
+      0.0709,
+      0.2353,
+      0.3793,
+      0.0382,
+      0.0961,
+      0.1303,
+      0.0063
+    ]
+  }
+}

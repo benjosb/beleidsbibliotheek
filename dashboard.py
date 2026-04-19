@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """
-BeleidsBibliotheek — Deploy Dashboard
+BeleidsBibliotheek — Deploy Dashboard (in de documentatie: «Beheerpagina»)
+
+Dick noemt dit de **Beheerpagina**: http://localhost:8800/ na `python3 dashboard.py` —
+deploy-overzicht, backlog, vergelijker, en preview van `wassenaar/` onder /local-site/.
+Niet te verwarren met de statische site-pagina `wassenaar/beheer.html`.
 
 Start:
     python3 dashboard.py
@@ -19,7 +23,11 @@ import threading
 import webbrowser
 import urllib.parse
 
-PORT = 8800
+# Standaard 8800; als die bezet is: BELEIDS_DASHBOARD_PORT=8801 python3 dashboard.py
+try:
+    PORT = int(os.environ.get("BELEIDS_DASHBOARD_PORT", "8800"))
+except ValueError:
+    PORT = 8800
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 # Lokale BeleidsBibliotheek voor de vergelijker (zelfde map als ACC/PROD-deploy): geen aparte http.server nodig.
 LOCAL_SITE_PREFIX = "/local-site"
@@ -222,11 +230,63 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(body)
         return True
 
+    def _send_raad_opnames_file(self, parsed):
+        """Serve files from raad-opnames/ (concept, verslagen, …)."""
+        raw = parsed.path
+        prefix = "/raad-opnames"
+        if raw != prefix and not raw.startswith(prefix + "/"):
+            return False
+        if raw in (prefix, prefix + "/"):
+            rel = "index.html"
+        else:
+            rel = raw[len(prefix):].lstrip("/")
+            rel = os.path.normpath(rel) if rel else ""
+        if rel.startswith(".."):
+            self.send_error(403)
+            return True
+        base = os.path.abspath(os.path.join(PROJECT_DIR, "raad-opnames"))
+        full = os.path.join(base, rel) if rel else base
+        if os.path.isdir(full):
+            full = os.path.join(full, "index.html")
+        if not os.path.isfile(full):
+            self.send_error(404)
+            return True
+        abs_full = os.path.abspath(full)
+        try:
+            if os.path.commonpath([base, abs_full]) != base:
+                self.send_error(403)
+                return True
+        except ValueError:
+            self.send_error(403)
+            return True
+        ctype, _enc = mimetypes.guess_type(full)
+        if ctype is None:
+            ctype = "application/octet-stream"
+        if ctype.startswith("text/") or ctype in (
+            "application/javascript", "application/json", "application/manifest+json",
+        ):
+            ctype = ctype + "; charset=utf-8"
+        try:
+            with open(full, "rb") as f:
+                body = f.read()
+        except OSError:
+            self.send_error(500)
+            return True
+        self.send_response(200)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        self.wfile.write(body)
+        return True
+
     def do_GET(self):
         parsed = urllib.parse.urlparse(self.path)
         params = urllib.parse.parse_qs(parsed.query)
 
         if self._send_local_site_file(parsed):
+            return
+
+        if self._send_raad_opnames_file(parsed):
             return
 
         if parsed.path == "/":
@@ -312,6 +372,7 @@ if __name__ == "__main__":
     server = http.server.HTTPServer(("127.0.0.1", PORT), DashboardHandler)
     print(f"Dashboard draait op http://localhost:{PORT}")
     print(f"  Lokale site (voor Omgevingen vergelijken): http://127.0.0.1:{PORT}{LOCAL_SITE_PREFIX}/")
+    print(f"  Raadsopnames-aanpak (concept): http://127.0.0.1:{PORT}/raad-opnames/")
     print("Ctrl+C om te stoppen.\n")
     threading.Timer(0.5, lambda: webbrowser.open(f"http://localhost:{PORT}")).start()
     try:

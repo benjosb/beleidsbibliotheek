@@ -650,6 +650,14 @@ function formatBedrag(n) {
     return '€' + n;
 }
 
+/** Volledige euro-notatie (NL) voor begrotingsdetail */
+function formatEuroNl(n) {
+    if (n === null || n === undefined || Number.isNaN(n)) return '—';
+    const neg = n < 0;
+    const abs = Math.abs(Math.round(n));
+    return (neg ? '−' : '') + '€\u00a0' + abs.toLocaleString('nl-NL');
+}
+
 // ─── Dossier-kaarten (startpagina) ───
 
 function getBBVTree() {
@@ -702,6 +710,13 @@ function renderDossierKaarten(tree) {
                 <span class="begroting-label">${escapeHtml(begr.programma)}${begr.gedeeld ? ' *' : ''}</span>
             </div>
         ` : '';
+        const bbvFin = isBBV && typeof getFinancieelHoofdstukTotaal === 'function' ? getFinancieelHoofdstukTotaal(item.bbvIndex) : null;
+        const bbvBegrHtml = bbvFin ? `
+            <div class="dossier-kaart-begroting dossier-kaart-begroting--bbv">
+                <span class="begroting-bedrag">${formatBedrag(Math.abs(bbvFin.lasten))}</span>
+                <span class="begroting-label">begrote lasten 2026 · H${item.bbvIndex}${bbvFin.aandeelLastenPct != null ? ' · ' + bbvFin.aandeelLastenPct + '% van gemeentelijk totaal' : ''}</span>
+            </div>
+        ` : '';
 
         const kaart = document.createElement('button');
         kaart.type = 'button';
@@ -718,7 +733,7 @@ function renderDossierKaarten(tree) {
                 <span class="dossier-kaart-naam">${escapeHtml(naam)}</span>
             </div>
             ${preview ? `<p class="dossier-kaart-preview">${escapeHtml(preview)}</p>` : ''}
-            ${begrHtml}
+            ${begrHtml || bbvBegrHtml}
             <span class="dossier-kaart-cta">Lees dossier →</span>
         `;
         kaart.onclick = () => openDossier(naam);
@@ -929,8 +944,6 @@ function renderSubTegelsBBV(bbvIndex) {
             loadDossierBesluitenBBV(bbvIndex);
             showBeleidsnotaBlokBBV(bbvIndex, activeDossier.subFilter);
             updateBbvTaakveldContext(bbvIndex);
-            const sumSect = document.getElementById('bbvHoofdstukSamenvatting');
-            if (sumSect) sumSect.style.display = activeDossier.subFilter ? 'none' : '';
         };
         list.appendChild(card);
     });
@@ -1343,10 +1356,22 @@ function getTaakveldInfo(bbvIndex, taakveldCode) {
 function updateBbvTaakveldContext(bbvIndex) {
     const box = document.getElementById('bbvTaakveldContext');
     const p = document.getElementById('bbvTaakveldContextTekst');
+    const finEl = document.getElementById('bbvTaakveldFinancieel');
+    const begSect = document.getElementById('bbvTaakveldBegroting');
+    const begInner = document.getElementById('bbvTaakveldBegrotingInner');
     if (!box || !p) return;
     const sub = activeDossier && activeDossier.subFilter;
     if (!sub) {
         box.style.display = 'none';
+        if (finEl) {
+            finEl.innerHTML = '';
+            finEl.hidden = true;
+        }
+        if (begSect) {
+            begSect.style.display = 'none';
+            begSect.hidden = true;
+            if (begInner) begInner.innerHTML = '';
+        }
         return;
     }
     const info = getTaakveldInfo(bbvIndex, sub);
@@ -1358,6 +1383,19 @@ function updateBbvTaakveldContext(bbvIndex) {
     if (info.toelichting) tekst += '\n\n⚙ ' + info.toelichting;
     p.textContent = tekst;
     box.style.display = '';
+
+    if (begSect && begInner && typeof renderBbvTaakveldBegrotingEmbed === 'function') {
+        begSect.style.display = '';
+        begSect.hidden = false;
+        const begDetails = document.getElementById('bbvTaakveldBegrotingDetails');
+        if (begDetails) begDetails.open = true;
+        renderBbvTaakveldBegrotingEmbed(begInner, bbvIndex, sub);
+    }
+
+    if (finEl) {
+        finEl.innerHTML = '';
+        finEl.hidden = true;
+    }
 }
 
 function populateScopeSelect(bbvIndex, taakveldCode) {
@@ -2912,6 +2950,9 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.toggle('toon-begroting');
             const voetnoot = document.querySelector('.begroting-voetnoot');
             if (voetnoot) voetnoot.hidden = !document.body.classList.contains('toon-begroting');
+            if (typeof activeDossier !== 'undefined' && activeDossier && activeDossier.bbvMode && activeDossier.bbvIndex !== undefined) {
+                updateBbvTaakveldContext(activeDossier.bbvIndex);
+            }
         });
     }
 

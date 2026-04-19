@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verslag — onderzoek raadsopnames / iBabs / Royalcast</title>
+  <style>
+    :root { --tekst: #1e293b; --muted: #64748b; --border: #e2e8f0; --accent: #2563eb; --bg: #f8fafc; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.55; color: var(--tekst); background: var(--bg); margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    h1 { font-size: 1.35rem; margin-top: 0; }
+    h2 { font-size: 1.05rem; margin-top: 1.75rem; color: #0f172a; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem; }
+    p, li { font-size: 0.95rem; }
+    .meta { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.25rem; }
+    ul { padding-left: 1.2rem; }
+    a { color: var(--accent); }
+    .status { background: #f1f5f9; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; margin-top: 1.5rem; border: 1px solid var(--border); }
+    code { font-size: 0.85em; background: #f1f5f9; padding: 0.1em 0.35em; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<h1>Verslag: onderzoek raadsopnames (iBabs, Royalcast, splitsing)</h1>
+<p class="meta"><strong>Datum:</strong> 2026-04-18 · <strong>Status:</strong> afgerond voor dit traject — <strong>geen vervolg</strong> op dit spoor tot nader order · <a href="index.html">← Terug naar aanpak/opdracht</a></p>
+
+<h2>1. Waar ging het om</h2>
+<p>Context: tot 2023 WODV (Wassenaar + Voorschoten), sindsdien twee zelfstandige gemeenten. Raadsopname-bestanden stonden/staan nog gezamenlijk; bestandsnamen zijn cryptisch. Gepland: met leverancier splitsing van omgevingen; ~400 MP4’s moeten naar de juiste kant. BeleidsBibliotheek raakt dit thematisch; technisch is een <strong>apart werkveld</strong> onder <code>raad-opnames/</code> ingericht (scripts, data, eigen venv mogelijk).</p>
+
+<h2>2. Wat we inhoudelijk bespraken (aanpak)</h2>
+<ul>
+  <li><strong>Pipeline in drie fasen:</strong> (A) canonieke vergaderlijst per gemeente, (B) inventaris MP4 + technische metadata (o.a. ffprobe), (C) koppeling + betrouwbaarheid + review.</li>
+  <li><strong>Eén spreadsheet/CSV</strong> als bron van waarheid; MP4-metadata alleen als hulp (tijd/duur), zelden expliciet “gemeente” in het bestand.</li>
+  <li><strong>Aparte compute:</strong> Python-venv in <code>raad-opnames/.venv</code>, niet vermengd met <code>dashboard.py</code>.</li>
+  <li><strong>Dashboard:</strong> knop naar conceptpagina; route <code>/raad-opnames/</code> op poort 8800.</li>
+</ul>
+
+<h2>3. Concrete test (Voorschoten, installatieraad)</h2>
+<p><strong>iBabs-agenda:</strong><br>
+<a href="https://voorschoten.bestuurlijkeinformatie.nl/Agenda/Index/15a3009a-dea0-4e36-893d-0e5253b195b9">https://voorschoten.bestuurlijkeinformatie.nl/Agenda/Index/15a3009a-dea0-4e36-893d-0e5253b195b9</a></p>
+<p>Scherm: metadata zichtbaar (gemeente, datum/tijd, locatie, voorzitter, toelichting, besluitenlijst-PDF), agendapunten met tijdstippen in de uitzending-overlay.</p>
+<p><strong>Deelbare kijk-URL (Royalcast):</strong><br>
+<a href="https://channel.royalcast.com/werkorganisatieduivenvoorde/#!/dggovww808/20260401_2">https://channel.royalcast.com/werkorganisatieduivenvoorde/#!/dggovww808/20260401_2</a></p>
+
+<h2>4. Bevindingen (technisch)</h2>
+<ul>
+  <li><strong>iBabs (server-side fetch):</strong> tekstuele inhoud van de agendapagina is goed gestructureerd te lezen (titel, tijden, locatie, documentlink, agendapunten).</li>
+  <li><strong>Sectie “Uitzending”:</strong> in die fetch verschijnt <strong>geen vaste hyperlink</strong> naar de video in de ruwe HTML; de speler en knoppen worden <strong>na laden met JavaScript</strong> opgebouwd.</li>
+  <li><strong>“Start nu”:</strong> geen gewone kopieerbare actie-URL; vermoedelijk JS die een embed/API/stream start — bevestiging via browser <strong>Network</strong>-tab zou nodig zijn voor detailniveau.</li>
+  <li><strong>Royalcast:</strong> URL bevat nog <code>werkorganisatieduivenvoorde</code> (WODV-legacy) en een patroon <code>…/dggovww808/20260401_2</code> (kanaal-ID + datum + volgnummer). Simpele HTTP-fetch levert vooral een SPA-shell; echte streammetadata laadt in de browser.</li>
+</ul>
+
+<h2>5. Besproken vervolgrichtingen (geen formeel besluit tot automatisering)</h2>
+<ul>
+  <li>iBabs als <strong>canoniek register</strong> voor vergadermetadata; Royalcast als <strong>aparte kolom</strong> voor deelbare externe links.</li>
+  <li>Leverancier: koppeling meeting ↔ opname na splitsing, export/API, toekomst Royalcast-kanalen per gemeente.</li>
+  <li>Kleine handmatige proef/spreadsheet vóór grote scripts.</li>
+</ul>
+<p>Er is <strong>geen consensus</strong> ontstaan dat dit op korte termijn de moeite waard is om zelf te automatiseren; het onderwerp wordt <strong>hier laten rusten</strong>.</p>
+
+<h2>6. Afsluiting</h2>
+<p class="status">Dit verslag legt vast wat is onderzocht en bevonden. <strong>Vervolg:</strong> ander spoor (buiten dit document). Bij hervatting: eerst opnieuw afstemmen met leverancier en heldere opdracht.</p>
+
+</body>
+</html>

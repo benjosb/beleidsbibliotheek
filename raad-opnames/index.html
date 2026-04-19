@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raadsopnames — aanpak &amp; opdracht (concept)</title>
+  <style>
+    :root { --tekst: #1e293b; --muted: #64748b; --border: #e2e8f0; --accent: #2563eb; --bg: #f8fafc; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.55; color: var(--tekst); background: var(--bg); margin: 0; padding: 1.5rem; max-width: 52rem; margin-left: auto; margin-right: auto; }
+    h1 { font-size: 1.35rem; margin-top: 0; }
+    h2 { font-size: 1.05rem; margin-top: 1.75rem; color: #0f172a; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem; }
+    p, li { font-size: 0.95rem; }
+    .meta { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.25rem; }
+    .meta strong { color: var(--tekst); }
+    ul { padding-left: 1.2rem; }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.75rem 0; background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    th, td { text-align: left; padding: 0.5rem 0.65rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: #f1f5f9; font-weight: 600; }
+    tr:last-child td { border-bottom: none; }
+    .note { background: #eff6ff; border-left: 4px solid var(--accent); padding: 0.65rem 1rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; margin: 1rem 0; }
+    code { font-size: 0.85em; background: #f1f5f9; padding: 0.1em 0.35em; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<h1>Raadsopnames — context, opdracht en aanpak</h1>
+<p class="meta"><strong>Status:</strong> concept / vastlegging gesprek · <strong>Datum:</strong> 2026-04-18 · <strong>Locatie in repo:</strong> <code>raad-opnames/index.html</code> (zelfde niveau als map <code>wassenaar/</code>)<br>
+<a href="verslag.html">Verslag onderzoek iBabs / Royalcast (2026-04-18, afgerond)</a></p>
+
+<p>Dit document vat de gezamenlijke denklijn vast rond het opsplitsen van raadsvergadering-opnames in het licht van de BeleidsBibliotheek-gemeente Wassenaar (en het verleden WODV met Voorschoten). <strong>Vandaag geen implementatie</strong> — alleen de opdracht en aanpak op schrift.</p>
+
+<h2>1. Context</h2>
+<ul>
+  <li>Tot 2023 werkten Wassenaar en Voorschoten samen in <strong>WODV</strong> (werkorganisatie Duivenvoorde); raadsvergaderingen werden in <strong>één technische omgeving</strong> uitgezonden.</li>
+  <li>Sinds 2023 zijn beide gemeenten weer <strong>volledig zelfstandig</strong>; de informatielandschappen moeten (opnieuw) gesplitst worden.</li>
+  <li>Openbare agenda’s/besluiten: per gemeente o.a.
+    <a href="https://wassenaar.bestuurlijkeinformatie.nl/">wassenaar.bestuurlijkeinformatie.nl</a> ·
+    <a href="https://voorschoten.bestuurlijkeinformatie.nl/">voorschoten.bestuurlijkeinformatie.nl</a>
+    (voorbeeld agenda-index: Wassenaar <code>…/Agenda/Index/c3221d9f-…</code>, Voorschoten <code>…/Agenda/Index/abfd3d1e-…</code>).</li>
+  <li>De <strong>opnames</strong> staan (nog) <strong>gezamenlijk</strong> op een server, in één map; bestandsnamen zijn <strong>cryptisch</strong> — niet af te lezen of het Wassenaar of Voorschoten betreft.</li>
+  <li>In de komende maanden: met de leverancier <strong>splitsing van de omgeving</strong>; ruim <strong>~400 MP4-bestanden</strong> moeten naar de juiste omgeving/mappen, zodat ze vanuit de juiste vergadercontext benaderbaar zijn.</li>
+  <li>Leverancier benadrukt <strong>ambacht</strong>: bestanden inhoudelijk plaatsen; dat sluit niet uit dat we <strong>semi-automatisering</strong> (metadata, matching, review) inzetten voor snelheid en consistentie.</li>
+</ul>
+
+<h2>2. Probleem (wat we oplossen)</h2>
+<p>Van een grote hoeveelheid MP4’s met onduidelijke namen een <strong>betrouwbare toewijzing</strong> maken aan <strong>juiste gemeente</strong>, <strong>juiste vergadering</strong> (raad, commissie, enz.), en <strong>juiste plek</strong> in de gesplitste omgeving — idealiter zonder bestaande koppelingen te breken (o.a. <strong>originele bestandsnamen</strong> bewaren waar nodig).</p>
+
+<h2>3. Aanpak: pipeline (drie fasen, één waarheid)</h2>
+<p>In plaats van losse “agents” zonder gedeelde dataset: <strong>één doorlopende keten</strong> met duidelijke tussenproducten (bijv. spreadsheet of CSV onder versiebeheer).</p>
+<table>
+  <thead>
+    <tr><th>Fase</th><th>Vraag</th><th>Output (richting)</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>A — Vergaderingen-catalogus</strong></td>
+      <td>Welke vergaderingen hebben bestaan (Wassenaar vs Voorschoten, raad vs commissie), historie tot ca. <strong>10 jaar</strong>?</td>
+      <td>Tabel met stabiele sleutel per vergadering: datum/tijd, type, titel, link naar iBabs waar mogelijk.</td>
+    </tr>
+    <tr>
+      <td><strong>B — Opname-inventaris</strong></td>
+      <td>Welke MP4-bestanden bestaan er fysiek, en wat zeggen <strong>technische metadata</strong> (pad, grootte, duur, tijdstempels via o.a. ffprobe)?</td>
+      <td>Tabel per bestand + metadata; <strong>originele bestandsnaam</strong> vastleggen.</td>
+    </tr>
+    <tr>
+      <td><strong>C — Koppelen &amp; review</strong></td>
+      <td>Welk bestand hoort bij welke vergadering?</td>
+      <td>Match + <strong>betrouwbaarheid</strong> (hoog/middel/laag); alleen lage betrouwbaarheid handmatig nagank; doelmap/regel vastleggen.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="note">
+  <strong>MP4-metadata:</strong> containers bevatten vaak tijd/duur; zelden expliciet “gemeente” in het bestand. Sterk signaal is meestal <strong>combinatie van tijdstempel + bekende vergaderdata</strong> uit fase A. Dat eerst in een <strong>dunne proef</strong> (bijv. één jaar of één batch) valideren voordat de volle 10 jaar wordt ingevuld.
+</div>
+
+<h2>4. Spreadsheet (kolommen — startset)</h2>
+<ul>
+  <li><strong>Vergadering:</strong> gemeente, orgaan (raad/commissie/…), start (en evt. eind), titel, iBabs-URL, eigen ID.</li>
+  <li><strong>Bestand:</strong> bestandsnaam, pad, duur, technische velden uit ffprobe, bestandsdatum.</li>
+  <li><strong>Match:</strong> gekoppelde vergader-ID, confidence, gebruikte regel, doelmap, reviewer, opmerkingen.</li>
+</ul>
+
+<h2>5. Verbinding met BeleidsBibliotheek</h2>
+<p>De BeleidsBibliotheek dekt o.a. de <strong>laatste jaren</strong> besluitvorming; deze opname-keten gaat bewust over een <strong>bredere historie (~10 jaar)</strong> voor opsplitsing en archief. Later kan worden bepaald wat in de site <strong>ontsloten</strong> wordt (links, uitzoeken, transcripties — buiten scope van dit conceptdocument).</p>
+
+<h2>6. Vervolg (niet vandaag)</h2>
+<ul>
+  <li>Master-prompt / projectbrief voor Cursor-sessies: scope, fasen A–C, outputschema, randvoorwaarden (o.a. netiquette bij iBabs).</li>
+  <li>Technische spike: sample MP4’s + ffprobe + handmatige check of datetime-matching werkt.</li>
+  <li>Afstemming leverancier: bindende regels voor mappen, URL’s en behoud bestandsnamen.</li>
+</ul>
+
+<p class="meta">Dit bestand is ter <strong>vastlegging van de opdracht en aanpak</strong>; inhoud kan worden bijgewerkt na vervolgstappen.</p>
+
+</body>
+</html>

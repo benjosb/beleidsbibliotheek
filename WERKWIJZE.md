@@ -8,6 +8,10 @@
 | **Acceptatie** | wassenaar.besluit-wijzer.nl | VPS 187.77.93.148 `/var/www/wassenaar.besluit-wijzer.nl/` | Testen, content beheer |
 | **Productie** | beleidsbibliotheekwassenaar.nl | Argeweb (Plesk/FTP) | Live voor raadsleden |
 
+### Beheerpagina (lokaal, Dick)
+
+**Beheerpagina** is de naam die Dick gebruikt voor het lokale **Deploy Dashboard**: `python3 dashboard.py` in de projectroot opent **http://localhost:8800/** (standaardpoort 8800; als die bezet is: `BELEIDS_DASHBOARD_PORT=8801`). Daar staan o.a. deploy-log, backlog, vergelijker (`/vergelijk.html`), en wordt `wassenaar/` geserveerd onder **`/local-site/`** voor betrouwbare preview (geen `file://`). *Dit is niet hetzelfde als de statische pagina `wassenaar/beheer.html` op de site (die is een korte stop-pagina).*
+
 ## Drie rollen
 
 | Wie | Rol | Wat |
@@ -150,6 +154,7 @@ Dick (MBP)           Joyce (browser)       Ricardo (SSH)
 
 | Bestand | Wat | Waar |
 |---------|-----|------|
+| `dashboard.py` | **Beheerpagina** (zo noemt Dick dit): lokaal dashboard → http://localhost:8800/ | Projectroot (MBP) |
 | `deploy.sh` | Deploy lokaal → ACC | Projectroot (MBP) |
 | `promote-to-prod.sh` | ACC → PROD | Projectroot (MBP) + `/var/www/` op VPS |
 | `VERSION` | Versienummer | Projectroot |

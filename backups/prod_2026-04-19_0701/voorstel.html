@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="BeleidsWijzer">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="pwa-icons/icon-192.png">
+<title>Beleidsnota voorstellen</title>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8f9fa;color:#1a1a2e;line-height:1.5;min-height:100vh;display:flex;flex-direction:column}
+.top-bar{background:#55601c;color:#fff;padding:.75rem 1.25rem;font-size:.85rem;font-weight:600;letter-spacing:.02em}
+.container{max-width:480px;margin:0 auto;padding:1.25rem;flex:1}
+h1{font-size:1.3rem;margin:0 0 .25rem;color:#1a1a2e}
+.subtitle{color:#666;font-size:.85rem;margin-bottom:1.25rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font-weight:600;font-size:.85rem;margin-bottom:.3rem;color:#374151}
+.field input,.field textarea,.field select{width:100%;padding:.6rem .75rem;border:1px solid #d1d5db;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff;-webkit-appearance:none}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:#55601c;box-shadow:0 0 0 3px rgba(85,96,28,.15)}
+.field textarea{resize:vertical;min-height:80px}
+.field .hint{font-size:.75rem;color:#9ca3af;margin-top:.2rem}
+.naam-saved{display:inline-block;font-size:.8rem;color:#059669;margin-left:.5rem}
+.btn-submit{width:100%;padding:.85rem;border:none;border-radius:10px;background:#55601c;color:#fff;font-size:1.05rem;font-weight:600;cursor:pointer;letter-spacing:.01em;transition:background .15s}
+.btn-submit:hover{background:#6b7a24}
+.btn-submit:active{background:#454f16;transform:scale(.98)}
+.btn-submit:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.status{margin-top:1rem;padding:.75rem;border-radius:8px;font-size:.9rem;text-align:center;display:none}
+.status.ok{display:block;background:#d1fae5;color:#065f46;border:1px solid #a7f3d0}
+.status.err{display:block;background:#fee2e2;color:#991b1b;border:1px solid #fecaca}
+.footer{text-align:center;padding:1rem;font-size:.75rem;color:#9ca3af}
+.bbv-select{font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="top-bar">BeleidsBibliotheek Wassenaar</div>
+<div class="container">
+    <h1>Beleidsnota voorstellen</h1>
+    <p class="subtitle">Stel een beleidsdocument voor. Na goedkeuring door het secretariaat wordt het zichtbaar in de bibliotheek.</p>
+
+    <div class="field">
+        <label for="naam">Jouw naam / initialen <span class="naam-saved" id="naamSaved"></span></label>
+        <input type="text" id="naam" placeholder="Bijv. J. de Vries" maxlength="100" autocomplete="name">
+        <div class="hint">Wordt onthouden op dit apparaat</div>
+    </div>
+
+    <div class="field">
+        <label for="bbv">BBV-hoofdstuk</label>
+        <select id="bbv" class="bbv-select">
+            <option value="0">0. Bestuur en ondersteuning</option>
+            <option value="1">1. Veiligheid</option>
+            <option value="2">2. Verkeer, vervoer en waterstaat</option>
+            <option value="3">3. Economie</option>
+            <option value="4">4. Onderwijs</option>
+            <option value="5">5. Sport, cultuur en recreatie</option>
+            <option value="6">6. Sociaal domein</option>
+            <option value="7">7. Volksgezondheid en milieu</option>
+            <option value="8">8. Volkshuisvesting, leefomgeving en stedelijke vernieuwing</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <label for="titel">Titel van het document</label>
+        <input type="text" id="titel" placeholder="Bijv. Woonvisie Wassenaar 2026" maxlength="240">
+    </div>
+
+    <div class="field">
+        <label for="link">Link naar het document</label>
+        <input type="url" id="link" placeholder="https://..." inputmode="url">
+    </div>
+
+    <div class="field">
+        <label for="extra">Toelichting <span style="font-weight:400;color:#9ca3af">(optioneel)</span></label>
+        <textarea id="extra" placeholder="Korte context, bijv. 'Vastgesteld in raad 15-01-2026'" maxlength="500"></textarea>
+    </div>
+
+    <button type="button" class="btn-submit" id="submitBtn">Voorstel indienen</button>
+
+    <div class="status" id="status"></div>
+</div>
+<div class="footer">BeleidsBibliotheek Wassenaar &middot; Voeg toe aan beginscherm voor snelle toegang</div>
+
+<script>
+const API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+    ? 'http://127.0.0.1:5050/api'
+    : 'https://api.besluit-wijzer.nl/api';
+
+const LS_NAAM = 'bw_voorstel_naam';
+
+const naamInput = document.getElementById('naam');
+const naamSaved = document.getElementById('naamSaved');
+
+const saved = localStorage.getItem(LS_NAAM);
+if (saved) {
+    naamInput.value = saved;
+    naamSaved.textContent = '(onthouden)';
+}
+
+naamInput.addEventListener('blur', () => {
+    const v = naamInput.value.trim();
+    if (v) {
+        localStorage.setItem(LS_NAAM, v);
+        naamSaved.textContent = '(onthouden)';
+    }
+});
+
+document.getElementById('submitBtn').addEventListener('click', async () => {
+    const btn = document.getElementById('submitBtn');
+    const statusEl = document.getElementById('status');
+    statusEl.className = 'status';
+    statusEl.style.display = 'none';
+
+    const naam = naamInput.value.trim();
+    const titel = document.getElementById('titel').value.trim();
+    const link = document.getElementById('link').value.trim();
+    const extra = document.getElementById('extra').value.trim();
+    const bbv = parseInt(document.getElementById('bbv').value);
+
+    if (!naam) { show('Vul je naam of initialen in.', false); naamInput.focus(); return; }
+    if (!titel) { show('Titel is verplicht.', false); document.getElementById('titel').focus(); return; }
+    if (!link) { show('Link is verplicht.', false); document.getElementById('link').focus(); return; }
+
+    try { new URL(link); } catch(e) {
+        show('Dat is geen geldige URL. Begin met https://', false);
+        return;
+    }
+
+    if (naam) localStorage.setItem(LS_NAAM, naam);
+
+    btn.disabled = true;
+    btn.textContent = 'Bezig...';
+
+    try {
+        const r = await fetch(`${API_BASE}/beleidsbibliotheek/wassenaar/voorstellen`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                titel, link, extra, naam,
+                scope: { bbvIndex: bbv, taakveldCode: null }
+            })
+        });
+        if (r.ok) {
+            show('Ingediend! Het secretariaat beoordeelt je voorstel.', true);
+            document.getElementById('titel').value = '';
+            document.getElementById('link').value = '';
+            document.getElementById('extra').value = '';
+        } else if (r.status === 429) {
+            show('Te veel voorstellen. Probeer het later opnieuw.', false);
+        } else {
+            show('Er ging iets mis. Controleer de gegevens en probeer opnieuw.', false);
+        }
+    } catch(e) {
+        show('Geen verbinding met de server. Controleer je internet.', false);
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Voorstel indienen';
+});
+
+function show(msg, ok) {
+    const el = document.getElementById('status');
+    el.textContent = msg;
+    el.className = 'status ' + (ok ? 'ok' : 'err');
+}
+</script>
+<script src="scroll-sync-bridge.js" defer></script>
+</body>
+</html>
