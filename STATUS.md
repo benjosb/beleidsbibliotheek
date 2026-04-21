@@ -17,7 +17,7 @@
 ---
 
 **Laatste technische sessie:** 2026-04-17 — Financieel-BBV-dossier samengevoegd + JS-bronverwijzing  
-**Laatste STATUS-workflow / chat-samenvatting:** 2026-04-19 — start-instructie (open `STATUS.md` → `@` of plakzin → einde sessie bijwerken) + `chat-continuiteit.mdc` afgestemd; zie ook [Chat met Cursor — 2026-04-20](#chat-met-cursor--2026-04-20-samenvatting)
+**Laatste STATUS-workflow / chat-samenvatting:** 2026-04-20 — zelfde afspraak bevestigd: Cursor → root **`STATUS.md`** openen → nieuwe Composer/Agent-chat met **`@STATUS.md`** (*samenvatten + eerste regel onder Volgende stap*) óf plakzin *lees STATUS.md en werk eerste punt onder Volgende stap af* → **einde sessie** `STATUS.md` bijwerken (datum, gedaan, volgende stap); geen apart handoff in `docs/`; optioneel User Rule in Cursor Settings. Zie [Start instructie](#start-instructie--nieuwe-cursor-chat-dick) en [Chat met Cursor — 2026-04-20](#chat-met-cursor--2026-04-20-samenvatting).
 
 ## Herinnering: Beheerpagina (na MacBook-update of als je het vergeet)
 
@@ -38,6 +38,7 @@ P0-backlog afwerken; mobiel menu (B-002) was nog open.
 
 *Geen volledig transcript; wel de kern van deze conversatie zodat de context niet alleen in het model zat.*
 
+- **Later die dag (workflow):** Dick plakte de vaste start/einde-tekst nog een keer (“volgende keer zo starten — bewaar dit”): **`STATUS.md`** in de root, **`@STATUS.md`** of plakzin, einde sessie STATUS bijwerken, geen extra `.md` in `docs/` alleen voor handoff — dat staat al in **Start instructie** bovenaan dit bestand; optionele User Rule genoemd.
 - **Probleem:** frustratie dat eerder werd gezegd dat je “alleen verder” hoefde te typen; tussen chats heeft het model geen geheugen, en regels zijn niet 100% afdwingbaar.
 - **Analyse:** er bestond al **`STATUS.md`** + **`.cursor/rules/chat-continuiteit.mdc`** + **`beleidsbibliotheek.mdc`**; geen ontbrekende map in `docs/` als enige oplossing — wel dubbele beloftes en herhaling.
 - **Afgesproken oplossing:** **`STATUS.md` (repo-root) = enige checkpoint**; start met **`@STATUS.md`** of de zinnen onder [Start instructie](#start-instructie--nieuwe-cursor-chat-dick); woord “verder” alleen niet als enige trigger.
@@ -46,6 +47,9 @@ P0-backlog afwerken; mobiel menu (B-002) was nog open.
 - **Tip samenwerking:** korte opdrachten; einde sessie = `STATUS.md` bijwerken (of agent laten doen).
 
 ## Wat er gedaan is (deze sessie)
+
+### Workflow — bevestiging Dick (2026-04-20)
+- Inhoud van de start/einde-afspraak stond al onder **[Start instructie — nieuwe Cursor-chat](#start-instructie--nieuwe-cursor-chat-dick)**; deze sessie alleen **bevestigd** en **metadata** (regel “Laatste STATUS-workflow” + dit blok) bijgewerkt.
 
 ### Workflow — vaste start/einde (2026-04-19)
 - **Start instructie** bovenaan dit bestand: open `STATUS.md` in Cursor → nieuwe chat met **`@STATUS.md`** + samenvatting + eerste regel onder *Volgende stap*, óf plakzin “lees repo-root `STATUS.md` en werk eerste punt onder *Volgende stap* af”; **einde sessie** = `STATUS.md` bijwerken (of zelf kort). Optionele **User Rule** in Cursor genoemd; geen apart `docs/`-handoff.

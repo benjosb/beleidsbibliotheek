@@ -1,0 +1,371 @@
+{
+  "network": {
+    "items": [
+      {
+        "id": 1,
+        "label": "Onderwijs",
+        "x": -0.1441,
+        "y": -0.1729,
+        "cluster": 1,
+        "weights": {
+          "Documents": 9
+        },
+        "description": "<p><strong>CDA</strong></p><ul><li>Instellen van een Jeugdraad Wassenaar</li><li>Stageplekken binnen de gemeentelijke organisatie voor WO, HBO en MBO studenten –met vergoeding</li><li>Verdubbeling van de jeugdsubsidie voor de sportverenigingen uit budget OKO (Opgroeien in Kansrijke Omgeving)</li></ul><p><strong>Democratische Liberalen Wassenaar</strong></p><ul><li>Passend onderwijs voor alle jeugdigen.</li><li>Goede ventilatie op scholen en het gebruik van CO2-melders om besmettingskansen te verkleinen.</li><li>De terugkeer van schoolzwemmen op alle basisscholen.</li></ul><p><strong>VVD</strong></p><ul><li>Steun voor de renovatie en intensiever gebruik van de Warenar! De Warenar blijft ons lokale theater en dorpshuis.</li><li>Steun voor onze bibliotheek als ontmoetingsplek en uitbreiding van functies in de bibliotheek zoals de VVV, arbeidsmarktbemiddeling of het aanbieden van films.</li><li>Het uitvoeren van het integraal huisvestingsplan voor scholen; gezonde klaslokalen, duurzame scholen en groene schoolpleinen staan bij ons voorop.</li></ul><p><strong>Volt</strong></p><ul><li>Volt introduceert in Wassenaar een generatietoets voor nieuw beleid, waardoor de gevolgen van beleid voor toekomstige generaties gegarandeerd meegewogen worden.</li><li>Bij nieuwbouwvergunningen wordt de generatietoets ingezet en de mogelijkheid om door te stromen bekeken. Waar mogelijk worden er extra eisen gesteld aan nieuwbouwwoningen om deze…</li><li>Wassenaar, met zijn American School of the Hague, Adelbert College en Rijnlands Lyceum, levert wereldburgers af. Met hulp van het Erasmus+ programma zet Volt samen met de derde- en…</li></ul>"
+      },
+      {
+        "id": 2,
+        "label": "Verkeer",
+        "x": -0.1113,
+        "y": 0.702,
+        "cluster": 2,
+        "weights": {
+          "Documents": 9
+        },
+        "description": "<p><strong>CDA</strong></p><ul><li>Invoeren van betaald parkeren op Kievitsduin en Meyendel, in overleg met Dunea -ten bate van een groenfonds</li><li>Geen plaats voor windmolens, wel veel zonnepanelen, zoals op de parkeerplaats aan de Mansveltkade. Vrijer zonnepanelenbeleid</li></ul><p><strong>D66</strong></p><ul><li>We willen een dorp waar fietsen en wandelen vanzelfsprekend en veilig zijn, en\nwaar verkeer geen overlast veroorzaakt.</li><li>We willen toe naar een dorp waar we nog meer naar elkaar omzien en op elkaar\nkunnen rekenen.</li><li>D66 Wassenaar kiest\nvoor oplossingen die mensen de ruimte geven om vooruit te komen.</li></ul><p><strong>Democratische Liberalen Wassenaar</strong></p><ul><li>Een maximumsnelheid van 30 km/u waar het aantoonbaar veiliger is (zoals bij scholen, woonlocaties voor gehandicapten en ouderen, in het dorpscentrum en in woonstraten).</li><li>Gratis parkeren in het dorp (met uitzondering van parkeren aan De Wassenaarse Slag) met voldoende parkeerplaatsen. Geen parkeerdruk doorschuiven naar woonwijken.</li><li>Een vasthoudende lobby op landelijk, provinciaal en regionaal niveau voor de (gedeeltelijke) ondertunneling van de Rijksstraatweg, in ieder geval bij Maaldrift en de Rozenweg.</li></ul><p><strong>Forum voor Democratie</strong></p><ul><li>Betere bereikbaarheid en doorstroming - Wij investeren in goede ontsluiting met de auto. Wegen worden actief onderhouden en uitgebreid, zodat verkeer soepel en veilig door kan…</li><li>Geen verkeersdrempels zonder nut - Wij plaatsen geen extra drempels of snelheidsbeperkingen als er geen bewezen en significant veiligheidseffect is.</li><li>Voldoende parkeergelegenheid - Wij behouden en creëren parkeerruimte in het centrum, zodat winkels en voorzieningen bereikbaar blijven.</li></ul><p><strong>GroenLinks-PvdA</strong></p><ul><li>Wij hopen dat de nieuwe Omgevingsvisie een concrete en breed gedragen visie wordt\ndie helpt om goede besluiten over ingewikkelde onderwerpen te nemen.</li><li>Wij moderniseren de parkeernormen en brengen deze terug naar een niveau dat\naansluit bij de werkelijke parkeerbehoefte, zodat ruimte efficiënter wordt benut.</li><li>Wij versterken veiligheid en\nweerbaarheid in onze wijken en\nbinnen de gemeente.</li></ul><p><strong>Hart voor Wassenaar</strong></p><ul><li>Parkeerproblemen oplossen, vooral in en rond het centrum. Hoge prioriteit.</li><li>Ondertunneling van de N44 blijft sterke wens.</li><li>Standpunt bepalen over fatbikes.</li></ul><p><strong>Lokaal Wassenaar</strong></p><ul><li>Gratis parkeren blijft.</li><li>Grote verkeersstromen omleiden en Rijksstraatweg (deels) ondergronds</li><li>Veiligheid bij scholen verbeteren.</li></ul><p><strong>VVD</strong></p><ul><li>Door samen te werken met omliggende gemeenten, kunnen we sneller en effectiever oplossingen vinden die Wassenaar écht verder helpen. Denk aan een betere doorstroming op de A44. Ook…</li><li>Prioriteit geven aan verbeteren van de fietsveiligheid en aanpakken rondracende fatbikes.</li><li>Gratis parkeren in het centrum moet blijven!</li></ul><p><strong>Volt</strong></p><ul><li>We onderzoeken met de busmaatschappij effectiever, betrouwbaarder en frequenter elektrisch busverkeer op de lijn Den Haag, Wassenaar, Leiden, met extra aandacht voor een nachtbus…</li><li>Als op  de N44 de maximumsnelheid van 50 km per uur is ingesteld, verkennen we hoe we natuurgebieden aan beide kanten van de N44 kunnen verbinden om de biodiversiteit te…</li><li>In besluitvorming over de inrichting van de openbare ruimte en infrastructuur worden vanaf nu de Rechten van het Kind meegenomen. Ook worden bestaande fietspaden, kruispunten en…</li></ul>"
+      },
+      {
+        "id": 3,
+        "label": "Sport, cultuur & recreatie",
+        "x": -0.1276,
+        "y": -1.4974,
+        "cluster": 3,
+        "weights": {
+          "Documents": 9
+        },
+        "description": "<p><strong>D66</strong></p><ul><li>D66 Wassenaar gelooft dat deze waardevolle omgeving beschermd moet worden,\nzowel in omvang als in kwaliteit.</li><li>D66 Wassenaar vindt dat initiatieven van inwoners en maatschappelijke\norganisaties  voor  groen  en  biodiversiteit  actief  ondersteund  en  waar  mogelijk\nLokaal burgerberaad…</li><li>D66 Wassenaar wil dat de gemeente duidelijk leiding neemt bij duurzame\ninitiatieven.</li></ul><p><strong>Democratische Liberalen Wassenaar</strong></p><ul><li>De Noordrand blijft groen en toegankelijk. Geen verstedelijking of industriële energieprojecten. Openheid van het landschap is hierin cruciaal. Om dit voor elkaar te blijven…</li><li>Bescherming van landschap en duinen: Wassenaar is geen uitbreidingsgebied van de regio.</li><li>Het onderhoud van het openbaar groen moet op een hoger plan worden getild; het huidige onderhoudsniveau is Wassenaar onwaardig.</li></ul><p><strong>Forum voor Democratie</strong></p><ul><li>Weerbare Nederlandse en lokale tradities - Wij beschermen en bevorderen belangrijke feestdagen, zoals Sinterklaas met Zwarte Piet of Oud en Nieuw met vuurwerk, en lokale vieringen…</li><li>Nieuwe tradities - Wij versterken de eigen identiteit van onze gemeente door lokale evenementen, symbolen en tradities te ontwikkelen die inwoners verbinden en trots geven op hun…</li><li>Ruimte voor lokale evenementen en verenigingen - Wij versoepelen vergunningseisen voor evenementen, markten en buurtactiviteiten. Zo geven we ruimte aan het gemeenschapsleven en de…</li></ul><p><strong>GroenLinks-PvdA</strong></p><ul><li>Wij ontwikkelen groene, leefbare\nwijken met ruimte voor ontmoeting,\nbeweging en ontspanning.</li><li>Wij benutten bestaande ruimte beter\ndoor woningdelen, splitsen, optoppen\nen het tegengaan van leegstand.</li><li>Wij bouwen meer passende woningen\nvoor alle levensfasen, met focus op\nbetaalbaarheid en kwaliteit.</li></ul><p><strong>Hart voor Wassenaar</strong></p><ul><li>Doordacht boomvervangingsplan.</li><li>Bescherming groene gracht (zone) tussen Den Haag en Wassenaar.</li><li>Bescherming groene gracht (zone) tussen Katwijk en Wassenaar.</li></ul><p><strong>Lokaal Wassenaar</strong></p><ul><li>Overlast van stof, stank en lawaai terugdringen.</li><li>Bevorderen energie-efficiency.</li><li>Scholen worden energie neutraal.</li></ul><p><strong>VVD</strong></p><ul><li>Open dialoog, stimuleren van betrokkenheid en snelle afhandeling van vragen bij de gemeente. Op mails van inwoners wordt tijdig gereageerd.</li><li>Goed contact met buurtverenigingen. Voldoende budget om kleine ergernissen van buurtverenigingen en Wassenaarders snel te kunnen oplossen.</li><li>Meedoen in de regio. We hechten veel waarde aan regionale samenwerking, bijvoorbeeld binnen de metropool Rotterdam en Den Haag (MRDH).</li></ul><p><strong>Volt</strong></p><ul><li>Volt Wassenaar wil stap voor stap meer maatregelen ontwikkelen om van Wassenaar sneller een klimaatneutrale gemeente te maken. We willen verder gaan dan het huidige beleid van…</li><li>De groei van zonnepanelen op Wassenaarse daken is lager dan bij de gemeenten om ons heen. Volt Wassenaar wil dat onafhankelijke experts actief op eigenaren van geschikte huizen…</li><li>Ook bij woningisolatie blijft Wassenaar achter bij zijn buurgemeenten. Daarom willen we dat de gemeente aan de hand van warmtefoto’s van buurtteams actief op zoek gaat naar bij wie…</li></ul>"
+      },
+      {
+        "id": 4,
+        "label": "Sociaal domein",
+        "x": 0.3323,
+        "y": -0.2673,
+        "cluster": 4,
+        "weights": {
+          "Documents": 9
+        },
+        "description": "<p><strong>CDA</strong></p><ul><li>We hebben een bestuur nodig, dat kan leveren. Voorwaarde daarvoor is samenwerken. Samenwerking in Wassenaar met haar inwoners, met onze buurgemeenten, in de metropoolregio…</li><li>Beperken van aantal aanbieders Jeugdzorg, waar mogelijk</li><li>Inzet op zelfredzaamheid bij Jeugdzorg –jeugd met zorg onder 10%</li></ul><p><strong>D66</strong></p><ul><li>D66 Wassenaar wil buurten ontwerpen en\nstimuleren waar mensen elkaar makkelijk leren kennen, elkaar helpen en waar\nondersteuning dichtbij en overzichtelijk is georganiseerd.</li><li>D66 Wassenaar wil het opzetten van voorzorgcirkels stimuleren en ondersteunen.</li><li>D66 Wassenaar wil dat het Sociaal Team Wassenaar zich kan doorontwikkelen\nnaar Stevige Sociale Teams.</li></ul><p><strong>Democratische Liberalen Wassenaar</strong></p><ul><li>Snellere jeugdhulp waar nodig met strikte wachttijdnormen en voldoende beschikbaarheid van passende hulp.</li><li>Voldoende lokale capaciteit voor jeugdhulp, zoals ambulante hulp, daghulp, pleegzorg en gezinshuiszorg en adequate vervolghulp voor meerderjarige jeugdigen.</li><li>Behoud van goed onderwijs in nauwe samenwerking met jeugdhulporganisaties.</li></ul><p><strong>Forum voor Democratie</strong></p><ul><li>Efficiënte en doelmatige zorg - Wij zorgen dat zorggeld rechtstreeks terechtkomt bij inwoners die zorg nodig hebben, met volledige transparantie over de besteding van zorgbudgetten…</li><li>Zorg zonder drempels - Wij waarborgen fysieke, persoonlijke toegankelijkheid van de zorg, naast digitale zorgopties, ook wat betreft het maken van afspraken en inzien van dossiers.…</li><li>Lokaal toegankelijke zorg - Wij spannen ons in voor het behoud van lokale en regionale zorginstellingen, huisartsenposten, consultatiebureaus en ziekenhuizen. Het is van groot…</li></ul><p><strong>GroenLinks-PvdA</strong></p><ul><li>Wij bouwen voort op wat goed werkt én bedenken verbeteringen voor ons groen en zorgen\nvoor het welzijn van alle inwoners.</li><li>Wij werken samen met\nandere partijen, met inwoners en met de vele vrijwilligers van de verenigingen en\nstichtingen.</li><li>Wij kunnen wel lokale vervuiling van\nautoverkeer terugdringen en sterker inzetten op stookwijzeradviezen.</li></ul><p><strong>Lokaal Wassenaar</strong></p><ul><li>Ondersteuning en begeleiding van mantelzorgers.</li><li>&#x27;Zorgloket&#x27; voor vragen en hulp moet in Wassenaar blijven.</li><li>Stimuleren van zorg dicht bij huis door het realiseren van zorgsteunpunten in de wijken.</li></ul><p><strong>VVD</strong></p><ul><li>Uitvoering te geven aan de hervormingsagenda jeugdzorg; jeugdzorg moet goed toegankelijk blijven voor kwetsbare kinderen terwijl we tegelijkertijd kritisch blijven op de explosief…</li></ul><p><strong>Volt</strong></p><ul><li>De essentiële diensten die nu al Wassenaar informeren en activeren, zoals de bibliotheek, de Wassenaarse krant, de Warenar, de vrijwilligerscentrale en serviceclubs verdienen…</li><li>Volt Wassenaar wil meer aandacht voor Europa-dag op 9 mei om het Europese karakter van Wassenaar te vieren. Wassenaar wil op termijn en met steun van het Europese CERV programma…</li><li>Onze aandacht gaat naar het toegankelijk houden en maken van alle evenementen voor alle inwoners door meertalige communicatie te stimuleren, met name Nederlands en Engels .</li></ul>"
+      },
+      {
+        "id": 5,
+        "label": "Veiligheid",
+        "x": -0.217,
+        "y": 0.1159,
+        "cluster": 5,
+        "weights": {
+          "Documents": 9
+        },
+        "description": "<p><strong>D66</strong></p><ul><li>D66 Wassenaar wil dat\nieder kind toegang heeft tot sterk en toekomstbestendig onderwijs, met de\ngemeente als actieve partner en verbinder.</li><li>D66 Wassenaar wil dat de bouw en verhuizing van het nieuwe Integraal\nKindcentrum voor de St.</li><li>D66 Wassenaar wil dat nieuwkomers vanaf jonge leeftijd toegang krijgen tot goed\ntaalonderwijs.</li></ul><p><strong>Democratische Liberalen Wassenaar</strong></p><ul><li>Behoud en versterking van het openbaar vervoer en van alternatieve vervoersmogelijkheden, zoals de bij-Bus.</li><li>Veilige aanrijdtijden voor ambulances, brandweer en politie.</li><li>Geen verkeersbesluit zonder toetsing. Bij iedere maatregel wordt gemeten wat de gevolgen zijn voor het sluipverkeer, de uitstoot, de bereikbaarheid van hulpdiensten, het openbaar…</li></ul><p><strong>Forum voor Democratie</strong></p><ul><li>Overlast hard aanpakken - Wij treden keihard op tegen overlastgevende statushouders, intimiderend bedelen, nachtelijke overlast en de bendevorming en straatterreur van groepen…</li><li>Gericht cameratoezicht - Wij zetten camera’s incidenteel en tijdelijk in op probleemlocaties in bijvoorbeeld winkelstraten, zodat dit niet uitmondt in grootschalige surveillance.</li><li>Preventief fouilleren waar nodig - Wij maken preventief fouilleren mogelijk in risicogebieden, zodat wapens effectief van de straat worden geweerd. We geven de politie de vrijheid…</li></ul><p><strong>Hart voor Wassenaar</strong></p><ul><li>Eindelijk Rozenplein oplossen.</li><li>Eindelijk sluipverkeer terugdringen met moderne technieken. Geeft ruimte aan verkeer Wassenaarders.</li><li>Bestaande fietspaden worden niet opgeheven.</li></ul><p><strong>Lokaal Wassenaar</strong></p><ul><li>Overlast en onveiligheid aanpakken.</li><li>Investeren in behoud van politie, brandweer (dat betekent ook helpen vrijwillig brandweer team overeind te houden) én Wassenaarse reddingsbrigade met in elke buurt een wijkagent,…</li><li>Snelle inzet van politie, vooral &#x27;s avonds en in het weekend.</li></ul><p><strong>VVD</strong></p><ul><li>Een zichtbaar en goed uitgerust politiebureau dat het liefst nog wordt uitgebreid en een adequate brandweerpost in onze gemeente.</li><li>Meer zichtbare en extra handhaving (boa’s), gericht op overlast, verkeershufters en openbare orde.</li><li>Meer preventie en voorlichting als het gaat om het voorkomen van inbraken en woningovervallen.</li></ul>"
+      },
+      {
+        "id": 6,
+        "label": "Wonen & leefomgeving",
+        "x": 0.2323,
+        "y": 1.1636,
+        "cluster": 6,
+        "weights": {
+          "Documents": 9
+        },
+        "description": "<p><strong>CDA</strong></p><ul><li>Nieuwe plaatsen voor woningen –Hoge Klei (een straatje erbij), Rust en Vreugd (flexwoningen)</li><li>Loze bedrijfsruimte omzetten naar betaalbare huurwoningen voor starters –bijvoorbeeld op de Hoge Klei</li><li>Grond afsplitsen van grote percelen (incluis landgoederen) in samenspraak met gemeente</li></ul><p><strong>Democratische Liberalen Wassenaar</strong></p><ul><li>Doorstroming centraal. Meer appartementen en hofjeswoningen voor senioren, waardoor eengezinswoningen beschikbaar komen.</li><li>Nieuwe woonvormen mogelijk maken, zoals: starterstudio&#x27;s, knarrenhofjes, collectief wonen en levensloopbestendige woningen.</li><li>Wassenaarders eerst. Starters, jonge gezinnen en ouderen moeten meer kans krijgen op een woning in hun eigen gemeente. De voorrang voor statushouders is oneerlijk en moet worden…</li></ul><p><strong>Forum voor Democratie</strong></p><ul><li>Voorrang voor inwoners met lokale binding - Wij zorgen dat inwoners uit onze gemeente als eerste in aanmerking komen voor sociale huur én betaalbare koop.</li><li>Geen voorrang voor statushouders - Wij schaffen de urgentiestatus en voorrangsregelingen voor statushouders bij de toewijzing van sociale huurwoningen volledig af.</li><li>Meer betaalbare koopwoningen - Wij bouwen vooral woningen voor starters, gezinnen en middeninkomens, zodat huiseigenaarschap weer bereikbaar wordt.</li></ul><p><strong>GroenLinks-PvdA</strong></p><ul><li>Wij zorgen voor (her)planten van diverse soorten\nklimaatbestendige bomen en planten.</li><li>Wij stimuleren regentonnen en regenwateropslag, zo nodig met\nsubsidies.</li><li>Wij zorgen voor snelle, menselijke en\ntoegankelijke ondersteuning voor wie\nhet nodig heeft.</li></ul><p><strong>Hart voor Wassenaar</strong></p><ul><li>Zorg voor sociale cohesie in buurten.</li><li>Beheerst bouwen. Verantwoord bouwen. 500 nieuwe woningen. Niet ten koste van leefkwaliteit.</li><li>Specifiek beleid seniorenwoningen.</li></ul><p><strong>Lokaal Wassenaar</strong></p><ul><li>Behoud van leefbaarheid en het eigen dorpse karakter van Wassenaar, maar ook met passende ontwikkelingen.</li><li>Behoud van de menselijke maat in het bestuur.</li><li>Minder afstand tussen burger en bestuur.</li></ul><p><strong>VVD</strong></p><ul><li>Zo snel mogelijk bouwen op de Gemeentewerf en de oude schoollocaties voor jongeren, starters en gezinnen! Dat zijn honderden woningen voor iedereen die momenteel vastzit in een…</li><li>Steun voor de woningbouwplannen en het nieuwe Buurtclubhuis in Kerkehout. Nieuwe investeringen en meer woningen zijn daar hard nodig.</li><li>Leegstaande kantoorlocaties omzetten naar woningbouw of extra woningen realiseren boven en achter winkels mogelijk maken.</li></ul><p><strong>Volt</strong></p><ul><li>Volt Wassenaar ondersteunt mogelijkheden voor op-topping van woningen en bedrijven. Beperkende regelgeving voor de hoogte van panden buiten het centrum gaan we aanpassen.</li><li>Om doorstroming van woningen in Wassenaar te ondersteunen, geven we ouderen die kleiner willen wonen voorrang op de eventuele wachtlijst en hopen daarmee meer ruimte te maken voor…</li><li>We ondersteunen de bestaande visie van de gemeente om bij nieuwbouwprojecten de verdeling 30% sociale huur, 40% middeninkomens en 30% vrije sector.</li></ul>"
+      },
+      {
+        "id": 7,
+        "label": "Bestuur",
+        "x": 0.6566,
+        "y": 0.1105,
+        "cluster": 7,
+        "weights": {
+          "Documents": 9
+        },
+        "description": "<p><strong>CDA</strong></p><ul><li>Het CDA wil met dit programma de uitdagingen aangaan voor Wassenaar. Samen met jong en oud.</li><li>we willen ondernemers de ruimte bieden. Wassenaar is het waard om het bestaande te koesteren. En is een dorp om verder te ontwikkelen.</li><li>Wewillen Wassenaar leefbaar houden. Extra betaalbare woningen zijn prioriteit: de turbo moet er op!</li></ul><p><strong>D66</strong></p><ul><li>D66 Wassenaar zet inwoners centraal in alle gemeentelijke besluitvorming.</li><li>D66 Wassenaar wil op zoek naar overeenkomsten tussen partijen en inzetten op\nsamenwerking op hoofdlijnen.</li><li>D66 Wassenaar wil bouwen op wat we nu hebben, en\ngemeentelijke processen gladstrijken om zo de beste service aan te bieden.</li></ul><p><strong>Democratische Liberalen Wassenaar</strong></p><ul><li>begrijpelijke keuzes;</li><li>bescherming van ons dorpse karakter;</li><li>realistische oplossingen zonder symboolpolitiek.</li></ul><p><strong>Forum voor Democratie</strong></p><ul><li>Een bindend lokaal referendum - Wij voeren bindende referenda in, zodat inwoners zich rechtstreeks kunnen uitspreken over belangrijke politieke besluiten.</li><li>Een direct gekozen burgemeester - Wij laten de burgemeester rechtstreeks verkiezen, zodat deze zich echt moet verantwoorden richting de inwoners.</li><li>Echte burgerparticipatie - Wij maken een einde aan schijnparticipatie: inwoners worden betrokken vóórdat plannen vaststaan, niet achteraf als formaliteit. Wij organiseren ook wijk-…</li></ul><p><strong>GroenLinks-PvdA</strong></p><ul><li>Wij tonen lef als het moet en wij zetten door als het even moeilijk wordt.</li><li>Wij kunnen\nde wadi’s zo ontwerpen dat ze een fantastische speelplek worden: een win-win voor\nde buurt.</li><li>Wij letten op onze dierpopulatie en op plekken waar het ertoe doet zorgen wij voor\nvleermuisvriendelijke verlichting en voor vleermuiskasten, uilenkasten en\negelschuilplekken.</li></ul><p><strong>Hart voor Wassenaar</strong></p><ul><li>Bron: https://hartvoorwassenaar.nl/standpunten/</li><li>Gedownload op: 12 maart 2026</li><li>Wij zetten ons in voor een zelfstandig en sterk Wassenaar, met gezonde financiën,</li></ul><p><strong>Lokaal Wassenaar</strong></p><ul><li>BRONNEN EN VERIFICATIE (alles traceerbaar)</li><li>Primaire bron – uitgebreide webpagina met volledige programmainhoud:</li><li>https://lokaalwassenaar.nl/?page_id=50</li></ul><p><strong>VVD</strong></p><ul><li>Een jaarlijks sluitende begroting die op de goedkeuring van de provincie kan rekenen.</li><li>Een OZB en hondenbelasting die hooguit met de jaarlijkse inflatie worden verhoogd. Bij landelijke compensatie, kan de hondenbelasting worden afgeschaft.</li><li>Het aanwenden van onze reserves voor het investeren in gemeentelijke voorzieningen. De gemeente is geen spaarbank, maar moet investeren in scholen, wegen, de buitenruimte of…</li></ul><p><strong>Volt</strong></p><ul><li>We gaan daarom op zoek naar verbinding met twee gelijksoortige kustgemeenten in Europa om een kennisuitwisseling op gang te brengen en om op de beste ideeën van elkaar te bouwen.…</li><li>We ondersteunen onze ondernemers in het toepassen van digitale veiligheid volgens de NIS2 en toekomstige normen om de digitale veiligheid van onze inwoners en diensten te…</li><li>Wassenaar is digitaal weerbaar, en we weten hoe we als gemeente autonoom kunnen draaien als niet-EU digitale diensten niet meer beschikbaar zouden zijn (wat niet-EU is, is niet ons…</li></ul>"
+      },
+      {
+        "id": 8,
+        "label": "Economie",
+        "x": -0.7383,
+        "y": -1.0147,
+        "cluster": 8,
+        "weights": {
+          "Documents": 8
+        },
+        "description": "<p><strong>CDA</strong></p><ul><li>Versterking van het dorp verzorgend familie midden -en kleinbedrijf (MKB) met minder regeldruk en actieve ondersteuning</li><li>Het opknappen van bedrijventerreinen met ruimte voor verduurzaming en aandacht voor ontsluiting.</li><li>Wassenaar neemt actief deel aan de Metropoolregio Rotterdam Den Haag MRDH; kijkt ook naar Leiden en Katwijk.</li></ul><p><strong>D66</strong></p><ul><li>D66 Wassenaar vindt dat deze ondernemers zich gesteund\nmoeten voelen en dat inwoners vaker kiezen voor lokaal.</li><li>D66 Wassenaar wil de lokale economie stimuleren met een gemeentelijk\nLokaal Kooptegoed.</li><li>D66 Wassenaar vindt dat ondernemers moeten kunnen rekenen op snelle\nvergunningprocedures, duidelijke kaders en lage regeldruk.</li></ul><p><strong>Democratische Liberalen Wassenaar</strong></p><ul><li>Minder regeldruk voor ondernemers. Het gemeentelijke ondernemersloket moet optimaal bereikbaar zijn voor de ondernemers.</li><li>Een levendig en goed bereikbaar dorpscentrum met een aantrekkelijk vestigingsklimaat voor ondernemers.</li><li>Meedenken met jongeren in Wassenaar die gebruikmaken van de horeca. De meeste vergunningen die op dit moment worden afgegeven zorgen voor sluiting om klokslag 23.00 uur, ook in het…</li></ul><p><strong>Forum voor Democratie</strong></p><ul><li>Geen nieuwe heffingen of belastingen - Wij voeren geen extra gemeentelijke belastingen in, zoals milieutoeslagen, zero-emissie-heffingen of afvalboetes per kilo, zodat wonen en…</li><li>Minder regeldruk en sneller vergunning - Wij schrappen onnodige regels en maken vergunningen eenvoudiger en sneller te verkrijgen, zodat bedrijvigheid niet vastloopt in…</li><li>Geen boetemachines - Wij stoppen met boetebeleid dat vooral dient om gemeentelijke inkomsten te genereren; handhaving moet zich richten op veiligheid en leefbaarheid.</li></ul><p><strong>GroenLinks-PvdA</strong></p><ul><li>Wij laten per thema onze ideeën en plannen zien.</li><li>Wij versterken natuur, biodiversiteit en\nklimaatadaptatie met meer groen en\nminder verharding.</li><li>Wij volgen andere gemeenten die al hebben meegedaan met de Ontspulknul\n(www.</li></ul><p><strong>Lokaal Wassenaar</strong></p><ul><li>Ondersteuning van de lokale detailhandel en zorgen voor aantrekkelijke winkelgebieden.</li><li>De gemeente dient bij aanbesteding en inkoop altijd Wassenaarse ondernemingen in de gelegenheid te stellen aanbiedingen te doen.</li><li>Faciliteren van kleinschalige, dienstverlenende ondernemingen en startende ondernemers.</li></ul><p><strong>Volt</strong></p><ul><li>Om de huurprijzen voor ondernemers interessant te maken en houden, is Wassenaar zeer coulant in het toestaan van bewoning boven winkelpanden, mits er tijdens de ombouw - indien…</li><li>Volt Wassenaar blijft de ontwikkelingen in de Langstraat ondersteunen en wil de bedrijvigheid vergroten met meer dorpsactiviteiten, lokale markten, horeca-, ambacht-, muziek- en…</li><li>We zorgen in het dorp voor aantrekkelijke en sociale flexibele werkplekken voor thuiswerkers en zzp&#x27;ers, met extra aandacht voor de jongeren.</li></ul>"
+      },
+      {
+        "id": 9,
+        "label": "Gezondheid & milieu",
+        "x": 0.2463,
+        "y": 1.3111,
+        "cluster": 9,
+        "weights": {
+          "Documents": 8
+        },
+        "description": "<p><strong>CDA</strong></p><ul><li>Met de buurtverenigingen aan de slag voor de locaties van de transformatorhuisjes</li><li>Groenbeheer minimaal op B niveau en speeltuinen op A. Beter dus</li><li>Beperkte bebouwing huizen/appartementen op Duindigt toestaan; behoud van Duindigt als hippisch centrum</li></ul><p><strong>Democratische Liberalen Wassenaar</strong></p><ul><li>Isolatie eerst. De goedkoopste energie is de energie die je niet verbruikt.</li><li>Geen dwang zonder alternatief. Geen verplichte overstap zonder betaalbaar plan, bewezen techniek, voldoende netcapaciteit en volstrekte keuzevrijheid.</li><li>Warmtebeleid met bescherming van inwoners. Geen verborgen kosten, geen datadwang, geen overhaaste wijkplannen.</li></ul><p><strong>Forum voor Democratie</strong></p><ul><li>Stoppen met onbetaalbare klimaatmaatregelen - We stoppen met al het kostbare beleid rondom klimaatverandering, CO₂-beperking, en verduurzaming. We behouden fossiele brandstof als…</li><li>Geen windmolens, zonnevelden of biomassacentrales - Wij plaatsen geen grootschalige, onrendabele zonnevelden, windmolens of biomassacentrales die het landschap domineren,…</li><li>Geen milieuactivisme op kosten van de burger - We voorkomen subsidiestromen naar activistische klimaatclubs, NGO’s of klimaat-gerelateerde projecten. We hanteren ook geen…</li></ul><p><strong>GroenLinks-PvdA</strong></p><ul><li>Wij verbeteren waterbeheer met\nslimme oplossingen tegen\nwateroverlast en droogte\nWij beschermen natuur en erfgoed bij\nalle ruimtelijke keuzes, met oog voor\nmens en dier.</li><li>Wij zetten in op vergroening en het terugdringen van\nverharding.</li><li>Wij proberen laden en lossen van grote vrachtwagens zo veel mogelijk aan de randen van\nons dorp te laten gebeuren.</li></ul><p><strong>Hart voor Wassenaar</strong></p><ul><li>Goede realistische energietransitie. Keuzevrijheid. Betaalbaarheid. Leveringszekerheid. Gemeente neemt actieve regierol.</li></ul><p><strong>VVD</strong></p><ul><li>Uitvoering van de transitie visie op warmte; we steunen buurten, huiseigenaren en woningbouwcorporaties om woningen beter te isoleren en nieuwe energiebronnen te gebruiken.</li><li>Een gemeente die het goede voorbeeld geeft; verdere verduurzaming van eigen vastgoed en het mogelijk maken van zonnepanelen op locaties die daarbij passen.</li><li>Helpen van onze ondernemers op Maaldrift om gezamenlijk te gaan verduurzamen.</li></ul>"
+      }
+    ],
+    "links": [
+      {
+        "source_id": 8,
+        "target_id": 1,
+        "strength": 8
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "strength": 9
+      },
+      {
+        "source_id": 9,
+        "target_id": 1,
+        "strength": 8
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "strength": 9
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "strength": 9
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "strength": 9
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "strength": 9
+      },
+      {
+        "source_id": 7,
+        "target_id": 1,
+        "strength": 9
+      },
+      {
+        "source_id": 8,
+        "target_id": 2,
+        "strength": 8
+      },
+      {
+        "source_id": 8,
+        "target_id": 9,
+        "strength": 8
+      },
+      {
+        "source_id": 8,
+        "target_id": 3,
+        "strength": 8
+      },
+      {
+        "source_id": 8,
+        "target_id": 4,
+        "strength": 8
+      },
+      {
+        "source_id": 8,
+        "target_id": 5,
+        "strength": 8
+      },
+      {
+        "source_id": 8,
+        "target_id": 6,
+        "strength": 8
+      },
+      {
+        "source_id": 7,
+        "target_id": 8,
+        "strength": 8
+      },
+      {
+        "source_id": 9,
+        "target_id": 2,
+        "strength": 8
+      },
+      {
+        "source_id": 3,
+        "target_id": 2,
+        "strength": 9
+      },
+      {
+        "source_id": 4,
+        "target_id": 2,
+        "strength": 9
+      },
+      {
+        "source_id": 5,
+        "target_id": 2,
+        "strength": 9
+      },
+      {
+        "source_id": 2,
+        "target_id": 6,
+        "strength": 9
+      },
+      {
+        "source_id": 7,
+        "target_id": 2,
+        "strength": 9
+      },
+      {
+        "source_id": 9,
+        "target_id": 3,
+        "strength": 8
+      },
+      {
+        "source_id": 9,
+        "target_id": 4,
+        "strength": 8
+      },
+      {
+        "source_id": 9,
+        "target_id": 5,
+        "strength": 8
+      },
+      {
+        "source_id": 9,
+        "target_id": 6,
+        "strength": 8
+      },
+      {
+        "source_id": 7,
+        "target_id": 9,
+        "strength": 8
+      },
+      {
+        "source_id": 4,
+        "target_id": 3,
+        "strength": 9
+      },
+      {
+        "source_id": 3,
+        "target_id": 5,
+        "strength": 9
+      },
+      {
+        "source_id": 3,
+        "target_id": 6,
+        "strength": 9
+      },
+      {
+        "source_id": 7,
+        "target_id": 3,
+        "strength": 9
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "strength": 9
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "strength": 9
+      },
+      {
+        "source_id": 7,
+        "target_id": 4,
+        "strength": 9
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "strength": 9
+      },
+      {
+        "source_id": 7,
+        "target_id": 5,
+        "strength": 9
+      },
+      {
+        "source_id": 7,
+        "target_id": 6,
+        "strength": 9
+      }
+    ],
+    "clusters": [
+      {
+        "cluster": 1,
+        "label": "Onderwijs"
+      },
+      {
+        "cluster": 2,
+        "label": "Verkeer"
+      },
+      {
+        "cluster": 3,
+        "label": "Sport, cultuur & recreatie"
+      },
+      {
+        "cluster": 4,
+        "label": "Sociaal domein"
+      },
+      {
+        "cluster": 5,
+        "label": "Veiligheid"
+      },
+      {
+        "cluster": 6,
+        "label": "Wonen & leefomgeving"
+      },
+      {
+        "cluster": 7,
+        "label": "Bestuur"
+      },
+      {
+        "cluster": 8,
+        "label": "Economie"
+      },
+      {
+        "cluster": 9,
+        "label": "Gezondheid & milieu"
+      }
+    ]
+  },
+  "info": {
+    "title": "Verkiezingsprogramma's Wassenaar 2026",
+    "description": "BBV-thema co-occurrence uit 9 partijprogramma's. Thema's die vaak samen in een programma voorkomen staan dicht bij elkaar."
+  },
+  "config": {
+    "color_schemes": {
+      "cluster_colors": [
+        {
+          "cluster": 1,
+          "color": "#2563eb"
+        },
+        {
+          "cluster": 2,
+          "color": "#dc2626"
+        },
+        {
+          "cluster": 3,
+          "color": "#059669"
+        },
+        {
+          "cluster": 4,
+          "color": "#d97706"
+        },
+        {
+          "cluster": 5,
+          "color": "#7c3aed"
+        },
+        {
+          "cluster": 6,
+          "color": "#0891b2"
+        },
+        {
+          "cluster": 7,
+          "color": "#be185d"
+        },
+        {
+          "cluster": 8,
+          "color": "#65a30d"
+        },
+        {
+          "cluster": 9,
+          "color": "#4f46e5"
+        }
+      ]
+    }
+  }
+}

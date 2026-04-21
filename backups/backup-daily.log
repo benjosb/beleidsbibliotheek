@@ -168,3 +168,37 @@ Checksums (MD5, eerste 12 tekens):
   disclaimer.js: 582675c99fa5
 
 E-mail: E-mail verzonden
+[2026-04-20 07:12] Dagelijkse backup gestart...
+Backup gemaakt: prod_2026-04-20_0712
+Integriteitscheck...
+BeleidsBibliotheek — Dagelijkse backup
+============================================
+
+Datum:     2026-04-20 07:17
+Backup:    prod_2026-04-20_0712
+Status:    FOUT (1 probleem(en))
+Bestanden: 498
+Grootte:   49.8 MB
+Vergelijk: -1 bestanden t.o.v. prod_2026-04-19_0701
+
+Integriteitscheck:
+  OK         index.html (37,896 bytes)
+  TE KLEIN   app.js (159,275 bytes, verwacht >200,000)
+  OK         data.js (4,977,635 bytes)
+  OK         styles.css (99,770 bytes)
+  OK         beleidsnotas.js (36,268 bytes)
+  OK         overdrachtsdossier.html (277,588 bytes)
+  OK         overdrachtsdossier.js (8,389 bytes)
+  OK         disclaimer.js (6,244 bytes)
+
+Checksums (MD5, eerste 12 tekens):
+  index.html: 4f25b927e528
+  app.js: 8955e20a4566
+  data.js: 854194d84d52
+  styles.css: ea881b30a032
+  beleidsnotas.js: aa1a38f7f1ef
+  overdrachtsdossier.html: 95a759b98b0f
+  overdrachtsdossier.js: 17f33515c3e6
+  disclaimer.js: 582675c99fa5
+
+E-mail: E-mail verzonden

@@ -13,3 +13,4 @@ Elke deploy (ACC of PROD) wordt hier gelogd. Automatisch door `deploy.sh`, handm
 | 2026-04-15 13:14 | 8.0.10 | PROD | dickbraam | db  |
 | 2026-04-18 01:24 | 8.0.11 | ACC | Dick | opmerking Dennis verwerken Sport / onderwijs |
 | 2026-04-18 01:26 | 8.0.11 | PROD | dickbraam | opmerkingen DdWit verwerkt  |
+| 2026-04-20 01:15 | 8.0.12 | ACC | Dick | test met toevoeging FINANCIEN |

@@ -4,6 +4,7 @@
  */
 function renderBbvTaakveldBegrotingEmbed(rootEl, bbvIndex, subCode) {
     if (!rootEl) return;
+    subCode = String(subCode == null ? '' : subCode).trim();
     rootEl.innerHTML = '';
     var JAAR = typeof FINANCIEEL_DASHBOARD_BEGROTING_JAAR !== 'undefined' ? FINANCIEEL_DASHBOARD_BEGROTING_JAAR : 2026;
     var ns = 'http://www.w3.org/2000/svg';
@@ -92,10 +93,17 @@ function renderBbvTaakveldBegrotingEmbed(rootEl, bbvIndex, subCode) {
     var viz = document.createElement('div');
     viz.className = 'bbv-embed-viz';
 
-    var meer = !regel.cluster && typeof FINANCIEEL_MEERJAREN_LASTEN_ABS !== 'undefined'
-        ? FINANCIEEL_MEERJAREN_LASTEN_ABS[subCode]
-        : null;
-    var jaren = meer ? Object.keys(meer).map(Number).sort(function (a, b) { return a - b; }) : [];
+    var gebouwd = null;
+    if (!regel.cluster && typeof financieelBouwMeerjarenVoorLijn === 'function') {
+        gebouwd = financieelBouwMeerjarenVoorLijn(subCode);
+    }
+    if (!gebouwd && !regel.cluster && typeof FINANCIEEL_MEERJAREN_LASTEN_ABS !== 'undefined' && FINANCIEEL_MEERJAREN_LASTEN_ABS[subCode]) {
+        var rawFallback = FINANCIEEL_MEERJAREN_LASTEN_ABS[subCode];
+        var jf = Object.keys(rawFallback).map(Number).sort(function (a, b) { return a - b; });
+        var lm = {};
+        jf.forEach(function (j) { lm[j] = rawFallback[j]; });
+        gebouwd = { jaren: jf, lastenMap: lm, fictiefMap: {} };
+    }
 
     var linePanel = document.createElement('div');
     linePanel.className = 'bbv-embed-viz-panel';
@@ -103,18 +111,27 @@ function renderBbvTaakveldBegrotingEmbed(rootEl, bbvIndex, subCode) {
     var lineHost = document.createElement('div');
     linePanel.appendChild(lineHost);
 
-    if (meer && jaren.length >= 2) {
+    if (gebouwd && gebouwd.jaren.length >= 2) {
+        var jaren = gebouwd.jaren;
+        var meer = gebouwd.lastenMap;
+        var fictiefMap = gebouwd.fictiefMap || {};
+        var heeftFictief = jaren.some(function (j) { return fictiefMap[j]; });
+
         var stats = document.createElement('div');
         stats.className = 'bbv-embed-line-stats';
-        var firstL = meer[jaren[0]];
-        var lastL = meer[jaren[jaren.length - 1]];
-        var groeiPct = ((lastL - firstL) / firstL) * 100;
-        var groeiAbs = lastL - firstL;
+        var gstats = typeof financieelGroeiStatistieken === 'function'
+            ? financieelGroeiStatistieken(jaren, meer, fictiefMap)
+            : { groeiPct: 0, groeiAbs: 0, firstL: meer[jaren[0]], lastL: meer[jaren[jaren.length - 1]] };
+        var groeiPct = gstats.groeiPct;
+        var groeiAbs = gstats.groeiAbs;
         stats.innerHTML = '<span>Groei: ' + (groeiPct >= 0 ? '+' : '') + groeiPct.toFixed(1).replace('.', ',') + '%</span>' +
-            '<span>Bedrag: ' + fmtKDelta(groeiAbs) + '</span>';
+            '<span>Bedrag: ' + fmtKDelta(groeiAbs) + '</span>' +
+            (gstats.opBasisVan === 'zonder-fictief' && heeftFictief
+                ? '<span style="opacity:.85;font-size:0.78em">(t.o.v. eerste/laatste meetjaar)</span>'
+                : '');
         linePanel.insertBefore(stats, lineHost);
 
-        var W = 400, H = 160, padL = 44, padR = 10, padT = 10, padB = 30;
+        var W = 400, H = heeftFictief ? 178 : 160, padL = 44, padR = 10, padT = 10, padB = heeftFictief ? 38 : 30;
         var chartW = W - padL - padR;
         var chartH = H - padT - padB;
         var vals = jaren.map(function (j) { return meer[j]; });
@@ -141,15 +158,42 @@ function renderBbvTaakveldBegrotingEmbed(rootEl, bbvIndex, subCode) {
         defs.appendChild(grad);
         svg.appendChild(defs);
         svg.appendChild(el('path', { d: areaD, fill: 'url(#bbvEmbedGrad)', stroke: 'none' }));
-        svg.appendChild(el('path', { d: pathD, fill: 'none', stroke: '#dc2626', 'stroke-width': '2', 'stroke-linecap': 'round' }));
+        for (var si = 0; si < jaren.length - 1; si++) {
+            var j0 = jaren[si];
+            var j1 = jaren[si + 1];
+            var fictiefSeg = fictiefMap[j0] || fictiefMap[j1];
+            var dSeg = 'M' + xScale(si) + ' ' + yScale(meer[j0]) + ' L' + xScale(si + 1) + ' ' + yScale(meer[j1]);
+            svg.appendChild(el('path', {
+                d: dSeg,
+                fill: 'none',
+                stroke: fictiefSeg ? '#94a3b8' : '#dc2626',
+                'stroke-width': '2',
+                'stroke-linecap': 'round',
+                'stroke-dasharray': fictiefSeg ? '5 4' : '0'
+            }));
+        }
         jaren.forEach(function (j, i) {
-            svg.appendChild(el('circle', { cx: xScale(i), cy: yScale(meer[j]), r: '4', fill: '#fff', stroke: '#dc2626', 'stroke-width': '2' }));
+            var isF = fictiefMap[j];
+            svg.appendChild(el('circle', {
+                cx: xScale(i),
+                cy: yScale(meer[j]),
+                r: '4',
+                fill: isF ? '#cbd5e1' : '#fff',
+                stroke: isF ? '#64748b' : '#dc2626',
+                'stroke-width': '2'
+            }));
         });
         jaren.forEach(function (j, i) {
-            var tx = el('text', { x: xScale(i), y: H - 8, fill: '#5c6570', 'font-size': '10', 'font-weight': '600', 'text-anchor': 'middle' });
+            var tx = el('text', { x: xScale(i), y: H - (heeftFictief ? 20 : 8), fill: '#5c6570', 'font-size': '10', 'font-weight': '600', 'text-anchor': 'middle' });
             tx.textContent = String(j);
             svg.appendChild(tx);
         });
+        if (heeftFictief) {
+            var legY = H - 4;
+            var leg = el('text', { x: W / 2, y: legY, fill: '#64748b', 'font-size': '9', 'text-anchor': 'middle' });
+            leg.textContent = 'Rood = meetjaar · grijs = geïnterpoleerd (tussen bekende jaren)';
+            svg.appendChild(leg);
+        }
         lineHost.appendChild(svg);
         linePanel.querySelector('.bbv-embed-viz-titel').textContent = 'Ontwikkeling lasten ' + jaren[0] + '–' + jaren[jaren.length - 1];
     } else {
