@@ -1,0 +1,37 @@
+---
+description: Omgevingen — voorkom dat agent denkt "lokaal" terwijl Dick op ACC kijkt
+globs:
+alwaysApply: true
+---
+
+# Omgevingen: lokaal vs ACC vs PROD — afspraak met Dick
+
+**Terugkerende fout (2026-04-22 vastgelegd):** de agent past lokale bestanden aan en zegt "klaar", maar Dick kijkt op de **acceptatie‑omgeving**. Resultaat: gebruiker ziet niets, frustratie, vertrouwensbreuk.
+
+## Drie omgevingen (Wassenaar)
+
+| Omgeving | URL | Bron | Hoe komt code daar |
+|---|---|---|---|
+| **Lokaal** | `http://127.0.0.1:8800/local-site/` (via `dashboard.py`) of `file://…/wassenaar/index.html` | `wassenaar/` in repo | direct opslaan, refresh |
+| **ACC (acceptatie)** | `https://wassenaar.besluit-wijzer.nl` | `/var/www/wassenaar.besluit-wijzer.nl` op VPS `187.77.93.148` | **`./deploy.sh "notitie"`** vanuit repo‑root |
+| **PROD (productie)** | `https://beleidsbibliotheekwassenaar.nl` (Argeweb) | apart pad op VPS / Argeweb | `promote-to-prod.sh` op VPS (Ricardo) — niet via deploy.sh |
+
+Vergelijker‑dashboard: **`http://127.0.0.1:8800/vergelijk.html`** toont lokaal · ACC · PROD naast elkaar.
+
+## Regels voor de agent
+
+1. **Vóór "klaar" zeggen, expliciet benoemen waar de wijziging staat:** "Lokaal in `wassenaar/…`, NOG NIET op ACC. Draai `./deploy.sh \"…\"` om naar ACC te zetten."
+2. **Bij "ik zie niets" / "het werkt niet" / "andere browser ook niets":** eerst vragen *welke URL* de gebruiker bekijkt. Niet meteen aan cache‑busters of code‑bugs sleutelen.
+3. **Bij elke front‑end wijziging in `wassenaar/`:** standaard afsluiten met de deploy‑oneliner, niet wachten tot de gebruiker erom vraagt:
+   ```bash
+   cd "/Users/dickbraam/Library/CloudStorage/OneDrive-Persoonlijk/_2_DICK_WERK/_2026_beleidsbibliotheek" && ./deploy.sh "korte notitie"
+   ```
+4. **Cache‑busters (`?v=YYYYMMDDx`)** in `index.html` / dashboard‑HTML bij elke gewijzigde JS bumpen — anders ziet ACC‑bezoeker oude versie ondanks deploy.
+5. **Productie:** nooit zelf naar PROD pushen; alleen melden dat ACC‑smoke‑test geslaagd is en Dick PROD via `promote-to-prod.sh` op VPS doet.
+
+## Korte checklist voor agent na elke front‑end edit
+
+- [ ] Bestand(en) gewijzigd in `wassenaar/`?
+- [ ] Cache‑buster in `index.html` / `bi-taakveld-dashboard.html` opgehoogd?
+- [ ] Bestand toegevoegd aan `ALL_FILES` in `deploy.sh` als het nieuw is?
+- [ ] Eindzin met deploy‑commando in antwoord aan Dick.

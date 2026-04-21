@@ -49,6 +49,10 @@ ALL_FILES=(
     financieel-taakveld-dashboard-embed.js
     taakvelden_iv3.js
     bi-taakveld-dashboard.html
+    financieel-meerjaren-controller.html
+    data/taakveld-lasten-staat-2020-2025.csv
+    analyse-begrotingen/taakveld-lasten-staat-2020-2025.md
+    analyse-begrotingen/taakveld-lasten-staat-LEGE_CELLEN.md
     analyse-begrotingen/bi-voorbeeld-4.2.html
     beleidsnota-per-taakveld-data.js
     styles.css

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meerjaren lasten per taakveld — controllers-rapport</title>
+    <style>
+        :root {
+            --ink: #1a1d21;
+            --muted: #5c6570;
+            --panel: #fff;
+            --page: #f4f6f9;
+            --border: #e2e6ec;
+            --radius: 12px;
+            --accent: #2563eb;
+            --warn: #b45309;
+            --bad: #dc2626;
+            --ok: #16a34a;
+            --ficcolor: #94a3b8;
+            --begrcolor: #2563eb;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: var(--page);
+            color: var(--ink);
+            line-height: 1.45;
+            padding: 1.25rem 1rem 3rem;
+        }
+        .wrap { max-width: 78rem; margin: 0 auto; }
+        h1 { font-size: 1.45rem; margin: 0 0 0.25rem; }
+        h2 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+        .lead { color: var(--muted); margin: 0 0 1rem; max-width: 60rem; }
+        .meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+        }
+        .meta-row a { color: var(--accent); text-decoration: none; }
+        .meta-row a:hover { text-decoration: underline; }
+
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.65rem;
+            margin-bottom: 1.25rem;
+        }
+        @media (max-width: 56rem) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 30rem) { .kpi-row { grid-template-columns: 1fr; } }
+        .kpi {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.85rem 1rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,.04);
+        }
+        .kpi-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.3rem; }
+        .kpi-value { font-size: 1.4rem; font-weight: 700; }
+        .kpi-sub { font-size: 0.75rem; color: var(--muted); margin-top: 0.15rem; }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-bottom: 0.75rem;
+        }
+        .legend span.dot { display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 50%; vertical-align: middle; margin-right: 0.3rem; }
+
+        .table-wrap {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: auto;
+            max-height: 78vh;
+        }
+        table.staat {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 0.82rem;
+        }
+        table.staat th, table.staat td {
+            padding: 0.4rem 0.55rem;
+            text-align: right;
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+        }
+        table.staat th.code, table.staat td.code,
+        table.staat th.naam, table.staat td.naam {
+            text-align: left;
+        }
+        table.staat thead th {
+            position: sticky;
+            top: 0;
+            background: #f8fafc;
+            z-index: 2;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--muted);
+            border-bottom: 1px solid var(--border);
+        }
+        table.staat td.code { font-weight: 600; font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; }
+        table.staat td.naam { font-weight: 500; max-width: 22rem; white-space: normal; }
+        table.staat tr.hoofdstuk-divider td {
+            background: #eef2f7;
+            font-weight: 700;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--muted);
+            text-align: left;
+            padding: 0.45rem 0.6rem;
+        }
+        td.cel-leeg { color: #cbd5e1; }
+        td.cel-fictief { color: var(--ficcolor); font-style: italic; }
+        td.cel-begroting { color: var(--begrcolor); font-weight: 600; }
+        td.cel-meting { color: var(--ink); }
+        td.cel-suspect { color: var(--bad); text-decoration: line-through; }
+
+        .opmerkingen {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem 1.1rem;
+            margin-top: 1.25rem;
+        }
+        .opmerkingen ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+        .opmerkingen li { font-size: 0.85rem; margin-bottom: 0.25rem; }
+        .opmerkingen .pill {
+            display: inline-block;
+            padding: 0.05rem 0.45rem;
+            border-radius: 999px;
+            background: #eef2f7;
+            color: var(--muted);
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-right: 0.35rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .bron-tabel {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+        .bron-tabel table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+        .bron-tabel th, .bron-tabel td { padding: 0.45rem 0.65rem; text-align: left; border-bottom: 1px solid var(--border); }
+        .bron-tabel th { background: #f8fafc; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+        .bron-tabel td a { color: var(--accent); text-decoration: none; }
+        .bron-tabel td a:hover { text-decoration: underline; }
+
+        @media print {
+            body { background: #fff; padding: 0; }
+            .table-wrap { max-height: none; border: none; }
+            table.staat thead th { position: static; }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <h1>Meerjaren lasten per taakveld — controllers-rapport</h1>
+    <p class="lead">
+        Realisatie 2020–2025 plus begroting 2026 per Iv3-taakveld voor de gemeente
+        Wassenaar. Dit rapport voedt de lijngrafiek in
+        <a href="bi-taakveld-dashboard.html">bi-taakveld-dashboard.html</a> en de
+        begrotings-sectie in dossiers (<a href="index.html">index.html</a>). Bedoeld
+        voor de controller om de gebruikte cijfers en bronnen te kunnen verifiëren.
+    </p>
+
+    <div class="meta-row">
+        <span>Gegenereerd uit: <code>data/taakveld-lasten-staat-2020-2025.csv</code> + <code>financieel-bbv-begroting-2026.js</code></span>
+        <a href="data/taakveld-lasten-staat-2020-2025.csv">download CSV</a>
+        <a href="analyse-begrotingen/taakveld-lasten-staat-2020-2025.md">notitie + bronnen (.md)</a>
+        <a href="analyse-begrotingen/taakveld-lasten-staat-LEGE_CELLEN.md">rapport lege cellen (.md)</a>
+        <span id="gegenereerd-op"></span>
+    </div>
+
+    <div class="kpi-row" id="kpi-row"></div>
+
+    <h2>Volledige staat — abs. lasten in € (positieve weergave)</h2>
+    <div class="legend">
+        <span><span class="dot" style="background:#1a1d21"></span> meting (jaarrekening / jaarstukken)</span>
+        <span><span class="dot" style="background:var(--ficcolor)"></span> geïnterpoleerd (lineair tussen buurjaren)</span>
+        <span><span class="dot" style="background:var(--begrcolor)"></span> begroting 2026</span>
+        <span><span class="dot" style="background:#cbd5e1"></span> geen data beschikbaar</span>
+    </div>
+    <div class="table-wrap">
+        <table class="staat" id="staat-tabel">
+            <thead>
+                <tr>
+                    <th class="code">Iv3</th>
+                    <th class="naam">Taakveld</th>
+                    <th>2020</th>
+                    <th>2021</th>
+                    <th>2022</th>
+                    <th>2023</th>
+                    <th>2024</th>
+                    <th>2025</th>
+                    <th>2026 (begr.)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="opmerkingen">
+        <h2 style="margin-top:0">Bekende beperkingen / opmerkingen voor de controller</h2>
+        <ul>
+            <li><span class="pill">2021 leeg</span>De pdf <em>begroting-wassenaar-2021-2024.pdf</em> heeft een geschudde kolom-lay-out die <code>pdftotext</code> niet betrouwbaar parseert. Alle 2021-cellen zijn daarom leeg gelaten en grijs geïnterpoleerd in de lijngrafiek.</li>
+            <li><span class="pill">Iv3-evolutie</span>Het BBV heeft tussen 2019 en 2025 enkele codes gesplitst (bijv. 6.71 → 6.711/6.712/6.713 of 6.81 → 6.821/6.822). Voor die "nieuwe" codes is alleen 2025/2026-data beschikbaar; oudere jaren staan leeg omdat het oude bedrag in een verzamelregel zat.</li>
+            <li><span class="pill">"0" als placeholder</span>Waarden van exact 0 in een ouder jaar zijn in dit rapport overgeslagen omdat ze meestal "code bestond toen niet" of "extractie-onzeker" betekenen. Wil de controller een echte 0 zien? Pas de CSV aan, regenereer.</li>
+            <li><span class="pill">Verdacht uitgefilterd</span>Eén waarde <strong>1.2 / 2022 ≈ €80,5 mln</strong> is door de extractie geleverd maar als implausibel gemarkeerd (drempel €50 mln); dit is een vrijwel zekere kolom-mismatch in <code>pdftotext</code>. De cel staat daarom leeg.</li>
+            <li><span class="pill">Bron 2026</span>De begrotingscijfers 2026 komen uit <code>financieel-bbv-begroting-2026.js</code>, zelf afgeleid uit <em>FINANCIEEL_BBV_BELEIDSBIBLIOTHEEK.md §5</em> (taakveldoverzichten begroting 2026).</li>
+            <li><span class="pill">4.2 / 2020</span>Eerder stond hier handmatig €789.958; de bulk-extractie levert €1.353.156. Op één bron gezet (CSV). Wil de controller terug naar de handmatige waarde, dan past die de CSV aan.</li>
+        </ul>
+    </div>
+
+    <h2>Bronnen per jaar</h2>
+    <div class="bron-tabel">
+        <table>
+            <thead>
+                <tr><th>Jaar</th><th>Type</th><th>PDF / bestand</th><th>Hoe ingelezen</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>2020</td><td>Realisatie</td><td>Jaarstukken 2020 (Cuatro)</td><td>pdftotext + extract_taakveld_lasten.py</td></tr>
+                <tr><td>2021</td><td>Begroting (geen extract)</td><td>begroting-wassenaar-2021-2024.pdf</td><td>onbetrouwbare parser → cellen leeg, grijs geïnterpoleerd</td></tr>
+                <tr><td>2022</td><td>Realisatie</td><td>jaarstukken-2022__0.pdf (Cuatro)</td><td>pdftotext + extract_taakveld_lasten.py</td></tr>
+                <tr><td>2023</td><td>Realisatie</td><td>Jaarstukken_2023.pdf (Cuatro)</td><td>pdftotext + extract_taakveld_lasten.py</td></tr>
+                <tr><td>2024</td><td>Realisatie</td><td>Jaarstukken_2024.pdf (Cuatro)</td><td>pdftotext + extract_taakveld_lasten.py</td></tr>
+                <tr><td>2025</td><td>Begroting / nog geen jaarrekening</td><td>begroting 2025-2028</td><td>incomplete extractie; veel cellen leeg</td></tr>
+                <tr><td>2026</td><td>Begroting (programmabegroting)</td><td>Programmabegroting 2026</td><td>handmatig overgenomen via FINANCIEEL_BBV_BELEIDSBIBLIOTHEEK.md §5 → financieel-bbv-begroting-2026.js</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="taakvelden_iv3.js?v=20260422d"></script>
+<script src="financieel-bbv-begroting-2026.js?v=20260422d"></script>
+<script src="financieel-taakveld-dashboard-meta.js?v=20260422d"></script>
+<script>
+(function () {
+    var JAREN = [2020, 2021, 2022, 2023, 2024, 2025];
+    var JAAR_BEGR = 2026;
+
+    function naamVoor(code) {
+        var hoofd = parseInt(code.split('.')[0], 10);
+        var lijst = (typeof BBV_TAAKVELDEN_IV3 !== 'undefined' && BBV_TAAKVELDEN_IV3[hoofd]) || [];
+        var hit = lijst.find(function (t) { return t.code === code; });
+        return hit ? hit.naam : '—';
+    }
+
+    function nlGetal(n) {
+        if (n == null || isNaN(n)) return '';
+        return Math.round(n).toLocaleString('nl-NL');
+    }
+
+    function alleCodes() {
+        var set = new Set();
+        if (typeof FINANCIEEL_BEGROTING_2026_TAAKVELD !== 'undefined') {
+            Object.keys(FINANCIEEL_BEGROTING_2026_TAAKVELD).forEach(function (c) { set.add(c); });
+        }
+        if (typeof FINANCIEEL_MEERJAREN_LASTEN_ABS !== 'undefined') {
+            Object.keys(FINANCIEEL_MEERJAREN_LASTEN_ABS).forEach(function (c) { set.add(c); });
+        }
+        return Array.from(set).sort(function (a, b) {
+            var aa = a.split('.').map(function (x) { return parseInt(x, 10); });
+            var bb = b.split('.').map(function (x) { return parseInt(x, 10); });
+            for (var i = 0; i < Math.max(aa.length, bb.length); i++) {
+                var ai = aa[i] || 0, bi = bb[i] || 0;
+                if (ai !== bi) return ai - bi;
+            }
+            return 0;
+        });
+    }
+
+    function statusCel(code, jaar) {
+        var meet = (FINANCIEEL_MEERJAREN_LASTEN_ABS[code] || {})[jaar];
+        if (jaar === JAAR_BEGR) {
+            var begr = FINANCIEEL_BEGROTING_2026_TAAKVELD[code];
+            if (begr && begr.lasten) return { soort: 'begroting', waarde: Math.abs(begr.lasten) };
+            return { soort: 'leeg', waarde: null };
+        }
+        if (meet != null) return { soort: 'meting', waarde: meet };
+        var fictief = (FINANCIEEL_MEERJAREN_FICTIEF[code] || {})[jaar];
+        if (fictief && typeof financieelBouwMeerjarenVoorLijn === 'function') {
+            var g = financieelBouwMeerjarenVoorLijn(code);
+            if (g && g.lastenMap[jaar] != null) return { soort: 'fictief', waarde: g.lastenMap[jaar] };
+        }
+        return { soort: 'leeg', waarde: null };
+    }
+
+    function celNaarTd(cel) {
+        var td = document.createElement('td');
+        if (cel.soort === 'leeg') { td.className = 'cel-leeg'; td.textContent = '—'; return td; }
+        if (cel.soort === 'meting') { td.className = 'cel-meting'; td.textContent = nlGetal(cel.waarde); return td; }
+        if (cel.soort === 'fictief') { td.className = 'cel-fictief'; td.textContent = nlGetal(cel.waarde); td.title = 'lineair geïnterpoleerd tussen buurjaren'; return td; }
+        if (cel.soort === 'begroting') { td.className = 'cel-begroting'; td.textContent = nlGetal(cel.waarde); td.title = 'begroting 2026'; return td; }
+        return td;
+    }
+
+    function vulTabel() {
+        var tbody = document.querySelector('#staat-tabel tbody');
+        var codes = alleCodes();
+        var huidigHoofd = -1;
+        var aantalMeerjaren = 0;
+        var aantalAlleen2026 = 0;
+        var aantalLeeg = 0;
+
+        codes.forEach(function (code) {
+            var hoofd = parseInt(code.split('.')[0], 10);
+            if (hoofd !== huidigHoofd) {
+                huidigHoofd = hoofd;
+                var divider = document.createElement('tr');
+                divider.className = 'hoofdstuk-divider';
+                var dt = document.createElement('td');
+                dt.colSpan = 9;
+                dt.textContent = 'Hoofdstuk ' + hoofd;
+                divider.appendChild(dt);
+                tbody.appendChild(divider);
+            }
+
+            var tr = document.createElement('tr');
+            var tdCode = document.createElement('td'); tdCode.className = 'code'; tdCode.textContent = code; tr.appendChild(tdCode);
+            var tdNaam = document.createElement('td'); tdNaam.className = 'naam'; tdNaam.textContent = naamVoor(code); tr.appendChild(tdNaam);
+
+            var aantalMetingen = 0;
+            JAREN.forEach(function (j) {
+                var c = statusCel(code, j);
+                if (c.soort === 'meting') aantalMetingen++;
+                tr.appendChild(celNaarTd(c));
+            });
+            var c2026 = statusCel(code, JAAR_BEGR);
+            if (c2026.soort === 'begroting') aantalMetingen++;
+            tr.appendChild(celNaarTd(c2026));
+
+            tbody.appendChild(tr);
+
+            if (aantalMetingen >= 2) aantalMeerjaren++;
+            else if (aantalMetingen === 1) aantalAlleen2026++;
+            else aantalLeeg++;
+        });
+
+        var kpi = document.getElementById('kpi-row');
+        kpi.innerHTML =
+            '<div class="kpi"><div class="kpi-label">Codes totaal</div><div class="kpi-value">' + codes.length + '</div><div class="kpi-sub">unieke Iv3-taakvelden</div></div>' +
+            '<div class="kpi"><div class="kpi-label">Met meerjarenlijn</div><div class="kpi-value">' + aantalMeerjaren + '</div><div class="kpi-sub">≥ 2 meetjaren beschikbaar</div></div>' +
+            '<div class="kpi"><div class="kpi-label">Slechts 1 jaar</div><div class="kpi-value">' + aantalAlleen2026 + '</div><div class="kpi-sub">enkel KPI, geen lijn</div></div>' +
+            '<div class="kpi"><div class="kpi-label">Geen data</div><div class="kpi-value">' + aantalLeeg + '</div><div class="kpi-sub">code bestaat wel, geen waarde</div></div>';
+    }
+
+    document.getElementById('gegenereerd-op').textContent =
+        '· geopend op ' + new Date().toLocaleString('nl-NL', { dateStyle: 'medium', timeStyle: 'short' });
+
+    vulTabel();
+})();
+</script>
+</body>
+</html>
